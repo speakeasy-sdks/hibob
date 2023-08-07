@@ -1,0 +1,10 @@
+# GetPeopleRequest
+
+
+## Fields
+
+| Field                                                                                        | Type                                                                                         | Required                                                                                     | Description                                                                                  |
+| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `humanReadable`                                                                              | *boolean*                                                                                    | :heavy_minus_sign:                                                                           | Whether to supply humanReadable values in JSON instead of machine-readable format (default). |
+| `includeHumanReadable`                                                                       | *boolean*                                                                                    | :heavy_minus_sign:                                                                           | Whether to include the additional "humanReadable" JSON node in the response.                 |
+| `showInactive`                                                                               | *boolean*                                                                                    | :heavy_minus_sign:                                                                           | Should include inactive employees.                                                           |

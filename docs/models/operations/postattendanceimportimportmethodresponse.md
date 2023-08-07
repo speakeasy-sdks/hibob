@@ -1,0 +1,11 @@
+# PostAttendanceImportImportMethodResponse
+
+
+## Fields
+
+| Field                                                                              | Type                                                                               | Required                                                                           | Description                                                                        |
+| ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
+| `contentType`                                                                      | *string*                                                                           | :heavy_check_mark:                                                                 | N/A                                                                                |
+| `importAttendanceResponse`                                                         | [shared.ImportAttendanceResponse](../../models/shared/importattendanceresponse.md) | :heavy_minus_sign:                                                                 | Records imported                                                                   |
+| `statusCode`                                                                       | *number*                                                                           | :heavy_check_mark:                                                                 | N/A                                                                                |
+| `rawResponse`                                                                      | [AxiosResponse>](https://axios-http.com/docs/res_schema)                           | :heavy_minus_sign:                                                                 | N/A                                                                                |

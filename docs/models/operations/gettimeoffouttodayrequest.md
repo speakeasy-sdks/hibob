@@ -1,0 +1,9 @@
+# GetTimeoffOuttodayRequest
+
+
+## Fields
+
+| Field                                                                                                   | Type                                                                                                    | Required                                                                                                | Description                                                                                             |
+| ------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- |
+| `includeHourly`                                                                                         | *boolean*                                                                                               | :heavy_minus_sign:                                                                                      | Include Hourly Requests                                                                                 |
+| `today`                                                                                                 | [RFCDate](../../types/rfcdate.md)                                                                       | :heavy_minus_sign:                                                                                      | Date to report out of the office. If not specified, the date at UTC at the time of the request is used. |
