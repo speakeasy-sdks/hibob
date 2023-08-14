@@ -3,7 +3,8 @@
  */
 
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
-import { Expose } from "class-transformer";
+import { EmployeeFilter } from "./employeefilter";
+import { Expose, Type } from "class-transformer";
 
 /**
  * Read request content that allows you to select fields and other options
@@ -31,6 +32,14 @@ export class ReadEmployeesRequestReference extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "fields" })
     fields?: string[];
+
+    /**
+     * Optional list of filters for filtering employees. We currently support up to one filter.
+     */
+    @SpeakeasyMetadata({ elemType: EmployeeFilter })
+    @Expose({ name: "filters" })
+    @Type(() => EmployeeFilter)
+    filters?: EmployeeFilter[];
 
     /**
      * Optional field.  <br> <b>If not sent:</b> supply machine-readable values only. <br> <br> Possible values: <br>  <br> <b>APPEND</b> - include the additional "humanReadable" JSON node in the response. <br>  <br> <b>REPLACE</b> - supply humanReadable values in JSON instead of machine-readable format. <br>

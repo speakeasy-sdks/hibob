@@ -18,6 +18,7 @@ export * from "./customtablemetadatalist";
 export * from "./employee";
 export * from "./employeedocumentresponse";
 export * from "./employeedocumentwithdownloadlink";
+export * from "./employeefilter";
 export * from "./employeeprofile";
 export * from "./employeereference";
 export * from "./employees";

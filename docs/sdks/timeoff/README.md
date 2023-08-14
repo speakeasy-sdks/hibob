@@ -36,8 +36,8 @@ const operationSecurity: DeleteTimeoffEmployeesIdRequestsRequestIdSecurity = {
 };
 
 sdk.timeOff.deleteTimeoffEmployeesIdRequestsRequestId({
-  id: "dd3d6fa1-804e-454c-82f1-68a363c8873e",
-  requestId: 271306,
+  id: "04e54c82-f168-4a36-bc88-73e484380b1f",
+  requestId: 419858,
 }, operationSecurity).then((res: DeleteTimeoffEmployeesIdRequestsRequestIdResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -77,9 +77,9 @@ const operationSecurity: GetTimeoffEmployeesIdBalanceSecurity = {
 };
 
 sdk.timeOff.getTimeoffEmployeesIdBalance({
-  date: new RFCDate("2022-06-26"),
-  id: "380b1f6b-8ca2-475a-a0a0-4c495cc69917",
-  policyType: "inventore",
+  date: new RFCDate("2021-12-19"),
+  id: "ca275a60-a04c-4495-8c69-9171b51c1bdb",
+  policyType: "beatae",
 }, operationSecurity).then((res: GetTimeoffEmployeesIdBalanceResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -120,8 +120,8 @@ const operationSecurity: GetTimeoffEmployeesIdRequestsRequestIdSecurity = {
 };
 
 sdk.timeOff.getTimeoffEmployeesIdRequestsRequestId({
-  id: "b51c1bdb-1cf4-4b88-8ebd-fc4ccca99bc7",
-  requestId: 944033,
+  id: "cf4b888e-bdfc-44cc-8a99-bc7fc0b2dce1",
+  requestId: 13637,
 }, operationSecurity).then((res: GetTimeoffEmployeesIdRequestsRequestIdResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -161,7 +161,7 @@ const operationSecurity: GetTimeoffOuttodaySecurity = {
 
 sdk.timeOff.getTimeoffOuttoday({
   includeHourly: false,
-  today: new RFCDate("2022-11-21"),
+  today: new RFCDate("2022-01-15"),
 }, operationSecurity).then((res: GetTimeoffOuttodayResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -200,7 +200,7 @@ const operationSecurity: GetTimeoffPoliciesSecurity = {
 };
 
 sdk.timeOff.getTimeoffPolicies({
-  policyName: "soluta",
+  policyName: "dolor",
 }, operationSecurity).then((res: GetTimeoffPoliciesResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -239,7 +239,7 @@ const operationSecurity: GetTimeoffPoliciesNamesSecurity = {
 };
 
 sdk.timeOff.getTimeoffPoliciesNames({
-  policyTypeName: "fugit",
+  policyTypeName: "voluptates",
 }, operationSecurity).then((res: GetTimeoffPoliciesNamesResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -314,7 +314,7 @@ const operationSecurity: GetTimeoffPolicyTypesPolicyTypeSecurity = {
 };
 
 sdk.timeOff.getTimeoffPolicyTypesPolicyType({
-  policyType: "pariatur",
+  policyType: "tempora",
 }, operationSecurity).then((res: GetTimeoffPolicyTypesPolicyTypeResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -356,7 +356,7 @@ const operationSecurity: GetTimeoffPolicyTypesPolicyTypeReasonCodesSecurity = {
 };
 
 sdk.timeOff.getTimeoffPolicyTypesPolicyTypeReasonCodes({
-  policyType: "eligendi",
+  policyType: "magni",
 }, operationSecurity).then((res: GetTimeoffPolicyTypesPolicyTypeReasonCodesResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -395,7 +395,7 @@ const operationSecurity: GetTimeoffRequestsChangesSecurity = {
 };
 
 sdk.timeOff.getTimeoffRequestsChanges({
-  since: new RFCDate("2022-10-01"),
+  since: new RFCDate("2022-12-03"),
 }, operationSecurity).then((res: GetTimeoffRequestsChangesResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -437,10 +437,10 @@ const operationSecurity: GetTimeoffWhosoutSecurity = {
 };
 
 sdk.timeOff.getTimeoffWhosout({
-  from: new RFCDate("2022-06-26"),
+  from: new RFCDate("2022-07-27"),
   includeHourly: false,
   includePrivate: false,
-  to: new RFCDate("2022-10-12"),
+  to: new RFCDate("2021-09-15"),
 }, operationSecurity).then((res: GetTimeoffWhosoutResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -485,13 +485,13 @@ const operationSecurity: PostTimeoffEmployeesIdAdjustmentsSecurity = {
 
 sdk.timeOff.postTimeoffEmployeesIdAdjustments({
   adjustmentRequest: {
-    adjustmentType: AdjustmentRequestAdjustmentType.DaysUsed,
-    amount: 2742.95,
-    effectiveDate: new RFCDate("2022-04-19"),
-    policyType: "doloremque",
-    reason: "voluptatem",
+    adjustmentType: AdjustmentRequestAdjustmentType.Balance,
+    amount: 5311.95,
+    effectiveDate: new RFCDate("2022-01-22"),
+    policyType: "atque",
+    reason: "rerum",
   },
-  id: "6d678878-ba85-481a-9820-8c54fefa9c95",
+  id: "a8581a58-208c-454f-afa9-c95f2eac5565",
 }, operationSecurity).then((res: PostTimeoffEmployeesIdAdjustmentsResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -540,23 +540,23 @@ const operationSecurity: PostTimeoffEmployeesIdRequestsSecurity = {
 
 sdk.timeOff.postTimeoffEmployeesIdRequests({
   submitTimeoffRequest: {
-    approver: "doloribus",
-    dailyHours: 156098,
-    dailyMinutes: 887284,
-    dayPortion: SubmitTimeoffRequestDayPortion.Afternoon,
-    description: "cumque",
-    endDate: new RFCDate("2022-09-08"),
-    endDatePortion: SubmitTimeoffRequestEndDatePortion.Morning,
-    hours: 365539,
-    minutes: 849337,
-    policyType: "nesciunt",
-    reasonCode: 22331,
+    approver: "illum",
+    dailyHours: 201266,
+    dailyMinutes: 22331,
+    dayPortion: SubmitTimeoffRequestDayPortion.Morning,
+    description: "minus",
+    endDate: new RFCDate("2020-03-24"),
+    endDatePortion: SubmitTimeoffRequestEndDatePortion.Afternoon,
+    hours: 506250,
+    minutes: 118349,
+    policyType: "fugit",
+    reasonCode: 25190,
     requestRangeType: SubmitTimeoffRequestRequestRangeType.Hours,
     skipManagerApproval: false,
-    startDate: new RFCDate("2020-01-12"),
-    startDatePortion: SubmitTimeoffRequestStartDatePortion.Afternoon,
+    startDate: new RFCDate("2022-07-21"),
+    startDatePortion: SubmitTimeoffRequestStartDatePortion.Morning,
   },
-  id: "e81206e2-813f-4a4a-81c4-80d3f2132af0",
+  id: "13fa4a41-c480-4d3f-a132-af03102d514f",
 }, operationSecurity).then((res: PostTimeoffEmployeesIdRequestsResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -600,10 +600,11 @@ const operationSecurity: PostTimeoffPolicyTypesPolicyTypeReasonCodesSecurity = {
 sdk.timeOff.postTimeoffPolicyTypesPolicyTypeReasonCodes({
   reasonCodesNames: {
     reasonCodes: [
-      "architecto",
+      "optio",
+      "nobis",
     ],
   },
-  policyType: "aperiam",
+  policyType: "ex",
 }, operationSecurity).then((res: PostTimeoffPolicyTypesPolicyTypeReasonCodesResponse) => {
   if (res.statusCode == 200) {
     // handle response

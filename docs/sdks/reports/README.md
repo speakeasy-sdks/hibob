@@ -67,7 +67,7 @@ const operationSecurity: GetCompanyReportsDownloadReportNameSecurity = {
 };
 
 sdk.reports.getCompanyReportsDownloadReportName({
-  reportName: "tempore",
+  reportName: "minus",
 }, operationSecurity).then((res: GetCompanyReportsDownloadReportNameResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -112,10 +112,10 @@ const operationSecurity: GetCompanyReportsReportIdDownloadSecurity = {
 };
 
 sdk.reports.getCompanyReportsReportIdDownload({
-  format: GetCompanyReportsReportIdDownloadFormat.Csv,
+  format: GetCompanyReportsReportIdDownloadFormat.Xlsx,
   includeInfo: false,
-  locale: "libero",
-  reportId: 1897.53,
+  locale: "nostrum",
+  reportId: 6692.37,
 }, operationSecurity).then((res: GetCompanyReportsReportIdDownloadResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -160,10 +160,10 @@ const operationSecurity: GetCompanyReportsReportIdDownloadAsyncSecurity = {
 };
 
 sdk.reports.getCompanyReportsReportIdDownloadAsync({
-  format: GetCompanyReportsReportIdDownloadAsyncFormat.Csv,
+  format: GetCompanyReportsReportIdDownloadAsyncFormat.Xlsx,
   includeInfo: false,
-  locale: "totam",
-  reportId: 5777.09,
+  locale: "delectus",
+  reportId: 7358.94,
 }, operationSecurity).then((res: GetCompanyReportsReportIdDownloadAsyncResponse) => {
   if (res.statusCode == 200) {
     // handle response

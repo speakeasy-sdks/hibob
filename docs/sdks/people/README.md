@@ -1086,7 +1086,34 @@ sdk.people.postPeopleSearch({
     "nam",
     "earum",
   ],
-  humanReadable: "officia",
+  filters: [
+    {
+      fieldPath: "root.id",
+      operator: "equals",
+      values: [
+        "placeat",
+        "modi",
+        "voluptatibus",
+      ],
+    },
+    {
+      fieldPath: "root.id",
+      operator: "equals",
+      values: [
+        "officiis",
+        "sapiente",
+        "cumque",
+      ],
+    },
+    {
+      fieldPath: "root.id",
+      operator: "equals",
+      values: [
+        "rerum",
+      ],
+    },
+  ],
+  humanReadable: "tempora",
   showInactive: false,
 }, operationSecurity).then((res: PostPeopleSearchResponse) => {
   if (res.statusCode == 200) {
@@ -1130,13 +1157,12 @@ const operationSecurity: PostPeopleIdentifierSecurity = {
 sdk.people.postPeopleIdentifier({
   readSingleEmployeeRequestReference: {
     fields: [
-      "placeat",
-      "modi",
-      "voluptatibus",
+      "inventore",
+      "fugit",
     ],
-    humanReadable: "molestias",
+    humanReadable: "cumque",
   },
-  identifier: "officiis",
+  identifier: "quae",
 }, operationSecurity).then((res: PostPeopleIdentifierResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -1179,14 +1205,14 @@ const operationSecurity: PostPeopleIdEmploymentSecurity = {
 
 sdk.people.postPeopleIdEmployment({
   employmentEntry: {
-    contract: "sapiente",
-    effectiveDate: new RFCDate("2022-08-29"),
-    id: 698249,
-    reason: "tempora",
-    salaryPayType: "quis",
-    type: "inventore",
+    contract: "perferendis",
+    effectiveDate: new RFCDate("2022-11-11"),
+    id: 432281,
+    reason: "eius",
+    salaryPayType: "rem",
+    type: "at",
   },
-  id: "2c103264-8dc2-4f61-9199-ebfd0e9fe6c6",
+  id: "c2f61519-9ebf-4d0e-9fe6-c632ca3aed01",
 }, operationSecurity).then((res: PostPeopleIdEmploymentResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -1229,26 +1255,26 @@ const operationSecurity: PostPeopleIdEquitiesSecurity = {
 
 sdk.people.postPeopleIdEquities({
   equityEntry: {
-    consentNumber: "dolorem",
-    effectiveDate: new RFCDate("2022-03-27"),
-    equityType: "fuga",
+    consentNumber: "et",
+    effectiveDate: new RFCDate("2022-05-19"),
+    equityType: "occaecati",
     exercisePrice: {
-      currency: "ratione",
-      value: 6567.62,
+      currency: "suscipit",
+      value: 2415.57,
     },
-    grantDate: new RFCDate("2020-06-01"),
-    grantNumber: 89.31,
-    grantStatus: "quasi",
-    grantType: "et",
-    id: 497777,
-    optionExpiration: new RFCDate("2021-11-02"),
-    quantity: 3824.4,
-    reason: "adipisci",
-    vestingCommencementDate: new RFCDate("2022-10-31"),
-    vestingSchedule: 9849.34,
-    vestingTerm: "nulla",
+    grantDate: new RFCDate("2022-10-31"),
+    grantNumber: 9849.34,
+    grantStatus: "nulla",
+    grantType: "necessitatibus",
+    id: 58534,
+    optionExpiration: new RFCDate("2022-07-13"),
+    quantity: 4731.9,
+    reason: "dicta",
+    vestingCommencementDate: new RFCDate("2022-07-18"),
+    vestingSchedule: 5083.9,
+    vestingTerm: "maiores",
   },
-  id: "e0477177-8ff6-41d0-9747-6360a15db6a6",
+  id: "f61d0174-7636-40a1-9db6-a660659a1ade",
 }, operationSecurity).then((res: PostPeopleIdEquitiesResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -1292,16 +1318,16 @@ const operationSecurity: PostPeopleIdSalariesSecurity = {
 sdk.people.postPeopleIdSalaries({
   salaryEntry: {
     base: {
-      currency: "aliquid",
-      value: 219.73,
+      currency: "mollitia",
+      value: 6717.94,
     },
-    effectiveDate: new RFCDate("2022-08-17"),
-    id: 614528,
-    payFrequency: "id",
-    payPeriod: "ab",
-    reason: "error",
+    effectiveDate: new RFCDate("2022-05-09"),
+    id: 536923,
+    payFrequency: "enim",
+    payPeriod: "vitae",
+    reason: "repellendus",
   },
-  id: "deaab585-1d6c-4645-b08b-61891baa0fe1",
+  id: "6c645b08-b618-491b-aa0f-e1ade008e6f8",
 }, operationSecurity).then((res: PostPeopleIdSalariesResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -1345,21 +1371,21 @@ const operationSecurity: PostPeopleIdTrainingSecurity = {
 sdk.people.postPeopleIdTraining({
   trainingEntry: {
     cost: {
-      currency: "fuga",
-      value: 8671.68,
+      currency: "minus",
+      value: 3651,
     },
-    description: "debitis",
-    documentId: 291.9,
-    effectiveDate: new RFCDate("2022-06-19"),
-    endDate: new RFCDate("2021-10-15"),
-    frequency: "sapiente",
-    id: 524184,
-    name: "Herman Zemlak",
-    reason: "perferendis",
-    startDate: new RFCDate("2021-06-12"),
-    status: "impedit",
+    description: "asperiores",
+    documentId: 1905.67,
+    effectiveDate: new RFCDate("2022-12-25"),
+    endDate: new RFCDate("2021-06-12"),
+    frequency: "impedit",
+    id: 842777,
+    name: "Clyde Nader",
+    reason: "inventore",
+    startDate: new RFCDate("2022-10-30"),
+    status: "tempora",
   },
-  id: "db5a3418-1430-4104-a181-3d5208ece7e2",
+  id: "30104218-13d5-4208-ace7-e253b668451c",
 }, operationSecurity).then((res: PostPeopleIdTrainingResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -1403,19 +1429,19 @@ const operationSecurity: PostPeopleIdVariableSecurity = {
 sdk.people.postPeopleIdVariable({
   variableEntry: {
     amount: {
-      currency: "veniam",
-      value: 1995.96,
+      currency: "autem",
+      value: 7510.22,
     },
-    companyPercent: 7129.27,
-    departmentPercent: 4329.84,
-    effectiveDate: new RFCDate("2022-06-22"),
-    id: 301692,
-    individualPercent: 3494.4,
-    paymentPeriod: "ab",
-    reason: "porro",
-    type: "autem",
+    companyPercent: 3883.19,
+    departmentPercent: 9272.12,
+    effectiveDate: new RFCDate("2022-12-21"),
+    id: 350207,
+    individualPercent: 8956.92,
+    paymentPeriod: "quasi",
+    reason: "nisi",
+    type: "at",
   },
-  id: "c6e205e1-6dea-4b3f-ac95-78a64584273a",
+  id: "eab3fec9-578a-4645-8427-3a8418d16230",
 }, operationSecurity).then((res: PostPeopleIdVariableResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -1459,22 +1485,22 @@ const operationSecurity: PostPeopleIdWorkSecurity = {
 sdk.people.postPeopleIdWork({
   workEntry: {
     customColumns: {},
-    department: "laudantium",
-    effectiveDate: new RFCDate("2022-11-26"),
-    id: 524380,
-    reason: "fugiat",
+    department: "cupiditate",
+    effectiveDate: new RFCDate("2020-10-05"),
+    id: 3860,
+    reason: "omnis",
     reportsTo: {
-      displayName: "dicta",
-      email: "Carol58@yahoo.com",
-      firstName: "Wallace",
-      id: "b0929921-aefb-49f5-8c4d-86e68e4be056",
-      surname: "alias",
+      displayName: "eos",
+      email: "Lesley68@yahoo.com",
+      firstName: "Shanny",
+      id: "fb9f58c4-d86e-468e-8be0-56013f59da75",
+      surname: "reprehenderit",
     },
-    site: "quasi",
-    siteId: 247685,
-    title: "Dr.",
+    site: "est",
+    siteId: 336102,
+    title: "Ms.",
   },
-  id: "59da757a-59ec-4fef-a6ef-1caa3383c2be",
+  id: "ecfef66e-f1ca-4a33-83c2-beb477373c8d",
 }, operationSecurity).then((res: PostPeopleIdWorkResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -1513,9 +1539,9 @@ const operationSecurity: PutAvatarsEmployeeIdSecurity = {
 
 sdk.people.putAvatarsEmployeeId({
   uploadAvatar: {
-    url: "nam",
+    url: "iure",
   },
-  employeeId: "dolore",
+  employeeId: "odit",
 }, operationSecurity).then((res: PutAvatarsEmployeeIdResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -1557,7 +1583,7 @@ const operationSecurity: PutPeopleIdentifierSecurity = {
 
 sdk.people.putPeopleIdentifier({
   requestBody: {},
-  identifier: "iusto",
+  identifier: "voluptatibus",
 }, operationSecurity).then((res: PutPeopleIdentifierResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -1599,9 +1625,9 @@ const operationSecurity: PutPeopleIdEmailSecurity = {
 
 sdk.people.putPeopleIdEmail({
   changeEmail: {
-    email: "Clementine77@yahoo.com",
+    email: "Elisabeth81@yahoo.com",
   },
-  id: "8d72f64d-1db1-4f2c-8310-661e96349e1c",
+  id: "b1f2c431-0661-4e96-b49e-1cf9e06e3a43",
 }, operationSecurity).then((res: PutPeopleIdEmailResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -1641,15 +1667,15 @@ const operationSecurity: PutPeopleIdEmploymentEntryIdSecurity = {
 
 sdk.people.putPeopleIdEmploymentEntryId({
   employmentEntry: {
-    contract: "voluptatibus",
-    effectiveDate: new RFCDate("2021-02-19"),
-    id: 2677,
-    reason: "nisi",
-    salaryPayType: "itaque",
-    type: "velit",
+    contract: "iusto",
+    effectiveDate: new RFCDate("2022-12-17"),
+    id: 7468,
+    reason: "officia",
+    salaryPayType: "recusandae",
+    type: "ea",
   },
-  entryId: 673838,
-  id: "437000ae-6b6b-4c9b-8f75-9eac55a9741d",
+  entryId: 693153,
+  id: "6bc9b8f7-59ea-4c55-a974-1d311352965b",
 }, operationSecurity).then((res: PutPeopleIdEmploymentEntryIdResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -1692,27 +1718,27 @@ const operationSecurity: PutPeopleIdEquitiesEntryIdSecurity = {
 
 sdk.people.putPeopleIdEquitiesEntryId({
   equityEntry: {
-    consentNumber: "consectetur",
-    effectiveDate: new RFCDate("2022-12-02"),
-    equityType: "dolorem",
+    consentNumber: "libero",
+    effectiveDate: new RFCDate("2021-08-24"),
+    equityType: "odio",
     exercisePrice: {
-      currency: "ad",
-      value: 1830.33,
+      currency: "fugit",
+      value: 5.45,
     },
-    grantDate: new RFCDate("2022-03-12"),
-    grantNumber: 3676.26,
-    grantStatus: "soluta",
-    grantType: "libero",
-    id: 526907,
-    optionExpiration: new RFCDate("2022-01-09"),
-    quantity: 1446.91,
-    reason: "alias",
-    vestingCommencementDate: new RFCDate("2022-07-29"),
-    vestingSchedule: 644.35,
-    vestingTerm: "quae",
+    grantDate: new RFCDate("2022-07-29"),
+    grantNumber: 644.35,
+    grantStatus: "quae",
+    grantType: "modi",
+    id: 208253,
+    optionExpiration: new RFCDate("2022-01-25"),
+    quantity: 882.48,
+    reason: "ipsum",
+    vestingCommencementDate: new RFCDate("2021-04-14"),
+    vestingSchedule: 7143.76,
+    vestingTerm: "maxime",
   },
-  entryId: 264333,
-  id: "35e139db-c225-49b1-abda-8c070e1084cb",
+  entryId: 157222,
+  id: "259b1abd-a8c0-470e-9084-cb0672d1ad87",
 }, operationSecurity).then((res: PutPeopleIdEquitiesEntryIdResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -1753,23 +1779,23 @@ const operationSecurity: PutPeopleIdWorkEntryIdSecurity = {
 sdk.people.putPeopleIdWorkEntryId({
   workEntry: {
     customColumns: {},
-    department: "voluptatem",
-    effectiveDate: new RFCDate("2022-07-18"),
-    id: 172951,
-    reason: "assumenda",
+    department: "provident",
+    effectiveDate: new RFCDate("2020-04-24"),
+    id: 733289,
+    reason: "sint",
     reportsTo: {
-      displayName: "beatae",
-      email: "Reba_Lockman@hotmail.com",
-      firstName: "Shanon",
-      id: "eb9665b8-5efb-4d02-bae0-be2d782259e3",
-      surname: "recusandae",
+      displayName: "ea",
+      email: "Garett.Prosacco@yahoo.com",
+      firstName: "Sid",
+      id: "fbd02bae-0be2-4d78-a259-e3ea4b5197f9",
+      surname: "fugit",
     },
-    site: "similique",
-    siteId: 282837,
-    title: "Miss",
+    site: "numquam",
+    siteId: 256916,
+    title: "Mrs.",
   },
-  entryId: 339631,
-  id: "197f9244-3da7-4ce5-ab89-5c537c6454ef",
+  entryId: 873557,
+  id: "a7ce52b8-95c5-437c-a454-efb0b34896c3",
 }, operationSecurity).then((res: PutPeopleIdWorkEntryIdResponse) => {
   if (res.statusCode == 200) {
     // handle response
