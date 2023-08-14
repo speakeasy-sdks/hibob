@@ -1,9 +1,9 @@
 configVersion: 1.0.0
 management:
-  docChecksum: f0239622217ab9251d60710024db8bce
+  docChecksum: ae687c9be6b0acc6beed45e867d4cf20
   docVersion: 1.0.0
-  speakeasyVersion: 1.71.0
-  generationVersion: 2.83.3
+  speakeasyVersion: 1.71.2
+  generationVersion: 2.84.1
 generation:
   comments:
     disableComments: false
@@ -17,10 +17,10 @@ features:
     core: 2.82.0
     deprecations: 2.81.1
     globalSecurity: 2.81.1
-    globalServerURLs: 2.81.1
+    globalServerURLs: 2.82.0
     methodSecurity: 2.81.1
 typescript:
-  version: 1.0.1
+  version: 1.1.0
   author: roopak
   maxMethodParams: 0
   packageName: hibob
