@@ -32,7 +32,10 @@ import {
 
 const sdk = new Hibob();
 const operationSecurity: DeleteTimeoffEmployeesIdRequestsRequestIdSecurity = {
-  bearer: "",
+  basic: {
+    password: "",
+    username: "",
+  },
 };
 
 sdk.timeOff.deleteTimeoffEmployeesIdRequestsRequestId({
@@ -116,7 +119,10 @@ import {
 
 const sdk = new Hibob();
 const operationSecurity: GetTimeoffEmployeesIdRequestsRequestIdSecurity = {
-  bearer: "",
+  basic: {
+    password: "",
+    username: "",
+  },
 };
 
 sdk.timeOff.getTimeoffEmployeesIdRequestsRequestId({
@@ -156,7 +162,10 @@ import { RFCDate } from "hibob/dist/sdk/types";
 
 const sdk = new Hibob();
 const operationSecurity: GetTimeoffOuttodaySecurity = {
-  bearer: "",
+  basic: {
+    password: "",
+    username: "",
+  },
 };
 
 sdk.timeOff.getTimeoffOuttoday({
@@ -391,7 +400,10 @@ import { RFCDate } from "hibob/dist/sdk/types";
 
 const sdk = new Hibob();
 const operationSecurity: GetTimeoffRequestsChangesSecurity = {
-  bearer: "",
+  basic: {
+    password: "",
+    username: "",
+  },
 };
 
 sdk.timeOff.getTimeoffRequestsChanges({

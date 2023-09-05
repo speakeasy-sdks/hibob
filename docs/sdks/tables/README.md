@@ -816,7 +816,7 @@ sdk.tables.postPeopleIdVariable({
     individualPercent: 8493.83,
     paymentPeriod: "nemo",
     reason: "illum",
-    type: "facilis",
+    variableType: "facilis",
   },
   id: "3adebd5d-aea4-4c50-aa8a-a94c02644cf5",
 }, operationSecurity).then((res: PostPeopleIdVariableResponse) => {

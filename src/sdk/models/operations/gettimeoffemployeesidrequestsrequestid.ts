@@ -7,10 +7,13 @@ import * as shared from "../shared";
 import { AxiosResponse } from "axios";
 
 export class GetTimeoffEmployeesIdRequestsRequestIdSecurity extends SpeakeasyBase {
+    @SpeakeasyMetadata({ data: "security, scheme=true;type=http;subtype=basic" })
+    basic?: shared.SchemeBasic;
+
     @SpeakeasyMetadata({
         data: "security, scheme=true;type=apiKey;subtype=header;name=Authorization",
     })
-    bearer: string;
+    bearer?: string;
 }
 
 export class GetTimeoffEmployeesIdRequestsRequestIdRequest extends SpeakeasyBase {

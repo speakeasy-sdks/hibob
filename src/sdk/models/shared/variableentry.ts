@@ -70,6 +70,6 @@ export class VariableEntry extends SpeakeasyBase {
      * The type of variable pay.
      */
     @SpeakeasyMetadata()
-    @Expose({ name: "type" })
-    type: string;
+    @Expose({ name: "variableType" })
+    variableType?: string;
 }

@@ -590,7 +590,7 @@ sdk.payroll.postPeopleIdVariable({
     individualPercent: 5361.78,
     paymentPeriod: "fugit",
     reason: "fuga",
-    type: "mollitia",
+    variableType: "mollitia",
   },
   id: "482562f2-22e9-4817-ae17-cbe61e6b7b95",
 }, operationSecurity).then((res: PostPeopleIdVariableResponse) => {

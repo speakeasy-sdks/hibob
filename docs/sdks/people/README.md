@@ -1439,7 +1439,7 @@ sdk.people.postPeopleIdVariable({
     individualPercent: 8956.92,
     paymentPeriod: "quasi",
     reason: "nisi",
-    type: "at",
+    variableType: "at",
   },
   id: "eab3fec9-578a-4645-8427-3a8418d16230",
 }, operationSecurity).then((res: PostPeopleIdVariableResponse) => {
