@@ -1,7 +1,5 @@
 # WorkEntries
 
-List of work history entries.
-
 
 ## Fields
 

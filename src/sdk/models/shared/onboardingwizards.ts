@@ -6,9 +6,6 @@ import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
 import { OnboardingWizard } from "./onboardingwizard";
 import { Expose, Type } from "class-transformer";
 
-/**
- * Onboarding Wizards
- */
 export class OnboardingWizards extends SpeakeasyBase {
     @SpeakeasyMetadata({ elemType: OnboardingWizard })
     @Expose({ name: "wizards" })

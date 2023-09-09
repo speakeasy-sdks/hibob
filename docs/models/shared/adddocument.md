@@ -1,7 +1,5 @@
 # AddDocument
 
-Document to upload.
-
 
 ## Fields
 

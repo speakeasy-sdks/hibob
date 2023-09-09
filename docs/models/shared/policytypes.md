@@ -1,7 +1,5 @@
 # PolicyTypes
 
-List of policy types names.
-
 
 ## Fields
 

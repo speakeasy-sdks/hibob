@@ -1,7 +1,5 @@
 # OnboardingWizards
 
-Onboarding Wizards
-
 
 ## Fields
 

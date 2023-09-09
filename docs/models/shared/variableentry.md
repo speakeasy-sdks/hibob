@@ -1,7 +1,5 @@
 # VariableEntry
 
-Variable payment to add.
-
 
 ## Fields
 

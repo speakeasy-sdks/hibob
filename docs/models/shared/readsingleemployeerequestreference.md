@@ -1,7 +1,5 @@
 # ReadSingleEmployeeRequestReference
 
-Read request content that allows you to select fields and other options
-
 
 ## Fields
 

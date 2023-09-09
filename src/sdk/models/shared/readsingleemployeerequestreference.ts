@@ -5,9 +5,6 @@
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
 import { Expose } from "class-transformer";
 
-/**
- * Read request content that allows you to select fields and other options
- */
 export class ReadSingleEmployeeRequestReference extends SpeakeasyBase {
     /**
      * Optional array of employee field paths that's are required in response. If you don't specify fields - only basic fields and categories are returned: <br/><b>Basic fields:</b>  <ul>

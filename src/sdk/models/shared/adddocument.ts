@@ -5,9 +5,6 @@
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
 import { Expose } from "class-transformer";
 
-/**
- * Document to upload.
- */
 export class AddDocument extends SpeakeasyBase {
     /**
      * Document name.

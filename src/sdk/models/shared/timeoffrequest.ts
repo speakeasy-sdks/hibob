@@ -38,9 +38,6 @@ export enum TimeoffRequestType {
     HoursOnRange = "hoursOnRange",
 }
 
-/**
- * success
- */
 export class TimeoffRequest extends SpeakeasyBase {
     /**
      * Whether the request is approved (and hence publicly visible).

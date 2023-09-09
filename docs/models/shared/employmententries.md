@@ -1,7 +1,5 @@
 # EmploymentEntries
 
-List of employment history entries.
-
 
 ## Fields
 

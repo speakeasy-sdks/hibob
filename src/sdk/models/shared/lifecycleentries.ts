@@ -6,9 +6,6 @@ import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
 import { LifeCycleEntry } from "./lifecycleentry";
 import { Expose, Type } from "class-transformer";
 
-/**
- * List of life-cycle history entries.
- */
 export class LifeCycleEntries extends SpeakeasyBase {
     @SpeakeasyMetadata({ elemType: LifeCycleEntry })
     @Expose({ name: "values" })

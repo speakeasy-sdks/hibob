@@ -44,9 +44,6 @@ export class ObjectsMetadataJsonPath extends SpeakeasyBase {
     root?: string;
 }
 
-/**
- * Successful response
- */
 export class ObjectsMetadata extends SpeakeasyBase {
     /**
      * Description of the field.

@@ -7,9 +7,6 @@ import { RFCDate } from "../../types";
 import { CurrencyValue } from "./currencyvalue";
 import { Expose, Transform, Type } from "class-transformer";
 
-/**
- * Variable payment to add.
- */
 export class VariableEntry extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "amount" })

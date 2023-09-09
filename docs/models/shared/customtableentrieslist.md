@@ -1,7 +1,5 @@
 # CustomTableEntriesList
 
-Successful response
-
 
 ## Fields
 

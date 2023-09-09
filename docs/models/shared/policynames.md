@@ -1,7 +1,5 @@
 # PolicyNames
 
-A list of policy names.
-
 
 ## Fields
 

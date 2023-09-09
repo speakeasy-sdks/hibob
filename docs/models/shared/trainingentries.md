@@ -1,7 +1,5 @@
 # TrainingEntries
 
-List of training records.
-
 
 ## Fields
 

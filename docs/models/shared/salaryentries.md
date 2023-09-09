@@ -1,7 +1,5 @@
 # SalaryEntries
 
-List of salary entries.
-
 
 ## Fields
 

@@ -1,7 +1,5 @@
 # ReasonCodes
 
-List of reason codes.
-
 
 ## Fields
 

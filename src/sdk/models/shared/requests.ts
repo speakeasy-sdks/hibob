@@ -6,9 +6,6 @@ import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
 import { Request } from "./request";
 import { Expose, Type } from "class-transformer";
 
-/**
- * Time off requests as seen by the logged in user for a given date range.
- */
 export class Requests extends SpeakeasyBase {
     @SpeakeasyMetadata({ elemType: Request })
     @Expose({ name: "outs" })

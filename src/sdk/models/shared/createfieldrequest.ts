@@ -5,9 +5,6 @@
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
 import { Expose } from "class-transformer";
 
-/**
- * The field to be created.
- */
 export class CreateFieldRequest extends SpeakeasyBase {
     /**
      * The category of the field.

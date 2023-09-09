@@ -96,7 +96,7 @@ const operationSecurity: GetTasksPeopleIdSecurity = {
 };
 
 sdk.tasks.getTasksPeopleId({
-  id: "mollitia",
+  id: "error",
   taskStatus: GetTasksPeopleIdTaskStatus.Open,
 }, operationSecurity).then((res: GetTasksPeopleIdResponse) => {
   if (res.statusCode == 200) {
@@ -138,7 +138,7 @@ const operationSecurity: PostTasksTaskIdCompleteSecurity = {
 };
 
 sdk.tasks.postTasksTaskIdComplete({
-  taskId: "quos",
+  taskId: "quasi",
 }, operationSecurity).then((res: PostTasksTaskIdCompleteResponse) => {
   if (res.statusCode == 200) {
     // handle response

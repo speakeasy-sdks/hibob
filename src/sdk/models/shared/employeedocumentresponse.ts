@@ -6,9 +6,6 @@ import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
 import { EmployeeDocumentWithDownloadLink } from "./employeedocumentwithdownloadlink";
 import { Expose, Type } from "class-transformer";
 
-/**
- * A list of the documents' names and download links.
- */
 export class EmployeeDocumentResponse extends SpeakeasyBase {
     @SpeakeasyMetadata({ elemType: EmployeeDocumentWithDownloadLink })
     @Expose({ name: "documents" })

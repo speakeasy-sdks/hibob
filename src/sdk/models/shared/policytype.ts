@@ -19,9 +19,6 @@ export enum PolicyTypeUnit {
     Hours = "hours",
 }
 
-/**
- * Policy type
- */
 export class PolicyType extends SpeakeasyBase {
     /**
      * Activity type.

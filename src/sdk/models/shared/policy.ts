@@ -22,9 +22,6 @@ export enum PolicyUnit {
     Hours = "hours",
 }
 
-/**
- * Policy
- */
 export class Policy extends SpeakeasyBase {
     /**
      * Base annual allowance.

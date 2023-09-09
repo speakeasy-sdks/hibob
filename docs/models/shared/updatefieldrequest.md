@@ -1,7 +1,5 @@
 # UpdateFieldRequest
 
-The new name and/or description of the updated field.
-
 
 ## Fields
 

@@ -1,7 +1,5 @@
 # Requests
 
-Time off requests as seen by the logged in user for a given date range.
-
 
 ## Fields
 

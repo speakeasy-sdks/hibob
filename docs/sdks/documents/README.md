@@ -32,8 +32,8 @@ const operationSecurity: DeleteDocsPeopleIdConfidentialDocIdSecurity = {
 };
 
 sdk.documents.deleteDocsPeopleIdConfidentialDocId({
-  docId: "suscipit",
-  id: "7cc8796e-d151-4a05-9fc2-ddf7cc78ca1b",
+  docId: "delectus",
+  id: "467cc879-6ed1-451a-85df-c2ddf7cc78ca",
 }, operationSecurity).then((res: DeleteDocsPeopleIdConfidentialDocIdResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -74,8 +74,8 @@ const operationSecurity: DeleteDocsPeopleIdSharedDocIdSecurity = {
 };
 
 sdk.documents.deleteDocsPeopleIdSharedDocId({
-  docId: "officia",
-  id: "928fc816-742c-4b73-9205-929396fea759",
+  docId: "dicta",
+  id: "ba928fc8-1674-42cb-b392-05929396fea7",
 }, operationSecurity).then((res: DeleteDocsPeopleIdSharedDocIdResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -113,7 +113,7 @@ const operationSecurity: GetDocsPeopleIdSecurity = {
 };
 
 sdk.documents.getDocsPeopleId({
-  id: "6eb10faa-a235-42c5-9559-07aff1a3a2fa",
+  id: "596eb10f-aaa2-4352-8595-5907aff1a3a2",
 }, operationSecurity).then((res: GetDocsPeopleIdResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -152,14 +152,13 @@ const operationSecurity: PostDocsPeopleIdConfidentialSecurity = {
 
 sdk.documents.postDocsPeopleIdConfidential({
   addDocument: {
-    documentName: "occaecati",
-    documentUrl: "numquam",
+    documentName: "repellat",
+    documentUrl: "mollitia",
     tags: [
-      "quam",
-      "molestiae",
+      "occaecati",
     ],
   },
-  id: "39251aa5-2c3f-45ad-819d-a1ffe78f097b",
+  id: "46773925-1aa5-42c3-b5ad-019da1ffe78f",
 }, operationSecurity).then((res: PostDocsPeopleIdConfidentialResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -202,11 +201,11 @@ const operationSecurity: PostDocsPeopleIdConfidentialUploadSecurity = {
 sdk.documents.postDocsPeopleIdConfidentialUpload({
   requestBody: {
     file: {
-      content: "perferendis".encode(),
-      file: "doloremque",
+      content: "ipsa".encode(),
+      file: "omnis",
     },
   },
-  id: "74f15471-b5e6-4e13-b99d-488e1e91e450",
+  id: "7b0074f1-5471-4b5e-ae13-b99d488e1e91",
 }, operationSecurity).then((res: PostDocsPeopleIdConfidentialUploadResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -245,13 +244,13 @@ const operationSecurity: PostDocsPeopleIdSharedSecurity = {
 
 sdk.documents.postDocsPeopleIdShared({
   addDocument: {
-    documentName: "est",
-    documentUrl: "quibusdam",
+    documentName: "itaque",
+    documentUrl: "incidunt",
     tags: [
-      "deserunt",
+      "enim",
     ],
   },
-  id: "bd442698-02d5-402a-94bb-4f63c969e9a3",
+  id: "0ad2abd4-4269-4802-9502-a94bb4f63c96",
 }, operationSecurity).then((res: PostDocsPeopleIdSharedResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -291,11 +290,11 @@ const operationSecurity: PostDocsPeopleIdSharedUploadSecurity = {
 sdk.documents.postDocsPeopleIdSharedUpload({
   requestBody: {
     file: {
-      content: "debitis".encode(),
-      file: "a",
+      content: "provident".encode(),
+      file: "necessitatibus",
     },
   },
-  id: "a77dfb14-cd66-4ae3-95ef-b9ba88f3a669",
+  id: "9a3efa77-dfb1-44cd-a6ae-395efb9ba88f",
 }, operationSecurity).then((res: PostDocsPeopleIdSharedUploadResponse) => {
   if (res.statusCode == 200) {
     // handle response

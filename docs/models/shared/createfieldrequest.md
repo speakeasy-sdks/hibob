@@ -1,7 +1,5 @@
 # CreateFieldRequest
 
-The field to be created.
-
 
 ## Fields
 

@@ -1,7 +1,5 @@
 # OutTodays
 
-The list of people who have taken time off, as seen by the logged in user.
-
 
 ## Fields
 

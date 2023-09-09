@@ -14,9 +14,6 @@ export enum ImportAttendanceResponseStatus {
     PartialSuccess = "partial_success",
 }
 
-/**
- * Records imported
- */
 export class ImportAttendanceResponse extends SpeakeasyBase {
     /**
      * List of all errors received in the process

@@ -27,18 +27,8 @@ const operationSecurity: PostAttendanceImportImportMethodSecurity = {
 sdk.attendance.postAttendanceImportImportMethod({
   importAttendanceData: {
     dateTimeFormat: "yyyy-MM-dd hh:mm a",
-    idType: "quibusdam",
+    idType: "distinctio",
     requests: [
-      {
-        clockIn: "2022-06-12T08:00",
-        clockOut: "2022-06-12T17:00",
-        id: "12356733644",
-      },
-      {
-        clockIn: "2022-06-12T08:00",
-        clockOut: "2022-06-12T17:00",
-        id: "12356733644",
-      },
       {
         clockIn: "2022-06-12T08:00",
         clockOut: "2022-06-12T17:00",

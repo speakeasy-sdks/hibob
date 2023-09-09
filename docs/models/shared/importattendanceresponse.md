@@ -1,7 +1,5 @@
 # ImportAttendanceResponse
 
-Records imported
-
 
 ## Fields
 

@@ -5,9 +5,6 @@
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
 import { Expose } from "class-transformer";
 
-/**
- * The new name and/or description of the updated field.
- */
 export class UpdateFieldRequest extends SpeakeasyBase {
     /**
      * The description of the field.

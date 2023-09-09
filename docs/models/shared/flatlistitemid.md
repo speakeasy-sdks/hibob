@@ -1,7 +1,5 @@
 # FlatListItemId
 
-A new item is created. Please note that the ID of the newly created item may be textual or numeric depending on the list type.
-
 
 ## Fields
 

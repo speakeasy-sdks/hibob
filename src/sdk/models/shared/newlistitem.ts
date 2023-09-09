@@ -5,9 +5,6 @@
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
 import { Expose } from "class-transformer";
 
-/**
- * The <b>parentId</b> attribute is optional and only applies to hierarchy lists. When <b>parentId</b> is specified, the newly created list item will be placed under the specific hierarchy parent node.
- */
 export class NewListItem extends SpeakeasyBase {
     /**
      * Name of the item.

@@ -48,9 +48,6 @@ export class WorkEntryReportsTo extends SpeakeasyBase {
     surname?: string;
 }
 
-/**
- * Work entry to add. This must not conflict with another entry on the same effective date.
- */
 export class WorkEntry extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "customColumns" })

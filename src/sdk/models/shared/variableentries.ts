@@ -6,9 +6,6 @@ import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
 import { VariableEntry } from "./variableentry";
 import { Expose, Type } from "class-transformer";
 
-/**
- * List of variable payments.
- */
 export class VariableEntries extends SpeakeasyBase {
     @SpeakeasyMetadata({ elemType: VariableEntry })
     @Expose({ name: "values" })

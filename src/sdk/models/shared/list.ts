@@ -6,9 +6,6 @@ import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
 import { ListItem } from "./listitem";
 import { Expose, Type } from "class-transformer";
 
-/**
- * Successful response. Please note that the item ID may be textual or numeric depending on the list type.
- */
 export class List extends SpeakeasyBase {
     /**
      * The elements in the list.

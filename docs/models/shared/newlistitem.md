@@ -1,7 +1,5 @@
 # NewListItem
 
-The <b>parentId</b> attribute is optional and only applies to hierarchy lists. When <b>parentId</b> is specified, the newly created list item will be placed under the specific hierarchy parent node.
-
 
 ## Fields
 

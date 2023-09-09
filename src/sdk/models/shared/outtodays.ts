@@ -6,9 +6,6 @@ import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
 import { OutToday } from "./outtoday";
 import { Expose, Type } from "class-transformer";
 
-/**
- * The list of people who have taken time off, as seen by the logged in user.
- */
 export class OutTodays extends SpeakeasyBase {
     @SpeakeasyMetadata({ elemType: OutToday })
     @Expose({ name: "outs" })

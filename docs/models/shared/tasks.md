@@ -1,7 +1,5 @@
 # Tasks
 
-The logged-in user's tasks.
-
 
 ## Fields
 

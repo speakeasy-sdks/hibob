@@ -6,9 +6,6 @@ import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
 import { CustomTableColumn } from "./customtablecolumn";
 import { Expose, Type } from "class-transformer";
 
-/**
- * Successful response
- */
 export class CustomTableMetadata extends SpeakeasyBase {
     /**
      * The ID of the category to which the custom table belongs

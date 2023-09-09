@@ -6,9 +6,6 @@ import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
 import { TrainingEntry } from "./trainingentry";
 import { Expose, Type } from "class-transformer";
 
-/**
- * List of training records.
- */
 export class TrainingEntries extends SpeakeasyBase {
     @SpeakeasyMetadata({ elemType: TrainingEntry })
     @Expose({ name: "values" })

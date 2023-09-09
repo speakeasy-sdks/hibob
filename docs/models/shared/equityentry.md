@@ -1,7 +1,5 @@
 # EquityEntry
 
-Equity grant to add.
-
 
 ## Fields
 

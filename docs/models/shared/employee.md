@@ -1,7 +1,5 @@
 # Employee
 
-Employee
-
 
 ## Fields
 

@@ -1,7 +1,5 @@
 # EquityEntries
 
-List of salary equity grants.
-
 
 ## Fields
 

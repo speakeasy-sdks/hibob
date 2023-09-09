@@ -1,7 +1,5 @@
 # BalanceResult
 
-Balance result.
-
 
 ## Fields
 

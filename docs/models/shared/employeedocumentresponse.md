@@ -1,7 +1,5 @@
 # EmployeeDocumentResponse
 
-A list of the documents' names and download links.
-
 
 ## Fields
 

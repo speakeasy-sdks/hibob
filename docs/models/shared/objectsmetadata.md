@@ -1,7 +1,5 @@
 # ObjectsMetadata
 
-Successful response
-
 
 ## Fields
 

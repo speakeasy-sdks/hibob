@@ -7,9 +7,6 @@ import { RFCDate } from "../../types";
 import { CurrencyValue } from "./currencyvalue";
 import { Expose, Transform, Type } from "class-transformer";
 
-/**
- * Equity grant to add.
- */
 export class EquityEntry extends SpeakeasyBase {
     /**
      * Consent number.

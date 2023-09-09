@@ -1,7 +1,5 @@
 # Reports
 
-Company Reports
-
 
 ## Fields
 

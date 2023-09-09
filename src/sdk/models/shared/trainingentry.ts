@@ -7,9 +7,6 @@ import { RFCDate } from "../../types";
 import { CurrencyValue } from "./currencyvalue";
 import { Expose, Transform, Type } from "class-transformer";
 
-/**
- * Training entry to add.
- */
 export class TrainingEntry extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "cost" })

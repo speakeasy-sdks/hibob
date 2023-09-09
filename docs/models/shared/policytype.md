@@ -1,7 +1,5 @@
 # PolicyType
 
-Policy type
-
 
 ## Fields
 

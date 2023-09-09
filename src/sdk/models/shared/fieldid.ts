@@ -5,9 +5,6 @@
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
 import { Expose } from "class-transformer";
 
-/**
- * The new field was successfully created. The ID of the field is returned.
- */
 export class FieldId extends SpeakeasyBase {
     /**
      * The ID of the field.

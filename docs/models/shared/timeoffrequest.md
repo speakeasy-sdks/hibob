@@ -1,7 +1,5 @@
 # TimeoffRequest
 
-success
-
 
 ## Fields
 

@@ -6,9 +6,6 @@ import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
 import { Report } from "./report";
 import { Expose, Type } from "class-transformer";
 
-/**
- * Company Reports
- */
 export class Reports extends SpeakeasyBase {
     @SpeakeasyMetadata({ elemType: Report })
     @Expose({ name: "views" })

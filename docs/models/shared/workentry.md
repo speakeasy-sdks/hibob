@@ -1,7 +1,5 @@
 # WorkEntry
 
-Work entry to add. This must not conflict with another entry on the same effective date.
-
 
 ## Fields
 

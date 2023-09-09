@@ -6,9 +6,6 @@ import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
 import { CustomTableMetadata } from "./customtablemetadata";
 import { Expose, Type } from "class-transformer";
 
-/**
- * Successful response
- */
 export class CustomTableMetadataList extends SpeakeasyBase {
     @SpeakeasyMetadata({ elemType: CustomTableMetadata })
     @Expose({ name: "tables" })

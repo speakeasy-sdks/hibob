@@ -1,7 +1,5 @@
 # FieldId
 
-The new field was successfully created. The ID of the field is returned.
-
 
 ## Fields
 

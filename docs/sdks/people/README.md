@@ -60,8 +60,8 @@ const operationSecurity: DeletePeopleIdEmploymentEntryIdSecurity = {
 };
 
 sdk.people.deletePeopleIdEmploymentEntryId({
-  entryId: 391774,
-  id: "082d68ea-19f1-4d17-8513-39d08086a184",
+  entryId: 815524,
+  id: "121aa6f1-e674-4bdb-84f1-5756082d68ea",
 }, operationSecurity).then((res: DeletePeopleIdEmploymentEntryIdResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -102,8 +102,8 @@ const operationSecurity: DeletePeopleIdEquitiesEntryIdSecurity = {
 };
 
 sdk.people.deletePeopleIdEquitiesEntryId({
-  entryId: 32465,
-  id: "394c2607-1f93-4f5f-8642-dac7af515cc4",
+  entryId: 99615,
+  id: "9f1d1705-1339-4d08-886a-1840394c2607",
 }, operationSecurity).then((res: DeletePeopleIdEquitiesEntryIdResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -144,8 +144,8 @@ const operationSecurity: DeletePeopleIdSalariesEntryIdSecurity = {
 };
 
 sdk.people.deletePeopleIdSalariesEntryId({
-  entryId: 70447,
-  id: "3aa63aae-8d67-4864-9bb6-75fd5e60b375",
+  entryId: 115484,
+  id: "f93f5f06-42da-4c7a-b515-cc413aa63aae",
 }, operationSecurity).then((res: DeletePeopleIdSalariesEntryIdResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -186,8 +186,8 @@ const operationSecurity: DeletePeopleIdTrainingEntryIdSecurity = {
 };
 
 sdk.people.deletePeopleIdTrainingEntryId({
-  entryId: 937285,
-  id: "d4f6fbee-41f3-4331-bfe3-5b60eb1ea426",
+  entryId: 517309,
+  id: "d67864db-b675-4fd5-a60b-375ed4f6fbee",
 }, operationSecurity).then((res: DeletePeopleIdTrainingEntryIdResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -228,8 +228,8 @@ const operationSecurity: DeletePeopleIdVariableEntryIdSecurity = {
 };
 
 sdk.people.deletePeopleIdVariableEntryId({
-  entryId: 374244,
-  id: "55ba3c28-744e-4d53-b88f-3a8d8f5c0b2f",
+  entryId: 296556,
+  id: "1f33317f-e35b-460e-b1ea-426555ba3c28",
 }, operationSecurity).then((res: DeletePeopleIdVariableEntryIdResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -270,8 +270,8 @@ const operationSecurity: DeletePeopleIdWorkEntryIdSecurity = {
 };
 
 sdk.people.deletePeopleIdWorkEntryId({
-  entryId: 131852,
-  id: "fb7b194a-276b-4269-96fe-1f08f4294e36",
+  entryId: 449292,
+  id: "44ed53b8-8f3a-48d8-b5c0-b2f2fb7b194a",
 }, operationSecurity).then((res: DeletePeopleIdWorkEntryIdResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -309,7 +309,7 @@ const operationSecurity: GetAvatarsSecurity = {
 };
 
 sdk.people.getAvatars({
-  email: "occaecati",
+  email: "sed",
 }, operationSecurity).then((res: GetAvatarsResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -347,7 +347,7 @@ const operationSecurity: GetAvatarsEmployeeIdSecurity = {
 };
 
 sdk.people.getAvatarsEmployeeId({
-  employeeId: "quos",
+  employeeId: "in",
 }, operationSecurity).then((res: GetAvatarsEmployeeIdResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -471,13 +471,10 @@ const operationSecurity: GetPeopleIdentifierSecurity = {
 
 sdk.people.getPeopleIdentifier({
   fields: [
-    "tempora",
-    "tempora",
-    "voluptate",
-    "reiciendis",
+    "commodi",
   ],
   humanReadable: false,
-  identifier: "ex",
+  identifier: "quidem",
   includeHumanReadable: false,
 }, operationSecurity).then((res: GetPeopleIdentifierResponse) => {
   if (res.statusCode == 200) {
@@ -519,7 +516,7 @@ const operationSecurity: GetPeopleIdEmploymentSecurity = {
 };
 
 sdk.people.getPeopleIdEmployment({
-  id: "03e8b445-e80c-4a55-afd2-0e457e1858b6",
+  id: "26916fe1-f08f-4429-8e36-98f447f603e8",
 }, operationSecurity).then((res: GetPeopleIdEmploymentResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -560,7 +557,7 @@ const operationSecurity: GetPeopleIdEquitiesSecurity = {
 };
 
 sdk.people.getPeopleIdEquities({
-  id: "a89fbe3a-5aa8-4e48-a4d0-ab4075088e51",
+  id: "b445e80c-a55e-4fd2-8e45-7e1858b6a89f",
 }, operationSecurity).then((res: GetPeopleIdEquitiesResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -601,7 +598,7 @@ const operationSecurity: GetPeopleIdLifecycleSecurity = {
 };
 
 sdk.people.getPeopleIdLifecycle({
-  id: "862065e9-04f3-4b11-94b8-abf603a79f9d",
+  id: "be3a5aa8-e482-44d0-ab40-75088e518620",
 }, operationSecurity).then((res: GetPeopleIdLifecycleResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -642,7 +639,7 @@ const operationSecurity: GetPeopleIdSalariesSecurity = {
 };
 
 sdk.people.getPeopleIdSalaries({
-  id: "fe0ab7da-8a50-4ce1-87f8-6bc173d689ee",
+  id: "65e904f3-b119-44b8-abf6-03a79f9dfe0a",
 }, operationSecurity).then((res: GetPeopleIdSalariesResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -683,7 +680,7 @@ const operationSecurity: GetPeopleIdTrainingSecurity = {
 };
 
 sdk.people.getPeopleIdTraining({
-  id: "e9526f8d-986e-4881-aad4-f0e1012563f9",
+  id: "b7da8a50-ce18-47f8-abc1-73d689eee952",
 }, operationSecurity).then((res: GetPeopleIdTrainingResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -721,7 +718,7 @@ const operationSecurity: GetPeopleIdVariableSecurity = {
 };
 
 sdk.people.getPeopleIdVariable({
-  id: "4e29e973-e922-4a57-a15b-e3e060807e2b",
+  id: "6f8d986e-881e-4ad4-b0e1-012563f94e29",
 }, operationSecurity).then((res: GetPeopleIdVariableResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -762,7 +759,7 @@ const operationSecurity: GetPeopleIdWorkSecurity = {
 };
 
 sdk.people.getPeopleIdWork({
-  id: "6e3ab884-5f05-497a-a0ff-2a54a31e9476",
+  id: "e973e922-a57a-415b-a3e0-60807e2b6e3a",
 }, operationSecurity).then((res: GetPeopleIdWorkResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -800,7 +797,7 @@ const operationSecurity: GetProfilesSecurity = {
 };
 
 sdk.people.getProfiles({
-  sortBy: "ut",
+  sortBy: "distinctio",
 }, operationSecurity).then((res: GetProfilesResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -845,9 +842,9 @@ const operationSecurity: PostEmployeesEmployeeIdInvitationsSecurity = {
 
 sdk.people.postEmployeesEmployeeIdInvitations({
   invitationByWizard: {
-    welcomeWizardId: 633062,
+    welcomeWizardId: 528940,
   },
-  employeeId: "adipisci",
+  employeeId: "rem",
 }, operationSecurity).then((res: PostEmployeesEmployeeIdInvitationsResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -893,10 +890,10 @@ const operationSecurity: PostEmployeesEmployeeIdStartDateSecurity = {
 
 sdk.people.postEmployeesEmployeeIdStartDate({
   startDateUpdate: {
-    reason: "debitis",
-    startDate: new RFCDate("2022-02-19"),
+    reason: "aliquam",
+    startDate: new RFCDate("2022-01-01"),
   },
-  employeeId: "nemo",
+  employeeId: "alias",
 }, operationSecurity).then((res: PostEmployeesEmployeeIdStartDateResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -943,16 +940,16 @@ const operationSecurity: PostEmployeesIdentifierTerminateSecurity = {
 
 sdk.people.postEmployeesIdentifierTerminate({
   employeeTermination: {
-    lastDayOfWork: new RFCDate("2021-08-19"),
+    lastDayOfWork: new RFCDate("2022-05-27"),
     noticePeriod: {
-      length: 592081,
-      unit: EmployeeTerminationNoticePeriodUnit.Weeks,
+      length: 470649,
+      unit: EmployeeTerminationNoticePeriodUnit.Month,
     },
-    reasonType: "eum",
-    terminationDate: new RFCDate("2021-03-22"),
-    terminationReason: "aspernatur",
+    reasonType: "voluptas",
+    terminationDate: new RFCDate("2022-01-08"),
+    terminationReason: "reiciendis",
   },
-  identifier: "ullam",
+  identifier: "dolores",
 }, operationSecurity).then((res: PostEmployeesIdentifierTerminateResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -993,7 +990,7 @@ const operationSecurity: PostEmployeesIdentifierUninviteSecurity = {
 };
 
 sdk.people.postEmployeesIdentifierUninvite({
-  identifier: "quasi",
+  identifier: "id",
 }, operationSecurity).then((res: PostEmployeesIdentifierUninviteResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -1035,12 +1032,12 @@ const operationSecurity: PostPeopleSecurity = {
 };
 
 sdk.people.postPeople({
-  email: "Everardo_OHara@yahoo.com",
-  firstName: "Magali",
-  surname: "ex",
+  email: "Elda6@gmail.com",
+  firstName: "Tianna",
+  surname: "omnis",
   work: {
-    site: "aliquid",
-    startDate: new RFCDate("2022-01-01"),
+    site: "quaerat",
+    startDate: new RFCDate("2022-08-06"),
   },
 }, operationSecurity).then((res: PostPeopleResponse) => {
   if (res.statusCode == 200) {
@@ -1081,39 +1078,18 @@ const operationSecurity: PostPeopleSearchSecurity = {
 
 sdk.people.postPeopleSearch({
   fields: [
-    "ullam",
-    "in",
-    "nam",
-    "earum",
+    "ut",
   ],
   filters: [
     {
       fieldPath: "root.id",
       operator: "equals",
       values: [
-        "placeat",
-        "modi",
-        "voluptatibus",
-      ],
-    },
-    {
-      fieldPath: "root.id",
-      operator: "equals",
-      values: [
-        "officiis",
-        "sapiente",
-        "cumque",
-      ],
-    },
-    {
-      fieldPath: "root.id",
-      operator: "equals",
-      values: [
-        "rerum",
+        "culpa",
       ],
     },
   ],
-  humanReadable: "tempora",
+  humanReadable: "adipisci",
   showInactive: false,
 }, operationSecurity).then((res: PostPeopleSearchResponse) => {
   if (res.statusCode == 200) {
@@ -1157,12 +1133,11 @@ const operationSecurity: PostPeopleIdentifierSecurity = {
 sdk.people.postPeopleIdentifier({
   readSingleEmployeeRequestReference: {
     fields: [
-      "inventore",
-      "fugit",
+      "debitis",
     ],
-    humanReadable: "cumque",
+    humanReadable: "laudantium",
   },
-  identifier: "quae",
+  identifier: "eum",
 }, operationSecurity).then((res: PostPeopleIdentifierResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -1205,14 +1180,14 @@ const operationSecurity: PostPeopleIdEmploymentSecurity = {
 
 sdk.people.postPeopleIdEmployment({
   employmentEntry: {
-    contract: "perferendis",
-    effectiveDate: new RFCDate("2022-11-11"),
-    id: 432281,
-    reason: "eius",
-    salaryPayType: "rem",
-    type: "at",
+    contract: "nemo",
+    effectiveDate: new RFCDate("2021-08-19"),
+    id: 592081,
+    reason: "quis",
+    salaryPayType: "eum",
+    type: "reiciendis",
   },
-  id: "c2f61519-9ebf-4d0e-9fe6-c632ca3aed01",
+  id: "9251a5a9-da66-40ff-97bf-aad4f9efc1b4",
 }, operationSecurity).then((res: PostPeopleIdEmploymentResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -1255,26 +1230,26 @@ const operationSecurity: PostPeopleIdEquitiesSecurity = {
 
 sdk.people.postPeopleIdEquities({
   equityEntry: {
-    consentNumber: "et",
-    effectiveDate: new RFCDate("2022-05-19"),
-    equityType: "occaecati",
+    consentNumber: "quis",
+    effectiveDate: new RFCDate("2022-11-08"),
+    equityType: "cumque",
     exercisePrice: {
-      currency: "suscipit",
-      value: 2415.57,
+      currency: "quae",
+      value: 216.88,
     },
-    grantDate: new RFCDate("2022-10-31"),
-    grantNumber: 9849.34,
-    grantStatus: "nulla",
-    grantType: "necessitatibus",
-    id: 58534,
-    optionExpiration: new RFCDate("2022-07-13"),
-    quantity: 4731.9,
-    reason: "dicta",
-    vestingCommencementDate: new RFCDate("2022-07-18"),
-    vestingSchedule: 5083.9,
-    vestingTerm: "maiores",
+    grantDate: new RFCDate("2022-11-11"),
+    grantNumber: 4322.81,
+    grantStatus: "eius",
+    grantType: "rem",
+    id: 871083,
+    optionExpiration: new RFCDate("2022-06-18"),
+    quantity: 9587.41,
+    reason: "eum",
+    vestingCommencementDate: new RFCDate("2022-09-04"),
+    vestingSchedule: 1070.04,
+    vestingTerm: "cupiditate",
   },
-  id: "f61d0174-7636-40a1-9db6-a660659a1ade",
+  id: "9ebfd0e9-fe6c-4632-8a3a-ed0117996312",
 }, operationSecurity).then((res: PostPeopleIdEquitiesResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -1318,16 +1293,16 @@ const operationSecurity: PostPeopleIdSalariesSecurity = {
 sdk.people.postPeopleIdSalaries({
   salaryEntry: {
     base: {
-      currency: "mollitia",
-      value: 6717.94,
+      currency: "doloribus",
+      value: 8595.81,
     },
-    effectiveDate: new RFCDate("2022-05-09"),
-    id: 536923,
-    payFrequency: "enim",
-    payPeriod: "vitae",
-    reason: "repellendus",
+    effectiveDate: new RFCDate("2022-10-28"),
+    id: 271113,
+    payFrequency: "nihil",
+    payPeriod: "molestiae",
+    reason: "dicta",
   },
-  id: "6c645b08-b618-491b-aa0f-e1ade008e6f8",
+  id: "778ff61d-0174-4763-a0a1-5db6a660659a",
 }, operationSecurity).then((res: PostPeopleIdSalariesResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -1371,21 +1346,21 @@ const operationSecurity: PostPeopleIdTrainingSecurity = {
 sdk.people.postPeopleIdTraining({
   trainingEntry: {
     cost: {
-      currency: "minus",
-      value: 3651,
+      currency: "ab",
+      value: 6253.58,
     },
-    description: "asperiores",
-    documentId: 1905.67,
-    effectiveDate: new RFCDate("2022-12-25"),
-    endDate: new RFCDate("2021-06-12"),
-    frequency: "impedit",
-    id: 842777,
-    name: "Clyde Nader",
-    reason: "inventore",
-    startDate: new RFCDate("2022-10-30"),
-    status: "tempora",
+    description: "possimus",
+    documentId: 9139.92,
+    effectiveDate: new RFCDate("2021-08-28"),
+    endDate: new RFCDate("2022-05-09"),
+    frequency: "deleniti",
+    id: 316220,
+    name: "Estelle Jakubowski",
+    reason: "ut",
+    startDate: new RFCDate("2022-04-15"),
+    status: "voluptatem",
   },
-  id: "30104218-13d5-4208-ace7-e253b668451c",
+  id: "8b61891b-aa0f-4e1a-9e00-8e6f8c5f350d",
 }, operationSecurity).then((res: PostPeopleIdTrainingResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -1429,19 +1404,19 @@ const operationSecurity: PostPeopleIdVariableSecurity = {
 sdk.people.postPeopleIdVariable({
   variableEntry: {
     amount: {
-      currency: "autem",
-      value: 7510.22,
+      currency: "totam",
+      value: 7706.75,
     },
-    companyPercent: 3883.19,
-    departmentPercent: 9272.12,
-    effectiveDate: new RFCDate("2022-12-21"),
-    id: 350207,
-    individualPercent: 8956.92,
-    paymentPeriod: "quasi",
-    reason: "nisi",
-    variableType: "at",
+    companyPercent: 8427.77,
+    departmentPercent: 7205.28,
+    effectiveDate: new RFCDate("2022-05-14"),
+    id: 222864,
+    individualPercent: 3073.76,
+    paymentPeriod: "inventore",
+    reason: "deleniti",
+    variableType: "veritatis",
   },
-  id: "eab3fec9-578a-4645-8427-3a8418d16230",
+  id: "43010421-813d-4520-8ece-7e253b668451",
 }, operationSecurity).then((res: PostPeopleIdVariableResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -1485,22 +1460,22 @@ const operationSecurity: PostPeopleIdWorkSecurity = {
 sdk.people.postPeopleIdWork({
   workEntry: {
     customColumns: {},
-    department: "cupiditate",
-    effectiveDate: new RFCDate("2020-10-05"),
-    id: 3860,
-    reason: "omnis",
+    department: "porro",
+    effectiveDate: new RFCDate("2022-04-01"),
+    id: 388319,
+    reason: "recusandae",
     reportsTo: {
-      displayName: "eos",
-      email: "Lesley68@yahoo.com",
-      firstName: "Shanny",
-      id: "fb9f58c4-d86e-468e-8be0-56013f59da75",
-      surname: "reprehenderit",
+      displayName: "consequuntur",
+      email: "Federico39@gmail.com",
+      firstName: "Sasha",
+      id: "eab3fec9-578a-4645-8427-3a8418d16230",
+      surname: "cupiditate",
     },
-    site: "est",
-    siteId: 336102,
-    title: "Ms.",
+    site: "reiciendis",
+    siteId: 746837,
+    title: "Mr.",
   },
-  id: "ecfef66e-f1ca-4a33-83c2-beb477373c8d",
+  id: "929921ae-fb9f-458c-8d86-e68e4be05601",
 }, operationSecurity).then((res: PostPeopleIdWorkResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -1539,9 +1514,9 @@ const operationSecurity: PutAvatarsEmployeeIdSecurity = {
 
 sdk.people.putAvatarsEmployeeId({
   uploadAvatar: {
-    url: "iure",
+    url: "non",
   },
-  employeeId: "odit",
+  employeeId: "maiores",
 }, operationSecurity).then((res: PutAvatarsEmployeeIdResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -1583,7 +1558,7 @@ const operationSecurity: PutPeopleIdentifierSecurity = {
 
 sdk.people.putPeopleIdentifier({
   requestBody: {},
-  identifier: "voluptatibus",
+  identifier: "enim",
 }, operationSecurity).then((res: PutPeopleIdentifierResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -1625,9 +1600,9 @@ const operationSecurity: PutPeopleIdEmailSecurity = {
 
 sdk.people.putPeopleIdEmail({
   changeEmail: {
-    email: "Elisabeth81@yahoo.com",
+    email: "Ryder.Nolan@yahoo.com",
   },
-  id: "b1f2c431-0661-4e96-b49e-1cf9e06e3a43",
+  id: "7a59ecfe-f66e-4f1c-aa33-83c2beb47737",
 }, operationSecurity).then((res: PutPeopleIdEmailResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -1667,15 +1642,15 @@ const operationSecurity: PutPeopleIdEmploymentEntryIdSecurity = {
 
 sdk.people.putPeopleIdEmploymentEntryId({
   employmentEntry: {
-    contract: "iusto",
-    effectiveDate: new RFCDate("2022-12-17"),
-    id: 7468,
-    reason: "officia",
-    salaryPayType: "recusandae",
-    type: "ea",
+    contract: "neque",
+    effectiveDate: new RFCDate("2021-05-24"),
+    id: 844235,
+    reason: "iure",
+    salaryPayType: "odit",
+    type: "voluptatibus",
   },
-  entryId: 693153,
-  id: "6bc9b8f7-59ea-4c55-a974-1d311352965b",
+  entryId: 426904,
+  id: "4d1db1f2-c431-4066-9e96-349e1cf9e06e",
 }, operationSecurity).then((res: PutPeopleIdEmploymentEntryIdResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -1718,27 +1693,27 @@ const operationSecurity: PutPeopleIdEquitiesEntryIdSecurity = {
 
 sdk.people.putPeopleIdEquitiesEntryId({
   equityEntry: {
-    consentNumber: "libero",
-    effectiveDate: new RFCDate("2021-08-24"),
-    equityType: "odio",
+    consentNumber: "velit",
+    effectiveDate: new RFCDate("2022-07-02"),
+    equityType: "dolor",
     exercisePrice: {
-      currency: "fugit",
-      value: 5.45,
+      currency: "iusto",
+      value: 247.53,
     },
-    grantDate: new RFCDate("2022-07-29"),
-    grantNumber: 644.35,
-    grantStatus: "quae",
-    grantType: "modi",
-    id: 208253,
-    optionExpiration: new RFCDate("2022-01-25"),
-    quantity: 882.48,
-    reason: "ipsum",
-    vestingCommencementDate: new RFCDate("2021-04-14"),
-    vestingSchedule: 7143.76,
-    vestingTerm: "maxime",
+    grantDate: new RFCDate("2022-12-29"),
+    grantNumber: 6397.05,
+    grantStatus: "recusandae",
+    grantType: "ea",
+    id: 693153,
+    optionExpiration: new RFCDate("2022-04-18"),
+    quantity: 8093.65,
+    reason: "perspiciatis",
+    vestingCommencementDate: new RFCDate("2021-12-04"),
+    vestingSchedule: 9543.34,
+    vestingTerm: "voluptate",
   },
-  entryId: 157222,
-  id: "259b1abd-a8c0-470e-9084-cb0672d1ad87",
+  entryId: 351936,
+  id: "9eac55a9-741d-4311-b529-65bb8a720261",
 }, operationSecurity).then((res: PutPeopleIdEquitiesEntryIdResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -1779,23 +1754,23 @@ const operationSecurity: PutPeopleIdWorkEntryIdSecurity = {
 sdk.people.putPeopleIdWorkEntryId({
   workEntry: {
     customColumns: {},
-    department: "provident",
-    effectiveDate: new RFCDate("2020-04-24"),
-    id: 733289,
-    reason: "sint",
+    department: "quae",
+    effectiveDate: new RFCDate("2022-10-16"),
+    id: 348357,
+    reason: "itaque",
     reportsTo: {
-      displayName: "ea",
-      email: "Garett.Prosacco@yahoo.com",
-      firstName: "Sid",
-      id: "fbd02bae-0be2-4d78-a259-e3ea4b5197f9",
-      surname: "fugit",
+      displayName: "et",
+      email: "Leanne_Stiedemann15@gmail.com",
+      firstName: "Carmen",
+      id: "59b1abda-8c07-40e1-884c-b0672d1ad879",
+      surname: "accusamus",
     },
-    site: "numquam",
-    siteId: 256916,
-    title: "Mrs.",
+    site: "necessitatibus",
+    siteId: 733289,
+    title: "Ms.",
   },
-  entryId: 873557,
-  id: "a7ce52b8-95c5-437c-a454-efb0b34896c3",
+  entryId: 409726,
+  id: "65b85efb-d02b-4ae0-be2d-782259e3ea4b",
 }, operationSecurity).then((res: PutPeopleIdWorkEntryIdResponse) => {
   if (res.statusCode == 200) {
     // handle response

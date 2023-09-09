@@ -6,9 +6,6 @@ import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
 import { EmployeeProfile } from "./employeeprofile";
 import { Expose, Type } from "class-transformer";
 
-/**
- * Employee profiles
- */
 export class EmployeesProfiles extends SpeakeasyBase {
     @SpeakeasyMetadata({ elemType: EmployeeProfile })
     @Expose({ name: "employees" })

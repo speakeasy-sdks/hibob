@@ -6,9 +6,6 @@ import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
 import { EquityEntry } from "./equityentry";
 import { Expose, Type } from "class-transformer";
 
-/**
- * List of salary equity grants.
- */
 export class EquityEntries extends SpeakeasyBase {
     @SpeakeasyMetadata({ elemType: EquityEntry })
     @Expose({ name: "values" })

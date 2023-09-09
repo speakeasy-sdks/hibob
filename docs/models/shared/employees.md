@@ -1,7 +1,5 @@
 # Employees
 
-Payroll data.
-
 
 ## Fields
 

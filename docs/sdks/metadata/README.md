@@ -37,8 +37,8 @@ const operationSecurity: DeleteCompanyNamedListsListNameItemIdSecurity = {
 };
 
 sdk.metadata.deleteCompanyNamedListsListNameItemId({
-  itemId: "omnis",
-  listName: "molestiae",
+  itemId: "amet",
+  listName: "deserunt",
 }, operationSecurity).then((res: DeleteCompanyNamedListsListNameItemIdResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -82,7 +82,7 @@ const operationSecurity: DeleteCompanyPeopleFieldsFieldIdSecurity = {
 };
 
 sdk.metadata.deleteCompanyPeopleFieldsFieldId({
-  fieldId: "perferendis",
+  fieldId: "nisi",
 }, operationSecurity).then((res: DeleteCompanyPeopleFieldsFieldIdResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -165,7 +165,7 @@ const operationSecurity: GetCompanyNamedListsListNameSecurity = {
 
 sdk.metadata.getCompanyNamedListsListName({
   includeArchived: false,
-  listName: "nihil",
+  listName: "vel",
 }, operationSecurity).then((res: GetCompanyNamedListsListNameResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -321,7 +321,7 @@ const operationSecurity: GetPeopleCustomTablesMetadataCustomTableIdSecurity = {
 };
 
 sdk.metadata.getPeopleCustomTablesMetadataCustomTableId({
-  customTableId: "magnam",
+  customTableId: "natus",
 }, operationSecurity).then((res: GetPeopleCustomTablesMetadataCustomTableIdResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -363,10 +363,10 @@ const operationSecurity: PostCompanyNamedListsListNameSecurity = {
 
 sdk.metadata.postCompanyNamedListsListName({
   newListItem: {
-    name: "Alfonso Green",
-    parentId: 618016,
+    name: "Fernando Aufderhar",
+    parentId: 716075,
   },
-  listName: "nobis",
+  listName: "id",
 }, operationSecurity).then((res: PostCompanyNamedListsListNameResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -407,11 +407,11 @@ const operationSecurity: PostCompanyPeopleFieldsSecurity = {
 };
 
 sdk.metadata.postCompanyPeopleFields({
-  category: "eum",
-  description: "vero",
-  historical: "aspernatur",
-  name: "Danielle Bosco",
-  type: "provident",
+  category: "labore",
+  description: "labore",
+  historical: "suscipit",
+  name: "Robin Keebler",
+  type: "architecto",
 }, operationSecurity).then((res: PostCompanyPeopleFieldsResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -456,11 +456,11 @@ const operationSecurity: PutCompanyNamedListsListNameItemIdSecurity = {
 
 sdk.metadata.putCompanyNamedListsListNameItemId({
   updateListItemRequest: {
-    name: "Kirk Bartoletti",
-    parentId: 652103,
+    name: "Frances Marks",
+    parentId: 551816,
   },
-  itemId: "ad",
-  listName: "eum",
+  itemId: "sint",
+  listName: "accusantium",
 }, operationSecurity).then((res: PutCompanyNamedListsListNameItemIdResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -502,10 +502,10 @@ const operationSecurity: PutCompanyPeopleFieldsFieldIdSecurity = {
 
 sdk.metadata.putCompanyPeopleFieldsFieldId({
   updateFieldRequest: {
-    description: "dolor",
-    name: "Ms. Fred Hilll",
+    description: "mollitia",
+    name: "Shaun Hammes",
   },
-  fieldId: "debitis",
+  fieldId: "necessitatibus",
 }, operationSecurity).then((res: PutCompanyPeopleFieldsFieldIdResponse) => {
   if (res.statusCode == 200) {
     // handle response

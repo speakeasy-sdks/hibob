@@ -5,9 +5,6 @@
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
 import { Expose } from "class-transformer";
 
-/**
- * Unexpected error
- */
 export class ErrorT extends SpeakeasyBase {
     /**
      * A human readable error message.

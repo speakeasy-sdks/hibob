@@ -1,7 +1,5 @@
 # CustomTableMetadata
 
-Successful response
-
 
 ## Fields
 

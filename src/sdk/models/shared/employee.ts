@@ -8,9 +8,6 @@ import { PersonalPart } from "./personalpart";
 import { WorkPart } from "./workpart";
 import { Expose, Type } from "class-transformer";
 
-/**
- * Employee
- */
 export class Employee extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "about" })

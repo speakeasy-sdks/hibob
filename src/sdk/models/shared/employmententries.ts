@@ -6,9 +6,6 @@ import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
 import { EmploymentEntry } from "./employmententry";
 import { Expose, Type } from "class-transformer";
 
-/**
- * List of employment history entries.
- */
 export class EmploymentEntries extends SpeakeasyBase {
     @SpeakeasyMetadata({ elemType: EmploymentEntry })
     @Expose({ name: "values" })

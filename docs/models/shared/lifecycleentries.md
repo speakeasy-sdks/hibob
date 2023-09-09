@@ -1,7 +1,5 @@
 # LifeCycleEntries
 
-List of life-cycle history entries.
-
 
 ## Fields
 

@@ -6,9 +6,6 @@ import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
 import { RFCDate } from "../../types";
 import { Expose, Transform } from "class-transformer";
 
-/**
- * Employment entry to add. This must not conflict with another entry on the same effective date.
- */
 export class EmploymentEntry extends SpeakeasyBase {
     /**
      * Contract.

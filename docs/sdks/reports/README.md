@@ -67,7 +67,7 @@ const operationSecurity: GetCompanyReportsDownloadReportNameSecurity = {
 };
 
 sdk.reports.getCompanyReportsDownloadReportName({
-  reportName: "minus",
+  reportName: "quis",
 }, operationSecurity).then((res: GetCompanyReportsDownloadReportNameResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -112,10 +112,10 @@ const operationSecurity: GetCompanyReportsReportIdDownloadSecurity = {
 };
 
 sdk.reports.getCompanyReportsReportIdDownload({
-  format: GetCompanyReportsReportIdDownloadFormat.Xlsx,
+  format: GetCompanyReportsReportIdDownloadFormat.Csv,
   includeInfo: false,
-  locale: "nostrum",
-  reportId: 6692.37,
+  locale: "unde",
+  reportId: 4769.46,
 }, operationSecurity).then((res: GetCompanyReportsReportIdDownloadResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -162,8 +162,8 @@ const operationSecurity: GetCompanyReportsReportIdDownloadAsyncSecurity = {
 sdk.reports.getCompanyReportsReportIdDownloadAsync({
   format: GetCompanyReportsReportIdDownloadAsyncFormat.Xlsx,
   includeInfo: false,
-  locale: "delectus",
-  reportId: 7358.94,
+  locale: "cupiditate",
+  reportId: 1478.01,
 }, operationSecurity).then((res: GetCompanyReportsReportIdDownloadAsyncResponse) => {
   if (res.statusCode == 200) {
     // handle response

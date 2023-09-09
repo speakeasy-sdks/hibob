@@ -1,7 +1,5 @@
 # List
 
-Successful response. Please note that the item ID may be textual or numeric depending on the list type.
-
 
 ## Fields
 

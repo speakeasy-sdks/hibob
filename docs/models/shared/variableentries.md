@@ -1,7 +1,5 @@
 # VariableEntries
 
-List of variable payments.
-
 
 ## Fields
 

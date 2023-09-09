@@ -6,9 +6,6 @@ import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
 import { ReasonCode } from "./reasoncode";
 import { Expose, Type } from "class-transformer";
 
-/**
- * List of reason codes.
- */
 export class ReasonCodes extends SpeakeasyBase {
     @SpeakeasyMetadata({ elemType: ReasonCode })
     @Expose({ name: "reasonCodes" })

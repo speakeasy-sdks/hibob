@@ -6,9 +6,6 @@ import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
 import { RFCDate } from "../../types";
 import { Expose, Transform } from "class-transformer";
 
-/**
- * Balance result.
- */
 export class BalanceResult extends SpeakeasyBase {
     /**
      * Annual allowance.

@@ -7,9 +7,6 @@ import { RFCDate } from "../../types";
 import { CurrencyValue } from "./currencyvalue";
 import { Expose, Transform, Type } from "class-transformer";
 
-/**
- * Salary entry to add. This must not conflict with another entry on the same effective date.
- */
 export class SalaryEntry extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "base" })

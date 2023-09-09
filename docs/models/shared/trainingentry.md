@@ -1,7 +1,5 @@
 # TrainingEntry
 
-Training entry to add.
-
 
 ## Fields
 
