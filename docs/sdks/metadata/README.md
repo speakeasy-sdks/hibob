@@ -1,4 +1,4 @@
-# metadata
+# Metadata
 
 ### Available Operations
 

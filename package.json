@@ -1,6 +1,6 @@
 {
   "name": "hibob",
-  "version": "1.5.2",
+  "version": "1.5.3",
   "author": "roopak",
   "scripts": {
     "prepare": "tsc --build"

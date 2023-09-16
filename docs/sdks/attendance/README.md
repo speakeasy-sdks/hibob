@@ -1,4 +1,4 @@
-# attendance
+# Attendance
 
 ### Available Operations
 
