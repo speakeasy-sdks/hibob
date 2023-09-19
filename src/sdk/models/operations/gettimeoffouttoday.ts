@@ -25,6 +25,18 @@ export class GetTimeoffOuttodayRequest extends SpeakeasyBase {
     includeHourly?: boolean;
 
     /**
+     * Show the policy type's name instead of the policy's custom public name if the user has permission to view it, and the policy's custom public name exists.
+     */
+    @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=includePrivate" })
+    includePrivate?: boolean;
+
+    /**
+     * The employee's site ID
+     */
+    @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=siteId" })
+    siteId?: number;
+
+    /**
      * Date to report out of the office. If not specified, the date at UTC at the time of the request is used.
      */
     @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=today" })

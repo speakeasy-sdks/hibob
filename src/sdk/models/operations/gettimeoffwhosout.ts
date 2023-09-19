@@ -31,6 +31,12 @@ export class GetTimeoffWhosoutRequest extends SpeakeasyBase {
     includeHourly?: boolean;
 
     /**
+     * Include Pending Requests
+     */
+    @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=includePending" })
+    includePending?: boolean;
+
+    /**
      * Show the policy type's name instead of the policy's custom public name if the user has permission to view it, and the policy's custom public name exists.
      */
     @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=includePrivate" })
