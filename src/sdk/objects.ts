@@ -37,7 +37,7 @@ export class Objects {
         );
         const url: string = baseURL.replace(/\/$/, "") + "/objects/position/search";
 
-        let [reqBodyHeaders, reqBody]: [object, any] = [{}, {}];
+        let [reqBodyHeaders, reqBody]: [object, any] = [{}, null];
 
         try {
             [reqBodyHeaders, reqBody] = utils.serializeRequestBody(req, "request", "json");
@@ -52,8 +52,7 @@ export class Objects {
         }
         const properties = utils.parseSecurityProperties(security);
         const headers = { ...reqBodyHeaders, ...config?.headers, ...properties.headers };
-        if (reqBody == null || Object.keys(reqBody).length === 0)
-            throw new Error("request body is required");
+        if (reqBody == null) throw new Error("request body is required");
         headers["Accept"] = "application/json";
 
         headers[

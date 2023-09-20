@@ -665,7 +665,7 @@ export class Payroll {
         );
         const url: string = utils.generateURL(baseURL, "/people/{id}/equities", req);
 
-        let [reqBodyHeaders, reqBody]: [object, any] = [{}, {}];
+        let [reqBodyHeaders, reqBody]: [object, any] = [{}, null];
 
         try {
             [reqBodyHeaders, reqBody] = utils.serializeRequestBody(req, "equityEntry", "json");
@@ -680,8 +680,7 @@ export class Payroll {
         }
         const properties = utils.parseSecurityProperties(security);
         const headers = { ...reqBodyHeaders, ...config?.headers, ...properties.headers };
-        if (reqBody == null || Object.keys(reqBody).length === 0)
-            throw new Error("request body is required");
+        if (reqBody == null) throw new Error("request body is required");
         headers["Accept"] = "*/*";
 
         headers[
@@ -739,7 +738,7 @@ export class Payroll {
         );
         const url: string = utils.generateURL(baseURL, "/people/{id}/salaries", req);
 
-        let [reqBodyHeaders, reqBody]: [object, any] = [{}, {}];
+        let [reqBodyHeaders, reqBody]: [object, any] = [{}, null];
 
         try {
             [reqBodyHeaders, reqBody] = utils.serializeRequestBody(req, "salaryEntry", "json");
@@ -754,8 +753,7 @@ export class Payroll {
         }
         const properties = utils.parseSecurityProperties(security);
         const headers = { ...reqBodyHeaders, ...config?.headers, ...properties.headers };
-        if (reqBody == null || Object.keys(reqBody).length === 0)
-            throw new Error("request body is required");
+        if (reqBody == null) throw new Error("request body is required");
         headers["Accept"] = "*/*";
 
         headers[
@@ -813,7 +811,7 @@ export class Payroll {
         );
         const url: string = utils.generateURL(baseURL, "/people/{id}/training", req);
 
-        let [reqBodyHeaders, reqBody]: [object, any] = [{}, {}];
+        let [reqBodyHeaders, reqBody]: [object, any] = [{}, null];
 
         try {
             [reqBodyHeaders, reqBody] = utils.serializeRequestBody(req, "trainingEntry", "json");
@@ -828,8 +826,7 @@ export class Payroll {
         }
         const properties = utils.parseSecurityProperties(security);
         const headers = { ...reqBodyHeaders, ...config?.headers, ...properties.headers };
-        if (reqBody == null || Object.keys(reqBody).length === 0)
-            throw new Error("request body is required");
+        if (reqBody == null) throw new Error("request body is required");
         headers["Accept"] = "*/*";
 
         headers[
@@ -887,7 +884,7 @@ export class Payroll {
         );
         const url: string = utils.generateURL(baseURL, "/people/{id}/variable", req);
 
-        let [reqBodyHeaders, reqBody]: [object, any] = [{}, {}];
+        let [reqBodyHeaders, reqBody]: [object, any] = [{}, null];
 
         try {
             [reqBodyHeaders, reqBody] = utils.serializeRequestBody(req, "variableEntry", "json");
@@ -902,8 +899,7 @@ export class Payroll {
         }
         const properties = utils.parseSecurityProperties(security);
         const headers = { ...reqBodyHeaders, ...config?.headers, ...properties.headers };
-        if (reqBody == null || Object.keys(reqBody).length === 0)
-            throw new Error("request body is required");
+        if (reqBody == null) throw new Error("request body is required");
         headers["Accept"] = "*/*";
 
         headers[
@@ -961,7 +957,7 @@ export class Payroll {
         );
         const url: string = utils.generateURL(baseURL, "/people/{id}/equities/{entry_id}", req);
 
-        let [reqBodyHeaders, reqBody]: [object, any] = [{}, {}];
+        let [reqBodyHeaders, reqBody]: [object, any] = [{}, null];
 
         try {
             [reqBodyHeaders, reqBody] = utils.serializeRequestBody(req, "equityEntry", "json");
@@ -976,8 +972,7 @@ export class Payroll {
         }
         const properties = utils.parseSecurityProperties(security);
         const headers = { ...reqBodyHeaders, ...config?.headers, ...properties.headers };
-        if (reqBody == null || Object.keys(reqBody).length === 0)
-            throw new Error("request body is required");
+        if (reqBody == null) throw new Error("request body is required");
         headers["Accept"] = "*/*";
 
         headers[

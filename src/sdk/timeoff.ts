@@ -904,7 +904,7 @@ export class TimeOff {
         );
         const url: string = utils.generateURL(baseURL, "/timeoff/employees/{id}/adjustments", req);
 
-        let [reqBodyHeaders, reqBody]: [object, any] = [{}, {}];
+        let [reqBodyHeaders, reqBody]: [object, any] = [{}, null];
 
         try {
             [reqBodyHeaders, reqBody] = utils.serializeRequestBody(
@@ -923,8 +923,7 @@ export class TimeOff {
         }
         const properties = utils.parseSecurityProperties(security);
         const headers = { ...reqBodyHeaders, ...config?.headers, ...properties.headers };
-        if (reqBody == null || Object.keys(reqBody).length === 0)
-            throw new Error("request body is required");
+        if (reqBody == null) throw new Error("request body is required");
         headers["Accept"] = "application/json";
 
         headers[
@@ -995,7 +994,7 @@ export class TimeOff {
         );
         const url: string = utils.generateURL(baseURL, "/timeoff/employees/{id}/requests", req);
 
-        let [reqBodyHeaders, reqBody]: [object, any] = [{}, {}];
+        let [reqBodyHeaders, reqBody]: [object, any] = [{}, null];
 
         try {
             [reqBodyHeaders, reqBody] = utils.serializeRequestBody(
@@ -1014,8 +1013,7 @@ export class TimeOff {
         }
         const properties = utils.parseSecurityProperties(security);
         const headers = { ...reqBodyHeaders, ...config?.headers, ...properties.headers };
-        if (reqBody == null || Object.keys(reqBody).length === 0)
-            throw new Error("request body is required");
+        if (reqBody == null) throw new Error("request body is required");
         headers["Accept"] = "*/*";
 
         headers[
@@ -1077,7 +1075,7 @@ export class TimeOff {
             req
         );
 
-        let [reqBodyHeaders, reqBody]: [object, any] = [{}, {}];
+        let [reqBodyHeaders, reqBody]: [object, any] = [{}, null];
 
         try {
             [reqBodyHeaders, reqBody] = utils.serializeRequestBody(req, "reasonCodesNames", "json");
@@ -1092,8 +1090,7 @@ export class TimeOff {
         }
         const properties = utils.parseSecurityProperties(security);
         const headers = { ...reqBodyHeaders, ...config?.headers, ...properties.headers };
-        if (reqBody == null || Object.keys(reqBody).length === 0)
-            throw new Error("request body is required");
+        if (reqBody == null) throw new Error("request body is required");
         headers["Accept"] = "*/*";
 
         headers[
