@@ -7,7 +7,7 @@ import * as errors from "./models/errors";
 import * as operations from "./models/operations";
 import * as shared from "./models/shared";
 import { SDKConfiguration } from "./sdk";
-import { AxiosInstance, AxiosRequestConfig, AxiosResponse } from "axios";
+import { AxiosInstance, AxiosRequestConfig, AxiosResponse, RawAxiosRequestHeaders } from "axios";
 
 export class Tasks {
     private sdkConfiguration: SDKConfiguration;
@@ -36,7 +36,7 @@ export class Tasks {
             security = new operations.GetMyTasksSecurity(security);
         }
         const properties = utils.parseSecurityProperties(security);
-        const headers = { ...config?.headers, ...properties.headers };
+        const headers: RawAxiosRequestHeaders = { ...config?.headers, ...properties.headers };
         headers["Accept"] = "application/json";
 
         headers[
@@ -102,7 +102,7 @@ export class Tasks {
             security = new operations.GetTasksSecurity(security);
         }
         const properties = utils.parseSecurityProperties(security);
-        const headers = { ...config?.headers, ...properties.headers };
+        const headers: RawAxiosRequestHeaders = { ...config?.headers, ...properties.headers };
         headers["Accept"] = "application/json";
 
         headers[
@@ -173,7 +173,7 @@ export class Tasks {
             security = new operations.GetTasksPeopleIdSecurity(security);
         }
         const properties = utils.parseSecurityProperties(security);
-        const headers = { ...config?.headers, ...properties.headers };
+        const headers: RawAxiosRequestHeaders = { ...config?.headers, ...properties.headers };
         const queryParams: string = utils.serializeQueryParams(req);
         headers["Accept"] = "application/json";
 
@@ -257,7 +257,7 @@ export class Tasks {
             security = new operations.PostTasksTaskIdCompleteSecurity(security);
         }
         const properties = utils.parseSecurityProperties(security);
-        const headers = { ...config?.headers, ...properties.headers };
+        const headers: RawAxiosRequestHeaders = { ...config?.headers, ...properties.headers };
         headers["Accept"] = "application/json";
 
         headers[

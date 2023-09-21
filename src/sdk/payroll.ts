@@ -7,7 +7,7 @@ import * as errors from "./models/errors";
 import * as operations from "./models/operations";
 import * as shared from "./models/shared";
 import { SDKConfiguration } from "./sdk";
-import { AxiosInstance, AxiosRequestConfig, AxiosResponse } from "axios";
+import { AxiosInstance, AxiosRequestConfig, AxiosResponse, RawAxiosRequestHeaders } from "axios";
 
 export class Payroll {
     private sdkConfiguration: SDKConfiguration;
@@ -41,7 +41,7 @@ export class Payroll {
             security = new operations.DeletePeopleIdEquitiesEntryIdSecurity(security);
         }
         const properties = utils.parseSecurityProperties(security);
-        const headers = { ...config?.headers, ...properties.headers };
+        const headers: RawAxiosRequestHeaders = { ...config?.headers, ...properties.headers };
         headers["Accept"] = "*/*";
 
         headers[
@@ -102,7 +102,7 @@ export class Payroll {
             security = new operations.DeletePeopleIdSalariesEntryIdSecurity(security);
         }
         const properties = utils.parseSecurityProperties(security);
-        const headers = { ...config?.headers, ...properties.headers };
+        const headers: RawAxiosRequestHeaders = { ...config?.headers, ...properties.headers };
         headers["Accept"] = "*/*";
 
         headers[
@@ -163,7 +163,7 @@ export class Payroll {
             security = new operations.DeletePeopleIdTrainingEntryIdSecurity(security);
         }
         const properties = utils.parseSecurityProperties(security);
-        const headers = { ...config?.headers, ...properties.headers };
+        const headers: RawAxiosRequestHeaders = { ...config?.headers, ...properties.headers };
         headers["Accept"] = "*/*";
 
         headers[
@@ -224,7 +224,7 @@ export class Payroll {
             security = new operations.DeletePeopleIdVariableEntryIdSecurity(security);
         }
         const properties = utils.parseSecurityProperties(security);
-        const headers = { ...config?.headers, ...properties.headers };
+        const headers: RawAxiosRequestHeaders = { ...config?.headers, ...properties.headers };
         headers["Accept"] = "*/*";
 
         headers[
@@ -285,7 +285,7 @@ export class Payroll {
             security = new operations.GetPayrollHistorySecurity(security);
         }
         const properties = utils.parseSecurityProperties(security);
-        const headers = { ...config?.headers, ...properties.headers };
+        const headers: RawAxiosRequestHeaders = { ...config?.headers, ...properties.headers };
         const queryParams: string = utils.serializeQueryParams(req);
         headers["Accept"] = "application/json";
 
@@ -369,7 +369,7 @@ export class Payroll {
             security = new operations.GetPeopleIdEquitiesSecurity(security);
         }
         const properties = utils.parseSecurityProperties(security);
-        const headers = { ...config?.headers, ...properties.headers };
+        const headers: RawAxiosRequestHeaders = { ...config?.headers, ...properties.headers };
         headers["Accept"] = "application/json";
 
         headers[
@@ -444,7 +444,7 @@ export class Payroll {
             security = new operations.GetPeopleIdSalariesSecurity(security);
         }
         const properties = utils.parseSecurityProperties(security);
-        const headers = { ...config?.headers, ...properties.headers };
+        const headers: RawAxiosRequestHeaders = { ...config?.headers, ...properties.headers };
         headers["Accept"] = "application/json";
 
         headers[
@@ -519,7 +519,7 @@ export class Payroll {
             security = new operations.GetPeopleIdTrainingSecurity(security);
         }
         const properties = utils.parseSecurityProperties(security);
-        const headers = { ...config?.headers, ...properties.headers };
+        const headers: RawAxiosRequestHeaders = { ...config?.headers, ...properties.headers };
         headers["Accept"] = "application/json";
 
         headers[
@@ -594,7 +594,7 @@ export class Payroll {
             security = new operations.GetPeopleIdVariableSecurity(security);
         }
         const properties = utils.parseSecurityProperties(security);
-        const headers = { ...config?.headers, ...properties.headers };
+        const headers: RawAxiosRequestHeaders = { ...config?.headers, ...properties.headers };
         headers["Accept"] = "application/json";
 
         headers[
@@ -679,7 +679,11 @@ export class Payroll {
             security = new operations.PostPeopleIdEquitiesSecurity(security);
         }
         const properties = utils.parseSecurityProperties(security);
-        const headers = { ...reqBodyHeaders, ...config?.headers, ...properties.headers };
+        const headers: RawAxiosRequestHeaders = {
+            ...reqBodyHeaders,
+            ...config?.headers,
+            ...properties.headers,
+        };
         if (reqBody == null) throw new Error("request body is required");
         headers["Accept"] = "*/*";
 
@@ -752,7 +756,11 @@ export class Payroll {
             security = new operations.PostPeopleIdSalariesSecurity(security);
         }
         const properties = utils.parseSecurityProperties(security);
-        const headers = { ...reqBodyHeaders, ...config?.headers, ...properties.headers };
+        const headers: RawAxiosRequestHeaders = {
+            ...reqBodyHeaders,
+            ...config?.headers,
+            ...properties.headers,
+        };
         if (reqBody == null) throw new Error("request body is required");
         headers["Accept"] = "*/*";
 
@@ -825,7 +833,11 @@ export class Payroll {
             security = new operations.PostPeopleIdTrainingSecurity(security);
         }
         const properties = utils.parseSecurityProperties(security);
-        const headers = { ...reqBodyHeaders, ...config?.headers, ...properties.headers };
+        const headers: RawAxiosRequestHeaders = {
+            ...reqBodyHeaders,
+            ...config?.headers,
+            ...properties.headers,
+        };
         if (reqBody == null) throw new Error("request body is required");
         headers["Accept"] = "*/*";
 
@@ -898,7 +910,11 @@ export class Payroll {
             security = new operations.PostPeopleIdVariableSecurity(security);
         }
         const properties = utils.parseSecurityProperties(security);
-        const headers = { ...reqBodyHeaders, ...config?.headers, ...properties.headers };
+        const headers: RawAxiosRequestHeaders = {
+            ...reqBodyHeaders,
+            ...config?.headers,
+            ...properties.headers,
+        };
         if (reqBody == null) throw new Error("request body is required");
         headers["Accept"] = "*/*";
 
@@ -971,7 +987,11 @@ export class Payroll {
             security = new operations.PutPeopleIdEquitiesEntryIdSecurity(security);
         }
         const properties = utils.parseSecurityProperties(security);
-        const headers = { ...reqBodyHeaders, ...config?.headers, ...properties.headers };
+        const headers: RawAxiosRequestHeaders = {
+            ...reqBodyHeaders,
+            ...config?.headers,
+            ...properties.headers,
+        };
         if (reqBody == null) throw new Error("request body is required");
         headers["Accept"] = "*/*";
 

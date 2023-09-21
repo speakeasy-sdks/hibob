@@ -7,7 +7,7 @@ import * as errors from "./models/errors";
 import * as operations from "./models/operations";
 import * as shared from "./models/shared";
 import { SDKConfiguration } from "./sdk";
-import { AxiosInstance, AxiosRequestConfig, AxiosResponse } from "axios";
+import { AxiosInstance, AxiosRequestConfig, AxiosResponse, RawAxiosRequestHeaders } from "axios";
 
 export class Attendance {
     private sdkConfiguration: SDKConfiguration;
@@ -55,7 +55,11 @@ export class Attendance {
             security = new operations.PostAttendanceImportImportMethodSecurity(security);
         }
         const properties = utils.parseSecurityProperties(security);
-        const headers = { ...reqBodyHeaders, ...config?.headers, ...properties.headers };
+        const headers: RawAxiosRequestHeaders = {
+            ...reqBodyHeaders,
+            ...config?.headers,
+            ...properties.headers,
+        };
         if (reqBody == null) throw new Error("request body is required");
         headers["Accept"] = "application/json";
 

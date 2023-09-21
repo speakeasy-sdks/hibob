@@ -7,7 +7,7 @@ import * as errors from "./models/errors";
 import * as operations from "./models/operations";
 import * as shared from "./models/shared";
 import { SDKConfiguration } from "./sdk";
-import { AxiosInstance, AxiosRequestConfig, AxiosResponse } from "axios";
+import { AxiosInstance, AxiosRequestConfig, AxiosResponse, RawAxiosRequestHeaders } from "axios";
 
 export class People {
     private sdkConfiguration: SDKConfiguration;
@@ -41,7 +41,7 @@ export class People {
             security = new operations.DeletePeopleIdEmploymentEntryIdSecurity(security);
         }
         const properties = utils.parseSecurityProperties(security);
-        const headers = { ...config?.headers, ...properties.headers };
+        const headers: RawAxiosRequestHeaders = { ...config?.headers, ...properties.headers };
         headers["Accept"] = "*/*";
 
         headers[
@@ -102,7 +102,7 @@ export class People {
             security = new operations.DeletePeopleIdEquitiesEntryIdSecurity(security);
         }
         const properties = utils.parseSecurityProperties(security);
-        const headers = { ...config?.headers, ...properties.headers };
+        const headers: RawAxiosRequestHeaders = { ...config?.headers, ...properties.headers };
         headers["Accept"] = "*/*";
 
         headers[
@@ -163,7 +163,7 @@ export class People {
             security = new operations.DeletePeopleIdSalariesEntryIdSecurity(security);
         }
         const properties = utils.parseSecurityProperties(security);
-        const headers = { ...config?.headers, ...properties.headers };
+        const headers: RawAxiosRequestHeaders = { ...config?.headers, ...properties.headers };
         headers["Accept"] = "*/*";
 
         headers[
@@ -224,7 +224,7 @@ export class People {
             security = new operations.DeletePeopleIdTrainingEntryIdSecurity(security);
         }
         const properties = utils.parseSecurityProperties(security);
-        const headers = { ...config?.headers, ...properties.headers };
+        const headers: RawAxiosRequestHeaders = { ...config?.headers, ...properties.headers };
         headers["Accept"] = "*/*";
 
         headers[
@@ -285,7 +285,7 @@ export class People {
             security = new operations.DeletePeopleIdVariableEntryIdSecurity(security);
         }
         const properties = utils.parseSecurityProperties(security);
-        const headers = { ...config?.headers, ...properties.headers };
+        const headers: RawAxiosRequestHeaders = { ...config?.headers, ...properties.headers };
         headers["Accept"] = "*/*";
 
         headers[
@@ -346,7 +346,7 @@ export class People {
             security = new operations.DeletePeopleIdWorkEntryIdSecurity(security);
         }
         const properties = utils.parseSecurityProperties(security);
-        const headers = { ...config?.headers, ...properties.headers };
+        const headers: RawAxiosRequestHeaders = { ...config?.headers, ...properties.headers };
         headers["Accept"] = "*/*";
 
         headers[
@@ -407,7 +407,7 @@ export class People {
             security = new operations.GetAvatarsSecurity(security);
         }
         const properties = utils.parseSecurityProperties(security);
-        const headers = { ...config?.headers, ...properties.headers };
+        const headers: RawAxiosRequestHeaders = { ...config?.headers, ...properties.headers };
         const queryParams: string = utils.serializeQueryParams(req);
         headers["Accept"] = "*/*";
 
@@ -468,7 +468,7 @@ export class People {
             security = new operations.GetAvatarsEmployeeIdSecurity(security);
         }
         const properties = utils.parseSecurityProperties(security);
-        const headers = { ...config?.headers, ...properties.headers };
+        const headers: RawAxiosRequestHeaders = { ...config?.headers, ...properties.headers };
         headers["Accept"] = "*/*";
 
         headers[
@@ -524,7 +524,7 @@ export class People {
             security = new operations.GetMyAvatarSecurity(security);
         }
         const properties = utils.parseSecurityProperties(security);
-        const headers = { ...config?.headers, ...properties.headers };
+        const headers: RawAxiosRequestHeaders = { ...config?.headers, ...properties.headers };
         headers["Accept"] = "*/*";
 
         headers[
@@ -586,7 +586,7 @@ export class People {
             security = new operations.GetPeopleSecurity(security);
         }
         const properties = utils.parseSecurityProperties(security);
-        const headers = { ...config?.headers, ...properties.headers };
+        const headers: RawAxiosRequestHeaders = { ...config?.headers, ...properties.headers };
         const queryParams: string = utils.serializeQueryParams(req);
         headers["Accept"] = "application/json";
 
@@ -672,7 +672,7 @@ export class People {
             security = new operations.GetPeopleIdentifierSecurity(security);
         }
         const properties = utils.parseSecurityProperties(security);
-        const headers = { ...config?.headers, ...properties.headers };
+        const headers: RawAxiosRequestHeaders = { ...config?.headers, ...properties.headers };
         const queryParams: string = utils.serializeQueryParams(req);
         headers["Accept"] = "application/json";
 
@@ -757,7 +757,7 @@ export class People {
             security = new operations.GetPeopleIdEmploymentSecurity(security);
         }
         const properties = utils.parseSecurityProperties(security);
-        const headers = { ...config?.headers, ...properties.headers };
+        const headers: RawAxiosRequestHeaders = { ...config?.headers, ...properties.headers };
         headers["Accept"] = "application/json";
 
         headers[
@@ -832,7 +832,7 @@ export class People {
             security = new operations.GetPeopleIdEquitiesSecurity(security);
         }
         const properties = utils.parseSecurityProperties(security);
-        const headers = { ...config?.headers, ...properties.headers };
+        const headers: RawAxiosRequestHeaders = { ...config?.headers, ...properties.headers };
         headers["Accept"] = "application/json";
 
         headers[
@@ -907,7 +907,7 @@ export class People {
             security = new operations.GetPeopleIdLifecycleSecurity(security);
         }
         const properties = utils.parseSecurityProperties(security);
-        const headers = { ...config?.headers, ...properties.headers };
+        const headers: RawAxiosRequestHeaders = { ...config?.headers, ...properties.headers };
         headers["Accept"] = "application/json";
 
         headers[
@@ -982,7 +982,7 @@ export class People {
             security = new operations.GetPeopleIdSalariesSecurity(security);
         }
         const properties = utils.parseSecurityProperties(security);
-        const headers = { ...config?.headers, ...properties.headers };
+        const headers: RawAxiosRequestHeaders = { ...config?.headers, ...properties.headers };
         headers["Accept"] = "application/json";
 
         headers[
@@ -1057,7 +1057,7 @@ export class People {
             security = new operations.GetPeopleIdTrainingSecurity(security);
         }
         const properties = utils.parseSecurityProperties(security);
-        const headers = { ...config?.headers, ...properties.headers };
+        const headers: RawAxiosRequestHeaders = { ...config?.headers, ...properties.headers };
         headers["Accept"] = "application/json";
 
         headers[
@@ -1132,7 +1132,7 @@ export class People {
             security = new operations.GetPeopleIdVariableSecurity(security);
         }
         const properties = utils.parseSecurityProperties(security);
-        const headers = { ...config?.headers, ...properties.headers };
+        const headers: RawAxiosRequestHeaders = { ...config?.headers, ...properties.headers };
         headers["Accept"] = "application/json";
 
         headers[
@@ -1207,7 +1207,7 @@ export class People {
             security = new operations.GetPeopleIdWorkSecurity(security);
         }
         const properties = utils.parseSecurityProperties(security);
-        const headers = { ...config?.headers, ...properties.headers };
+        const headers: RawAxiosRequestHeaders = { ...config?.headers, ...properties.headers };
         headers["Accept"] = "application/json";
 
         headers[
@@ -1281,7 +1281,7 @@ export class People {
             security = new operations.GetProfilesSecurity(security);
         }
         const properties = utils.parseSecurityProperties(security);
-        const headers = { ...config?.headers, ...properties.headers };
+        const headers: RawAxiosRequestHeaders = { ...config?.headers, ...properties.headers };
         const queryParams: string = utils.serializeQueryParams(req);
         headers["Accept"] = "application/json";
 
@@ -1382,7 +1382,11 @@ export class People {
             security = new operations.PostEmployeesEmployeeIdInvitationsSecurity(security);
         }
         const properties = utils.parseSecurityProperties(security);
-        const headers = { ...reqBodyHeaders, ...config?.headers, ...properties.headers };
+        const headers: RawAxiosRequestHeaders = {
+            ...reqBodyHeaders,
+            ...config?.headers,
+            ...properties.headers,
+        };
         if (reqBody == null) throw new Error("request body is required");
         headers["Accept"] = "application/json";
 
@@ -1468,7 +1472,11 @@ export class People {
             security = new operations.PostEmployeesEmployeeIdStartDateSecurity(security);
         }
         const properties = utils.parseSecurityProperties(security);
-        const headers = { ...reqBodyHeaders, ...config?.headers, ...properties.headers };
+        const headers: RawAxiosRequestHeaders = {
+            ...reqBodyHeaders,
+            ...config?.headers,
+            ...properties.headers,
+        };
         if (reqBody == null) throw new Error("request body is required");
         headers["Accept"] = "application/json";
 
@@ -1558,7 +1566,11 @@ export class People {
             security = new operations.PostEmployeesIdentifierTerminateSecurity(security);
         }
         const properties = utils.parseSecurityProperties(security);
-        const headers = { ...reqBodyHeaders, ...config?.headers, ...properties.headers };
+        const headers: RawAxiosRequestHeaders = {
+            ...reqBodyHeaders,
+            ...config?.headers,
+            ...properties.headers,
+        };
         if (reqBody == null) throw new Error("request body is required");
         headers["Accept"] = "*/*";
 
@@ -1621,7 +1633,7 @@ export class People {
             security = new operations.PostEmployeesIdentifierUninviteSecurity(security);
         }
         const properties = utils.parseSecurityProperties(security);
-        const headers = { ...config?.headers, ...properties.headers };
+        const headers: RawAxiosRequestHeaders = { ...config?.headers, ...properties.headers };
         headers["Accept"] = "application/json";
 
         headers[
@@ -1705,7 +1717,11 @@ export class People {
             security = new operations.PostPeopleSecurity(security);
         }
         const properties = utils.parseSecurityProperties(security);
-        const headers = { ...reqBodyHeaders, ...config?.headers, ...properties.headers };
+        const headers: RawAxiosRequestHeaders = {
+            ...reqBodyHeaders,
+            ...config?.headers,
+            ...properties.headers,
+        };
         if (reqBody == null) throw new Error("request body is required");
         headers["Accept"] = "application/json";
 
@@ -1788,7 +1804,11 @@ export class People {
             security = new operations.PostPeopleSearchSecurity(security);
         }
         const properties = utils.parseSecurityProperties(security);
-        const headers = { ...reqBodyHeaders, ...config?.headers, ...properties.headers };
+        const headers: RawAxiosRequestHeaders = {
+            ...reqBodyHeaders,
+            ...config?.headers,
+            ...properties.headers,
+        };
         if (reqBody == null) throw new Error("request body is required");
         headers["Accept"] = "application/json";
 
@@ -1887,7 +1907,11 @@ export class People {
             security = new operations.PostPeopleIdentifierSecurity(security);
         }
         const properties = utils.parseSecurityProperties(security);
-        const headers = { ...reqBodyHeaders, ...config?.headers, ...properties.headers };
+        const headers: RawAxiosRequestHeaders = {
+            ...reqBodyHeaders,
+            ...config?.headers,
+            ...properties.headers,
+        };
         headers["Accept"] = "application/json";
 
         headers[
@@ -1982,7 +2006,11 @@ export class People {
             security = new operations.PostPeopleIdEmploymentSecurity(security);
         }
         const properties = utils.parseSecurityProperties(security);
-        const headers = { ...reqBodyHeaders, ...config?.headers, ...properties.headers };
+        const headers: RawAxiosRequestHeaders = {
+            ...reqBodyHeaders,
+            ...config?.headers,
+            ...properties.headers,
+        };
         if (reqBody == null) throw new Error("request body is required");
         headers["Accept"] = "*/*";
 
@@ -2055,7 +2083,11 @@ export class People {
             security = new operations.PostPeopleIdEquitiesSecurity(security);
         }
         const properties = utils.parseSecurityProperties(security);
-        const headers = { ...reqBodyHeaders, ...config?.headers, ...properties.headers };
+        const headers: RawAxiosRequestHeaders = {
+            ...reqBodyHeaders,
+            ...config?.headers,
+            ...properties.headers,
+        };
         if (reqBody == null) throw new Error("request body is required");
         headers["Accept"] = "*/*";
 
@@ -2128,7 +2160,11 @@ export class People {
             security = new operations.PostPeopleIdSalariesSecurity(security);
         }
         const properties = utils.parseSecurityProperties(security);
-        const headers = { ...reqBodyHeaders, ...config?.headers, ...properties.headers };
+        const headers: RawAxiosRequestHeaders = {
+            ...reqBodyHeaders,
+            ...config?.headers,
+            ...properties.headers,
+        };
         if (reqBody == null) throw new Error("request body is required");
         headers["Accept"] = "*/*";
 
@@ -2201,7 +2237,11 @@ export class People {
             security = new operations.PostPeopleIdTrainingSecurity(security);
         }
         const properties = utils.parseSecurityProperties(security);
-        const headers = { ...reqBodyHeaders, ...config?.headers, ...properties.headers };
+        const headers: RawAxiosRequestHeaders = {
+            ...reqBodyHeaders,
+            ...config?.headers,
+            ...properties.headers,
+        };
         if (reqBody == null) throw new Error("request body is required");
         headers["Accept"] = "*/*";
 
@@ -2274,7 +2314,11 @@ export class People {
             security = new operations.PostPeopleIdVariableSecurity(security);
         }
         const properties = utils.parseSecurityProperties(security);
-        const headers = { ...reqBodyHeaders, ...config?.headers, ...properties.headers };
+        const headers: RawAxiosRequestHeaders = {
+            ...reqBodyHeaders,
+            ...config?.headers,
+            ...properties.headers,
+        };
         if (reqBody == null) throw new Error("request body is required");
         headers["Accept"] = "*/*";
 
@@ -2347,7 +2391,11 @@ export class People {
             security = new operations.PostPeopleIdWorkSecurity(security);
         }
         const properties = utils.parseSecurityProperties(security);
-        const headers = { ...reqBodyHeaders, ...config?.headers, ...properties.headers };
+        const headers: RawAxiosRequestHeaders = {
+            ...reqBodyHeaders,
+            ...config?.headers,
+            ...properties.headers,
+        };
         if (reqBody == null) throw new Error("request body is required");
         headers["Accept"] = "*/*";
 
@@ -2419,7 +2467,11 @@ export class People {
             security = new operations.PutAvatarsEmployeeIdSecurity(security);
         }
         const properties = utils.parseSecurityProperties(security);
-        const headers = { ...reqBodyHeaders, ...config?.headers, ...properties.headers };
+        const headers: RawAxiosRequestHeaders = {
+            ...reqBodyHeaders,
+            ...config?.headers,
+            ...properties.headers,
+        };
         if (reqBody == null) throw new Error("request body is required");
         headers["Accept"] = "*/*";
 
@@ -2492,7 +2544,11 @@ export class People {
             security = new operations.PutPeopleIdentifierSecurity(security);
         }
         const properties = utils.parseSecurityProperties(security);
-        const headers = { ...reqBodyHeaders, ...config?.headers, ...properties.headers };
+        const headers: RawAxiosRequestHeaders = {
+            ...reqBodyHeaders,
+            ...config?.headers,
+            ...properties.headers,
+        };
         if (reqBody == null) throw new Error("request body is required");
         headers["Accept"] = "*/*";
 
@@ -2565,7 +2621,11 @@ export class People {
             security = new operations.PutPeopleIdEmailSecurity(security);
         }
         const properties = utils.parseSecurityProperties(security);
-        const headers = { ...reqBodyHeaders, ...config?.headers, ...properties.headers };
+        const headers: RawAxiosRequestHeaders = {
+            ...reqBodyHeaders,
+            ...config?.headers,
+            ...properties.headers,
+        };
         if (reqBody == null) throw new Error("request body is required");
         headers["Accept"] = "*/*";
 
@@ -2637,7 +2697,11 @@ export class People {
             security = new operations.PutPeopleIdEmploymentEntryIdSecurity(security);
         }
         const properties = utils.parseSecurityProperties(security);
-        const headers = { ...reqBodyHeaders, ...config?.headers, ...properties.headers };
+        const headers: RawAxiosRequestHeaders = {
+            ...reqBodyHeaders,
+            ...config?.headers,
+            ...properties.headers,
+        };
         if (reqBody == null) throw new Error("request body is required");
         headers["Accept"] = "*/*";
 
@@ -2710,7 +2774,11 @@ export class People {
             security = new operations.PutPeopleIdEquitiesEntryIdSecurity(security);
         }
         const properties = utils.parseSecurityProperties(security);
-        const headers = { ...reqBodyHeaders, ...config?.headers, ...properties.headers };
+        const headers: RawAxiosRequestHeaders = {
+            ...reqBodyHeaders,
+            ...config?.headers,
+            ...properties.headers,
+        };
         if (reqBody == null) throw new Error("request body is required");
         headers["Accept"] = "*/*";
 
@@ -2783,7 +2851,11 @@ export class People {
             security = new operations.PutPeopleIdWorkEntryIdSecurity(security);
         }
         const properties = utils.parseSecurityProperties(security);
-        const headers = { ...reqBodyHeaders, ...config?.headers, ...properties.headers };
+        const headers: RawAxiosRequestHeaders = {
+            ...reqBodyHeaders,
+            ...config?.headers,
+            ...properties.headers,
+        };
         if (reqBody == null) throw new Error("request body is required");
         headers["Accept"] = "*/*";
 

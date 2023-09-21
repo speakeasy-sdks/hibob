@@ -7,7 +7,7 @@ import * as errors from "./models/errors";
 import * as operations from "./models/operations";
 import * as shared from "./models/shared";
 import { SDKConfiguration } from "./sdk";
-import { AxiosInstance, AxiosRequestConfig, AxiosResponse } from "axios";
+import { AxiosInstance, AxiosRequestConfig, AxiosResponse, RawAxiosRequestHeaders } from "axios";
 
 export class Metadata {
     private sdkConfiguration: SDKConfiguration;
@@ -45,7 +45,7 @@ export class Metadata {
             security = new operations.DeleteCompanyNamedListsListNameItemIdSecurity(security);
         }
         const properties = utils.parseSecurityProperties(security);
-        const headers = { ...config?.headers, ...properties.headers };
+        const headers: RawAxiosRequestHeaders = { ...config?.headers, ...properties.headers };
         headers["Accept"] = "*/*";
 
         headers[
@@ -106,7 +106,7 @@ export class Metadata {
             security = new operations.DeleteCompanyPeopleFieldsFieldIdSecurity(security);
         }
         const properties = utils.parseSecurityProperties(security);
-        const headers = { ...config?.headers, ...properties.headers };
+        const headers: RawAxiosRequestHeaders = { ...config?.headers, ...properties.headers };
         headers["Accept"] = "*/*";
 
         headers[
@@ -167,7 +167,7 @@ export class Metadata {
             security = new operations.GetCompanyNamedListsSecurity(security);
         }
         const properties = utils.parseSecurityProperties(security);
-        const headers = { ...config?.headers, ...properties.headers };
+        const headers: RawAxiosRequestHeaders = { ...config?.headers, ...properties.headers };
         const queryParams: string = utils.serializeQueryParams(req);
         headers["Accept"] = "application/json";
 
@@ -246,7 +246,7 @@ export class Metadata {
             security = new operations.GetCompanyNamedListsListNameSecurity(security);
         }
         const properties = utils.parseSecurityProperties(security);
-        const headers = { ...config?.headers, ...properties.headers };
+        const headers: RawAxiosRequestHeaders = { ...config?.headers, ...properties.headers };
         const queryParams: string = utils.serializeQueryParams(req);
         headers["Accept"] = "application/json";
 
@@ -316,7 +316,7 @@ export class Metadata {
             security = new operations.GetCompanyPeopleFieldsSecurity(security);
         }
         const properties = utils.parseSecurityProperties(security);
-        const headers = { ...config?.headers, ...properties.headers };
+        const headers: RawAxiosRequestHeaders = { ...config?.headers, ...properties.headers };
         headers["Accept"] = "application/json";
 
         headers[
@@ -389,7 +389,7 @@ export class Metadata {
             security = new operations.GetMetadataObjectsPositionSecurity(security);
         }
         const properties = utils.parseSecurityProperties(security);
-        const headers = { ...config?.headers, ...properties.headers };
+        const headers: RawAxiosRequestHeaders = { ...config?.headers, ...properties.headers };
         headers["Accept"] = "application/json";
 
         headers[
@@ -471,7 +471,7 @@ export class Metadata {
             security = new operations.GetPeopleCustomTablesMetadataSecurity(security);
         }
         const properties = utils.parseSecurityProperties(security);
-        const headers = { ...config?.headers, ...properties.headers };
+        const headers: RawAxiosRequestHeaders = { ...config?.headers, ...properties.headers };
         headers["Accept"] = "application/json";
 
         headers[
@@ -550,7 +550,7 @@ export class Metadata {
             security = new operations.GetPeopleCustomTablesMetadataCustomTableIdSecurity(security);
         }
         const properties = utils.parseSecurityProperties(security);
-        const headers = { ...config?.headers, ...properties.headers };
+        const headers: RawAxiosRequestHeaders = { ...config?.headers, ...properties.headers };
         headers["Accept"] = "application/json";
 
         headers[
@@ -635,7 +635,11 @@ export class Metadata {
             security = new operations.PostCompanyNamedListsListNameSecurity(security);
         }
         const properties = utils.parseSecurityProperties(security);
-        const headers = { ...reqBodyHeaders, ...config?.headers, ...properties.headers };
+        const headers: RawAxiosRequestHeaders = {
+            ...reqBodyHeaders,
+            ...config?.headers,
+            ...properties.headers,
+        };
         if (reqBody == null) throw new Error("request body is required");
         headers["Accept"] = "application/json";
 
@@ -724,7 +728,11 @@ export class Metadata {
             security = new operations.PostCompanyPeopleFieldsSecurity(security);
         }
         const properties = utils.parseSecurityProperties(security);
-        const headers = { ...reqBodyHeaders, ...config?.headers, ...properties.headers };
+        const headers: RawAxiosRequestHeaders = {
+            ...reqBodyHeaders,
+            ...config?.headers,
+            ...properties.headers,
+        };
         if (reqBody == null) throw new Error("request body is required");
         headers["Accept"] = "application/json";
 
@@ -818,7 +826,11 @@ export class Metadata {
             security = new operations.PutCompanyNamedListsListNameItemIdSecurity(security);
         }
         const properties = utils.parseSecurityProperties(security);
-        const headers = { ...reqBodyHeaders, ...config?.headers, ...properties.headers };
+        const headers: RawAxiosRequestHeaders = {
+            ...reqBodyHeaders,
+            ...config?.headers,
+            ...properties.headers,
+        };
         if (reqBody == null) throw new Error("request body is required");
         headers["Accept"] = "*/*";
 
@@ -895,7 +907,11 @@ export class Metadata {
             security = new operations.PutCompanyPeopleFieldsFieldIdSecurity(security);
         }
         const properties = utils.parseSecurityProperties(security);
-        const headers = { ...reqBodyHeaders, ...config?.headers, ...properties.headers };
+        const headers: RawAxiosRequestHeaders = {
+            ...reqBodyHeaders,
+            ...config?.headers,
+            ...properties.headers,
+        };
         if (reqBody == null) throw new Error("request body is required");
         headers["Accept"] = "*/*";
 
