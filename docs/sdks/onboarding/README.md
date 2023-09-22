@@ -12,14 +12,15 @@ Wizard info includes Wizard ID, name and description.<br /><b>Supported user typ
 
 ```typescript
 import { Hibob } from "hibob";
-import { GetOnboardingWizardsResponse, GetOnboardingWizardsSecurity } from "hibob/dist/sdk/models/operations";
+import { GetOnboardingWizardsResponse } from "hibob/dist/sdk/models/operations";
 
-const sdk = new Hibob();
-const operationSecurity: GetOnboardingWizardsSecurity = {
-  bearer: "",
-};
+const sdk = new Hibob({
+  security: {
+    bearer: "",
+  },
+});
 
-sdk.onboarding.getOnboardingWizards(operationSecurity).then((res: GetOnboardingWizardsResponse) => {
+sdk.onboarding.getOnboardingWizards().then((res: GetOnboardingWizardsResponse) => {
   if (res.statusCode == 200) {
     // handle response
   }
@@ -28,10 +29,9 @@ sdk.onboarding.getOnboardingWizards(operationSecurity).then((res: GetOnboardingW
 
 ### Parameters
 
-| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
-| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
-| `security`                                                                                         | [operations.GetOnboardingWizardsSecurity](../../models/operations/getonboardingwizardssecurity.md) | :heavy_check_mark:                                                                                 | The security requirements to use for the request.                                                  |
-| `config`                                                                                           | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                       | :heavy_minus_sign:                                                                                 | Available config options for making requests.                                                      |
+| Parameter                                                    | Type                                                         | Required                                                     | Description                                                  |
+| ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| `config`                                                     | [AxiosRequestConfig](https://axios-http.com/docs/req_config) | :heavy_minus_sign:                                           | Available config options for making requests.                |
 
 
 ### Response

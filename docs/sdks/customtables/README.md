@@ -29,9 +29,9 @@ const operationSecurity: DeletePeopleCustomTablesEmployeeIdCustomTableIdEntryIdS
 };
 
 sdk.customTables.deletePeopleCustomTablesEmployeeIdCustomTableIdEntryId({
-  customTableId: "unde",
-  employeeId: "nulla",
-  entryId: "corrupti",
+  customTableId: "corrupti",
+  employeeId: "illum",
+  entryId: "vel",
 }, operationSecurity).then((res: DeletePeopleCustomTablesEmployeeIdCustomTableIdEntryIdResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -75,8 +75,8 @@ const operationSecurity: GetPeopleCustomTablesEmployeeIdCustomTableIdSecurity = 
 };
 
 sdk.customTables.getPeopleCustomTablesEmployeeIdCustomTableId({
-  customTableId: "illum",
-  employeeId: "vel",
+  customTableId: "error",
+  employeeId: "deserunt",
   includeHumanReadable: false,
 }, operationSecurity).then((res: GetPeopleCustomTablesEmployeeIdCustomTableIdResponse) => {
   if (res.statusCode == 200) {
@@ -122,10 +122,10 @@ const operationSecurity: PostPeopleCustomTablesEmployeeIdCustomTableIdSecurity =
 
 sdk.customTables.postPeopleCustomTablesEmployeeIdCustomTableId({
   requestBody: {
-    rawBody: "error",
+    rawBody: "suscipit",
   },
-  customTableId: "deserunt",
-  employeeId: "suscipit",
+  customTableId: "iure",
+  employeeId: "magnam",
 }, operationSecurity).then((res: PostPeopleCustomTablesEmployeeIdCustomTableIdResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -170,11 +170,11 @@ const operationSecurity: PutPeopleCustomTablesEmployeeIdCustomTableIdEntryIdSecu
 
 sdk.customTables.putPeopleCustomTablesEmployeeIdCustomTableIdEntryId({
   requestBody: {
-    rawBody: "iure",
+    rawBody: "debitis",
   },
-  customTableId: "magnam",
-  employeeId: "debitis",
-  entryId: "ipsa",
+  customTableId: "ipsa",
+  employeeId: "delectus",
+  entryId: "tempora",
 }, operationSecurity).then((res: PutPeopleCustomTablesEmployeeIdCustomTableIdEntryIdResponse) => {
   if (res.statusCode == 200) {
     // handle response

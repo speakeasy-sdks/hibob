@@ -1,4 +1,4 @@
-# GetMyAvatarSecurity
+# Security
 
 
 ## Fields

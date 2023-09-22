@@ -6,13 +6,6 @@ import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
 import * as shared from "../shared";
 import { AxiosResponse } from "axios";
 
-export class PostDocsPeopleIdSharedSecurity extends SpeakeasyBase {
-    @SpeakeasyMetadata({
-        data: "security, scheme=true;type=apiKey;subtype=header;name=Authorization",
-    })
-    bearer: string;
-}
-
 export class PostDocsPeopleIdSharedRequest extends SpeakeasyBase {
     /**
      * Document to upload.

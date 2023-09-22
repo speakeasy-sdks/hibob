@@ -176,7 +176,6 @@ export class Documents {
      */
     async getDocsPeopleId(
         req: operations.GetDocsPeopleIdRequest,
-        security: operations.GetDocsPeopleIdSecurity,
         config?: AxiosRequestConfig
     ): Promise<operations.GetDocsPeopleIdResponse> {
         if (!(req instanceof utils.SpeakeasyBase)) {
@@ -189,10 +188,14 @@ export class Documents {
         );
         const url: string = utils.generateURL(baseURL, "/docs/people/{id}", req);
         const client: AxiosInstance = this.sdkConfiguration.defaultClient;
-        if (!(security instanceof utils.SpeakeasyBase)) {
-            security = new operations.GetDocsPeopleIdSecurity(security);
+        let globalSecurity = this.sdkConfiguration.security;
+        if (typeof globalSecurity === "function") {
+            globalSecurity = await globalSecurity();
         }
-        const properties = utils.parseSecurityProperties(security);
+        if (!(globalSecurity instanceof utils.SpeakeasyBase)) {
+            globalSecurity = new shared.Security(globalSecurity);
+        }
+        const properties = utils.parseSecurityProperties(globalSecurity);
         const headers: RawAxiosRequestHeaders = { ...config?.headers, ...properties.headers };
         headers["Accept"] = "application/json";
 
@@ -262,7 +265,6 @@ export class Documents {
      */
     async postDocsPeopleIdConfidential(
         req: operations.PostDocsPeopleIdConfidentialRequest,
-        security: operations.PostDocsPeopleIdConfidentialSecurity,
         config?: AxiosRequestConfig
     ): Promise<operations.PostDocsPeopleIdConfidentialResponse> {
         if (!(req instanceof utils.SpeakeasyBase)) {
@@ -285,10 +287,14 @@ export class Documents {
             }
         }
         const client: AxiosInstance = this.sdkConfiguration.defaultClient;
-        if (!(security instanceof utils.SpeakeasyBase)) {
-            security = new operations.PostDocsPeopleIdConfidentialSecurity(security);
+        let globalSecurity = this.sdkConfiguration.security;
+        if (typeof globalSecurity === "function") {
+            globalSecurity = await globalSecurity();
         }
-        const properties = utils.parseSecurityProperties(security);
+        if (!(globalSecurity instanceof utils.SpeakeasyBase)) {
+            globalSecurity = new shared.Security(globalSecurity);
+        }
+        const properties = utils.parseSecurityProperties(globalSecurity);
         const headers: RawAxiosRequestHeaders = {
             ...reqBodyHeaders,
             ...config?.headers,
@@ -352,7 +358,6 @@ export class Documents {
      */
     async postDocsPeopleIdConfidentialUpload(
         req: operations.PostDocsPeopleIdConfidentialUploadRequest,
-        security: operations.PostDocsPeopleIdConfidentialUploadSecurity,
         config?: AxiosRequestConfig
     ): Promise<operations.PostDocsPeopleIdConfidentialUploadResponse> {
         if (!(req instanceof utils.SpeakeasyBase)) {
@@ -379,10 +384,14 @@ export class Documents {
             }
         }
         const client: AxiosInstance = this.sdkConfiguration.defaultClient;
-        if (!(security instanceof utils.SpeakeasyBase)) {
-            security = new operations.PostDocsPeopleIdConfidentialUploadSecurity(security);
+        let globalSecurity = this.sdkConfiguration.security;
+        if (typeof globalSecurity === "function") {
+            globalSecurity = await globalSecurity();
         }
-        const properties = utils.parseSecurityProperties(security);
+        if (!(globalSecurity instanceof utils.SpeakeasyBase)) {
+            globalSecurity = new shared.Security(globalSecurity);
+        }
+        const properties = utils.parseSecurityProperties(globalSecurity);
         const headers: RawAxiosRequestHeaders = {
             ...reqBodyHeaders,
             ...config?.headers,
@@ -446,7 +455,6 @@ export class Documents {
      */
     async postDocsPeopleIdShared(
         req: operations.PostDocsPeopleIdSharedRequest,
-        security: operations.PostDocsPeopleIdSharedSecurity,
         config?: AxiosRequestConfig
     ): Promise<operations.PostDocsPeopleIdSharedResponse> {
         if (!(req instanceof utils.SpeakeasyBase)) {
@@ -469,10 +477,14 @@ export class Documents {
             }
         }
         const client: AxiosInstance = this.sdkConfiguration.defaultClient;
-        if (!(security instanceof utils.SpeakeasyBase)) {
-            security = new operations.PostDocsPeopleIdSharedSecurity(security);
+        let globalSecurity = this.sdkConfiguration.security;
+        if (typeof globalSecurity === "function") {
+            globalSecurity = await globalSecurity();
         }
-        const properties = utils.parseSecurityProperties(security);
+        if (!(globalSecurity instanceof utils.SpeakeasyBase)) {
+            globalSecurity = new shared.Security(globalSecurity);
+        }
+        const properties = utils.parseSecurityProperties(globalSecurity);
         const headers: RawAxiosRequestHeaders = {
             ...reqBodyHeaders,
             ...config?.headers,
@@ -536,7 +548,6 @@ export class Documents {
      */
     async postDocsPeopleIdSharedUpload(
         req: operations.PostDocsPeopleIdSharedUploadRequest,
-        security: operations.PostDocsPeopleIdSharedUploadSecurity,
         config?: AxiosRequestConfig
     ): Promise<operations.PostDocsPeopleIdSharedUploadResponse> {
         if (!(req instanceof utils.SpeakeasyBase)) {
@@ -559,10 +570,14 @@ export class Documents {
             }
         }
         const client: AxiosInstance = this.sdkConfiguration.defaultClient;
-        if (!(security instanceof utils.SpeakeasyBase)) {
-            security = new operations.PostDocsPeopleIdSharedUploadSecurity(security);
+        let globalSecurity = this.sdkConfiguration.security;
+        if (typeof globalSecurity === "function") {
+            globalSecurity = await globalSecurity();
         }
-        const properties = utils.parseSecurityProperties(security);
+        if (!(globalSecurity instanceof utils.SpeakeasyBase)) {
+            globalSecurity = new shared.Security(globalSecurity);
+        }
+        const properties = utils.parseSecurityProperties(globalSecurity);
         const headers: RawAxiosRequestHeaders = {
             ...reqBodyHeaders,
             ...config?.headers,

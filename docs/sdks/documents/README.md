@@ -32,8 +32,8 @@ const operationSecurity: DeleteDocsPeopleIdConfidentialDocIdSecurity = {
 };
 
 sdk.documents.deleteDocsPeopleIdConfidentialDocId({
-  docId: "delectus",
-  id: "467cc879-6ed1-451a-85df-c2ddf7cc78ca",
+  docId: "suscipit",
+  id: "7cc8796e-d151-4a05-9fc2-ddf7cc78ca1b",
 }, operationSecurity).then((res: DeleteDocsPeopleIdConfidentialDocIdResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -74,8 +74,8 @@ const operationSecurity: DeleteDocsPeopleIdSharedDocIdSecurity = {
 };
 
 sdk.documents.deleteDocsPeopleIdSharedDocId({
-  docId: "dicta",
-  id: "ba928fc8-1674-42cb-b392-05929396fea7",
+  docId: "officia",
+  id: "928fc816-742c-4b73-9205-929396fea759",
 }, operationSecurity).then((res: DeleteDocsPeopleIdSharedDocIdResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -105,16 +105,17 @@ Returns a list of documents and download links.<br /><b>Supported user types:</b
 
 ```typescript
 import { Hibob } from "hibob";
-import { GetDocsPeopleIdResponse, GetDocsPeopleIdSecurity } from "hibob/dist/sdk/models/operations";
+import { GetDocsPeopleIdResponse } from "hibob/dist/sdk/models/operations";
 
-const sdk = new Hibob();
-const operationSecurity: GetDocsPeopleIdSecurity = {
-  bearer: "",
-};
+const sdk = new Hibob({
+  security: {
+    bearer: "",
+  },
+});
 
 sdk.documents.getDocsPeopleId({
-  id: "596eb10f-aaa2-4352-8595-5907aff1a3a2",
-}, operationSecurity).then((res: GetDocsPeopleIdResponse) => {
+  id: "6eb10faa-a235-42c5-9559-07aff1a3a2fa",
+}).then((res: GetDocsPeopleIdResponse) => {
   if (res.statusCode == 200) {
     // handle response
   }
@@ -123,11 +124,10 @@ sdk.documents.getDocsPeopleId({
 
 ### Parameters
 
-| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
-| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
-| `request`                                                                                | [operations.GetDocsPeopleIdRequest](../../models/operations/getdocspeopleidrequest.md)   | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
-| `security`                                                                               | [operations.GetDocsPeopleIdSecurity](../../models/operations/getdocspeopleidsecurity.md) | :heavy_check_mark:                                                                       | The security requirements to use for the request.                                        |
-| `config`                                                                                 | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                             | :heavy_minus_sign:                                                                       | Available config options for making requests.                                            |
+| Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
+| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
+| `request`                                                                              | [operations.GetDocsPeopleIdRequest](../../models/operations/getdocspeopleidrequest.md) | :heavy_check_mark:                                                                     | The request object to use for the request.                                             |
+| `config`                                                                               | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                           | :heavy_minus_sign:                                                                     | Available config options for making requests.                                          |
 
 
 ### Response
@@ -143,23 +143,24 @@ sdk.documents.getDocsPeopleId({
 
 ```typescript
 import { Hibob } from "hibob";
-import { PostDocsPeopleIdConfidentialResponse, PostDocsPeopleIdConfidentialSecurity } from "hibob/dist/sdk/models/operations";
+import { PostDocsPeopleIdConfidentialResponse } from "hibob/dist/sdk/models/operations";
 
-const sdk = new Hibob();
-const operationSecurity: PostDocsPeopleIdConfidentialSecurity = {
-  bearer: "",
-};
+const sdk = new Hibob({
+  security: {
+    bearer: "",
+  },
+});
 
 sdk.documents.postDocsPeopleIdConfidential({
   addDocument: {
-    documentName: "repellat",
-    documentUrl: "mollitia",
+    documentName: "occaecati",
+    documentUrl: "numquam",
     tags: [
-      "occaecati",
+      "commodi",
     ],
   },
-  id: "46773925-1aa5-42c3-b5ad-019da1ffe78f",
-}, operationSecurity).then((res: PostDocsPeopleIdConfidentialResponse) => {
+  id: "7739251a-a52c-43f5-ad01-9da1ffe78f09",
+}).then((res: PostDocsPeopleIdConfidentialResponse) => {
   if (res.statusCode == 200) {
     // handle response
   }
@@ -168,11 +169,10 @@ sdk.documents.postDocsPeopleIdConfidential({
 
 ### Parameters
 
-| Parameter                                                                                                          | Type                                                                                                               | Required                                                                                                           | Description                                                                                                        |
-| ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                          | [operations.PostDocsPeopleIdConfidentialRequest](../../models/operations/postdocspeopleidconfidentialrequest.md)   | :heavy_check_mark:                                                                                                 | The request object to use for the request.                                                                         |
-| `security`                                                                                                         | [operations.PostDocsPeopleIdConfidentialSecurity](../../models/operations/postdocspeopleidconfidentialsecurity.md) | :heavy_check_mark:                                                                                                 | The security requirements to use for the request.                                                                  |
-| `config`                                                                                                           | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                       | :heavy_minus_sign:                                                                                                 | Available config options for making requests.                                                                      |
+| Parameter                                                                                                        | Type                                                                                                             | Required                                                                                                         | Description                                                                                                      |
+| ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                        | [operations.PostDocsPeopleIdConfidentialRequest](../../models/operations/postdocspeopleidconfidentialrequest.md) | :heavy_check_mark:                                                                                               | The request object to use for the request.                                                                       |
+| `config`                                                                                                         | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                     | :heavy_minus_sign:                                                                                               | Available config options for making requests.                                                                    |
 
 
 ### Response
@@ -188,25 +188,23 @@ sdk.documents.postDocsPeopleIdConfidential({
 
 ```typescript
 import { Hibob } from "hibob";
-import {
-  PostDocsPeopleIdConfidentialUploadResponse,
-  PostDocsPeopleIdConfidentialUploadSecurity,
-} from "hibob/dist/sdk/models/operations";
+import { PostDocsPeopleIdConfidentialUploadResponse } from "hibob/dist/sdk/models/operations";
 
-const sdk = new Hibob();
-const operationSecurity: PostDocsPeopleIdConfidentialUploadSecurity = {
-  bearer: "",
-};
+const sdk = new Hibob({
+  security: {
+    bearer: "",
+  },
+});
 
 sdk.documents.postDocsPeopleIdConfidentialUpload({
   requestBody: {
     file: {
-      content: "ipsa".encode(),
-      file: "omnis",
+      content: "voluptate".encode(),
+      file: "cum",
     },
   },
-  id: "7b0074f1-5471-4b5e-ae13-b99d488e1e91",
-}, operationSecurity).then((res: PostDocsPeopleIdConfidentialUploadResponse) => {
+  id: "0074f154-71b5-4e6e-93b9-9d488e1e91e4",
+}).then((res: PostDocsPeopleIdConfidentialUploadResponse) => {
   if (res.statusCode == 200) {
     // handle response
   }
@@ -215,11 +213,10 @@ sdk.documents.postDocsPeopleIdConfidentialUpload({
 
 ### Parameters
 
-| Parameter                                                                                                                      | Type                                                                                                                           | Required                                                                                                                       | Description                                                                                                                    |
-| ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                                      | [operations.PostDocsPeopleIdConfidentialUploadRequest](../../models/operations/postdocspeopleidconfidentialuploadrequest.md)   | :heavy_check_mark:                                                                                                             | The request object to use for the request.                                                                                     |
-| `security`                                                                                                                     | [operations.PostDocsPeopleIdConfidentialUploadSecurity](../../models/operations/postdocspeopleidconfidentialuploadsecurity.md) | :heavy_check_mark:                                                                                                             | The security requirements to use for the request.                                                                              |
-| `config`                                                                                                                       | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                   | :heavy_minus_sign:                                                                                                             | Available config options for making requests.                                                                                  |
+| Parameter                                                                                                                    | Type                                                                                                                         | Required                                                                                                                     | Description                                                                                                                  |
+| ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                    | [operations.PostDocsPeopleIdConfidentialUploadRequest](../../models/operations/postdocspeopleidconfidentialuploadrequest.md) | :heavy_check_mark:                                                                                                           | The request object to use for the request.                                                                                   |
+| `config`                                                                                                                     | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                 | :heavy_minus_sign:                                                                                                           | Available config options for making requests.                                                                                |
 
 
 ### Response
@@ -235,23 +232,24 @@ sdk.documents.postDocsPeopleIdConfidentialUpload({
 
 ```typescript
 import { Hibob } from "hibob";
-import { PostDocsPeopleIdSharedResponse, PostDocsPeopleIdSharedSecurity } from "hibob/dist/sdk/models/operations";
+import { PostDocsPeopleIdSharedResponse } from "hibob/dist/sdk/models/operations";
 
-const sdk = new Hibob();
-const operationSecurity: PostDocsPeopleIdSharedSecurity = {
-  bearer: "",
-};
+const sdk = new Hibob({
+  security: {
+    bearer: "",
+  },
+});
 
 sdk.documents.postDocsPeopleIdShared({
   addDocument: {
-    documentName: "itaque",
-    documentUrl: "incidunt",
+    documentName: "enim",
+    documentUrl: "consequatur",
     tags: [
-      "enim",
+      "est",
     ],
   },
-  id: "0ad2abd4-4269-4802-9502-a94bb4f63c96",
-}, operationSecurity).then((res: PostDocsPeopleIdSharedResponse) => {
+  id: "d2abd442-6980-42d5-82a9-4bb4f63c969e",
+}).then((res: PostDocsPeopleIdSharedResponse) => {
   if (res.statusCode == 200) {
     // handle response
   }
@@ -260,11 +258,10 @@ sdk.documents.postDocsPeopleIdShared({
 
 ### Parameters
 
-| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
-| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                              | [operations.PostDocsPeopleIdSharedRequest](../../models/operations/postdocspeopleidsharedrequest.md)   | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
-| `security`                                                                                             | [operations.PostDocsPeopleIdSharedSecurity](../../models/operations/postdocspeopleidsharedsecurity.md) | :heavy_check_mark:                                                                                     | The security requirements to use for the request.                                                      |
-| `config`                                                                                               | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                           | :heavy_minus_sign:                                                                                     | Available config options for making requests.                                                          |
+| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
+| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
+| `request`                                                                                            | [operations.PostDocsPeopleIdSharedRequest](../../models/operations/postdocspeopleidsharedrequest.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
+| `config`                                                                                             | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                         | :heavy_minus_sign:                                                                                   | Available config options for making requests.                                                        |
 
 
 ### Response
@@ -280,22 +277,23 @@ sdk.documents.postDocsPeopleIdShared({
 
 ```typescript
 import { Hibob } from "hibob";
-import { PostDocsPeopleIdSharedUploadResponse, PostDocsPeopleIdSharedUploadSecurity } from "hibob/dist/sdk/models/operations";
+import { PostDocsPeopleIdSharedUploadResponse } from "hibob/dist/sdk/models/operations";
 
-const sdk = new Hibob();
-const operationSecurity: PostDocsPeopleIdSharedUploadSecurity = {
-  bearer: "",
-};
+const sdk = new Hibob({
+  security: {
+    bearer: "",
+  },
+});
 
 sdk.documents.postDocsPeopleIdSharedUpload({
   requestBody: {
     file: {
-      content: "provident".encode(),
-      file: "necessitatibus",
+      content: "sint".encode(),
+      file: "officia",
     },
   },
-  id: "9a3efa77-dfb1-44cd-a6ae-395efb9ba88f",
-}, operationSecurity).then((res: PostDocsPeopleIdSharedUploadResponse) => {
+  id: "3efa77df-b14c-4d66-ae39-5efb9ba88f3a",
+}).then((res: PostDocsPeopleIdSharedUploadResponse) => {
   if (res.statusCode == 200) {
     // handle response
   }
@@ -304,11 +302,10 @@ sdk.documents.postDocsPeopleIdSharedUpload({
 
 ### Parameters
 
-| Parameter                                                                                                          | Type                                                                                                               | Required                                                                                                           | Description                                                                                                        |
-| ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                          | [operations.PostDocsPeopleIdSharedUploadRequest](../../models/operations/postdocspeopleidshareduploadrequest.md)   | :heavy_check_mark:                                                                                                 | The request object to use for the request.                                                                         |
-| `security`                                                                                                         | [operations.PostDocsPeopleIdSharedUploadSecurity](../../models/operations/postdocspeopleidshareduploadsecurity.md) | :heavy_check_mark:                                                                                                 | The security requirements to use for the request.                                                                  |
-| `config`                                                                                                           | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                       | :heavy_minus_sign:                                                                                                 | Available config options for making requests.                                                                      |
+| Parameter                                                                                                        | Type                                                                                                             | Required                                                                                                         | Description                                                                                                      |
+| ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                        | [operations.PostDocsPeopleIdSharedUploadRequest](../../models/operations/postdocspeopleidshareduploadrequest.md) | :heavy_check_mark:                                                                                               | The request object to use for the request.                                                                       |
+| `config`                                                                                                         | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                     | :heavy_minus_sign:                                                                                               | Available config options for making requests.                                                                    |
 
 
 ### Response

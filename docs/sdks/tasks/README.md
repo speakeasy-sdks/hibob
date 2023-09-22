@@ -15,14 +15,15 @@
 
 ```typescript
 import { Hibob } from "hibob";
-import { GetMyTasksResponse, GetMyTasksSecurity } from "hibob/dist/sdk/models/operations";
+import { GetMyTasksResponse } from "hibob/dist/sdk/models/operations";
 
-const sdk = new Hibob();
-const operationSecurity: GetMyTasksSecurity = {
-  bearer: "",
-};
+const sdk = new Hibob({
+  security: {
+    bearer: "",
+  },
+});
 
-sdk.tasks.getMyTasks(operationSecurity).then((res: GetMyTasksResponse) => {
+sdk.tasks.getMyTasks().then((res: GetMyTasksResponse) => {
   if (res.statusCode == 200) {
     // handle response
   }
@@ -31,10 +32,9 @@ sdk.tasks.getMyTasks(operationSecurity).then((res: GetMyTasksResponse) => {
 
 ### Parameters
 
-| Parameter                                                                      | Type                                                                           | Required                                                                       | Description                                                                    |
-| ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ |
-| `security`                                                                     | [operations.GetMyTasksSecurity](../../models/operations/getmytaskssecurity.md) | :heavy_check_mark:                                                             | The security requirements to use for the request.                              |
-| `config`                                                                       | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                   | :heavy_minus_sign:                                                             | Available config options for making requests.                                  |
+| Parameter                                                    | Type                                                         | Required                                                     | Description                                                  |
+| ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| `config`                                                     | [AxiosRequestConfig](https://axios-http.com/docs/req_config) | :heavy_minus_sign:                                           | Available config options for making requests.                |
 
 
 ### Response
@@ -50,14 +50,15 @@ sdk.tasks.getMyTasks(operationSecurity).then((res: GetMyTasksResponse) => {
 
 ```typescript
 import { Hibob } from "hibob";
-import { GetTasksResponse, GetTasksSecurity } from "hibob/dist/sdk/models/operations";
+import { GetTasksResponse } from "hibob/dist/sdk/models/operations";
 
-const sdk = new Hibob();
-const operationSecurity: GetTasksSecurity = {
-  bearer: "",
-};
+const sdk = new Hibob({
+  security: {
+    bearer: "",
+  },
+});
 
-sdk.tasks.getTasks(operationSecurity).then((res: GetTasksResponse) => {
+sdk.tasks.getTasks().then((res: GetTasksResponse) => {
   if (res.statusCode == 200) {
     // handle response
   }
@@ -66,10 +67,9 @@ sdk.tasks.getTasks(operationSecurity).then((res: GetTasksResponse) => {
 
 ### Parameters
 
-| Parameter                                                                  | Type                                                                       | Required                                                                   | Description                                                                |
-| -------------------------------------------------------------------------- | -------------------------------------------------------------------------- | -------------------------------------------------------------------------- | -------------------------------------------------------------------------- |
-| `security`                                                                 | [operations.GetTasksSecurity](../../models/operations/gettaskssecurity.md) | :heavy_check_mark:                                                         | The security requirements to use for the request.                          |
-| `config`                                                                   | [AxiosRequestConfig](https://axios-http.com/docs/req_config)               | :heavy_minus_sign:                                                         | Available config options for making requests.                              |
+| Parameter                                                    | Type                                                         | Required                                                     | Description                                                  |
+| ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| `config`                                                     | [AxiosRequestConfig](https://axios-http.com/docs/req_config) | :heavy_minus_sign:                                           | Available config options for making requests.                |
 
 
 ### Response
@@ -96,8 +96,8 @@ const operationSecurity: GetTasksPeopleIdSecurity = {
 };
 
 sdk.tasks.getTasksPeopleId({
-  id: "error",
-  taskStatus: GetTasksPeopleIdTaskStatus.Open,
+  id: "harum",
+  taskStatus: GetTasksPeopleIdTaskStatus.Closed,
 }, operationSecurity).then((res: GetTasksPeopleIdResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -138,7 +138,7 @@ const operationSecurity: PostTasksTaskIdCompleteSecurity = {
 };
 
 sdk.tasks.postTasksTaskIdComplete({
-  taskId: "quasi",
+  taskId: "doloremque",
 }, operationSecurity).then((res: PostTasksTaskIdCompleteResponse) => {
   if (res.statusCode == 200) {
     // handle response

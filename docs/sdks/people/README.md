@@ -60,8 +60,8 @@ const operationSecurity: DeletePeopleIdEmploymentEntryIdSecurity = {
 };
 
 sdk.people.deletePeopleIdEmploymentEntryId({
-  entryId: 815524,
-  id: "121aa6f1-e674-4bdb-84f1-5756082d68ea",
+  entryId: 398434,
+  id: "f1e674bd-b04f-4157-9608-2d68ea19f1d1",
 }, operationSecurity).then((res: DeletePeopleIdEmploymentEntryIdResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -102,8 +102,8 @@ const operationSecurity: DeletePeopleIdEquitiesEntryIdSecurity = {
 };
 
 sdk.people.deletePeopleIdEquitiesEntryId({
-  entryId: 99615,
-  id: "9f1d1705-1339-4d08-886a-1840394c2607",
+  entryId: 454162,
+  id: "051339d0-8086-4a18-8039-4c26071f93f5",
 }, operationSecurity).then((res: DeletePeopleIdEquitiesEntryIdResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -144,8 +144,8 @@ const operationSecurity: DeletePeopleIdSalariesEntryIdSecurity = {
 };
 
 sdk.people.deletePeopleIdSalariesEntryId({
-  entryId: 115484,
-  id: "f93f5f06-42da-4c7a-b515-cc413aa63aae",
+  entryId: 990345,
+  id: "0642dac7-af51-45cc-813a-a63aae8d6786",
 }, operationSecurity).then((res: DeletePeopleIdSalariesEntryIdResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -186,8 +186,8 @@ const operationSecurity: DeletePeopleIdTrainingEntryIdSecurity = {
 };
 
 sdk.people.deletePeopleIdTrainingEntryId({
-  entryId: 517309,
-  id: "d67864db-b675-4fd5-a60b-375ed4f6fbee",
+  entryId: 287051,
+  id: "dbb675fd-5e60-4b37-9ed4-f6fbee41f333",
 }, operationSecurity).then((res: DeletePeopleIdTrainingEntryIdResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -228,8 +228,8 @@ const operationSecurity: DeletePeopleIdVariableEntryIdSecurity = {
 };
 
 sdk.people.deletePeopleIdVariableEntryId({
-  entryId: 296556,
-  id: "1f33317f-e35b-460e-b1ea-426555ba3c28",
+  entryId: 105906,
+  id: "7fe35b60-eb1e-4a42-a555-ba3c28744ed5",
 }, operationSecurity).then((res: DeletePeopleIdVariableEntryIdResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -270,8 +270,8 @@ const operationSecurity: DeletePeopleIdWorkEntryIdSecurity = {
 };
 
 sdk.people.deletePeopleIdWorkEntryId({
-  entryId: 449292,
-  id: "44ed53b8-8f3a-48d8-b5c0-b2f2fb7b194a",
+  entryId: 237742,
+  id: "b88f3a8d-8f5c-40b2-b2fb-7b194a276b26",
 }, operationSecurity).then((res: DeletePeopleIdWorkEntryIdResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -301,16 +301,17 @@ Returns the avatar image URL of the employee.<b>Supported user types:</b> Employ
 
 ```typescript
 import { Hibob } from "hibob";
-import { GetAvatarsResponse, GetAvatarsSecurity } from "hibob/dist/sdk/models/operations";
+import { GetAvatarsResponse } from "hibob/dist/sdk/models/operations";
 
-const sdk = new Hibob();
-const operationSecurity: GetAvatarsSecurity = {
-  bearer: "",
-};
+const sdk = new Hibob({
+  security: {
+    bearer: "",
+  },
+});
 
 sdk.people.getAvatars({
-  email: "sed",
-}, operationSecurity).then((res: GetAvatarsResponse) => {
+  email: "unde",
+}).then((res: GetAvatarsResponse) => {
   if (res.statusCode == 200) {
     // handle response
   }
@@ -319,11 +320,10 @@ sdk.people.getAvatars({
 
 ### Parameters
 
-| Parameter                                                                      | Type                                                                           | Required                                                                       | Description                                                                    |
-| ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ |
-| `request`                                                                      | [operations.GetAvatarsRequest](../../models/operations/getavatarsrequest.md)   | :heavy_check_mark:                                                             | The request object to use for the request.                                     |
-| `security`                                                                     | [operations.GetAvatarsSecurity](../../models/operations/getavatarssecurity.md) | :heavy_check_mark:                                                             | The security requirements to use for the request.                              |
-| `config`                                                                       | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                   | :heavy_minus_sign:                                                             | Available config options for making requests.                                  |
+| Parameter                                                                    | Type                                                                         | Required                                                                     | Description                                                                  |
+| ---------------------------------------------------------------------------- | ---------------------------------------------------------------------------- | ---------------------------------------------------------------------------- | ---------------------------------------------------------------------------- |
+| `request`                                                                    | [operations.GetAvatarsRequest](../../models/operations/getavatarsrequest.md) | :heavy_check_mark:                                                           | The request object to use for the request.                                   |
+| `config`                                                                     | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                 | :heavy_minus_sign:                                                           | Available config options for making requests.                                |
 
 
 ### Response
@@ -339,16 +339,17 @@ Returns the avatar image URL of the employee.<b>Supported user types:</b> Employ
 
 ```typescript
 import { Hibob } from "hibob";
-import { GetAvatarsEmployeeIdResponse, GetAvatarsEmployeeIdSecurity } from "hibob/dist/sdk/models/operations";
+import { GetAvatarsEmployeeIdResponse } from "hibob/dist/sdk/models/operations";
 
-const sdk = new Hibob();
-const operationSecurity: GetAvatarsEmployeeIdSecurity = {
-  bearer: "",
-};
+const sdk = new Hibob({
+  security: {
+    bearer: "",
+  },
+});
 
 sdk.people.getAvatarsEmployeeId({
-  employeeId: "in",
-}, operationSecurity).then((res: GetAvatarsEmployeeIdResponse) => {
+  employeeId: "architecto",
+}).then((res: GetAvatarsEmployeeIdResponse) => {
   if (res.statusCode == 200) {
     // handle response
   }
@@ -357,11 +358,10 @@ sdk.people.getAvatarsEmployeeId({
 
 ### Parameters
 
-| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
-| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
-| `request`                                                                                          | [operations.GetAvatarsEmployeeIdRequest](../../models/operations/getavatarsemployeeidrequest.md)   | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
-| `security`                                                                                         | [operations.GetAvatarsEmployeeIdSecurity](../../models/operations/getavatarsemployeeidsecurity.md) | :heavy_check_mark:                                                                                 | The security requirements to use for the request.                                                  |
-| `config`                                                                                           | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                       | :heavy_minus_sign:                                                                                 | Available config options for making requests.                                                      |
+| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
+| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
+| `request`                                                                                        | [operations.GetAvatarsEmployeeIdRequest](../../models/operations/getavatarsemployeeidrequest.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
+| `config`                                                                                         | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                     | :heavy_minus_sign:                                                                               | Available config options for making requests.                                                    |
 
 
 ### Response
@@ -377,14 +377,15 @@ Returns the avatar image URL of the logged-in user.<b>Supported user types:</b> 
 
 ```typescript
 import { Hibob } from "hibob";
-import { GetMyAvatarResponse, GetMyAvatarSecurity } from "hibob/dist/sdk/models/operations";
+import { GetMyAvatarResponse } from "hibob/dist/sdk/models/operations";
 
-const sdk = new Hibob();
-const operationSecurity: GetMyAvatarSecurity = {
-  bearer: "",
-};
+const sdk = new Hibob({
+  security: {
+    bearer: "",
+  },
+});
 
-sdk.people.getMyAvatar(operationSecurity).then((res: GetMyAvatarResponse) => {
+sdk.people.getMyAvatar().then((res: GetMyAvatarResponse) => {
   if (res.statusCode == 200) {
     // handle response
   }
@@ -393,10 +394,9 @@ sdk.people.getMyAvatar(operationSecurity).then((res: GetMyAvatarResponse) => {
 
 ### Parameters
 
-| Parameter                                                                        | Type                                                                             | Required                                                                         | Description                                                                      |
-| -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- |
-| `security`                                                                       | [operations.GetMyAvatarSecurity](../../models/operations/getmyavatarsecurity.md) | :heavy_check_mark:                                                               | The security requirements to use for the request.                                |
-| `config`                                                                         | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                     | :heavy_minus_sign:                                                               | Available config options for making requests.                                    |
+| Parameter                                                    | Type                                                         | Required                                                     | Description                                                  |
+| ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| `config`                                                     | [AxiosRequestConfig](https://axios-http.com/docs/req_config) | :heavy_minus_sign:                                           | Available config options for making requests.                |
 
 
 ### Response
@@ -471,10 +471,10 @@ const operationSecurity: GetPeopleIdentifierSecurity = {
 
 sdk.people.getPeopleIdentifier({
   fields: [
-    "commodi",
+    "suscipit",
   ],
   humanReadable: false,
-  identifier: "quidem",
+  identifier: "sapiente",
   includeHumanReadable: false,
 }, operationSecurity).then((res: GetPeopleIdentifierResponse) => {
   if (res.statusCode == 200) {
@@ -516,7 +516,7 @@ const operationSecurity: GetPeopleIdEmploymentSecurity = {
 };
 
 sdk.people.getPeopleIdEmployment({
-  id: "26916fe1-f08f-4429-8e36-98f447f603e8",
+  id: "e1f08f42-94e3-4698-b447-f603e8b445e8",
 }, operationSecurity).then((res: GetPeopleIdEmploymentResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -557,7 +557,7 @@ const operationSecurity: GetPeopleIdEquitiesSecurity = {
 };
 
 sdk.people.getPeopleIdEquities({
-  id: "b445e80c-a55e-4fd2-8e45-7e1858b6a89f",
+  id: "0ca55efd-20e4-457e-9858-b6a89fbe3a5a",
 }, operationSecurity).then((res: GetPeopleIdEquitiesResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -598,7 +598,7 @@ const operationSecurity: GetPeopleIdLifecycleSecurity = {
 };
 
 sdk.people.getPeopleIdLifecycle({
-  id: "be3a5aa8-e482-44d0-ab40-75088e518620",
+  id: "a8e4824d-0ab4-4075-888e-51862065e904",
 }, operationSecurity).then((res: GetPeopleIdLifecycleResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -639,7 +639,7 @@ const operationSecurity: GetPeopleIdSalariesSecurity = {
 };
 
 sdk.people.getPeopleIdSalaries({
-  id: "65e904f3-b119-44b8-abf6-03a79f9dfe0a",
+  id: "f3b1194b-8abf-4603-a79f-9dfe0ab7da8a",
 }, operationSecurity).then((res: GetPeopleIdSalariesResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -680,7 +680,7 @@ const operationSecurity: GetPeopleIdTrainingSecurity = {
 };
 
 sdk.people.getPeopleIdTraining({
-  id: "b7da8a50-ce18-47f8-abc1-73d689eee952",
+  id: "50ce187f-86bc-4173-9689-eee9526f8d98",
 }, operationSecurity).then((res: GetPeopleIdTrainingResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -710,16 +710,17 @@ Returns a list of variable payments for a given employee.<br /><b>Supported user
 
 ```typescript
 import { Hibob } from "hibob";
-import { GetPeopleIdVariableResponse, GetPeopleIdVariableSecurity } from "hibob/dist/sdk/models/operations";
+import { GetPeopleIdVariableResponse } from "hibob/dist/sdk/models/operations";
 
-const sdk = new Hibob();
-const operationSecurity: GetPeopleIdVariableSecurity = {
-  bearer: "",
-};
+const sdk = new Hibob({
+  security: {
+    bearer: "",
+  },
+});
 
 sdk.people.getPeopleIdVariable({
-  id: "6f8d986e-881e-4ad4-b0e1-012563f94e29",
-}, operationSecurity).then((res: GetPeopleIdVariableResponse) => {
+  id: "6e881ead-4f0e-4101-a563-f94e29e973e9",
+}).then((res: GetPeopleIdVariableResponse) => {
   if (res.statusCode == 200) {
     // handle response
   }
@@ -728,11 +729,10 @@ sdk.people.getPeopleIdVariable({
 
 ### Parameters
 
-| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
-| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
-| `request`                                                                                        | [operations.GetPeopleIdVariableRequest](../../models/operations/getpeopleidvariablerequest.md)   | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
-| `security`                                                                                       | [operations.GetPeopleIdVariableSecurity](../../models/operations/getpeopleidvariablesecurity.md) | :heavy_check_mark:                                                                               | The security requirements to use for the request.                                                |
-| `config`                                                                                         | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                     | :heavy_minus_sign:                                                                               | Available config options for making requests.                                                    |
+| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
+| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| `request`                                                                                      | [operations.GetPeopleIdVariableRequest](../../models/operations/getpeopleidvariablerequest.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
+| `config`                                                                                       | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                   | :heavy_minus_sign:                                                                             | Available config options for making requests.                                                  |
 
 
 ### Response
@@ -759,7 +759,7 @@ const operationSecurity: GetPeopleIdWorkSecurity = {
 };
 
 sdk.people.getPeopleIdWork({
-  id: "e973e922-a57a-415b-a3e0-60807e2b6e3a",
+  id: "22a57a15-be3e-4060-807e-2b6e3ab8845f",
 }, operationSecurity).then((res: GetPeopleIdWorkResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -789,16 +789,17 @@ Returns the public section of all  active employees of the logged-in user compan
 
 ```typescript
 import { Hibob } from "hibob";
-import { GetProfilesResponse, GetProfilesSecurity } from "hibob/dist/sdk/models/operations";
+import { GetProfilesResponse } from "hibob/dist/sdk/models/operations";
 
-const sdk = new Hibob();
-const operationSecurity: GetProfilesSecurity = {
-  bearer: "",
-};
+const sdk = new Hibob({
+  security: {
+    bearer: "",
+  },
+});
 
 sdk.people.getProfiles({
-  sortBy: "distinctio",
-}, operationSecurity).then((res: GetProfilesResponse) => {
+  sortBy: "alias",
+}).then((res: GetProfilesResponse) => {
   if (res.statusCode == 200) {
     // handle response
   }
@@ -807,11 +808,10 @@ sdk.people.getProfiles({
 
 ### Parameters
 
-| Parameter                                                                        | Type                                                                             | Required                                                                         | Description                                                                      |
-| -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- |
-| `request`                                                                        | [operations.GetProfilesRequest](../../models/operations/getprofilesrequest.md)   | :heavy_check_mark:                                                               | The request object to use for the request.                                       |
-| `security`                                                                       | [operations.GetProfilesSecurity](../../models/operations/getprofilessecurity.md) | :heavy_check_mark:                                                               | The security requirements to use for the request.                                |
-| `config`                                                                         | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                     | :heavy_minus_sign:                                                               | Available config options for making requests.                                    |
+| Parameter                                                                      | Type                                                                           | Required                                                                       | Description                                                                    |
+| ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ |
+| `request`                                                                      | [operations.GetProfilesRequest](../../models/operations/getprofilesrequest.md) | :heavy_check_mark:                                                             | The request object to use for the request.                                     |
+| `config`                                                                       | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                   | :heavy_minus_sign:                                                             | Available config options for making requests.                                  |
 
 
 ### Response
@@ -842,9 +842,9 @@ const operationSecurity: PostEmployeesEmployeeIdInvitationsSecurity = {
 
 sdk.people.postEmployeesEmployeeIdInvitations({
   invitationByWizard: {
-    welcomeWizardId: 528940,
+    welcomeWizardId: 362189,
   },
-  employeeId: "rem",
+  employeeId: "perspiciatis",
 }, operationSecurity).then((res: PostEmployeesEmployeeIdInvitationsResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -890,8 +890,8 @@ const operationSecurity: PostEmployeesEmployeeIdStartDateSecurity = {
 
 sdk.people.postEmployeesEmployeeIdStartDate({
   startDateUpdate: {
-    reason: "aliquam",
-    startDate: new RFCDate("2022-01-01"),
+    reason: "nihil",
+    startDate: new RFCDate("2022-03-30"),
   },
   employeeId: "alias",
 }, operationSecurity).then((res: PostEmployeesEmployeeIdStartDateResponse) => {
@@ -940,16 +940,16 @@ const operationSecurity: PostEmployeesIdentifierTerminateSecurity = {
 
 sdk.people.postEmployeesIdentifierTerminate({
   employeeTermination: {
-    lastDayOfWork: new RFCDate("2022-05-27"),
+    lastDayOfWork: new RFCDate("2020-02-03"),
     noticePeriod: {
-      length: 470649,
+      length: 174658,
       unit: EmployeeTerminationNoticePeriodUnit.Month,
     },
-    reasonType: "voluptas",
-    terminationDate: new RFCDate("2022-01-08"),
-    terminationReason: "reiciendis",
+    reasonType: "minima",
+    terminationDate: new RFCDate("2022-04-27"),
+    terminationReason: "nesciunt",
   },
-  identifier: "dolores",
+  identifier: "quae",
 }, operationSecurity).then((res: PostEmployeesIdentifierTerminateResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -990,7 +990,7 @@ const operationSecurity: PostEmployeesIdentifierUninviteSecurity = {
 };
 
 sdk.people.postEmployeesIdentifierUninvite({
-  identifier: "id",
+  identifier: "recusandae",
 }, operationSecurity).then((res: PostEmployeesIdentifierUninviteResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -1032,12 +1032,12 @@ const operationSecurity: PostPeopleSecurity = {
 };
 
 sdk.people.postPeople({
-  email: "Elda6@gmail.com",
-  firstName: "Tianna",
-  surname: "omnis",
+  email: "Elsa.Kreiger@yahoo.com",
+  firstName: "Loren",
+  surname: "adipisci",
   work: {
-    site: "quaerat",
-    startDate: new RFCDate("2022-08-06"),
+    site: "debitis",
+    startDate: new RFCDate("2022-02-19"),
   },
 }, operationSecurity).then((res: PostPeopleResponse) => {
   if (res.statusCode == 200) {
@@ -1078,18 +1078,18 @@ const operationSecurity: PostPeopleSearchSecurity = {
 
 sdk.people.postPeopleSearch({
   fields: [
-    "ut",
+    "nemo",
   ],
   filters: [
     {
       fieldPath: "root.id",
       operator: "equals",
       values: [
-        "culpa",
+        "recusandae",
       ],
     },
   ],
-  humanReadable: "adipisci",
+  humanReadable: "esse",
   showInactive: false,
 }, operationSecurity).then((res: PostPeopleSearchResponse) => {
   if (res.statusCode == 200) {
@@ -1133,9 +1133,9 @@ const operationSecurity: PostPeopleIdentifierSecurity = {
 sdk.people.postPeopleIdentifier({
   readSingleEmployeeRequestReference: {
     fields: [
-      "debitis",
+      "provident",
     ],
-    humanReadable: "laudantium",
+    humanReadable: "quis",
   },
   identifier: "eum",
 }, operationSecurity).then((res: PostPeopleIdentifierResponse) => {
@@ -1180,14 +1180,14 @@ const operationSecurity: PostPeopleIdEmploymentSecurity = {
 
 sdk.people.postPeopleIdEmployment({
   employmentEntry: {
-    contract: "nemo",
-    effectiveDate: new RFCDate("2021-08-19"),
-    id: 592081,
-    reason: "quis",
-    salaryPayType: "eum",
-    type: "reiciendis",
+    contract: "reiciendis",
+    effectiveDate: new RFCDate("2022-09-25"),
+    id: 354506,
+    reason: "quasi",
+    salaryPayType: "animi",
+    type: "nostrum",
   },
-  id: "9251a5a9-da66-40ff-97bf-aad4f9efc1b4",
+  id: "a9da660f-f57b-4faa-94f9-efc1b4512c10",
 }, operationSecurity).then((res: PostPeopleIdEmploymentResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -1230,26 +1230,26 @@ const operationSecurity: PostPeopleIdEquitiesSecurity = {
 
 sdk.people.postPeopleIdEquities({
   equityEntry: {
-    consentNumber: "quis",
-    effectiveDate: new RFCDate("2022-11-08"),
-    equityType: "cumque",
+    consentNumber: "velit",
+    effectiveDate: new RFCDate("2022-07-27"),
+    equityType: "eius",
     exercisePrice: {
-      currency: "quae",
-      value: 216.88,
+      currency: "rem",
+      value: 8710.83,
     },
-    grantDate: new RFCDate("2022-11-11"),
-    grantNumber: 4322.81,
-    grantStatus: "eius",
-    grantType: "rem",
-    id: 871083,
-    optionExpiration: new RFCDate("2022-06-18"),
-    quantity: 9587.41,
-    reason: "eum",
-    vestingCommencementDate: new RFCDate("2022-09-04"),
-    vestingSchedule: 1070.04,
-    vestingTerm: "cupiditate",
+    grantDate: new RFCDate("2022-06-18"),
+    grantNumber: 9587.41,
+    grantStatus: "eum",
+    grantType: "dicta",
+    id: 325118,
+    optionExpiration: new RFCDate("2022-06-02"),
+    quantity: 5896.95,
+    reason: "earum",
+    vestingCommencementDate: new RFCDate("2021-02-13"),
+    vestingSchedule: 8481.51,
+    vestingTerm: "eaque",
   },
-  id: "9ebfd0e9-fe6c-4632-8a3a-ed0117996312",
+  id: "e9fe6c63-2ca3-4aed-8117-996312fde047",
 }, operationSecurity).then((res: PostPeopleIdEquitiesResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -1293,16 +1293,16 @@ const operationSecurity: PostPeopleIdSalariesSecurity = {
 sdk.people.postPeopleIdSalaries({
   salaryEntry: {
     base: {
-      currency: "doloribus",
-      value: 8595.81,
+      currency: "molestiae",
+      value: 1158.34,
     },
-    effectiveDate: new RFCDate("2022-10-28"),
-    id: 271113,
-    payFrequency: "nihil",
-    payPeriod: "molestiae",
-    reason: "dicta",
+    effectiveDate: new RFCDate("2022-07-18"),
+    id: 508390,
+    payFrequency: "maiores",
+    payPeriod: "reiciendis",
+    reason: "vel",
   },
-  id: "778ff61d-0174-4763-a0a1-5db6a660659a",
+  id: "1d017476-360a-415d-b6a6-60659a1adeaa",
 }, operationSecurity).then((res: PostPeopleIdSalariesResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -1346,21 +1346,21 @@ const operationSecurity: PostPeopleIdTrainingSecurity = {
 sdk.people.postPeopleIdTraining({
   trainingEntry: {
     cost: {
-      currency: "ab",
-      value: 6253.58,
+      currency: "libero",
+      value: 3240.83,
     },
-    description: "possimus",
-    documentId: 9139.92,
-    effectiveDate: new RFCDate("2021-08-28"),
-    endDate: new RFCDate("2022-05-09"),
-    frequency: "deleniti",
-    id: 316220,
-    name: "Estelle Jakubowski",
-    reason: "ut",
-    startDate: new RFCDate("2022-04-15"),
-    status: "voluptatem",
+    description: "deleniti",
+    documentId: 3162.2,
+    effectiveDate: new RFCDate("2022-03-02"),
+    endDate: new RFCDate("2022-03-23"),
+    frequency: "ex",
+    id: 281153,
+    name: "Lula Bartell",
+    reason: "aliquid",
+    startDate: new RFCDate("2022-06-21"),
+    status: "omnis",
   },
-  id: "8b61891b-aa0f-4e1a-9e00-8e6f8c5f350d",
+  id: "1baa0fe1-ade0-408e-af8c-5f350d8cdb5a",
 }, operationSecurity).then((res: PostPeopleIdTrainingResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -1404,19 +1404,19 @@ const operationSecurity: PostPeopleIdVariableSecurity = {
 sdk.people.postPeopleIdVariable({
   variableEntry: {
     amount: {
-      currency: "totam",
-      value: 7706.75,
+      currency: "dolor",
+      value: 3073.76,
     },
-    companyPercent: 8427.77,
-    departmentPercent: 7205.28,
-    effectiveDate: new RFCDate("2022-05-14"),
-    id: 222864,
-    individualPercent: 3073.76,
-    paymentPeriod: "inventore",
-    reason: "deleniti",
-    variableType: "veritatis",
+    companyPercent: 805.32,
+    departmentPercent: 5372.79,
+    effectiveDate: new RFCDate("2022-09-22"),
+    id: 221396,
+    individualPercent: 86.89,
+    paymentPeriod: "architecto",
+    reason: "sit",
+    variableType: "modi",
   },
-  id: "43010421-813d-4520-8ece-7e253b668451",
+  id: "21813d52-08ec-4e7e-a53b-668451c6c6e2",
 }, operationSecurity).then((res: PostPeopleIdVariableResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -1460,22 +1460,22 @@ const operationSecurity: PostPeopleIdWorkSecurity = {
 sdk.people.postPeopleIdWork({
   workEntry: {
     customColumns: {},
-    department: "porro",
-    effectiveDate: new RFCDate("2022-04-01"),
-    id: 388319,
-    reason: "recusandae",
+    department: "voluptatem",
+    effectiveDate: new RFCDate("2022-02-08"),
+    id: 95619,
+    reason: "nisi",
     reportsTo: {
-      displayName: "consequuntur",
-      email: "Federico39@gmail.com",
-      firstName: "Sasha",
-      id: "eab3fec9-578a-4645-8427-3a8418d16230",
-      surname: "cupiditate",
+      displayName: "at",
+      email: "Marcel98@hotmail.com",
+      firstName: "Terrence",
+      id: "c9578a64-5842-473a-8418-d162309fb092",
+      surname: "occaecati",
     },
-    site: "reiciendis",
-    siteId: 746837,
+    site: "iste",
+    siteId: 170099,
     title: "Mr.",
   },
-  id: "929921ae-fb9f-458c-8d86-e68e4be05601",
+  id: "aefb9f58-c4d8-46e6-8e4b-e056013f59da",
 }, operationSecurity).then((res: PostPeopleIdWorkResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -1505,19 +1505,20 @@ Upload an employee's Avatar by providing a URL to the image to upload.<br /><b>S
 
 ```typescript
 import { Hibob } from "hibob";
-import { PutAvatarsEmployeeIdResponse, PutAvatarsEmployeeIdSecurity } from "hibob/dist/sdk/models/operations";
+import { PutAvatarsEmployeeIdResponse } from "hibob/dist/sdk/models/operations";
 
-const sdk = new Hibob();
-const operationSecurity: PutAvatarsEmployeeIdSecurity = {
-  bearer: "",
-};
+const sdk = new Hibob({
+  security: {
+    bearer: "",
+  },
+});
 
 sdk.people.putAvatarsEmployeeId({
   uploadAvatar: {
-    url: "non",
+    url: "esse",
   },
-  employeeId: "maiores",
-}, operationSecurity).then((res: PutAvatarsEmployeeIdResponse) => {
+  employeeId: "nemo",
+}).then((res: PutAvatarsEmployeeIdResponse) => {
   if (res.statusCode == 200) {
     // handle response
   }
@@ -1526,11 +1527,10 @@ sdk.people.putAvatarsEmployeeId({
 
 ### Parameters
 
-| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
-| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
-| `request`                                                                                          | [operations.PutAvatarsEmployeeIdRequest](../../models/operations/putavatarsemployeeidrequest.md)   | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
-| `security`                                                                                         | [operations.PutAvatarsEmployeeIdSecurity](../../models/operations/putavatarsemployeeidsecurity.md) | :heavy_check_mark:                                                                                 | The security requirements to use for the request.                                                  |
-| `config`                                                                                           | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                       | :heavy_minus_sign:                                                                                 | Available config options for making requests.                                                      |
+| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
+| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
+| `request`                                                                                        | [operations.PutAvatarsEmployeeIdRequest](../../models/operations/putavatarsemployeeidrequest.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
+| `config`                                                                                         | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                     | :heavy_minus_sign:                                                                               | Available config options for making requests.                                                    |
 
 
 ### Response
@@ -1558,7 +1558,7 @@ const operationSecurity: PutPeopleIdentifierSecurity = {
 
 sdk.people.putPeopleIdentifier({
   requestBody: {},
-  identifier: "enim",
+  identifier: "reprehenderit",
 }, operationSecurity).then((res: PutPeopleIdentifierResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -1600,9 +1600,9 @@ const operationSecurity: PutPeopleIdEmailSecurity = {
 
 sdk.people.putPeopleIdEmail({
   changeEmail: {
-    email: "Ryder.Nolan@yahoo.com",
+    email: "Ethan_Marquardt94@hotmail.com",
   },
-  id: "7a59ecfe-f66e-4f1c-aa33-83c2beb47737",
+  id: "ef66ef1c-aa33-483c-abeb-477373c8d72f",
 }, operationSecurity).then((res: PutPeopleIdEmailResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -1632,26 +1632,27 @@ sdk.people.putPeopleIdEmail({
 
 ```typescript
 import { Hibob } from "hibob";
-import { PutPeopleIdEmploymentEntryIdResponse, PutPeopleIdEmploymentEntryIdSecurity } from "hibob/dist/sdk/models/operations";
+import { PutPeopleIdEmploymentEntryIdResponse } from "hibob/dist/sdk/models/operations";
 import { RFCDate } from "hibob/dist/sdk/types";
 
-const sdk = new Hibob();
-const operationSecurity: PutPeopleIdEmploymentEntryIdSecurity = {
-  bearer: "",
-};
+const sdk = new Hibob({
+  security: {
+    bearer: "",
+  },
+});
 
 sdk.people.putPeopleIdEmploymentEntryId({
   employmentEntry: {
-    contract: "neque",
-    effectiveDate: new RFCDate("2021-05-24"),
-    id: 844235,
-    reason: "iure",
-    salaryPayType: "odit",
-    type: "voluptatibus",
+    contract: "vel",
+    effectiveDate: new RFCDate("2022-02-27"),
+    id: 78969,
+    reason: "facere",
+    salaryPayType: "libero",
+    type: "architecto",
   },
-  entryId: 426904,
-  id: "4d1db1f2-c431-4066-9e96-349e1cf9e06e",
-}, operationSecurity).then((res: PutPeopleIdEmploymentEntryIdResponse) => {
+  entryId: 975425,
+  id: "2c431066-1e96-4349-a1cf-9e06e3a43700",
+}).then((res: PutPeopleIdEmploymentEntryIdResponse) => {
   if (res.statusCode == 200) {
     // handle response
   }
@@ -1660,11 +1661,10 @@ sdk.people.putPeopleIdEmploymentEntryId({
 
 ### Parameters
 
-| Parameter                                                                                                          | Type                                                                                                               | Required                                                                                                           | Description                                                                                                        |
-| ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                          | [operations.PutPeopleIdEmploymentEntryIdRequest](../../models/operations/putpeopleidemploymententryidrequest.md)   | :heavy_check_mark:                                                                                                 | The request object to use for the request.                                                                         |
-| `security`                                                                                                         | [operations.PutPeopleIdEmploymentEntryIdSecurity](../../models/operations/putpeopleidemploymententryidsecurity.md) | :heavy_check_mark:                                                                                                 | The security requirements to use for the request.                                                                  |
-| `config`                                                                                                           | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                       | :heavy_minus_sign:                                                                                                 | Available config options for making requests.                                                                      |
+| Parameter                                                                                                        | Type                                                                                                             | Required                                                                                                         | Description                                                                                                      |
+| ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                        | [operations.PutPeopleIdEmploymentEntryIdRequest](../../models/operations/putpeopleidemploymententryidrequest.md) | :heavy_check_mark:                                                                                               | The request object to use for the request.                                                                       |
+| `config`                                                                                                         | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                     | :heavy_minus_sign:                                                                                               | Available config options for making requests.                                                                    |
 
 
 ### Response
@@ -1693,27 +1693,27 @@ const operationSecurity: PutPeopleIdEquitiesEntryIdSecurity = {
 
 sdk.people.putPeopleIdEquitiesEntryId({
   equityEntry: {
-    consentNumber: "velit",
-    effectiveDate: new RFCDate("2022-07-02"),
-    equityType: "dolor",
+    consentNumber: "consequatur",
+    effectiveDate: new RFCDate("2021-02-22"),
+    equityType: "ea",
     exercisePrice: {
-      currency: "iusto",
-      value: 247.53,
+      currency: "quidem",
+      value: 3774.06,
     },
-    grantDate: new RFCDate("2022-12-29"),
-    grantNumber: 6397.05,
-    grantStatus: "recusandae",
-    grantType: "ea",
-    id: 693153,
-    optionExpiration: new RFCDate("2022-04-18"),
-    quantity: 8093.65,
-    reason: "perspiciatis",
-    vestingCommencementDate: new RFCDate("2021-12-04"),
-    vestingSchedule: 9543.34,
-    vestingTerm: "voluptate",
+    grantDate: new RFCDate("2021-05-20"),
+    grantNumber: 5960.65,
+    grantStatus: "expedita",
+    grantType: "deleniti",
+    id: 954334,
+    optionExpiration: new RFCDate("2022-08-25"),
+    quantity: 6001.93,
+    reason: "necessitatibus",
+    vestingCommencementDate: new RFCDate("2021-06-17"),
+    vestingSchedule: 3730.4,
+    vestingTerm: "corporis",
   },
-  entryId: 351936,
-  id: "9eac55a9-741d-4311-b529-65bb8a720261",
+  entryId: 668234,
+  id: "9741d311-3529-465b-b8a7-202611435e13",
 }, operationSecurity).then((res: PutPeopleIdEquitiesEntryIdResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -1743,35 +1743,36 @@ sdk.people.putPeopleIdEquitiesEntryId({
 
 ```typescript
 import { Hibob } from "hibob";
-import { PutPeopleIdWorkEntryIdResponse, PutPeopleIdWorkEntryIdSecurity } from "hibob/dist/sdk/models/operations";
+import { PutPeopleIdWorkEntryIdResponse } from "hibob/dist/sdk/models/operations";
 import { RFCDate } from "hibob/dist/sdk/types";
 
-const sdk = new Hibob();
-const operationSecurity: PutPeopleIdWorkEntryIdSecurity = {
-  bearer: "",
-};
+const sdk = new Hibob({
+  security: {
+    bearer: "",
+  },
+});
 
 sdk.people.putPeopleIdWorkEntryId({
   workEntry: {
     customColumns: {},
-    department: "quae",
-    effectiveDate: new RFCDate("2022-10-16"),
-    id: 348357,
-    reason: "itaque",
+    department: "unde",
+    effectiveDate: new RFCDate("2020-11-09"),
+    id: 802894,
+    reason: "quia",
     reportsTo: {
-      displayName: "et",
-      email: "Leanne_Stiedemann15@gmail.com",
-      firstName: "Carmen",
-      id: "59b1abda-8c07-40e1-884c-b0672d1ad879",
-      surname: "accusamus",
+      displayName: "quia",
+      email: "Lempi66@yahoo.com",
+      firstName: "Monroe",
+      id: "da8c070e-1084-4cb0-a72d-1ad879eeb966",
+      surname: "ipsam",
     },
-    site: "necessitatibus",
-    siteId: 733289,
-    title: "Ms.",
+    site: "rerum",
+    siteId: 515638,
+    title: "Mrs.",
   },
-  entryId: 409726,
-  id: "65b85efb-d02b-4ae0-be2d-782259e3ea4b",
-}, operationSecurity).then((res: PutPeopleIdWorkEntryIdResponse) => {
+  entryId: 889060,
+  id: "fbd02bae-0be2-4d78-a259-e3ea4b5197f9",
+}).then((res: PutPeopleIdWorkEntryIdResponse) => {
   if (res.statusCode == 200) {
     // handle response
   }
@@ -1780,11 +1781,10 @@ sdk.people.putPeopleIdWorkEntryId({
 
 ### Parameters
 
-| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
-| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                              | [operations.PutPeopleIdWorkEntryIdRequest](../../models/operations/putpeopleidworkentryidrequest.md)   | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
-| `security`                                                                                             | [operations.PutPeopleIdWorkEntryIdSecurity](../../models/operations/putpeopleidworkentryidsecurity.md) | :heavy_check_mark:                                                                                     | The security requirements to use for the request.                                                      |
-| `config`                                                                                               | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                           | :heavy_minus_sign:                                                                                     | Available config options for making requests.                                                          |
+| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
+| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
+| `request`                                                                                            | [operations.PutPeopleIdWorkEntryIdRequest](../../models/operations/putpeopleidworkentryidrequest.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
+| `config`                                                                                             | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                         | :heavy_minus_sign:                                                                                   | Available config options for making requests.                                                        |
 
 
 ### Response

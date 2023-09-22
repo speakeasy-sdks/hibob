@@ -765,7 +765,6 @@ export class Tables {
      */
     async getPeopleIdVariable(
         req: operations.GetPeopleIdVariableRequest,
-        security: operations.GetPeopleIdVariableSecurity,
         config?: AxiosRequestConfig
     ): Promise<operations.GetPeopleIdVariableResponse> {
         if (!(req instanceof utils.SpeakeasyBase)) {
@@ -778,10 +777,14 @@ export class Tables {
         );
         const url: string = utils.generateURL(baseURL, "/people/{id}/variable", req);
         const client: AxiosInstance = this.sdkConfiguration.defaultClient;
-        if (!(security instanceof utils.SpeakeasyBase)) {
-            security = new operations.GetPeopleIdVariableSecurity(security);
+        let globalSecurity = this.sdkConfiguration.security;
+        if (typeof globalSecurity === "function") {
+            globalSecurity = await globalSecurity();
         }
-        const properties = utils.parseSecurityProperties(security);
+        if (!(globalSecurity instanceof utils.SpeakeasyBase)) {
+            globalSecurity = new shared.Security(globalSecurity);
+        }
+        const properties = utils.parseSecurityProperties(globalSecurity);
         const headers: RawAxiosRequestHeaders = { ...config?.headers, ...properties.headers };
         headers["Accept"] = "application/json";
 
@@ -1375,7 +1378,6 @@ export class Tables {
      */
     async putPeopleIdEmploymentEntryId(
         req: operations.PutPeopleIdEmploymentEntryIdRequest,
-        security: operations.PutPeopleIdEmploymentEntryIdSecurity,
         config?: AxiosRequestConfig
     ): Promise<operations.PutPeopleIdEmploymentEntryIdResponse> {
         if (!(req instanceof utils.SpeakeasyBase)) {
@@ -1398,10 +1400,14 @@ export class Tables {
             }
         }
         const client: AxiosInstance = this.sdkConfiguration.defaultClient;
-        if (!(security instanceof utils.SpeakeasyBase)) {
-            security = new operations.PutPeopleIdEmploymentEntryIdSecurity(security);
+        let globalSecurity = this.sdkConfiguration.security;
+        if (typeof globalSecurity === "function") {
+            globalSecurity = await globalSecurity();
         }
-        const properties = utils.parseSecurityProperties(security);
+        if (!(globalSecurity instanceof utils.SpeakeasyBase)) {
+            globalSecurity = new shared.Security(globalSecurity);
+        }
+        const properties = utils.parseSecurityProperties(globalSecurity);
         const headers: RawAxiosRequestHeaders = {
             ...reqBodyHeaders,
             ...config?.headers,
@@ -1529,7 +1535,6 @@ export class Tables {
      */
     async putPeopleIdWorkEntryId(
         req: operations.PutPeopleIdWorkEntryIdRequest,
-        security: operations.PutPeopleIdWorkEntryIdSecurity,
         config?: AxiosRequestConfig
     ): Promise<operations.PutPeopleIdWorkEntryIdResponse> {
         if (!(req instanceof utils.SpeakeasyBase)) {
@@ -1552,10 +1557,14 @@ export class Tables {
             }
         }
         const client: AxiosInstance = this.sdkConfiguration.defaultClient;
-        if (!(security instanceof utils.SpeakeasyBase)) {
-            security = new operations.PutPeopleIdWorkEntryIdSecurity(security);
+        let globalSecurity = this.sdkConfiguration.security;
+        if (typeof globalSecurity === "function") {
+            globalSecurity = await globalSecurity();
         }
-        const properties = utils.parseSecurityProperties(security);
+        if (!(globalSecurity instanceof utils.SpeakeasyBase)) {
+            globalSecurity = new shared.Security(globalSecurity);
+        }
+        const properties = utils.parseSecurityProperties(globalSecurity);
         const headers: RawAxiosRequestHeaders = {
             ...reqBodyHeaders,
             ...config?.headers,

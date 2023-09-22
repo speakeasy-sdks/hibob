@@ -36,8 +36,8 @@ const operationSecurity: DeletePeopleIdEquitiesEntryIdSecurity = {
 };
 
 sdk.payroll.deletePeopleIdEquitiesEntryId({
-  entryId: 984043,
-  id: "e4c8b711-e5b7-4fd2-ad02-8921cddc6926",
+  entryId: 447926,
+  id: "11e5b7fd-2ed0-4289-a1cd-dc692601fb57",
 }, operationSecurity).then((res: DeletePeopleIdEquitiesEntryIdResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -78,8 +78,8 @@ const operationSecurity: DeletePeopleIdSalariesEntryIdSecurity = {
 };
 
 sdk.payroll.deletePeopleIdSalariesEntryId({
-  entryId: 33222,
-  id: "1fb576b0-d5f0-4d30-85fb-b2587053202c",
+  entryId: 420075,
+  id: "b0d5f0d3-0c5f-4bb2-9870-53202c73d5fe",
 }, operationSecurity).then((res: DeletePeopleIdSalariesEntryIdResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -120,8 +120,8 @@ const operationSecurity: DeletePeopleIdTrainingEntryIdSecurity = {
 };
 
 sdk.payroll.deletePeopleIdTrainingEntryId({
-  entryId: 463451,
-  id: "3d5fe9b9-0c28-4909-b3fe-49a8d9cbf486",
+  entryId: 608253,
+  id: "b90c2890-9b3f-4e49-a8d9-cbf48633323f",
 }, operationSecurity).then((res: DeletePeopleIdTrainingEntryIdResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -162,8 +162,8 @@ const operationSecurity: DeletePeopleIdVariableEntryIdSecurity = {
 };
 
 sdk.payroll.deletePeopleIdVariableEntryId({
-  entryId: 212390,
-  id: "3323f9b7-7f3a-4410-8674-ebf69280d1ba",
+  entryId: 569574,
+  id: "b77f3a41-0067-44eb-b692-80d1ba77a89e",
 }, operationSecurity).then((res: DeletePeopleIdVariableEntryIdResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -193,17 +193,18 @@ sdk.payroll.deletePeopleIdVariableEntryId({
 
 ```typescript
 import { Hibob } from "hibob";
-import { GetPayrollHistoryResponse, GetPayrollHistorySecurity } from "hibob/dist/sdk/models/operations";
+import { GetPayrollHistoryResponse } from "hibob/dist/sdk/models/operations";
 
-const sdk = new Hibob();
-const operationSecurity: GetPayrollHistorySecurity = {
-  bearer: "",
-};
+const sdk = new Hibob({
+  security: {
+    bearer: "",
+  },
+});
 
 sdk.payroll.getPayrollHistory({
-  department: "iusto",
+  department: "distinctio",
   showInactive: false,
-}, operationSecurity).then((res: GetPayrollHistoryResponse) => {
+}).then((res: GetPayrollHistoryResponse) => {
   if (res.statusCode == 200) {
     // handle response
   }
@@ -212,11 +213,10 @@ sdk.payroll.getPayrollHistory({
 
 ### Parameters
 
-| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
-| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
-| `request`                                                                                    | [operations.GetPayrollHistoryRequest](../../models/operations/getpayrollhistoryrequest.md)   | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
-| `security`                                                                                   | [operations.GetPayrollHistorySecurity](../../models/operations/getpayrollhistorysecurity.md) | :heavy_check_mark:                                                                           | The security requirements to use for the request.                                            |
-| `config`                                                                                     | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                 | :heavy_minus_sign:                                                                           | Available config options for making requests.                                                |
+| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
+| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| `request`                                                                                  | [operations.GetPayrollHistoryRequest](../../models/operations/getpayrollhistoryrequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
+| `config`                                                                                   | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                               | :heavy_minus_sign:                                                                         | Available config options for making requests.                                              |
 
 
 ### Response
@@ -243,7 +243,7 @@ const operationSecurity: GetPeopleIdEquitiesSecurity = {
 };
 
 sdk.payroll.getPeopleIdEquities({
-  id: "7a89ebf7-37ae-4420-bce5-e6a95d8a0d44",
+  id: "f737ae42-03ce-45e6-a95d-8a0d446ce2af",
 }, operationSecurity).then((res: GetPeopleIdEquitiesResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -284,7 +284,7 @@ const operationSecurity: GetPeopleIdSalariesSecurity = {
 };
 
 sdk.payroll.getPeopleIdSalaries({
-  id: "6ce2af7a-73cf-43be-853f-870b326b5a73",
+  id: "7a73cf3b-e453-4f87-8b32-6b5a73429cdb",
 }, operationSecurity).then((res: GetPeopleIdSalariesResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -325,7 +325,7 @@ const operationSecurity: GetPeopleIdTrainingSecurity = {
 };
 
 sdk.payroll.getPeopleIdTraining({
-  id: "429cdb1a-8422-4bb6-b9d2-322715bf0cbb",
+  id: "1a8422bb-679d-4232-a715-bf0cbb1e31b8",
 }, operationSecurity).then((res: GetPeopleIdTrainingResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -355,16 +355,17 @@ Returns a list of variable payments for a given employee.<br /><b>Supported user
 
 ```typescript
 import { Hibob } from "hibob";
-import { GetPeopleIdVariableResponse, GetPeopleIdVariableSecurity } from "hibob/dist/sdk/models/operations";
+import { GetPeopleIdVariableResponse } from "hibob/dist/sdk/models/operations";
 
-const sdk = new Hibob();
-const operationSecurity: GetPeopleIdVariableSecurity = {
-  bearer: "",
-};
+const sdk = new Hibob({
+  security: {
+    bearer: "",
+  },
+});
 
 sdk.payroll.getPeopleIdVariable({
-  id: "1e31b8b9-0f34-443a-9108-e0adcf4b9218",
-}, operationSecurity).then((res: GetPeopleIdVariableResponse) => {
+  id: "b90f3443-a110-48e0-adcf-4b921879fce9",
+}).then((res: GetPeopleIdVariableResponse) => {
   if (res.statusCode == 200) {
     // handle response
   }
@@ -373,11 +374,10 @@ sdk.payroll.getPeopleIdVariable({
 
 ### Parameters
 
-| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
-| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
-| `request`                                                                                        | [operations.GetPeopleIdVariableRequest](../../models/operations/getpeopleidvariablerequest.md)   | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
-| `security`                                                                                       | [operations.GetPeopleIdVariableSecurity](../../models/operations/getpeopleidvariablesecurity.md) | :heavy_check_mark:                                                                               | The security requirements to use for the request.                                                |
-| `config`                                                                                         | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                     | :heavy_minus_sign:                                                                               | Available config options for making requests.                                                    |
+| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
+| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| `request`                                                                                      | [operations.GetPeopleIdVariableRequest](../../models/operations/getpeopleidvariablerequest.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
+| `config`                                                                                       | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                   | :heavy_minus_sign:                                                                             | Available config options for making requests.                                                  |
 
 
 ### Response
@@ -406,26 +406,26 @@ const operationSecurity: PostPeopleIdEquitiesSecurity = {
 
 sdk.payroll.postPeopleIdEquities({
   equityEntry: {
-    consentNumber: "odio",
-    effectiveDate: new RFCDate("2021-01-17"),
-    equityType: "quisquam",
+    consentNumber: "quis",
+    effectiveDate: new RFCDate("2022-01-15"),
+    equityType: "voluptate",
     exercisePrice: {
-      currency: "vero",
-      value: 6064.76,
+      currency: "consectetur",
+      value: 8788.7,
     },
-    grantDate: new RFCDate("2022-10-13"),
-    grantNumber: 9615.71,
-    grantStatus: "voluptate",
-    grantType: "consectetur",
-    id: 878870,
-    optionExpiration: new RFCDate("2021-07-10"),
-    quantity: 9413.78,
-    reason: "distinctio",
-    vestingCommencementDate: new RFCDate("2021-07-17"),
-    vestingSchedule: 6304.48,
-    vestingTerm: "facilis",
+    grantDate: new RFCDate("2021-07-10"),
+    grantNumber: 9413.78,
+    grantStatus: "distinctio",
+    grantType: "quod",
+    id: 486160,
+    optionExpiration: new RFCDate("2021-08-01"),
+    quantity: 8742.88,
+    reason: "ducimus",
+    vestingCommencementDate: new RFCDate("2022-02-26"),
+    vestingSchedule: 8489.44,
+    vestingTerm: "sequi",
   },
-  id: "d74dd39c-0f5d-42cf-b7c7-0a45626d4368",
+  id: "9c0f5d2c-ff7c-470a-8562-6d436813f16d",
 }, operationSecurity).then((res: PostPeopleIdEquitiesResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -469,16 +469,16 @@ const operationSecurity: PostPeopleIdSalariesSecurity = {
 sdk.payroll.postPeopleIdSalaries({
   salaryEntry: {
     base: {
-      currency: "dicta",
-      value: 2243.17,
+      currency: "excepturi",
+      value: 9729.2,
     },
-    effectiveDate: new RFCDate("2022-09-15"),
-    id: 406120,
-    payFrequency: "nulla",
-    payPeriod: "excepturi",
-    reason: "voluptatibus",
+    effectiveDate: new RFCDate("2022-01-15"),
+    id: 788873,
+    payFrequency: "saepe",
+    payPeriod: "ea",
+    reason: "impedit",
   },
-  id: "5fce6c55-6146-4c3e-a50f-b008c42e141a",
+  id: "556146c3-e250-4fb0-88c4-2e141aac366c",
 }, operationSecurity).then((res: PostPeopleIdSalariesResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -522,21 +522,21 @@ const operationSecurity: PostPeopleIdTrainingSecurity = {
 sdk.payroll.postPeopleIdTraining({
   trainingEntry: {
     cost: {
-      currency: "laborum",
-      value: 8104.24,
+      currency: "quas",
+      value: 8296.03,
     },
-    description: "velit",
-    documentId: 4321.48,
-    effectiveDate: new RFCDate("2022-04-01"),
-    endDate: new RFCDate("2021-05-05"),
-    frequency: "nulla",
-    id: 379034,
-    name: "Ryan Glover",
-    reason: "provident",
-    startDate: new RFCDate("2022-07-11"),
-    status: "magnam",
+    description: "nulla",
+    documentId: 3790.34,
+    effectiveDate: new RFCDate("2022-10-22"),
+    endDate: new RFCDate("2022-09-29"),
+    frequency: "explicabo",
+    id: 591935,
+    name: "Minnie Gutkowski",
+    reason: "esse",
+    startDate: new RFCDate("2022-06-23"),
+    status: "fuga",
   },
-  id: "74778a7b-d466-4d28-810a-b3cdca425190",
+  id: "7bd466d2-8c10-4ab3-8dca-4251904e523c",
 }, operationSecurity).then((res: PostPeopleIdTrainingResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -580,19 +580,19 @@ const operationSecurity: PostPeopleIdVariableSecurity = {
 sdk.payroll.postPeopleIdVariable({
   variableEntry: {
     amount: {
-      currency: "tempora",
-      value: 8920.5,
+      currency: "esse",
+      value: 9251.64,
     },
-    companyPercent: 3708.53,
-    departmentPercent: 1334.65,
-    effectiveDate: new RFCDate("2022-03-22"),
-    id: 459856,
-    individualPercent: 9251.64,
-    paymentPeriod: "aperiam",
-    reason: "distinctio",
-    variableType: "quod",
+    companyPercent: 446.12,
+    departmentPercent: 7151.79,
+    effectiveDate: new RFCDate("2021-07-12"),
+    id: 76956,
+    individualPercent: 4694.98,
+    paymentPeriod: "totam",
+    reason: "accusamus",
+    variableType: "aliquam",
   },
-  id: "7178e479-6f2a-470c-a882-82aa482562f2",
+  id: "796f2a70-c688-4282-aa48-2562f222e981",
 }, operationSecurity).then((res: PostPeopleIdVariableResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -635,27 +635,27 @@ const operationSecurity: PutPeopleIdEquitiesEntryIdSecurity = {
 
 sdk.payroll.putPeopleIdEquitiesEntryId({
   equityEntry: {
-    consentNumber: "ratione",
-    effectiveDate: new RFCDate("2022-02-05"),
-    equityType: "occaecati",
+    consentNumber: "esse",
+    effectiveDate: new RFCDate("2020-05-10"),
+    equityType: "veritatis",
     exercisePrice: {
-      currency: "atque",
-      value: 922.6,
+      currency: "esse",
+      value: 8003.79,
     },
-    grantDate: new RFCDate("2022-02-02"),
-    grantNumber: 8820.42,
-    grantStatus: "veritatis",
-    grantType: "esse",
-    id: 800379,
-    optionExpiration: new RFCDate("2021-03-31"),
-    quantity: 3990.25,
-    reason: "quasi",
-    vestingCommencementDate: new RFCDate("2021-09-21"),
-    vestingSchedule: 6900.25,
-    vestingTerm: "molestiae",
+    grantDate: new RFCDate("2021-03-31"),
+    grantNumber: 3990.25,
+    grantStatus: "quasi",
+    grantType: "saepe",
+    id: 426306,
+    optionExpiration: new RFCDate("2022-01-20"),
+    quantity: 6996.22,
+    reason: "occaecati",
+    vestingCommencementDate: new RFCDate("2022-04-14"),
+    vestingSchedule: 7567.79,
+    vestingTerm: "sit",
   },
-  entryId: 699622,
-  id: "95bc0ab3-c20c-44f3-b89f-d871f99dd2ef",
+  entryId: 636061,
+  id: "b3c20c4f-3789-4fd8-b1f9-9dd2efd121aa",
 }, operationSecurity).then((res: PutPeopleIdEquitiesEntryIdResponse) => {
   if (res.statusCode == 200) {
     // handle response
