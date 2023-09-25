@@ -25,6 +25,9 @@ export class GetCompanyNamedListsRequest extends SpeakeasyBase {
 }
 
 export class GetCompanyNamedListsResponse extends SpeakeasyBase {
+    /**
+     * HTTP response content type for this operation
+     */
     @SpeakeasyMetadata()
     contentType: string;
 
@@ -34,9 +37,15 @@ export class GetCompanyNamedListsResponse extends SpeakeasyBase {
     @SpeakeasyMetadata({ elemType: shared.List })
     lists?: shared.List[];
 
+    /**
+     * HTTP response status code for this operation
+     */
     @SpeakeasyMetadata()
     statusCode: number;
 
+    /**
+     * Raw HTTP response; suitable for custom response parsing
+     */
     @SpeakeasyMetadata()
     rawResponse?: AxiosResponse;
 }

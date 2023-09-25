@@ -17,6 +17,9 @@ export class GetPeopleCustomTablesMetadataSecurity extends SpeakeasyBase {
 }
 
 export class GetPeopleCustomTablesMetadataResponse extends SpeakeasyBase {
+    /**
+     * HTTP response content type for this operation
+     */
     @SpeakeasyMetadata()
     contentType: string;
 
@@ -26,9 +29,15 @@ export class GetPeopleCustomTablesMetadataResponse extends SpeakeasyBase {
     @SpeakeasyMetadata()
     customTableMetadataList?: shared.CustomTableMetadataList;
 
+    /**
+     * HTTP response status code for this operation
+     */
     @SpeakeasyMetadata()
     statusCode: number;
 
+    /**
+     * Raw HTTP response; suitable for custom response parsing
+     */
     @SpeakeasyMetadata()
     rawResponse?: AxiosResponse;
 }

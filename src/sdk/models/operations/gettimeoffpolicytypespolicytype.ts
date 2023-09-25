@@ -23,6 +23,9 @@ export class GetTimeoffPolicyTypesPolicyTypeRequest extends SpeakeasyBase {
 }
 
 export class GetTimeoffPolicyTypesPolicyTypeResponse extends SpeakeasyBase {
+    /**
+     * HTTP response content type for this operation
+     */
     @SpeakeasyMetadata()
     contentType: string;
 
@@ -32,9 +35,15 @@ export class GetTimeoffPolicyTypesPolicyTypeResponse extends SpeakeasyBase {
     @SpeakeasyMetadata()
     policyType?: shared.PolicyType;
 
+    /**
+     * HTTP response status code for this operation
+     */
     @SpeakeasyMetadata()
     statusCode: number;
 
+    /**
+     * Raw HTTP response; suitable for custom response parsing
+     */
     @SpeakeasyMetadata()
     rawResponse?: AxiosResponse;
 }
