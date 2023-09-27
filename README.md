@@ -57,18 +57,18 @@ sdk.attendance.postAttendanceImportImportMethod({
 ## Available Resources and Operations
 
 
-### [Attendance](docs/sdks/attendance/README.md)
+### [attendance](docs/sdks/attendance/README.md)
 
 * [postAttendanceImportImportMethod](docs/sdks/attendance/README.md#postattendanceimportimportmethod) - Import attendance data
 
-### [CustomTables](docs/sdks/customtables/README.md)
+### [customTables](docs/sdks/customtables/README.md)
 
 * [deletePeopleCustomTablesEmployeeIdCustomTableIdEntryId](docs/sdks/customtables/README.md#deletepeoplecustomtablesemployeeidcustomtableidentryid) - Delete custom table entry
 * [getPeopleCustomTablesEmployeeIdCustomTableId](docs/sdks/customtables/README.md#getpeoplecustomtablesemployeeidcustomtableid) - Read all entries of the given custom table
 * [postPeopleCustomTablesEmployeeIdCustomTableId](docs/sdks/customtables/README.md#postpeoplecustomtablesemployeeidcustomtableid) - Create new custom table entry
 * [putPeopleCustomTablesEmployeeIdCustomTableIdEntryId](docs/sdks/customtables/README.md#putpeoplecustomtablesemployeeidcustomtableidentryid) - Update custom table entry
 
-### [Documents](docs/sdks/documents/README.md)
+### [documents](docs/sdks/documents/README.md)
 
 * [deleteDocsPeopleIdConfidentialDocId](docs/sdks/documents/README.md#deletedocspeopleidconfidentialdocid) - Delete a specific document from the employee's confidential folder.
 * [deleteDocsPeopleIdSharedDocId](docs/sdks/documents/README.md#deletedocspeopleidshareddocid) - Delete specific document from the employee's shared folder.
@@ -78,7 +78,7 @@ sdk.attendance.postAttendanceImportImportMethod({
 * [postDocsPeopleIdShared](docs/sdks/documents/README.md#postdocspeopleidshared) - Upload a document to the employee's shared folder
 * [postDocsPeopleIdSharedUpload](docs/sdks/documents/README.md#postdocspeopleidsharedupload) - Upload a file to the employee's shared folder.
 
-### [Metadata](docs/sdks/metadata/README.md)
+### [metadata](docs/sdks/metadata/README.md)
 
 * [deleteCompanyNamedListsListNameItemId](docs/sdks/metadata/README.md#deletecompanynamedlistslistnameitemid) - Delete an item from an existing list.
 * [deleteCompanyPeopleFieldsFieldId](docs/sdks/metadata/README.md#deletecompanypeoplefieldsfieldid) - Delete an existing field.
@@ -93,15 +93,15 @@ sdk.attendance.postAttendanceImportImportMethod({
 * [putCompanyNamedListsListNameItemId](docs/sdks/metadata/README.md#putcompanynamedlistslistnameitemid) - Update an existing item from a list.
 * [putCompanyPeopleFieldsFieldId](docs/sdks/metadata/README.md#putcompanypeoplefieldsfieldid) - Update an existing field
 
-### [Objects](docs/sdks/objects/README.md)
+### [objects](docs/sdks/objects/README.md)
 
 * [postObjectsPositionSearch](docs/sdks/objects/README.md#postobjectspositionsearch) - Read company positions
 
-### [Onboarding](docs/sdks/onboarding/README.md)
+### [onboarding](docs/sdks/onboarding/README.md)
 
 * [getOnboardingWizards](docs/sdks/onboarding/README.md#getonboardingwizards) - Get a summary of all onboarding wizards.
 
-### [Payroll](docs/sdks/payroll/README.md)
+### [payroll](docs/sdks/payroll/README.md)
 
 * [deletePeopleIdEquitiesEntryId](docs/sdks/payroll/README.md#deletepeopleidequitiesentryid) - Deletes an equity grant for an employee.
 * [deletePeopleIdSalariesEntryId](docs/sdks/payroll/README.md#deletepeopleidsalariesentryid) - Deletes a salary entry from the employee's list.
@@ -118,7 +118,7 @@ sdk.attendance.postAttendanceImportImportMethod({
 * [postPeopleIdVariable](docs/sdks/payroll/README.md#postpeopleidvariable) - Creates a new variable payment for a given employee.
 * [putPeopleIdEquitiesEntryId](docs/sdks/payroll/README.md#putpeopleidequitiesentryid) - Updates an equity grant for an employee
 
-### [People](docs/sdks/people/README.md)
+### [people](docs/sdks/people/README.md)
 
 * [deletePeopleIdEmploymentEntryId](docs/sdks/people/README.md#deletepeopleidemploymententryid) - Deletes an employment entry from a given employee's employment history.
 * [deletePeopleIdEquitiesEntryId](docs/sdks/people/README.md#deletepeopleidequitiesentryid) - Deletes an equity grant for an employee.
@@ -159,14 +159,14 @@ sdk.attendance.postAttendanceImportImportMethod({
 * [putPeopleIdEquitiesEntryId](docs/sdks/people/README.md#putpeopleidequitiesentryid) - Updates an equity grant for an employee
 * [putPeopleIdWorkEntryId](docs/sdks/people/README.md#putpeopleidworkentryid) - Updates a work entry from employee's work history
 
-### [Reports](docs/sdks/reports/README.md)
+### [reports](docs/sdks/reports/README.md)
 
 * [getCompanyReports](docs/sdks/reports/README.md#getcompanyreports) - Read company reports
 * [getCompanyReportsDownloadReportName](docs/sdks/reports/README.md#getcompanyreportsdownloadreportname) - Download report by file URL
 * [getCompanyReportsReportIdDownload](docs/sdks/reports/README.md#getcompanyreportsreportiddownload) - Download the report by ID
 * [getCompanyReportsReportIdDownloadAsync](docs/sdks/reports/README.md#getcompanyreportsreportiddownloadasync) - Get the report download URL for polling
 
-### [Tables](docs/sdks/tables/README.md)
+### [tables](docs/sdks/tables/README.md)
 
 * [deletePeopleIdEmploymentEntryId](docs/sdks/tables/README.md#deletepeopleidemploymententryid) - Deletes an employment entry from a given employee's employment history.
 * [deletePeopleIdEquitiesEntryId](docs/sdks/tables/README.md#deletepeopleidequitiesentryid) - Deletes an equity grant for an employee.
@@ -191,14 +191,14 @@ sdk.attendance.postAttendanceImportImportMethod({
 * [putPeopleIdEquitiesEntryId](docs/sdks/tables/README.md#putpeopleidequitiesentryid) - Updates an equity grant for an employee
 * [putPeopleIdWorkEntryId](docs/sdks/tables/README.md#putpeopleidworkentryid) - Updates a work entry from employee's work history
 
-### [Tasks](docs/sdks/tasks/README.md)
+### [tasks](docs/sdks/tasks/README.md)
 
 * [getMyTasks](docs/sdks/tasks/README.md#getmytasks) - Read my tasks
 * [getTasks](docs/sdks/tasks/README.md#gettasks) - Read all open tasks.
 * [getTasksPeopleId](docs/sdks/tasks/README.md#gettaskspeopleid) - Read tasks of a specific employee 
 * [postTasksTaskIdComplete](docs/sdks/tasks/README.md#posttaskstaskidcomplete) - Mark a task as complete
 
-### [TimeOff](docs/sdks/timeoff/README.md)
+### [timeOff](docs/sdks/timeoff/README.md)
 
 * [deleteTimeoffEmployeesIdRequestsRequestId](docs/sdks/timeoff/README.md#deletetimeoffemployeesidrequestsrequestid) - Cancel an existing timeoff request
 * [getTimeoffEmployeesIdBalance](docs/sdks/timeoff/README.md#gettimeoffemployeesidbalance) - Get the balance for a given employee
