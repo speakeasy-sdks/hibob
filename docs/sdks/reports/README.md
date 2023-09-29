@@ -68,7 +68,7 @@ const operationSecurity: GetCompanyReportsDownloadReportNameSecurity = {
 };
 
 sdk.reports.getCompanyReportsDownloadReportName({
-  reportName: "fugit",
+  reportName: "worth mobile gold",
 }, operationSecurity).then((res: GetCompanyReportsDownloadReportNameResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -113,10 +113,10 @@ const operationSecurity: GetCompanyReportsReportIdDownloadSecurity = {
 };
 
 sdk.reports.getCompanyReportsReportIdDownload({
-  format: GetCompanyReportsReportIdDownloadFormat.Csv,
+  format: GetCompanyReportsReportIdDownloadFormat.Xlsx,
   includeInfo: false,
-  locale: "numquam",
-  reportId: 2010.1,
+  locale: "connect complexity",
+  reportId: 872.02,
 }, operationSecurity).then((res: GetCompanyReportsReportIdDownloadResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -163,8 +163,8 @@ const operationSecurity: GetCompanyReportsReportIdDownloadAsyncSecurity = {
 sdk.reports.getCompanyReportsReportIdDownloadAsync({
   format: GetCompanyReportsReportIdDownloadAsyncFormat.Xlsx,
   includeInfo: false,
-  locale: "officia",
-  reportId: 4918.92,
+  locale: "Radon Beach Account",
+  reportId: 3239.89,
 }, operationSecurity).then((res: GetCompanyReportsReportIdDownloadAsyncResponse) => {
   if (res.statusCode == 200) {
     // handle response

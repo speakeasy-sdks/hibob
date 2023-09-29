@@ -97,7 +97,7 @@ const operationSecurity: GetTasksPeopleIdSecurity = {
 };
 
 sdk.tasks.getTasksPeopleId({
-  id: "harum",
+  id: "Representative Mazda given",
   taskStatus: GetTasksPeopleIdTaskStatus.Closed,
 }, operationSecurity).then((res: GetTasksPeopleIdResponse) => {
   if (res.statusCode == 200) {
@@ -139,7 +139,7 @@ const operationSecurity: PostTasksTaskIdCompleteSecurity = {
 };
 
 sdk.tasks.postTasksTaskIdComplete({
-  taskId: "doloremque",
+  taskId: "Hybrid",
 }, operationSecurity).then((res: PostTasksTaskIdCompleteResponse) => {
   if (res.statusCode == 200) {
     // handle response

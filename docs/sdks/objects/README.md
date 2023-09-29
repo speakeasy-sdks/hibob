@@ -23,14 +23,14 @@ const operationSecurity: PostObjectsPositionSearchSecurity = {
 
 sdk.objects.postObjectsPositionSearch({
   fields: [
-    "eius",
+    "Connecticut",
   ],
   filters: [
     {
-      fieldId: "maxime",
-      operator: "deleniti",
+      fieldId: "productivity",
+      operator: "East Northwest deposit",
       values: [
-        "facilis",
+        "Diesel",
       ],
     },
   ],

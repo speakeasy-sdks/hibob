@@ -61,8 +61,8 @@ const operationSecurity: DeletePeopleIdEmploymentEntryIdSecurity = {
 };
 
 sdk.people.deletePeopleIdEmploymentEntryId({
-  entryId: 398434,
-  id: "f1e674bd-b04f-4157-9608-2d68ea19f1d1",
+  entryId: 511526,
+  id: "<ID>",
 }, operationSecurity).then((res: DeletePeopleIdEmploymentEntryIdResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -103,8 +103,8 @@ const operationSecurity: DeletePeopleIdEquitiesEntryIdSecurity = {
 };
 
 sdk.people.deletePeopleIdEquitiesEntryId({
-  entryId: 454162,
-  id: "051339d0-8086-4a18-8039-4c26071f93f5",
+  entryId: 258748,
+  id: "<ID>",
 }, operationSecurity).then((res: DeletePeopleIdEquitiesEntryIdResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -145,8 +145,8 @@ const operationSecurity: DeletePeopleIdSalariesEntryIdSecurity = {
 };
 
 sdk.people.deletePeopleIdSalariesEntryId({
-  entryId: 990345,
-  id: "0642dac7-af51-45cc-813a-a63aae8d6786",
+  entryId: 831741,
+  id: "<ID>",
 }, operationSecurity).then((res: DeletePeopleIdSalariesEntryIdResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -187,8 +187,8 @@ const operationSecurity: DeletePeopleIdTrainingEntryIdSecurity = {
 };
 
 sdk.people.deletePeopleIdTrainingEntryId({
-  entryId: 287051,
-  id: "dbb675fd-5e60-4b37-9ed4-f6fbee41f333",
+  entryId: 375590,
+  id: "<ID>",
 }, operationSecurity).then((res: DeletePeopleIdTrainingEntryIdResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -229,8 +229,8 @@ const operationSecurity: DeletePeopleIdVariableEntryIdSecurity = {
 };
 
 sdk.people.deletePeopleIdVariableEntryId({
-  entryId: 105906,
-  id: "7fe35b60-eb1e-4a42-a555-ba3c28744ed5",
+  entryId: 318576,
+  id: "<ID>",
 }, operationSecurity).then((res: DeletePeopleIdVariableEntryIdResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -271,8 +271,8 @@ const operationSecurity: DeletePeopleIdWorkEntryIdSecurity = {
 };
 
 sdk.people.deletePeopleIdWorkEntryId({
-  entryId: 237742,
-  id: "b88f3a8d-8f5c-40b2-b2fb-7b194a276b26",
+  entryId: 681162,
+  id: "<ID>",
 }, operationSecurity).then((res: DeletePeopleIdWorkEntryIdResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -311,7 +311,7 @@ const sdk = new Hibob({
 });
 
 sdk.people.getAvatars({
-  email: "unde",
+  email: "Forges Northeast",
 }).then((res: GetAvatarsResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -349,7 +349,7 @@ const sdk = new Hibob({
 });
 
 sdk.people.getAvatarsEmployeeId({
-  employeeId: "architecto",
+  employeeId: "composite",
 }).then((res: GetAvatarsEmployeeIdResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -472,10 +472,10 @@ const operationSecurity: GetPeopleIdentifierSecurity = {
 
 sdk.people.getPeopleIdentifier({
   fields: [
-    "suscipit",
+    "Folk",
   ],
   humanReadable: false,
-  identifier: "sapiente",
+  identifier: "fava",
   includeHumanReadable: false,
 }, operationSecurity).then((res: GetPeopleIdentifierResponse) => {
   if (res.statusCode == 200) {
@@ -517,7 +517,7 @@ const operationSecurity: GetPeopleIdEmploymentSecurity = {
 };
 
 sdk.people.getPeopleIdEmployment({
-  id: "e1f08f42-94e3-4698-b447-f603e8b445e8",
+  id: "<ID>",
 }, operationSecurity).then((res: GetPeopleIdEmploymentResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -558,7 +558,7 @@ const operationSecurity: GetPeopleIdEquitiesSecurity = {
 };
 
 sdk.people.getPeopleIdEquities({
-  id: "0ca55efd-20e4-457e-9858-b6a89fbe3a5a",
+  id: "<ID>",
 }, operationSecurity).then((res: GetPeopleIdEquitiesResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -599,7 +599,7 @@ const operationSecurity: GetPeopleIdLifecycleSecurity = {
 };
 
 sdk.people.getPeopleIdLifecycle({
-  id: "a8e4824d-0ab4-4075-888e-51862065e904",
+  id: "<ID>",
 }, operationSecurity).then((res: GetPeopleIdLifecycleResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -640,7 +640,7 @@ const operationSecurity: GetPeopleIdSalariesSecurity = {
 };
 
 sdk.people.getPeopleIdSalaries({
-  id: "f3b1194b-8abf-4603-a79f-9dfe0ab7da8a",
+  id: "<ID>",
 }, operationSecurity).then((res: GetPeopleIdSalariesResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -681,7 +681,7 @@ const operationSecurity: GetPeopleIdTrainingSecurity = {
 };
 
 sdk.people.getPeopleIdTraining({
-  id: "50ce187f-86bc-4173-9689-eee9526f8d98",
+  id: "<ID>",
 }, operationSecurity).then((res: GetPeopleIdTrainingResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -720,7 +720,7 @@ const sdk = new Hibob({
 });
 
 sdk.people.getPeopleIdVariable({
-  id: "6e881ead-4f0e-4101-a563-f94e29e973e9",
+  id: "<ID>",
 }).then((res: GetPeopleIdVariableResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -760,7 +760,7 @@ const operationSecurity: GetPeopleIdWorkSecurity = {
 };
 
 sdk.people.getPeopleIdWork({
-  id: "22a57a15-be3e-4060-807e-2b6e3ab8845f",
+  id: "<ID>",
 }, operationSecurity).then((res: GetPeopleIdWorkResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -799,7 +799,7 @@ const sdk = new Hibob({
 });
 
 sdk.people.getProfiles({
-  sortBy: "alias",
+  sortBy: "Southeast architect Analyst",
 }).then((res: GetProfilesResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -843,9 +843,9 @@ const operationSecurity: PostEmployeesEmployeeIdInvitationsSecurity = {
 
 sdk.people.postEmployeesEmployeeIdInvitations({
   invitationByWizard: {
-    welcomeWizardId: 362189,
+    welcomeWizardId: 823551,
   },
-  employeeId: "perspiciatis",
+  employeeId: "female",
 }, operationSecurity).then((res: PostEmployeesEmployeeIdInvitationsResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -891,10 +891,10 @@ const operationSecurity: PostEmployeesEmployeeIdStartDateSecurity = {
 
 sdk.people.postEmployeesEmployeeIdStartDate({
   startDateUpdate: {
-    reason: "nihil",
-    startDate: new RFCDate("2022-03-30"),
+    reason: "Hybrid Recycled",
+    startDate: new RFCDate("2021-04-22"),
   },
-  employeeId: "alias",
+  employeeId: "Account",
 }, operationSecurity).then((res: PostEmployeesEmployeeIdStartDateResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -941,16 +941,16 @@ const operationSecurity: PostEmployeesIdentifierTerminateSecurity = {
 
 sdk.people.postEmployeesIdentifierTerminate({
   employeeTermination: {
-    lastDayOfWork: new RFCDate("2020-02-03"),
+    lastDayOfWork: new RFCDate("2023-04-21"),
     noticePeriod: {
-      length: 174658,
+      length: 639545,
       unit: EmployeeTerminationNoticePeriodUnit.Month,
     },
-    reasonType: "minima",
-    terminationDate: new RFCDate("2022-04-27"),
-    terminationReason: "nesciunt",
+    reasonType: "second Rubber",
+    terminationDate: new RFCDate("2021-01-14"),
+    terminationReason: "North",
   },
-  identifier: "quae",
+  identifier: "Account Producer",
 }, operationSecurity).then((res: PostEmployeesIdentifierTerminateResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -991,7 +991,7 @@ const operationSecurity: PostEmployeesIdentifierUninviteSecurity = {
 };
 
 sdk.people.postEmployeesIdentifierUninvite({
-  identifier: "recusandae",
+  identifier: "teal",
 }, operationSecurity).then((res: PostEmployeesIdentifierUninviteResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -1033,12 +1033,12 @@ const operationSecurity: PostPeopleSecurity = {
 };
 
 sdk.people.postPeople({
-  email: "Elsa.Kreiger@yahoo.com",
-  firstName: "Loren",
-  surname: "adipisci",
+  email: "Lauryn20@hotmail.com",
+  firstName: "Addison",
+  surname: "through Bugatti",
   work: {
-    site: "debitis",
-    startDate: new RFCDate("2022-02-19"),
+    site: "Brazil Northeast",
+    startDate: new RFCDate("2021-06-01"),
   },
 }, operationSecurity).then((res: PostPeopleResponse) => {
   if (res.statusCode == 200) {
@@ -1079,18 +1079,18 @@ const operationSecurity: PostPeopleSearchSecurity = {
 
 sdk.people.postPeopleSearch({
   fields: [
-    "nemo",
+    "sky",
   ],
   filters: [
     {
       fieldPath: "root.id",
       operator: "equals",
       values: [
-        "recusandae",
+        "input",
       ],
     },
   ],
-  humanReadable: "esse",
+  humanReadable: "aut olive",
   showInactive: false,
 }, operationSecurity).then((res: PostPeopleSearchResponse) => {
   if (res.statusCode == 200) {
@@ -1134,11 +1134,11 @@ const operationSecurity: PostPeopleIdentifierSecurity = {
 sdk.people.postPeopleIdentifier({
   readSingleEmployeeRequestReference: {
     fields: [
-      "provident",
+      "Northeast",
     ],
-    humanReadable: "quis",
+    humanReadable: "Italy compressing directional",
   },
-  identifier: "eum",
+  identifier: "sexy male",
 }, operationSecurity).then((res: PostPeopleIdentifierResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -1181,14 +1181,14 @@ const operationSecurity: PostPeopleIdEmploymentSecurity = {
 
 sdk.people.postPeopleIdEmployment({
   employmentEntry: {
-    contract: "reiciendis",
-    effectiveDate: new RFCDate("2022-09-25"),
-    id: 354506,
-    reason: "quasi",
-    salaryPayType: "animi",
-    type: "nostrum",
+    contract: "East",
+    effectiveDate: new RFCDate("2021-07-23"),
+    id: 587532,
+    reason: "elm Northwest",
+    salaryPayType: "orchestration transparent partnerships",
+    type: "than primary",
   },
-  id: "a9da660f-f57b-4faa-94f9-efc1b4512c10",
+  id: "<ID>",
 }, operationSecurity).then((res: PostPeopleIdEmploymentResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -1231,26 +1231,26 @@ const operationSecurity: PostPeopleIdEquitiesSecurity = {
 
 sdk.people.postPeopleIdEquities({
   equityEntry: {
-    consentNumber: "velit",
-    effectiveDate: new RFCDate("2022-07-27"),
-    equityType: "eius",
+    consentNumber: "woman Bespoke",
+    effectiveDate: new RFCDate("2022-08-02"),
+    equityType: "Mercedes architecture extensible",
     exercisePrice: {
-      currency: "rem",
-      value: 8710.83,
+      currency: "UIC-Franc",
+      value: 7161.13,
     },
-    grantDate: new RFCDate("2022-06-18"),
-    grantNumber: 9587.41,
-    grantStatus: "eum",
-    grantType: "dicta",
-    id: 325118,
-    optionExpiration: new RFCDate("2022-06-02"),
-    quantity: 5896.95,
-    reason: "earum",
-    vestingCommencementDate: new RFCDate("2021-02-13"),
-    vestingSchedule: 8481.51,
-    vestingTerm: "eaque",
+    grantDate: new RFCDate("2021-09-30"),
+    grantNumber: 9554.26,
+    grantStatus: "voluptates Southeast Investor",
+    grantType: "Sarasota",
+    id: 414364,
+    optionExpiration: new RFCDate("2022-08-09"),
+    quantity: 2637.07,
+    reason: "program",
+    vestingCommencementDate: new RFCDate("2023-06-06"),
+    vestingSchedule: 4878.63,
+    vestingTerm: "transmitter",
   },
-  id: "e9fe6c63-2ca3-4aed-8117-996312fde047",
+  id: "<ID>",
 }, operationSecurity).then((res: PostPeopleIdEquitiesResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -1294,16 +1294,16 @@ const operationSecurity: PostPeopleIdSalariesSecurity = {
 sdk.people.postPeopleIdSalaries({
   salaryEntry: {
     base: {
-      currency: "molestiae",
-      value: 1158.34,
+      currency: "Cuban Peso Convertible",
+      value: 3657.11,
     },
-    effectiveDate: new RFCDate("2022-07-18"),
-    id: 508390,
-    payFrequency: "maiores",
-    payPeriod: "reiciendis",
-    reason: "vel",
+    effectiveDate: new RFCDate("2021-03-10"),
+    id: 359567,
+    payFrequency: "eos",
+    payPeriod: "entrap",
+    reason: "pascal Chair Sedan",
   },
-  id: "1d017476-360a-415d-b6a6-60659a1adeaa",
+  id: "<ID>",
 }, operationSecurity).then((res: PostPeopleIdSalariesResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -1347,21 +1347,21 @@ const operationSecurity: PostPeopleIdTrainingSecurity = {
 sdk.people.postPeopleIdTraining({
   trainingEntry: {
     cost: {
-      currency: "libero",
-      value: 3240.83,
+      currency: "Danish Krone",
+      value: 9851.31,
     },
-    description: "deleniti",
-    documentId: 3162.2,
-    effectiveDate: new RFCDate("2022-03-02"),
-    endDate: new RFCDate("2022-03-23"),
-    frequency: "ex",
-    id: 281153,
-    name: "Lula Bartell",
-    reason: "aliquid",
-    startDate: new RFCDate("2022-06-21"),
-    status: "omnis",
+    description: "Object-based empowering hub",
+    documentId: 5451.57,
+    effectiveDate: new RFCDate("2023-06-08"),
+    endDate: new RFCDate("2022-10-04"),
+    frequency: "tan empower withdrawal",
+    id: 233804,
+    name: "Handmade",
+    reason: "Chair",
+    startDate: new RFCDate("2023-11-25"),
+    status: "Tennessee Balanced Paradigm",
   },
-  id: "1baa0fe1-ade0-408e-af8c-5f350d8cdb5a",
+  id: "<ID>",
 }, operationSecurity).then((res: PostPeopleIdTrainingResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -1405,19 +1405,19 @@ const operationSecurity: PostPeopleIdVariableSecurity = {
 sdk.people.postPeopleIdVariable({
   variableEntry: {
     amount: {
-      currency: "dolor",
-      value: 3073.76,
+      currency: "Algerian Dinar",
+      value: 54.57,
     },
-    companyPercent: 805.32,
-    departmentPercent: 5372.79,
-    effectiveDate: new RFCDate("2022-09-22"),
-    id: 221396,
-    individualPercent: 86.89,
-    paymentPeriod: "architecto",
-    reason: "sit",
-    variableType: "modi",
+    companyPercent: 5416.79,
+    departmentPercent: 5669.24,
+    effectiveDate: new RFCDate("2023-11-02"),
+    id: 810143,
+    individualPercent: 8398.95,
+    paymentPeriod: "East",
+    reason: "Southwest Lesotho",
+    variableType: "illum",
   },
-  id: "21813d52-08ec-4e7e-a53b-668451c6c6e2",
+  id: "<ID>",
 }, operationSecurity).then((res: PostPeopleIdVariableResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -1461,22 +1461,22 @@ const operationSecurity: PostPeopleIdWorkSecurity = {
 sdk.people.postPeopleIdWork({
   workEntry: {
     customColumns: {},
-    department: "voluptatem",
-    effectiveDate: new RFCDate("2022-02-08"),
-    id: 95619,
-    reason: "nisi",
+    department: "West Integration Sedan",
+    effectiveDate: new RFCDate("2021-12-23"),
+    id: 530148,
+    reason: "brr Account",
     reportsTo: {
-      displayName: "at",
-      email: "Marcel98@hotmail.com",
-      firstName: "Terrence",
-      id: "c9578a64-5842-473a-8418-d162309fb092",
-      surname: "occaecati",
+      displayName: "Rhode invoice",
+      email: "Jadyn.Schoen76@yahoo.com",
+      firstName: "Frederic",
+      id: "<ID>",
+      surname: "Ramon Connecticut newton",
     },
-    site: "iste",
-    siteId: 170099,
-    title: "Mr.",
+    site: "Honduras Yttrium gold",
+    siteId: 672136,
+    title: "Northwest Buckinghamshire",
   },
-  id: "aefb9f58-c4d8-46e6-8e4b-e056013f59da",
+  id: "<ID>",
 }, operationSecurity).then((res: PostPeopleIdWorkResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -1516,9 +1516,9 @@ const sdk = new Hibob({
 
 sdk.people.putAvatarsEmployeeId({
   uploadAvatar: {
-    url: "esse",
+    url: "https://agitated-motor.net",
   },
-  employeeId: "nemo",
+  employeeId: "Blues Data pish",
 }).then((res: PutAvatarsEmployeeIdResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -1559,7 +1559,7 @@ const operationSecurity: PutPeopleIdentifierSecurity = {
 
 sdk.people.putPeopleIdentifier({
   requestBody: {},
-  identifier: "reprehenderit",
+  identifier: "male",
 }, operationSecurity).then((res: PutPeopleIdentifierResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -1601,9 +1601,9 @@ const operationSecurity: PutPeopleIdEmailSecurity = {
 
 sdk.people.putPeopleIdEmail({
   changeEmail: {
-    email: "Ethan_Marquardt94@hotmail.com",
+    email: "Jeramy67@yahoo.com",
   },
-  id: "ef66ef1c-aa33-483c-abeb-477373c8d72f",
+  id: "<ID>",
 }, operationSecurity).then((res: PutPeopleIdEmailResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -1644,15 +1644,15 @@ const sdk = new Hibob({
 
 sdk.people.putPeopleIdEmploymentEntryId({
   employmentEntry: {
-    contract: "vel",
-    effectiveDate: new RFCDate("2022-02-27"),
-    id: 78969,
-    reason: "facere",
-    salaryPayType: "libero",
-    type: "architecto",
+    contract: "black transmitter",
+    effectiveDate: new RFCDate("2021-10-20"),
+    id: 181946,
+    reason: "lavender teal",
+    salaryPayType: "niches livid Fish",
+    type: "Cloned Dirham",
   },
-  entryId: 975425,
-  id: "2c431066-1e96-4349-a1cf-9e06e3a43700",
+  entryId: 61642,
+  id: "<ID>",
 }).then((res: PutPeopleIdEmploymentEntryIdResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -1694,27 +1694,27 @@ const operationSecurity: PutPeopleIdEquitiesEntryIdSecurity = {
 
 sdk.people.putPeopleIdEquitiesEntryId({
   equityEntry: {
-    consentNumber: "consequatur",
-    effectiveDate: new RFCDate("2021-02-22"),
-    equityType: "ea",
+    consentNumber: "male collaboration system",
+    effectiveDate: new RFCDate("2023-11-20"),
+    equityType: "saepe",
     exercisePrice: {
-      currency: "quidem",
-      value: 3774.06,
+      currency: "Bahraini Dinar",
+      value: 35.59,
     },
-    grantDate: new RFCDate("2021-05-20"),
-    grantNumber: 5960.65,
-    grantStatus: "expedita",
-    grantType: "deleniti",
-    id: 954334,
-    optionExpiration: new RFCDate("2022-08-25"),
-    quantity: 6001.93,
-    reason: "necessitatibus",
-    vestingCommencementDate: new RFCDate("2021-06-17"),
-    vestingSchedule: 3730.4,
-    vestingTerm: "corporis",
+    grantDate: new RFCDate("2023-03-24"),
+    grantNumber: 3722.5,
+    grantStatus: "connect Southwest",
+    grantType: "Tandem syndicate",
+    id: 557003,
+    optionExpiration: new RFCDate("2022-07-24"),
+    quantity: 911.23,
+    reason: "Sleek accelerant",
+    vestingCommencementDate: new RFCDate("2023-05-26"),
+    vestingSchedule: 16.37,
+    vestingTerm: "application Wooden",
   },
-  entryId: 668234,
-  id: "9741d311-3529-465b-b8a7-202611435e13",
+  entryId: 751338,
+  id: "<ID>",
 }, operationSecurity).then((res: PutPeopleIdEquitiesEntryIdResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -1756,23 +1756,23 @@ const sdk = new Hibob({
 sdk.people.putPeopleIdWorkEntryId({
   workEntry: {
     customColumns: {},
-    department: "unde",
-    effectiveDate: new RFCDate("2020-11-09"),
-    id: 802894,
-    reason: "quia",
+    department: "Loan",
+    effectiveDate: new RFCDate("2022-01-23"),
+    id: 51725,
+    reason: "connecting Fresh",
     reportsTo: {
-      displayName: "quia",
-      email: "Lempi66@yahoo.com",
-      firstName: "Monroe",
-      id: "da8c070e-1084-4cb0-a72d-1ad879eeb966",
-      surname: "ipsam",
+      displayName: "gleefully Southeast optical",
+      email: "Rene.Cronin@yahoo.com",
+      firstName: "Devan",
+      id: "<ID>",
+      surname: "Chair",
     },
-    site: "rerum",
-    siteId: 515638,
-    title: "Mrs.",
+    site: "Practical",
+    siteId: 391756,
+    title: "input Awesome",
   },
-  entryId: 889060,
-  id: "fbd02bae-0be2-4d78-a259-e3ea4b5197f9",
+  entryId: 234699,
+  id: "<ID>",
 }).then((res: PutPeopleIdWorkEntryIdResponse) => {
   if (res.statusCode == 200) {
     // handle response

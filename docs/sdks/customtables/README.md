@@ -30,9 +30,9 @@ const operationSecurity: DeletePeopleCustomTablesEmployeeIdCustomTableIdEntryIdS
 };
 
 sdk.customTables.deletePeopleCustomTablesEmployeeIdCustomTableIdEntryId({
-  customTableId: "corrupti",
-  employeeId: "illum",
-  entryId: "vel",
+  customTableId: "morph blah",
+  employeeId: "Functionality coulomb",
+  entryId: "blue",
 }, operationSecurity).then((res: DeletePeopleCustomTablesEmployeeIdCustomTableIdEntryIdResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -76,8 +76,8 @@ const operationSecurity: GetPeopleCustomTablesEmployeeIdCustomTableIdSecurity = 
 };
 
 sdk.customTables.getPeopleCustomTablesEmployeeIdCustomTableId({
-  customTableId: "error",
-  employeeId: "deserunt",
+  customTableId: "Sleek deposit",
+  employeeId: "FTP white payment",
   includeHumanReadable: false,
 }, operationSecurity).then((res: GetPeopleCustomTablesEmployeeIdCustomTableIdResponse) => {
   if (res.statusCode == 200) {
@@ -123,10 +123,10 @@ const operationSecurity: PostPeopleCustomTablesEmployeeIdCustomTableIdSecurity =
 
 sdk.customTables.postPeopleCustomTablesEmployeeIdCustomTableId({
   requestBody: {
-    rawBody: "suscipit",
+    rawBody: "drive Transexual Soul",
   },
-  customTableId: "iure",
-  employeeId: "magnam",
+  customTableId: "female incubate Iron",
+  employeeId: "Metal Passenger primary",
 }, operationSecurity).then((res: PostPeopleCustomTablesEmployeeIdCustomTableIdResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -171,11 +171,11 @@ const operationSecurity: PutPeopleCustomTablesEmployeeIdCustomTableIdEntryIdSecu
 
 sdk.customTables.putPeopleCustomTablesEmployeeIdCustomTableIdEntryId({
   requestBody: {
-    rawBody: "debitis",
+    rawBody: "female",
   },
-  customTableId: "ipsa",
-  employeeId: "delectus",
-  entryId: "tempora",
+  customTableId: "Androgyne Guarani Pickup",
+  employeeId: "Mazda invoice paradigms",
+  entryId: "repeatedly Director",
 }, operationSecurity).then((res: PutPeopleCustomTablesEmployeeIdCustomTableIdEntryIdResponse) => {
   if (res.statusCode == 200) {
     // handle response

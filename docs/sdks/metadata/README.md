@@ -38,8 +38,8 @@ const operationSecurity: DeleteCompanyNamedListsListNameItemIdSecurity = {
 };
 
 sdk.metadata.deleteCompanyNamedListsListNameItemId({
-  itemId: "nisi",
-  listName: "vel",
+  itemId: "nicely",
+  listName: "Barbados crouch invoice",
 }, operationSecurity).then((res: DeleteCompanyNamedListsListNameItemIdResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -83,7 +83,7 @@ const operationSecurity: DeleteCompanyPeopleFieldsFieldIdSecurity = {
 };
 
 sdk.metadata.deleteCompanyPeopleFieldsFieldId({
-  fieldId: "natus",
+  fieldId: "female",
 }, operationSecurity).then((res: DeleteCompanyPeopleFieldsFieldIdResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -166,7 +166,7 @@ const operationSecurity: GetCompanyNamedListsListNameSecurity = {
 
 sdk.metadata.getCompanyNamedListsListName({
   includeArchived: false,
-  listName: "omnis",
+  listName: "EXE",
 }, operationSecurity).then((res: GetCompanyNamedListsListNameResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -322,7 +322,7 @@ const operationSecurity: GetPeopleCustomTablesMetadataCustomTableIdSecurity = {
 };
 
 sdk.metadata.getPeopleCustomTablesMetadataCustomTableId({
-  customTableId: "molestiae",
+  customTableId: "zowie Latin",
 }, operationSecurity).then((res: GetPeopleCustomTablesMetadataCustomTableIdResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -364,10 +364,10 @@ const operationSecurity: PostCompanyNamedListsListNameSecurity = {
 
 sdk.metadata.postCompanyNamedListsListName({
   newListItem: {
-    name: "Marcia Gutkowski",
-    parentId: 287991,
+    name: "Electric Forint henry",
+    parentId: 88692,
   },
-  listName: "labore",
+  listName: "directional National Classical",
 }, operationSecurity).then((res: PostCompanyNamedListsListNameResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -408,11 +408,11 @@ const operationSecurity: PostCompanyPeopleFieldsSecurity = {
 };
 
 sdk.metadata.postCompanyPeopleFields({
-  category: "suscipit",
-  description: "natus",
-  historical: "nobis",
-  name: "Mrs. Meghan Collins V",
-  type: "ullam",
+  category: "female Avon aboard",
+  description: "Monitored user-facing data-warehouse",
+  historical: "Mini Southwest aperiam",
+  name: "Convertible Research",
+  type: "Health Mini Bangladesh",
 }, operationSecurity).then((res: PostCompanyPeopleFieldsResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -457,11 +457,11 @@ const operationSecurity: PutCompanyNamedListsListNameItemIdSecurity = {
 
 sdk.metadata.putCompanyNamedListsListNameItemId({
   updateListItemRequest: {
-    name: "Miss Julian Marvin",
-    parentId: 652103,
+    name: "Rupee Books withdrawal",
+    parentId: 679237,
   },
-  itemId: "ad",
-  listName: "eum",
+  itemId: "watchful Electronic",
+  listName: "copying Keyboard Antimony",
 }, operationSecurity).then((res: PutCompanyNamedListsListNameItemIdResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -503,10 +503,10 @@ const operationSecurity: PutCompanyPeopleFieldsFieldIdSecurity = {
 
 sdk.metadata.putCompanyPeopleFieldsFieldId({
   updateFieldRequest: {
-    description: "dolor",
-    name: "Ms. Fred Hilll",
+    description: "User-centric uniform product",
+    name: "impactful Malagasy circuit",
   },
-  fieldId: "debitis",
+  fieldId: "HTTP Idaho",
 }, operationSecurity).then((res: PutCompanyPeopleFieldsFieldIdResponse) => {
   if (res.statusCode == 200) {
     // handle response

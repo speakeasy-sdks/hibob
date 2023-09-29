@@ -33,8 +33,8 @@ const operationSecurity: DeleteDocsPeopleIdConfidentialDocIdSecurity = {
 };
 
 sdk.documents.deleteDocsPeopleIdConfidentialDocId({
-  docId: "suscipit",
-  id: "7cc8796e-d151-4a05-9fc2-ddf7cc78ca1b",
+  docId: "vast overjoyed",
+  id: "<ID>",
 }, operationSecurity).then((res: DeleteDocsPeopleIdConfidentialDocIdResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -75,8 +75,8 @@ const operationSecurity: DeleteDocsPeopleIdSharedDocIdSecurity = {
 };
 
 sdk.documents.deleteDocsPeopleIdSharedDocId({
-  docId: "officia",
-  id: "928fc816-742c-4b73-9205-929396fea759",
+  docId: "table pariatur Electric",
+  id: "<ID>",
 }, operationSecurity).then((res: DeleteDocsPeopleIdSharedDocIdResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -115,7 +115,7 @@ const sdk = new Hibob({
 });
 
 sdk.documents.getDocsPeopleId({
-  id: "6eb10faa-a235-42c5-9559-07aff1a3a2fa",
+  id: "<ID>",
 }).then((res: GetDocsPeopleIdResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -154,13 +154,13 @@ const sdk = new Hibob({
 
 sdk.documents.postDocsPeopleIdConfidential({
   addDocument: {
-    documentName: "occaecati",
-    documentUrl: "numquam",
+    documentName: "Salad impactful RAM",
+    documentUrl: "Sedan online array",
     tags: [
-      "commodi",
+      "convergence",
     ],
   },
-  id: "7739251a-a52c-43f5-ad01-9da1ffe78f09",
+  id: "<ID>",
 }).then((res: PostDocsPeopleIdConfidentialResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -200,11 +200,11 @@ const sdk = new Hibob({
 sdk.documents.postDocsPeopleIdConfidentialUpload({
   requestBody: {
     file: {
-      content: "voluptate".encode(),
-      file: "cum",
+      content: "agqJ9wS3O#" as bytes <<<>>>,
+      file: "Compatible Shoes",
     },
   },
-  id: "0074f154-71b5-4e6e-93b9-9d488e1e91e4",
+  id: "<ID>",
 }).then((res: PostDocsPeopleIdConfidentialUploadResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -243,13 +243,13 @@ const sdk = new Hibob({
 
 sdk.documents.postDocsPeopleIdShared({
   addDocument: {
-    documentName: "enim",
-    documentUrl: "consequatur",
+    documentName: "Frozen",
+    documentUrl: "West",
     tags: [
-      "est",
+      "blue",
     ],
   },
-  id: "d2abd442-6980-42d5-82a9-4bb4f63c969e",
+  id: "<ID>",
 }).then((res: PostDocsPeopleIdSharedResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -289,11 +289,11 @@ const sdk = new Hibob({
 sdk.documents.postDocsPeopleIdSharedUpload({
   requestBody: {
     file: {
-      content: "sint".encode(),
-      file: "officia",
+      content: "fWz`=9n{(!" as bytes <<<>>>,
+      file: "roughly Minnesota",
     },
   },
-  id: "3efa77df-b14c-4d66-ae39-5efb9ba88f3a",
+  id: "<ID>",
 }).then((res: PostDocsPeopleIdSharedUploadResponse) => {
   if (res.statusCode == 200) {
     // handle response
