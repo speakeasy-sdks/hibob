@@ -4,7 +4,7 @@
 
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
 import { RFCDate } from "../../types";
-import { Expose, Transform } from "class-transformer";
+import { Expose, Transform, Type } from "class-transformer";
 
 /**
  * Change type - created, canceled or deleted.
@@ -60,6 +60,7 @@ export class TimeoffChange extends SpeakeasyBase {
      */
     @SpeakeasyMetadata()
     @Expose({ name: "date" })
+    @Type(() => String)
     @Transform(({ value }) => new RFCDate(value), { toClassOnly: true })
     date?: RFCDate;
 
@@ -103,6 +104,7 @@ export class TimeoffChange extends SpeakeasyBase {
      */
     @SpeakeasyMetadata()
     @Expose({ name: "endDate" })
+    @Type(() => String)
     @Transform(({ value }) => new RFCDate(value), { toClassOnly: true })
     endDate?: RFCDate;
 
@@ -139,6 +141,7 @@ export class TimeoffChange extends SpeakeasyBase {
      */
     @SpeakeasyMetadata()
     @Expose({ name: "startDate" })
+    @Type(() => String)
     @Transform(({ value }) => new RFCDate(value), { toClassOnly: true })
     startDate?: RFCDate;
 

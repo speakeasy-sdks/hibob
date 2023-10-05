@@ -32,6 +32,7 @@ export class TrainingEntry extends SpeakeasyBase {
      */
     @SpeakeasyMetadata()
     @Expose({ name: "effectiveDate" })
+    @Type(() => String)
     @Transform(({ value }) => new RFCDate(value), { toClassOnly: true })
     effectiveDate: RFCDate;
 
@@ -40,6 +41,7 @@ export class TrainingEntry extends SpeakeasyBase {
      */
     @SpeakeasyMetadata()
     @Expose({ name: "endDate" })
+    @Type(() => String)
     @Transform(({ value }) => new RFCDate(value), { toClassOnly: true })
     endDate?: RFCDate;
 
@@ -76,6 +78,7 @@ export class TrainingEntry extends SpeakeasyBase {
      */
     @SpeakeasyMetadata()
     @Expose({ name: "startDate" })
+    @Type(() => String)
     @Transform(({ value }) => new RFCDate(value), { toClassOnly: true })
     startDate?: RFCDate;
 

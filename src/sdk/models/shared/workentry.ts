@@ -66,6 +66,7 @@ export class WorkEntry extends SpeakeasyBase {
      */
     @SpeakeasyMetadata()
     @Expose({ name: "effectiveDate" })
+    @Type(() => String)
     @Transform(({ value }) => new RFCDate(value), { toClassOnly: true })
     effectiveDate: RFCDate;
 

@@ -19,6 +19,7 @@ export class CreateEmployeeRequestWork extends SpeakeasyBase {
      */
     @SpeakeasyMetadata()
     @Expose({ name: "startDate" })
+    @Type(() => String)
     @Transform(({ value }) => new RFCDate(value), { toClassOnly: true })
     startDate: RFCDate;
 }

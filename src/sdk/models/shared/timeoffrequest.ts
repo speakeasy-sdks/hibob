@@ -66,6 +66,7 @@ export class TimeoffRequest extends SpeakeasyBase {
      */
     @SpeakeasyMetadata()
     @Expose({ name: "date" })
+    @Type(() => String)
     @Transform(({ value }) => new RFCDate(value), { toClassOnly: true })
     date?: RFCDate;
 
@@ -105,6 +106,7 @@ export class TimeoffRequest extends SpeakeasyBase {
      */
     @SpeakeasyMetadata()
     @Expose({ name: "endDate" })
+    @Type(() => String)
     @Transform(({ value }) => new RFCDate(value), { toClassOnly: true })
     endDate?: RFCDate;
 
@@ -155,6 +157,7 @@ export class TimeoffRequest extends SpeakeasyBase {
      */
     @SpeakeasyMetadata()
     @Expose({ name: "startDate" })
+    @Type(() => String)
     @Transform(({ value }) => new RFCDate(value), { toClassOnly: true })
     startDate?: RFCDate;
 

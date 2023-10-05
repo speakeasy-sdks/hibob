@@ -29,6 +29,7 @@ export class EmployeeTerminationNoticePeriod extends SpeakeasyBase {
 export class EmployeeTermination extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "lastDayOfWork" })
+    @Type(() => String)
     @Transform(({ value }) => new RFCDate(value), { toClassOnly: true })
     lastDayOfWork?: RFCDate;
 
@@ -52,6 +53,7 @@ export class EmployeeTermination extends SpeakeasyBase {
      */
     @SpeakeasyMetadata()
     @Expose({ name: "terminationDate" })
+    @Type(() => String)
     @Transform(({ value }) => new RFCDate(value), { toClassOnly: true })
     terminationDate: RFCDate;
 

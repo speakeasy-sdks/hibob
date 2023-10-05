@@ -4,7 +4,7 @@
 
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
 import { RFCDate } from "../../types";
-import { Expose, Transform } from "class-transformer";
+import { Expose, Transform, Type } from "class-transformer";
 
 export class EmploymentEntry extends SpeakeasyBase {
     /**
@@ -19,6 +19,7 @@ export class EmploymentEntry extends SpeakeasyBase {
      */
     @SpeakeasyMetadata()
     @Expose({ name: "effectiveDate" })
+    @Type(() => String)
     @Transform(({ value }) => new RFCDate(value), { toClassOnly: true })
     effectiveDate: RFCDate;
 

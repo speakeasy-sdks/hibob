@@ -4,7 +4,7 @@
 
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
 import { RFCDate } from "../../types";
-import { Expose, Transform } from "class-transformer";
+import { Expose, Transform, Type } from "class-transformer";
 
 /**
  * Select <b>morning</b> when the request is for mornings on the days requested. Select <b>afternoon</b> when the request is for afternoons on the days requested.<br> This is mandatory if the <b>requestRangeType</b> is <b>portionOnRange</b>.
@@ -86,6 +86,7 @@ export class SubmitTimeoffRequest extends SpeakeasyBase {
      */
     @SpeakeasyMetadata()
     @Expose({ name: "endDate" })
+    @Type(() => String)
     @Transform(({ value }) => new RFCDate(value), { toClassOnly: true })
     endDate?: RFCDate;
 
@@ -143,6 +144,7 @@ export class SubmitTimeoffRequest extends SpeakeasyBase {
      */
     @SpeakeasyMetadata()
     @Expose({ name: "startDate" })
+    @Type(() => String)
     @Transform(({ value }) => new RFCDate(value), { toClassOnly: true })
     startDate: RFCDate;
 

@@ -20,6 +20,7 @@ export class EquityEntry extends SpeakeasyBase {
      */
     @SpeakeasyMetadata()
     @Expose({ name: "effectiveDate" })
+    @Type(() => String)
     @Transform(({ value }) => new RFCDate(value), { toClassOnly: true })
     effectiveDate: RFCDate;
 
@@ -40,6 +41,7 @@ export class EquityEntry extends SpeakeasyBase {
      */
     @SpeakeasyMetadata()
     @Expose({ name: "grantDate" })
+    @Type(() => String)
     @Transform(({ value }) => new RFCDate(value), { toClassOnly: true })
     grantDate?: RFCDate;
 
@@ -76,6 +78,7 @@ export class EquityEntry extends SpeakeasyBase {
      */
     @SpeakeasyMetadata()
     @Expose({ name: "optionExpiration" })
+    @Type(() => String)
     @Transform(({ value }) => new RFCDate(value), { toClassOnly: true })
     optionExpiration?: RFCDate;
 
@@ -98,6 +101,7 @@ export class EquityEntry extends SpeakeasyBase {
      */
     @SpeakeasyMetadata()
     @Expose({ name: "vestingCommencementDate" })
+    @Type(() => String)
     @Transform(({ value }) => new RFCDate(value), { toClassOnly: true })
     vestingCommencementDate?: RFCDate;
 

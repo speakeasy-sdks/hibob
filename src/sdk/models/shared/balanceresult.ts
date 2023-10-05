@@ -4,7 +4,7 @@
 
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
 import { RFCDate } from "../../types";
-import { Expose, Transform } from "class-transformer";
+import { Expose, Transform, Type } from "class-transformer";
 
 export class BalanceResult extends SpeakeasyBase {
     /**
@@ -26,6 +26,7 @@ export class BalanceResult extends SpeakeasyBase {
      */
     @SpeakeasyMetadata()
     @Expose({ name: "pointInTime" })
+    @Type(() => String)
     @Transform(({ value }) => new RFCDate(value), { toClassOnly: true })
     pointInTime?: RFCDate;
 
@@ -48,6 +49,7 @@ export class BalanceResult extends SpeakeasyBase {
      */
     @SpeakeasyMetadata()
     @Expose({ name: "startingBalanceAsOf" })
+    @Type(() => String)
     @Transform(({ value }) => new RFCDate(value), { toClassOnly: true })
     startingBalanceAsOf?: RFCDate;
 
