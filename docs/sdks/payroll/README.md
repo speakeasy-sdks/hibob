@@ -26,9 +26,10 @@
 
 ```typescript
 import { Hibob } from "hibob";
-import { DeletePeopleIdEquitiesEntryIdResponse, DeletePeopleIdEquitiesEntryIdSecurity } from "hibob/dist/sdk/models/operations";
+import { DeletePeopleIdEquitiesEntryIdSecurity } from "hibob/dist/sdk/models/operations";
 
-const sdk = new Hibob();
+(async() => {
+  const sdk = new Hibob();
 const operationSecurity: DeletePeopleIdEquitiesEntryIdSecurity = {
   basic: {
     password: "",
@@ -36,14 +37,15 @@ const operationSecurity: DeletePeopleIdEquitiesEntryIdSecurity = {
   },
 };
 
-sdk.payroll.deletePeopleIdEquitiesEntryId({
-  entryId: 258748,
-  id: "<ID>",
-}, operationSecurity).then((res: DeletePeopleIdEquitiesEntryIdResponse) => {
+  const res = await sdk.payroll.deletePeopleIdEquitiesEntryId({
+    entryId: 258748,
+    id: "<ID>",
+  }, operationSecurity);
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -68,9 +70,10 @@ sdk.payroll.deletePeopleIdEquitiesEntryId({
 
 ```typescript
 import { Hibob } from "hibob";
-import { DeletePeopleIdSalariesEntryIdResponse, DeletePeopleIdSalariesEntryIdSecurity } from "hibob/dist/sdk/models/operations";
+import { DeletePeopleIdSalariesEntryIdSecurity } from "hibob/dist/sdk/models/operations";
 
-const sdk = new Hibob();
+(async() => {
+  const sdk = new Hibob();
 const operationSecurity: DeletePeopleIdSalariesEntryIdSecurity = {
   basic: {
     password: "",
@@ -78,14 +81,15 @@ const operationSecurity: DeletePeopleIdSalariesEntryIdSecurity = {
   },
 };
 
-sdk.payroll.deletePeopleIdSalariesEntryId({
-  entryId: 831741,
-  id: "<ID>",
-}, operationSecurity).then((res: DeletePeopleIdSalariesEntryIdResponse) => {
+  const res = await sdk.payroll.deletePeopleIdSalariesEntryId({
+    entryId: 831741,
+    id: "<ID>",
+  }, operationSecurity);
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -110,9 +114,10 @@ sdk.payroll.deletePeopleIdSalariesEntryId({
 
 ```typescript
 import { Hibob } from "hibob";
-import { DeletePeopleIdTrainingEntryIdResponse, DeletePeopleIdTrainingEntryIdSecurity } from "hibob/dist/sdk/models/operations";
+import { DeletePeopleIdTrainingEntryIdSecurity } from "hibob/dist/sdk/models/operations";
 
-const sdk = new Hibob();
+(async() => {
+  const sdk = new Hibob();
 const operationSecurity: DeletePeopleIdTrainingEntryIdSecurity = {
   basic: {
     password: "",
@@ -120,14 +125,15 @@ const operationSecurity: DeletePeopleIdTrainingEntryIdSecurity = {
   },
 };
 
-sdk.payroll.deletePeopleIdTrainingEntryId({
-  entryId: 375590,
-  id: "<ID>",
-}, operationSecurity).then((res: DeletePeopleIdTrainingEntryIdResponse) => {
+  const res = await sdk.payroll.deletePeopleIdTrainingEntryId({
+    entryId: 375590,
+    id: "<ID>",
+  }, operationSecurity);
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -152,9 +158,10 @@ sdk.payroll.deletePeopleIdTrainingEntryId({
 
 ```typescript
 import { Hibob } from "hibob";
-import { DeletePeopleIdVariableEntryIdResponse, DeletePeopleIdVariableEntryIdSecurity } from "hibob/dist/sdk/models/operations";
+import { DeletePeopleIdVariableEntryIdSecurity } from "hibob/dist/sdk/models/operations";
 
-const sdk = new Hibob();
+(async() => {
+  const sdk = new Hibob();
 const operationSecurity: DeletePeopleIdVariableEntryIdSecurity = {
   basic: {
     password: "",
@@ -162,14 +169,15 @@ const operationSecurity: DeletePeopleIdVariableEntryIdSecurity = {
   },
 };
 
-sdk.payroll.deletePeopleIdVariableEntryId({
-  entryId: 318576,
-  id: "<ID>",
-}, operationSecurity).then((res: DeletePeopleIdVariableEntryIdResponse) => {
+  const res = await sdk.payroll.deletePeopleIdVariableEntryId({
+    entryId: 318576,
+    id: "<ID>",
+  }, operationSecurity);
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -194,22 +202,20 @@ sdk.payroll.deletePeopleIdVariableEntryId({
 
 ```typescript
 import { Hibob } from "hibob";
-import { GetPayrollHistoryResponse } from "hibob/dist/sdk/models/operations";
 
-const sdk = new Hibob({
-  security: {
-    bearer: "",
-  },
-});
+(async() => {
+  const sdk = new Hibob({
+    security: {
+      bearer: "",
+    },
+  });
 
-sdk.payroll.getPayrollHistory({
-  department: "Analyst bypass array",
-  showInactive: false,
-}).then((res: GetPayrollHistoryResponse) => {
+  const res = await sdk.payroll.getPayrollHistory({});
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -233,9 +239,10 @@ Returns a list of equity grants for a given employee.<br /><b>Supported user typ
 
 ```typescript
 import { Hibob } from "hibob";
-import { GetPeopleIdEquitiesResponse, GetPeopleIdEquitiesSecurity } from "hibob/dist/sdk/models/operations";
+import { GetPeopleIdEquitiesSecurity } from "hibob/dist/sdk/models/operations";
 
-const sdk = new Hibob();
+(async() => {
+  const sdk = new Hibob();
 const operationSecurity: GetPeopleIdEquitiesSecurity = {
   basic: {
     password: "",
@@ -243,13 +250,14 @@ const operationSecurity: GetPeopleIdEquitiesSecurity = {
   },
 };
 
-sdk.payroll.getPeopleIdEquities({
-  id: "<ID>",
-}, operationSecurity).then((res: GetPeopleIdEquitiesResponse) => {
+  const res = await sdk.payroll.getPeopleIdEquities({
+    id: "<ID>",
+  }, operationSecurity);
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -274,9 +282,10 @@ Returns a list of salary history entries for a given employee.<br /><b>Supported
 
 ```typescript
 import { Hibob } from "hibob";
-import { GetPeopleIdSalariesResponse, GetPeopleIdSalariesSecurity } from "hibob/dist/sdk/models/operations";
+import { GetPeopleIdSalariesSecurity } from "hibob/dist/sdk/models/operations";
 
-const sdk = new Hibob();
+(async() => {
+  const sdk = new Hibob();
 const operationSecurity: GetPeopleIdSalariesSecurity = {
   basic: {
     password: "",
@@ -284,13 +293,14 @@ const operationSecurity: GetPeopleIdSalariesSecurity = {
   },
 };
 
-sdk.payroll.getPeopleIdSalaries({
-  id: "<ID>",
-}, operationSecurity).then((res: GetPeopleIdSalariesResponse) => {
+  const res = await sdk.payroll.getPeopleIdSalaries({
+    id: "<ID>",
+  }, operationSecurity);
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -315,9 +325,10 @@ Returns a list of training records for a given employee<br /><b>Supported user t
 
 ```typescript
 import { Hibob } from "hibob";
-import { GetPeopleIdTrainingResponse, GetPeopleIdTrainingSecurity } from "hibob/dist/sdk/models/operations";
+import { GetPeopleIdTrainingSecurity } from "hibob/dist/sdk/models/operations";
 
-const sdk = new Hibob();
+(async() => {
+  const sdk = new Hibob();
 const operationSecurity: GetPeopleIdTrainingSecurity = {
   basic: {
     password: "",
@@ -325,13 +336,14 @@ const operationSecurity: GetPeopleIdTrainingSecurity = {
   },
 };
 
-sdk.payroll.getPeopleIdTraining({
-  id: "<ID>",
-}, operationSecurity).then((res: GetPeopleIdTrainingResponse) => {
+  const res = await sdk.payroll.getPeopleIdTraining({
+    id: "<ID>",
+  }, operationSecurity);
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -356,21 +368,22 @@ Returns a list of variable payments for a given employee.<br /><b>Supported user
 
 ```typescript
 import { Hibob } from "hibob";
-import { GetPeopleIdVariableResponse } from "hibob/dist/sdk/models/operations";
 
-const sdk = new Hibob({
-  security: {
-    bearer: "",
-  },
-});
+(async() => {
+  const sdk = new Hibob({
+    security: {
+      bearer: "",
+    },
+  });
 
-sdk.payroll.getPeopleIdVariable({
-  id: "<ID>",
-}).then((res: GetPeopleIdVariableResponse) => {
+  const res = await sdk.payroll.getPeopleIdVariable({
+    id: "<ID>",
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -394,10 +407,11 @@ sdk.payroll.getPeopleIdVariable({
 
 ```typescript
 import { Hibob } from "hibob";
-import { PostPeopleIdEquitiesResponse, PostPeopleIdEquitiesSecurity } from "hibob/dist/sdk/models/operations";
+import { PostPeopleIdEquitiesSecurity } from "hibob/dist/sdk/models/operations";
 import { RFCDate } from "hibob/dist/sdk/types";
 
-const sdk = new Hibob();
+(async() => {
+  const sdk = new Hibob();
 const operationSecurity: PostPeopleIdEquitiesSecurity = {
   basic: {
     password: "",
@@ -405,33 +419,23 @@ const operationSecurity: PostPeopleIdEquitiesSecurity = {
   },
 };
 
-sdk.payroll.postPeopleIdEquities({
-  equityEntry: {
-    consentNumber: "woman Bespoke",
-    effectiveDate: new RFCDate("2022-08-02"),
-    equityType: "Mercedes architecture extensible",
-    exercisePrice: {
-      currency: "UIC-Franc",
-      value: 7161.13,
+  const res = await sdk.payroll.postPeopleIdEquities({
+    equityEntry: {
+      effectiveDate: new RFCDate("2022-11-21"),
+      equityType: "Northeast Bespoke",
+      exercisePrice: {
+        currency: "Kyat",
+        value: 6943.7,
+      },
+      quantity: 8218.48,
     },
-    grantDate: new RFCDate("2021-09-30"),
-    grantNumber: 9554.26,
-    grantStatus: "voluptates Southeast Investor",
-    grantType: "Sarasota",
-    id: 414364,
-    optionExpiration: new RFCDate("2022-08-09"),
-    quantity: 2637.07,
-    reason: "program",
-    vestingCommencementDate: new RFCDate("2023-06-06"),
-    vestingSchedule: 4878.63,
-    vestingTerm: "transmitter",
-  },
-  id: "<ID>",
-}, operationSecurity).then((res: PostPeopleIdEquitiesResponse) => {
+    id: "<ID>",
+  }, operationSecurity);
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -456,10 +460,11 @@ sdk.payroll.postPeopleIdEquities({
 
 ```typescript
 import { Hibob } from "hibob";
-import { PostPeopleIdSalariesResponse, PostPeopleIdSalariesSecurity } from "hibob/dist/sdk/models/operations";
+import { PostPeopleIdSalariesSecurity } from "hibob/dist/sdk/models/operations";
 import { RFCDate } from "hibob/dist/sdk/types";
 
-const sdk = new Hibob();
+(async() => {
+  const sdk = new Hibob();
 const operationSecurity: PostPeopleIdSalariesSecurity = {
   basic: {
     password: "",
@@ -467,24 +472,22 @@ const operationSecurity: PostPeopleIdSalariesSecurity = {
   },
 };
 
-sdk.payroll.postPeopleIdSalaries({
-  salaryEntry: {
-    base: {
-      currency: "Cuban Peso Convertible",
-      value: 3657.11,
+  const res = await sdk.payroll.postPeopleIdSalaries({
+    salaryEntry: {
+      base: {
+        currency: "Cuban Peso Convertible",
+        value: 3657.11,
+      },
+      effectiveDate: new RFCDate("2021-03-10"),
+      payPeriod: "Toys green",
     },
-    effectiveDate: new RFCDate("2021-03-10"),
-    id: 359567,
-    payFrequency: "eos",
-    payPeriod: "entrap",
-    reason: "pascal Chair Sedan",
-  },
-  id: "<ID>",
-}, operationSecurity).then((res: PostPeopleIdSalariesResponse) => {
+    id: "<ID>",
+  }, operationSecurity);
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -509,10 +512,11 @@ sdk.payroll.postPeopleIdSalaries({
 
 ```typescript
 import { Hibob } from "hibob";
-import { PostPeopleIdTrainingResponse, PostPeopleIdTrainingSecurity } from "hibob/dist/sdk/models/operations";
+import { PostPeopleIdTrainingSecurity } from "hibob/dist/sdk/models/operations";
 import { RFCDate } from "hibob/dist/sdk/types";
 
-const sdk = new Hibob();
+(async() => {
+  const sdk = new Hibob();
 const operationSecurity: PostPeopleIdTrainingSecurity = {
   basic: {
     password: "",
@@ -520,29 +524,21 @@ const operationSecurity: PostPeopleIdTrainingSecurity = {
   },
 };
 
-sdk.payroll.postPeopleIdTraining({
-  trainingEntry: {
-    cost: {
-      currency: "Danish Krone",
-      value: 9851.31,
+  const res = await sdk.payroll.postPeopleIdTraining({
+    trainingEntry: {
+      cost: {
+        currency: "Danish Krone",
+        value: 9851.31,
+      },
+      effectiveDate: new RFCDate("2022-07-06"),
     },
-    description: "Object-based empowering hub",
-    documentId: 5451.57,
-    effectiveDate: new RFCDate("2023-06-08"),
-    endDate: new RFCDate("2022-10-04"),
-    frequency: "tan empower withdrawal",
-    id: 233804,
-    name: "Handmade",
-    reason: "Chair",
-    startDate: new RFCDate("2023-11-25"),
-    status: "Tennessee Balanced Paradigm",
-  },
-  id: "<ID>",
-}, operationSecurity).then((res: PostPeopleIdTrainingResponse) => {
+    id: "<ID>",
+  }, operationSecurity);
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -567,10 +563,11 @@ sdk.payroll.postPeopleIdTraining({
 
 ```typescript
 import { Hibob } from "hibob";
-import { PostPeopleIdVariableResponse, PostPeopleIdVariableSecurity } from "hibob/dist/sdk/models/operations";
+import { PostPeopleIdVariableSecurity } from "hibob/dist/sdk/models/operations";
 import { RFCDate } from "hibob/dist/sdk/types";
 
-const sdk = new Hibob();
+(async() => {
+  const sdk = new Hibob();
 const operationSecurity: PostPeopleIdVariableSecurity = {
   basic: {
     password: "",
@@ -578,27 +575,22 @@ const operationSecurity: PostPeopleIdVariableSecurity = {
   },
 };
 
-sdk.payroll.postPeopleIdVariable({
-  variableEntry: {
-    amount: {
-      currency: "Algerian Dinar",
-      value: 54.57,
+  const res = await sdk.payroll.postPeopleIdVariable({
+    variableEntry: {
+      amount: {
+        currency: "Algerian Dinar",
+        value: 54.57,
+      },
+      effectiveDate: new RFCDate("2022-08-17"),
+      paymentPeriod: "skating Cadillac",
     },
-    companyPercent: 5416.79,
-    departmentPercent: 5669.24,
-    effectiveDate: new RFCDate("2023-11-02"),
-    id: 810143,
-    individualPercent: 8398.95,
-    paymentPeriod: "East",
-    reason: "Southwest Lesotho",
-    variableType: "illum",
-  },
-  id: "<ID>",
-}, operationSecurity).then((res: PostPeopleIdVariableResponse) => {
+    id: "<ID>",
+  }, operationSecurity);
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -623,10 +615,11 @@ sdk.payroll.postPeopleIdVariable({
 
 ```typescript
 import { Hibob } from "hibob";
-import { PutPeopleIdEquitiesEntryIdResponse, PutPeopleIdEquitiesEntryIdSecurity } from "hibob/dist/sdk/models/operations";
+import { PutPeopleIdEquitiesEntryIdSecurity } from "hibob/dist/sdk/models/operations";
 import { RFCDate } from "hibob/dist/sdk/types";
 
-const sdk = new Hibob();
+(async() => {
+  const sdk = new Hibob();
 const operationSecurity: PutPeopleIdEquitiesEntryIdSecurity = {
   basic: {
     password: "",
@@ -634,34 +627,24 @@ const operationSecurity: PutPeopleIdEquitiesEntryIdSecurity = {
   },
 };
 
-sdk.payroll.putPeopleIdEquitiesEntryId({
-  equityEntry: {
-    consentNumber: "male collaboration system",
-    effectiveDate: new RFCDate("2023-11-20"),
-    equityType: "saepe",
-    exercisePrice: {
-      currency: "Bahraini Dinar",
-      value: 35.59,
+  const res = await sdk.payroll.putPeopleIdEquitiesEntryId({
+    equityEntry: {
+      effectiveDate: new RFCDate("2023-01-17"),
+      equityType: "laboriosam Beauty invoice",
+      exercisePrice: {
+        currency: "Danish Krone",
+        value: 5630.25,
+      },
+      quantity: 9054.61,
     },
-    grantDate: new RFCDate("2023-03-24"),
-    grantNumber: 3722.5,
-    grantStatus: "connect Southwest",
-    grantType: "Tandem syndicate",
-    id: 557003,
-    optionExpiration: new RFCDate("2022-07-24"),
-    quantity: 911.23,
-    reason: "Sleek accelerant",
-    vestingCommencementDate: new RFCDate("2023-05-26"),
-    vestingSchedule: 16.37,
-    vestingTerm: "application Wooden",
-  },
-  entryId: 751338,
-  id: "<ID>",
-}, operationSecurity).then((res: PutPeopleIdEquitiesEntryIdResponse) => {
+    entryId: 87209,
+    id: "<ID>",
+  }, operationSecurity);
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters

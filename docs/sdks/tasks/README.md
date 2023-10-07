@@ -16,19 +16,20 @@
 
 ```typescript
 import { Hibob } from "hibob";
-import { GetMyTasksResponse } from "hibob/dist/sdk/models/operations";
 
-const sdk = new Hibob({
-  security: {
-    bearer: "",
-  },
-});
+(async() => {
+  const sdk = new Hibob({
+    security: {
+      bearer: "",
+    },
+  });
 
-sdk.tasks.getMyTasks().then((res: GetMyTasksResponse) => {
+  const res = await sdk.tasks.getMyTasks();
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -51,19 +52,20 @@ sdk.tasks.getMyTasks().then((res: GetMyTasksResponse) => {
 
 ```typescript
 import { Hibob } from "hibob";
-import { GetTasksResponse } from "hibob/dist/sdk/models/operations";
 
-const sdk = new Hibob({
-  security: {
-    bearer: "",
-  },
-});
+(async() => {
+  const sdk = new Hibob({
+    security: {
+      bearer: "",
+    },
+  });
 
-sdk.tasks.getTasks().then((res: GetTasksResponse) => {
+  const res = await sdk.tasks.getTasks();
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -86,9 +88,10 @@ sdk.tasks.getTasks().then((res: GetTasksResponse) => {
 
 ```typescript
 import { Hibob } from "hibob";
-import { GetTasksPeopleIdResponse, GetTasksPeopleIdSecurity, GetTasksPeopleIdTaskStatus } from "hibob/dist/sdk/models/operations";
+import { GetTasksPeopleIdSecurity, GetTasksPeopleIdTaskStatus } from "hibob/dist/sdk/models/operations";
 
-const sdk = new Hibob();
+(async() => {
+  const sdk = new Hibob();
 const operationSecurity: GetTasksPeopleIdSecurity = {
   basic: {
     password: "",
@@ -96,14 +99,14 @@ const operationSecurity: GetTasksPeopleIdSecurity = {
   },
 };
 
-sdk.tasks.getTasksPeopleId({
-  id: "Representative Mazda given",
-  taskStatus: GetTasksPeopleIdTaskStatus.Closed,
-}, operationSecurity).then((res: GetTasksPeopleIdResponse) => {
+  const res = await sdk.tasks.getTasksPeopleId({
+    id: "Representative Mazda given",
+  }, operationSecurity);
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -128,9 +131,10 @@ sdk.tasks.getTasksPeopleId({
 
 ```typescript
 import { Hibob } from "hibob";
-import { PostTasksTaskIdCompleteResponse, PostTasksTaskIdCompleteSecurity } from "hibob/dist/sdk/models/operations";
+import { PostTasksTaskIdCompleteSecurity } from "hibob/dist/sdk/models/operations";
 
-const sdk = new Hibob();
+(async() => {
+  const sdk = new Hibob();
 const operationSecurity: PostTasksTaskIdCompleteSecurity = {
   basic: {
     password: "",
@@ -138,13 +142,14 @@ const operationSecurity: PostTasksTaskIdCompleteSecurity = {
   },
 };
 
-sdk.tasks.postTasksTaskIdComplete({
-  taskId: "Hybrid",
-}, operationSecurity).then((res: PostTasksTaskIdCompleteResponse) => {
+  const res = await sdk.tasks.postTasksTaskIdComplete({
+    taskId: "Hybrid",
+  }, operationSecurity);
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters

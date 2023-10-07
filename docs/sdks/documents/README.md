@@ -19,12 +19,10 @@
 
 ```typescript
 import { Hibob } from "hibob";
-import {
-  DeleteDocsPeopleIdConfidentialDocIdResponse,
-  DeleteDocsPeopleIdConfidentialDocIdSecurity,
-} from "hibob/dist/sdk/models/operations";
+import { DeleteDocsPeopleIdConfidentialDocIdSecurity } from "hibob/dist/sdk/models/operations";
 
-const sdk = new Hibob();
+(async() => {
+  const sdk = new Hibob();
 const operationSecurity: DeleteDocsPeopleIdConfidentialDocIdSecurity = {
   basic: {
     password: "",
@@ -32,14 +30,15 @@ const operationSecurity: DeleteDocsPeopleIdConfidentialDocIdSecurity = {
   },
 };
 
-sdk.documents.deleteDocsPeopleIdConfidentialDocId({
-  docId: "vast overjoyed",
-  id: "<ID>",
-}, operationSecurity).then((res: DeleteDocsPeopleIdConfidentialDocIdResponse) => {
+  const res = await sdk.documents.deleteDocsPeopleIdConfidentialDocId({
+    docId: "vast overjoyed",
+    id: "<ID>",
+  }, operationSecurity);
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -64,9 +63,10 @@ sdk.documents.deleteDocsPeopleIdConfidentialDocId({
 
 ```typescript
 import { Hibob } from "hibob";
-import { DeleteDocsPeopleIdSharedDocIdResponse, DeleteDocsPeopleIdSharedDocIdSecurity } from "hibob/dist/sdk/models/operations";
+import { DeleteDocsPeopleIdSharedDocIdSecurity } from "hibob/dist/sdk/models/operations";
 
-const sdk = new Hibob();
+(async() => {
+  const sdk = new Hibob();
 const operationSecurity: DeleteDocsPeopleIdSharedDocIdSecurity = {
   basic: {
     password: "",
@@ -74,14 +74,15 @@ const operationSecurity: DeleteDocsPeopleIdSharedDocIdSecurity = {
   },
 };
 
-sdk.documents.deleteDocsPeopleIdSharedDocId({
-  docId: "table pariatur Electric",
-  id: "<ID>",
-}, operationSecurity).then((res: DeleteDocsPeopleIdSharedDocIdResponse) => {
+  const res = await sdk.documents.deleteDocsPeopleIdSharedDocId({
+    docId: "table pariatur Electric",
+    id: "<ID>",
+  }, operationSecurity);
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -106,21 +107,22 @@ Returns a list of documents and download links.<br /><b>Supported user types:</b
 
 ```typescript
 import { Hibob } from "hibob";
-import { GetDocsPeopleIdResponse } from "hibob/dist/sdk/models/operations";
 
-const sdk = new Hibob({
-  security: {
-    bearer: "",
-  },
-});
+(async() => {
+  const sdk = new Hibob({
+    security: {
+      bearer: "",
+    },
+  });
 
-sdk.documents.getDocsPeopleId({
-  id: "<ID>",
-}).then((res: GetDocsPeopleIdResponse) => {
+  const res = await sdk.documents.getDocsPeopleId({
+    id: "<ID>",
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -144,28 +146,27 @@ sdk.documents.getDocsPeopleId({
 
 ```typescript
 import { Hibob } from "hibob";
-import { PostDocsPeopleIdConfidentialResponse } from "hibob/dist/sdk/models/operations";
 
-const sdk = new Hibob({
-  security: {
-    bearer: "",
-  },
-});
+(async() => {
+  const sdk = new Hibob({
+    security: {
+      bearer: "",
+    },
+  });
 
-sdk.documents.postDocsPeopleIdConfidential({
-  addDocument: {
-    documentName: "Salad impactful RAM",
-    documentUrl: "Sedan online array",
-    tags: [
-      "convergence",
-    ],
-  },
-  id: "<ID>",
-}).then((res: PostDocsPeopleIdConfidentialResponse) => {
+  const res = await sdk.documents.postDocsPeopleIdConfidential({
+    addDocument: {
+      tags: [
+        "Coupe",
+      ],
+    },
+    id: "<ID>",
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -189,27 +190,28 @@ sdk.documents.postDocsPeopleIdConfidential({
 
 ```typescript
 import { Hibob } from "hibob";
-import { PostDocsPeopleIdConfidentialUploadResponse } from "hibob/dist/sdk/models/operations";
 
-const sdk = new Hibob({
-  security: {
-    bearer: "",
-  },
-});
-
-sdk.documents.postDocsPeopleIdConfidentialUpload({
-  requestBody: {
-    file: {
-      content: "agqJ9wS3O#" as bytes <<<>>>,
-      file: "Compatible Shoes",
+(async() => {
+  const sdk = new Hibob({
+    security: {
+      bearer: "",
     },
-  },
-  id: "<ID>",
-}).then((res: PostDocsPeopleIdConfidentialUploadResponse) => {
+  });
+
+  const res = await sdk.documents.postDocsPeopleIdConfidentialUpload({
+    requestBody: {
+      file: {
+        content: "agqJ9wS3O#" as bytes <<<>>>,
+        file: "Compatible Shoes",
+      },
+    },
+    id: "<ID>",
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -233,28 +235,27 @@ sdk.documents.postDocsPeopleIdConfidentialUpload({
 
 ```typescript
 import { Hibob } from "hibob";
-import { PostDocsPeopleIdSharedResponse } from "hibob/dist/sdk/models/operations";
 
-const sdk = new Hibob({
-  security: {
-    bearer: "",
-  },
-});
+(async() => {
+  const sdk = new Hibob({
+    security: {
+      bearer: "",
+    },
+  });
 
-sdk.documents.postDocsPeopleIdShared({
-  addDocument: {
-    documentName: "Frozen",
-    documentUrl: "West",
-    tags: [
-      "blue",
-    ],
-  },
-  id: "<ID>",
-}).then((res: PostDocsPeopleIdSharedResponse) => {
+  const res = await sdk.documents.postDocsPeopleIdShared({
+    addDocument: {
+      tags: [
+        "Greeley",
+      ],
+    },
+    id: "<ID>",
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -278,27 +279,28 @@ sdk.documents.postDocsPeopleIdShared({
 
 ```typescript
 import { Hibob } from "hibob";
-import { PostDocsPeopleIdSharedUploadResponse } from "hibob/dist/sdk/models/operations";
 
-const sdk = new Hibob({
-  security: {
-    bearer: "",
-  },
-});
-
-sdk.documents.postDocsPeopleIdSharedUpload({
-  requestBody: {
-    file: {
-      content: "fWz`=9n{(!" as bytes <<<>>>,
-      file: "roughly Minnesota",
+(async() => {
+  const sdk = new Hibob({
+    security: {
+      bearer: "",
     },
-  },
-  id: "<ID>",
-}).then((res: PostDocsPeopleIdSharedUploadResponse) => {
+  });
+
+  const res = await sdk.documents.postDocsPeopleIdSharedUpload({
+    requestBody: {
+      file: {
+        content: "fWz`=9n{(!" as bytes <<<>>>,
+        file: "roughly Minnesota",
+      },
+    },
+    id: "<ID>",
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters

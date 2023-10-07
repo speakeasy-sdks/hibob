@@ -16,9 +16,10 @@ Returns a list of all the defined company reports. The data is filtered based on
 
 ```typescript
 import { Hibob } from "hibob";
-import { GetCompanyReportsResponse, GetCompanyReportsSecurity } from "hibob/dist/sdk/models/operations";
+import { GetCompanyReportsSecurity } from "hibob/dist/sdk/models/operations";
 
-const sdk = new Hibob();
+(async() => {
+  const sdk = new Hibob();
 const operationSecurity: GetCompanyReportsSecurity = {
   basic: {
     password: "",
@@ -26,11 +27,12 @@ const operationSecurity: GetCompanyReportsSecurity = {
   },
 };
 
-sdk.reports.getCompanyReports(operationSecurity).then((res: GetCompanyReportsResponse) => {
+  const res = await sdk.reports.getCompanyReports(operationSecurity);
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -54,12 +56,10 @@ Returns the report data file when it is ready. If the file is not ready yet the 
 
 ```typescript
 import { Hibob } from "hibob";
-import {
-  GetCompanyReportsDownloadReportNameResponse,
-  GetCompanyReportsDownloadReportNameSecurity,
-} from "hibob/dist/sdk/models/operations";
+import { GetCompanyReportsDownloadReportNameSecurity } from "hibob/dist/sdk/models/operations";
 
-const sdk = new Hibob();
+(async() => {
+  const sdk = new Hibob();
 const operationSecurity: GetCompanyReportsDownloadReportNameSecurity = {
   basic: {
     password: "",
@@ -67,13 +67,14 @@ const operationSecurity: GetCompanyReportsDownloadReportNameSecurity = {
   },
 };
 
-sdk.reports.getCompanyReportsDownloadReportName({
-  reportName: "worth mobile gold",
-}, operationSecurity).then((res: GetCompanyReportsDownloadReportNameResponse) => {
+  const res = await sdk.reports.getCompanyReportsDownloadReportName({
+    reportName: "worth mobile gold",
+  }, operationSecurity);
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -100,11 +101,11 @@ Returns a report data file in the specified format.<br /><b>Supported user types
 import { Hibob } from "hibob";
 import {
   GetCompanyReportsReportIdDownloadFormat,
-  GetCompanyReportsReportIdDownloadResponse,
   GetCompanyReportsReportIdDownloadSecurity,
 } from "hibob/dist/sdk/models/operations";
 
-const sdk = new Hibob();
+(async() => {
+  const sdk = new Hibob();
 const operationSecurity: GetCompanyReportsReportIdDownloadSecurity = {
   basic: {
     password: "",
@@ -112,16 +113,15 @@ const operationSecurity: GetCompanyReportsReportIdDownloadSecurity = {
   },
 };
 
-sdk.reports.getCompanyReportsReportIdDownload({
-  format: GetCompanyReportsReportIdDownloadFormat.Xlsx,
-  includeInfo: false,
-  locale: "connect complexity",
-  reportId: 872.02,
-}, operationSecurity).then((res: GetCompanyReportsReportIdDownloadResponse) => {
+  const res = await sdk.reports.getCompanyReportsReportIdDownload({
+    format: GetCompanyReportsReportIdDownloadFormat.Xlsx,
+    reportId: 3566.85,
+  }, operationSecurity);
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -148,11 +148,11 @@ Returns the polling URL report file of the specified format under "Location" in 
 import { Hibob } from "hibob";
 import {
   GetCompanyReportsReportIdDownloadAsyncFormat,
-  GetCompanyReportsReportIdDownloadAsyncResponse,
   GetCompanyReportsReportIdDownloadAsyncSecurity,
 } from "hibob/dist/sdk/models/operations";
 
-const sdk = new Hibob();
+(async() => {
+  const sdk = new Hibob();
 const operationSecurity: GetCompanyReportsReportIdDownloadAsyncSecurity = {
   basic: {
     password: "",
@@ -160,16 +160,15 @@ const operationSecurity: GetCompanyReportsReportIdDownloadAsyncSecurity = {
   },
 };
 
-sdk.reports.getCompanyReportsReportIdDownloadAsync({
-  format: GetCompanyReportsReportIdDownloadAsyncFormat.Xlsx,
-  includeInfo: false,
-  locale: "Radon Beach Account",
-  reportId: 3239.89,
-}, operationSecurity).then((res: GetCompanyReportsReportIdDownloadAsyncResponse) => {
+  const res = await sdk.reports.getCompanyReportsReportIdDownloadAsync({
+    format: GetCompanyReportsReportIdDownloadAsyncFormat.Xlsx,
+    reportId: 7232.99,
+  }, operationSecurity);
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters

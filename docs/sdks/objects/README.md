@@ -13,33 +13,34 @@ Returns a list of the company positions, filtered by the specified attributes.  
 
 ```typescript
 import { Hibob } from "hibob";
-import { PostObjectsPositionSearchResponse, PostObjectsPositionSearchSecurity } from "hibob/dist/sdk/models/operations";
+import { PostObjectsPositionSearchSecurity } from "hibob/dist/sdk/models/operations";
 
-const sdk = new Hibob();
+(async() => {
+  const sdk = new Hibob();
 const operationSecurity: PostObjectsPositionSearchSecurity = {
   password: "",
   username: "",
 };
 
-sdk.objects.postObjectsPositionSearch({
-  fields: [
-    "Connecticut",
-  ],
-  filters: [
-    {
-      fieldId: "productivity",
-      operator: "East Northwest deposit",
-      values: [
-        "Diesel",
-      ],
-    },
-  ],
-  includeHumanReadable: false,
-}, operationSecurity).then((res: PostObjectsPositionSearchResponse) => {
+  const res = await sdk.objects.postObjectsPositionSearch({
+    fields: [
+      "Connecticut",
+    ],
+    filters: [
+      {
+        fieldId: "productivity",
+        operator: "East Northwest deposit",
+        values: [
+          "Diesel",
+        ],
+      },
+    ],
+  }, operationSecurity);
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters

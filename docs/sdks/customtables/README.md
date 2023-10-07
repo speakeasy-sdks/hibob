@@ -16,12 +16,10 @@
 
 ```typescript
 import { Hibob } from "hibob";
-import {
-  DeletePeopleCustomTablesEmployeeIdCustomTableIdEntryIdResponse,
-  DeletePeopleCustomTablesEmployeeIdCustomTableIdEntryIdSecurity,
-} from "hibob/dist/sdk/models/operations";
+import { DeletePeopleCustomTablesEmployeeIdCustomTableIdEntryIdSecurity } from "hibob/dist/sdk/models/operations";
 
-const sdk = new Hibob();
+(async() => {
+  const sdk = new Hibob();
 const operationSecurity: DeletePeopleCustomTablesEmployeeIdCustomTableIdEntryIdSecurity = {
   basic: {
     password: "",
@@ -29,15 +27,16 @@ const operationSecurity: DeletePeopleCustomTablesEmployeeIdCustomTableIdEntryIdS
   },
 };
 
-sdk.customTables.deletePeopleCustomTablesEmployeeIdCustomTableIdEntryId({
-  customTableId: "morph blah",
-  employeeId: "Functionality coulomb",
-  entryId: "blue",
-}, operationSecurity).then((res: DeletePeopleCustomTablesEmployeeIdCustomTableIdEntryIdResponse) => {
+  const res = await sdk.customTables.deletePeopleCustomTablesEmployeeIdCustomTableIdEntryId({
+    customTableId: "morph blah",
+    employeeId: "Functionality coulomb",
+    entryId: "blue",
+  }, operationSecurity);
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -62,12 +61,10 @@ sdk.customTables.deletePeopleCustomTablesEmployeeIdCustomTableIdEntryId({
 
 ```typescript
 import { Hibob } from "hibob";
-import {
-  GetPeopleCustomTablesEmployeeIdCustomTableIdResponse,
-  GetPeopleCustomTablesEmployeeIdCustomTableIdSecurity,
-} from "hibob/dist/sdk/models/operations";
+import { GetPeopleCustomTablesEmployeeIdCustomTableIdSecurity } from "hibob/dist/sdk/models/operations";
 
-const sdk = new Hibob();
+(async() => {
+  const sdk = new Hibob();
 const operationSecurity: GetPeopleCustomTablesEmployeeIdCustomTableIdSecurity = {
   basic: {
     password: "",
@@ -75,15 +72,15 @@ const operationSecurity: GetPeopleCustomTablesEmployeeIdCustomTableIdSecurity = 
   },
 };
 
-sdk.customTables.getPeopleCustomTablesEmployeeIdCustomTableId({
-  customTableId: "Sleek deposit",
-  employeeId: "FTP white payment",
-  includeHumanReadable: false,
-}, operationSecurity).then((res: GetPeopleCustomTablesEmployeeIdCustomTableIdResponse) => {
+  const res = await sdk.customTables.getPeopleCustomTablesEmployeeIdCustomTableId({
+    customTableId: "Sleek deposit",
+    employeeId: "FTP white payment",
+  }, operationSecurity);
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -108,12 +105,10 @@ sdk.customTables.getPeopleCustomTablesEmployeeIdCustomTableId({
 
 ```typescript
 import { Hibob } from "hibob";
-import {
-  PostPeopleCustomTablesEmployeeIdCustomTableIdResponse,
-  PostPeopleCustomTablesEmployeeIdCustomTableIdSecurity,
-} from "hibob/dist/sdk/models/operations";
+import { PostPeopleCustomTablesEmployeeIdCustomTableIdSecurity } from "hibob/dist/sdk/models/operations";
 
-const sdk = new Hibob();
+(async() => {
+  const sdk = new Hibob();
 const operationSecurity: PostPeopleCustomTablesEmployeeIdCustomTableIdSecurity = {
   basic: {
     password: "",
@@ -121,17 +116,16 @@ const operationSecurity: PostPeopleCustomTablesEmployeeIdCustomTableIdSecurity =
   },
 };
 
-sdk.customTables.postPeopleCustomTablesEmployeeIdCustomTableId({
-  requestBody: {
-    rawBody: "drive Transexual Soul",
-  },
-  customTableId: "female incubate Iron",
-  employeeId: "Metal Passenger primary",
-}, operationSecurity).then((res: PostPeopleCustomTablesEmployeeIdCustomTableIdResponse) => {
+  const res = await sdk.customTables.postPeopleCustomTablesEmployeeIdCustomTableId({
+    requestBody: {},
+    customTableId: "drive Transexual Soul",
+    employeeId: "female incubate Iron",
+  }, operationSecurity);
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -156,12 +150,10 @@ sdk.customTables.postPeopleCustomTablesEmployeeIdCustomTableId({
 
 ```typescript
 import { Hibob } from "hibob";
-import {
-  PutPeopleCustomTablesEmployeeIdCustomTableIdEntryIdResponse,
-  PutPeopleCustomTablesEmployeeIdCustomTableIdEntryIdSecurity,
-} from "hibob/dist/sdk/models/operations";
+import { PutPeopleCustomTablesEmployeeIdCustomTableIdEntryIdSecurity } from "hibob/dist/sdk/models/operations";
 
-const sdk = new Hibob();
+(async() => {
+  const sdk = new Hibob();
 const operationSecurity: PutPeopleCustomTablesEmployeeIdCustomTableIdEntryIdSecurity = {
   basic: {
     password: "",
@@ -169,18 +161,17 @@ const operationSecurity: PutPeopleCustomTablesEmployeeIdCustomTableIdEntryIdSecu
   },
 };
 
-sdk.customTables.putPeopleCustomTablesEmployeeIdCustomTableIdEntryId({
-  requestBody: {
-    rawBody: "female",
-  },
-  customTableId: "Androgyne Guarani Pickup",
-  employeeId: "Mazda invoice paradigms",
-  entryId: "repeatedly Director",
-}, operationSecurity).then((res: PutPeopleCustomTablesEmployeeIdCustomTableIdEntryIdResponse) => {
+  const res = await sdk.customTables.putPeopleCustomTablesEmployeeIdCustomTableIdEntryId({
+    requestBody: {},
+    customTableId: "female",
+    employeeId: "Androgyne Guarani Pickup",
+    entryId: "Mazda invoice paradigms",
+  }, operationSecurity);
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters

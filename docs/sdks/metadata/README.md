@@ -24,12 +24,10 @@
 
 ```typescript
 import { Hibob } from "hibob";
-import {
-  DeleteCompanyNamedListsListNameItemIdResponse,
-  DeleteCompanyNamedListsListNameItemIdSecurity,
-} from "hibob/dist/sdk/models/operations";
+import { DeleteCompanyNamedListsListNameItemIdSecurity } from "hibob/dist/sdk/models/operations";
 
-const sdk = new Hibob();
+(async() => {
+  const sdk = new Hibob();
 const operationSecurity: DeleteCompanyNamedListsListNameItemIdSecurity = {
   basic: {
     password: "",
@@ -37,14 +35,15 @@ const operationSecurity: DeleteCompanyNamedListsListNameItemIdSecurity = {
   },
 };
 
-sdk.metadata.deleteCompanyNamedListsListNameItemId({
-  itemId: "nicely",
-  listName: "Barbados crouch invoice",
-}, operationSecurity).then((res: DeleteCompanyNamedListsListNameItemIdResponse) => {
+  const res = await sdk.metadata.deleteCompanyNamedListsListNameItemId({
+    itemId: "nicely",
+    listName: "Barbados crouch invoice",
+  }, operationSecurity);
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -69,12 +68,10 @@ sdk.metadata.deleteCompanyNamedListsListNameItemId({
 
 ```typescript
 import { Hibob } from "hibob";
-import {
-  DeleteCompanyPeopleFieldsFieldIdResponse,
-  DeleteCompanyPeopleFieldsFieldIdSecurity,
-} from "hibob/dist/sdk/models/operations";
+import { DeleteCompanyPeopleFieldsFieldIdSecurity } from "hibob/dist/sdk/models/operations";
 
-const sdk = new Hibob();
+(async() => {
+  const sdk = new Hibob();
 const operationSecurity: DeleteCompanyPeopleFieldsFieldIdSecurity = {
   basic: {
     password: "",
@@ -82,13 +79,14 @@ const operationSecurity: DeleteCompanyPeopleFieldsFieldIdSecurity = {
   },
 };
 
-sdk.metadata.deleteCompanyPeopleFieldsFieldId({
-  fieldId: "female",
-}, operationSecurity).then((res: DeleteCompanyPeopleFieldsFieldIdResponse) => {
+  const res = await sdk.metadata.deleteCompanyPeopleFieldsFieldId({
+    fieldId: "female",
+  }, operationSecurity);
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -113,9 +111,10 @@ sdk.metadata.deleteCompanyPeopleFieldsFieldId({
 
 ```typescript
 import { Hibob } from "hibob";
-import { GetCompanyNamedListsResponse, GetCompanyNamedListsSecurity } from "hibob/dist/sdk/models/operations";
+import { GetCompanyNamedListsSecurity } from "hibob/dist/sdk/models/operations";
 
-const sdk = new Hibob();
+(async() => {
+  const sdk = new Hibob();
 const operationSecurity: GetCompanyNamedListsSecurity = {
   basic: {
     password: "",
@@ -123,13 +122,12 @@ const operationSecurity: GetCompanyNamedListsSecurity = {
   },
 };
 
-sdk.metadata.getCompanyNamedLists({
-  includeArchived: false,
-}, operationSecurity).then((res: GetCompanyNamedListsResponse) => {
+  const res = await sdk.metadata.getCompanyNamedLists({}, operationSecurity);
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -154,9 +152,10 @@ sdk.metadata.getCompanyNamedLists({
 
 ```typescript
 import { Hibob } from "hibob";
-import { GetCompanyNamedListsListNameResponse, GetCompanyNamedListsListNameSecurity } from "hibob/dist/sdk/models/operations";
+import { GetCompanyNamedListsListNameSecurity } from "hibob/dist/sdk/models/operations";
 
-const sdk = new Hibob();
+(async() => {
+  const sdk = new Hibob();
 const operationSecurity: GetCompanyNamedListsListNameSecurity = {
   basic: {
     password: "",
@@ -164,14 +163,14 @@ const operationSecurity: GetCompanyNamedListsListNameSecurity = {
   },
 };
 
-sdk.metadata.getCompanyNamedListsListName({
-  includeArchived: false,
-  listName: "EXE",
-}, operationSecurity).then((res: GetCompanyNamedListsListNameResponse) => {
+  const res = await sdk.metadata.getCompanyNamedListsListName({
+    listName: "EXE",
+  }, operationSecurity);
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -196,9 +195,10 @@ sdk.metadata.getCompanyNamedListsListName({
 
 ```typescript
 import { Hibob } from "hibob";
-import { GetCompanyPeopleFieldsResponse, GetCompanyPeopleFieldsSecurity } from "hibob/dist/sdk/models/operations";
+import { GetCompanyPeopleFieldsSecurity } from "hibob/dist/sdk/models/operations";
 
-const sdk = new Hibob();
+(async() => {
+  const sdk = new Hibob();
 const operationSecurity: GetCompanyPeopleFieldsSecurity = {
   basic: {
     password: "",
@@ -206,11 +206,12 @@ const operationSecurity: GetCompanyPeopleFieldsSecurity = {
   },
 };
 
-sdk.metadata.getCompanyPeopleFields(operationSecurity).then((res: GetCompanyPeopleFieldsResponse) => {
+  const res = await sdk.metadata.getCompanyPeopleFields(operationSecurity);
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -234,19 +235,21 @@ Returns a list of all fields of object type position.<br/><b>Supported user type
 
 ```typescript
 import { Hibob } from "hibob";
-import { GetMetadataObjectsPositionResponse, GetMetadataObjectsPositionSecurity } from "hibob/dist/sdk/models/operations";
+import { GetMetadataObjectsPositionSecurity } from "hibob/dist/sdk/models/operations";
 
-const sdk = new Hibob();
+(async() => {
+  const sdk = new Hibob();
 const operationSecurity: GetMetadataObjectsPositionSecurity = {
   password: "",
   username: "",
 };
 
-sdk.metadata.getMetadataObjectsPosition(operationSecurity).then((res: GetMetadataObjectsPositionResponse) => {
+  const res = await sdk.metadata.getMetadataObjectsPosition(operationSecurity);
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -270,9 +273,10 @@ sdk.metadata.getMetadataObjectsPosition(operationSecurity).then((res: GetMetadat
 
 ```typescript
 import { Hibob } from "hibob";
-import { GetPeopleCustomTablesMetadataResponse, GetPeopleCustomTablesMetadataSecurity } from "hibob/dist/sdk/models/operations";
+import { GetPeopleCustomTablesMetadataSecurity } from "hibob/dist/sdk/models/operations";
 
-const sdk = new Hibob();
+(async() => {
+  const sdk = new Hibob();
 const operationSecurity: GetPeopleCustomTablesMetadataSecurity = {
   basic: {
     password: "",
@@ -280,11 +284,12 @@ const operationSecurity: GetPeopleCustomTablesMetadataSecurity = {
   },
 };
 
-sdk.metadata.getPeopleCustomTablesMetadata(operationSecurity).then((res: GetPeopleCustomTablesMetadataResponse) => {
+  const res = await sdk.metadata.getPeopleCustomTablesMetadata(operationSecurity);
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -308,12 +313,10 @@ sdk.metadata.getPeopleCustomTablesMetadata(operationSecurity).then((res: GetPeop
 
 ```typescript
 import { Hibob } from "hibob";
-import {
-  GetPeopleCustomTablesMetadataCustomTableIdResponse,
-  GetPeopleCustomTablesMetadataCustomTableIdSecurity,
-} from "hibob/dist/sdk/models/operations";
+import { GetPeopleCustomTablesMetadataCustomTableIdSecurity } from "hibob/dist/sdk/models/operations";
 
-const sdk = new Hibob();
+(async() => {
+  const sdk = new Hibob();
 const operationSecurity: GetPeopleCustomTablesMetadataCustomTableIdSecurity = {
   basic: {
     password: "",
@@ -321,13 +324,14 @@ const operationSecurity: GetPeopleCustomTablesMetadataCustomTableIdSecurity = {
   },
 };
 
-sdk.metadata.getPeopleCustomTablesMetadataCustomTableId({
-  customTableId: "zowie Latin",
-}, operationSecurity).then((res: GetPeopleCustomTablesMetadataCustomTableIdResponse) => {
+  const res = await sdk.metadata.getPeopleCustomTablesMetadataCustomTableId({
+    customTableId: "zowie Latin",
+  }, operationSecurity);
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -352,9 +356,10 @@ sdk.metadata.getPeopleCustomTablesMetadataCustomTableId({
 
 ```typescript
 import { Hibob } from "hibob";
-import { PostCompanyNamedListsListNameResponse, PostCompanyNamedListsListNameSecurity } from "hibob/dist/sdk/models/operations";
+import { PostCompanyNamedListsListNameSecurity } from "hibob/dist/sdk/models/operations";
 
-const sdk = new Hibob();
+(async() => {
+  const sdk = new Hibob();
 const operationSecurity: PostCompanyNamedListsListNameSecurity = {
   basic: {
     password: "",
@@ -362,17 +367,17 @@ const operationSecurity: PostCompanyNamedListsListNameSecurity = {
   },
 };
 
-sdk.metadata.postCompanyNamedListsListName({
-  newListItem: {
-    name: "Electric Forint henry",
-    parentId: 88692,
-  },
-  listName: "directional National Classical",
-}, operationSecurity).then((res: PostCompanyNamedListsListNameResponse) => {
+  const res = await sdk.metadata.postCompanyNamedListsListName({
+    newListItem: {
+      name: "Electric Forint henry",
+    },
+    listName: "fossilize",
+  }, operationSecurity);
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -397,9 +402,10 @@ sdk.metadata.postCompanyNamedListsListName({
 
 ```typescript
 import { Hibob } from "hibob";
-import { PostCompanyPeopleFieldsResponse, PostCompanyPeopleFieldsSecurity } from "hibob/dist/sdk/models/operations";
+import { PostCompanyPeopleFieldsSecurity } from "hibob/dist/sdk/models/operations";
 
-const sdk = new Hibob();
+(async() => {
+  const sdk = new Hibob();
 const operationSecurity: PostCompanyPeopleFieldsSecurity = {
   basic: {
     password: "",
@@ -407,17 +413,16 @@ const operationSecurity: PostCompanyPeopleFieldsSecurity = {
   },
 };
 
-sdk.metadata.postCompanyPeopleFields({
-  category: "female Avon aboard",
-  description: "Monitored user-facing data-warehouse",
-  historical: "Mini Southwest aperiam",
-  name: "Convertible Research",
-  type: "Health Mini Bangladesh",
-}, operationSecurity).then((res: PostCompanyPeopleFieldsResponse) => {
+  const res = await sdk.metadata.postCompanyPeopleFields({
+    category: "female Avon aboard",
+    name: "ew gold",
+    type: "Southwest aperiam TLS",
+  }, operationSecurity);
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -442,12 +447,10 @@ sdk.metadata.postCompanyPeopleFields({
 
 ```typescript
 import { Hibob } from "hibob";
-import {
-  PutCompanyNamedListsListNameItemIdResponse,
-  PutCompanyNamedListsListNameItemIdSecurity,
-} from "hibob/dist/sdk/models/operations";
+import { PutCompanyNamedListsListNameItemIdSecurity } from "hibob/dist/sdk/models/operations";
 
-const sdk = new Hibob();
+(async() => {
+  const sdk = new Hibob();
 const operationSecurity: PutCompanyNamedListsListNameItemIdSecurity = {
   basic: {
     password: "",
@@ -455,18 +458,16 @@ const operationSecurity: PutCompanyNamedListsListNameItemIdSecurity = {
   },
 };
 
-sdk.metadata.putCompanyNamedListsListNameItemId({
-  updateListItemRequest: {
-    name: "Rupee Books withdrawal",
-    parentId: 679237,
-  },
-  itemId: "watchful Electronic",
-  listName: "copying Keyboard Antimony",
-}, operationSecurity).then((res: PutCompanyNamedListsListNameItemIdResponse) => {
+  const res = await sdk.metadata.putCompanyNamedListsListNameItemId({
+    updateListItemRequest: {},
+    itemId: "Rupee Books withdrawal",
+    listName: "strategy divan Alaska",
+  }, operationSecurity);
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -491,9 +492,10 @@ sdk.metadata.putCompanyNamedListsListNameItemId({
 
 ```typescript
 import { Hibob } from "hibob";
-import { PutCompanyPeopleFieldsFieldIdResponse, PutCompanyPeopleFieldsFieldIdSecurity } from "hibob/dist/sdk/models/operations";
+import { PutCompanyPeopleFieldsFieldIdSecurity } from "hibob/dist/sdk/models/operations";
 
-const sdk = new Hibob();
+(async() => {
+  const sdk = new Hibob();
 const operationSecurity: PutCompanyPeopleFieldsFieldIdSecurity = {
   basic: {
     password: "",
@@ -501,17 +503,15 @@ const operationSecurity: PutCompanyPeopleFieldsFieldIdSecurity = {
   },
 };
 
-sdk.metadata.putCompanyPeopleFieldsFieldId({
-  updateFieldRequest: {
-    description: "User-centric uniform product",
-    name: "impactful Malagasy circuit",
-  },
-  fieldId: "HTTP Idaho",
-}, operationSecurity).then((res: PutCompanyPeopleFieldsFieldIdResponse) => {
+  const res = await sdk.metadata.putCompanyPeopleFieldsFieldId({
+    updateFieldRequest: {},
+    fieldId: "whenever Honda navigating",
+  }, operationSecurity);
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters

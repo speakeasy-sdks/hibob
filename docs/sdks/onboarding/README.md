@@ -13,19 +13,20 @@ Wizard info includes Wizard ID, name and description.<br /><b>Supported user typ
 
 ```typescript
 import { Hibob } from "hibob";
-import { GetOnboardingWizardsResponse } from "hibob/dist/sdk/models/operations";
 
-const sdk = new Hibob({
-  security: {
-    bearer: "",
-  },
-});
+(async() => {
+  const sdk = new Hibob({
+    security: {
+      bearer: "",
+    },
+  });
 
-sdk.onboarding.getOnboardingWizards().then((res: GetOnboardingWizardsResponse) => {
+  const res = await sdk.onboarding.getOnboardingWizards();
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
