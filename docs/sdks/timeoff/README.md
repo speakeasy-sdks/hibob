@@ -83,7 +83,7 @@ const operationSecurity: GetTimeoffEmployeesIdBalanceSecurity = {
   const res = await sdk.timeOff.getTimeoffEmployeesIdBalance({
     date: new RFCDate("2021-02-20"),
     id: "<ID>",
-    policyType: "Jazz BMW stiff",
+    policyType: "string",
   }, operationSecurity);
 
   if (res.statusCode == 200) {
@@ -210,7 +210,7 @@ const operationSecurity: GetTimeoffPoliciesSecurity = {
 };
 
   const res = await sdk.timeOff.getTimeoffPolicies({
-    policyName: "methodology moderator Southeast",
+    policyName: "string",
   }, operationSecurity);
 
   if (res.statusCode == 200) {
@@ -251,7 +251,7 @@ const operationSecurity: GetTimeoffPoliciesNamesSecurity = {
 };
 
   const res = await sdk.timeOff.getTimeoffPoliciesNames({
-    policyTypeName: "Pataca",
+    policyTypeName: "string",
   }, operationSecurity);
 
   if (res.statusCode == 200) {
@@ -330,7 +330,7 @@ const operationSecurity: GetTimeoffPolicyTypesPolicyTypeSecurity = {
 };
 
   const res = await sdk.timeOff.getTimeoffPolicyTypesPolicyType({
-    policyType: "Bacon",
+    policyType: "string",
   }, operationSecurity);
 
   if (res.statusCode == 200) {
@@ -371,7 +371,7 @@ const operationSecurity: GetTimeoffPolicyTypesPolicyTypeReasonCodesSecurity = {
 };
 
   const res = await sdk.timeOff.getTimeoffPolicyTypesPolicyTypeReasonCodes({
-    policyType: "fiercely Chicken Automotive",
+    policyType: "string",
   }, operationSecurity);
 
   if (res.statusCode == 200) {
@@ -555,8 +555,8 @@ const operationSecurity: PostTimeoffEmployeesIdRequestsSecurity = {
 
   const res = await sdk.timeOff.postTimeoffEmployeesIdRequests({
     submitTimeoffRequest: {
-      policyType: "Bacon",
-      startDate: new RFCDate("2021-01-15"),
+      policyType: "string",
+      startDate: new RFCDate("2021-04-15"),
     },
     id: "<ID>",
   }, operationSecurity);
@@ -601,10 +601,10 @@ const operationSecurity: PostTimeoffPolicyTypesPolicyTypeReasonCodesSecurity = {
   const res = await sdk.timeOff.postTimeoffPolicyTypesPolicyTypeReasonCodes({
     reasonCodesNames: {
       reasonCodes: [
-        "Ergonomic",
+        "string",
       ],
     },
-    policyType: "fatally",
+    policyType: "string",
   }, operationSecurity);
 
   if (res.statusCode == 200) {

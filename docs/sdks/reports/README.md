@@ -68,7 +68,7 @@ const operationSecurity: GetCompanyReportsDownloadReportNameSecurity = {
 };
 
   const res = await sdk.reports.getCompanyReportsDownloadReportName({
-    reportName: "worth mobile gold",
+    reportName: "string",
   }, operationSecurity);
 
   if (res.statusCode == 200) {

@@ -28,7 +28,7 @@ const operationSecurity: PostAttendanceImportImportMethodSecurity = {
   const res = await sdk.attendance.postAttendanceImportImportMethod({
     importAttendanceData: {
       dateTimeFormat: "yyyy-MM-dd hh:mm a",
-      idType: "streamline schemas",
+      idType: "string",
       requests: [
         {
           clockIn: "2022-06-12T08:00",

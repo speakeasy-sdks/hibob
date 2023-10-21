@@ -24,14 +24,14 @@ const operationSecurity: PostObjectsPositionSearchSecurity = {
 
   const res = await sdk.objects.postObjectsPositionSearch({
     fields: [
-      "Connecticut",
+      "string",
     ],
     filters: [
       {
-        fieldId: "productivity",
-        operator: "East Northwest deposit",
+        fieldId: "string",
+        operator: "string",
         values: [
-          "Diesel",
+          "string",
         ],
       },
     ],

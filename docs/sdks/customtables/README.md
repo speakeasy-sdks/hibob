@@ -28,9 +28,9 @@ const operationSecurity: DeletePeopleCustomTablesEmployeeIdCustomTableIdEntryIdS
 };
 
   const res = await sdk.customTables.deletePeopleCustomTablesEmployeeIdCustomTableIdEntryId({
-    customTableId: "morph blah",
-    employeeId: "Functionality coulomb",
-    entryId: "blue",
+    customTableId: "string",
+    employeeId: "string",
+    entryId: "string",
   }, operationSecurity);
 
   if (res.statusCode == 200) {
@@ -73,8 +73,8 @@ const operationSecurity: GetPeopleCustomTablesEmployeeIdCustomTableIdSecurity = 
 };
 
   const res = await sdk.customTables.getPeopleCustomTablesEmployeeIdCustomTableId({
-    customTableId: "Sleek deposit",
-    employeeId: "FTP white payment",
+    customTableId: "string",
+    employeeId: "string",
   }, operationSecurity);
 
   if (res.statusCode == 200) {
@@ -118,8 +118,8 @@ const operationSecurity: PostPeopleCustomTablesEmployeeIdCustomTableIdSecurity =
 
   const res = await sdk.customTables.postPeopleCustomTablesEmployeeIdCustomTableId({
     requestBody: {},
-    customTableId: "drive Transexual Soul",
-    employeeId: "female incubate Iron",
+    customTableId: "string",
+    employeeId: "string",
   }, operationSecurity);
 
   if (res.statusCode == 200) {
@@ -163,9 +163,9 @@ const operationSecurity: PutPeopleCustomTablesEmployeeIdCustomTableIdEntryIdSecu
 
   const res = await sdk.customTables.putPeopleCustomTablesEmployeeIdCustomTableIdEntryId({
     requestBody: {},
-    customTableId: "female",
-    employeeId: "Androgyne Guarani Pickup",
-    entryId: "Mazda invoice paradigms",
+    customTableId: "string",
+    employeeId: "string",
+    entryId: "string",
   }, operationSecurity);
 
   if (res.statusCode == 200) {

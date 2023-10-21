@@ -36,8 +36,8 @@ const operationSecurity: DeleteCompanyNamedListsListNameItemIdSecurity = {
 };
 
   const res = await sdk.metadata.deleteCompanyNamedListsListNameItemId({
-    itemId: "nicely",
-    listName: "Barbados crouch invoice",
+    itemId: "string",
+    listName: "string",
   }, operationSecurity);
 
   if (res.statusCode == 200) {
@@ -80,7 +80,7 @@ const operationSecurity: DeleteCompanyPeopleFieldsFieldIdSecurity = {
 };
 
   const res = await sdk.metadata.deleteCompanyPeopleFieldsFieldId({
-    fieldId: "female",
+    fieldId: "string",
   }, operationSecurity);
 
   if (res.statusCode == 200) {
@@ -164,7 +164,7 @@ const operationSecurity: GetCompanyNamedListsListNameSecurity = {
 };
 
   const res = await sdk.metadata.getCompanyNamedListsListName({
-    listName: "EXE",
+    listName: "string",
   }, operationSecurity);
 
   if (res.statusCode == 200) {
@@ -325,7 +325,7 @@ const operationSecurity: GetPeopleCustomTablesMetadataCustomTableIdSecurity = {
 };
 
   const res = await sdk.metadata.getPeopleCustomTablesMetadataCustomTableId({
-    customTableId: "zowie Latin",
+    customTableId: "string",
   }, operationSecurity);
 
   if (res.statusCode == 200) {
@@ -369,9 +369,9 @@ const operationSecurity: PostCompanyNamedListsListNameSecurity = {
 
   const res = await sdk.metadata.postCompanyNamedListsListName({
     newListItem: {
-      name: "Electric Forint henry",
+      name: "string",
     },
-    listName: "fossilize",
+    listName: "string",
   }, operationSecurity);
 
   if (res.statusCode == 200) {
@@ -414,9 +414,9 @@ const operationSecurity: PostCompanyPeopleFieldsSecurity = {
 };
 
   const res = await sdk.metadata.postCompanyPeopleFields({
-    category: "female Avon aboard",
-    name: "ew gold",
-    type: "Southwest aperiam TLS",
+    category: "string",
+    name: "string",
+    type: "string",
   }, operationSecurity);
 
   if (res.statusCode == 200) {
@@ -460,8 +460,8 @@ const operationSecurity: PutCompanyNamedListsListNameItemIdSecurity = {
 
   const res = await sdk.metadata.putCompanyNamedListsListNameItemId({
     updateListItemRequest: {},
-    itemId: "Rupee Books withdrawal",
-    listName: "strategy divan Alaska",
+    itemId: "string",
+    listName: "string",
   }, operationSecurity);
 
   if (res.statusCode == 200) {
@@ -505,7 +505,7 @@ const operationSecurity: PutCompanyPeopleFieldsFieldIdSecurity = {
 
   const res = await sdk.metadata.putCompanyPeopleFieldsFieldId({
     updateFieldRequest: {},
-    fieldId: "whenever Honda navigating",
+    fieldId: "string",
   }, operationSecurity);
 
   if (res.statusCode == 200) {

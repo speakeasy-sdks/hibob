@@ -31,7 +31,7 @@ const operationSecurity: DeleteDocsPeopleIdConfidentialDocIdSecurity = {
 };
 
   const res = await sdk.documents.deleteDocsPeopleIdConfidentialDocId({
-    docId: "vast overjoyed",
+    docId: "string",
     id: "<ID>",
   }, operationSecurity);
 
@@ -75,7 +75,7 @@ const operationSecurity: DeleteDocsPeopleIdSharedDocIdSecurity = {
 };
 
   const res = await sdk.documents.deleteDocsPeopleIdSharedDocId({
-    docId: "table pariatur Electric",
+    docId: "string",
     id: "<ID>",
   }, operationSecurity);
 
@@ -157,7 +157,7 @@ import { Hibob } from "hibob";
   const res = await sdk.documents.postDocsPeopleIdConfidential({
     addDocument: {
       tags: [
-        "Coupe",
+        "string",
       ],
     },
     id: "<ID>",
@@ -202,7 +202,7 @@ import { Hibob } from "hibob";
     requestBody: {
       file: {
         content: "agqJ9wS3O#" as bytes <<<>>>,
-        file: "Compatible Shoes",
+        file: "string",
       },
     },
     id: "<ID>",
@@ -246,7 +246,7 @@ import { Hibob } from "hibob";
   const res = await sdk.documents.postDocsPeopleIdShared({
     addDocument: {
       tags: [
-        "Greeley",
+        "string",
       ],
     },
     id: "<ID>",
@@ -291,7 +291,7 @@ import { Hibob } from "hibob";
     requestBody: {
       file: {
         content: "fWz`=9n{(!" as bytes <<<>>>,
-        file: "roughly Minnesota",
+        file: "string",
       },
     },
     id: "<ID>",

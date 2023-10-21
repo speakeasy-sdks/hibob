@@ -360,7 +360,7 @@ import { Hibob } from "hibob";
   });
 
   const res = await sdk.people.getAvatarsEmployeeId({
-    employeeId: "composite",
+    employeeId: "string",
   });
 
   if (res.statusCode == 200) {
@@ -484,9 +484,9 @@ const operationSecurity: GetPeopleIdentifierSecurity = {
 
   const res = await sdk.people.getPeopleIdentifier({
     fields: [
-      "Folk",
+      "string",
     ],
-    identifier: "fava",
+    identifier: "string",
   }, operationSecurity);
 
   if (res.statusCode == 200) {
@@ -866,7 +866,7 @@ const operationSecurity: PostEmployeesEmployeeIdInvitationsSecurity = {
     invitationByWizard: {
       welcomeWizardId: 823551,
     },
-    employeeId: "female",
+    employeeId: "string",
   }, operationSecurity);
 
   if (res.statusCode == 200) {
@@ -913,7 +913,7 @@ const operationSecurity: PostEmployeesEmployeeIdStartDateSecurity = {
     startDateUpdate: {
       startDate: new RFCDate("2022-12-10"),
     },
-    employeeId: "Dodge state Bhutan",
+    employeeId: "string",
   }, operationSecurity);
 
   if (res.statusCode == 200) {
@@ -962,7 +962,7 @@ const operationSecurity: PostEmployeesIdentifierTerminateSecurity = {
       noticePeriod: {},
       terminationDate: new RFCDate("2023-04-21"),
     },
-    identifier: "Neither second",
+    identifier: "string",
   }, operationSecurity);
 
   if (res.statusCode == 200) {
@@ -1005,7 +1005,7 @@ const operationSecurity: PostEmployeesIdentifierUninviteSecurity = {
 };
 
   const res = await sdk.people.postEmployeesIdentifierUninvite({
-    identifier: "teal",
+    identifier: "string",
   }, operationSecurity);
 
   if (res.statusCode == 200) {
@@ -1051,10 +1051,10 @@ const operationSecurity: PostPeopleSecurity = {
   const res = await sdk.people.postPeople({
     email: "Lauryn20@hotmail.com",
     firstName: "Addison",
-    surname: "through Bugatti",
+    surname: "string",
     work: {
-      site: "Brazil Northeast",
-      startDate: new RFCDate("2021-06-01"),
+      site: "string",
+      startDate: new RFCDate("2022-06-17"),
     },
   }, operationSecurity);
 
@@ -1167,7 +1167,7 @@ const operationSecurity: PostPeopleIdentifierSecurity = {
         "work.department",
       ],
     },
-    identifier: "transmitting",
+    identifier: "string",
   }, operationSecurity);
 
   if (res.statusCode == 200) {
@@ -1260,12 +1260,12 @@ const operationSecurity: PostPeopleIdEquitiesSecurity = {
   const res = await sdk.people.postPeopleIdEquities({
     equityEntry: {
       effectiveDate: new RFCDate("2022-11-21"),
-      equityType: "Northeast Bespoke",
+      equityType: "string",
       exercisePrice: {
-        currency: "Kyat",
-        value: 6943.7,
+        currency: "Rial Omani",
+        value: 954.25,
       },
-      quantity: 8218.48,
+      quantity: 5285.48,
     },
     id: "<ID>",
   }, operationSecurity);
@@ -1317,7 +1317,7 @@ const operationSecurity: PostPeopleIdSalariesSecurity = {
         value: 3657.11,
       },
       effectiveDate: new RFCDate("2021-03-10"),
-      payPeriod: "Toys green",
+      payPeriod: "string",
     },
     id: "<ID>",
   }, operationSecurity);
@@ -1420,7 +1420,7 @@ const operationSecurity: PostPeopleIdVariableSecurity = {
         value: 54.57,
       },
       effectiveDate: new RFCDate("2022-08-17"),
-      paymentPeriod: "skating Cadillac",
+      paymentPeriod: "string",
     },
     id: "<ID>",
   }, operationSecurity);
@@ -1516,7 +1516,7 @@ import { Hibob } from "hibob";
     uploadAvatar: {
       url: "https://agitated-motor.net",
     },
-    employeeId: "Blues Data pish",
+    employeeId: "string",
   });
 
   if (res.statusCode == 200) {
@@ -1559,7 +1559,7 @@ const operationSecurity: PutPeopleIdentifierSecurity = {
 
   const res = await sdk.people.putPeopleIdentifier({
     requestBody: {},
-    identifier: "male",
+    identifier: "string",
   }, operationSecurity);
 
   if (res.statusCode == 200) {
@@ -1693,14 +1693,14 @@ const operationSecurity: PutPeopleIdEquitiesEntryIdSecurity = {
   const res = await sdk.people.putPeopleIdEquitiesEntryId({
     equityEntry: {
       effectiveDate: new RFCDate("2023-01-17"),
-      equityType: "laboriosam Beauty invoice",
+      equityType: "string",
       exercisePrice: {
-        currency: "Danish Krone",
-        value: 5630.25,
+        currency: "Seychelles Rupee",
+        value: 5610.76,
       },
-      quantity: 9054.61,
+      quantity: 3860.21,
     },
-    entryId: 87209,
+    entryId: 190967,
     id: "<ID>",
   }, operationSecurity);
 

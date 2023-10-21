@@ -100,7 +100,7 @@ const operationSecurity: GetTasksPeopleIdSecurity = {
 };
 
   const res = await sdk.tasks.getTasksPeopleId({
-    id: "Representative Mazda given",
+    id: "string",
   }, operationSecurity);
 
   if (res.statusCode == 200) {
@@ -143,7 +143,7 @@ const operationSecurity: PostTasksTaskIdCompleteSecurity = {
 };
 
   const res = await sdk.tasks.postTasksTaskIdComplete({
-    taskId: "Hybrid",
+    taskId: "string",
   }, operationSecurity);
 
   if (res.statusCode == 200) {
