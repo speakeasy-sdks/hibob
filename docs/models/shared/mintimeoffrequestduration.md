@@ -1,4 +1,4 @@
-# PolicyMinTimeOffRequestDuration
+# MinTimeOffRequestDuration
 
 The shortest amount of time employees can request.
 

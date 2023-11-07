@@ -1,5 +1,5 @@
 # Tasks
-(*tasks*)
+(*.tasks*)
 
 ### Available Operations
 
@@ -25,6 +25,7 @@ import { Hibob } from "hibob";
   });
 
   const res = await sdk.tasks.getMyTasks();
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -62,6 +63,7 @@ import { Hibob } from "hibob";
 
   const res = await sdk.tasks.getTasks();
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -88,7 +90,7 @@ import { Hibob } from "hibob";
 
 ```typescript
 import { Hibob } from "hibob";
-import { GetTasksPeopleIdSecurity, GetTasksPeopleIdTaskStatus } from "hibob/dist/sdk/models/operations";
+import { GetTasksPeopleIdSecurity, TaskStatus } from "hibob/dist/sdk/models/operations";
 
 (async() => {
   const sdk = new Hibob();
@@ -102,6 +104,7 @@ const operationSecurity: GetTasksPeopleIdSecurity = {
   const res = await sdk.tasks.getTasksPeopleId({
     id: "string",
   }, operationSecurity);
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -145,6 +148,7 @@ const operationSecurity: PostTasksTaskIdCompleteSecurity = {
   const res = await sdk.tasks.postTasksTaskIdComplete({
     taskId: "string",
   }, operationSecurity);
+
 
   if (res.statusCode == 200) {
     // handle response

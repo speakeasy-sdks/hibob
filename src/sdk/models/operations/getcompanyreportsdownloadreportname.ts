@@ -3,7 +3,7 @@
  */
 
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
-import * as shared from "../shared";
+import * as shared from "../../../sdk/models/shared";
 import { AxiosResponse } from "axios";
 
 export class GetCompanyReportsDownloadReportNameSecurity extends SpeakeasyBase {
@@ -53,5 +53,5 @@ export class GetCompanyReportsDownloadReportNameResponse extends SpeakeasyBase {
      * Include the report name and execution date in the report file. This defaults to true.
      */
     @SpeakeasyMetadata()
-    getCompanyReportsDownloadReportName200ApplicationJSONBinaryString?: Uint8Array;
+    bytes?: Uint8Array;
 }

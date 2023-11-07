@@ -1,5 +1,5 @@
 # Tables
-(*tables*)
+(*.tables*)
 
 ### Available Operations
 
@@ -50,6 +50,7 @@ const operationSecurity: DeletePeopleIdEmploymentEntryIdSecurity = {
     id: "<ID>",
   }, operationSecurity);
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -93,6 +94,7 @@ const operationSecurity: DeletePeopleIdEquitiesEntryIdSecurity = {
     entryId: 258748,
     id: "<ID>",
   }, operationSecurity);
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -138,6 +140,7 @@ const operationSecurity: DeletePeopleIdSalariesEntryIdSecurity = {
     id: "<ID>",
   }, operationSecurity);
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -181,6 +184,7 @@ const operationSecurity: DeletePeopleIdTrainingEntryIdSecurity = {
     entryId: 375590,
     id: "<ID>",
   }, operationSecurity);
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -226,6 +230,7 @@ const operationSecurity: DeletePeopleIdVariableEntryIdSecurity = {
     id: "<ID>",
   }, operationSecurity);
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -270,6 +275,7 @@ const operationSecurity: DeletePeopleIdWorkEntryIdSecurity = {
     id: "<ID>",
   }, operationSecurity);
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -312,6 +318,7 @@ const operationSecurity: GetPeopleIdEmploymentSecurity = {
   const res = await sdk.tables.getPeopleIdEmployment({
     id: "<ID>",
   }, operationSecurity);
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -356,6 +363,7 @@ const operationSecurity: GetPeopleIdEquitiesSecurity = {
     id: "<ID>",
   }, operationSecurity);
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -398,6 +406,7 @@ const operationSecurity: GetPeopleIdLifecycleSecurity = {
   const res = await sdk.tables.getPeopleIdLifecycle({
     id: "<ID>",
   }, operationSecurity);
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -442,6 +451,7 @@ const operationSecurity: GetPeopleIdSalariesSecurity = {
     id: "<ID>",
   }, operationSecurity);
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -485,6 +495,7 @@ const operationSecurity: GetPeopleIdTrainingSecurity = {
     id: "<ID>",
   }, operationSecurity);
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -524,6 +535,7 @@ import { Hibob } from "hibob";
   const res = await sdk.tables.getPeopleIdVariable({
     id: "<ID>",
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -566,6 +578,7 @@ const operationSecurity: GetPeopleIdWorkSecurity = {
   const res = await sdk.tables.getPeopleIdWork({
     id: "<ID>",
   }, operationSecurity);
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -613,6 +626,7 @@ const operationSecurity: PostPeopleIdEmploymentSecurity = {
     },
     id: "<ID>",
   }, operationSecurity);
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -667,6 +681,7 @@ const operationSecurity: PostPeopleIdEquitiesSecurity = {
     id: "<ID>",
   }, operationSecurity);
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -719,6 +734,7 @@ const operationSecurity: PostPeopleIdSalariesSecurity = {
     id: "<ID>",
   }, operationSecurity);
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -769,6 +785,7 @@ const operationSecurity: PostPeopleIdTrainingSecurity = {
     },
     id: "<ID>",
   }, operationSecurity);
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -822,6 +839,7 @@ const operationSecurity: PostPeopleIdVariableSecurity = {
     id: "<ID>",
   }, operationSecurity);
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -873,6 +891,7 @@ const operationSecurity: PostPeopleIdWorkSecurity = {
     id: "<ID>",
   }, operationSecurity);
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -917,6 +936,7 @@ import { RFCDate } from "hibob/dist/sdk/types";
     entryId: 799673,
     id: "<ID>",
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -971,6 +991,7 @@ const operationSecurity: PutPeopleIdEquitiesEntryIdSecurity = {
     id: "<ID>",
   }, operationSecurity);
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -1019,6 +1040,7 @@ import { RFCDate } from "hibob/dist/sdk/types";
     entryId: 410628,
     id: "<ID>",
   });
+
 
   if (res.statusCode == 200) {
     // handle response

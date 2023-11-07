@@ -3,7 +3,7 @@
  */
 
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
-import * as shared from "../shared";
+import * as shared from "../../../sdk/models/shared";
 import { AxiosResponse } from "axios";
 
 export class GetCompanyReportsReportIdDownloadAsyncSecurity extends SpeakeasyBase {
@@ -19,7 +19,7 @@ export class GetCompanyReportsReportIdDownloadAsyncSecurity extends SpeakeasyBas
 /**
  * File format
  */
-export enum GetCompanyReportsReportIdDownloadAsyncFormat {
+export enum Format {
     Csv = "csv",
     Xlsx = "xlsx",
 }
@@ -29,7 +29,7 @@ export class GetCompanyReportsReportIdDownloadAsyncRequest extends SpeakeasyBase
      * File format
      */
     @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=format" })
-    format: GetCompanyReportsReportIdDownloadAsyncFormat;
+    format: Format;
 
     /**
      * Should include info

@@ -1,5 +1,5 @@
 # Onboarding
-(*onboarding*)
+(*.onboarding*)
 
 ### Available Operations
 
@@ -22,6 +22,7 @@ import { Hibob } from "hibob";
   });
 
   const res = await sdk.onboarding.getOnboardingWizards();
+
 
   if (res.statusCode == 200) {
     // handle response

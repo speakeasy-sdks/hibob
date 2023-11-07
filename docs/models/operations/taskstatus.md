@@ -1,4 +1,4 @@
-# GetTasksPeopleIdTaskStatus
+# TaskStatus
 
 filter tasks by open / closed status. Not sending task_status will return all tasks.
 

@@ -4,7 +4,7 @@
 ```typescript
 import { Hibob } from "hibob";
 import {
-    PostAttendanceImportImportMethodImportMethod,
+    ImportMethod,
     PostAttendanceImportImportMethodSecurity,
 } from "hibob/dist/sdk/models/operations";
 
@@ -28,7 +28,7 @@ import {
                     },
                 ],
             },
-            importMethod: PostAttendanceImportImportMethodImportMethod.Immediate,
+            importMethod: ImportMethod.Immediate,
         },
         operationSecurity
     );

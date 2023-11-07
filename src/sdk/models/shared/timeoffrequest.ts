@@ -3,10 +3,10 @@
  */
 
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
-import { RFCDate } from "../../types";
+import { RFCDate } from "../../../sdk/types";
 import { Expose, Transform, Type } from "class-transformer";
 
-export class TimeoffRequestAttachmentLinks extends SpeakeasyBase {
+export class AttachmentLinks extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "filename" })
     filename?: string;
@@ -49,10 +49,10 @@ export class TimeoffRequest extends SpeakeasyBase {
     /**
      * Attachments with download links
      */
-    @SpeakeasyMetadata({ elemType: TimeoffRequestAttachmentLinks })
+    @SpeakeasyMetadata({ elemType: AttachmentLinks })
     @Expose({ name: "attachmentLinks" })
-    @Type(() => TimeoffRequestAttachmentLinks)
-    attachmentLinks?: TimeoffRequestAttachmentLinks[];
+    @Type(() => AttachmentLinks)
+    attachmentLinks?: AttachmentLinks[];
 
     /**
      * The time off duration in hours for every day in the request (relevant for requests using the hoursOnRange type).

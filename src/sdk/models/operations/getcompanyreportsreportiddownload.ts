@@ -3,7 +3,7 @@
  */
 
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
-import * as shared from "../shared";
+import * as shared from "../../../sdk/models/shared";
 import { AxiosResponse } from "axios";
 
 export class GetCompanyReportsReportIdDownloadSecurity extends SpeakeasyBase {
@@ -19,7 +19,7 @@ export class GetCompanyReportsReportIdDownloadSecurity extends SpeakeasyBase {
 /**
  * File format
  */
-export enum GetCompanyReportsReportIdDownloadFormat {
+export enum QueryParamFormat {
     Csv = "csv",
     Xlsx = "xlsx",
 }
@@ -29,7 +29,7 @@ export class GetCompanyReportsReportIdDownloadRequest extends SpeakeasyBase {
      * File format
      */
     @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=format" })
-    format: GetCompanyReportsReportIdDownloadFormat;
+    format: QueryParamFormat;
 
     /**
      * Should include info.
@@ -79,5 +79,5 @@ export class GetCompanyReportsReportIdDownloadResponse extends SpeakeasyBase {
      * Includes the report name and execution date in the report file. By default this is set to True.
      */
     @SpeakeasyMetadata()
-    getCompanyReportsReportIdDownload200ApplicationJSONBinaryString?: Uint8Array;
+    bytes?: Uint8Array;
 }

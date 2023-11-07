@@ -9,7 +9,7 @@ import { Expose, Type } from "class-transformer";
 /**
  * The shortest amount of time employees can request.
  */
-export enum PolicyMinTimeOffRequestDuration {
+export enum MinTimeOffRequestDuration {
     FullDay = "fullDay",
     HalfDay = "halfDay",
     FullHour = "fullHour",
@@ -17,7 +17,7 @@ export enum PolicyMinTimeOffRequestDuration {
     QuarterHour = "quarterHour",
 }
 
-export enum PolicyUnit {
+export enum Unit {
     Days = "days",
     Hours = "hours",
 }
@@ -63,7 +63,7 @@ export class Policy extends SpeakeasyBase {
      */
     @SpeakeasyMetadata()
     @Expose({ name: "minTimeOffRequestDuration" })
-    minTimeOffRequestDuration?: PolicyMinTimeOffRequestDuration;
+    minTimeOffRequestDuration?: MinTimeOffRequestDuration;
 
     @SpeakeasyMetadata()
     @Expose({ name: "name" })
@@ -71,7 +71,7 @@ export class Policy extends SpeakeasyBase {
 
     @SpeakeasyMetadata()
     @Expose({ name: "unit" })
-    unit?: PolicyUnit;
+    unit?: Unit;
 
     @SpeakeasyMetadata({ elemType: YearsOfServiceIncrements })
     @Expose({ name: "yosIncrease" })

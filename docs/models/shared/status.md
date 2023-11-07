@@ -1,4 +1,4 @@
-# ImportAttendanceResponseStatus
+# Status
 
 Import status
 

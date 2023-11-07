@@ -1,4 +1,4 @@
-# PolicyTypeActivity
+# Activity
 
 Activity type.
 

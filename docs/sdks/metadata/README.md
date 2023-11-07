@@ -1,5 +1,5 @@
 # Metadata
-(*metadata*)
+(*.metadata*)
 
 ### Available Operations
 
@@ -39,6 +39,7 @@ const operationSecurity: DeleteCompanyNamedListsListNameItemIdSecurity = {
     itemId: "string",
     listName: "string",
   }, operationSecurity);
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -83,6 +84,7 @@ const operationSecurity: DeleteCompanyPeopleFieldsFieldIdSecurity = {
     fieldId: "string",
   }, operationSecurity);
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -123,6 +125,7 @@ const operationSecurity: GetCompanyNamedListsSecurity = {
 };
 
   const res = await sdk.metadata.getCompanyNamedLists({}, operationSecurity);
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -167,6 +170,7 @@ const operationSecurity: GetCompanyNamedListsListNameSecurity = {
     listName: "string",
   }, operationSecurity);
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -208,6 +212,7 @@ const operationSecurity: GetCompanyPeopleFieldsSecurity = {
 
   const res = await sdk.metadata.getCompanyPeopleFields(operationSecurity);
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -245,6 +250,7 @@ const operationSecurity: GetMetadataObjectsPositionSecurity = {
 };
 
   const res = await sdk.metadata.getMetadataObjectsPosition(operationSecurity);
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -285,6 +291,7 @@ const operationSecurity: GetPeopleCustomTablesMetadataSecurity = {
 };
 
   const res = await sdk.metadata.getPeopleCustomTablesMetadata(operationSecurity);
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -327,6 +334,7 @@ const operationSecurity: GetPeopleCustomTablesMetadataCustomTableIdSecurity = {
   const res = await sdk.metadata.getPeopleCustomTablesMetadataCustomTableId({
     customTableId: "string",
   }, operationSecurity);
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -374,6 +382,7 @@ const operationSecurity: PostCompanyNamedListsListNameSecurity = {
     listName: "string",
   }, operationSecurity);
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -418,6 +427,7 @@ const operationSecurity: PostCompanyPeopleFieldsSecurity = {
     name: "string",
     type: "string",
   }, operationSecurity);
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -464,6 +474,7 @@ const operationSecurity: PutCompanyNamedListsListNameItemIdSecurity = {
     listName: "string",
   }, operationSecurity);
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -507,6 +518,7 @@ const operationSecurity: PutCompanyPeopleFieldsFieldIdSecurity = {
     updateFieldRequest: {},
     fieldId: "string",
   }, operationSecurity);
+
 
   if (res.statusCode == 200) {
     // handle response

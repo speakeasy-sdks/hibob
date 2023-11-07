@@ -8,7 +8,7 @@ import { Expose } from "class-transformer";
 /**
  * Activity type.
  */
-export enum PolicyTypeActivity {
+export enum Activity {
     PaidTimeoff = "paidTimeoff",
     UnpaidTimeoff = "unpaidTimeoff",
     WorkTime = "workTime",
@@ -25,7 +25,7 @@ export class PolicyType extends SpeakeasyBase {
      */
     @SpeakeasyMetadata()
     @Expose({ name: "activity" })
-    activity?: PolicyTypeActivity;
+    activity?: Activity;
 
     /**
      * Requests will be deducted from the balance only for working days.

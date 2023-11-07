@@ -3,13 +3,13 @@
  */
 
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
-import { RFCDate } from "../../types";
+import { RFCDate } from "../../../sdk/types";
 import { Expose, Transform, Type } from "class-transformer";
 
 /**
  * Select <b>morning</b> when the request is for mornings on the days requested. Select <b>afternoon</b> when the request is for afternoons on the days requested.<br> This is mandatory if the <b>requestRangeType</b> is <b>portionOnRange</b>.
  */
-export enum SubmitTimeoffRequestDayPortion {
+export enum DayPortion {
     Morning = "morning",
     Afternoon = "afternoon",
 }
@@ -17,7 +17,7 @@ export enum SubmitTimeoffRequestDayPortion {
 /**
  * Portion of the last day - relevant for requests in days.
  */
-export enum SubmitTimeoffRequestEndDatePortion {
+export enum EndDatePortion {
     AllDay = "all_day",
     Morning = "morning",
     Afternoon = "afternoon",
@@ -36,7 +36,7 @@ export enum SubmitTimeoffRequestRequestRangeType {
 /**
  * Portion of the first day - relevant for requests in days.
  */
-export enum SubmitTimeoffRequestStartDatePortion {
+export enum StartDatePortion {
     AllDay = "all_day",
     Morning = "morning",
     Afternoon = "afternoon",
@@ -69,7 +69,7 @@ export class SubmitTimeoffRequest extends SpeakeasyBase {
      */
     @SpeakeasyMetadata()
     @Expose({ name: "dayPortion" })
-    dayPortion?: SubmitTimeoffRequestDayPortion;
+    dayPortion?: DayPortion;
 
     /**
      * Request reason.
@@ -95,7 +95,7 @@ export class SubmitTimeoffRequest extends SpeakeasyBase {
      */
     @SpeakeasyMetadata()
     @Expose({ name: "endDatePortion" })
-    endDatePortion?: SubmitTimeoffRequestEndDatePortion;
+    endDatePortion?: EndDatePortion;
 
     /**
      * This field is mandatory if the requestRangeType is set to 'hours'.
@@ -153,5 +153,5 @@ export class SubmitTimeoffRequest extends SpeakeasyBase {
      */
     @SpeakeasyMetadata()
     @Expose({ name: "startDatePortion" })
-    startDatePortion?: SubmitTimeoffRequestStartDatePortion;
+    startDatePortion?: StartDatePortion;
 }

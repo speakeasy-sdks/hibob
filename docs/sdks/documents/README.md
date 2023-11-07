@@ -1,5 +1,5 @@
 # Documents
-(*documents*)
+(*.documents*)
 
 ### Available Operations
 
@@ -34,6 +34,7 @@ const operationSecurity: DeleteDocsPeopleIdConfidentialDocIdSecurity = {
     docId: "string",
     id: "<ID>",
   }, operationSecurity);
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -79,6 +80,7 @@ const operationSecurity: DeleteDocsPeopleIdSharedDocIdSecurity = {
     id: "<ID>",
   }, operationSecurity);
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -118,6 +120,7 @@ import { Hibob } from "hibob";
   const res = await sdk.documents.getDocsPeopleId({
     id: "<ID>",
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -163,6 +166,7 @@ import { Hibob } from "hibob";
     id: "<ID>",
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -201,12 +205,13 @@ import { Hibob } from "hibob";
   const res = await sdk.documents.postDocsPeopleIdConfidentialUpload({
     requestBody: {
       file: {
-        content: "agqJ9wS3O#" as bytes <<<>>>,
-        file: "string",
+        content: new TextEncoder().encode("0xfAD95Ec4b0"),
+        fileName: "compatible_shoes.gif",
       },
     },
     id: "<ID>",
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -252,6 +257,7 @@ import { Hibob } from "hibob";
     id: "<ID>",
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -290,12 +296,13 @@ import { Hibob } from "hibob";
   const res = await sdk.documents.postDocsPeopleIdSharedUpload({
     requestBody: {
       file: {
-        content: "fWz`=9n{(!" as bytes <<<>>>,
-        file: "string",
+        content: new TextEncoder().encode("0xAcFe65CF10"),
+        fileName: "roughly_minnesota.pdf",
       },
     },
     id: "<ID>",
   });
+
 
   if (res.statusCode == 200) {
     // handle response

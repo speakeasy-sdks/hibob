@@ -1,4 +1,4 @@
-# GetCompanyReportsReportIdDownloadFormat
+# Format
 
 File format
 

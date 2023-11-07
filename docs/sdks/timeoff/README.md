@@ -1,5 +1,5 @@
 # TimeOff
-(*timeOff*)
+(*.timeOff*)
 
 ### Available Operations
 
@@ -41,6 +41,7 @@ const operationSecurity: DeleteTimeoffEmployeesIdRequestsRequestIdSecurity = {
     id: "<ID>",
     requestId: 313155,
   }, operationSecurity);
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -86,6 +87,7 @@ const operationSecurity: GetTimeoffEmployeesIdBalanceSecurity = {
     policyType: "string",
   }, operationSecurity);
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -130,6 +132,7 @@ const operationSecurity: GetTimeoffEmployeesIdRequestsRequestIdSecurity = {
     requestId: 662911,
   }, operationSecurity);
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -172,6 +175,7 @@ const operationSecurity: GetTimeoffOuttodaySecurity = {
 
   const res = await sdk.timeOff.getTimeoffOuttoday({}, operationSecurity);
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -212,6 +216,7 @@ const operationSecurity: GetTimeoffPoliciesSecurity = {
   const res = await sdk.timeOff.getTimeoffPolicies({
     policyName: "string",
   }, operationSecurity);
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -254,6 +259,7 @@ const operationSecurity: GetTimeoffPoliciesNamesSecurity = {
     policyTypeName: "string",
   }, operationSecurity);
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -292,6 +298,7 @@ const operationSecurity: GetTimeoffPolicyTypesSecurity = {
 };
 
   const res = await sdk.timeOff.getTimeoffPolicyTypes(operationSecurity);
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -333,6 +340,7 @@ const operationSecurity: GetTimeoffPolicyTypesPolicyTypeSecurity = {
     policyType: "string",
   }, operationSecurity);
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -373,6 +381,7 @@ const operationSecurity: GetTimeoffPolicyTypesPolicyTypeReasonCodesSecurity = {
   const res = await sdk.timeOff.getTimeoffPolicyTypesPolicyTypeReasonCodes({
     policyType: "string",
   }, operationSecurity);
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -417,6 +426,7 @@ const operationSecurity: GetTimeoffRequestsChangesSecurity = {
   const res = await sdk.timeOff.getTimeoffRequestsChanges({
     since: new RFCDate("2021-06-11"),
   }, operationSecurity);
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -463,6 +473,7 @@ const operationSecurity: GetTimeoffWhosoutSecurity = {
     to: new RFCDate("2022-04-17"),
   }, operationSecurity);
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -492,7 +503,7 @@ Create a balance adjustment for a given employee for a given effective date.<br 
 ```typescript
 import { Hibob } from "hibob";
 import { PostTimeoffEmployeesIdAdjustmentsSecurity } from "hibob/dist/sdk/models/operations";
-import { AdjustmentRequestAdjustmentType } from "hibob/dist/sdk/models/shared";
+import { AdjustmentType } from "hibob/dist/sdk/models/shared";
 import { RFCDate } from "hibob/dist/sdk/types";
 
 (async() => {
@@ -506,6 +517,7 @@ const operationSecurity: PostTimeoffEmployeesIdAdjustmentsSecurity = {
     adjustmentRequest: {},
     id: "<ID>",
   }, operationSecurity);
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -537,10 +549,10 @@ Submits a new timeoff request.<br /><b>Supported user types:</b> Employee, Servi
 import { Hibob } from "hibob";
 import { PostTimeoffEmployeesIdRequestsSecurity } from "hibob/dist/sdk/models/operations";
 import {
-  SubmitTimeoffRequestDayPortion,
-  SubmitTimeoffRequestEndDatePortion,
+  DayPortion,
+  EndDatePortion,
+  StartDatePortion,
   SubmitTimeoffRequestRequestRangeType,
-  SubmitTimeoffRequestStartDatePortion,
 } from "hibob/dist/sdk/models/shared";
 import { RFCDate } from "hibob/dist/sdk/types";
 
@@ -560,6 +572,7 @@ const operationSecurity: PostTimeoffEmployeesIdRequestsSecurity = {
     },
     id: "<ID>",
   }, operationSecurity);
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -606,6 +619,7 @@ const operationSecurity: PostTimeoffPolicyTypesPolicyTypeReasonCodesSecurity = {
     },
     policyType: "string",
   }, operationSecurity);
+
 
   if (res.statusCode == 200) {
     // handle response

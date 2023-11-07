@@ -3,11 +3,11 @@
  */
 
 import * as utils from "../internal/utils";
+import * as shared from "../sdk/models/shared";
 import { Attendance } from "./attendance";
 import { CustomTables } from "./customtables";
 import { Documents } from "./documents";
 import { Metadata } from "./metadata";
-import * as shared from "./models/shared";
 import { Objects } from "./objects";
 import { Onboarding } from "./onboarding";
 import { Payroll } from "./payroll";
@@ -69,9 +69,9 @@ export class SDKConfiguration {
     serverDefaults: any;
     language = "typescript";
     openapiDocVersion = "1.0.0";
-    sdkVersion = "1.12.0";
-    genVersion = "2.171.0";
-    userAgent = "speakeasy-sdk/typescript 1.12.0 2.171.0 1.0.0 hibob";
+    sdkVersion = "2.0.0";
+    genVersion = "2.181.1";
+    userAgent = "speakeasy-sdk/typescript 2.0.0 2.181.1 1.0.0 hibob";
     retryConfig?: utils.RetryConfig;
     public constructor(init?: Partial<SDKConfiguration>) {
         Object.assign(this, init);
@@ -83,16 +83,16 @@ export class SDKConfiguration {
  */
 export class Hibob {
     public attendance: Attendance;
-    public customTables: CustomTables;
-    public documents: Documents;
+    public people: People;
     public metadata: Metadata;
+    public reports: Reports;
+    public documents: Documents;
+    public tasks: Tasks;
     public objects: Objects;
     public onboarding: Onboarding;
     public payroll: Payroll;
-    public people: People;
-    public reports: Reports;
+    public customTables: CustomTables;
     public tables: Tables;
-    public tasks: Tasks;
     public timeOff: TimeOff;
 
     private sdkConfiguration: SDKConfiguration;
@@ -114,16 +114,16 @@ export class Hibob {
         });
 
         this.attendance = new Attendance(this.sdkConfiguration);
-        this.customTables = new CustomTables(this.sdkConfiguration);
-        this.documents = new Documents(this.sdkConfiguration);
+        this.people = new People(this.sdkConfiguration);
         this.metadata = new Metadata(this.sdkConfiguration);
+        this.reports = new Reports(this.sdkConfiguration);
+        this.documents = new Documents(this.sdkConfiguration);
+        this.tasks = new Tasks(this.sdkConfiguration);
         this.objects = new Objects(this.sdkConfiguration);
         this.onboarding = new Onboarding(this.sdkConfiguration);
         this.payroll = new Payroll(this.sdkConfiguration);
-        this.people = new People(this.sdkConfiguration);
-        this.reports = new Reports(this.sdkConfiguration);
+        this.customTables = new CustomTables(this.sdkConfiguration);
         this.tables = new Tables(this.sdkConfiguration);
-        this.tasks = new Tasks(this.sdkConfiguration);
         this.timeOff = new TimeOff(this.sdkConfiguration);
     }
 }

@@ -1,5 +1,5 @@
 # Attendance
-(*attendance*)
+(*.attendance*)
 
 ### Available Operations
 
@@ -13,10 +13,7 @@
 
 ```typescript
 import { Hibob } from "hibob";
-import {
-  PostAttendanceImportImportMethodImportMethod,
-  PostAttendanceImportImportMethodSecurity,
-} from "hibob/dist/sdk/models/operations";
+import { ImportMethod, PostAttendanceImportImportMethodSecurity } from "hibob/dist/sdk/models/operations";
 
 (async() => {
   const sdk = new Hibob();
@@ -37,8 +34,9 @@ const operationSecurity: PostAttendanceImportImportMethodSecurity = {
         },
       ],
     },
-    importMethod: PostAttendanceImportImportMethodImportMethod.Immediate,
+    importMethod: ImportMethod.Immediate,
   }, operationSecurity);
+
 
   if (res.statusCode == 200) {
     // handle response

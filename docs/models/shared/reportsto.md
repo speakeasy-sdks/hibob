@@ -1,4 +1,4 @@
-# WorkEntryReportsTo
+# ReportsTo
 
 The manager's details.
 

@@ -3,7 +3,7 @@
  */
 
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
-import * as shared from "../shared";
+import * as shared from "../../../sdk/models/shared";
 import { AxiosResponse } from "axios";
 
 export class PostAttendanceImportImportMethodSecurity extends SpeakeasyBase {
@@ -17,7 +17,7 @@ export class PostAttendanceImportImportMethodSecurity extends SpeakeasyBase {
 /**
  * Indicates if the provided data should be processed via an aggregation engine or immediately. <ul>Aggregate - will add the logs to a temporary location, and an aggregation job will process the data asynchronously.</ul><ul>Immediate - will insert the records as-is.</ul>
  */
-export enum PostAttendanceImportImportMethodImportMethod {
+export enum ImportMethod {
     Aggregate = "aggregate",
     Immediate = "immediate",
 }
@@ -30,7 +30,7 @@ export class PostAttendanceImportImportMethodRequest extends SpeakeasyBase {
      * Indicates if the provided data should be processed via an aggregation engine or immediately. <ul>Aggregate - will add the logs to a temporary location, and an aggregation job will process the data asynchronously.</ul><ul>Immediate - will insert the records as-is.</ul>
      */
     @SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=importMethod" })
-    importMethod: PostAttendanceImportImportMethodImportMethod;
+    importMethod: ImportMethod;
 }
 
 export class PostAttendanceImportImportMethodResponse extends SpeakeasyBase {

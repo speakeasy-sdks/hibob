@@ -3,7 +3,7 @@
  */
 
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
-import * as shared from "../shared";
+import * as shared from "../../../sdk/models/shared";
 import { AxiosResponse } from "axios";
 
 export class GetTasksPeopleIdSecurity extends SpeakeasyBase {
@@ -19,7 +19,7 @@ export class GetTasksPeopleIdSecurity extends SpeakeasyBase {
 /**
  * filter tasks by open / closed status. Not sending task_status will return all tasks.
  */
-export enum GetTasksPeopleIdTaskStatus {
+export enum TaskStatus {
     Open = "open",
     Closed = "closed",
 }
@@ -35,7 +35,7 @@ export class GetTasksPeopleIdRequest extends SpeakeasyBase {
      * filter tasks by open / closed status. Not sending task_status will return all tasks.
      */
     @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=task_status" })
-    taskStatus?: GetTasksPeopleIdTaskStatus;
+    taskStatus?: TaskStatus;
 }
 
 export class GetTasksPeopleIdResponse extends SpeakeasyBase {

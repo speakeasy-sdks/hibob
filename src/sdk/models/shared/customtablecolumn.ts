@@ -5,7 +5,7 @@
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
 import { Expose, Type } from "class-transformer";
 
-export class CustomTableColumnTypeData extends SpeakeasyBase {
+export class TypeData extends SpeakeasyBase {
     /**
      * The ID of the list in the /v1/company/named-lists endpoint.
      */
@@ -52,6 +52,6 @@ export class CustomTableColumn extends SpeakeasyBase {
 
     @SpeakeasyMetadata()
     @Expose({ name: "typeData" })
-    @Type(() => CustomTableColumnTypeData)
-    typeData?: CustomTableColumnTypeData;
+    @Type(() => TypeData)
+    typeData?: TypeData;
 }

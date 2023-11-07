@@ -1,5 +1,5 @@
 # Payroll
-(*payroll*)
+(*.payroll*)
 
 ### Available Operations
 
@@ -41,6 +41,7 @@ const operationSecurity: DeletePeopleIdEquitiesEntryIdSecurity = {
     entryId: 258748,
     id: "<ID>",
   }, operationSecurity);
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -86,6 +87,7 @@ const operationSecurity: DeletePeopleIdSalariesEntryIdSecurity = {
     id: "<ID>",
   }, operationSecurity);
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -129,6 +131,7 @@ const operationSecurity: DeletePeopleIdTrainingEntryIdSecurity = {
     entryId: 375590,
     id: "<ID>",
   }, operationSecurity);
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -174,6 +177,7 @@ const operationSecurity: DeletePeopleIdVariableEntryIdSecurity = {
     id: "<ID>",
   }, operationSecurity);
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -211,6 +215,7 @@ import { Hibob } from "hibob";
   });
 
   const res = await sdk.payroll.getPayrollHistory({});
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -253,6 +258,7 @@ const operationSecurity: GetPeopleIdEquitiesSecurity = {
   const res = await sdk.payroll.getPeopleIdEquities({
     id: "<ID>",
   }, operationSecurity);
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -297,6 +303,7 @@ const operationSecurity: GetPeopleIdSalariesSecurity = {
     id: "<ID>",
   }, operationSecurity);
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -340,6 +347,7 @@ const operationSecurity: GetPeopleIdTrainingSecurity = {
     id: "<ID>",
   }, operationSecurity);
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -379,6 +387,7 @@ import { Hibob } from "hibob";
   const res = await sdk.payroll.getPeopleIdVariable({
     id: "<ID>",
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -432,6 +441,7 @@ const operationSecurity: PostPeopleIdEquitiesSecurity = {
     id: "<ID>",
   }, operationSecurity);
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -484,6 +494,7 @@ const operationSecurity: PostPeopleIdSalariesSecurity = {
     id: "<ID>",
   }, operationSecurity);
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -534,6 +545,7 @@ const operationSecurity: PostPeopleIdTrainingSecurity = {
     },
     id: "<ID>",
   }, operationSecurity);
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -586,6 +598,7 @@ const operationSecurity: PostPeopleIdVariableSecurity = {
     },
     id: "<ID>",
   }, operationSecurity);
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -640,6 +653,7 @@ const operationSecurity: PutPeopleIdEquitiesEntryIdSecurity = {
     entryId: 190967,
     id: "<ID>",
   }, operationSecurity);
+
 
   if (res.statusCode == 200) {
     // handle response

@@ -3,10 +3,10 @@
  */
 
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
-import { RFCDate } from "../../types";
+import { RFCDate } from "../../../sdk/types";
 import { Expose, Transform, Type } from "class-transformer";
 
-export class CreateEmployeeRequestWork extends SpeakeasyBase {
+export class Work extends SpeakeasyBase {
     /**
      * The employee's site.
      */
@@ -48,6 +48,6 @@ export class CreateEmployeeRequest extends SpeakeasyBase {
 
     @SpeakeasyMetadata()
     @Expose({ name: "work" })
-    @Type(() => CreateEmployeeRequestWork)
-    work?: CreateEmployeeRequestWork;
+    @Type(() => Work)
+    work?: Work;
 }

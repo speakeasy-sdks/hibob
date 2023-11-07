@@ -3,15 +3,15 @@
  */
 
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
-import * as shared from "../shared";
+import * as shared from "../../../sdk/models/shared";
 import { AxiosResponse } from "axios";
 
-export class PostDocsPeopleIdConfidentialUploadRequestBodyFile extends SpeakeasyBase {
+export class File extends SpeakeasyBase {
     @SpeakeasyMetadata({ data: "multipart_form, content=true" })
     content: Uint8Array;
 
     @SpeakeasyMetadata({ data: "multipart_form, name=file" })
-    file: string;
+    fileName: string;
 }
 
 export class PostDocsPeopleIdConfidentialUploadRequestBody extends SpeakeasyBase {
@@ -19,7 +19,7 @@ export class PostDocsPeopleIdConfidentialUploadRequestBody extends SpeakeasyBase
      * The file to upload.
      */
     @SpeakeasyMetadata({ data: "multipart_form, file=true" })
-    file: PostDocsPeopleIdConfidentialUploadRequestBodyFile;
+    file: File;
 }
 
 export class PostDocsPeopleIdConfidentialUploadRequest extends SpeakeasyBase {

@@ -3,10 +3,10 @@
  */
 
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
-import { RFCDate } from "../../types";
+import { RFCDate } from "../../../sdk/types";
 import { Expose, Transform, Type } from "class-transformer";
 
-export enum EmployeeTerminationNoticePeriodUnit {
+export enum EmployeeTerminationUnit {
     Days = "days",
     Weeks = "weeks",
     Month = "month",
@@ -16,14 +16,14 @@ export enum EmployeeTerminationNoticePeriodUnit {
 /**
  * Notice period length
  */
-export class EmployeeTerminationNoticePeriod extends SpeakeasyBase {
+export class NoticePeriod extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "length" })
     length?: number;
 
     @SpeakeasyMetadata()
     @Expose({ name: "unit" })
-    unit?: EmployeeTerminationNoticePeriodUnit;
+    unit?: EmployeeTerminationUnit;
 }
 
 export class EmployeeTermination extends SpeakeasyBase {
@@ -38,8 +38,8 @@ export class EmployeeTermination extends SpeakeasyBase {
      */
     @SpeakeasyMetadata()
     @Expose({ name: "noticePeriod" })
-    @Type(() => EmployeeTerminationNoticePeriod)
-    noticePeriod?: EmployeeTerminationNoticePeriod;
+    @Type(() => NoticePeriod)
+    noticePeriod?: NoticePeriod;
 
     /**
      * The ID of the 'lifecycleReasonType' list entry

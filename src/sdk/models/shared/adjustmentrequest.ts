@@ -3,13 +3,13 @@
  */
 
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
-import { RFCDate } from "../../types";
+import { RFCDate } from "../../../sdk/types";
 import { Expose, Transform, Type } from "class-transformer";
 
 /**
  * Adjustment type - balance or time used.
  */
-export enum AdjustmentRequestAdjustmentType {
+export enum AdjustmentType {
     Balance = "balance",
     DaysUsed = "daysUsed",
 }
@@ -20,7 +20,7 @@ export class AdjustmentRequest extends SpeakeasyBase {
      */
     @SpeakeasyMetadata()
     @Expose({ name: "adjustmentType" })
-    adjustmentType?: AdjustmentRequestAdjustmentType;
+    adjustmentType?: AdjustmentType;
 
     /**
      * The amount of days/hours to add/subtract.

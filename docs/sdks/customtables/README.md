@@ -1,5 +1,5 @@
 # CustomTables
-(*customTables*)
+(*.customTables*)
 
 ### Available Operations
 
@@ -32,6 +32,7 @@ const operationSecurity: DeletePeopleCustomTablesEmployeeIdCustomTableIdEntryIdS
     employeeId: "string",
     entryId: "string",
   }, operationSecurity);
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -76,6 +77,7 @@ const operationSecurity: GetPeopleCustomTablesEmployeeIdCustomTableIdSecurity = 
     customTableId: "string",
     employeeId: "string",
   }, operationSecurity);
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -122,6 +124,7 @@ const operationSecurity: PostPeopleCustomTablesEmployeeIdCustomTableIdSecurity =
     employeeId: "string",
   }, operationSecurity);
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -167,6 +170,7 @@ const operationSecurity: PutPeopleCustomTablesEmployeeIdCustomTableIdEntryIdSecu
     employeeId: "string",
     entryId: "string",
   }, operationSecurity);
+
 
   if (res.statusCode == 200) {
     // handle response

@@ -1,5 +1,5 @@
 # People
-(*people*)
+(*.people*)
 
 ### Available Operations
 
@@ -66,6 +66,7 @@ const operationSecurity: DeletePeopleIdEmploymentEntryIdSecurity = {
     id: "<ID>",
   }, operationSecurity);
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -109,6 +110,7 @@ const operationSecurity: DeletePeopleIdEquitiesEntryIdSecurity = {
     entryId: 258748,
     id: "<ID>",
   }, operationSecurity);
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -154,6 +156,7 @@ const operationSecurity: DeletePeopleIdSalariesEntryIdSecurity = {
     id: "<ID>",
   }, operationSecurity);
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -197,6 +200,7 @@ const operationSecurity: DeletePeopleIdTrainingEntryIdSecurity = {
     entryId: 375590,
     id: "<ID>",
   }, operationSecurity);
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -242,6 +246,7 @@ const operationSecurity: DeletePeopleIdVariableEntryIdSecurity = {
     id: "<ID>",
   }, operationSecurity);
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -286,6 +291,7 @@ const operationSecurity: DeletePeopleIdWorkEntryIdSecurity = {
     id: "<ID>",
   }, operationSecurity);
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -323,6 +329,7 @@ import { Hibob } from "hibob";
   });
 
   const res = await sdk.people.getAvatars({});
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -363,6 +370,7 @@ import { Hibob } from "hibob";
     employeeId: "string",
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -399,6 +407,7 @@ import { Hibob } from "hibob";
   });
 
   const res = await sdk.people.getMyAvatar();
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -440,6 +449,7 @@ const operationSecurity: GetPeopleSecurity = {
 };
 
   const res = await sdk.people.getPeople({}, operationSecurity);
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -489,6 +499,7 @@ const operationSecurity: GetPeopleIdentifierSecurity = {
     identifier: "string",
   }, operationSecurity);
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -531,6 +542,7 @@ const operationSecurity: GetPeopleIdEmploymentSecurity = {
   const res = await sdk.people.getPeopleIdEmployment({
     id: "<ID>",
   }, operationSecurity);
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -575,6 +587,7 @@ const operationSecurity: GetPeopleIdEquitiesSecurity = {
     id: "<ID>",
   }, operationSecurity);
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -617,6 +630,7 @@ const operationSecurity: GetPeopleIdLifecycleSecurity = {
   const res = await sdk.people.getPeopleIdLifecycle({
     id: "<ID>",
   }, operationSecurity);
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -661,6 +675,7 @@ const operationSecurity: GetPeopleIdSalariesSecurity = {
     id: "<ID>",
   }, operationSecurity);
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -704,6 +719,7 @@ const operationSecurity: GetPeopleIdTrainingSecurity = {
     id: "<ID>",
   }, operationSecurity);
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -743,6 +759,7 @@ import { Hibob } from "hibob";
   const res = await sdk.people.getPeopleIdVariable({
     id: "<ID>",
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -786,6 +803,7 @@ const operationSecurity: GetPeopleIdWorkSecurity = {
     id: "<ID>",
   }, operationSecurity);
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -823,6 +841,7 @@ import { Hibob } from "hibob";
   });
 
   const res = await sdk.people.getProfiles({});
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -868,6 +887,7 @@ const operationSecurity: PostEmployeesEmployeeIdInvitationsSecurity = {
     },
     employeeId: "string",
   }, operationSecurity);
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -916,6 +936,7 @@ const operationSecurity: PostEmployeesEmployeeIdStartDateSecurity = {
     employeeId: "string",
   }, operationSecurity);
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -945,7 +966,7 @@ This changes the employee’s status to Terminated according to specified termin
 ```typescript
 import { Hibob } from "hibob";
 import { PostEmployeesIdentifierTerminateSecurity } from "hibob/dist/sdk/models/operations";
-import { EmployeeTerminationNoticePeriodUnit } from "hibob/dist/sdk/models/shared";
+import { EmployeeTerminationUnit } from "hibob/dist/sdk/models/shared";
 import { RFCDate } from "hibob/dist/sdk/types";
 
 (async() => {
@@ -964,6 +985,7 @@ const operationSecurity: PostEmployeesIdentifierTerminateSecurity = {
     },
     identifier: "string",
   }, operationSecurity);
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -1007,6 +1029,7 @@ const operationSecurity: PostEmployeesIdentifierUninviteSecurity = {
   const res = await sdk.people.postEmployeesIdentifierUninvite({
     identifier: "string",
   }, operationSecurity);
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -1057,6 +1080,7 @@ const operationSecurity: PostPeopleSecurity = {
       startDate: new RFCDate("2022-06-17"),
     },
   }, operationSecurity);
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -1117,6 +1141,7 @@ const operationSecurity: PostPeopleSearchSecurity = {
     ],
   }, operationSecurity);
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -1170,6 +1195,7 @@ const operationSecurity: PostPeopleIdentifierSecurity = {
     identifier: "string",
   }, operationSecurity);
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -1216,6 +1242,7 @@ const operationSecurity: PostPeopleIdEmploymentSecurity = {
     },
     id: "<ID>",
   }, operationSecurity);
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -1270,6 +1297,7 @@ const operationSecurity: PostPeopleIdEquitiesSecurity = {
     id: "<ID>",
   }, operationSecurity);
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -1322,6 +1350,7 @@ const operationSecurity: PostPeopleIdSalariesSecurity = {
     id: "<ID>",
   }, operationSecurity);
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -1372,6 +1401,7 @@ const operationSecurity: PostPeopleIdTrainingSecurity = {
     },
     id: "<ID>",
   }, operationSecurity);
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -1425,6 +1455,7 @@ const operationSecurity: PostPeopleIdVariableSecurity = {
     id: "<ID>",
   }, operationSecurity);
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -1476,6 +1507,7 @@ const operationSecurity: PostPeopleIdWorkSecurity = {
     id: "<ID>",
   }, operationSecurity);
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -1519,6 +1551,7 @@ import { Hibob } from "hibob";
     employeeId: "string",
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -1561,6 +1594,7 @@ const operationSecurity: PutPeopleIdentifierSecurity = {
     requestBody: {},
     identifier: "string",
   }, operationSecurity);
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -1606,6 +1640,7 @@ const operationSecurity: PutPeopleIdEmailSecurity = {
     id: "<ID>",
   }, operationSecurity);
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -1650,6 +1685,7 @@ import { RFCDate } from "hibob/dist/sdk/types";
     entryId: 799673,
     id: "<ID>",
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -1704,6 +1740,7 @@ const operationSecurity: PutPeopleIdEquitiesEntryIdSecurity = {
     id: "<ID>",
   }, operationSecurity);
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -1752,6 +1789,7 @@ import { RFCDate } from "hibob/dist/sdk/types";
     entryId: 410628,
     id: "<ID>",
   });
+
 
   if (res.statusCode == 200) {
     // handle response

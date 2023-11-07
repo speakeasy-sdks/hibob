@@ -1,5 +1,5 @@
 # Objects
-(*objects*)
+(*.objects*)
 
 ### Available Operations
 
@@ -36,6 +36,7 @@ const operationSecurity: PostObjectsPositionSearchSecurity = {
       },
     ],
   }, operationSecurity);
+
 
   if (res.statusCode == 200) {
     // handle response

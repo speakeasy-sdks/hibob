@@ -3,15 +3,15 @@
  */
 
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
-import { RFCDate } from "../../types";
+import { RFCDate } from "../../../sdk/types";
 import { Expose, Transform, Type } from "class-transformer";
 
-export class WorkEntryCustomColumns extends SpeakeasyBase {}
+export class CustomColumns extends SpeakeasyBase {}
 
 /**
  * The manager's details.
  */
-export class WorkEntryReportsTo extends SpeakeasyBase {
+export class ReportsTo extends SpeakeasyBase {
     /**
      * The manager's display name.
      */
@@ -51,8 +51,8 @@ export class WorkEntryReportsTo extends SpeakeasyBase {
 export class WorkEntry extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "customColumns" })
-    @Type(() => WorkEntryCustomColumns)
-    customColumns?: WorkEntryCustomColumns;
+    @Type(() => CustomColumns)
+    customColumns?: CustomColumns;
 
     /**
      * The employee's department.
@@ -89,8 +89,8 @@ export class WorkEntry extends SpeakeasyBase {
      */
     @SpeakeasyMetadata()
     @Expose({ name: "reportsTo" })
-    @Type(() => WorkEntryReportsTo)
-    reportsTo?: WorkEntryReportsTo;
+    @Type(() => ReportsTo)
+    reportsTo?: ReportsTo;
 
     /**
      * The employee's site.

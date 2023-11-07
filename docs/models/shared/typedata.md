@@ -1,4 +1,4 @@
-# CustomTableColumnTypeData
+# TypeData
 
 
 ## Fields

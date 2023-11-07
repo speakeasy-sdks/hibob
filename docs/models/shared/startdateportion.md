@@ -1,6 +1,6 @@
-# SubmitTimeoffRequestEndDatePortion
+# StartDatePortion
 
-Portion of the last day - relevant for requests in days.
+Portion of the first day - relevant for requests in days.
 
 
 ## Values

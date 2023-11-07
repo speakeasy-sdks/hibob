@@ -1,4 +1,4 @@
-# GetCompanyReportsReportIdDownloadAsyncFormat
+# QueryParamFormat
 
 File format
 

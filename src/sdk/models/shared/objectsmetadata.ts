@@ -5,7 +5,7 @@
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
 import { Expose, Type } from "class-transformer";
 
-export class ObjectsMetadataFieldTypeTypeData extends SpeakeasyBase {
+export class ObjectsMetadataTypeData extends SpeakeasyBase {
     /**
      * The ID of the list in the /v1/company/named-lists endpoint.
      */
@@ -14,7 +14,7 @@ export class ObjectsMetadataFieldTypeTypeData extends SpeakeasyBase {
     listId?: string;
 }
 
-export class ObjectsMetadataFieldType extends SpeakeasyBase {
+export class FieldType extends SpeakeasyBase {
     /**
      * The type of the field.
      */
@@ -24,11 +24,11 @@ export class ObjectsMetadataFieldType extends SpeakeasyBase {
 
     @SpeakeasyMetadata()
     @Expose({ name: "typeData" })
-    @Type(() => ObjectsMetadataFieldTypeTypeData)
-    typeData?: ObjectsMetadataFieldTypeTypeData;
+    @Type(() => ObjectsMetadataTypeData)
+    typeData?: ObjectsMetadataTypeData;
 }
 
-export class ObjectsMetadataJsonPath extends SpeakeasyBase {
+export class JsonPath extends SpeakeasyBase {
     /**
      * The path to the actual field value.
      */
@@ -54,8 +54,8 @@ export class ObjectsMetadata extends SpeakeasyBase {
 
     @SpeakeasyMetadata()
     @Expose({ name: "fieldType" })
-    @Type(() => ObjectsMetadataFieldType)
-    fieldType?: ObjectsMetadataFieldType;
+    @Type(() => FieldType)
+    fieldType?: FieldType;
 
     /**
      * ID of the field.
@@ -66,8 +66,8 @@ export class ObjectsMetadata extends SpeakeasyBase {
 
     @SpeakeasyMetadata()
     @Expose({ name: "jsonPath" })
-    @Type(() => ObjectsMetadataJsonPath)
-    jsonPath?: ObjectsMetadataJsonPath;
+    @Type(() => JsonPath)
+    jsonPath?: JsonPath;
 
     /**
      * Name of the field.

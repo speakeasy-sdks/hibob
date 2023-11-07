@@ -8,7 +8,7 @@ import { Expose } from "class-transformer";
 /**
  * Import status
  */
-export enum ImportAttendanceResponseStatus {
+export enum Status {
     Success = "success",
     Failed = "failed",
     PartialSuccess = "partial_success",
@@ -41,7 +41,7 @@ export class ImportAttendanceResponse extends SpeakeasyBase {
      */
     @SpeakeasyMetadata()
     @Expose({ name: "status" })
-    status?: ImportAttendanceResponseStatus;
+    status?: Status;
 
     /**
      * Total number of clock-in and clock-out events received

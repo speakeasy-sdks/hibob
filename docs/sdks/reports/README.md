@@ -1,5 +1,5 @@
 # Reports
-(*reports*)
+(*.reports*)
 
 ### Available Operations
 
@@ -28,6 +28,7 @@ const operationSecurity: GetCompanyReportsSecurity = {
 };
 
   const res = await sdk.reports.getCompanyReports(operationSecurity);
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -71,6 +72,7 @@ const operationSecurity: GetCompanyReportsDownloadReportNameSecurity = {
     reportName: "string",
   }, operationSecurity);
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -99,10 +101,7 @@ Returns a report data file in the specified format.<br /><b>Supported user types
 
 ```typescript
 import { Hibob } from "hibob";
-import {
-  GetCompanyReportsReportIdDownloadFormat,
-  GetCompanyReportsReportIdDownloadSecurity,
-} from "hibob/dist/sdk/models/operations";
+import { GetCompanyReportsReportIdDownloadSecurity, QueryParamFormat } from "hibob/dist/sdk/models/operations";
 
 (async() => {
   const sdk = new Hibob();
@@ -114,9 +113,10 @@ const operationSecurity: GetCompanyReportsReportIdDownloadSecurity = {
 };
 
   const res = await sdk.reports.getCompanyReportsReportIdDownload({
-    format: GetCompanyReportsReportIdDownloadFormat.Xlsx,
+    format: QueryParamFormat.Xlsx,
     reportId: 3566.85,
   }, operationSecurity);
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -146,10 +146,7 @@ Returns the polling URL report file of the specified format under "Location" in 
 
 ```typescript
 import { Hibob } from "hibob";
-import {
-  GetCompanyReportsReportIdDownloadAsyncFormat,
-  GetCompanyReportsReportIdDownloadAsyncSecurity,
-} from "hibob/dist/sdk/models/operations";
+import { Format, GetCompanyReportsReportIdDownloadAsyncSecurity } from "hibob/dist/sdk/models/operations";
 
 (async() => {
   const sdk = new Hibob();
@@ -161,9 +158,10 @@ const operationSecurity: GetCompanyReportsReportIdDownloadAsyncSecurity = {
 };
 
   const res = await sdk.reports.getCompanyReportsReportIdDownloadAsync({
-    format: GetCompanyReportsReportIdDownloadAsyncFormat.Xlsx,
+    format: Format.Xlsx,
     reportId: 7232.99,
   }, operationSecurity);
+
 
   if (res.statusCode == 200) {
     // handle response

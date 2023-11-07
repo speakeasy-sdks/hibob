@@ -1,4 +1,4 @@
-# TimeoffChangeChangeType
+# ChangeType
 
 Change type - created, canceled or deleted.
 

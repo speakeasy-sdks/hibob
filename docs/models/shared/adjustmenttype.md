@@ -1,4 +1,4 @@
-# AdjustmentRequestAdjustmentType
+# AdjustmentType
 
 Adjustment type - balance or time used.
 

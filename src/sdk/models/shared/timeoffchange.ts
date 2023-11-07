@@ -3,13 +3,13 @@
  */
 
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
-import { RFCDate } from "../../types";
+import { RFCDate } from "../../../sdk/types";
 import { Expose, Transform, Type } from "class-transformer";
 
 /**
  * Change type - created, canceled or deleted.
  */
-export enum TimeoffChangeChangeType {
+export enum ChangeType {
     Created = "Created",
     Canceled = "Canceled",
     Deleted = "Deleted",
@@ -18,7 +18,7 @@ export enum TimeoffChangeChangeType {
 /**
  * The unit used for the totalDuration and totalCost - either 'days' or 'hours'
  */
-export enum TimeoffChangeDurationUnit {
+export enum DurationUnit {
     Days = "days",
     Hours = "hours",
 }
@@ -46,7 +46,7 @@ export class TimeoffChange extends SpeakeasyBase {
      */
     @SpeakeasyMetadata()
     @Expose({ name: "changeType" })
-    changeType?: TimeoffChangeChangeType;
+    changeType?: ChangeType;
 
     /**
      * The time off duration in hours for every day in the request (relevant for requests using the hoursOnRange type)
@@ -76,7 +76,7 @@ export class TimeoffChange extends SpeakeasyBase {
      */
     @SpeakeasyMetadata()
     @Expose({ name: "durationUnit" })
-    durationUnit?: TimeoffChangeDurationUnit;
+    durationUnit?: DurationUnit;
 
     /**
      * Employee display name.
