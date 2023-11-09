@@ -1,5 +1,5 @@
 # Attendance
-(*.attendance*)
+(*attendance*)
 
 ### Available Operations
 
@@ -37,7 +37,6 @@ const operationSecurity: PostAttendanceImportImportMethodSecurity = {
     importMethod: ImportMethod.Immediate,
   }, operationSecurity);
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -46,14 +45,18 @@ const operationSecurity: PostAttendanceImportImportMethodSecurity = {
 
 ### Parameters
 
-| Parameter                                                                                                                  | Type                                                                                                                       | Required                                                                                                                   | Description                                                                                                                |
-| -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                  | [operations.PostAttendanceImportImportMethodRequest](../../models/operations/postattendanceimportimportmethodrequest.md)   | :heavy_check_mark:                                                                                                         | The request object to use for the request.                                                                                 |
-| `security`                                                                                                                 | [operations.PostAttendanceImportImportMethodSecurity](../../models/operations/postattendanceimportimportmethodsecurity.md) | :heavy_check_mark:                                                                                                         | The security requirements to use for the request.                                                                          |
-| `config`                                                                                                                   | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                               | :heavy_minus_sign:                                                                                                         | Available config options for making requests.                                                                              |
+| Parameter                                                                                                                      | Type                                                                                                                           | Required                                                                                                                       | Description                                                                                                                    |
+| ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                                                      | [operations.PostAttendanceImportImportMethodRequest](../../sdk/models/operations/postattendanceimportimportmethodrequest.md)   | :heavy_check_mark:                                                                                                             | The request object to use for the request.                                                                                     |
+| `security`                                                                                                                     | [operations.PostAttendanceImportImportMethodSecurity](../../sdk/models/operations/postattendanceimportimportmethodsecurity.md) | :heavy_check_mark:                                                                                                             | The security requirements to use for the request.                                                                              |
+| `config`                                                                                                                       | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                   | :heavy_minus_sign:                                                                                                             | Available config options for making requests.                                                                                  |
 
 
 ### Response
 
-**Promise<[operations.PostAttendanceImportImportMethodResponse](../../models/operations/postattendanceimportimportmethodresponse.md)>**
+**Promise<[operations.PostAttendanceImportImportMethodResponse](../../sdk/models/operations/postattendanceimportimportmethodresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |

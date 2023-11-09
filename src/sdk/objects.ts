@@ -35,7 +35,7 @@ export class Objects {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = baseURL.replace(/\/$/, "") + "/objects/position/search";
+        const operationUrl: string = baseURL.replace(/\/$/, "") + "/objects/position/search";
 
         let [reqBodyHeaders, reqBody]: [object, any] = [{}, null];
 
@@ -63,7 +63,7 @@ export class Objects {
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
-            url: url,
+            url: operationUrl,
             method: "post",
             headers: headers,
             responseType: "arraybuffer",

@@ -1,5 +1,5 @@
 # TimeOff
-(*.timeOff*)
+(*timeOff*)
 
 ### Available Operations
 
@@ -42,7 +42,6 @@ const operationSecurity: DeleteTimeoffEmployeesIdRequestsRequestIdSecurity = {
     requestId: 313155,
   }, operationSecurity);
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -51,17 +50,21 @@ const operationSecurity: DeleteTimeoffEmployeesIdRequestsRequestIdSecurity = {
 
 ### Parameters
 
-| Parameter                                                                                                                                    | Type                                                                                                                                         | Required                                                                                                                                     | Description                                                                                                                                  |
-| -------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                                    | [operations.DeleteTimeoffEmployeesIdRequestsRequestIdRequest](../../models/operations/deletetimeoffemployeesidrequestsrequestidrequest.md)   | :heavy_check_mark:                                                                                                                           | The request object to use for the request.                                                                                                   |
-| `security`                                                                                                                                   | [operations.DeleteTimeoffEmployeesIdRequestsRequestIdSecurity](../../models/operations/deletetimeoffemployeesidrequestsrequestidsecurity.md) | :heavy_check_mark:                                                                                                                           | The security requirements to use for the request.                                                                                            |
-| `config`                                                                                                                                     | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                                 | :heavy_minus_sign:                                                                                                                           | Available config options for making requests.                                                                                                |
+| Parameter                                                                                                                                        | Type                                                                                                                                             | Required                                                                                                                                         | Description                                                                                                                                      |
+| ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                                                                        | [operations.DeleteTimeoffEmployeesIdRequestsRequestIdRequest](../../sdk/models/operations/deletetimeoffemployeesidrequestsrequestidrequest.md)   | :heavy_check_mark:                                                                                                                               | The request object to use for the request.                                                                                                       |
+| `security`                                                                                                                                       | [operations.DeleteTimeoffEmployeesIdRequestsRequestIdSecurity](../../sdk/models/operations/deletetimeoffemployeesidrequestsrequestidsecurity.md) | :heavy_check_mark:                                                                                                                               | The security requirements to use for the request.                                                                                                |
+| `config`                                                                                                                                         | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                                     | :heavy_minus_sign:                                                                                                                               | Available config options for making requests.                                                                                                    |
 
 
 ### Response
 
-**Promise<[operations.DeleteTimeoffEmployeesIdRequestsRequestIdResponse](../../models/operations/deletetimeoffemployeesidrequestsrequestidresponse.md)>**
+**Promise<[operations.DeleteTimeoffEmployeesIdRequestsRequestIdResponse](../../sdk/models/operations/deletetimeoffemployeesidrequestsrequestidresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## getTimeoffEmployeesIdBalance
 
@@ -87,7 +90,6 @@ const operationSecurity: GetTimeoffEmployeesIdBalanceSecurity = {
     policyType: "string",
   }, operationSecurity);
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -96,17 +98,21 @@ const operationSecurity: GetTimeoffEmployeesIdBalanceSecurity = {
 
 ### Parameters
 
-| Parameter                                                                                                          | Type                                                                                                               | Required                                                                                                           | Description                                                                                                        |
-| ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                          | [operations.GetTimeoffEmployeesIdBalanceRequest](../../models/operations/gettimeoffemployeesidbalancerequest.md)   | :heavy_check_mark:                                                                                                 | The request object to use for the request.                                                                         |
-| `security`                                                                                                         | [operations.GetTimeoffEmployeesIdBalanceSecurity](../../models/operations/gettimeoffemployeesidbalancesecurity.md) | :heavy_check_mark:                                                                                                 | The security requirements to use for the request.                                                                  |
-| `config`                                                                                                           | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                       | :heavy_minus_sign:                                                                                                 | Available config options for making requests.                                                                      |
+| Parameter                                                                                                              | Type                                                                                                                   | Required                                                                                                               | Description                                                                                                            |
+| ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                              | [operations.GetTimeoffEmployeesIdBalanceRequest](../../sdk/models/operations/gettimeoffemployeesidbalancerequest.md)   | :heavy_check_mark:                                                                                                     | The request object to use for the request.                                                                             |
+| `security`                                                                                                             | [operations.GetTimeoffEmployeesIdBalanceSecurity](../../sdk/models/operations/gettimeoffemployeesidbalancesecurity.md) | :heavy_check_mark:                                                                                                     | The security requirements to use for the request.                                                                      |
+| `config`                                                                                                               | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                           | :heavy_minus_sign:                                                                                                     | Available config options for making requests.                                                                          |
 
 
 ### Response
 
-**Promise<[operations.GetTimeoffEmployeesIdBalanceResponse](../../models/operations/gettimeoffemployeesidbalanceresponse.md)>**
+**Promise<[operations.GetTimeoffEmployeesIdBalanceResponse](../../sdk/models/operations/gettimeoffemployeesidbalanceresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## getTimeoffEmployeesIdRequestsRequestId
 
@@ -132,7 +138,6 @@ const operationSecurity: GetTimeoffEmployeesIdRequestsRequestIdSecurity = {
     requestId: 662911,
   }, operationSecurity);
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -141,17 +146,21 @@ const operationSecurity: GetTimeoffEmployeesIdRequestsRequestIdSecurity = {
 
 ### Parameters
 
-| Parameter                                                                                                                              | Type                                                                                                                                   | Required                                                                                                                               | Description                                                                                                                            |
-| -------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                              | [operations.GetTimeoffEmployeesIdRequestsRequestIdRequest](../../models/operations/gettimeoffemployeesidrequestsrequestidrequest.md)   | :heavy_check_mark:                                                                                                                     | The request object to use for the request.                                                                                             |
-| `security`                                                                                                                             | [operations.GetTimeoffEmployeesIdRequestsRequestIdSecurity](../../models/operations/gettimeoffemployeesidrequestsrequestidsecurity.md) | :heavy_check_mark:                                                                                                                     | The security requirements to use for the request.                                                                                      |
-| `config`                                                                                                                               | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                           | :heavy_minus_sign:                                                                                                                     | Available config options for making requests.                                                                                          |
+| Parameter                                                                                                                                  | Type                                                                                                                                       | Required                                                                                                                                   | Description                                                                                                                                |
+| ------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                                                                  | [operations.GetTimeoffEmployeesIdRequestsRequestIdRequest](../../sdk/models/operations/gettimeoffemployeesidrequestsrequestidrequest.md)   | :heavy_check_mark:                                                                                                                         | The request object to use for the request.                                                                                                 |
+| `security`                                                                                                                                 | [operations.GetTimeoffEmployeesIdRequestsRequestIdSecurity](../../sdk/models/operations/gettimeoffemployeesidrequestsrequestidsecurity.md) | :heavy_check_mark:                                                                                                                         | The security requirements to use for the request.                                                                                          |
+| `config`                                                                                                                                   | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                               | :heavy_minus_sign:                                                                                                                         | Available config options for making requests.                                                                                              |
 
 
 ### Response
 
-**Promise<[operations.GetTimeoffEmployeesIdRequestsRequestIdResponse](../../models/operations/gettimeoffemployeesidrequestsrequestidresponse.md)>**
+**Promise<[operations.GetTimeoffEmployeesIdRequestsRequestIdResponse](../../sdk/models/operations/gettimeoffemployeesidrequestsrequestidresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## getTimeoffOuttoday
 
@@ -175,7 +184,6 @@ const operationSecurity: GetTimeoffOuttodaySecurity = {
 
   const res = await sdk.timeOff.getTimeoffOuttoday({}, operationSecurity);
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -184,17 +192,21 @@ const operationSecurity: GetTimeoffOuttodaySecurity = {
 
 ### Parameters
 
-| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
-| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
-| `request`                                                                                      | [operations.GetTimeoffOuttodayRequest](../../models/operations/gettimeoffouttodayrequest.md)   | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
-| `security`                                                                                     | [operations.GetTimeoffOuttodaySecurity](../../models/operations/gettimeoffouttodaysecurity.md) | :heavy_check_mark:                                                                             | The security requirements to use for the request.                                              |
-| `config`                                                                                       | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                   | :heavy_minus_sign:                                                                             | Available config options for making requests.                                                  |
+| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
+| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
+| `request`                                                                                          | [operations.GetTimeoffOuttodayRequest](../../sdk/models/operations/gettimeoffouttodayrequest.md)   | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
+| `security`                                                                                         | [operations.GetTimeoffOuttodaySecurity](../../sdk/models/operations/gettimeoffouttodaysecurity.md) | :heavy_check_mark:                                                                                 | The security requirements to use for the request.                                                  |
+| `config`                                                                                           | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                       | :heavy_minus_sign:                                                                                 | Available config options for making requests.                                                      |
 
 
 ### Response
 
-**Promise<[operations.GetTimeoffOuttodayResponse](../../models/operations/gettimeoffouttodayresponse.md)>**
+**Promise<[operations.GetTimeoffOuttodayResponse](../../sdk/models/operations/gettimeoffouttodayresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## getTimeoffPolicies
 
@@ -217,7 +229,6 @@ const operationSecurity: GetTimeoffPoliciesSecurity = {
     policyName: "string",
   }, operationSecurity);
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -226,17 +237,21 @@ const operationSecurity: GetTimeoffPoliciesSecurity = {
 
 ### Parameters
 
-| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
-| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
-| `request`                                                                                      | [operations.GetTimeoffPoliciesRequest](../../models/operations/gettimeoffpoliciesrequest.md)   | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
-| `security`                                                                                     | [operations.GetTimeoffPoliciesSecurity](../../models/operations/gettimeoffpoliciessecurity.md) | :heavy_check_mark:                                                                             | The security requirements to use for the request.                                              |
-| `config`                                                                                       | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                   | :heavy_minus_sign:                                                                             | Available config options for making requests.                                                  |
+| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
+| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
+| `request`                                                                                          | [operations.GetTimeoffPoliciesRequest](../../sdk/models/operations/gettimeoffpoliciesrequest.md)   | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
+| `security`                                                                                         | [operations.GetTimeoffPoliciesSecurity](../../sdk/models/operations/gettimeoffpoliciessecurity.md) | :heavy_check_mark:                                                                                 | The security requirements to use for the request.                                                  |
+| `config`                                                                                           | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                       | :heavy_minus_sign:                                                                                 | Available config options for making requests.                                                      |
 
 
 ### Response
 
-**Promise<[operations.GetTimeoffPoliciesResponse](../../models/operations/gettimeoffpoliciesresponse.md)>**
+**Promise<[operations.GetTimeoffPoliciesResponse](../../sdk/models/operations/gettimeoffpoliciesresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## getTimeoffPoliciesNames
 
@@ -259,7 +274,6 @@ const operationSecurity: GetTimeoffPoliciesNamesSecurity = {
     policyTypeName: "string",
   }, operationSecurity);
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -268,17 +282,21 @@ const operationSecurity: GetTimeoffPoliciesNamesSecurity = {
 
 ### Parameters
 
-| Parameter                                                                                                | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                | [operations.GetTimeoffPoliciesNamesRequest](../../models/operations/gettimeoffpoliciesnamesrequest.md)   | :heavy_check_mark:                                                                                       | The request object to use for the request.                                                               |
-| `security`                                                                                               | [operations.GetTimeoffPoliciesNamesSecurity](../../models/operations/gettimeoffpoliciesnamessecurity.md) | :heavy_check_mark:                                                                                       | The security requirements to use for the request.                                                        |
-| `config`                                                                                                 | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                             | :heavy_minus_sign:                                                                                       | Available config options for making requests.                                                            |
+| Parameter                                                                                                    | Type                                                                                                         | Required                                                                                                     | Description                                                                                                  |
+| ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                                    | [operations.GetTimeoffPoliciesNamesRequest](../../sdk/models/operations/gettimeoffpoliciesnamesrequest.md)   | :heavy_check_mark:                                                                                           | The request object to use for the request.                                                                   |
+| `security`                                                                                                   | [operations.GetTimeoffPoliciesNamesSecurity](../../sdk/models/operations/gettimeoffpoliciesnamessecurity.md) | :heavy_check_mark:                                                                                           | The security requirements to use for the request.                                                            |
+| `config`                                                                                                     | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                 | :heavy_minus_sign:                                                                                           | Available config options for making requests.                                                                |
 
 
 ### Response
 
-**Promise<[operations.GetTimeoffPoliciesNamesResponse](../../models/operations/gettimeoffpoliciesnamesresponse.md)>**
+**Promise<[operations.GetTimeoffPoliciesNamesResponse](../../sdk/models/operations/gettimeoffpoliciesnamesresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## getTimeoffPolicyTypes
 
@@ -299,7 +317,6 @@ const operationSecurity: GetTimeoffPolicyTypesSecurity = {
 
   const res = await sdk.timeOff.getTimeoffPolicyTypes(operationSecurity);
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -308,16 +325,20 @@ const operationSecurity: GetTimeoffPolicyTypesSecurity = {
 
 ### Parameters
 
-| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
-| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
-| `security`                                                                                           | [operations.GetTimeoffPolicyTypesSecurity](../../models/operations/gettimeoffpolicytypessecurity.md) | :heavy_check_mark:                                                                                   | The security requirements to use for the request.                                                    |
-| `config`                                                                                             | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                         | :heavy_minus_sign:                                                                                   | Available config options for making requests.                                                        |
+| Parameter                                                                                                | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
+| -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
+| `security`                                                                                               | [operations.GetTimeoffPolicyTypesSecurity](../../sdk/models/operations/gettimeoffpolicytypessecurity.md) | :heavy_check_mark:                                                                                       | The security requirements to use for the request.                                                        |
+| `config`                                                                                                 | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                             | :heavy_minus_sign:                                                                                       | Available config options for making requests.                                                            |
 
 
 ### Response
 
-**Promise<[operations.GetTimeoffPolicyTypesResponse](../../models/operations/gettimeoffpolicytypesresponse.md)>**
+**Promise<[operations.GetTimeoffPolicyTypesResponse](../../sdk/models/operations/gettimeoffpolicytypesresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## getTimeoffPolicyTypesPolicyType
 
@@ -340,7 +361,6 @@ const operationSecurity: GetTimeoffPolicyTypesPolicyTypeSecurity = {
     policyType: "string",
   }, operationSecurity);
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -349,17 +369,21 @@ const operationSecurity: GetTimeoffPolicyTypesPolicyTypeSecurity = {
 
 ### Parameters
 
-| Parameter                                                                                                                | Type                                                                                                                     | Required                                                                                                                 | Description                                                                                                              |
-| ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                                | [operations.GetTimeoffPolicyTypesPolicyTypeRequest](../../models/operations/gettimeoffpolicytypespolicytyperequest.md)   | :heavy_check_mark:                                                                                                       | The request object to use for the request.                                                                               |
-| `security`                                                                                                               | [operations.GetTimeoffPolicyTypesPolicyTypeSecurity](../../models/operations/gettimeoffpolicytypespolicytypesecurity.md) | :heavy_check_mark:                                                                                                       | The security requirements to use for the request.                                                                        |
-| `config`                                                                                                                 | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                             | :heavy_minus_sign:                                                                                                       | Available config options for making requests.                                                                            |
+| Parameter                                                                                                                    | Type                                                                                                                         | Required                                                                                                                     | Description                                                                                                                  |
+| ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                    | [operations.GetTimeoffPolicyTypesPolicyTypeRequest](../../sdk/models/operations/gettimeoffpolicytypespolicytyperequest.md)   | :heavy_check_mark:                                                                                                           | The request object to use for the request.                                                                                   |
+| `security`                                                                                                                   | [operations.GetTimeoffPolicyTypesPolicyTypeSecurity](../../sdk/models/operations/gettimeoffpolicytypespolicytypesecurity.md) | :heavy_check_mark:                                                                                                           | The security requirements to use for the request.                                                                            |
+| `config`                                                                                                                     | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                 | :heavy_minus_sign:                                                                                                           | Available config options for making requests.                                                                                |
 
 
 ### Response
 
-**Promise<[operations.GetTimeoffPolicyTypesPolicyTypeResponse](../../models/operations/gettimeoffpolicytypespolicytyperesponse.md)>**
+**Promise<[operations.GetTimeoffPolicyTypesPolicyTypeResponse](../../sdk/models/operations/gettimeoffpolicytypespolicytyperesponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## getTimeoffPolicyTypesPolicyTypeReasonCodes
 
@@ -382,7 +406,6 @@ const operationSecurity: GetTimeoffPolicyTypesPolicyTypeReasonCodesSecurity = {
     policyType: "string",
   }, operationSecurity);
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -391,17 +414,21 @@ const operationSecurity: GetTimeoffPolicyTypesPolicyTypeReasonCodesSecurity = {
 
 ### Parameters
 
-| Parameter                                                                                                                                      | Type                                                                                                                                           | Required                                                                                                                                       | Description                                                                                                                                    |
-| ---------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                                      | [operations.GetTimeoffPolicyTypesPolicyTypeReasonCodesRequest](../../models/operations/gettimeoffpolicytypespolicytypereasoncodesrequest.md)   | :heavy_check_mark:                                                                                                                             | The request object to use for the request.                                                                                                     |
-| `security`                                                                                                                                     | [operations.GetTimeoffPolicyTypesPolicyTypeReasonCodesSecurity](../../models/operations/gettimeoffpolicytypespolicytypereasoncodessecurity.md) | :heavy_check_mark:                                                                                                                             | The security requirements to use for the request.                                                                                              |
-| `config`                                                                                                                                       | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                                   | :heavy_minus_sign:                                                                                                                             | Available config options for making requests.                                                                                                  |
+| Parameter                                                                                                                                          | Type                                                                                                                                               | Required                                                                                                                                           | Description                                                                                                                                        |
+| -------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                                          | [operations.GetTimeoffPolicyTypesPolicyTypeReasonCodesRequest](../../sdk/models/operations/gettimeoffpolicytypespolicytypereasoncodesrequest.md)   | :heavy_check_mark:                                                                                                                                 | The request object to use for the request.                                                                                                         |
+| `security`                                                                                                                                         | [operations.GetTimeoffPolicyTypesPolicyTypeReasonCodesSecurity](../../sdk/models/operations/gettimeoffpolicytypespolicytypereasoncodessecurity.md) | :heavy_check_mark:                                                                                                                                 | The security requirements to use for the request.                                                                                                  |
+| `config`                                                                                                                                           | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                                       | :heavy_minus_sign:                                                                                                                                 | Available config options for making requests.                                                                                                      |
 
 
 ### Response
 
-**Promise<[operations.GetTimeoffPolicyTypesPolicyTypeReasonCodesResponse](../../models/operations/gettimeoffpolicytypespolicytypereasoncodesresponse.md)>**
+**Promise<[operations.GetTimeoffPolicyTypesPolicyTypeReasonCodesResponse](../../sdk/models/operations/gettimeoffpolicytypespolicytypereasoncodesresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## getTimeoffRequestsChanges
 
@@ -427,7 +454,6 @@ const operationSecurity: GetTimeoffRequestsChangesSecurity = {
     since: new RFCDate("2021-06-11"),
   }, operationSecurity);
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -436,17 +462,21 @@ const operationSecurity: GetTimeoffRequestsChangesSecurity = {
 
 ### Parameters
 
-| Parameter                                                                                                    | Type                                                                                                         | Required                                                                                                     | Description                                                                                                  |
-| ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                    | [operations.GetTimeoffRequestsChangesRequest](../../models/operations/gettimeoffrequestschangesrequest.md)   | :heavy_check_mark:                                                                                           | The request object to use for the request.                                                                   |
-| `security`                                                                                                   | [operations.GetTimeoffRequestsChangesSecurity](../../models/operations/gettimeoffrequestschangessecurity.md) | :heavy_check_mark:                                                                                           | The security requirements to use for the request.                                                            |
-| `config`                                                                                                     | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                 | :heavy_minus_sign:                                                                                           | Available config options for making requests.                                                                |
+| Parameter                                                                                                        | Type                                                                                                             | Required                                                                                                         | Description                                                                                                      |
+| ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                        | [operations.GetTimeoffRequestsChangesRequest](../../sdk/models/operations/gettimeoffrequestschangesrequest.md)   | :heavy_check_mark:                                                                                               | The request object to use for the request.                                                                       |
+| `security`                                                                                                       | [operations.GetTimeoffRequestsChangesSecurity](../../sdk/models/operations/gettimeoffrequestschangessecurity.md) | :heavy_check_mark:                                                                                               | The security requirements to use for the request.                                                                |
+| `config`                                                                                                         | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                     | :heavy_minus_sign:                                                                                               | Available config options for making requests.                                                                    |
 
 
 ### Response
 
-**Promise<[operations.GetTimeoffRequestsChangesResponse](../../models/operations/gettimeoffrequestschangesresponse.md)>**
+**Promise<[operations.GetTimeoffRequestsChangesResponse](../../sdk/models/operations/gettimeoffrequestschangesresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## getTimeoffWhosout
 
@@ -473,7 +503,6 @@ const operationSecurity: GetTimeoffWhosoutSecurity = {
     to: new RFCDate("2022-04-17"),
   }, operationSecurity);
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -482,17 +511,21 @@ const operationSecurity: GetTimeoffWhosoutSecurity = {
 
 ### Parameters
 
-| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
-| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
-| `request`                                                                                    | [operations.GetTimeoffWhosoutRequest](../../models/operations/gettimeoffwhosoutrequest.md)   | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
-| `security`                                                                                   | [operations.GetTimeoffWhosoutSecurity](../../models/operations/gettimeoffwhosoutsecurity.md) | :heavy_check_mark:                                                                           | The security requirements to use for the request.                                            |
-| `config`                                                                                     | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                 | :heavy_minus_sign:                                                                           | Available config options for making requests.                                                |
+| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
+| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
+| `request`                                                                                        | [operations.GetTimeoffWhosoutRequest](../../sdk/models/operations/gettimeoffwhosoutrequest.md)   | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
+| `security`                                                                                       | [operations.GetTimeoffWhosoutSecurity](../../sdk/models/operations/gettimeoffwhosoutsecurity.md) | :heavy_check_mark:                                                                               | The security requirements to use for the request.                                                |
+| `config`                                                                                         | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                     | :heavy_minus_sign:                                                                               | Available config options for making requests.                                                    |
 
 
 ### Response
 
-**Promise<[operations.GetTimeoffWhosoutResponse](../../models/operations/gettimeoffwhosoutresponse.md)>**
+**Promise<[operations.GetTimeoffWhosoutResponse](../../sdk/models/operations/gettimeoffwhosoutresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## postTimeoffEmployeesIdAdjustments
 
@@ -518,7 +551,6 @@ const operationSecurity: PostTimeoffEmployeesIdAdjustmentsSecurity = {
     id: "<ID>",
   }, operationSecurity);
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -527,17 +559,21 @@ const operationSecurity: PostTimeoffEmployeesIdAdjustmentsSecurity = {
 
 ### Parameters
 
-| Parameter                                                                                                                    | Type                                                                                                                         | Required                                                                                                                     | Description                                                                                                                  |
-| ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                    | [operations.PostTimeoffEmployeesIdAdjustmentsRequest](../../models/operations/posttimeoffemployeesidadjustmentsrequest.md)   | :heavy_check_mark:                                                                                                           | The request object to use for the request.                                                                                   |
-| `security`                                                                                                                   | [operations.PostTimeoffEmployeesIdAdjustmentsSecurity](../../models/operations/posttimeoffemployeesidadjustmentssecurity.md) | :heavy_check_mark:                                                                                                           | The security requirements to use for the request.                                                                            |
-| `config`                                                                                                                     | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                 | :heavy_minus_sign:                                                                                                           | Available config options for making requests.                                                                                |
+| Parameter                                                                                                                        | Type                                                                                                                             | Required                                                                                                                         | Description                                                                                                                      |
+| -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                        | [operations.PostTimeoffEmployeesIdAdjustmentsRequest](../../sdk/models/operations/posttimeoffemployeesidadjustmentsrequest.md)   | :heavy_check_mark:                                                                                                               | The request object to use for the request.                                                                                       |
+| `security`                                                                                                                       | [operations.PostTimeoffEmployeesIdAdjustmentsSecurity](../../sdk/models/operations/posttimeoffemployeesidadjustmentssecurity.md) | :heavy_check_mark:                                                                                                               | The security requirements to use for the request.                                                                                |
+| `config`                                                                                                                         | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                     | :heavy_minus_sign:                                                                                                               | Available config options for making requests.                                                                                    |
 
 
 ### Response
 
-**Promise<[operations.PostTimeoffEmployeesIdAdjustmentsResponse](../../models/operations/posttimeoffemployeesidadjustmentsresponse.md)>**
+**Promise<[operations.PostTimeoffEmployeesIdAdjustmentsResponse](../../sdk/models/operations/posttimeoffemployeesidadjustmentsresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## postTimeoffEmployeesIdRequests
 
@@ -573,7 +609,6 @@ const operationSecurity: PostTimeoffEmployeesIdRequestsSecurity = {
     id: "<ID>",
   }, operationSecurity);
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -582,17 +617,21 @@ const operationSecurity: PostTimeoffEmployeesIdRequestsSecurity = {
 
 ### Parameters
 
-| Parameter                                                                                                              | Type                                                                                                                   | Required                                                                                                               | Description                                                                                                            |
-| ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                              | [operations.PostTimeoffEmployeesIdRequestsRequest](../../models/operations/posttimeoffemployeesidrequestsrequest.md)   | :heavy_check_mark:                                                                                                     | The request object to use for the request.                                                                             |
-| `security`                                                                                                             | [operations.PostTimeoffEmployeesIdRequestsSecurity](../../models/operations/posttimeoffemployeesidrequestssecurity.md) | :heavy_check_mark:                                                                                                     | The security requirements to use for the request.                                                                      |
-| `config`                                                                                                               | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                           | :heavy_minus_sign:                                                                                                     | Available config options for making requests.                                                                          |
+| Parameter                                                                                                                  | Type                                                                                                                       | Required                                                                                                                   | Description                                                                                                                |
+| -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                  | [operations.PostTimeoffEmployeesIdRequestsRequest](../../sdk/models/operations/posttimeoffemployeesidrequestsrequest.md)   | :heavy_check_mark:                                                                                                         | The request object to use for the request.                                                                                 |
+| `security`                                                                                                                 | [operations.PostTimeoffEmployeesIdRequestsSecurity](../../sdk/models/operations/posttimeoffemployeesidrequestssecurity.md) | :heavy_check_mark:                                                                                                         | The security requirements to use for the request.                                                                          |
+| `config`                                                                                                                   | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                               | :heavy_minus_sign:                                                                                                         | Available config options for making requests.                                                                              |
 
 
 ### Response
 
-**Promise<[operations.PostTimeoffEmployeesIdRequestsResponse](../../models/operations/posttimeoffemployeesidrequestsresponse.md)>**
+**Promise<[operations.PostTimeoffEmployeesIdRequestsResponse](../../sdk/models/operations/posttimeoffemployeesidrequestsresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## postTimeoffPolicyTypesPolicyTypeReasonCodes
 
@@ -620,7 +659,6 @@ const operationSecurity: PostTimeoffPolicyTypesPolicyTypeReasonCodesSecurity = {
     policyType: "string",
   }, operationSecurity);
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -629,14 +667,18 @@ const operationSecurity: PostTimeoffPolicyTypesPolicyTypeReasonCodesSecurity = {
 
 ### Parameters
 
-| Parameter                                                                                                                                        | Type                                                                                                                                             | Required                                                                                                                                         | Description                                                                                                                                      |
-| ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                                                        | [operations.PostTimeoffPolicyTypesPolicyTypeReasonCodesRequest](../../models/operations/posttimeoffpolicytypespolicytypereasoncodesrequest.md)   | :heavy_check_mark:                                                                                                                               | The request object to use for the request.                                                                                                       |
-| `security`                                                                                                                                       | [operations.PostTimeoffPolicyTypesPolicyTypeReasonCodesSecurity](../../models/operations/posttimeoffpolicytypespolicytypereasoncodessecurity.md) | :heavy_check_mark:                                                                                                                               | The security requirements to use for the request.                                                                                                |
-| `config`                                                                                                                                         | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                                     | :heavy_minus_sign:                                                                                                                               | Available config options for making requests.                                                                                                    |
+| Parameter                                                                                                                                            | Type                                                                                                                                                 | Required                                                                                                                                             | Description                                                                                                                                          |
+| ---------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                                            | [operations.PostTimeoffPolicyTypesPolicyTypeReasonCodesRequest](../../sdk/models/operations/posttimeoffpolicytypespolicytypereasoncodesrequest.md)   | :heavy_check_mark:                                                                                                                                   | The request object to use for the request.                                                                                                           |
+| `security`                                                                                                                                           | [operations.PostTimeoffPolicyTypesPolicyTypeReasonCodesSecurity](../../sdk/models/operations/posttimeoffpolicytypespolicytypereasoncodessecurity.md) | :heavy_check_mark:                                                                                                                                   | The security requirements to use for the request.                                                                                                    |
+| `config`                                                                                                                                             | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                                         | :heavy_minus_sign:                                                                                                                                   | Available config options for making requests.                                                                                                        |
 
 
 ### Response
 
-**Promise<[operations.PostTimeoffPolicyTypesPolicyTypeReasonCodesResponse](../../models/operations/posttimeoffpolicytypespolicytypereasoncodesresponse.md)>**
+**Promise<[operations.PostTimeoffPolicyTypesPolicyTypeReasonCodesResponse](../../sdk/models/operations/posttimeoffpolicytypespolicytypereasoncodesresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |

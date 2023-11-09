@@ -35,7 +35,11 @@ export class Attendance {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = utils.generateURL(baseURL, "/attendance/import/{importMethod}", req);
+        const operationUrl: string = utils.generateURL(
+            baseURL,
+            "/attendance/import/{importMethod}",
+            req
+        );
 
         let [reqBodyHeaders, reqBody]: [object, any] = [{}, null];
 
@@ -67,7 +71,7 @@ export class Attendance {
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
-            url: url,
+            url: operationUrl,
             method: "post",
             headers: headers,
             responseType: "arraybuffer",

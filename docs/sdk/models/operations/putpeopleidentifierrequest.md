@@ -1,0 +1,9 @@
+# PutPeopleIdentifierRequest
+
+
+## Fields
+
+| Field                                                                                                         | Type                                                                                                          | Required                                                                                                      | Description                                                                                                   |
+| ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- |
+| `requestBody`                                                                                                 | [operations.PutPeopleIdentifierRequestBody](../../../sdk/models/operations/putpeopleidentifierrequestbody.md) | :heavy_check_mark:                                                                                            | Use Fields Metadata API for available field definitions                                                       |
+| `identifier`                                                                                                  | *string*                                                                                                      | :heavy_check_mark:                                                                                            | Employee ID.                                                                                                  |

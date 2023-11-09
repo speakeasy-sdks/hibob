@@ -35,7 +35,7 @@ export class TimeOff {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = utils.generateURL(
+        const operationUrl: string = utils.generateURL(
             baseURL,
             "/timeoff/employees/{id}/requests/{requestId}",
             req
@@ -52,7 +52,7 @@ export class TimeOff {
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
-            url: url,
+            url: operationUrl,
             method: "delete",
             headers: headers,
             responseType: "arraybuffer",
@@ -98,7 +98,11 @@ export class TimeOff {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = utils.generateURL(baseURL, "/timeoff/employees/{id}/balance", req);
+        const operationUrl: string = utils.generateURL(
+            baseURL,
+            "/timeoff/employees/{id}/balance",
+            req
+        );
         const client: AxiosInstance = this.sdkConfiguration.defaultClient;
         if (!(security instanceof utils.SpeakeasyBase)) {
             security = new operations.GetTimeoffEmployeesIdBalanceSecurity(security);
@@ -112,7 +116,7 @@ export class TimeOff {
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
-            url: url + queryParams,
+            url: operationUrl + queryParams,
             method: "get",
             headers: headers,
             responseType: "arraybuffer",
@@ -184,7 +188,7 @@ export class TimeOff {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = utils.generateURL(
+        const operationUrl: string = utils.generateURL(
             baseURL,
             "/timeoff/employees/{id}/requests/{requestId}",
             req
@@ -201,7 +205,7 @@ export class TimeOff {
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
-            url: url,
+            url: operationUrl,
             method: "get",
             headers: headers,
             responseType: "arraybuffer",
@@ -263,7 +267,7 @@ export class TimeOff {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = baseURL.replace(/\/$/, "") + "/timeoff/outtoday";
+        const operationUrl: string = baseURL.replace(/\/$/, "") + "/timeoff/outtoday";
         const client: AxiosInstance = this.sdkConfiguration.defaultClient;
         if (!(security instanceof utils.SpeakeasyBase)) {
             security = new operations.GetTimeoffOuttodaySecurity(security);
@@ -277,7 +281,7 @@ export class TimeOff {
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
-            url: url + queryParams,
+            url: operationUrl + queryParams,
             method: "get",
             headers: headers,
             responseType: "arraybuffer",
@@ -346,7 +350,7 @@ export class TimeOff {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = baseURL.replace(/\/$/, "") + "/timeoff/policies";
+        const operationUrl: string = baseURL.replace(/\/$/, "") + "/timeoff/policies";
         const client: AxiosInstance = this.sdkConfiguration.defaultClient;
         if (!(security instanceof utils.SpeakeasyBase)) {
             security = new operations.GetTimeoffPoliciesSecurity(security);
@@ -360,7 +364,7 @@ export class TimeOff {
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
-            url: url + queryParams,
+            url: operationUrl + queryParams,
             method: "get",
             headers: headers,
             responseType: "arraybuffer",
@@ -419,7 +423,7 @@ export class TimeOff {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = baseURL.replace(/\/$/, "") + "/timeoff/policies/names";
+        const operationUrl: string = baseURL.replace(/\/$/, "") + "/timeoff/policies/names";
         const client: AxiosInstance = this.sdkConfiguration.defaultClient;
         if (!(security instanceof utils.SpeakeasyBase)) {
             security = new operations.GetTimeoffPoliciesNamesSecurity(security);
@@ -433,7 +437,7 @@ export class TimeOff {
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
-            url: url + queryParams,
+            url: operationUrl + queryParams,
             method: "get",
             headers: headers,
             responseType: "arraybuffer",
@@ -488,7 +492,7 @@ export class TimeOff {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = baseURL.replace(/\/$/, "") + "/timeoff/policy-types";
+        const operationUrl: string = baseURL.replace(/\/$/, "") + "/timeoff/policy-types";
         const client: AxiosInstance = this.sdkConfiguration.defaultClient;
         if (!(security instanceof utils.SpeakeasyBase)) {
             security = new operations.GetTimeoffPolicyTypesSecurity(security);
@@ -501,7 +505,7 @@ export class TimeOff {
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
-            url: url,
+            url: operationUrl,
             method: "get",
             headers: headers,
             responseType: "arraybuffer",
@@ -573,7 +577,11 @@ export class TimeOff {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = utils.generateURL(baseURL, "/timeoff/policy-types/{policyType}", req);
+        const operationUrl: string = utils.generateURL(
+            baseURL,
+            "/timeoff/policy-types/{policyType}",
+            req
+        );
         const client: AxiosInstance = this.sdkConfiguration.defaultClient;
         if (!(security instanceof utils.SpeakeasyBase)) {
             security = new operations.GetTimeoffPolicyTypesPolicyTypeSecurity(security);
@@ -586,7 +594,7 @@ export class TimeOff {
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
-            url: url,
+            url: operationUrl,
             method: "get",
             headers: headers,
             responseType: "arraybuffer",
@@ -645,7 +653,7 @@ export class TimeOff {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = utils.generateURL(
+        const operationUrl: string = utils.generateURL(
             baseURL,
             "/timeoff/policy-types/{policyType}/reason-codes",
             req
@@ -662,7 +670,7 @@ export class TimeOff {
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
-            url: url,
+            url: operationUrl,
             method: "get",
             headers: headers,
             responseType: "arraybuffer",
@@ -724,7 +732,7 @@ export class TimeOff {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = baseURL.replace(/\/$/, "") + "/timeoff/requests/changes";
+        const operationUrl: string = baseURL.replace(/\/$/, "") + "/timeoff/requests/changes";
         const client: AxiosInstance = this.sdkConfiguration.defaultClient;
         if (!(security instanceof utils.SpeakeasyBase)) {
             security = new operations.GetTimeoffRequestsChangesSecurity(security);
@@ -738,7 +746,7 @@ export class TimeOff {
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
-            url: url + queryParams,
+            url: operationUrl + queryParams,
             method: "get",
             headers: headers,
             responseType: "arraybuffer",
@@ -798,7 +806,7 @@ export class TimeOff {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = baseURL.replace(/\/$/, "") + "/timeoff/whosout";
+        const operationUrl: string = baseURL.replace(/\/$/, "") + "/timeoff/whosout";
         const client: AxiosInstance = this.sdkConfiguration.defaultClient;
         if (!(security instanceof utils.SpeakeasyBase)) {
             security = new operations.GetTimeoffWhosoutSecurity(security);
@@ -812,7 +820,7 @@ export class TimeOff {
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
-            url: url + queryParams,
+            url: operationUrl + queryParams,
             method: "get",
             headers: headers,
             responseType: "arraybuffer",
@@ -880,7 +888,11 @@ export class TimeOff {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = utils.generateURL(baseURL, "/timeoff/employees/{id}/adjustments", req);
+        const operationUrl: string = utils.generateURL(
+            baseURL,
+            "/timeoff/employees/{id}/adjustments",
+            req
+        );
 
         let [reqBodyHeaders, reqBody]: [object, any] = [{}, null];
 
@@ -912,7 +924,7 @@ export class TimeOff {
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
-            url: url,
+            url: operationUrl,
             method: "post",
             headers: headers,
             responseType: "arraybuffer",
@@ -972,7 +984,11 @@ export class TimeOff {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = utils.generateURL(baseURL, "/timeoff/employees/{id}/requests", req);
+        const operationUrl: string = utils.generateURL(
+            baseURL,
+            "/timeoff/employees/{id}/requests",
+            req
+        );
 
         let [reqBodyHeaders, reqBody]: [object, any] = [{}, null];
 
@@ -1004,7 +1020,7 @@ export class TimeOff {
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
-            url: url,
+            url: operationUrl,
             method: "post",
             headers: headers,
             responseType: "arraybuffer",
@@ -1051,7 +1067,7 @@ export class TimeOff {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = utils.generateURL(
+        const operationUrl: string = utils.generateURL(
             baseURL,
             "/timeoff/policy-types/{policyType}/reason-codes",
             req
@@ -1083,7 +1099,7 @@ export class TimeOff {
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
-            url: url,
+            url: operationUrl,
             method: "post",
             headers: headers,
             responseType: "arraybuffer",

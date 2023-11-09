@@ -1,5 +1,5 @@
 # Onboarding
-(*.onboarding*)
+(*onboarding*)
 
 ### Available Operations
 
@@ -23,7 +23,6 @@ import { Hibob } from "hibob";
 
   const res = await sdk.onboarding.getOnboardingWizards();
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -39,5 +38,9 @@ import { Hibob } from "hibob";
 
 ### Response
 
-**Promise<[operations.GetOnboardingWizardsResponse](../../models/operations/getonboardingwizardsresponse.md)>**
+**Promise<[operations.GetOnboardingWizardsResponse](../../sdk/models/operations/getonboardingwizardsresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |

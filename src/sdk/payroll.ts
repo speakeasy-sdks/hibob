@@ -35,7 +35,11 @@ export class Payroll {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = utils.generateURL(baseURL, "/people/{id}/equities/{entry_id}", req);
+        const operationUrl: string = utils.generateURL(
+            baseURL,
+            "/people/{id}/equities/{entry_id}",
+            req
+        );
         const client: AxiosInstance = this.sdkConfiguration.defaultClient;
         if (!(security instanceof utils.SpeakeasyBase)) {
             security = new operations.DeletePeopleIdEquitiesEntryIdSecurity(security);
@@ -48,7 +52,7 @@ export class Payroll {
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
-            url: url,
+            url: operationUrl,
             method: "delete",
             headers: headers,
             responseType: "arraybuffer",
@@ -94,7 +98,11 @@ export class Payroll {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = utils.generateURL(baseURL, "/people/{id}/salaries/{entry_id}", req);
+        const operationUrl: string = utils.generateURL(
+            baseURL,
+            "/people/{id}/salaries/{entry_id}",
+            req
+        );
         const client: AxiosInstance = this.sdkConfiguration.defaultClient;
         if (!(security instanceof utils.SpeakeasyBase)) {
             security = new operations.DeletePeopleIdSalariesEntryIdSecurity(security);
@@ -107,7 +115,7 @@ export class Payroll {
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
-            url: url,
+            url: operationUrl,
             method: "delete",
             headers: headers,
             responseType: "arraybuffer",
@@ -153,7 +161,11 @@ export class Payroll {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = utils.generateURL(baseURL, "/people/{id}/training/{entry_id}", req);
+        const operationUrl: string = utils.generateURL(
+            baseURL,
+            "/people/{id}/training/{entry_id}",
+            req
+        );
         const client: AxiosInstance = this.sdkConfiguration.defaultClient;
         if (!(security instanceof utils.SpeakeasyBase)) {
             security = new operations.DeletePeopleIdTrainingEntryIdSecurity(security);
@@ -166,7 +178,7 @@ export class Payroll {
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
-            url: url,
+            url: operationUrl,
             method: "delete",
             headers: headers,
             responseType: "arraybuffer",
@@ -212,7 +224,11 @@ export class Payroll {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = utils.generateURL(baseURL, "/people/{id}/variable/{entry_id}", req);
+        const operationUrl: string = utils.generateURL(
+            baseURL,
+            "/people/{id}/variable/{entry_id}",
+            req
+        );
         const client: AxiosInstance = this.sdkConfiguration.defaultClient;
         if (!(security instanceof utils.SpeakeasyBase)) {
             security = new operations.DeletePeopleIdVariableEntryIdSecurity(security);
@@ -225,7 +241,7 @@ export class Payroll {
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
-            url: url,
+            url: operationUrl,
             method: "delete",
             headers: headers,
             responseType: "arraybuffer",
@@ -270,7 +286,7 @@ export class Payroll {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = baseURL.replace(/\/$/, "") + "/payroll/history";
+        const operationUrl: string = baseURL.replace(/\/$/, "") + "/payroll/history";
         const client: AxiosInstance = this.sdkConfiguration.defaultClient;
         let globalSecurity = this.sdkConfiguration.security;
         if (typeof globalSecurity === "function") {
@@ -288,7 +304,7 @@ export class Payroll {
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
-            url: url + queryParams,
+            url: operationUrl + queryParams,
             method: "get",
             headers: headers,
             responseType: "arraybuffer",
@@ -356,7 +372,7 @@ export class Payroll {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = utils.generateURL(baseURL, "/people/{id}/equities", req);
+        const operationUrl: string = utils.generateURL(baseURL, "/people/{id}/equities", req);
         const client: AxiosInstance = this.sdkConfiguration.defaultClient;
         if (!(security instanceof utils.SpeakeasyBase)) {
             security = new operations.GetPeopleIdEquitiesSecurity(security);
@@ -369,7 +385,7 @@ export class Payroll {
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
-            url: url,
+            url: operationUrl,
             method: "get",
             headers: headers,
             responseType: "arraybuffer",
@@ -429,7 +445,7 @@ export class Payroll {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = utils.generateURL(baseURL, "/people/{id}/salaries", req);
+        const operationUrl: string = utils.generateURL(baseURL, "/people/{id}/salaries", req);
         const client: AxiosInstance = this.sdkConfiguration.defaultClient;
         if (!(security instanceof utils.SpeakeasyBase)) {
             security = new operations.GetPeopleIdSalariesSecurity(security);
@@ -442,7 +458,7 @@ export class Payroll {
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
-            url: url,
+            url: operationUrl,
             method: "get",
             headers: headers,
             responseType: "arraybuffer",
@@ -502,7 +518,7 @@ export class Payroll {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = utils.generateURL(baseURL, "/people/{id}/training", req);
+        const operationUrl: string = utils.generateURL(baseURL, "/people/{id}/training", req);
         const client: AxiosInstance = this.sdkConfiguration.defaultClient;
         if (!(security instanceof utils.SpeakeasyBase)) {
             security = new operations.GetPeopleIdTrainingSecurity(security);
@@ -515,7 +531,7 @@ export class Payroll {
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
-            url: url,
+            url: operationUrl,
             method: "get",
             headers: headers,
             responseType: "arraybuffer",
@@ -574,7 +590,7 @@ export class Payroll {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = utils.generateURL(baseURL, "/people/{id}/variable", req);
+        const operationUrl: string = utils.generateURL(baseURL, "/people/{id}/variable", req);
         const client: AxiosInstance = this.sdkConfiguration.defaultClient;
         let globalSecurity = this.sdkConfiguration.security;
         if (typeof globalSecurity === "function") {
@@ -591,7 +607,7 @@ export class Payroll {
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
-            url: url,
+            url: operationUrl,
             method: "get",
             headers: headers,
             responseType: "arraybuffer",
@@ -651,7 +667,7 @@ export class Payroll {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = utils.generateURL(baseURL, "/people/{id}/equities", req);
+        const operationUrl: string = utils.generateURL(baseURL, "/people/{id}/equities", req);
 
         let [reqBodyHeaders, reqBody]: [object, any] = [{}, null];
 
@@ -679,7 +695,7 @@ export class Payroll {
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
-            url: url,
+            url: operationUrl,
             method: "post",
             headers: headers,
             responseType: "arraybuffer",
@@ -726,7 +742,7 @@ export class Payroll {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = utils.generateURL(baseURL, "/people/{id}/salaries", req);
+        const operationUrl: string = utils.generateURL(baseURL, "/people/{id}/salaries", req);
 
         let [reqBodyHeaders, reqBody]: [object, any] = [{}, null];
 
@@ -754,7 +770,7 @@ export class Payroll {
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
-            url: url,
+            url: operationUrl,
             method: "post",
             headers: headers,
             responseType: "arraybuffer",
@@ -801,7 +817,7 @@ export class Payroll {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = utils.generateURL(baseURL, "/people/{id}/training", req);
+        const operationUrl: string = utils.generateURL(baseURL, "/people/{id}/training", req);
 
         let [reqBodyHeaders, reqBody]: [object, any] = [{}, null];
 
@@ -829,7 +845,7 @@ export class Payroll {
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
-            url: url,
+            url: operationUrl,
             method: "post",
             headers: headers,
             responseType: "arraybuffer",
@@ -876,7 +892,7 @@ export class Payroll {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = utils.generateURL(baseURL, "/people/{id}/variable", req);
+        const operationUrl: string = utils.generateURL(baseURL, "/people/{id}/variable", req);
 
         let [reqBodyHeaders, reqBody]: [object, any] = [{}, null];
 
@@ -904,7 +920,7 @@ export class Payroll {
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
-            url: url,
+            url: operationUrl,
             method: "post",
             headers: headers,
             responseType: "arraybuffer",
@@ -951,7 +967,11 @@ export class Payroll {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = utils.generateURL(baseURL, "/people/{id}/equities/{entry_id}", req);
+        const operationUrl: string = utils.generateURL(
+            baseURL,
+            "/people/{id}/equities/{entry_id}",
+            req
+        );
 
         let [reqBodyHeaders, reqBody]: [object, any] = [{}, null];
 
@@ -979,7 +999,7 @@ export class Payroll {
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
-            url: url,
+            url: operationUrl,
             method: "put",
             headers: headers,
             responseType: "arraybuffer",

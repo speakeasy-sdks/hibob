@@ -2,22 +2,22 @@ configVersion: 1.0.0
 management:
   docChecksum: bbc59884d9f4568f5b4bafdcdca5f6ab
   docVersion: 1.0.0
-  speakeasyVersion: 1.114.1
-  generationVersion: 2.181.1
+  speakeasyVersion: 1.116.0
+  generationVersion: 2.185.0
 generation:
   comments: {}
   sdkClassName: hibob
   repoURL: https://github.com/speakeasy-sdks/hibob.git
 features:
   typescript:
-    core: 3.1.0
+    core: 3.1.2
     deprecations: 2.81.1
     globalSecurity: 2.82.0
     globalServerURLs: 2.82.0
-    inputOutputModels: 2.81.1
+    inputOutputModels: 2.82.0
     methodSecurity: 2.82.0
 typescript:
-  version: 2.0.0
+  version: 2.1.0
   author: roopak
   clientServerStatusCodesAsErrors: false
   flattenGlobalSecurity: false
@@ -29,8 +29,10 @@ typescript:
       operations: sdk/models/operations
       shared: sdk/models/shared
       webhooks: sdk/models/webhooks
+  inputModelSuffix: input
   installationURL: https://github.com/speakeasy-sdks/hibob
   maxMethodParams: 0
+  outputModelSuffix: output
   packageName: hibob
   published: true
   repoSubDirectory: .

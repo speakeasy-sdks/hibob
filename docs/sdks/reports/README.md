@@ -1,5 +1,5 @@
 # Reports
-(*.reports*)
+(*reports*)
 
 ### Available Operations
 
@@ -29,7 +29,6 @@ const operationSecurity: GetCompanyReportsSecurity = {
 
   const res = await sdk.reports.getCompanyReports(operationSecurity);
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -38,16 +37,20 @@ const operationSecurity: GetCompanyReportsSecurity = {
 
 ### Parameters
 
-| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
-| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
-| `security`                                                                                   | [operations.GetCompanyReportsSecurity](../../models/operations/getcompanyreportssecurity.md) | :heavy_check_mark:                                                                           | The security requirements to use for the request.                                            |
-| `config`                                                                                     | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                 | :heavy_minus_sign:                                                                           | Available config options for making requests.                                                |
+| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
+| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
+| `security`                                                                                       | [operations.GetCompanyReportsSecurity](../../sdk/models/operations/getcompanyreportssecurity.md) | :heavy_check_mark:                                                                               | The security requirements to use for the request.                                                |
+| `config`                                                                                         | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                     | :heavy_minus_sign:                                                                               | Available config options for making requests.                                                    |
 
 
 ### Response
 
-**Promise<[operations.GetCompanyReportsResponse](../../models/operations/getcompanyreportsresponse.md)>**
+**Promise<[operations.GetCompanyReportsResponse](../../sdk/models/operations/getcompanyreportsresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## getCompanyReportsDownloadReportName
 
@@ -72,7 +75,6 @@ const operationSecurity: GetCompanyReportsDownloadReportNameSecurity = {
     reportName: "string",
   }, operationSecurity);
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -81,17 +83,21 @@ const operationSecurity: GetCompanyReportsDownloadReportNameSecurity = {
 
 ### Parameters
 
-| Parameter                                                                                                                        | Type                                                                                                                             | Required                                                                                                                         | Description                                                                                                                      |
-| -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                        | [operations.GetCompanyReportsDownloadReportNameRequest](../../models/operations/getcompanyreportsdownloadreportnamerequest.md)   | :heavy_check_mark:                                                                                                               | The request object to use for the request.                                                                                       |
-| `security`                                                                                                                       | [operations.GetCompanyReportsDownloadReportNameSecurity](../../models/operations/getcompanyreportsdownloadreportnamesecurity.md) | :heavy_check_mark:                                                                                                               | The security requirements to use for the request.                                                                                |
-| `config`                                                                                                                         | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                     | :heavy_minus_sign:                                                                                                               | Available config options for making requests.                                                                                    |
+| Parameter                                                                                                                            | Type                                                                                                                                 | Required                                                                                                                             | Description                                                                                                                          |
+| ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                                                            | [operations.GetCompanyReportsDownloadReportNameRequest](../../sdk/models/operations/getcompanyreportsdownloadreportnamerequest.md)   | :heavy_check_mark:                                                                                                                   | The request object to use for the request.                                                                                           |
+| `security`                                                                                                                           | [operations.GetCompanyReportsDownloadReportNameSecurity](../../sdk/models/operations/getcompanyreportsdownloadreportnamesecurity.md) | :heavy_check_mark:                                                                                                                   | The security requirements to use for the request.                                                                                    |
+| `config`                                                                                                                             | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                         | :heavy_minus_sign:                                                                                                                   | Available config options for making requests.                                                                                        |
 
 
 ### Response
 
-**Promise<[operations.GetCompanyReportsDownloadReportNameResponse](../../models/operations/getcompanyreportsdownloadreportnameresponse.md)>**
+**Promise<[operations.GetCompanyReportsDownloadReportNameResponse](../../sdk/models/operations/getcompanyreportsdownloadreportnameresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## getCompanyReportsReportIdDownload
 
@@ -117,7 +123,6 @@ const operationSecurity: GetCompanyReportsReportIdDownloadSecurity = {
     reportId: 3566.85,
   }, operationSecurity);
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -126,17 +131,21 @@ const operationSecurity: GetCompanyReportsReportIdDownloadSecurity = {
 
 ### Parameters
 
-| Parameter                                                                                                                    | Type                                                                                                                         | Required                                                                                                                     | Description                                                                                                                  |
-| ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                    | [operations.GetCompanyReportsReportIdDownloadRequest](../../models/operations/getcompanyreportsreportiddownloadrequest.md)   | :heavy_check_mark:                                                                                                           | The request object to use for the request.                                                                                   |
-| `security`                                                                                                                   | [operations.GetCompanyReportsReportIdDownloadSecurity](../../models/operations/getcompanyreportsreportiddownloadsecurity.md) | :heavy_check_mark:                                                                                                           | The security requirements to use for the request.                                                                            |
-| `config`                                                                                                                     | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                 | :heavy_minus_sign:                                                                                                           | Available config options for making requests.                                                                                |
+| Parameter                                                                                                                        | Type                                                                                                                             | Required                                                                                                                         | Description                                                                                                                      |
+| -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                        | [operations.GetCompanyReportsReportIdDownloadRequest](../../sdk/models/operations/getcompanyreportsreportiddownloadrequest.md)   | :heavy_check_mark:                                                                                                               | The request object to use for the request.                                                                                       |
+| `security`                                                                                                                       | [operations.GetCompanyReportsReportIdDownloadSecurity](../../sdk/models/operations/getcompanyreportsreportiddownloadsecurity.md) | :heavy_check_mark:                                                                                                               | The security requirements to use for the request.                                                                                |
+| `config`                                                                                                                         | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                     | :heavy_minus_sign:                                                                                                               | Available config options for making requests.                                                                                    |
 
 
 ### Response
 
-**Promise<[operations.GetCompanyReportsReportIdDownloadResponse](../../models/operations/getcompanyreportsreportiddownloadresponse.md)>**
+**Promise<[operations.GetCompanyReportsReportIdDownloadResponse](../../sdk/models/operations/getcompanyreportsreportiddownloadresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## getCompanyReportsReportIdDownloadAsync
 
@@ -162,7 +171,6 @@ const operationSecurity: GetCompanyReportsReportIdDownloadAsyncSecurity = {
     reportId: 7232.99,
   }, operationSecurity);
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -171,14 +179,18 @@ const operationSecurity: GetCompanyReportsReportIdDownloadAsyncSecurity = {
 
 ### Parameters
 
-| Parameter                                                                                                                              | Type                                                                                                                                   | Required                                                                                                                               | Description                                                                                                                            |
-| -------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                              | [operations.GetCompanyReportsReportIdDownloadAsyncRequest](../../models/operations/getcompanyreportsreportiddownloadasyncrequest.md)   | :heavy_check_mark:                                                                                                                     | The request object to use for the request.                                                                                             |
-| `security`                                                                                                                             | [operations.GetCompanyReportsReportIdDownloadAsyncSecurity](../../models/operations/getcompanyreportsreportiddownloadasyncsecurity.md) | :heavy_check_mark:                                                                                                                     | The security requirements to use for the request.                                                                                      |
-| `config`                                                                                                                               | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                           | :heavy_minus_sign:                                                                                                                     | Available config options for making requests.                                                                                          |
+| Parameter                                                                                                                                  | Type                                                                                                                                       | Required                                                                                                                                   | Description                                                                                                                                |
+| ------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                                                                  | [operations.GetCompanyReportsReportIdDownloadAsyncRequest](../../sdk/models/operations/getcompanyreportsreportiddownloadasyncrequest.md)   | :heavy_check_mark:                                                                                                                         | The request object to use for the request.                                                                                                 |
+| `security`                                                                                                                                 | [operations.GetCompanyReportsReportIdDownloadAsyncSecurity](../../sdk/models/operations/getcompanyreportsreportiddownloadasyncsecurity.md) | :heavy_check_mark:                                                                                                                         | The security requirements to use for the request.                                                                                          |
+| `config`                                                                                                                                   | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                               | :heavy_minus_sign:                                                                                                                         | Available config options for making requests.                                                                                              |
 
 
 ### Response
 
-**Promise<[operations.GetCompanyReportsReportIdDownloadAsyncResponse](../../models/operations/getcompanyreportsreportiddownloadasyncresponse.md)>**
+**Promise<[operations.GetCompanyReportsReportIdDownloadAsyncResponse](../../sdk/models/operations/getcompanyreportsreportiddownloadasyncresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |

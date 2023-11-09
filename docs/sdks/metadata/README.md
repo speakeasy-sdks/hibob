@@ -1,5 +1,5 @@
 # Metadata
-(*.metadata*)
+(*metadata*)
 
 ### Available Operations
 
@@ -40,7 +40,6 @@ const operationSecurity: DeleteCompanyNamedListsListNameItemIdSecurity = {
     listName: "string",
   }, operationSecurity);
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -49,17 +48,21 @@ const operationSecurity: DeleteCompanyNamedListsListNameItemIdSecurity = {
 
 ### Parameters
 
-| Parameter                                                                                                                            | Type                                                                                                                                 | Required                                                                                                                             | Description                                                                                                                          |
-| ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                                            | [operations.DeleteCompanyNamedListsListNameItemIdRequest](../../models/operations/deletecompanynamedlistslistnameitemidrequest.md)   | :heavy_check_mark:                                                                                                                   | The request object to use for the request.                                                                                           |
-| `security`                                                                                                                           | [operations.DeleteCompanyNamedListsListNameItemIdSecurity](../../models/operations/deletecompanynamedlistslistnameitemidsecurity.md) | :heavy_check_mark:                                                                                                                   | The security requirements to use for the request.                                                                                    |
-| `config`                                                                                                                             | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                         | :heavy_minus_sign:                                                                                                                   | Available config options for making requests.                                                                                        |
+| Parameter                                                                                                                                | Type                                                                                                                                     | Required                                                                                                                                 | Description                                                                                                                              |
+| ---------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                                | [operations.DeleteCompanyNamedListsListNameItemIdRequest](../../sdk/models/operations/deletecompanynamedlistslistnameitemidrequest.md)   | :heavy_check_mark:                                                                                                                       | The request object to use for the request.                                                                                               |
+| `security`                                                                                                                               | [operations.DeleteCompanyNamedListsListNameItemIdSecurity](../../sdk/models/operations/deletecompanynamedlistslistnameitemidsecurity.md) | :heavy_check_mark:                                                                                                                       | The security requirements to use for the request.                                                                                        |
+| `config`                                                                                                                                 | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                             | :heavy_minus_sign:                                                                                                                       | Available config options for making requests.                                                                                            |
 
 
 ### Response
 
-**Promise<[operations.DeleteCompanyNamedListsListNameItemIdResponse](../../models/operations/deletecompanynamedlistslistnameitemidresponse.md)>**
+**Promise<[operations.DeleteCompanyNamedListsListNameItemIdResponse](../../sdk/models/operations/deletecompanynamedlistslistnameitemidresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## deleteCompanyPeopleFieldsFieldId
 
@@ -84,7 +87,6 @@ const operationSecurity: DeleteCompanyPeopleFieldsFieldIdSecurity = {
     fieldId: "string",
   }, operationSecurity);
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -93,17 +95,21 @@ const operationSecurity: DeleteCompanyPeopleFieldsFieldIdSecurity = {
 
 ### Parameters
 
-| Parameter                                                                                                                  | Type                                                                                                                       | Required                                                                                                                   | Description                                                                                                                |
-| -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                  | [operations.DeleteCompanyPeopleFieldsFieldIdRequest](../../models/operations/deletecompanypeoplefieldsfieldidrequest.md)   | :heavy_check_mark:                                                                                                         | The request object to use for the request.                                                                                 |
-| `security`                                                                                                                 | [operations.DeleteCompanyPeopleFieldsFieldIdSecurity](../../models/operations/deletecompanypeoplefieldsfieldidsecurity.md) | :heavy_check_mark:                                                                                                         | The security requirements to use for the request.                                                                          |
-| `config`                                                                                                                   | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                               | :heavy_minus_sign:                                                                                                         | Available config options for making requests.                                                                              |
+| Parameter                                                                                                                      | Type                                                                                                                           | Required                                                                                                                       | Description                                                                                                                    |
+| ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                                                      | [operations.DeleteCompanyPeopleFieldsFieldIdRequest](../../sdk/models/operations/deletecompanypeoplefieldsfieldidrequest.md)   | :heavy_check_mark:                                                                                                             | The request object to use for the request.                                                                                     |
+| `security`                                                                                                                     | [operations.DeleteCompanyPeopleFieldsFieldIdSecurity](../../sdk/models/operations/deletecompanypeoplefieldsfieldidsecurity.md) | :heavy_check_mark:                                                                                                             | The security requirements to use for the request.                                                                              |
+| `config`                                                                                                                       | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                   | :heavy_minus_sign:                                                                                                             | Available config options for making requests.                                                                                  |
 
 
 ### Response
 
-**Promise<[operations.DeleteCompanyPeopleFieldsFieldIdResponse](../../models/operations/deletecompanypeoplefieldsfieldidresponse.md)>**
+**Promise<[operations.DeleteCompanyPeopleFieldsFieldIdResponse](../../sdk/models/operations/deletecompanypeoplefieldsfieldidresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## getCompanyNamedLists
 
@@ -126,7 +132,6 @@ const operationSecurity: GetCompanyNamedListsSecurity = {
 
   const res = await sdk.metadata.getCompanyNamedLists({}, operationSecurity);
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -135,17 +140,21 @@ const operationSecurity: GetCompanyNamedListsSecurity = {
 
 ### Parameters
 
-| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
-| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
-| `request`                                                                                          | [operations.GetCompanyNamedListsRequest](../../models/operations/getcompanynamedlistsrequest.md)   | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
-| `security`                                                                                         | [operations.GetCompanyNamedListsSecurity](../../models/operations/getcompanynamedlistssecurity.md) | :heavy_check_mark:                                                                                 | The security requirements to use for the request.                                                  |
-| `config`                                                                                           | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                       | :heavy_minus_sign:                                                                                 | Available config options for making requests.                                                      |
+| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
+| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                              | [operations.GetCompanyNamedListsRequest](../../sdk/models/operations/getcompanynamedlistsrequest.md)   | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
+| `security`                                                                                             | [operations.GetCompanyNamedListsSecurity](../../sdk/models/operations/getcompanynamedlistssecurity.md) | :heavy_check_mark:                                                                                     | The security requirements to use for the request.                                                      |
+| `config`                                                                                               | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                           | :heavy_minus_sign:                                                                                     | Available config options for making requests.                                                          |
 
 
 ### Response
 
-**Promise<[operations.GetCompanyNamedListsResponse](../../models/operations/getcompanynamedlistsresponse.md)>**
+**Promise<[operations.GetCompanyNamedListsResponse](../../sdk/models/operations/getcompanynamedlistsresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## getCompanyNamedListsListName
 
@@ -170,7 +179,6 @@ const operationSecurity: GetCompanyNamedListsListNameSecurity = {
     listName: "string",
   }, operationSecurity);
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -179,17 +187,21 @@ const operationSecurity: GetCompanyNamedListsListNameSecurity = {
 
 ### Parameters
 
-| Parameter                                                                                                          | Type                                                                                                               | Required                                                                                                           | Description                                                                                                        |
-| ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                          | [operations.GetCompanyNamedListsListNameRequest](../../models/operations/getcompanynamedlistslistnamerequest.md)   | :heavy_check_mark:                                                                                                 | The request object to use for the request.                                                                         |
-| `security`                                                                                                         | [operations.GetCompanyNamedListsListNameSecurity](../../models/operations/getcompanynamedlistslistnamesecurity.md) | :heavy_check_mark:                                                                                                 | The security requirements to use for the request.                                                                  |
-| `config`                                                                                                           | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                       | :heavy_minus_sign:                                                                                                 | Available config options for making requests.                                                                      |
+| Parameter                                                                                                              | Type                                                                                                                   | Required                                                                                                               | Description                                                                                                            |
+| ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                              | [operations.GetCompanyNamedListsListNameRequest](../../sdk/models/operations/getcompanynamedlistslistnamerequest.md)   | :heavy_check_mark:                                                                                                     | The request object to use for the request.                                                                             |
+| `security`                                                                                                             | [operations.GetCompanyNamedListsListNameSecurity](../../sdk/models/operations/getcompanynamedlistslistnamesecurity.md) | :heavy_check_mark:                                                                                                     | The security requirements to use for the request.                                                                      |
+| `config`                                                                                                               | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                           | :heavy_minus_sign:                                                                                                     | Available config options for making requests.                                                                          |
 
 
 ### Response
 
-**Promise<[operations.GetCompanyNamedListsListNameResponse](../../models/operations/getcompanynamedlistslistnameresponse.md)>**
+**Promise<[operations.GetCompanyNamedListsListNameResponse](../../sdk/models/operations/getcompanynamedlistslistnameresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## getCompanyPeopleFields
 
@@ -212,7 +224,6 @@ const operationSecurity: GetCompanyPeopleFieldsSecurity = {
 
   const res = await sdk.metadata.getCompanyPeopleFields(operationSecurity);
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -221,16 +232,20 @@ const operationSecurity: GetCompanyPeopleFieldsSecurity = {
 
 ### Parameters
 
-| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
-| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
-| `security`                                                                                             | [operations.GetCompanyPeopleFieldsSecurity](../../models/operations/getcompanypeoplefieldssecurity.md) | :heavy_check_mark:                                                                                     | The security requirements to use for the request.                                                      |
-| `config`                                                                                               | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                           | :heavy_minus_sign:                                                                                     | Available config options for making requests.                                                          |
+| Parameter                                                                                                  | Type                                                                                                       | Required                                                                                                   | Description                                                                                                |
+| ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
+| `security`                                                                                                 | [operations.GetCompanyPeopleFieldsSecurity](../../sdk/models/operations/getcompanypeoplefieldssecurity.md) | :heavy_check_mark:                                                                                         | The security requirements to use for the request.                                                          |
+| `config`                                                                                                   | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                               | :heavy_minus_sign:                                                                                         | Available config options for making requests.                                                              |
 
 
 ### Response
 
-**Promise<[operations.GetCompanyPeopleFieldsResponse](../../models/operations/getcompanypeoplefieldsresponse.md)>**
+**Promise<[operations.GetCompanyPeopleFieldsResponse](../../sdk/models/operations/getcompanypeoplefieldsresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## getMetadataObjectsPosition
 
@@ -251,7 +266,6 @@ const operationSecurity: GetMetadataObjectsPositionSecurity = {
 
   const res = await sdk.metadata.getMetadataObjectsPosition(operationSecurity);
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -260,16 +274,20 @@ const operationSecurity: GetMetadataObjectsPositionSecurity = {
 
 ### Parameters
 
-| Parameter                                                                                                      | Type                                                                                                           | Required                                                                                                       | Description                                                                                                    |
-| -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- |
-| `security`                                                                                                     | [operations.GetMetadataObjectsPositionSecurity](../../models/operations/getmetadataobjectspositionsecurity.md) | :heavy_check_mark:                                                                                             | The security requirements to use for the request.                                                              |
-| `config`                                                                                                       | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                   | :heavy_minus_sign:                                                                                             | Available config options for making requests.                                                                  |
+| Parameter                                                                                                          | Type                                                                                                               | Required                                                                                                           | Description                                                                                                        |
+| ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ |
+| `security`                                                                                                         | [operations.GetMetadataObjectsPositionSecurity](../../sdk/models/operations/getmetadataobjectspositionsecurity.md) | :heavy_check_mark:                                                                                                 | The security requirements to use for the request.                                                                  |
+| `config`                                                                                                           | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                       | :heavy_minus_sign:                                                                                                 | Available config options for making requests.                                                                      |
 
 
 ### Response
 
-**Promise<[operations.GetMetadataObjectsPositionResponse](../../models/operations/getmetadataobjectspositionresponse.md)>**
+**Promise<[operations.GetMetadataObjectsPositionResponse](../../sdk/models/operations/getmetadataobjectspositionresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## getPeopleCustomTablesMetadata
 
@@ -292,7 +310,6 @@ const operationSecurity: GetPeopleCustomTablesMetadataSecurity = {
 
   const res = await sdk.metadata.getPeopleCustomTablesMetadata(operationSecurity);
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -301,16 +318,20 @@ const operationSecurity: GetPeopleCustomTablesMetadataSecurity = {
 
 ### Parameters
 
-| Parameter                                                                                                            | Type                                                                                                                 | Required                                                                                                             | Description                                                                                                          |
-| -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
-| `security`                                                                                                           | [operations.GetPeopleCustomTablesMetadataSecurity](../../models/operations/getpeoplecustomtablesmetadatasecurity.md) | :heavy_check_mark:                                                                                                   | The security requirements to use for the request.                                                                    |
-| `config`                                                                                                             | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                         | :heavy_minus_sign:                                                                                                   | Available config options for making requests.                                                                        |
+| Parameter                                                                                                                | Type                                                                                                                     | Required                                                                                                                 | Description                                                                                                              |
+| ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ |
+| `security`                                                                                                               | [operations.GetPeopleCustomTablesMetadataSecurity](../../sdk/models/operations/getpeoplecustomtablesmetadatasecurity.md) | :heavy_check_mark:                                                                                                       | The security requirements to use for the request.                                                                        |
+| `config`                                                                                                                 | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                             | :heavy_minus_sign:                                                                                                       | Available config options for making requests.                                                                            |
 
 
 ### Response
 
-**Promise<[operations.GetPeopleCustomTablesMetadataResponse](../../models/operations/getpeoplecustomtablesmetadataresponse.md)>**
+**Promise<[operations.GetPeopleCustomTablesMetadataResponse](../../sdk/models/operations/getpeoplecustomtablesmetadataresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## getPeopleCustomTablesMetadataCustomTableId
 
@@ -335,7 +356,6 @@ const operationSecurity: GetPeopleCustomTablesMetadataCustomTableIdSecurity = {
     customTableId: "string",
   }, operationSecurity);
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -344,17 +364,21 @@ const operationSecurity: GetPeopleCustomTablesMetadataCustomTableIdSecurity = {
 
 ### Parameters
 
-| Parameter                                                                                                                                      | Type                                                                                                                                           | Required                                                                                                                                       | Description                                                                                                                                    |
-| ---------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                                      | [operations.GetPeopleCustomTablesMetadataCustomTableIdRequest](../../models/operations/getpeoplecustomtablesmetadatacustomtableidrequest.md)   | :heavy_check_mark:                                                                                                                             | The request object to use for the request.                                                                                                     |
-| `security`                                                                                                                                     | [operations.GetPeopleCustomTablesMetadataCustomTableIdSecurity](../../models/operations/getpeoplecustomtablesmetadatacustomtableidsecurity.md) | :heavy_check_mark:                                                                                                                             | The security requirements to use for the request.                                                                                              |
-| `config`                                                                                                                                       | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                                   | :heavy_minus_sign:                                                                                                                             | Available config options for making requests.                                                                                                  |
+| Parameter                                                                                                                                          | Type                                                                                                                                               | Required                                                                                                                                           | Description                                                                                                                                        |
+| -------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                                          | [operations.GetPeopleCustomTablesMetadataCustomTableIdRequest](../../sdk/models/operations/getpeoplecustomtablesmetadatacustomtableidrequest.md)   | :heavy_check_mark:                                                                                                                                 | The request object to use for the request.                                                                                                         |
+| `security`                                                                                                                                         | [operations.GetPeopleCustomTablesMetadataCustomTableIdSecurity](../../sdk/models/operations/getpeoplecustomtablesmetadatacustomtableidsecurity.md) | :heavy_check_mark:                                                                                                                                 | The security requirements to use for the request.                                                                                                  |
+| `config`                                                                                                                                           | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                                       | :heavy_minus_sign:                                                                                                                                 | Available config options for making requests.                                                                                                      |
 
 
 ### Response
 
-**Promise<[operations.GetPeopleCustomTablesMetadataCustomTableIdResponse](../../models/operations/getpeoplecustomtablesmetadatacustomtableidresponse.md)>**
+**Promise<[operations.GetPeopleCustomTablesMetadataCustomTableIdResponse](../../sdk/models/operations/getpeoplecustomtablesmetadatacustomtableidresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## postCompanyNamedListsListName
 
@@ -382,7 +406,6 @@ const operationSecurity: PostCompanyNamedListsListNameSecurity = {
     listName: "string",
   }, operationSecurity);
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -391,17 +414,21 @@ const operationSecurity: PostCompanyNamedListsListNameSecurity = {
 
 ### Parameters
 
-| Parameter                                                                                                            | Type                                                                                                                 | Required                                                                                                             | Description                                                                                                          |
-| -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                            | [operations.PostCompanyNamedListsListNameRequest](../../models/operations/postcompanynamedlistslistnamerequest.md)   | :heavy_check_mark:                                                                                                   | The request object to use for the request.                                                                           |
-| `security`                                                                                                           | [operations.PostCompanyNamedListsListNameSecurity](../../models/operations/postcompanynamedlistslistnamesecurity.md) | :heavy_check_mark:                                                                                                   | The security requirements to use for the request.                                                                    |
-| `config`                                                                                                             | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                         | :heavy_minus_sign:                                                                                                   | Available config options for making requests.                                                                        |
+| Parameter                                                                                                                | Type                                                                                                                     | Required                                                                                                                 | Description                                                                                                              |
+| ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                                                | [operations.PostCompanyNamedListsListNameRequest](../../sdk/models/operations/postcompanynamedlistslistnamerequest.md)   | :heavy_check_mark:                                                                                                       | The request object to use for the request.                                                                               |
+| `security`                                                                                                               | [operations.PostCompanyNamedListsListNameSecurity](../../sdk/models/operations/postcompanynamedlistslistnamesecurity.md) | :heavy_check_mark:                                                                                                       | The security requirements to use for the request.                                                                        |
+| `config`                                                                                                                 | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                             | :heavy_minus_sign:                                                                                                       | Available config options for making requests.                                                                            |
 
 
 ### Response
 
-**Promise<[operations.PostCompanyNamedListsListNameResponse](../../models/operations/postcompanynamedlistslistnameresponse.md)>**
+**Promise<[operations.PostCompanyNamedListsListNameResponse](../../sdk/models/operations/postcompanynamedlistslistnameresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## postCompanyPeopleFields
 
@@ -428,7 +455,6 @@ const operationSecurity: PostCompanyPeopleFieldsSecurity = {
     type: "string",
   }, operationSecurity);
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -437,17 +463,21 @@ const operationSecurity: PostCompanyPeopleFieldsSecurity = {
 
 ### Parameters
 
-| Parameter                                                                                                | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                | [shared.CreateFieldRequest](../../models/shared/createfieldrequest.md)                                   | :heavy_check_mark:                                                                                       | The request object to use for the request.                                                               |
-| `security`                                                                                               | [operations.PostCompanyPeopleFieldsSecurity](../../models/operations/postcompanypeoplefieldssecurity.md) | :heavy_check_mark:                                                                                       | The security requirements to use for the request.                                                        |
-| `config`                                                                                                 | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                             | :heavy_minus_sign:                                                                                       | Available config options for making requests.                                                            |
+| Parameter                                                                                                    | Type                                                                                                         | Required                                                                                                     | Description                                                                                                  |
+| ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                                    | [shared.CreateFieldRequest](../../sdk/models/shared/createfieldrequest.md)                                   | :heavy_check_mark:                                                                                           | The request object to use for the request.                                                                   |
+| `security`                                                                                                   | [operations.PostCompanyPeopleFieldsSecurity](../../sdk/models/operations/postcompanypeoplefieldssecurity.md) | :heavy_check_mark:                                                                                           | The security requirements to use for the request.                                                            |
+| `config`                                                                                                     | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                 | :heavy_minus_sign:                                                                                           | Available config options for making requests.                                                                |
 
 
 ### Response
 
-**Promise<[operations.PostCompanyPeopleFieldsResponse](../../models/operations/postcompanypeoplefieldsresponse.md)>**
+**Promise<[operations.PostCompanyPeopleFieldsResponse](../../sdk/models/operations/postcompanypeoplefieldsresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## putCompanyNamedListsListNameItemId
 
@@ -474,7 +504,6 @@ const operationSecurity: PutCompanyNamedListsListNameItemIdSecurity = {
     listName: "string",
   }, operationSecurity);
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -483,17 +512,21 @@ const operationSecurity: PutCompanyNamedListsListNameItemIdSecurity = {
 
 ### Parameters
 
-| Parameter                                                                                                                      | Type                                                                                                                           | Required                                                                                                                       | Description                                                                                                                    |
-| ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                                      | [operations.PutCompanyNamedListsListNameItemIdRequest](../../models/operations/putcompanynamedlistslistnameitemidrequest.md)   | :heavy_check_mark:                                                                                                             | The request object to use for the request.                                                                                     |
-| `security`                                                                                                                     | [operations.PutCompanyNamedListsListNameItemIdSecurity](../../models/operations/putcompanynamedlistslistnameitemidsecurity.md) | :heavy_check_mark:                                                                                                             | The security requirements to use for the request.                                                                              |
-| `config`                                                                                                                       | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                   | :heavy_minus_sign:                                                                                                             | Available config options for making requests.                                                                                  |
+| Parameter                                                                                                                          | Type                                                                                                                               | Required                                                                                                                           | Description                                                                                                                        |
+| ---------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                          | [operations.PutCompanyNamedListsListNameItemIdRequest](../../sdk/models/operations/putcompanynamedlistslistnameitemidrequest.md)   | :heavy_check_mark:                                                                                                                 | The request object to use for the request.                                                                                         |
+| `security`                                                                                                                         | [operations.PutCompanyNamedListsListNameItemIdSecurity](../../sdk/models/operations/putcompanynamedlistslistnameitemidsecurity.md) | :heavy_check_mark:                                                                                                                 | The security requirements to use for the request.                                                                                  |
+| `config`                                                                                                                           | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                       | :heavy_minus_sign:                                                                                                                 | Available config options for making requests.                                                                                      |
 
 
 ### Response
 
-**Promise<[operations.PutCompanyNamedListsListNameItemIdResponse](../../models/operations/putcompanynamedlistslistnameitemidresponse.md)>**
+**Promise<[operations.PutCompanyNamedListsListNameItemIdResponse](../../sdk/models/operations/putcompanynamedlistslistnameitemidresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## putCompanyPeopleFieldsFieldId
 
@@ -519,7 +552,6 @@ const operationSecurity: PutCompanyPeopleFieldsFieldIdSecurity = {
     fieldId: "string",
   }, operationSecurity);
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -528,14 +560,18 @@ const operationSecurity: PutCompanyPeopleFieldsFieldIdSecurity = {
 
 ### Parameters
 
-| Parameter                                                                                                            | Type                                                                                                                 | Required                                                                                                             | Description                                                                                                          |
-| -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                            | [operations.PutCompanyPeopleFieldsFieldIdRequest](../../models/operations/putcompanypeoplefieldsfieldidrequest.md)   | :heavy_check_mark:                                                                                                   | The request object to use for the request.                                                                           |
-| `security`                                                                                                           | [operations.PutCompanyPeopleFieldsFieldIdSecurity](../../models/operations/putcompanypeoplefieldsfieldidsecurity.md) | :heavy_check_mark:                                                                                                   | The security requirements to use for the request.                                                                    |
-| `config`                                                                                                             | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                         | :heavy_minus_sign:                                                                                                   | Available config options for making requests.                                                                        |
+| Parameter                                                                                                                | Type                                                                                                                     | Required                                                                                                                 | Description                                                                                                              |
+| ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                                                | [operations.PutCompanyPeopleFieldsFieldIdRequest](../../sdk/models/operations/putcompanypeoplefieldsfieldidrequest.md)   | :heavy_check_mark:                                                                                                       | The request object to use for the request.                                                                               |
+| `security`                                                                                                               | [operations.PutCompanyPeopleFieldsFieldIdSecurity](../../sdk/models/operations/putcompanypeoplefieldsfieldidsecurity.md) | :heavy_check_mark:                                                                                                       | The security requirements to use for the request.                                                                        |
+| `config`                                                                                                                 | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                             | :heavy_minus_sign:                                                                                                       | Available config options for making requests.                                                                            |
 
 
 ### Response
 
-**Promise<[operations.PutCompanyPeopleFieldsFieldIdResponse](../../models/operations/putcompanypeoplefieldsfieldidresponse.md)>**
+**Promise<[operations.PutCompanyPeopleFieldsFieldIdResponse](../../sdk/models/operations/putcompanypeoplefieldsfieldidresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |

@@ -1,9 +1,0 @@
-# PostPeopleIdEmploymentRequest
-
-
-## Fields
-
-| Field                                                                                          | Type                                                                                           | Required                                                                                       | Description                                                                                    |
-| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
-| `employmentEntry`                                                                              | [shared.EmploymentEntry](../../models/shared/employmententry.md)                               | :heavy_check_mark:                                                                             | Employment entry to add. This must not conflict with another entry on the same effective date. |
-| `id`                                                                                           | *string*                                                                                       | :heavy_check_mark:                                                                             | employee id                                                                                    |

@@ -1,0 +1,9 @@
+# PostPeopleIdentifierRequest
+
+
+## Fields
+
+| Field                                                                                                         | Type                                                                                                          | Required                                                                                                      | Description                                                                                                   |
+| ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- |
+| `readSingleEmployeeRequestReference`                                                                          | [shared.ReadSingleEmployeeRequestReference](../../../sdk/models/shared/readsingleemployeerequestreference.md) | :heavy_minus_sign:                                                                                            | Read request content that allows you to select fields and other options                                       |
+| `identifier`                                                                                                  | *string*                                                                                                      | :heavy_check_mark:                                                                                            | employee ID or email                                                                                          |

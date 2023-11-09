@@ -35,7 +35,7 @@ export class Metadata {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = utils.generateURL(
+        const operationUrl: string = utils.generateURL(
             baseURL,
             "/company/named-lists/{listName}/{itemId}",
             req
@@ -52,7 +52,7 @@ export class Metadata {
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
-            url: url,
+            url: operationUrl,
             method: "delete",
             headers: headers,
             responseType: "arraybuffer",
@@ -98,7 +98,11 @@ export class Metadata {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = utils.generateURL(baseURL, "/company/people/fields/{fieldId}", req);
+        const operationUrl: string = utils.generateURL(
+            baseURL,
+            "/company/people/fields/{fieldId}",
+            req
+        );
         const client: AxiosInstance = this.sdkConfiguration.defaultClient;
         if (!(security instanceof utils.SpeakeasyBase)) {
             security = new operations.DeleteCompanyPeopleFieldsFieldIdSecurity(security);
@@ -111,7 +115,7 @@ export class Metadata {
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
-            url: url,
+            url: operationUrl,
             method: "delete",
             headers: headers,
             responseType: "arraybuffer",
@@ -157,7 +161,7 @@ export class Metadata {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = baseURL.replace(/\/$/, "") + "/company/named-lists";
+        const operationUrl: string = baseURL.replace(/\/$/, "") + "/company/named-lists";
         const client: AxiosInstance = this.sdkConfiguration.defaultClient;
         if (!(security instanceof utils.SpeakeasyBase)) {
             security = new operations.GetCompanyNamedListsSecurity(security);
@@ -171,7 +175,7 @@ export class Metadata {
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
-            url: url + queryParams,
+            url: operationUrl + queryParams,
             method: "get",
             headers: headers,
             responseType: "arraybuffer",
@@ -234,7 +238,11 @@ export class Metadata {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = utils.generateURL(baseURL, "/company/named-lists/{listName}", req);
+        const operationUrl: string = utils.generateURL(
+            baseURL,
+            "/company/named-lists/{listName}",
+            req
+        );
         const client: AxiosInstance = this.sdkConfiguration.defaultClient;
         if (!(security instanceof utils.SpeakeasyBase)) {
             security = new operations.GetCompanyNamedListsListNameSecurity(security);
@@ -248,7 +256,7 @@ export class Metadata {
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
-            url: url + queryParams,
+            url: operationUrl + queryParams,
             method: "get",
             headers: headers,
             responseType: "arraybuffer",
@@ -302,7 +310,7 @@ export class Metadata {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = baseURL.replace(/\/$/, "") + "/company/people/fields";
+        const operationUrl: string = baseURL.replace(/\/$/, "") + "/company/people/fields";
         const client: AxiosInstance = this.sdkConfiguration.defaultClient;
         if (!(security instanceof utils.SpeakeasyBase)) {
             security = new operations.GetCompanyPeopleFieldsSecurity(security);
@@ -315,7 +323,7 @@ export class Metadata {
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
-            url: url,
+            url: operationUrl,
             method: "get",
             headers: headers,
             responseType: "arraybuffer",
@@ -373,7 +381,7 @@ export class Metadata {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = baseURL.replace(/\/$/, "") + "/metadata/objects/position";
+        const operationUrl: string = baseURL.replace(/\/$/, "") + "/metadata/objects/position";
         const client: AxiosInstance = this.sdkConfiguration.defaultClient;
         if (!(security instanceof utils.SpeakeasyBase)) {
             security = new operations.GetMetadataObjectsPositionSecurity(security);
@@ -386,7 +394,7 @@ export class Metadata {
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
-            url: url,
+            url: operationUrl,
             method: "get",
             headers: headers,
             responseType: "arraybuffer",
@@ -453,7 +461,7 @@ export class Metadata {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = baseURL.replace(/\/$/, "") + "/people/custom-tables/metadata";
+        const operationUrl: string = baseURL.replace(/\/$/, "") + "/people/custom-tables/metadata";
         const client: AxiosInstance = this.sdkConfiguration.defaultClient;
         if (!(security instanceof utils.SpeakeasyBase)) {
             security = new operations.GetPeopleCustomTablesMetadataSecurity(security);
@@ -466,7 +474,7 @@ export class Metadata {
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
-            url: url,
+            url: operationUrl,
             method: "get",
             headers: headers,
             responseType: "arraybuffer",
@@ -526,7 +534,7 @@ export class Metadata {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = utils.generateURL(
+        const operationUrl: string = utils.generateURL(
             baseURL,
             "/people/custom-tables/metadata/{custom_table_id}",
             req
@@ -543,7 +551,7 @@ export class Metadata {
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
-            url: url,
+            url: operationUrl,
             method: "get",
             headers: headers,
             responseType: "arraybuffer",
@@ -603,7 +611,11 @@ export class Metadata {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = utils.generateURL(baseURL, "/company/named-lists/{listName}", req);
+        const operationUrl: string = utils.generateURL(
+            baseURL,
+            "/company/named-lists/{listName}",
+            req
+        );
 
         let [reqBodyHeaders, reqBody]: [object, any] = [{}, null];
 
@@ -631,7 +643,7 @@ export class Metadata {
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
-            url: url,
+            url: operationUrl,
             method: "post",
             headers: headers,
             responseType: "arraybuffer",
@@ -694,7 +706,7 @@ export class Metadata {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = baseURL.replace(/\/$/, "") + "/company/people/fields";
+        const operationUrl: string = baseURL.replace(/\/$/, "") + "/company/people/fields";
 
         let [reqBodyHeaders, reqBody]: [object, any] = [{}, null];
 
@@ -722,7 +734,7 @@ export class Metadata {
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
-            url: url,
+            url: operationUrl,
             method: "post",
             headers: headers,
             responseType: "arraybuffer",
@@ -782,7 +794,7 @@ export class Metadata {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = utils.generateURL(
+        const operationUrl: string = utils.generateURL(
             baseURL,
             "/company/named-lists/{listName}/{itemId}",
             req
@@ -818,7 +830,7 @@ export class Metadata {
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
-            url: url,
+            url: operationUrl,
             method: "put",
             headers: headers,
             responseType: "arraybuffer",
@@ -865,7 +877,11 @@ export class Metadata {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = utils.generateURL(baseURL, "/company/people/fields/{fieldId}", req);
+        const operationUrl: string = utils.generateURL(
+            baseURL,
+            "/company/people/fields/{fieldId}",
+            req
+        );
 
         let [reqBodyHeaders, reqBody]: [object, any] = [{}, null];
 
@@ -897,7 +913,7 @@ export class Metadata {
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
-            url: url,
+            url: operationUrl,
             method: "put",
             headers: headers,
             responseType: "arraybuffer",

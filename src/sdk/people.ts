@@ -35,7 +35,11 @@ export class People {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = utils.generateURL(baseURL, "/people/{id}/employment/{entry_id}", req);
+        const operationUrl: string = utils.generateURL(
+            baseURL,
+            "/people/{id}/employment/{entry_id}",
+            req
+        );
         const client: AxiosInstance = this.sdkConfiguration.defaultClient;
         if (!(security instanceof utils.SpeakeasyBase)) {
             security = new operations.DeletePeopleIdEmploymentEntryIdSecurity(security);
@@ -48,7 +52,7 @@ export class People {
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
-            url: url,
+            url: operationUrl,
             method: "delete",
             headers: headers,
             responseType: "arraybuffer",
@@ -94,7 +98,11 @@ export class People {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = utils.generateURL(baseURL, "/people/{id}/equities/{entry_id}", req);
+        const operationUrl: string = utils.generateURL(
+            baseURL,
+            "/people/{id}/equities/{entry_id}",
+            req
+        );
         const client: AxiosInstance = this.sdkConfiguration.defaultClient;
         if (!(security instanceof utils.SpeakeasyBase)) {
             security = new operations.DeletePeopleIdEquitiesEntryIdSecurity(security);
@@ -107,7 +115,7 @@ export class People {
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
-            url: url,
+            url: operationUrl,
             method: "delete",
             headers: headers,
             responseType: "arraybuffer",
@@ -153,7 +161,11 @@ export class People {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = utils.generateURL(baseURL, "/people/{id}/salaries/{entry_id}", req);
+        const operationUrl: string = utils.generateURL(
+            baseURL,
+            "/people/{id}/salaries/{entry_id}",
+            req
+        );
         const client: AxiosInstance = this.sdkConfiguration.defaultClient;
         if (!(security instanceof utils.SpeakeasyBase)) {
             security = new operations.DeletePeopleIdSalariesEntryIdSecurity(security);
@@ -166,7 +178,7 @@ export class People {
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
-            url: url,
+            url: operationUrl,
             method: "delete",
             headers: headers,
             responseType: "arraybuffer",
@@ -212,7 +224,11 @@ export class People {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = utils.generateURL(baseURL, "/people/{id}/training/{entry_id}", req);
+        const operationUrl: string = utils.generateURL(
+            baseURL,
+            "/people/{id}/training/{entry_id}",
+            req
+        );
         const client: AxiosInstance = this.sdkConfiguration.defaultClient;
         if (!(security instanceof utils.SpeakeasyBase)) {
             security = new operations.DeletePeopleIdTrainingEntryIdSecurity(security);
@@ -225,7 +241,7 @@ export class People {
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
-            url: url,
+            url: operationUrl,
             method: "delete",
             headers: headers,
             responseType: "arraybuffer",
@@ -271,7 +287,11 @@ export class People {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = utils.generateURL(baseURL, "/people/{id}/variable/{entry_id}", req);
+        const operationUrl: string = utils.generateURL(
+            baseURL,
+            "/people/{id}/variable/{entry_id}",
+            req
+        );
         const client: AxiosInstance = this.sdkConfiguration.defaultClient;
         if (!(security instanceof utils.SpeakeasyBase)) {
             security = new operations.DeletePeopleIdVariableEntryIdSecurity(security);
@@ -284,7 +304,7 @@ export class People {
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
-            url: url,
+            url: operationUrl,
             method: "delete",
             headers: headers,
             responseType: "arraybuffer",
@@ -330,7 +350,11 @@ export class People {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = utils.generateURL(baseURL, "/people/{id}/work/{entry_id}", req);
+        const operationUrl: string = utils.generateURL(
+            baseURL,
+            "/people/{id}/work/{entry_id}",
+            req
+        );
         const client: AxiosInstance = this.sdkConfiguration.defaultClient;
         if (!(security instanceof utils.SpeakeasyBase)) {
             security = new operations.DeletePeopleIdWorkEntryIdSecurity(security);
@@ -343,7 +367,7 @@ export class People {
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
-            url: url,
+            url: operationUrl,
             method: "delete",
             headers: headers,
             responseType: "arraybuffer",
@@ -388,7 +412,7 @@ export class People {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = baseURL.replace(/\/$/, "") + "/avatars";
+        const operationUrl: string = baseURL.replace(/\/$/, "") + "/avatars";
         const client: AxiosInstance = this.sdkConfiguration.defaultClient;
         let globalSecurity = this.sdkConfiguration.security;
         if (typeof globalSecurity === "function") {
@@ -406,7 +430,7 @@ export class People {
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
-            url: url + queryParams,
+            url: operationUrl + queryParams,
             method: "get",
             headers: headers,
             responseType: "arraybuffer",
@@ -450,7 +474,7 @@ export class People {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = utils.generateURL(baseURL, "/avatars/{employeeId}", req);
+        const operationUrl: string = utils.generateURL(baseURL, "/avatars/{employeeId}", req);
         const client: AxiosInstance = this.sdkConfiguration.defaultClient;
         let globalSecurity = this.sdkConfiguration.security;
         if (typeof globalSecurity === "function") {
@@ -467,7 +491,7 @@ export class People {
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
-            url: url,
+            url: operationUrl,
             method: "get",
             headers: headers,
             responseType: "arraybuffer",
@@ -505,7 +529,7 @@ export class People {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = baseURL.replace(/\/$/, "") + "/my/avatar";
+        const operationUrl: string = baseURL.replace(/\/$/, "") + "/my/avatar";
         const client: AxiosInstance = this.sdkConfiguration.defaultClient;
         let globalSecurity = this.sdkConfiguration.security;
         if (typeof globalSecurity === "function") {
@@ -522,7 +546,7 @@ export class People {
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
-            url: url,
+            url: operationUrl,
             method: "get",
             headers: headers,
             responseType: "arraybuffer",
@@ -569,7 +593,7 @@ export class People {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = baseURL.replace(/\/$/, "") + "/people";
+        const operationUrl: string = baseURL.replace(/\/$/, "") + "/people";
         const client: AxiosInstance = this.sdkConfiguration.defaultClient;
         if (!(security instanceof utils.SpeakeasyBase)) {
             security = new operations.GetPeopleSecurity(security);
@@ -583,7 +607,7 @@ export class People {
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
-            url: url + queryParams,
+            url: operationUrl + queryParams,
             method: "get",
             headers: headers,
             responseType: "arraybuffer",
@@ -653,7 +677,7 @@ export class People {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = utils.generateURL(baseURL, "/people/{identifier}", req);
+        const operationUrl: string = utils.generateURL(baseURL, "/people/{identifier}", req);
         const client: AxiosInstance = this.sdkConfiguration.defaultClient;
         if (!(security instanceof utils.SpeakeasyBase)) {
             security = new operations.GetPeopleIdentifierSecurity(security);
@@ -667,7 +691,7 @@ export class People {
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
-            url: url + queryParams,
+            url: operationUrl + queryParams,
             method: "get",
             headers: headers,
             responseType: "arraybuffer",
@@ -736,7 +760,7 @@ export class People {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = utils.generateURL(baseURL, "/people/{id}/employment", req);
+        const operationUrl: string = utils.generateURL(baseURL, "/people/{id}/employment", req);
         const client: AxiosInstance = this.sdkConfiguration.defaultClient;
         if (!(security instanceof utils.SpeakeasyBase)) {
             security = new operations.GetPeopleIdEmploymentSecurity(security);
@@ -749,7 +773,7 @@ export class People {
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
-            url: url,
+            url: operationUrl,
             method: "get",
             headers: headers,
             responseType: "arraybuffer",
@@ -809,7 +833,7 @@ export class People {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = utils.generateURL(baseURL, "/people/{id}/equities", req);
+        const operationUrl: string = utils.generateURL(baseURL, "/people/{id}/equities", req);
         const client: AxiosInstance = this.sdkConfiguration.defaultClient;
         if (!(security instanceof utils.SpeakeasyBase)) {
             security = new operations.GetPeopleIdEquitiesSecurity(security);
@@ -822,7 +846,7 @@ export class People {
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
-            url: url,
+            url: operationUrl,
             method: "get",
             headers: headers,
             responseType: "arraybuffer",
@@ -882,7 +906,7 @@ export class People {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = utils.generateURL(baseURL, "/people/{id}/lifecycle", req);
+        const operationUrl: string = utils.generateURL(baseURL, "/people/{id}/lifecycle", req);
         const client: AxiosInstance = this.sdkConfiguration.defaultClient;
         if (!(security instanceof utils.SpeakeasyBase)) {
             security = new operations.GetPeopleIdLifecycleSecurity(security);
@@ -895,7 +919,7 @@ export class People {
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
-            url: url,
+            url: operationUrl,
             method: "get",
             headers: headers,
             responseType: "arraybuffer",
@@ -955,7 +979,7 @@ export class People {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = utils.generateURL(baseURL, "/people/{id}/salaries", req);
+        const operationUrl: string = utils.generateURL(baseURL, "/people/{id}/salaries", req);
         const client: AxiosInstance = this.sdkConfiguration.defaultClient;
         if (!(security instanceof utils.SpeakeasyBase)) {
             security = new operations.GetPeopleIdSalariesSecurity(security);
@@ -968,7 +992,7 @@ export class People {
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
-            url: url,
+            url: operationUrl,
             method: "get",
             headers: headers,
             responseType: "arraybuffer",
@@ -1028,7 +1052,7 @@ export class People {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = utils.generateURL(baseURL, "/people/{id}/training", req);
+        const operationUrl: string = utils.generateURL(baseURL, "/people/{id}/training", req);
         const client: AxiosInstance = this.sdkConfiguration.defaultClient;
         if (!(security instanceof utils.SpeakeasyBase)) {
             security = new operations.GetPeopleIdTrainingSecurity(security);
@@ -1041,7 +1065,7 @@ export class People {
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
-            url: url,
+            url: operationUrl,
             method: "get",
             headers: headers,
             responseType: "arraybuffer",
@@ -1100,7 +1124,7 @@ export class People {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = utils.generateURL(baseURL, "/people/{id}/variable", req);
+        const operationUrl: string = utils.generateURL(baseURL, "/people/{id}/variable", req);
         const client: AxiosInstance = this.sdkConfiguration.defaultClient;
         let globalSecurity = this.sdkConfiguration.security;
         if (typeof globalSecurity === "function") {
@@ -1117,7 +1141,7 @@ export class People {
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
-            url: url,
+            url: operationUrl,
             method: "get",
             headers: headers,
             responseType: "arraybuffer",
@@ -1177,7 +1201,7 @@ export class People {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = utils.generateURL(baseURL, "/people/{id}/work", req);
+        const operationUrl: string = utils.generateURL(baseURL, "/people/{id}/work", req);
         const client: AxiosInstance = this.sdkConfiguration.defaultClient;
         if (!(security instanceof utils.SpeakeasyBase)) {
             security = new operations.GetPeopleIdWorkSecurity(security);
@@ -1190,7 +1214,7 @@ export class People {
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
-            url: url,
+            url: operationUrl,
             method: "get",
             headers: headers,
             responseType: "arraybuffer",
@@ -1248,7 +1272,7 @@ export class People {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = baseURL.replace(/\/$/, "") + "/profiles";
+        const operationUrl: string = baseURL.replace(/\/$/, "") + "/profiles";
         const client: AxiosInstance = this.sdkConfiguration.defaultClient;
         let globalSecurity = this.sdkConfiguration.security;
         if (typeof globalSecurity === "function") {
@@ -1266,7 +1290,7 @@ export class People {
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
-            url: url + queryParams,
+            url: operationUrl + queryParams,
             method: "get",
             headers: headers,
             responseType: "arraybuffer",
@@ -1337,7 +1361,11 @@ export class People {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = utils.generateURL(baseURL, "/employees/{employeeId}/invitations", req);
+        const operationUrl: string = utils.generateURL(
+            baseURL,
+            "/employees/{employeeId}/invitations",
+            req
+        );
 
         let [reqBodyHeaders, reqBody]: [object, any] = [{}, null];
 
@@ -1369,7 +1397,7 @@ export class People {
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
-            url: url,
+            url: operationUrl,
             method: "post",
             headers: headers,
             responseType: "arraybuffer",
@@ -1429,7 +1457,11 @@ export class People {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = utils.generateURL(baseURL, "/employees/{employeeId}/start-date", req);
+        const operationUrl: string = utils.generateURL(
+            baseURL,
+            "/employees/{employeeId}/start-date",
+            req
+        );
 
         let [reqBodyHeaders, reqBody]: [object, any] = [{}, null];
 
@@ -1457,7 +1489,7 @@ export class People {
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
-            url: url,
+            url: operationUrl,
             method: "post",
             headers: headers,
             responseType: "arraybuffer",
@@ -1517,7 +1549,11 @@ export class People {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = utils.generateURL(baseURL, "/employees/{identifier}/terminate", req);
+        const operationUrl: string = utils.generateURL(
+            baseURL,
+            "/employees/{identifier}/terminate",
+            req
+        );
 
         let [reqBodyHeaders, reqBody]: [object, any] = [{}, null];
 
@@ -1549,7 +1585,7 @@ export class People {
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
-            url: url,
+            url: operationUrl,
             method: "post",
             headers: headers,
             responseType: "arraybuffer",
@@ -1596,7 +1632,11 @@ export class People {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = utils.generateURL(baseURL, "/employees/{identifier}/uninvite", req);
+        const operationUrl: string = utils.generateURL(
+            baseURL,
+            "/employees/{identifier}/uninvite",
+            req
+        );
         const client: AxiosInstance = this.sdkConfiguration.defaultClient;
         if (!(security instanceof utils.SpeakeasyBase)) {
             security = new operations.PostEmployeesIdentifierUninviteSecurity(security);
@@ -1609,7 +1649,7 @@ export class People {
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
-            url: url,
+            url: operationUrl,
             method: "post",
             headers: headers,
             responseType: "arraybuffer",
@@ -1668,7 +1708,7 @@ export class People {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = baseURL.replace(/\/$/, "") + "/people";
+        const operationUrl: string = baseURL.replace(/\/$/, "") + "/people";
 
         let [reqBodyHeaders, reqBody]: [object, any] = [{}, null];
 
@@ -1696,7 +1736,7 @@ export class People {
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
-            url: url,
+            url: operationUrl,
             method: "post",
             headers: headers,
             responseType: "arraybuffer",
@@ -1753,7 +1793,7 @@ export class People {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = baseURL.replace(/\/$/, "") + "/people/search";
+        const operationUrl: string = baseURL.replace(/\/$/, "") + "/people/search";
 
         let [reqBodyHeaders, reqBody]: [object, any] = [{}, null];
 
@@ -1781,7 +1821,7 @@ export class People {
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
-            url: url,
+            url: operationUrl,
             method: "post",
             headers: headers,
             responseType: "arraybuffer",
@@ -1850,7 +1890,7 @@ export class People {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = utils.generateURL(baseURL, "/people/{identifier}", req);
+        const operationUrl: string = utils.generateURL(baseURL, "/people/{identifier}", req);
 
         let [reqBodyHeaders, reqBody]: [object, any] = [{}, null];
 
@@ -1881,7 +1921,7 @@ export class People {
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
-            url: url,
+            url: operationUrl,
             method: "post",
             headers: headers,
             responseType: "arraybuffer",
@@ -1951,7 +1991,7 @@ export class People {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = utils.generateURL(baseURL, "/people/{id}/employment", req);
+        const operationUrl: string = utils.generateURL(baseURL, "/people/{id}/employment", req);
 
         let [reqBodyHeaders, reqBody]: [object, any] = [{}, null];
 
@@ -1979,7 +2019,7 @@ export class People {
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
-            url: url,
+            url: operationUrl,
             method: "post",
             headers: headers,
             responseType: "arraybuffer",
@@ -2026,7 +2066,7 @@ export class People {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = utils.generateURL(baseURL, "/people/{id}/equities", req);
+        const operationUrl: string = utils.generateURL(baseURL, "/people/{id}/equities", req);
 
         let [reqBodyHeaders, reqBody]: [object, any] = [{}, null];
 
@@ -2054,7 +2094,7 @@ export class People {
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
-            url: url,
+            url: operationUrl,
             method: "post",
             headers: headers,
             responseType: "arraybuffer",
@@ -2101,7 +2141,7 @@ export class People {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = utils.generateURL(baseURL, "/people/{id}/salaries", req);
+        const operationUrl: string = utils.generateURL(baseURL, "/people/{id}/salaries", req);
 
         let [reqBodyHeaders, reqBody]: [object, any] = [{}, null];
 
@@ -2129,7 +2169,7 @@ export class People {
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
-            url: url,
+            url: operationUrl,
             method: "post",
             headers: headers,
             responseType: "arraybuffer",
@@ -2176,7 +2216,7 @@ export class People {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = utils.generateURL(baseURL, "/people/{id}/training", req);
+        const operationUrl: string = utils.generateURL(baseURL, "/people/{id}/training", req);
 
         let [reqBodyHeaders, reqBody]: [object, any] = [{}, null];
 
@@ -2204,7 +2244,7 @@ export class People {
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
-            url: url,
+            url: operationUrl,
             method: "post",
             headers: headers,
             responseType: "arraybuffer",
@@ -2251,7 +2291,7 @@ export class People {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = utils.generateURL(baseURL, "/people/{id}/variable", req);
+        const operationUrl: string = utils.generateURL(baseURL, "/people/{id}/variable", req);
 
         let [reqBodyHeaders, reqBody]: [object, any] = [{}, null];
 
@@ -2279,7 +2319,7 @@ export class People {
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
-            url: url,
+            url: operationUrl,
             method: "post",
             headers: headers,
             responseType: "arraybuffer",
@@ -2326,7 +2366,7 @@ export class People {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = utils.generateURL(baseURL, "/people/{id}/work", req);
+        const operationUrl: string = utils.generateURL(baseURL, "/people/{id}/work", req);
 
         let [reqBodyHeaders, reqBody]: [object, any] = [{}, null];
 
@@ -2354,7 +2394,7 @@ export class People {
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
-            url: url,
+            url: operationUrl,
             method: "post",
             headers: headers,
             responseType: "arraybuffer",
@@ -2399,7 +2439,7 @@ export class People {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = utils.generateURL(baseURL, "/avatars/{employeeId}", req);
+        const operationUrl: string = utils.generateURL(baseURL, "/avatars/{employeeId}", req);
 
         let [reqBodyHeaders, reqBody]: [object, any] = [{}, null];
 
@@ -2431,7 +2471,7 @@ export class People {
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
-            url: url,
+            url: operationUrl,
             method: "put",
             headers: headers,
             responseType: "arraybuffer",
@@ -2478,7 +2518,7 @@ export class People {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = utils.generateURL(baseURL, "/people/{identifier}", req);
+        const operationUrl: string = utils.generateURL(baseURL, "/people/{identifier}", req);
 
         let [reqBodyHeaders, reqBody]: [object, any] = [{}, null];
 
@@ -2506,7 +2546,7 @@ export class People {
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
-            url: url,
+            url: operationUrl,
             method: "put",
             headers: headers,
             responseType: "arraybuffer",
@@ -2553,7 +2593,7 @@ export class People {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = utils.generateURL(baseURL, "/people/{id}/email", req);
+        const operationUrl: string = utils.generateURL(baseURL, "/people/{id}/email", req);
 
         let [reqBodyHeaders, reqBody]: [object, any] = [{}, null];
 
@@ -2581,7 +2621,7 @@ export class People {
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
-            url: url,
+            url: operationUrl,
             method: "put",
             headers: headers,
             responseType: "arraybuffer",
@@ -2626,7 +2666,11 @@ export class People {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = utils.generateURL(baseURL, "/people/{id}/employment/{entry_id}", req);
+        const operationUrl: string = utils.generateURL(
+            baseURL,
+            "/people/{id}/employment/{entry_id}",
+            req
+        );
 
         let [reqBodyHeaders, reqBody]: [object, any] = [{}, null];
 
@@ -2658,7 +2702,7 @@ export class People {
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
-            url: url,
+            url: operationUrl,
             method: "put",
             headers: headers,
             responseType: "arraybuffer",
@@ -2705,7 +2749,11 @@ export class People {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = utils.generateURL(baseURL, "/people/{id}/equities/{entry_id}", req);
+        const operationUrl: string = utils.generateURL(
+            baseURL,
+            "/people/{id}/equities/{entry_id}",
+            req
+        );
 
         let [reqBodyHeaders, reqBody]: [object, any] = [{}, null];
 
@@ -2733,7 +2781,7 @@ export class People {
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
-            url: url,
+            url: operationUrl,
             method: "put",
             headers: headers,
             responseType: "arraybuffer",
@@ -2779,7 +2827,11 @@ export class People {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = utils.generateURL(baseURL, "/people/{id}/work/{entry_id}", req);
+        const operationUrl: string = utils.generateURL(
+            baseURL,
+            "/people/{id}/work/{entry_id}",
+            req
+        );
 
         let [reqBodyHeaders, reqBody]: [object, any] = [{}, null];
 
@@ -2811,7 +2863,7 @@ export class People {
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
-            url: url,
+            url: operationUrl,
             method: "put",
             headers: headers,
             responseType: "arraybuffer",

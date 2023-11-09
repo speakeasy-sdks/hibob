@@ -1,5 +1,5 @@
 # CustomTables
-(*.customTables*)
+(*customTables*)
 
 ### Available Operations
 
@@ -33,7 +33,6 @@ const operationSecurity: DeletePeopleCustomTablesEmployeeIdCustomTableIdEntryIdS
     entryId: "string",
   }, operationSecurity);
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -42,17 +41,21 @@ const operationSecurity: DeletePeopleCustomTablesEmployeeIdCustomTableIdEntryIdS
 
 ### Parameters
 
-| Parameter                                                                                                                                                              | Type                                                                                                                                                                   | Required                                                                                                                                                               | Description                                                                                                                                                            |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                                                              | [operations.DeletePeopleCustomTablesEmployeeIdCustomTableIdEntryIdRequest](../../models/operations/deletepeoplecustomtablesemployeeidcustomtableidentryidrequest.md)   | :heavy_check_mark:                                                                                                                                                     | The request object to use for the request.                                                                                                                             |
-| `security`                                                                                                                                                             | [operations.DeletePeopleCustomTablesEmployeeIdCustomTableIdEntryIdSecurity](../../models/operations/deletepeoplecustomtablesemployeeidcustomtableidentryidsecurity.md) | :heavy_check_mark:                                                                                                                                                     | The security requirements to use for the request.                                                                                                                      |
-| `config`                                                                                                                                                               | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                                                           | :heavy_minus_sign:                                                                                                                                                     | Available config options for making requests.                                                                                                                          |
+| Parameter                                                                                                                                                                  | Type                                                                                                                                                                       | Required                                                                                                                                                                   | Description                                                                                                                                                                |
+| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                                                                  | [operations.DeletePeopleCustomTablesEmployeeIdCustomTableIdEntryIdRequest](../../sdk/models/operations/deletepeoplecustomtablesemployeeidcustomtableidentryidrequest.md)   | :heavy_check_mark:                                                                                                                                                         | The request object to use for the request.                                                                                                                                 |
+| `security`                                                                                                                                                                 | [operations.DeletePeopleCustomTablesEmployeeIdCustomTableIdEntryIdSecurity](../../sdk/models/operations/deletepeoplecustomtablesemployeeidcustomtableidentryidsecurity.md) | :heavy_check_mark:                                                                                                                                                         | The security requirements to use for the request.                                                                                                                          |
+| `config`                                                                                                                                                                   | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                                                               | :heavy_minus_sign:                                                                                                                                                         | Available config options for making requests.                                                                                                                              |
 
 
 ### Response
 
-**Promise<[operations.DeletePeopleCustomTablesEmployeeIdCustomTableIdEntryIdResponse](../../models/operations/deletepeoplecustomtablesemployeeidcustomtableidentryidresponse.md)>**
+**Promise<[operations.DeletePeopleCustomTablesEmployeeIdCustomTableIdEntryIdResponse](../../sdk/models/operations/deletepeoplecustomtablesemployeeidcustomtableidentryidresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## getPeopleCustomTablesEmployeeIdCustomTableId
 
@@ -78,7 +81,6 @@ const operationSecurity: GetPeopleCustomTablesEmployeeIdCustomTableIdSecurity = 
     employeeId: "string",
   }, operationSecurity);
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -87,17 +89,21 @@ const operationSecurity: GetPeopleCustomTablesEmployeeIdCustomTableIdSecurity = 
 
 ### Parameters
 
-| Parameter                                                                                                                                          | Type                                                                                                                                               | Required                                                                                                                                           | Description                                                                                                                                        |
-| -------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                                          | [operations.GetPeopleCustomTablesEmployeeIdCustomTableIdRequest](../../models/operations/getpeoplecustomtablesemployeeidcustomtableidrequest.md)   | :heavy_check_mark:                                                                                                                                 | The request object to use for the request.                                                                                                         |
-| `security`                                                                                                                                         | [operations.GetPeopleCustomTablesEmployeeIdCustomTableIdSecurity](../../models/operations/getpeoplecustomtablesemployeeidcustomtableidsecurity.md) | :heavy_check_mark:                                                                                                                                 | The security requirements to use for the request.                                                                                                  |
-| `config`                                                                                                                                           | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                                       | :heavy_minus_sign:                                                                                                                                 | Available config options for making requests.                                                                                                      |
+| Parameter                                                                                                                                              | Type                                                                                                                                                   | Required                                                                                                                                               | Description                                                                                                                                            |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                                                                              | [operations.GetPeopleCustomTablesEmployeeIdCustomTableIdRequest](../../sdk/models/operations/getpeoplecustomtablesemployeeidcustomtableidrequest.md)   | :heavy_check_mark:                                                                                                                                     | The request object to use for the request.                                                                                                             |
+| `security`                                                                                                                                             | [operations.GetPeopleCustomTablesEmployeeIdCustomTableIdSecurity](../../sdk/models/operations/getpeoplecustomtablesemployeeidcustomtableidsecurity.md) | :heavy_check_mark:                                                                                                                                     | The security requirements to use for the request.                                                                                                      |
+| `config`                                                                                                                                               | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                                           | :heavy_minus_sign:                                                                                                                                     | Available config options for making requests.                                                                                                          |
 
 
 ### Response
 
-**Promise<[operations.GetPeopleCustomTablesEmployeeIdCustomTableIdResponse](../../models/operations/getpeoplecustomtablesemployeeidcustomtableidresponse.md)>**
+**Promise<[operations.GetPeopleCustomTablesEmployeeIdCustomTableIdResponse](../../sdk/models/operations/getpeoplecustomtablesemployeeidcustomtableidresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## postPeopleCustomTablesEmployeeIdCustomTableId
 
@@ -124,7 +130,6 @@ const operationSecurity: PostPeopleCustomTablesEmployeeIdCustomTableIdSecurity =
     employeeId: "string",
   }, operationSecurity);
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -133,17 +138,21 @@ const operationSecurity: PostPeopleCustomTablesEmployeeIdCustomTableIdSecurity =
 
 ### Parameters
 
-| Parameter                                                                                                                                            | Type                                                                                                                                                 | Required                                                                                                                                             | Description                                                                                                                                          |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                                            | [operations.PostPeopleCustomTablesEmployeeIdCustomTableIdRequest](../../models/operations/postpeoplecustomtablesemployeeidcustomtableidrequest.md)   | :heavy_check_mark:                                                                                                                                   | The request object to use for the request.                                                                                                           |
-| `security`                                                                                                                                           | [operations.PostPeopleCustomTablesEmployeeIdCustomTableIdSecurity](../../models/operations/postpeoplecustomtablesemployeeidcustomtableidsecurity.md) | :heavy_check_mark:                                                                                                                                   | The security requirements to use for the request.                                                                                                    |
-| `config`                                                                                                                                             | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                                         | :heavy_minus_sign:                                                                                                                                   | Available config options for making requests.                                                                                                        |
+| Parameter                                                                                                                                                | Type                                                                                                                                                     | Required                                                                                                                                                 | Description                                                                                                                                              |
+| -------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                                                | [operations.PostPeopleCustomTablesEmployeeIdCustomTableIdRequest](../../sdk/models/operations/postpeoplecustomtablesemployeeidcustomtableidrequest.md)   | :heavy_check_mark:                                                                                                                                       | The request object to use for the request.                                                                                                               |
+| `security`                                                                                                                                               | [operations.PostPeopleCustomTablesEmployeeIdCustomTableIdSecurity](../../sdk/models/operations/postpeoplecustomtablesemployeeidcustomtableidsecurity.md) | :heavy_check_mark:                                                                                                                                       | The security requirements to use for the request.                                                                                                        |
+| `config`                                                                                                                                                 | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                                             | :heavy_minus_sign:                                                                                                                                       | Available config options for making requests.                                                                                                            |
 
 
 ### Response
 
-**Promise<[operations.PostPeopleCustomTablesEmployeeIdCustomTableIdResponse](../../models/operations/postpeoplecustomtablesemployeeidcustomtableidresponse.md)>**
+**Promise<[operations.PostPeopleCustomTablesEmployeeIdCustomTableIdResponse](../../sdk/models/operations/postpeoplecustomtablesemployeeidcustomtableidresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## putPeopleCustomTablesEmployeeIdCustomTableIdEntryId
 
@@ -171,7 +180,6 @@ const operationSecurity: PutPeopleCustomTablesEmployeeIdCustomTableIdEntryIdSecu
     entryId: "string",
   }, operationSecurity);
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -180,14 +188,18 @@ const operationSecurity: PutPeopleCustomTablesEmployeeIdCustomTableIdEntryIdSecu
 
 ### Parameters
 
-| Parameter                                                                                                                                                        | Type                                                                                                                                                             | Required                                                                                                                                                         | Description                                                                                                                                                      |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                                                        | [operations.PutPeopleCustomTablesEmployeeIdCustomTableIdEntryIdRequest](../../models/operations/putpeoplecustomtablesemployeeidcustomtableidentryidrequest.md)   | :heavy_check_mark:                                                                                                                                               | The request object to use for the request.                                                                                                                       |
-| `security`                                                                                                                                                       | [operations.PutPeopleCustomTablesEmployeeIdCustomTableIdEntryIdSecurity](../../models/operations/putpeoplecustomtablesemployeeidcustomtableidentryidsecurity.md) | :heavy_check_mark:                                                                                                                                               | The security requirements to use for the request.                                                                                                                |
-| `config`                                                                                                                                                         | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                                                     | :heavy_minus_sign:                                                                                                                                               | Available config options for making requests.                                                                                                                    |
+| Parameter                                                                                                                                                            | Type                                                                                                                                                                 | Required                                                                                                                                                             | Description                                                                                                                                                          |
+| -------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                                                            | [operations.PutPeopleCustomTablesEmployeeIdCustomTableIdEntryIdRequest](../../sdk/models/operations/putpeoplecustomtablesemployeeidcustomtableidentryidrequest.md)   | :heavy_check_mark:                                                                                                                                                   | The request object to use for the request.                                                                                                                           |
+| `security`                                                                                                                                                           | [operations.PutPeopleCustomTablesEmployeeIdCustomTableIdEntryIdSecurity](../../sdk/models/operations/putpeoplecustomtablesemployeeidcustomtableidentryidsecurity.md) | :heavy_check_mark:                                                                                                                                                   | The security requirements to use for the request.                                                                                                                    |
+| `config`                                                                                                                                                             | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                                                         | :heavy_minus_sign:                                                                                                                                                   | Available config options for making requests.                                                                                                                        |
 
 
 ### Response
 
-**Promise<[operations.PutPeopleCustomTablesEmployeeIdCustomTableIdEntryIdResponse](../../models/operations/putpeoplecustomtablesemployeeidcustomtableidentryidresponse.md)>**
+**Promise<[operations.PutPeopleCustomTablesEmployeeIdCustomTableIdEntryIdResponse](../../sdk/models/operations/putpeoplecustomtablesemployeeidcustomtableidentryidresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |

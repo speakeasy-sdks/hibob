@@ -35,7 +35,7 @@ export class Documents {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = utils.generateURL(
+        const operationUrl: string = utils.generateURL(
             baseURL,
             "/docs/people/{id}/confidential/{docId}",
             req
@@ -52,7 +52,7 @@ export class Documents {
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
-            url: url,
+            url: operationUrl,
             method: "delete",
             headers: headers,
             responseType: "arraybuffer",
@@ -111,7 +111,11 @@ export class Documents {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = utils.generateURL(baseURL, "/docs/people/{id}/shared/{docId}", req);
+        const operationUrl: string = utils.generateURL(
+            baseURL,
+            "/docs/people/{id}/shared/{docId}",
+            req
+        );
         const client: AxiosInstance = this.sdkConfiguration.defaultClient;
         if (!(security instanceof utils.SpeakeasyBase)) {
             security = new operations.DeleteDocsPeopleIdSharedDocIdSecurity(security);
@@ -124,7 +128,7 @@ export class Documents {
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
-            url: url,
+            url: operationUrl,
             method: "delete",
             headers: headers,
             responseType: "arraybuffer",
@@ -182,7 +186,7 @@ export class Documents {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = utils.generateURL(baseURL, "/docs/people/{id}", req);
+        const operationUrl: string = utils.generateURL(baseURL, "/docs/people/{id}", req);
         const client: AxiosInstance = this.sdkConfiguration.defaultClient;
         let globalSecurity = this.sdkConfiguration.security;
         if (typeof globalSecurity === "function") {
@@ -199,7 +203,7 @@ export class Documents {
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
-            url: url,
+            url: operationUrl,
             method: "get",
             headers: headers,
             responseType: "arraybuffer",
@@ -269,7 +273,11 @@ export class Documents {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = utils.generateURL(baseURL, "/docs/people/{id}/confidential", req);
+        const operationUrl: string = utils.generateURL(
+            baseURL,
+            "/docs/people/{id}/confidential",
+            req
+        );
 
         let [reqBodyHeaders, reqBody]: [object, any] = [{}, null];
 
@@ -301,7 +309,7 @@ export class Documents {
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
-            url: url,
+            url: operationUrl,
             method: "post",
             headers: headers,
             responseType: "arraybuffer",
@@ -360,7 +368,7 @@ export class Documents {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = utils.generateURL(
+        const operationUrl: string = utils.generateURL(
             baseURL,
             "/docs/people/{id}/confidential/upload",
             req
@@ -396,7 +404,7 @@ export class Documents {
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
-            url: url,
+            url: operationUrl,
             method: "post",
             headers: headers,
             responseType: "arraybuffer",
@@ -455,7 +463,7 @@ export class Documents {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = utils.generateURL(baseURL, "/docs/people/{id}/shared", req);
+        const operationUrl: string = utils.generateURL(baseURL, "/docs/people/{id}/shared", req);
 
         let [reqBodyHeaders, reqBody]: [object, any] = [{}, null];
 
@@ -487,7 +495,7 @@ export class Documents {
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
-            url: url,
+            url: operationUrl,
             method: "post",
             headers: headers,
             responseType: "arraybuffer",
@@ -546,7 +554,11 @@ export class Documents {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = utils.generateURL(baseURL, "/docs/people/{id}/shared/upload", req);
+        const operationUrl: string = utils.generateURL(
+            baseURL,
+            "/docs/people/{id}/shared/upload",
+            req
+        );
 
         let [reqBodyHeaders, reqBody]: [object, any] = [{}, null];
 
@@ -578,7 +590,7 @@ export class Documents {
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
-            url: url,
+            url: operationUrl,
             method: "post",
             headers: headers,
             responseType: "arraybuffer",
