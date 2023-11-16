@@ -47,7 +47,7 @@ export class GetCompanyReportsDownloadReportNameResponse extends SpeakeasyBase {
      * Raw HTTP response; suitable for custom response parsing
      */
     @SpeakeasyMetadata()
-    rawResponse?: AxiosResponse;
+    rawResponse: AxiosResponse;
 
     /**
      * Include the report name and execution date in the report file. This defaults to true.

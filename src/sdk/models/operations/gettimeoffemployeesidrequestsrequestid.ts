@@ -47,7 +47,7 @@ export class GetTimeoffEmployeesIdRequestsRequestIdResponse extends SpeakeasyBas
      * Raw HTTP response; suitable for custom response parsing
      */
     @SpeakeasyMetadata()
-    rawResponse?: AxiosResponse;
+    rawResponse: AxiosResponse;
 
     /**
      * success
