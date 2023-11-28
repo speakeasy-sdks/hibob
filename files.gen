@@ -203,7 +203,6 @@ src/sdk/models/shared/security.ts
 src/sdk/models/errors/index.ts
 src/sdk/models/operations/index.ts
 src/sdk/models/shared/index.ts
-USAGE.md
 docs/sdk/models/operations/postattendanceimportimportmethodsecurity.md
 docs/sdk/models/operations/importmethod.md
 docs/sdk/models/operations/postattendanceimportimportmethodrequest.md
@@ -571,4 +570,5 @@ docs/sdks/payroll/README.md
 docs/sdks/customtables/README.md
 docs/sdks/tables/README.md
 docs/sdks/timeoff/README.md
+USAGE.md
 .gitattributes
