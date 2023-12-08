@@ -18,7 +18,7 @@ Returns a list of all the defined company reports. The data is filtered based on
 import { Hibob } from "hibob";
 import { GetCompanyReportsSecurity } from "hibob/dist/sdk/models/operations";
 
-(async() => {
+async function run() {
   const sdk = new Hibob();
 const operationSecurity: GetCompanyReportsSecurity = {
   basic: {
@@ -32,7 +32,9 @@ const operationSecurity: GetCompanyReportsSecurity = {
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -62,7 +64,7 @@ Returns the report data file when it is ready. If the file is not ready yet the 
 import { Hibob } from "hibob";
 import { GetCompanyReportsDownloadReportNameSecurity } from "hibob/dist/sdk/models/operations";
 
-(async() => {
+async function run() {
   const sdk = new Hibob();
 const operationSecurity: GetCompanyReportsDownloadReportNameSecurity = {
   basic: {
@@ -78,7 +80,9 @@ const operationSecurity: GetCompanyReportsDownloadReportNameSecurity = {
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -109,7 +113,7 @@ Returns a report data file in the specified format.<br /><b>Supported user types
 import { Hibob } from "hibob";
 import { GetCompanyReportsReportIdDownloadSecurity, QueryParamFormat } from "hibob/dist/sdk/models/operations";
 
-(async() => {
+async function run() {
   const sdk = new Hibob();
 const operationSecurity: GetCompanyReportsReportIdDownloadSecurity = {
   basic: {
@@ -126,7 +130,9 @@ const operationSecurity: GetCompanyReportsReportIdDownloadSecurity = {
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -157,7 +163,7 @@ Returns the polling URL report file of the specified format under "Location" in 
 import { Hibob } from "hibob";
 import { Format, GetCompanyReportsReportIdDownloadAsyncSecurity } from "hibob/dist/sdk/models/operations";
 
-(async() => {
+async function run() {
   const sdk = new Hibob();
 const operationSecurity: GetCompanyReportsReportIdDownloadAsyncSecurity = {
   basic: {
@@ -174,7 +180,9 @@ const operationSecurity: GetCompanyReportsReportIdDownloadAsyncSecurity = {
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters

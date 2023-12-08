@@ -14,7 +14,7 @@ Wizard info includes Wizard ID, name and description.<br /><b>Supported user typ
 ```typescript
 import { Hibob } from "hibob";
 
-(async() => {
+async function run() {
   const sdk = new Hibob({
     security: {
       bearer: "",
@@ -26,7 +26,9 @@ import { Hibob } from "hibob";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters

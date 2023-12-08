@@ -18,7 +18,7 @@
 import { Hibob } from "hibob";
 import { DeletePeopleCustomTablesEmployeeIdCustomTableIdEntryIdSecurity } from "hibob/dist/sdk/models/operations";
 
-(async() => {
+async function run() {
   const sdk = new Hibob();
 const operationSecurity: DeletePeopleCustomTablesEmployeeIdCustomTableIdEntryIdSecurity = {
   basic: {
@@ -36,7 +36,9 @@ const operationSecurity: DeletePeopleCustomTablesEmployeeIdCustomTableIdEntryIdS
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -67,7 +69,7 @@ const operationSecurity: DeletePeopleCustomTablesEmployeeIdCustomTableIdEntryIdS
 import { Hibob } from "hibob";
 import { GetPeopleCustomTablesEmployeeIdCustomTableIdSecurity } from "hibob/dist/sdk/models/operations";
 
-(async() => {
+async function run() {
   const sdk = new Hibob();
 const operationSecurity: GetPeopleCustomTablesEmployeeIdCustomTableIdSecurity = {
   basic: {
@@ -84,7 +86,9 @@ const operationSecurity: GetPeopleCustomTablesEmployeeIdCustomTableIdSecurity = 
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -115,7 +119,7 @@ const operationSecurity: GetPeopleCustomTablesEmployeeIdCustomTableIdSecurity = 
 import { Hibob } from "hibob";
 import { PostPeopleCustomTablesEmployeeIdCustomTableIdSecurity } from "hibob/dist/sdk/models/operations";
 
-(async() => {
+async function run() {
   const sdk = new Hibob();
 const operationSecurity: PostPeopleCustomTablesEmployeeIdCustomTableIdSecurity = {
   basic: {
@@ -133,7 +137,9 @@ const operationSecurity: PostPeopleCustomTablesEmployeeIdCustomTableIdSecurity =
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -164,7 +170,7 @@ const operationSecurity: PostPeopleCustomTablesEmployeeIdCustomTableIdSecurity =
 import { Hibob } from "hibob";
 import { PutPeopleCustomTablesEmployeeIdCustomTableIdEntryIdSecurity } from "hibob/dist/sdk/models/operations";
 
-(async() => {
+async function run() {
   const sdk = new Hibob();
 const operationSecurity: PutPeopleCustomTablesEmployeeIdCustomTableIdEntryIdSecurity = {
   basic: {
@@ -183,7 +189,9 @@ const operationSecurity: PutPeopleCustomTablesEmployeeIdCustomTableIdEntryIdSecu
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters

@@ -28,7 +28,7 @@ Cancels an existing time off request.<br /><b>Supported user types:</b> Employee
 import { Hibob } from "hibob";
 import { DeleteTimeoffEmployeesIdRequestsRequestIdSecurity } from "hibob/dist/sdk/models/operations";
 
-(async() => {
+async function run() {
   const sdk = new Hibob();
 const operationSecurity: DeleteTimeoffEmployeesIdRequestsRequestIdSecurity = {
   basic: {
@@ -45,7 +45,9 @@ const operationSecurity: DeleteTimeoffEmployeesIdRequestsRequestIdSecurity = {
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -77,7 +79,7 @@ import { Hibob } from "hibob";
 import { GetTimeoffEmployeesIdBalanceSecurity } from "hibob/dist/sdk/models/operations";
 import { RFCDate } from "hibob/dist/sdk/types";
 
-(async() => {
+async function run() {
   const sdk = new Hibob();
 const operationSecurity: GetTimeoffEmployeesIdBalanceSecurity = {
   password: "",
@@ -93,7 +95,9 @@ const operationSecurity: GetTimeoffEmployeesIdBalanceSecurity = {
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -124,7 +128,7 @@ Supplies detailed info about an existing time off request.<br /><b>Supported use
 import { Hibob } from "hibob";
 import { GetTimeoffEmployeesIdRequestsRequestIdSecurity } from "hibob/dist/sdk/models/operations";
 
-(async() => {
+async function run() {
   const sdk = new Hibob();
 const operationSecurity: GetTimeoffEmployeesIdRequestsRequestIdSecurity = {
   basic: {
@@ -141,7 +145,9 @@ const operationSecurity: GetTimeoffEmployeesIdRequestsRequestIdSecurity = {
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -173,7 +179,7 @@ import { Hibob } from "hibob";
 import { GetTimeoffOuttodaySecurity } from "hibob/dist/sdk/models/operations";
 import { RFCDate } from "hibob/dist/sdk/types";
 
-(async() => {
+async function run() {
   const sdk = new Hibob();
 const operationSecurity: GetTimeoffOuttodaySecurity = {
   basic: {
@@ -187,7 +193,9 @@ const operationSecurity: GetTimeoffOuttodaySecurity = {
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -218,7 +226,7 @@ Get details about a given policy.<br /><b>Supported user types:</b> Service.
 import { Hibob } from "hibob";
 import { GetTimeoffPoliciesSecurity } from "hibob/dist/sdk/models/operations";
 
-(async() => {
+async function run() {
   const sdk = new Hibob();
 const operationSecurity: GetTimeoffPoliciesSecurity = {
   password: "",
@@ -232,7 +240,9 @@ const operationSecurity: GetTimeoffPoliciesSecurity = {
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -263,7 +273,7 @@ Get a list of policy names for the user's defined policy type.<br /><b>Supported
 import { Hibob } from "hibob";
 import { GetTimeoffPoliciesNamesSecurity } from "hibob/dist/sdk/models/operations";
 
-(async() => {
+async function run() {
   const sdk = new Hibob();
 const operationSecurity: GetTimeoffPoliciesNamesSecurity = {
   password: "",
@@ -277,7 +287,9 @@ const operationSecurity: GetTimeoffPoliciesNamesSecurity = {
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -308,7 +320,7 @@ Get a list of all policy type names.<br /><b>Supported user types:</b> Service.
 import { Hibob } from "hibob";
 import { GetTimeoffPolicyTypesSecurity } from "hibob/dist/sdk/models/operations";
 
-(async() => {
+async function run() {
   const sdk = new Hibob();
 const operationSecurity: GetTimeoffPolicyTypesSecurity = {
   password: "",
@@ -320,7 +332,9 @@ const operationSecurity: GetTimeoffPolicyTypesSecurity = {
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -350,7 +364,7 @@ Get details about a given policy type.<br /><b>Supported user types:</b> Service
 import { Hibob } from "hibob";
 import { GetTimeoffPolicyTypesPolicyTypeSecurity } from "hibob/dist/sdk/models/operations";
 
-(async() => {
+async function run() {
   const sdk = new Hibob();
 const operationSecurity: GetTimeoffPolicyTypesPolicyTypeSecurity = {
   password: "",
@@ -364,7 +378,9 @@ const operationSecurity: GetTimeoffPolicyTypesPolicyTypeSecurity = {
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -395,7 +411,7 @@ Get list of reason codes for a given policy type.<br /><b>Supported user types:<
 import { Hibob } from "hibob";
 import { GetTimeoffPolicyTypesPolicyTypeReasonCodesSecurity } from "hibob/dist/sdk/models/operations";
 
-(async() => {
+async function run() {
   const sdk = new Hibob();
 const operationSecurity: GetTimeoffPolicyTypesPolicyTypeReasonCodesSecurity = {
   password: "",
@@ -409,7 +425,9 @@ const operationSecurity: GetTimeoffPolicyTypesPolicyTypeReasonCodesSecurity = {
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -441,7 +459,7 @@ import { Hibob } from "hibob";
 import { GetTimeoffRequestsChangesSecurity } from "hibob/dist/sdk/models/operations";
 import { RFCDate } from "hibob/dist/sdk/types";
 
-(async() => {
+async function run() {
   const sdk = new Hibob();
 const operationSecurity: GetTimeoffRequestsChangesSecurity = {
   basic: {
@@ -457,7 +475,9 @@ const operationSecurity: GetTimeoffRequestsChangesSecurity = {
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -489,7 +509,7 @@ import { Hibob } from "hibob";
 import { GetTimeoffWhosoutSecurity } from "hibob/dist/sdk/models/operations";
 import { RFCDate } from "hibob/dist/sdk/types";
 
-(async() => {
+async function run() {
   const sdk = new Hibob();
 const operationSecurity: GetTimeoffWhosoutSecurity = {
   basic: {
@@ -506,7 +526,9 @@ const operationSecurity: GetTimeoffWhosoutSecurity = {
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -539,7 +561,7 @@ import { PostTimeoffEmployeesIdAdjustmentsSecurity } from "hibob/dist/sdk/models
 import { AdjustmentType } from "hibob/dist/sdk/models/shared";
 import { RFCDate } from "hibob/dist/sdk/types";
 
-(async() => {
+async function run() {
   const sdk = new Hibob();
 const operationSecurity: PostTimeoffEmployeesIdAdjustmentsSecurity = {
   password: "",
@@ -554,7 +576,9 @@ const operationSecurity: PostTimeoffEmployeesIdAdjustmentsSecurity = {
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -592,7 +616,7 @@ import {
 } from "hibob/dist/sdk/models/shared";
 import { RFCDate } from "hibob/dist/sdk/types";
 
-(async() => {
+async function run() {
   const sdk = new Hibob();
 const operationSecurity: PostTimeoffEmployeesIdRequestsSecurity = {
   basic: {
@@ -612,7 +636,9 @@ const operationSecurity: PostTimeoffEmployeesIdRequestsSecurity = {
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -643,7 +669,7 @@ Add a list of reason codes for a given policy type.<br /><b>Supported user types
 import { Hibob } from "hibob";
 import { PostTimeoffPolicyTypesPolicyTypeReasonCodesSecurity } from "hibob/dist/sdk/models/operations";
 
-(async() => {
+async function run() {
   const sdk = new Hibob();
 const operationSecurity: PostTimeoffPolicyTypesPolicyTypeReasonCodesSecurity = {
   password: "",
@@ -662,7 +688,9 @@ const operationSecurity: PostTimeoffPolicyTypesPolicyTypeReasonCodesSecurity = {
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters

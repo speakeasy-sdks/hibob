@@ -15,7 +15,7 @@
 import { Hibob } from "hibob";
 import { ImportMethod, PostAttendanceImportImportMethodSecurity } from "hibob/dist/sdk/models/operations";
 
-(async() => {
+async function run() {
   const sdk = new Hibob();
 const operationSecurity: PostAttendanceImportImportMethodSecurity = {
   password: "",
@@ -40,7 +40,9 @@ const operationSecurity: PostAttendanceImportImportMethodSecurity = {
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters

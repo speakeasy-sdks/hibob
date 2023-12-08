@@ -21,7 +21,7 @@
 import { Hibob } from "hibob";
 import { DeleteDocsPeopleIdConfidentialDocIdSecurity } from "hibob/dist/sdk/models/operations";
 
-(async() => {
+async function run() {
   const sdk = new Hibob();
 const operationSecurity: DeleteDocsPeopleIdConfidentialDocIdSecurity = {
   basic: {
@@ -38,7 +38,9 @@ const operationSecurity: DeleteDocsPeopleIdConfidentialDocIdSecurity = {
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -69,7 +71,7 @@ const operationSecurity: DeleteDocsPeopleIdConfidentialDocIdSecurity = {
 import { Hibob } from "hibob";
 import { DeleteDocsPeopleIdSharedDocIdSecurity } from "hibob/dist/sdk/models/operations";
 
-(async() => {
+async function run() {
   const sdk = new Hibob();
 const operationSecurity: DeleteDocsPeopleIdSharedDocIdSecurity = {
   basic: {
@@ -86,7 +88,9 @@ const operationSecurity: DeleteDocsPeopleIdSharedDocIdSecurity = {
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -116,7 +120,7 @@ Returns a list of documents and download links.<br /><b>Supported user types:</b
 ```typescript
 import { Hibob } from "hibob";
 
-(async() => {
+async function run() {
   const sdk = new Hibob({
     security: {
       bearer: "",
@@ -130,7 +134,9 @@ import { Hibob } from "hibob";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -159,7 +165,7 @@ import { Hibob } from "hibob";
 ```typescript
 import { Hibob } from "hibob";
 
-(async() => {
+async function run() {
   const sdk = new Hibob({
     security: {
       bearer: "",
@@ -178,7 +184,9 @@ import { Hibob } from "hibob";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -207,7 +215,7 @@ import { Hibob } from "hibob";
 ```typescript
 import { Hibob } from "hibob";
 
-(async() => {
+async function run() {
   const sdk = new Hibob({
     security: {
       bearer: "",
@@ -227,7 +235,9 @@ import { Hibob } from "hibob";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -256,7 +266,7 @@ import { Hibob } from "hibob";
 ```typescript
 import { Hibob } from "hibob";
 
-(async() => {
+async function run() {
   const sdk = new Hibob({
     security: {
       bearer: "",
@@ -275,7 +285,9 @@ import { Hibob } from "hibob";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -304,7 +316,7 @@ import { Hibob } from "hibob";
 ```typescript
 import { Hibob } from "hibob";
 
-(async() => {
+async function run() {
   const sdk = new Hibob({
     security: {
       bearer: "",
@@ -324,7 +336,9 @@ import { Hibob } from "hibob";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters

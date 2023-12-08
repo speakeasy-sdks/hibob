@@ -15,7 +15,7 @@ Returns a list of the company positions, filtered by the specified attributes.  
 import { Hibob } from "hibob";
 import { PostObjectsPositionSearchSecurity } from "hibob/dist/sdk/models/operations";
 
-(async() => {
+async function run() {
   const sdk = new Hibob();
 const operationSecurity: PostObjectsPositionSearchSecurity = {
   password: "",
@@ -40,7 +40,9 @@ const operationSecurity: PostObjectsPositionSearchSecurity = {
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters

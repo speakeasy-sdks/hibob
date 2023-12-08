@@ -28,7 +28,7 @@
 import { Hibob } from "hibob";
 import { DeletePeopleIdEquitiesEntryIdSecurity } from "hibob/dist/sdk/models/operations";
 
-(async() => {
+async function run() {
   const sdk = new Hibob();
 const operationSecurity: DeletePeopleIdEquitiesEntryIdSecurity = {
   basic: {
@@ -45,7 +45,9 @@ const operationSecurity: DeletePeopleIdEquitiesEntryIdSecurity = {
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -76,7 +78,7 @@ const operationSecurity: DeletePeopleIdEquitiesEntryIdSecurity = {
 import { Hibob } from "hibob";
 import { DeletePeopleIdSalariesEntryIdSecurity } from "hibob/dist/sdk/models/operations";
 
-(async() => {
+async function run() {
   const sdk = new Hibob();
 const operationSecurity: DeletePeopleIdSalariesEntryIdSecurity = {
   basic: {
@@ -93,7 +95,9 @@ const operationSecurity: DeletePeopleIdSalariesEntryIdSecurity = {
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -124,7 +128,7 @@ const operationSecurity: DeletePeopleIdSalariesEntryIdSecurity = {
 import { Hibob } from "hibob";
 import { DeletePeopleIdTrainingEntryIdSecurity } from "hibob/dist/sdk/models/operations";
 
-(async() => {
+async function run() {
   const sdk = new Hibob();
 const operationSecurity: DeletePeopleIdTrainingEntryIdSecurity = {
   basic: {
@@ -141,7 +145,9 @@ const operationSecurity: DeletePeopleIdTrainingEntryIdSecurity = {
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -172,7 +178,7 @@ const operationSecurity: DeletePeopleIdTrainingEntryIdSecurity = {
 import { Hibob } from "hibob";
 import { DeletePeopleIdVariableEntryIdSecurity } from "hibob/dist/sdk/models/operations";
 
-(async() => {
+async function run() {
   const sdk = new Hibob();
 const operationSecurity: DeletePeopleIdVariableEntryIdSecurity = {
   basic: {
@@ -189,7 +195,9 @@ const operationSecurity: DeletePeopleIdVariableEntryIdSecurity = {
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -219,7 +227,7 @@ const operationSecurity: DeletePeopleIdVariableEntryIdSecurity = {
 ```typescript
 import { Hibob } from "hibob";
 
-(async() => {
+async function run() {
   const sdk = new Hibob({
     security: {
       bearer: "",
@@ -231,7 +239,9 @@ import { Hibob } from "hibob";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -261,7 +271,7 @@ Returns a list of equity grants for a given employee.<br /><b>Supported user typ
 import { Hibob } from "hibob";
 import { GetPeopleIdEquitiesSecurity } from "hibob/dist/sdk/models/operations";
 
-(async() => {
+async function run() {
   const sdk = new Hibob();
 const operationSecurity: GetPeopleIdEquitiesSecurity = {
   basic: {
@@ -277,7 +287,9 @@ const operationSecurity: GetPeopleIdEquitiesSecurity = {
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -308,7 +320,7 @@ Returns a list of salary history entries for a given employee.<br /><b>Supported
 import { Hibob } from "hibob";
 import { GetPeopleIdSalariesSecurity } from "hibob/dist/sdk/models/operations";
 
-(async() => {
+async function run() {
   const sdk = new Hibob();
 const operationSecurity: GetPeopleIdSalariesSecurity = {
   basic: {
@@ -324,7 +336,9 @@ const operationSecurity: GetPeopleIdSalariesSecurity = {
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -355,7 +369,7 @@ Returns a list of training records for a given employee<br /><b>Supported user t
 import { Hibob } from "hibob";
 import { GetPeopleIdTrainingSecurity } from "hibob/dist/sdk/models/operations";
 
-(async() => {
+async function run() {
   const sdk = new Hibob();
 const operationSecurity: GetPeopleIdTrainingSecurity = {
   basic: {
@@ -371,7 +385,9 @@ const operationSecurity: GetPeopleIdTrainingSecurity = {
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -401,7 +417,7 @@ Returns a list of variable payments for a given employee.<br /><b>Supported user
 ```typescript
 import { Hibob } from "hibob";
 
-(async() => {
+async function run() {
   const sdk = new Hibob({
     security: {
       bearer: "",
@@ -415,7 +431,9 @@ import { Hibob } from "hibob";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -446,7 +464,7 @@ import { Hibob } from "hibob";
 import { PostPeopleIdEquitiesSecurity } from "hibob/dist/sdk/models/operations";
 import { RFCDate } from "hibob/dist/sdk/types";
 
-(async() => {
+async function run() {
   const sdk = new Hibob();
 const operationSecurity: PostPeopleIdEquitiesSecurity = {
   basic: {
@@ -471,7 +489,9 @@ const operationSecurity: PostPeopleIdEquitiesSecurity = {
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -503,7 +523,7 @@ import { Hibob } from "hibob";
 import { PostPeopleIdSalariesSecurity } from "hibob/dist/sdk/models/operations";
 import { RFCDate } from "hibob/dist/sdk/types";
 
-(async() => {
+async function run() {
   const sdk = new Hibob();
 const operationSecurity: PostPeopleIdSalariesSecurity = {
   basic: {
@@ -527,7 +547,9 @@ const operationSecurity: PostPeopleIdSalariesSecurity = {
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -559,7 +581,7 @@ import { Hibob } from "hibob";
 import { PostPeopleIdTrainingSecurity } from "hibob/dist/sdk/models/operations";
 import { RFCDate } from "hibob/dist/sdk/types";
 
-(async() => {
+async function run() {
   const sdk = new Hibob();
 const operationSecurity: PostPeopleIdTrainingSecurity = {
   basic: {
@@ -582,7 +604,9 @@ const operationSecurity: PostPeopleIdTrainingSecurity = {
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -614,7 +638,7 @@ import { Hibob } from "hibob";
 import { PostPeopleIdVariableSecurity } from "hibob/dist/sdk/models/operations";
 import { RFCDate } from "hibob/dist/sdk/types";
 
-(async() => {
+async function run() {
   const sdk = new Hibob();
 const operationSecurity: PostPeopleIdVariableSecurity = {
   basic: {
@@ -638,7 +662,9 @@ const operationSecurity: PostPeopleIdVariableSecurity = {
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -670,7 +696,7 @@ import { Hibob } from "hibob";
 import { PutPeopleIdEquitiesEntryIdSecurity } from "hibob/dist/sdk/models/operations";
 import { RFCDate } from "hibob/dist/sdk/types";
 
-(async() => {
+async function run() {
   const sdk = new Hibob();
 const operationSecurity: PutPeopleIdEquitiesEntryIdSecurity = {
   basic: {
@@ -696,7 +722,9 @@ const operationSecurity: PutPeopleIdEquitiesEntryIdSecurity = {
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters

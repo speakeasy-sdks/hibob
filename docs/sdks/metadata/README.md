@@ -26,7 +26,7 @@
 import { Hibob } from "hibob";
 import { DeleteCompanyNamedListsListNameItemIdSecurity } from "hibob/dist/sdk/models/operations";
 
-(async() => {
+async function run() {
   const sdk = new Hibob();
 const operationSecurity: DeleteCompanyNamedListsListNameItemIdSecurity = {
   basic: {
@@ -43,7 +43,9 @@ const operationSecurity: DeleteCompanyNamedListsListNameItemIdSecurity = {
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -74,7 +76,7 @@ const operationSecurity: DeleteCompanyNamedListsListNameItemIdSecurity = {
 import { Hibob } from "hibob";
 import { DeleteCompanyPeopleFieldsFieldIdSecurity } from "hibob/dist/sdk/models/operations";
 
-(async() => {
+async function run() {
   const sdk = new Hibob();
 const operationSecurity: DeleteCompanyPeopleFieldsFieldIdSecurity = {
   basic: {
@@ -90,7 +92,9 @@ const operationSecurity: DeleteCompanyPeopleFieldsFieldIdSecurity = {
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -121,7 +125,7 @@ const operationSecurity: DeleteCompanyPeopleFieldsFieldIdSecurity = {
 import { Hibob } from "hibob";
 import { GetCompanyNamedListsSecurity } from "hibob/dist/sdk/models/operations";
 
-(async() => {
+async function run() {
   const sdk = new Hibob();
 const operationSecurity: GetCompanyNamedListsSecurity = {
   basic: {
@@ -135,7 +139,9 @@ const operationSecurity: GetCompanyNamedListsSecurity = {
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -166,7 +172,7 @@ const operationSecurity: GetCompanyNamedListsSecurity = {
 import { Hibob } from "hibob";
 import { GetCompanyNamedListsListNameSecurity } from "hibob/dist/sdk/models/operations";
 
-(async() => {
+async function run() {
   const sdk = new Hibob();
 const operationSecurity: GetCompanyNamedListsListNameSecurity = {
   basic: {
@@ -182,7 +188,9 @@ const operationSecurity: GetCompanyNamedListsListNameSecurity = {
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -213,7 +221,7 @@ const operationSecurity: GetCompanyNamedListsListNameSecurity = {
 import { Hibob } from "hibob";
 import { GetCompanyPeopleFieldsSecurity } from "hibob/dist/sdk/models/operations";
 
-(async() => {
+async function run() {
   const sdk = new Hibob();
 const operationSecurity: GetCompanyPeopleFieldsSecurity = {
   basic: {
@@ -227,7 +235,9 @@ const operationSecurity: GetCompanyPeopleFieldsSecurity = {
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -257,7 +267,7 @@ Returns a list of all fields of object type position.<br/><b>Supported user type
 import { Hibob } from "hibob";
 import { GetMetadataObjectsPositionSecurity } from "hibob/dist/sdk/models/operations";
 
-(async() => {
+async function run() {
   const sdk = new Hibob();
 const operationSecurity: GetMetadataObjectsPositionSecurity = {
   password: "",
@@ -269,7 +279,9 @@ const operationSecurity: GetMetadataObjectsPositionSecurity = {
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -299,7 +311,7 @@ const operationSecurity: GetMetadataObjectsPositionSecurity = {
 import { Hibob } from "hibob";
 import { GetPeopleCustomTablesMetadataSecurity } from "hibob/dist/sdk/models/operations";
 
-(async() => {
+async function run() {
   const sdk = new Hibob();
 const operationSecurity: GetPeopleCustomTablesMetadataSecurity = {
   basic: {
@@ -313,7 +325,9 @@ const operationSecurity: GetPeopleCustomTablesMetadataSecurity = {
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -343,7 +357,7 @@ const operationSecurity: GetPeopleCustomTablesMetadataSecurity = {
 import { Hibob } from "hibob";
 import { GetPeopleCustomTablesMetadataCustomTableIdSecurity } from "hibob/dist/sdk/models/operations";
 
-(async() => {
+async function run() {
   const sdk = new Hibob();
 const operationSecurity: GetPeopleCustomTablesMetadataCustomTableIdSecurity = {
   basic: {
@@ -359,7 +373,9 @@ const operationSecurity: GetPeopleCustomTablesMetadataCustomTableIdSecurity = {
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -390,7 +406,7 @@ const operationSecurity: GetPeopleCustomTablesMetadataCustomTableIdSecurity = {
 import { Hibob } from "hibob";
 import { PostCompanyNamedListsListNameSecurity } from "hibob/dist/sdk/models/operations";
 
-(async() => {
+async function run() {
   const sdk = new Hibob();
 const operationSecurity: PostCompanyNamedListsListNameSecurity = {
   basic: {
@@ -409,7 +425,9 @@ const operationSecurity: PostCompanyNamedListsListNameSecurity = {
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -440,7 +458,7 @@ const operationSecurity: PostCompanyNamedListsListNameSecurity = {
 import { Hibob } from "hibob";
 import { PostCompanyPeopleFieldsSecurity } from "hibob/dist/sdk/models/operations";
 
-(async() => {
+async function run() {
   const sdk = new Hibob();
 const operationSecurity: PostCompanyPeopleFieldsSecurity = {
   basic: {
@@ -458,7 +476,9 @@ const operationSecurity: PostCompanyPeopleFieldsSecurity = {
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -489,7 +509,7 @@ const operationSecurity: PostCompanyPeopleFieldsSecurity = {
 import { Hibob } from "hibob";
 import { PutCompanyNamedListsListNameItemIdSecurity } from "hibob/dist/sdk/models/operations";
 
-(async() => {
+async function run() {
   const sdk = new Hibob();
 const operationSecurity: PutCompanyNamedListsListNameItemIdSecurity = {
   basic: {
@@ -507,7 +527,9 @@ const operationSecurity: PutCompanyNamedListsListNameItemIdSecurity = {
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -538,7 +560,7 @@ const operationSecurity: PutCompanyNamedListsListNameItemIdSecurity = {
 import { Hibob } from "hibob";
 import { PutCompanyPeopleFieldsFieldIdSecurity } from "hibob/dist/sdk/models/operations";
 
-(async() => {
+async function run() {
   const sdk = new Hibob();
 const operationSecurity: PutCompanyPeopleFieldsFieldIdSecurity = {
   basic: {
@@ -555,7 +577,9 @@ const operationSecurity: PutCompanyPeopleFieldsFieldIdSecurity = {
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters

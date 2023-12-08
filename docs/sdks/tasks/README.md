@@ -17,7 +17,7 @@
 ```typescript
 import { Hibob } from "hibob";
 
-(async() => {
+async function run() {
   const sdk = new Hibob({
     security: {
       bearer: "",
@@ -29,7 +29,9 @@ import { Hibob } from "hibob";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -57,7 +59,7 @@ import { Hibob } from "hibob";
 ```typescript
 import { Hibob } from "hibob";
 
-(async() => {
+async function run() {
   const sdk = new Hibob({
     security: {
       bearer: "",
@@ -69,7 +71,9 @@ import { Hibob } from "hibob";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -98,7 +102,7 @@ import { Hibob } from "hibob";
 import { Hibob } from "hibob";
 import { GetTasksPeopleIdSecurity, TaskStatus } from "hibob/dist/sdk/models/operations";
 
-(async() => {
+async function run() {
   const sdk = new Hibob();
 const operationSecurity: GetTasksPeopleIdSecurity = {
   basic: {
@@ -114,7 +118,9 @@ const operationSecurity: GetTasksPeopleIdSecurity = {
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -145,7 +151,7 @@ const operationSecurity: GetTasksPeopleIdSecurity = {
 import { Hibob } from "hibob";
 import { PostTasksTaskIdCompleteSecurity } from "hibob/dist/sdk/models/operations";
 
-(async() => {
+async function run() {
   const sdk = new Hibob();
 const operationSecurity: PostTasksTaskIdCompleteSecurity = {
   basic: {
@@ -161,7 +167,9 @@ const operationSecurity: PostTasksTaskIdCompleteSecurity = {
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters

@@ -28,7 +28,7 @@ import {
     PostAttendanceImportImportMethodSecurity,
 } from "hibob/dist/sdk/models/operations";
 
-(async () => {
+async function run() {
     const sdk = new Hibob();
     const operationSecurity: PostAttendanceImportImportMethodSecurity = {
         password: "",
@@ -56,7 +56,9 @@ import {
     if (res.statusCode == 200) {
         // handle response
     }
-})();
+}
+
+run();
 
 ```
 <!-- End SDK Example Usage [usage] -->
@@ -247,7 +249,7 @@ import {
     PostAttendanceImportImportMethodSecurity,
 } from "hibob/dist/sdk/models/operations";
 
-(async () => {
+async function run() {
     const sdk = new Hibob();
     const operationSecurity: PostAttendanceImportImportMethodSecurity = {
         password: "",
@@ -273,12 +275,19 @@ import {
             },
             operationSecurity
         );
-    } catch (e) {}
+    } catch (err) {
+        if (err instanceof errors.SDKError) {
+            console.error(err); // handle exception
+            throw err;
+        }
+    }
 
     if (res.statusCode == 200) {
         // handle response
     }
-})();
+}
+
+run();
 
 ```
 <!-- End Error Handling [errors] -->
@@ -306,7 +315,7 @@ import {
     PostAttendanceImportImportMethodSecurity,
 } from "hibob/dist/sdk/models/operations";
 
-(async () => {
+async function run() {
     const sdk = new Hibob({
         serverIdx: 1,
     });
@@ -336,7 +345,9 @@ import {
     if (res.statusCode == 200) {
         // handle response
     }
-})();
+}
+
+run();
 
 ```
 
@@ -351,7 +362,7 @@ import {
     PostAttendanceImportImportMethodSecurity,
 } from "hibob/dist/sdk/models/operations";
 
-(async () => {
+async function run() {
     const sdk = new Hibob({
         serverURL: "https://api.hibob.com/v1",
     });
@@ -381,7 +392,9 @@ import {
     if (res.statusCode == 200) {
         // handle response
     }
-})();
+}
+
+run();
 
 ```
 <!-- End Server Selection [server] -->
@@ -391,13 +404,13 @@ import {
 <!-- Start Custom HTTP Client [http-client] -->
 ## Custom HTTP Client
 
-The Typescript SDK makes API calls using the (axios)[https://axios-http.com/docs/intro] HTTP library.  In order to provide a convenient way to configure timeouts, cookies, proxies, custom headers, and other low-level configuration, you can initialize the SDK client with a custom `AxiosInstance` object.
+The Typescript SDK makes API calls using the [axios](https://axios-http.com/docs/intro) HTTP library.  In order to provide a convenient way to configure timeouts, cookies, proxies, custom headers, and other low-level configuration, you can initialize the SDK client with a custom `AxiosInstance` object.
 
 For example, you could specify a header for every request that your sdk makes as follows:
 
 ```typescript
-from hibob import Hibob;
-import axios;
+import { hibob } from "Hibob";
+import axios from "axios";
 
 const httpClient = axios.create({
     headers: {'x-custom-header': 'someValue'}
@@ -423,40 +436,22 @@ This SDK supports the following security scheme globally:
 You can set the security parameters through the `security` optional parameter when initializing the SDK client instance. For example:
 ```typescript
 import { Hibob } from "hibob";
-import {
-    ImportMethod,
-    PostAttendanceImportImportMethodSecurity,
-} from "hibob/dist/sdk/models/operations";
 
-(async () => {
-    const sdk = new Hibob();
-    const operationSecurity: PostAttendanceImportImportMethodSecurity = {
-        password: "",
-        username: "",
-    };
-
-    const res = await sdk.attendance.postAttendanceImportImportMethod(
-        {
-            importAttendanceData: {
-                dateTimeFormat: "yyyy-MM-dd hh:mm a",
-                idType: "string",
-                requests: [
-                    {
-                        clockIn: "2022-06-12T08:00",
-                        clockOut: "2022-06-12T17:00",
-                        id: "12356733644",
-                    },
-                ],
-            },
-            importMethod: ImportMethod.Immediate,
+async function run() {
+    const sdk = new Hibob({
+        security: {
+            bearer: "",
         },
-        operationSecurity
-    );
+    });
+
+    const res = await sdk.people.getAvatars({});
 
     if (res.statusCode == 200) {
         // handle response
     }
-})();
+}
+
+run();
 
 ```
 
@@ -470,7 +465,7 @@ import {
     PostAttendanceImportImportMethodSecurity,
 } from "hibob/dist/sdk/models/operations";
 
-(async () => {
+async function run() {
     const sdk = new Hibob();
     const operationSecurity: PostAttendanceImportImportMethodSecurity = {
         password: "",
@@ -498,7 +493,9 @@ import {
     if (res.statusCode == 200) {
         // handle response
     }
-})();
+}
+
+run();
 
 ```
 <!-- End Authentication [security] -->
