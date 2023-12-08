@@ -19,7 +19,6 @@ features:
     inputOutputModels: 2.82.0
     methodSecurity: 2.82.0
 typescript:
-  templateVersion: v2
   version: 2.3.0
   author: roopak
   clientServerStatusCodesAsErrors: false
