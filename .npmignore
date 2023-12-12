@@ -1,0 +1,12 @@
+/*
+/docs/**/*.md
+!/**/*.ts
+!/**/*.js
+!/**/*.map
+
+/*.js
+!/index.js
+/*.ts
+!/index.ts
+
+/src

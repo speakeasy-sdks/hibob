@@ -19,25 +19,28 @@
 
 ```typescript
 import { Hibob } from "hibob";
-import { DeleteDocsPeopleIdConfidentialDocIdSecurity } from "hibob/dist/sdk/models/operations";
+import { DeleteDocsPeopleIdConfidentialDocIdSecurity } from "hibob/sdk/models/operations";
 
 async function run() {
   const sdk = new Hibob();
-const operationSecurity: DeleteDocsPeopleIdConfidentialDocIdSecurity = {
-  basic: {
-    password: "",
-    username: "",
-  },
-};
 
+  
+  const operationSecurity: DeleteDocsPeopleIdConfidentialDocIdSecurity = {
+    basic: {
+      password: "<YOUR_PASSWORD_HERE>",
+      username: "<YOUR_USERNAME_HERE>",
+    },
+  };
   const res = await sdk.documents.deleteDocsPeopleIdConfidentialDocId({
-    docId: "string",
-    id: "<ID>",
-  }, operationSecurity);
+      docId: "string",
+      id: "<ID>",
+    }, operationSecurity);
 
-  if (res.statusCode == 200) {
-    // handle response
+  if (res?.statusCode !== 200) {
+    throw new Error("Unexpected status code: " + res?.statusCode || "-");
   }
+  
+  // handle response
 }
 
 run();
@@ -45,11 +48,12 @@ run();
 
 ### Parameters
 
-| Parameter                                                                                                                            | Type                                                                                                                                 | Required                                                                                                                             | Description                                                                                                                          |
-| ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                                            | [operations.DeleteDocsPeopleIdConfidentialDocIdRequest](../../sdk/models/operations/deletedocspeopleidconfidentialdocidrequest.md)   | :heavy_check_mark:                                                                                                                   | The request object to use for the request.                                                                                           |
-| `security`                                                                                                                           | [operations.DeleteDocsPeopleIdConfidentialDocIdSecurity](../../sdk/models/operations/deletedocspeopleidconfidentialdocidsecurity.md) | :heavy_check_mark:                                                                                                                   | The security requirements to use for the request.                                                                                    |
-| `config`                                                                                                                             | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                         | :heavy_minus_sign:                                                                                                                   | Available config options for making requests.                                                                                        |
+| Parameter                                                                                                                                                                      | Type                                                                                                                                                                           | Required                                                                                                                                                                       | Description                                                                                                                                                                    |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                                                                                                      | [operations.DeleteDocsPeopleIdConfidentialDocIdRequest](../../sdk/models/operations/deletedocspeopleidconfidentialdocidrequest.md)                                             | :heavy_check_mark:                                                                                                                                                             | The request object to use for the request.                                                                                                                                     |
+| `security`                                                                                                                                                                     | [operations.DeleteDocsPeopleIdConfidentialDocIdSecurity](../../sdk/models/operations/deletedocspeopleidconfidentialdocidsecurity.md)                                           | :heavy_check_mark:                                                                                                                                                             | The security requirements to use for the request.                                                                                                                              |
+| `options`                                                                                                                                                                      | RequestOptions                                                                                                                                                                 | :heavy_minus_sign:                                                                                                                                                             | Used to set various options for making HTTP requests.                                                                                                                          |
+| `options.fetchOptions`                                                                                                                                                         | [RequestInit](https://developer.mozilla.org/en-US/docs/Web/API/Request/Request#options)                                                                                        | :heavy_minus_sign:                                                                                                                                                             | Options that are passed to the underlying HTTP request. This can be used to inject extra headers for examples. All `Request` options, except `method` and `body`, are allowed. |
 
 
 ### Response
@@ -69,25 +73,28 @@ run();
 
 ```typescript
 import { Hibob } from "hibob";
-import { DeleteDocsPeopleIdSharedDocIdSecurity } from "hibob/dist/sdk/models/operations";
+import { DeleteDocsPeopleIdSharedDocIdSecurity } from "hibob/sdk/models/operations";
 
 async function run() {
   const sdk = new Hibob();
-const operationSecurity: DeleteDocsPeopleIdSharedDocIdSecurity = {
-  basic: {
-    password: "",
-    username: "",
-  },
-};
 
+  
+  const operationSecurity: DeleteDocsPeopleIdSharedDocIdSecurity = {
+    basic: {
+      password: "<YOUR_PASSWORD_HERE>",
+      username: "<YOUR_USERNAME_HERE>",
+    },
+  };
   const res = await sdk.documents.deleteDocsPeopleIdSharedDocId({
-    docId: "string",
-    id: "<ID>",
-  }, operationSecurity);
+      docId: "string",
+      id: "<ID>",
+    }, operationSecurity);
 
-  if (res.statusCode == 200) {
-    // handle response
+  if (res?.statusCode !== 200) {
+    throw new Error("Unexpected status code: " + res?.statusCode || "-");
   }
+  
+  // handle response
 }
 
 run();
@@ -95,11 +102,12 @@ run();
 
 ### Parameters
 
-| Parameter                                                                                                                | Type                                                                                                                     | Required                                                                                                                 | Description                                                                                                              |
-| ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                                | [operations.DeleteDocsPeopleIdSharedDocIdRequest](../../sdk/models/operations/deletedocspeopleidshareddocidrequest.md)   | :heavy_check_mark:                                                                                                       | The request object to use for the request.                                                                               |
-| `security`                                                                                                               | [operations.DeleteDocsPeopleIdSharedDocIdSecurity](../../sdk/models/operations/deletedocspeopleidshareddocidsecurity.md) | :heavy_check_mark:                                                                                                       | The security requirements to use for the request.                                                                        |
-| `config`                                                                                                                 | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                             | :heavy_minus_sign:                                                                                                       | Available config options for making requests.                                                                            |
+| Parameter                                                                                                                                                                      | Type                                                                                                                                                                           | Required                                                                                                                                                                       | Description                                                                                                                                                                    |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                                                                                                      | [operations.DeleteDocsPeopleIdSharedDocIdRequest](../../sdk/models/operations/deletedocspeopleidshareddocidrequest.md)                                                         | :heavy_check_mark:                                                                                                                                                             | The request object to use for the request.                                                                                                                                     |
+| `security`                                                                                                                                                                     | [operations.DeleteDocsPeopleIdSharedDocIdSecurity](../../sdk/models/operations/deletedocspeopleidshareddocidsecurity.md)                                                       | :heavy_check_mark:                                                                                                                                                             | The security requirements to use for the request.                                                                                                                              |
+| `options`                                                                                                                                                                      | RequestOptions                                                                                                                                                                 | :heavy_minus_sign:                                                                                                                                                             | Used to set various options for making HTTP requests.                                                                                                                          |
+| `options.fetchOptions`                                                                                                                                                         | [RequestInit](https://developer.mozilla.org/en-US/docs/Web/API/Request/Request#options)                                                                                        | :heavy_minus_sign:                                                                                                                                                             | Options that are passed to the underlying HTTP request. This can be used to inject extra headers for examples. All `Request` options, except `method` and `body`, are allowed. |
 
 
 ### Response
@@ -122,18 +130,21 @@ import { Hibob } from "hibob";
 
 async function run() {
   const sdk = new Hibob({
-    security: {
-      bearer: "",
-    },
-  });
+      security: {
+        bearer: "<YOUR_API_KEY_HERE>",
+      },
+    });
 
+  
   const res = await sdk.documents.getDocsPeopleId({
-    id: "<ID>",
-  });
+      id: "<ID>",
+    });
 
-  if (res.statusCode == 200) {
-    // handle response
+  if (res?.statusCode !== 200) {
+    throw new Error("Unexpected status code: " + res?.statusCode || "-");
   }
+  
+  // handle response
 }
 
 run();
@@ -141,10 +152,11 @@ run();
 
 ### Parameters
 
-| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
-| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
-| `request`                                                                                  | [operations.GetDocsPeopleIdRequest](../../sdk/models/operations/getdocspeopleidrequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
-| `config`                                                                                   | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                               | :heavy_minus_sign:                                                                         | Available config options for making requests.                                              |
+| Parameter                                                                                                                                                                      | Type                                                                                                                                                                           | Required                                                                                                                                                                       | Description                                                                                                                                                                    |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                                                                                                      | [operations.GetDocsPeopleIdRequest](../../sdk/models/operations/getdocspeopleidrequest.md)                                                                                     | :heavy_check_mark:                                                                                                                                                             | The request object to use for the request.                                                                                                                                     |
+| `options`                                                                                                                                                                      | RequestOptions                                                                                                                                                                 | :heavy_minus_sign:                                                                                                                                                             | Used to set various options for making HTTP requests.                                                                                                                          |
+| `options.fetchOptions`                                                                                                                                                         | [RequestInit](https://developer.mozilla.org/en-US/docs/Web/API/Request/Request#options)                                                                                        | :heavy_minus_sign:                                                                                                                                                             | Options that are passed to the underlying HTTP request. This can be used to inject extra headers for examples. All `Request` options, except `method` and `body`, are allowed. |
 
 
 ### Response
@@ -167,23 +179,26 @@ import { Hibob } from "hibob";
 
 async function run() {
   const sdk = new Hibob({
-    security: {
-      bearer: "",
-    },
-  });
+      security: {
+        bearer: "<YOUR_API_KEY_HERE>",
+      },
+    });
 
+  
   const res = await sdk.documents.postDocsPeopleIdConfidential({
-    addDocument: {
-      tags: [
-        "string",
-      ],
-    },
-    id: "<ID>",
-  });
+      addDocument: {
+        tags: [
+          "string",
+        ],
+      },
+      id: "<ID>",
+    });
 
-  if (res.statusCode == 200) {
-    // handle response
+  if (res?.statusCode !== 200) {
+    throw new Error("Unexpected status code: " + res?.statusCode || "-");
   }
+  
+  // handle response
 }
 
 run();
@@ -191,10 +206,11 @@ run();
 
 ### Parameters
 
-| Parameter                                                                                                            | Type                                                                                                                 | Required                                                                                                             | Description                                                                                                          |
-| -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                            | [operations.PostDocsPeopleIdConfidentialRequest](../../sdk/models/operations/postdocspeopleidconfidentialrequest.md) | :heavy_check_mark:                                                                                                   | The request object to use for the request.                                                                           |
-| `config`                                                                                                             | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                         | :heavy_minus_sign:                                                                                                   | Available config options for making requests.                                                                        |
+| Parameter                                                                                                                                                                      | Type                                                                                                                                                                           | Required                                                                                                                                                                       | Description                                                                                                                                                                    |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                                                                                                      | [operations.PostDocsPeopleIdConfidentialRequest](../../sdk/models/operations/postdocspeopleidconfidentialrequest.md)                                                           | :heavy_check_mark:                                                                                                                                                             | The request object to use for the request.                                                                                                                                     |
+| `options`                                                                                                                                                                      | RequestOptions                                                                                                                                                                 | :heavy_minus_sign:                                                                                                                                                             | Used to set various options for making HTTP requests.                                                                                                                          |
+| `options.fetchOptions`                                                                                                                                                         | [RequestInit](https://developer.mozilla.org/en-US/docs/Web/API/Request/Request#options)                                                                                        | :heavy_minus_sign:                                                                                                                                                             | Options that are passed to the underlying HTTP request. This can be used to inject extra headers for examples. All `Request` options, except `method` and `body`, are allowed. |
 
 
 ### Response
@@ -217,24 +233,27 @@ import { Hibob } from "hibob";
 
 async function run() {
   const sdk = new Hibob({
-    security: {
-      bearer: "",
-    },
-  });
-
-  const res = await sdk.documents.postDocsPeopleIdConfidentialUpload({
-    requestBody: {
-      file: {
-        content: new TextEncoder().encode("0xfAD95Ec4b0"),
-        fileName: "compatible_shoes.gif",
+      security: {
+        bearer: "<YOUR_API_KEY_HERE>",
       },
-    },
-    id: "<ID>",
-  });
+    });
 
-  if (res.statusCode == 200) {
-    // handle response
+  
+  const res = await sdk.documents.postDocsPeopleIdConfidentialUpload({
+      requestBody: {
+        file: {
+          content: new TextEncoder().encode("0xfAD95Ec4b0"),
+          fileName: "compatible_shoes.gif",
+        },
+      },
+      id: "<ID>",
+    });
+
+  if (res?.statusCode !== 200) {
+    throw new Error("Unexpected status code: " + res?.statusCode || "-");
   }
+  
+  // handle response
 }
 
 run();
@@ -242,10 +261,11 @@ run();
 
 ### Parameters
 
-| Parameter                                                                                                                        | Type                                                                                                                             | Required                                                                                                                         | Description                                                                                                                      |
-| -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                        | [operations.PostDocsPeopleIdConfidentialUploadRequest](../../sdk/models/operations/postdocspeopleidconfidentialuploadrequest.md) | :heavy_check_mark:                                                                                                               | The request object to use for the request.                                                                                       |
-| `config`                                                                                                                         | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                     | :heavy_minus_sign:                                                                                                               | Available config options for making requests.                                                                                    |
+| Parameter                                                                                                                                                                      | Type                                                                                                                                                                           | Required                                                                                                                                                                       | Description                                                                                                                                                                    |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                                                                                                      | [operations.PostDocsPeopleIdConfidentialUploadRequest](../../sdk/models/operations/postdocspeopleidconfidentialuploadrequest.md)                                               | :heavy_check_mark:                                                                                                                                                             | The request object to use for the request.                                                                                                                                     |
+| `options`                                                                                                                                                                      | RequestOptions                                                                                                                                                                 | :heavy_minus_sign:                                                                                                                                                             | Used to set various options for making HTTP requests.                                                                                                                          |
+| `options.fetchOptions`                                                                                                                                                         | [RequestInit](https://developer.mozilla.org/en-US/docs/Web/API/Request/Request#options)                                                                                        | :heavy_minus_sign:                                                                                                                                                             | Options that are passed to the underlying HTTP request. This can be used to inject extra headers for examples. All `Request` options, except `method` and `body`, are allowed. |
 
 
 ### Response
@@ -268,23 +288,26 @@ import { Hibob } from "hibob";
 
 async function run() {
   const sdk = new Hibob({
-    security: {
-      bearer: "",
-    },
-  });
+      security: {
+        bearer: "<YOUR_API_KEY_HERE>",
+      },
+    });
 
+  
   const res = await sdk.documents.postDocsPeopleIdShared({
-    addDocument: {
-      tags: [
-        "string",
-      ],
-    },
-    id: "<ID>",
-  });
+      addDocument: {
+        tags: [
+          "string",
+        ],
+      },
+      id: "<ID>",
+    });
 
-  if (res.statusCode == 200) {
-    // handle response
+  if (res?.statusCode !== 200) {
+    throw new Error("Unexpected status code: " + res?.statusCode || "-");
   }
+  
+  // handle response
 }
 
 run();
@@ -292,10 +315,11 @@ run();
 
 ### Parameters
 
-| Parameter                                                                                                | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                | [operations.PostDocsPeopleIdSharedRequest](../../sdk/models/operations/postdocspeopleidsharedrequest.md) | :heavy_check_mark:                                                                                       | The request object to use for the request.                                                               |
-| `config`                                                                                                 | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                             | :heavy_minus_sign:                                                                                       | Available config options for making requests.                                                            |
+| Parameter                                                                                                                                                                      | Type                                                                                                                                                                           | Required                                                                                                                                                                       | Description                                                                                                                                                                    |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                                                                                                      | [operations.PostDocsPeopleIdSharedRequest](../../sdk/models/operations/postdocspeopleidsharedrequest.md)                                                                       | :heavy_check_mark:                                                                                                                                                             | The request object to use for the request.                                                                                                                                     |
+| `options`                                                                                                                                                                      | RequestOptions                                                                                                                                                                 | :heavy_minus_sign:                                                                                                                                                             | Used to set various options for making HTTP requests.                                                                                                                          |
+| `options.fetchOptions`                                                                                                                                                         | [RequestInit](https://developer.mozilla.org/en-US/docs/Web/API/Request/Request#options)                                                                                        | :heavy_minus_sign:                                                                                                                                                             | Options that are passed to the underlying HTTP request. This can be used to inject extra headers for examples. All `Request` options, except `method` and `body`, are allowed. |
 
 
 ### Response
@@ -318,24 +342,27 @@ import { Hibob } from "hibob";
 
 async function run() {
   const sdk = new Hibob({
-    security: {
-      bearer: "",
-    },
-  });
-
-  const res = await sdk.documents.postDocsPeopleIdSharedUpload({
-    requestBody: {
-      file: {
-        content: new TextEncoder().encode("0xAcFe65CF10"),
-        fileName: "roughly_minnesota.pdf",
+      security: {
+        bearer: "<YOUR_API_KEY_HERE>",
       },
-    },
-    id: "<ID>",
-  });
+    });
 
-  if (res.statusCode == 200) {
-    // handle response
+  
+  const res = await sdk.documents.postDocsPeopleIdSharedUpload({
+      requestBody: {
+        file: {
+          content: new TextEncoder().encode("0xAcFe65CF10"),
+          fileName: "roughly_minnesota.pdf",
+        },
+      },
+      id: "<ID>",
+    });
+
+  if (res?.statusCode !== 200) {
+    throw new Error("Unexpected status code: " + res?.statusCode || "-");
   }
+  
+  // handle response
 }
 
 run();
@@ -343,10 +370,11 @@ run();
 
 ### Parameters
 
-| Parameter                                                                                                            | Type                                                                                                                 | Required                                                                                                             | Description                                                                                                          |
-| -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                            | [operations.PostDocsPeopleIdSharedUploadRequest](../../sdk/models/operations/postdocspeopleidshareduploadrequest.md) | :heavy_check_mark:                                                                                                   | The request object to use for the request.                                                                           |
-| `config`                                                                                                             | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                         | :heavy_minus_sign:                                                                                                   | Available config options for making requests.                                                                        |
+| Parameter                                                                                                                                                                      | Type                                                                                                                                                                           | Required                                                                                                                                                                       | Description                                                                                                                                                                    |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                                                                                                      | [operations.PostDocsPeopleIdSharedUploadRequest](../../sdk/models/operations/postdocspeopleidshareduploadrequest.md)                                                           | :heavy_check_mark:                                                                                                                                                             | The request object to use for the request.                                                                                                                                     |
+| `options`                                                                                                                                                                      | RequestOptions                                                                                                                                                                 | :heavy_minus_sign:                                                                                                                                                             | Used to set various options for making HTTP requests.                                                                                                                          |
+| `options.fetchOptions`                                                                                                                                                         | [RequestInit](https://developer.mozilla.org/en-US/docs/Web/API/Request/Request#options)                                                                                        | :heavy_minus_sign:                                                                                                                                                             | Options that are passed to the underlying HTTP request. This can be used to inject extra headers for examples. All `Request` options, except `method` and `body`, are allowed. |
 
 
 ### Response

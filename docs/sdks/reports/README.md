@@ -16,22 +16,25 @@ Returns a list of all the defined company reports. The data is filtered based on
 
 ```typescript
 import { Hibob } from "hibob";
-import { GetCompanyReportsSecurity } from "hibob/dist/sdk/models/operations";
+import { GetCompanyReportsSecurity } from "hibob/sdk/models/operations";
 
 async function run() {
   const sdk = new Hibob();
-const operationSecurity: GetCompanyReportsSecurity = {
-  basic: {
-    password: "",
-    username: "",
-  },
-};
 
+  
+  const operationSecurity: GetCompanyReportsSecurity = {
+    basic: {
+      password: "<YOUR_PASSWORD_HERE>",
+      username: "<YOUR_USERNAME_HERE>",
+    },
+  };
   const res = await sdk.reports.getCompanyReports(operationSecurity);
 
-  if (res.statusCode == 200) {
-    // handle response
+  if (res?.statusCode !== 200) {
+    throw new Error("Unexpected status code: " + res?.statusCode || "-");
   }
+  
+  // handle response
 }
 
 run();
@@ -39,10 +42,11 @@ run();
 
 ### Parameters
 
-| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
-| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
-| `security`                                                                                       | [operations.GetCompanyReportsSecurity](../../sdk/models/operations/getcompanyreportssecurity.md) | :heavy_check_mark:                                                                               | The security requirements to use for the request.                                                |
-| `config`                                                                                         | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                     | :heavy_minus_sign:                                                                               | Available config options for making requests.                                                    |
+| Parameter                                                                                                                                                                      | Type                                                                                                                                                                           | Required                                                                                                                                                                       | Description                                                                                                                                                                    |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `security`                                                                                                                                                                     | [operations.GetCompanyReportsSecurity](../../sdk/models/operations/getcompanyreportssecurity.md)                                                                               | :heavy_check_mark:                                                                                                                                                             | The security requirements to use for the request.                                                                                                                              |
+| `options`                                                                                                                                                                      | RequestOptions                                                                                                                                                                 | :heavy_minus_sign:                                                                                                                                                             | Used to set various options for making HTTP requests.                                                                                                                          |
+| `options.fetchOptions`                                                                                                                                                         | [RequestInit](https://developer.mozilla.org/en-US/docs/Web/API/Request/Request#options)                                                                                        | :heavy_minus_sign:                                                                                                                                                             | Options that are passed to the underlying HTTP request. This can be used to inject extra headers for examples. All `Request` options, except `method` and `body`, are allowed. |
 
 
 ### Response
@@ -62,24 +66,27 @@ Returns the report data file when it is ready. If the file is not ready yet the 
 
 ```typescript
 import { Hibob } from "hibob";
-import { GetCompanyReportsDownloadReportNameSecurity } from "hibob/dist/sdk/models/operations";
+import { GetCompanyReportsDownloadReportNameSecurity } from "hibob/sdk/models/operations";
 
 async function run() {
   const sdk = new Hibob();
-const operationSecurity: GetCompanyReportsDownloadReportNameSecurity = {
-  basic: {
-    password: "",
-    username: "",
-  },
-};
 
+  
+  const operationSecurity: GetCompanyReportsDownloadReportNameSecurity = {
+    basic: {
+      password: "<YOUR_PASSWORD_HERE>",
+      username: "<YOUR_USERNAME_HERE>",
+    },
+  };
   const res = await sdk.reports.getCompanyReportsDownloadReportName({
-    reportName: "string",
-  }, operationSecurity);
+      reportName: "string",
+    }, operationSecurity);
 
-  if (res.statusCode == 200) {
-    // handle response
+  if (res?.statusCode !== 200) {
+    throw new Error("Unexpected status code: " + res?.statusCode || "-");
   }
+  
+  // handle response
 }
 
 run();
@@ -87,11 +94,12 @@ run();
 
 ### Parameters
 
-| Parameter                                                                                                                            | Type                                                                                                                                 | Required                                                                                                                             | Description                                                                                                                          |
-| ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                                            | [operations.GetCompanyReportsDownloadReportNameRequest](../../sdk/models/operations/getcompanyreportsdownloadreportnamerequest.md)   | :heavy_check_mark:                                                                                                                   | The request object to use for the request.                                                                                           |
-| `security`                                                                                                                           | [operations.GetCompanyReportsDownloadReportNameSecurity](../../sdk/models/operations/getcompanyreportsdownloadreportnamesecurity.md) | :heavy_check_mark:                                                                                                                   | The security requirements to use for the request.                                                                                    |
-| `config`                                                                                                                             | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                         | :heavy_minus_sign:                                                                                                                   | Available config options for making requests.                                                                                        |
+| Parameter                                                                                                                                                                      | Type                                                                                                                                                                           | Required                                                                                                                                                                       | Description                                                                                                                                                                    |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                                                                                                      | [operations.GetCompanyReportsDownloadReportNameRequest](../../sdk/models/operations/getcompanyreportsdownloadreportnamerequest.md)                                             | :heavy_check_mark:                                                                                                                                                             | The request object to use for the request.                                                                                                                                     |
+| `security`                                                                                                                                                                     | [operations.GetCompanyReportsDownloadReportNameSecurity](../../sdk/models/operations/getcompanyreportsdownloadreportnamesecurity.md)                                           | :heavy_check_mark:                                                                                                                                                             | The security requirements to use for the request.                                                                                                                              |
+| `options`                                                                                                                                                                      | RequestOptions                                                                                                                                                                 | :heavy_minus_sign:                                                                                                                                                             | Used to set various options for making HTTP requests.                                                                                                                          |
+| `options.fetchOptions`                                                                                                                                                         | [RequestInit](https://developer.mozilla.org/en-US/docs/Web/API/Request/Request#options)                                                                                        | :heavy_minus_sign:                                                                                                                                                             | Options that are passed to the underlying HTTP request. This can be used to inject extra headers for examples. All `Request` options, except `method` and `body`, are allowed. |
 
 
 ### Response
@@ -111,25 +119,28 @@ Returns a report data file in the specified format.<br /><b>Supported user types
 
 ```typescript
 import { Hibob } from "hibob";
-import { GetCompanyReportsReportIdDownloadSecurity, QueryParamFormat } from "hibob/dist/sdk/models/operations";
+import { GetCompanyReportsReportIdDownloadSecurity, QueryParamFormat } from "hibob/sdk/models/operations";
 
 async function run() {
   const sdk = new Hibob();
-const operationSecurity: GetCompanyReportsReportIdDownloadSecurity = {
-  basic: {
-    password: "",
-    username: "",
-  },
-};
 
+  
+  const operationSecurity: GetCompanyReportsReportIdDownloadSecurity = {
+    basic: {
+      password: "<YOUR_PASSWORD_HERE>",
+      username: "<YOUR_USERNAME_HERE>",
+    },
+  };
   const res = await sdk.reports.getCompanyReportsReportIdDownload({
-    format: QueryParamFormat.Xlsx,
-    reportId: 3566.85,
-  }, operationSecurity);
+      format: QueryParamFormat.Xlsx,
+      reportId: 3566.85,
+    }, operationSecurity);
 
-  if (res.statusCode == 200) {
-    // handle response
+  if (res?.statusCode !== 200) {
+    throw new Error("Unexpected status code: " + res?.statusCode || "-");
   }
+  
+  // handle response
 }
 
 run();
@@ -137,11 +148,12 @@ run();
 
 ### Parameters
 
-| Parameter                                                                                                                        | Type                                                                                                                             | Required                                                                                                                         | Description                                                                                                                      |
-| -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                        | [operations.GetCompanyReportsReportIdDownloadRequest](../../sdk/models/operations/getcompanyreportsreportiddownloadrequest.md)   | :heavy_check_mark:                                                                                                               | The request object to use for the request.                                                                                       |
-| `security`                                                                                                                       | [operations.GetCompanyReportsReportIdDownloadSecurity](../../sdk/models/operations/getcompanyreportsreportiddownloadsecurity.md) | :heavy_check_mark:                                                                                                               | The security requirements to use for the request.                                                                                |
-| `config`                                                                                                                         | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                     | :heavy_minus_sign:                                                                                                               | Available config options for making requests.                                                                                    |
+| Parameter                                                                                                                                                                      | Type                                                                                                                                                                           | Required                                                                                                                                                                       | Description                                                                                                                                                                    |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                                                                                                      | [operations.GetCompanyReportsReportIdDownloadRequest](../../sdk/models/operations/getcompanyreportsreportiddownloadrequest.md)                                                 | :heavy_check_mark:                                                                                                                                                             | The request object to use for the request.                                                                                                                                     |
+| `security`                                                                                                                                                                     | [operations.GetCompanyReportsReportIdDownloadSecurity](../../sdk/models/operations/getcompanyreportsreportiddownloadsecurity.md)                                               | :heavy_check_mark:                                                                                                                                                             | The security requirements to use for the request.                                                                                                                              |
+| `options`                                                                                                                                                                      | RequestOptions                                                                                                                                                                 | :heavy_minus_sign:                                                                                                                                                             | Used to set various options for making HTTP requests.                                                                                                                          |
+| `options.fetchOptions`                                                                                                                                                         | [RequestInit](https://developer.mozilla.org/en-US/docs/Web/API/Request/Request#options)                                                                                        | :heavy_minus_sign:                                                                                                                                                             | Options that are passed to the underlying HTTP request. This can be used to inject extra headers for examples. All `Request` options, except `method` and `body`, are allowed. |
 
 
 ### Response
@@ -161,25 +173,28 @@ Returns the polling URL report file of the specified format under "Location" in 
 
 ```typescript
 import { Hibob } from "hibob";
-import { Format, GetCompanyReportsReportIdDownloadAsyncSecurity } from "hibob/dist/sdk/models/operations";
+import { Format, GetCompanyReportsReportIdDownloadAsyncSecurity } from "hibob/sdk/models/operations";
 
 async function run() {
   const sdk = new Hibob();
-const operationSecurity: GetCompanyReportsReportIdDownloadAsyncSecurity = {
-  basic: {
-    password: "",
-    username: "",
-  },
-};
 
+  
+  const operationSecurity: GetCompanyReportsReportIdDownloadAsyncSecurity = {
+    basic: {
+      password: "<YOUR_PASSWORD_HERE>",
+      username: "<YOUR_USERNAME_HERE>",
+    },
+  };
   const res = await sdk.reports.getCompanyReportsReportIdDownloadAsync({
-    format: Format.Xlsx,
-    reportId: 7232.99,
-  }, operationSecurity);
+      format: Format.Xlsx,
+      reportId: 7232.99,
+    }, operationSecurity);
 
-  if (res.statusCode == 200) {
-    // handle response
+  if (res?.statusCode !== 200) {
+    throw new Error("Unexpected status code: " + res?.statusCode || "-");
   }
+  
+  // handle response
 }
 
 run();
@@ -187,11 +202,12 @@ run();
 
 ### Parameters
 
-| Parameter                                                                                                                                  | Type                                                                                                                                       | Required                                                                                                                                   | Description                                                                                                                                |
-| ------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                                                  | [operations.GetCompanyReportsReportIdDownloadAsyncRequest](../../sdk/models/operations/getcompanyreportsreportiddownloadasyncrequest.md)   | :heavy_check_mark:                                                                                                                         | The request object to use for the request.                                                                                                 |
-| `security`                                                                                                                                 | [operations.GetCompanyReportsReportIdDownloadAsyncSecurity](../../sdk/models/operations/getcompanyreportsreportiddownloadasyncsecurity.md) | :heavy_check_mark:                                                                                                                         | The security requirements to use for the request.                                                                                          |
-| `config`                                                                                                                                   | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                               | :heavy_minus_sign:                                                                                                                         | Available config options for making requests.                                                                                              |
+| Parameter                                                                                                                                                                      | Type                                                                                                                                                                           | Required                                                                                                                                                                       | Description                                                                                                                                                                    |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                                                                                                      | [operations.GetCompanyReportsReportIdDownloadAsyncRequest](../../sdk/models/operations/getcompanyreportsreportiddownloadasyncrequest.md)                                       | :heavy_check_mark:                                                                                                                                                             | The request object to use for the request.                                                                                                                                     |
+| `security`                                                                                                                                                                     | [operations.GetCompanyReportsReportIdDownloadAsyncSecurity](../../sdk/models/operations/getcompanyreportsreportiddownloadasyncsecurity.md)                                     | :heavy_check_mark:                                                                                                                                                             | The security requirements to use for the request.                                                                                                                              |
+| `options`                                                                                                                                                                      | RequestOptions                                                                                                                                                                 | :heavy_minus_sign:                                                                                                                                                             | Used to set various options for making HTTP requests.                                                                                                                          |
+| `options.fetchOptions`                                                                                                                                                         | [RequestInit](https://developer.mozilla.org/en-US/docs/Web/API/Request/Request#options)                                                                                        | :heavy_minus_sign:                                                                                                                                                             | Options that are passed to the underlying HTTP request. This can be used to inject extra headers for examples. All `Request` options, except `method` and `body`, are allowed. |
 
 
 ### Response
