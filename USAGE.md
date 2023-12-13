@@ -4,15 +4,15 @@ import { Hibob } from "hibob";
 import {
     ImportMethod,
     PostAttendanceImportImportMethodSecurity,
-} from "hibob/dist/sdk/models/operations";
+} from "hibob/sdk/models/operations";
 
 async function run() {
     const sdk = new Hibob();
-    const operationSecurity: PostAttendanceImportImportMethodSecurity = {
-        password: "",
-        username: "",
-    };
 
+    const operationSecurity: PostAttendanceImportImportMethodSecurity = {
+        password: "<YOUR_PASSWORD_HERE>",
+        username: "<YOUR_USERNAME_HERE>",
+    };
     const res = await sdk.attendance.postAttendanceImportImportMethod(
         {
             importAttendanceData: {
@@ -31,9 +31,11 @@ async function run() {
         operationSecurity
     );
 
-    if (res.statusCode == 200) {
-        // handle response
+    if (res?.statusCode !== 200) {
+        throw new Error("Unexpected status code: " + res?.statusCode || "-");
     }
+
+    // handle response
 }
 
 run();

@@ -6,7 +6,7 @@
 | Field                                  | Type                                   | Required                               | Description                            |
 | -------------------------------------- | -------------------------------------- | -------------------------------------- | -------------------------------------- |
 | `contract`                             | *string*                               | :heavy_minus_sign:                     | Contract.                              |
-| `effectiveDate`                        | [RFCDate](../../types/rfcdate.md)      | :heavy_check_mark:                     | The date this entry becomes effective. |
+| `effectiveDate`                        | [RFCDate](../../../types/rfcdate.md)   | :heavy_check_mark:                     | The date this entry becomes effective. |
 | `id`                                   | *number*                               | :heavy_minus_sign:                     | ID.                                    |
 | `reason`                               | *string*                               | :heavy_minus_sign:                     | The reason for this change.            |
 | `salaryPayType`                        | *string*                               | :heavy_minus_sign:                     | Salary pay type.                       |
