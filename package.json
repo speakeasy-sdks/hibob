@@ -1,7 +1,7 @@
 {
   "type": "commonjs",
   "name": "hibob",
-  "version": "2.4.0",
+  "version": "2.5.0",
   "author": "roopak",
   "main": "./index.js",
   "sideEffects": false,
@@ -19,7 +19,7 @@
   "scripts": {
     "lint": "eslint --max-warnings=0 src",
     "build": "tsc",
-    "prepack": "npm run build && cp -r src/. cjs/. ./"
+    "prepare": "npm run build && cp -r src/. cjs/. ./"
   },
   "keywords": [],
   "peerDependencies": {

@@ -4,6 +4,7 @@
 
 import * as b64$ from "../../../lib/base64";
 import * as shared from "../../../sdk/models/shared";
+import { blobLikeSchema } from "../../../sdk/types";
 import { z } from "zod";
 
 export type PostDocsPeopleIdSharedUploadFile = {
@@ -15,7 +16,7 @@ export type PostDocsPeopleIdSharedUploadRequestBody = {
     /**
      * The file to upload.
      */
-    file: PostDocsPeopleIdSharedUploadFile | File | Blob;
+    file: PostDocsPeopleIdSharedUploadFile | Blob;
 };
 
 export type PostDocsPeopleIdSharedUploadRequest = {
@@ -108,7 +109,7 @@ export namespace PostDocsPeopleIdSharedUploadRequestBody$ {
         });
 
     export type Outbound = {
-        file: PostDocsPeopleIdSharedUploadFile$.Outbound | File | Blob;
+        file: PostDocsPeopleIdSharedUploadFile$.Outbound | Blob;
     };
 
     export const outboundSchema: z.ZodType<
@@ -117,9 +118,7 @@ export namespace PostDocsPeopleIdSharedUploadRequestBody$ {
         PostDocsPeopleIdSharedUploadRequestBody
     > = z
         .object({
-            file: z
-                .lazy(() => PostDocsPeopleIdSharedUploadFile$.outboundSchema)
-                .or(z.instanceof(Blob)),
+            file: z.lazy(() => PostDocsPeopleIdSharedUploadFile$.outboundSchema).or(blobLikeSchema),
         })
         .transform((v) => {
             return {

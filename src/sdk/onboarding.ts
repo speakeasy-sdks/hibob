@@ -29,24 +29,24 @@ export class Onboarding extends ClientSDK {
     async getOnboardingWizards(
         options?: RequestOptions
     ): Promise<operations.GetOnboardingWizardsResponse> {
-        const headers = new Headers();
-        headers.set("user-agent", SDK_METADATA.userAgent);
-        headers.set("Accept", "application/json");
+        const headers$ = new Headers();
+        headers$.set("user-agent", SDK_METADATA.userAgent);
+        headers$.set("Accept", "application/json");
 
-        const path = this.templateURLComponent("/onboarding/wizards")();
+        const path$ = this.templateURLComponent("/onboarding/wizards")();
 
-        const security =
+        const security$ =
             typeof this.options$.security === "function"
                 ? await this.options$.security()
                 : this.options$.security;
-        const securitySettings = this.resolveGlobalSecurity(security);
+        const securitySettings$ = this.resolveGlobalSecurity(security$);
 
         const response = await this.fetch$(
-            { security: securitySettings, method: "get", path, headers },
+            { security: securitySettings$, method: "get", path: path$, headers: headers$ },
             options
         );
 
-        const responseFields = {
+        const responseFields$ = {
             ContentType: response.headers.get("content-type") ?? "application/octet-stream",
             StatusCode: response.status,
             RawResponse: response,
@@ -55,14 +55,14 @@ export class Onboarding extends ClientSDK {
         if (this.matchResponse(response, 200, "application/json")) {
             const responseBody = await response.json();
             const result = operations.GetOnboardingWizardsResponse$.inboundSchema.parse({
-                ...responseFields,
+                ...responseFields$,
                 OnboardingWizards: responseBody,
             });
             return result;
         } else if (this.matchResponse(response, "default", "application/json")) {
             const responseBody = await response.json();
             const result = operations.GetOnboardingWizardsResponse$.inboundSchema.parse({
-                ...responseFields,
+                ...responseFields$,
                 Error: responseBody,
             });
             return result;

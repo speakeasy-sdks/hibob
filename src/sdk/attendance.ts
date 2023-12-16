@@ -32,36 +32,42 @@ export class Attendance extends ClientSDK {
         security: operations.PostAttendanceImportImportMethodSecurity,
         options?: RequestOptions
     ): Promise<operations.PostAttendanceImportImportMethodResponse> {
-        const headers = new Headers();
-        headers.set("user-agent", SDK_METADATA.userAgent);
-        headers.set("Content-Type", "application/json");
-        headers.set("Accept", "application/json");
+        const headers$ = new Headers();
+        headers$.set("user-agent", SDK_METADATA.userAgent);
+        headers$.set("Content-Type", "application/json");
+        headers$.set("Accept", "application/json");
 
-        const payload =
+        const payload$ =
             operations.PostAttendanceImportImportMethodRequest$.outboundSchema.parse(input);
 
-        const body = enc$.encodeJSON("body", payload.ImportAttendanceData, { explode: true });
+        const body$ = enc$.encodeJSON("body", payload$.ImportAttendanceData, { explode: true });
 
-        const pathParams = {
-            importMethod: enc$.encodeSimple("importMethod", payload.importMethod, {
+        const pathParams$ = {
+            importMethod: enc$.encodeSimple("importMethod", payload$.importMethod, {
                 explode: false,
                 charEncoding: "percent",
             }),
         };
 
-        const path = this.templateURLComponent("/attendance/import/{importMethod}")(pathParams);
+        const path$ = this.templateURLComponent("/attendance/import/{importMethod}")(pathParams$);
 
-        const securitySettings = this.resolveSecurity([
+        const securitySettings$ = this.resolveSecurity([
             { value: security?.password, fieldName: "password", type: "http:basic" },
             { value: security?.username, fieldName: "username", type: "http:basic" },
         ]);
 
         const response = await this.fetch$(
-            { security: securitySettings, method: "post", path, headers, body },
+            {
+                security: securitySettings$,
+                method: "post",
+                path: path$,
+                headers: headers$,
+                body: body$,
+            },
             options
         );
 
-        const responseFields = {
+        const responseFields$ = {
             ContentType: response.headers.get("content-type") ?? "application/octet-stream",
             StatusCode: response.status,
             RawResponse: response,
@@ -71,7 +77,7 @@ export class Attendance extends ClientSDK {
             const responseBody = await response.json();
             const result = operations.PostAttendanceImportImportMethodResponse$.inboundSchema.parse(
                 {
-                    ...responseFields,
+                    ...responseFields$,
                     ImportAttendanceResponse: responseBody,
                 }
             );
@@ -84,7 +90,7 @@ export class Attendance extends ClientSDK {
         }
 
         return operations.PostAttendanceImportImportMethodResponse$.inboundSchema.parse(
-            responseFields
+            responseFields$
         );
     }
 }

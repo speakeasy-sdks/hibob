@@ -33,27 +33,33 @@ export class Objects extends ClientSDK {
         security: operations.PostObjectsPositionSearchSecurity,
         options?: RequestOptions
     ): Promise<operations.PostObjectsPositionSearchResponse> {
-        const headers = new Headers();
-        headers.set("user-agent", SDK_METADATA.userAgent);
-        headers.set("Content-Type", "application/json");
-        headers.set("Accept", "application/json");
+        const headers$ = new Headers();
+        headers$.set("user-agent", SDK_METADATA.userAgent);
+        headers$.set("Content-Type", "application/json");
+        headers$.set("Accept", "application/json");
 
-        const payload = shared.GetPositionsRequest$.outboundSchema.parse(input);
-        const body = enc$.encodeJSON("body", payload, { explode: true });
+        const payload$ = shared.GetPositionsRequest$.outboundSchema.parse(input);
+        const body$ = enc$.encodeJSON("body", payload$, { explode: true });
 
-        const path = this.templateURLComponent("/objects/position/search")();
+        const path$ = this.templateURLComponent("/objects/position/search")();
 
-        const securitySettings = this.resolveSecurity([
+        const securitySettings$ = this.resolveSecurity([
             { value: security?.password, fieldName: "password", type: "http:basic" },
             { value: security?.username, fieldName: "username", type: "http:basic" },
         ]);
 
         const response = await this.fetch$(
-            { security: securitySettings, method: "post", path, headers, body },
+            {
+                security: securitySettings$,
+                method: "post",
+                path: path$,
+                headers: headers$,
+                body: body$,
+            },
             options
         );
 
-        const responseFields = {
+        const responseFields$ = {
             ContentType: response.headers.get("content-type") ?? "application/octet-stream",
             StatusCode: response.status,
             RawResponse: response,
@@ -62,14 +68,14 @@ export class Objects extends ClientSDK {
         if (this.matchResponse(response, 200, "application/json")) {
             const responseBody = await response.json();
             const result = operations.PostObjectsPositionSearchResponse$.inboundSchema.parse({
-                ...responseFields,
+                ...responseFields$,
                 PositionEntries: responseBody,
             });
             return result;
         } else if (this.matchResponse(response, "default", "application/json")) {
             const responseBody = await response.json();
             const result = operations.PostObjectsPositionSearchResponse$.inboundSchema.parse({
-                ...responseFields,
+                ...responseFields$,
                 Error: responseBody,
             });
             return result;

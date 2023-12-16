@@ -8,6 +8,7 @@ import { HTTPClient } from "../lib/http";
 import { ClientSDK, RequestOptions } from "../lib/sdks";
 import * as errors from "../sdk/models/errors";
 import * as operations from "../sdk/models/operations";
+import { isBlobLike } from "../sdk/types";
 
 export class Documents extends ClientSDK {
     private readonly options$: SDKOptions;
@@ -32,37 +33,43 @@ export class Documents extends ClientSDK {
         security: operations.DeleteDocsPeopleIdConfidentialDocIdSecurity,
         options?: RequestOptions
     ): Promise<operations.DeleteDocsPeopleIdConfidentialDocIdResponse> {
-        const headers = new Headers();
-        headers.set("user-agent", SDK_METADATA.userAgent);
-        headers.set("Accept", "application/json");
+        const headers$ = new Headers();
+        headers$.set("user-agent", SDK_METADATA.userAgent);
+        headers$.set("Accept", "application/json");
 
-        const payload =
+        const payload$ =
             operations.DeleteDocsPeopleIdConfidentialDocIdRequest$.outboundSchema.parse(input);
-        const body = null;
+        const body$ = null;
 
-        const pathParams = {
-            docId: enc$.encodeSimple("docId", payload.docId, {
+        const pathParams$ = {
+            docId: enc$.encodeSimple("docId", payload$.docId, {
                 explode: false,
                 charEncoding: "percent",
             }),
-            id: enc$.encodeSimple("id", payload.id, { explode: false, charEncoding: "percent" }),
+            id: enc$.encodeSimple("id", payload$.id, { explode: false, charEncoding: "percent" }),
         };
 
-        const path = this.templateURLComponent("/docs/people/{id}/confidential/{docId}")(
-            pathParams
+        const path$ = this.templateURLComponent("/docs/people/{id}/confidential/{docId}")(
+            pathParams$
         );
 
-        const securitySettings = this.resolveSecurity(
+        const securitySettings$ = this.resolveSecurity(
             [{ value: security?.basic, type: "http:basic" }],
             [{ value: security?.bearer, fieldName: "Authorization", type: "apiKey:header" }]
         );
 
         const response = await this.fetch$(
-            { security: securitySettings, method: "delete", path, headers, body },
+            {
+                security: securitySettings$,
+                method: "delete",
+                path: path$,
+                headers: headers$,
+                body: body$,
+            },
             options
         );
 
-        const responseFields = {
+        const responseFields$ = {
             ContentType: response.headers.get("content-type") ?? "application/octet-stream",
             StatusCode: response.status,
             RawResponse: response,
@@ -74,7 +81,7 @@ export class Documents extends ClientSDK {
             const responseBody = await response.json();
             const result =
                 operations.DeleteDocsPeopleIdConfidentialDocIdResponse$.inboundSchema.parse({
-                    ...responseFields,
+                    ...responseFields$,
                     Error: responseBody,
                 });
             return result;
@@ -84,7 +91,7 @@ export class Documents extends ClientSDK {
         }
 
         return operations.DeleteDocsPeopleIdConfidentialDocIdResponse$.inboundSchema.parse(
-            responseFields
+            responseFields$
         );
     }
 
@@ -99,35 +106,41 @@ export class Documents extends ClientSDK {
         security: operations.DeleteDocsPeopleIdSharedDocIdSecurity,
         options?: RequestOptions
     ): Promise<operations.DeleteDocsPeopleIdSharedDocIdResponse> {
-        const headers = new Headers();
-        headers.set("user-agent", SDK_METADATA.userAgent);
-        headers.set("Accept", "application/json");
+        const headers$ = new Headers();
+        headers$.set("user-agent", SDK_METADATA.userAgent);
+        headers$.set("Accept", "application/json");
 
-        const payload =
+        const payload$ =
             operations.DeleteDocsPeopleIdSharedDocIdRequest$.outboundSchema.parse(input);
-        const body = null;
+        const body$ = null;
 
-        const pathParams = {
-            docId: enc$.encodeSimple("docId", payload.docId, {
+        const pathParams$ = {
+            docId: enc$.encodeSimple("docId", payload$.docId, {
                 explode: false,
                 charEncoding: "percent",
             }),
-            id: enc$.encodeSimple("id", payload.id, { explode: false, charEncoding: "percent" }),
+            id: enc$.encodeSimple("id", payload$.id, { explode: false, charEncoding: "percent" }),
         };
 
-        const path = this.templateURLComponent("/docs/people/{id}/shared/{docId}")(pathParams);
+        const path$ = this.templateURLComponent("/docs/people/{id}/shared/{docId}")(pathParams$);
 
-        const securitySettings = this.resolveSecurity(
+        const securitySettings$ = this.resolveSecurity(
             [{ value: security?.basic, type: "http:basic" }],
             [{ value: security?.bearer, fieldName: "Authorization", type: "apiKey:header" }]
         );
 
         const response = await this.fetch$(
-            { security: securitySettings, method: "delete", path, headers, body },
+            {
+                security: securitySettings$,
+                method: "delete",
+                path: path$,
+                headers: headers$,
+                body: body$,
+            },
             options
         );
 
-        const responseFields = {
+        const responseFields$ = {
             ContentType: response.headers.get("content-type") ?? "application/octet-stream",
             StatusCode: response.status,
             RawResponse: response,
@@ -138,7 +151,7 @@ export class Documents extends ClientSDK {
         } else if (this.matchResponse(response, "default", "application/json")) {
             const responseBody = await response.json();
             const result = operations.DeleteDocsPeopleIdSharedDocIdResponse$.inboundSchema.parse({
-                ...responseFields,
+                ...responseFields$,
                 Error: responseBody,
             });
             return result;
@@ -148,7 +161,7 @@ export class Documents extends ClientSDK {
         }
 
         return operations.DeleteDocsPeopleIdSharedDocIdResponse$.inboundSchema.parse(
-            responseFields
+            responseFields$
         );
     }
 
@@ -162,31 +175,37 @@ export class Documents extends ClientSDK {
         input: operations.GetDocsPeopleIdRequest,
         options?: RequestOptions
     ): Promise<operations.GetDocsPeopleIdResponse> {
-        const headers = new Headers();
-        headers.set("user-agent", SDK_METADATA.userAgent);
-        headers.set("Accept", "application/json");
+        const headers$ = new Headers();
+        headers$.set("user-agent", SDK_METADATA.userAgent);
+        headers$.set("Accept", "application/json");
 
-        const payload = operations.GetDocsPeopleIdRequest$.outboundSchema.parse(input);
-        const body = null;
+        const payload$ = operations.GetDocsPeopleIdRequest$.outboundSchema.parse(input);
+        const body$ = null;
 
-        const pathParams = {
-            id: enc$.encodeSimple("id", payload.id, { explode: false, charEncoding: "percent" }),
+        const pathParams$ = {
+            id: enc$.encodeSimple("id", payload$.id, { explode: false, charEncoding: "percent" }),
         };
 
-        const path = this.templateURLComponent("/docs/people/{id}")(pathParams);
+        const path$ = this.templateURLComponent("/docs/people/{id}")(pathParams$);
 
-        const security =
+        const security$ =
             typeof this.options$.security === "function"
                 ? await this.options$.security()
                 : this.options$.security;
-        const securitySettings = this.resolveGlobalSecurity(security);
+        const securitySettings$ = this.resolveGlobalSecurity(security$);
 
         const response = await this.fetch$(
-            { security: securitySettings, method: "get", path, headers, body },
+            {
+                security: securitySettings$,
+                method: "get",
+                path: path$,
+                headers: headers$,
+                body: body$,
+            },
             options
         );
 
-        const responseFields = {
+        const responseFields$ = {
             ContentType: response.headers.get("content-type") ?? "application/octet-stream",
             StatusCode: response.status,
             RawResponse: response,
@@ -195,14 +214,14 @@ export class Documents extends ClientSDK {
         if (this.matchResponse(response, 200, "application/json")) {
             const responseBody = await response.json();
             const result = operations.GetDocsPeopleIdResponse$.inboundSchema.parse({
-                ...responseFields,
+                ...responseFields$,
                 EmployeeDocumentResponse: responseBody,
             });
             return result;
         } else if (this.matchResponse(response, "default", "application/json")) {
             const responseBody = await response.json();
             const result = operations.GetDocsPeopleIdResponse$.inboundSchema.parse({
-                ...responseFields,
+                ...responseFields$,
                 Error: responseBody,
             });
             return result;
@@ -222,33 +241,40 @@ export class Documents extends ClientSDK {
         input: operations.PostDocsPeopleIdConfidentialRequest,
         options?: RequestOptions
     ): Promise<operations.PostDocsPeopleIdConfidentialResponse> {
-        const headers = new Headers();
-        headers.set("user-agent", SDK_METADATA.userAgent);
-        headers.set("Content-Type", "application/json");
-        headers.set("Accept", "application/json");
+        const headers$ = new Headers();
+        headers$.set("user-agent", SDK_METADATA.userAgent);
+        headers$.set("Content-Type", "application/json");
+        headers$.set("Accept", "application/json");
 
-        const payload = operations.PostDocsPeopleIdConfidentialRequest$.outboundSchema.parse(input);
+        const payload$ =
+            operations.PostDocsPeopleIdConfidentialRequest$.outboundSchema.parse(input);
 
-        const body = enc$.encodeJSON("body", payload.AddDocument, { explode: true });
+        const body$ = enc$.encodeJSON("body", payload$.AddDocument, { explode: true });
 
-        const pathParams = {
-            id: enc$.encodeSimple("id", payload.id, { explode: false, charEncoding: "percent" }),
+        const pathParams$ = {
+            id: enc$.encodeSimple("id", payload$.id, { explode: false, charEncoding: "percent" }),
         };
 
-        const path = this.templateURLComponent("/docs/people/{id}/confidential")(pathParams);
+        const path$ = this.templateURLComponent("/docs/people/{id}/confidential")(pathParams$);
 
-        const security =
+        const security$ =
             typeof this.options$.security === "function"
                 ? await this.options$.security()
                 : this.options$.security;
-        const securitySettings = this.resolveGlobalSecurity(security);
+        const securitySettings$ = this.resolveGlobalSecurity(security$);
 
         const response = await this.fetch$(
-            { security: securitySettings, method: "post", path, headers, body },
+            {
+                security: securitySettings$,
+                method: "post",
+                path: path$,
+                headers: headers$,
+                body: body$,
+            },
             options
         );
 
-        const responseFields = {
+        const responseFields$ = {
             ContentType: response.headers.get("content-type") ?? "application/octet-stream",
             StatusCode: response.status,
             RawResponse: response,
@@ -259,7 +285,7 @@ export class Documents extends ClientSDK {
         } else if (this.matchResponse(response, "default", "application/json")) {
             const responseBody = await response.json();
             const result = operations.PostDocsPeopleIdConfidentialResponse$.inboundSchema.parse({
-                ...responseFields,
+                ...responseFields$,
                 Error: responseBody,
             });
             return result;
@@ -268,7 +294,9 @@ export class Documents extends ClientSDK {
             throw new errors.SDKError("Unexpected API response", response, responseBody);
         }
 
-        return operations.PostDocsPeopleIdConfidentialResponse$.inboundSchema.parse(responseFields);
+        return operations.PostDocsPeopleIdConfidentialResponse$.inboundSchema.parse(
+            responseFields$
+        );
     }
 
     /**
@@ -281,42 +309,50 @@ export class Documents extends ClientSDK {
         input: operations.PostDocsPeopleIdConfidentialUploadRequest,
         options?: RequestOptions
     ): Promise<operations.PostDocsPeopleIdConfidentialUploadResponse> {
-        const headers = new Headers();
-        headers.set("user-agent", SDK_METADATA.userAgent);
-        headers.set("Accept", "application/json");
+        const headers$ = new Headers();
+        headers$.set("user-agent", SDK_METADATA.userAgent);
+        headers$.set("Accept", "application/json");
 
-        const payload =
+        const payload$ =
             operations.PostDocsPeopleIdConfidentialUploadRequest$.outboundSchema.parse(input);
 
-        const body = new FormData();
-        if (payload.RequestBody.file instanceof Blob) {
-            body.append("file", payload.RequestBody.file);
+        const body$ = new FormData();
+        if (isBlobLike(payload$.RequestBody.file)) {
+            body$.append("file", payload$.RequestBody.file);
         } else {
-            body.append(
+            body$.append(
                 "file",
-                new Blob([payload.RequestBody.file.content], { type: "application/octet-stream" }),
-                payload.RequestBody.file.fileName
+                new Blob([payload$.RequestBody.file.content], { type: "application/octet-stream" }),
+                payload$.RequestBody.file.fileName
             );
         }
 
-        const pathParams = {
-            id: enc$.encodeSimple("id", payload.id, { explode: false, charEncoding: "percent" }),
+        const pathParams$ = {
+            id: enc$.encodeSimple("id", payload$.id, { explode: false, charEncoding: "percent" }),
         };
 
-        const path = this.templateURLComponent("/docs/people/{id}/confidential/upload")(pathParams);
+        const path$ = this.templateURLComponent("/docs/people/{id}/confidential/upload")(
+            pathParams$
+        );
 
-        const security =
+        const security$ =
             typeof this.options$.security === "function"
                 ? await this.options$.security()
                 : this.options$.security;
-        const securitySettings = this.resolveGlobalSecurity(security);
+        const securitySettings$ = this.resolveGlobalSecurity(security$);
 
         const response = await this.fetch$(
-            { security: securitySettings, method: "post", path, headers, body },
+            {
+                security: securitySettings$,
+                method: "post",
+                path: path$,
+                headers: headers$,
+                body: body$,
+            },
             options
         );
 
-        const responseFields = {
+        const responseFields$ = {
             ContentType: response.headers.get("content-type") ?? "application/octet-stream",
             StatusCode: response.status,
             RawResponse: response,
@@ -328,7 +364,7 @@ export class Documents extends ClientSDK {
             const responseBody = await response.json();
             const result =
                 operations.PostDocsPeopleIdConfidentialUploadResponse$.inboundSchema.parse({
-                    ...responseFields,
+                    ...responseFields$,
                     Error: responseBody,
                 });
             return result;
@@ -338,7 +374,7 @@ export class Documents extends ClientSDK {
         }
 
         return operations.PostDocsPeopleIdConfidentialUploadResponse$.inboundSchema.parse(
-            responseFields
+            responseFields$
         );
     }
 
@@ -352,33 +388,39 @@ export class Documents extends ClientSDK {
         input: operations.PostDocsPeopleIdSharedRequest,
         options?: RequestOptions
     ): Promise<operations.PostDocsPeopleIdSharedResponse> {
-        const headers = new Headers();
-        headers.set("user-agent", SDK_METADATA.userAgent);
-        headers.set("Content-Type", "application/json");
-        headers.set("Accept", "application/json");
+        const headers$ = new Headers();
+        headers$.set("user-agent", SDK_METADATA.userAgent);
+        headers$.set("Content-Type", "application/json");
+        headers$.set("Accept", "application/json");
 
-        const payload = operations.PostDocsPeopleIdSharedRequest$.outboundSchema.parse(input);
+        const payload$ = operations.PostDocsPeopleIdSharedRequest$.outboundSchema.parse(input);
 
-        const body = enc$.encodeJSON("body", payload.AddDocument, { explode: true });
+        const body$ = enc$.encodeJSON("body", payload$.AddDocument, { explode: true });
 
-        const pathParams = {
-            id: enc$.encodeSimple("id", payload.id, { explode: false, charEncoding: "percent" }),
+        const pathParams$ = {
+            id: enc$.encodeSimple("id", payload$.id, { explode: false, charEncoding: "percent" }),
         };
 
-        const path = this.templateURLComponent("/docs/people/{id}/shared")(pathParams);
+        const path$ = this.templateURLComponent("/docs/people/{id}/shared")(pathParams$);
 
-        const security =
+        const security$ =
             typeof this.options$.security === "function"
                 ? await this.options$.security()
                 : this.options$.security;
-        const securitySettings = this.resolveGlobalSecurity(security);
+        const securitySettings$ = this.resolveGlobalSecurity(security$);
 
         const response = await this.fetch$(
-            { security: securitySettings, method: "post", path, headers, body },
+            {
+                security: securitySettings$,
+                method: "post",
+                path: path$,
+                headers: headers$,
+                body: body$,
+            },
             options
         );
 
-        const responseFields = {
+        const responseFields$ = {
             ContentType: response.headers.get("content-type") ?? "application/octet-stream",
             StatusCode: response.status,
             RawResponse: response,
@@ -389,7 +431,7 @@ export class Documents extends ClientSDK {
         } else if (this.matchResponse(response, "default", "application/json")) {
             const responseBody = await response.json();
             const result = operations.PostDocsPeopleIdSharedResponse$.inboundSchema.parse({
-                ...responseFields,
+                ...responseFields$,
                 Error: responseBody,
             });
             return result;
@@ -398,7 +440,7 @@ export class Documents extends ClientSDK {
             throw new errors.SDKError("Unexpected API response", response, responseBody);
         }
 
-        return operations.PostDocsPeopleIdSharedResponse$.inboundSchema.parse(responseFields);
+        return operations.PostDocsPeopleIdSharedResponse$.inboundSchema.parse(responseFields$);
     }
 
     /**
@@ -411,41 +453,48 @@ export class Documents extends ClientSDK {
         input: operations.PostDocsPeopleIdSharedUploadRequest,
         options?: RequestOptions
     ): Promise<operations.PostDocsPeopleIdSharedUploadResponse> {
-        const headers = new Headers();
-        headers.set("user-agent", SDK_METADATA.userAgent);
-        headers.set("Accept", "application/json");
+        const headers$ = new Headers();
+        headers$.set("user-agent", SDK_METADATA.userAgent);
+        headers$.set("Accept", "application/json");
 
-        const payload = operations.PostDocsPeopleIdSharedUploadRequest$.outboundSchema.parse(input);
+        const payload$ =
+            operations.PostDocsPeopleIdSharedUploadRequest$.outboundSchema.parse(input);
 
-        const body = new FormData();
-        if (payload.RequestBody.file instanceof Blob) {
-            body.append("file", payload.RequestBody.file);
+        const body$ = new FormData();
+        if (isBlobLike(payload$.RequestBody.file)) {
+            body$.append("file", payload$.RequestBody.file);
         } else {
-            body.append(
+            body$.append(
                 "file",
-                new Blob([payload.RequestBody.file.content], { type: "application/octet-stream" }),
-                payload.RequestBody.file.fileName
+                new Blob([payload$.RequestBody.file.content], { type: "application/octet-stream" }),
+                payload$.RequestBody.file.fileName
             );
         }
 
-        const pathParams = {
-            id: enc$.encodeSimple("id", payload.id, { explode: false, charEncoding: "percent" }),
+        const pathParams$ = {
+            id: enc$.encodeSimple("id", payload$.id, { explode: false, charEncoding: "percent" }),
         };
 
-        const path = this.templateURLComponent("/docs/people/{id}/shared/upload")(pathParams);
+        const path$ = this.templateURLComponent("/docs/people/{id}/shared/upload")(pathParams$);
 
-        const security =
+        const security$ =
             typeof this.options$.security === "function"
                 ? await this.options$.security()
                 : this.options$.security;
-        const securitySettings = this.resolveGlobalSecurity(security);
+        const securitySettings$ = this.resolveGlobalSecurity(security$);
 
         const response = await this.fetch$(
-            { security: securitySettings, method: "post", path, headers, body },
+            {
+                security: securitySettings$,
+                method: "post",
+                path: path$,
+                headers: headers$,
+                body: body$,
+            },
             options
         );
 
-        const responseFields = {
+        const responseFields$ = {
             ContentType: response.headers.get("content-type") ?? "application/octet-stream",
             StatusCode: response.status,
             RawResponse: response,
@@ -456,7 +505,7 @@ export class Documents extends ClientSDK {
         } else if (this.matchResponse(response, "default", "application/json")) {
             const responseBody = await response.json();
             const result = operations.PostDocsPeopleIdSharedUploadResponse$.inboundSchema.parse({
-                ...responseFields,
+                ...responseFields$,
                 Error: responseBody,
             });
             return result;
@@ -465,6 +514,8 @@ export class Documents extends ClientSDK {
             throw new errors.SDKError("Unexpected API response", response, responseBody);
         }
 
-        return operations.PostDocsPeopleIdSharedUploadResponse$.inboundSchema.parse(responseFields);
+        return operations.PostDocsPeopleIdSharedUploadResponse$.inboundSchema.parse(
+            responseFields$
+        );
     }
 }

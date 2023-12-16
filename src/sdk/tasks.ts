@@ -28,24 +28,24 @@ export class Tasks extends ClientSDK {
      * <b>Supported user types:</b> Employee.
      */
     async getMyTasks(options?: RequestOptions): Promise<operations.GetMyTasksResponse> {
-        const headers = new Headers();
-        headers.set("user-agent", SDK_METADATA.userAgent);
-        headers.set("Accept", "application/json");
+        const headers$ = new Headers();
+        headers$.set("user-agent", SDK_METADATA.userAgent);
+        headers$.set("Accept", "application/json");
 
-        const path = this.templateURLComponent("/my/tasks")();
+        const path$ = this.templateURLComponent("/my/tasks")();
 
-        const security =
+        const security$ =
             typeof this.options$.security === "function"
                 ? await this.options$.security()
                 : this.options$.security;
-        const securitySettings = this.resolveGlobalSecurity(security);
+        const securitySettings$ = this.resolveGlobalSecurity(security$);
 
         const response = await this.fetch$(
-            { security: securitySettings, method: "get", path, headers },
+            { security: securitySettings$, method: "get", path: path$, headers: headers$ },
             options
         );
 
-        const responseFields = {
+        const responseFields$ = {
             ContentType: response.headers.get("content-type") ?? "application/octet-stream",
             StatusCode: response.status,
             RawResponse: response,
@@ -54,7 +54,7 @@ export class Tasks extends ClientSDK {
         if (this.matchResponse(response, 200, "application/json")) {
             const responseBody = await response.json();
             const result = operations.GetMyTasksResponse$.inboundSchema.parse({
-                ...responseFields,
+                ...responseFields$,
                 Tasks: responseBody,
             });
             return result;
@@ -71,24 +71,24 @@ export class Tasks extends ClientSDK {
      * <b>Supported user types:</b> Employee.
      */
     async getTasks(options?: RequestOptions): Promise<operations.GetTasksResponse> {
-        const headers = new Headers();
-        headers.set("user-agent", SDK_METADATA.userAgent);
-        headers.set("Accept", "application/json");
+        const headers$ = new Headers();
+        headers$.set("user-agent", SDK_METADATA.userAgent);
+        headers$.set("Accept", "application/json");
 
-        const path = this.templateURLComponent("/tasks")();
+        const path$ = this.templateURLComponent("/tasks")();
 
-        const security =
+        const security$ =
             typeof this.options$.security === "function"
                 ? await this.options$.security()
                 : this.options$.security;
-        const securitySettings = this.resolveGlobalSecurity(security);
+        const securitySettings$ = this.resolveGlobalSecurity(security$);
 
         const response = await this.fetch$(
-            { security: securitySettings, method: "get", path, headers },
+            { security: securitySettings$, method: "get", path: path$, headers: headers$ },
             options
         );
 
-        const responseFields = {
+        const responseFields$ = {
             ContentType: response.headers.get("content-type") ?? "application/octet-stream",
             StatusCode: response.status,
             RawResponse: response,
@@ -97,7 +97,7 @@ export class Tasks extends ClientSDK {
         if (this.matchResponse(response, 200, "application/json")) {
             const responseBody = await response.json();
             const result = operations.GetTasksResponse$.inboundSchema.parse({
-                ...responseFields,
+                ...responseFields$,
                 Tasks: responseBody,
             });
             return result;
@@ -118,21 +118,21 @@ export class Tasks extends ClientSDK {
         security: operations.GetTasksPeopleIdSecurity,
         options?: RequestOptions
     ): Promise<operations.GetTasksPeopleIdResponse> {
-        const headers = new Headers();
-        headers.set("user-agent", SDK_METADATA.userAgent);
-        headers.set("Accept", "application/json");
+        const headers$ = new Headers();
+        headers$.set("user-agent", SDK_METADATA.userAgent);
+        headers$.set("Accept", "application/json");
 
-        const payload = operations.GetTasksPeopleIdRequest$.outboundSchema.parse(input);
-        const body = null;
+        const payload$ = operations.GetTasksPeopleIdRequest$.outboundSchema.parse(input);
+        const body$ = null;
 
-        const pathParams = {
-            id: enc$.encodeSimple("id", payload.id, { explode: false, charEncoding: "percent" }),
+        const pathParams$ = {
+            id: enc$.encodeSimple("id", payload$.id, { explode: false, charEncoding: "percent" }),
         };
 
-        const path = this.templateURLComponent("/tasks/people/{id}")(pathParams);
+        const path$ = this.templateURLComponent("/tasks/people/{id}")(pathParams$);
 
-        const query = [
-            enc$.encodeForm("task_status", payload.task_status, {
+        const query$ = [
+            enc$.encodeForm("task_status", payload$.task_status, {
                 explode: true,
                 charEncoding: "percent",
             }),
@@ -140,17 +140,24 @@ export class Tasks extends ClientSDK {
             .filter(Boolean)
             .join("&");
 
-        const securitySettings = this.resolveSecurity(
+        const securitySettings$ = this.resolveSecurity(
             [{ value: security?.basic, type: "http:basic" }],
             [{ value: security?.bearer, fieldName: "Authorization", type: "apiKey:header" }]
         );
 
         const response = await this.fetch$(
-            { security: securitySettings, method: "get", path, headers, query, body },
+            {
+                security: securitySettings$,
+                method: "get",
+                path: path$,
+                headers: headers$,
+                query: query$,
+                body: body$,
+            },
             options
         );
 
-        const responseFields = {
+        const responseFields$ = {
             ContentType: response.headers.get("content-type") ?? "application/octet-stream",
             StatusCode: response.status,
             RawResponse: response,
@@ -159,14 +166,14 @@ export class Tasks extends ClientSDK {
         if (this.matchResponse(response, 200, "application/json")) {
             const responseBody = await response.json();
             const result = operations.GetTasksPeopleIdResponse$.inboundSchema.parse({
-                ...responseFields,
+                ...responseFields$,
                 Tasks: responseBody,
             });
             return result;
         } else if (this.matchResponse(response, "default", "application/json")) {
             const responseBody = await response.json();
             const result = operations.GetTasksPeopleIdResponse$.inboundSchema.parse({
-                ...responseFields,
+                ...responseFields$,
                 Error: responseBody,
             });
             return result;
@@ -187,33 +194,39 @@ export class Tasks extends ClientSDK {
         security: operations.PostTasksTaskIdCompleteSecurity,
         options?: RequestOptions
     ): Promise<operations.PostTasksTaskIdCompleteResponse> {
-        const headers = new Headers();
-        headers.set("user-agent", SDK_METADATA.userAgent);
-        headers.set("Accept", "application/json");
+        const headers$ = new Headers();
+        headers$.set("user-agent", SDK_METADATA.userAgent);
+        headers$.set("Accept", "application/json");
 
-        const payload = operations.PostTasksTaskIdCompleteRequest$.outboundSchema.parse(input);
-        const body = null;
+        const payload$ = operations.PostTasksTaskIdCompleteRequest$.outboundSchema.parse(input);
+        const body$ = null;
 
-        const pathParams = {
-            taskId: enc$.encodeSimple("taskId", payload.taskId, {
+        const pathParams$ = {
+            taskId: enc$.encodeSimple("taskId", payload$.taskId, {
                 explode: false,
                 charEncoding: "percent",
             }),
         };
 
-        const path = this.templateURLComponent("/tasks/{taskId}/complete")(pathParams);
+        const path$ = this.templateURLComponent("/tasks/{taskId}/complete")(pathParams$);
 
-        const securitySettings = this.resolveSecurity(
+        const securitySettings$ = this.resolveSecurity(
             [{ value: security?.basic, type: "http:basic" }],
             [{ value: security?.bearer, fieldName: "Authorization", type: "apiKey:header" }]
         );
 
         const response = await this.fetch$(
-            { security: securitySettings, method: "post", path, headers, body },
+            {
+                security: securitySettings$,
+                method: "post",
+                path: path$,
+                headers: headers$,
+                body: body$,
+            },
             options
         );
 
-        const responseFields = {
+        const responseFields$ = {
             ContentType: response.headers.get("content-type") ?? "application/octet-stream",
             StatusCode: response.status,
             RawResponse: response,
@@ -222,14 +235,14 @@ export class Tasks extends ClientSDK {
         if (this.matchResponse(response, 200, "application/json")) {
             const responseBody = await response.json();
             const result = operations.PostTasksTaskIdCompleteResponse$.inboundSchema.parse({
-                ...responseFields,
+                ...responseFields$,
                 Tasks: responseBody,
             });
             return result;
         } else if (this.matchResponse(response, "default", "application/json")) {
             const responseBody = await response.json();
             const result = operations.PostTasksTaskIdCompleteResponse$.inboundSchema.parse({
-                ...responseFields,
+                ...responseFields$,
                 Error: responseBody,
             });
             return result;

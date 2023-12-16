@@ -31,23 +31,23 @@ export class Reports extends ClientSDK {
         security: operations.GetCompanyReportsSecurity,
         options?: RequestOptions
     ): Promise<operations.GetCompanyReportsResponse> {
-        const headers = new Headers();
-        headers.set("user-agent", SDK_METADATA.userAgent);
-        headers.set("Accept", "application/json");
+        const headers$ = new Headers();
+        headers$.set("user-agent", SDK_METADATA.userAgent);
+        headers$.set("Accept", "application/json");
 
-        const path = this.templateURLComponent("/company/reports")();
+        const path$ = this.templateURLComponent("/company/reports")();
 
-        const securitySettings = this.resolveSecurity(
+        const securitySettings$ = this.resolveSecurity(
             [{ value: security?.basic, type: "http:basic" }],
             [{ value: security?.bearer, fieldName: "Authorization", type: "apiKey:header" }]
         );
 
         const response = await this.fetch$(
-            { security: securitySettings, method: "get", path, headers },
+            { security: securitySettings$, method: "get", path: path$, headers: headers$ },
             options
         );
 
-        const responseFields = {
+        const responseFields$ = {
             ContentType: response.headers.get("content-type") ?? "application/octet-stream",
             StatusCode: response.status,
             RawResponse: response,
@@ -56,14 +56,14 @@ export class Reports extends ClientSDK {
         if (this.matchResponse(response, 200, "application/json")) {
             const responseBody = await response.json();
             const result = operations.GetCompanyReportsResponse$.inboundSchema.parse({
-                ...responseFields,
+                ...responseFields$,
                 Reports: responseBody,
             });
             return result;
         } else if (this.matchResponse(response, "default", "application/json")) {
             const responseBody = await response.json();
             const result = operations.GetCompanyReportsResponse$.inboundSchema.parse({
-                ...responseFields,
+                ...responseFields$,
                 Error: responseBody,
             });
             return result;
@@ -84,36 +84,42 @@ export class Reports extends ClientSDK {
         security: operations.GetCompanyReportsDownloadReportNameSecurity,
         options?: RequestOptions
     ): Promise<operations.GetCompanyReportsDownloadReportNameResponse> {
-        const headers = new Headers();
-        headers.set("user-agent", SDK_METADATA.userAgent);
-        headers.set("Accept", "application/json");
+        const headers$ = new Headers();
+        headers$.set("user-agent", SDK_METADATA.userAgent);
+        headers$.set("Accept", "application/json");
 
-        const payload =
+        const payload$ =
             operations.GetCompanyReportsDownloadReportNameRequest$.outboundSchema.parse(input);
-        const body = null;
+        const body$ = null;
 
-        const pathParams = {
-            reportName: enc$.encodeSimple("reportName", payload.reportName, {
+        const pathParams$ = {
+            reportName: enc$.encodeSimple("reportName", payload$.reportName, {
                 explode: false,
                 charEncoding: "percent",
             }),
         };
 
-        const path = this.templateURLComponent("/company/reports/download/{reportName}")(
-            pathParams
+        const path$ = this.templateURLComponent("/company/reports/download/{reportName}")(
+            pathParams$
         );
 
-        const securitySettings = this.resolveSecurity(
+        const securitySettings$ = this.resolveSecurity(
             [{ value: security?.basic, type: "http:basic" }],
             [{ value: security?.bearer, fieldName: "Authorization", type: "apiKey:header" }]
         );
 
         const response = await this.fetch$(
-            { security: securitySettings, method: "get", path, headers, body },
+            {
+                security: securitySettings$,
+                method: "get",
+                path: path$,
+                headers: headers$,
+                body: body$,
+            },
             options
         );
 
-        const responseFields = {
+        const responseFields$ = {
             ContentType: response.headers.get("content-type") ?? "application/octet-stream",
             StatusCode: response.status,
             RawResponse: response,
@@ -123,7 +129,7 @@ export class Reports extends ClientSDK {
             const responseBody = await response.arrayBuffer();
             const result =
                 operations.GetCompanyReportsDownloadReportNameResponse$.inboundSchema.parse({
-                    ...responseFields,
+                    ...responseFields$,
                     bytes: new Uint8Array(responseBody),
                 });
             return result;
@@ -133,7 +139,7 @@ export class Reports extends ClientSDK {
             const responseBody = await response.json();
             const result =
                 operations.GetCompanyReportsDownloadReportNameResponse$.inboundSchema.parse({
-                    ...responseFields,
+                    ...responseFields$,
                     Error: responseBody,
                 });
             return result;
@@ -143,7 +149,7 @@ export class Reports extends ClientSDK {
         }
 
         return operations.GetCompanyReportsDownloadReportNameResponse$.inboundSchema.parse(
-            responseFields
+            responseFields$
         );
     }
 
@@ -158,45 +164,54 @@ export class Reports extends ClientSDK {
         security: operations.GetCompanyReportsReportIdDownloadSecurity,
         options?: RequestOptions
     ): Promise<operations.GetCompanyReportsReportIdDownloadResponse> {
-        const headers = new Headers();
-        headers.set("user-agent", SDK_METADATA.userAgent);
-        headers.set("Accept", "application/json");
+        const headers$ = new Headers();
+        headers$.set("user-agent", SDK_METADATA.userAgent);
+        headers$.set("Accept", "application/json");
 
-        const payload =
+        const payload$ =
             operations.GetCompanyReportsReportIdDownloadRequest$.outboundSchema.parse(input);
-        const body = null;
+        const body$ = null;
 
-        const pathParams = {
-            reportId: enc$.encodeSimple("reportId", payload.reportId, {
+        const pathParams$ = {
+            reportId: enc$.encodeSimple("reportId", payload$.reportId, {
                 explode: false,
                 charEncoding: "percent",
             }),
         };
 
-        const path = this.templateURLComponent("/company/reports/{reportId}/download")(pathParams);
+        const path$ = this.templateURLComponent("/company/reports/{reportId}/download")(
+            pathParams$
+        );
 
-        const query = [
-            enc$.encodeForm("format", payload.format, { explode: true, charEncoding: "percent" }),
-            enc$.encodeForm("includeInfo", payload.includeInfo, {
+        const query$ = [
+            enc$.encodeForm("format", payload$.format, { explode: true, charEncoding: "percent" }),
+            enc$.encodeForm("includeInfo", payload$.includeInfo, {
                 explode: true,
                 charEncoding: "percent",
             }),
-            enc$.encodeForm("locale", payload.locale, { explode: true, charEncoding: "percent" }),
+            enc$.encodeForm("locale", payload$.locale, { explode: true, charEncoding: "percent" }),
         ]
             .filter(Boolean)
             .join("&");
 
-        const securitySettings = this.resolveSecurity(
+        const securitySettings$ = this.resolveSecurity(
             [{ value: security?.basic, type: "http:basic" }],
             [{ value: security?.bearer, fieldName: "Authorization", type: "apiKey:header" }]
         );
 
         const response = await this.fetch$(
-            { security: securitySettings, method: "get", path, headers, query, body },
+            {
+                security: securitySettings$,
+                method: "get",
+                path: path$,
+                headers: headers$,
+                query: query$,
+                body: body$,
+            },
             options
         );
 
-        const responseFields = {
+        const responseFields$ = {
             ContentType: response.headers.get("content-type") ?? "application/octet-stream",
             StatusCode: response.status,
             RawResponse: response,
@@ -206,7 +221,7 @@ export class Reports extends ClientSDK {
             const responseBody = await response.arrayBuffer();
             const result =
                 operations.GetCompanyReportsReportIdDownloadResponse$.inboundSchema.parse({
-                    ...responseFields,
+                    ...responseFields$,
                     bytes: new Uint8Array(responseBody),
                 });
             return result;
@@ -214,7 +229,7 @@ export class Reports extends ClientSDK {
             const responseBody = await response.json();
             const result =
                 operations.GetCompanyReportsReportIdDownloadResponse$.inboundSchema.parse({
-                    ...responseFields,
+                    ...responseFields$,
                     Error: responseBody,
                 });
             return result;
@@ -235,47 +250,54 @@ export class Reports extends ClientSDK {
         security: operations.GetCompanyReportsReportIdDownloadAsyncSecurity,
         options?: RequestOptions
     ): Promise<operations.GetCompanyReportsReportIdDownloadAsyncResponse> {
-        const headers = new Headers();
-        headers.set("user-agent", SDK_METADATA.userAgent);
-        headers.set("Accept", "application/json");
+        const headers$ = new Headers();
+        headers$.set("user-agent", SDK_METADATA.userAgent);
+        headers$.set("Accept", "application/json");
 
-        const payload =
+        const payload$ =
             operations.GetCompanyReportsReportIdDownloadAsyncRequest$.outboundSchema.parse(input);
-        const body = null;
+        const body$ = null;
 
-        const pathParams = {
-            reportId: enc$.encodeSimple("reportId", payload.reportId, {
+        const pathParams$ = {
+            reportId: enc$.encodeSimple("reportId", payload$.reportId, {
                 explode: false,
                 charEncoding: "percent",
             }),
         };
 
-        const path = this.templateURLComponent("/company/reports/{reportId}/download-async")(
-            pathParams
+        const path$ = this.templateURLComponent("/company/reports/{reportId}/download-async")(
+            pathParams$
         );
 
-        const query = [
-            enc$.encodeForm("format", payload.format, { explode: true, charEncoding: "percent" }),
-            enc$.encodeForm("includeInfo", payload.includeInfo, {
+        const query$ = [
+            enc$.encodeForm("format", payload$.format, { explode: true, charEncoding: "percent" }),
+            enc$.encodeForm("includeInfo", payload$.includeInfo, {
                 explode: true,
                 charEncoding: "percent",
             }),
-            enc$.encodeForm("locale", payload.locale, { explode: true, charEncoding: "percent" }),
+            enc$.encodeForm("locale", payload$.locale, { explode: true, charEncoding: "percent" }),
         ]
             .filter(Boolean)
             .join("&");
 
-        const securitySettings = this.resolveSecurity(
+        const securitySettings$ = this.resolveSecurity(
             [{ value: security?.basic, type: "http:basic" }],
             [{ value: security?.bearer, fieldName: "Authorization", type: "apiKey:header" }]
         );
 
         const response = await this.fetch$(
-            { security: securitySettings, method: "get", path, headers, query, body },
+            {
+                security: securitySettings$,
+                method: "get",
+                path: path$,
+                headers: headers$,
+                query: query$,
+                body: body$,
+            },
             options
         );
 
-        const responseFields = {
+        const responseFields$ = {
             ContentType: response.headers.get("content-type") ?? "application/octet-stream",
             StatusCode: response.status,
             RawResponse: response,
@@ -287,7 +309,7 @@ export class Reports extends ClientSDK {
             const responseBody = await response.json();
             const result =
                 operations.GetCompanyReportsReportIdDownloadAsyncResponse$.inboundSchema.parse({
-                    ...responseFields,
+                    ...responseFields$,
                     Error: responseBody,
                 });
             return result;
@@ -297,7 +319,7 @@ export class Reports extends ClientSDK {
         }
 
         return operations.GetCompanyReportsReportIdDownloadAsyncResponse$.inboundSchema.parse(
-            responseFields
+            responseFields$
         );
     }
 }

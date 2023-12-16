@@ -32,39 +32,45 @@ export class TimeOff extends ClientSDK {
         security: operations.DeleteTimeoffEmployeesIdRequestsRequestIdSecurity,
         options?: RequestOptions
     ): Promise<operations.DeleteTimeoffEmployeesIdRequestsRequestIdResponse> {
-        const headers = new Headers();
-        headers.set("user-agent", SDK_METADATA.userAgent);
-        headers.set("Accept", "*/*");
+        const headers$ = new Headers();
+        headers$.set("user-agent", SDK_METADATA.userAgent);
+        headers$.set("Accept", "*/*");
 
-        const payload =
+        const payload$ =
             operations.DeleteTimeoffEmployeesIdRequestsRequestIdRequest$.outboundSchema.parse(
                 input
             );
-        const body = null;
+        const body$ = null;
 
-        const pathParams = {
-            id: enc$.encodeSimple("id", payload.id, { explode: false, charEncoding: "percent" }),
-            requestId: enc$.encodeSimple("requestId", payload.requestId, {
+        const pathParams$ = {
+            id: enc$.encodeSimple("id", payload$.id, { explode: false, charEncoding: "percent" }),
+            requestId: enc$.encodeSimple("requestId", payload$.requestId, {
                 explode: false,
                 charEncoding: "percent",
             }),
         };
 
-        const path = this.templateURLComponent("/timeoff/employees/{id}/requests/{requestId}")(
-            pathParams
+        const path$ = this.templateURLComponent("/timeoff/employees/{id}/requests/{requestId}")(
+            pathParams$
         );
 
-        const securitySettings = this.resolveSecurity(
+        const securitySettings$ = this.resolveSecurity(
             [{ value: security?.basic, type: "http:basic" }],
             [{ value: security?.bearer, fieldName: "Authorization", type: "apiKey:header" }]
         );
 
         const response = await this.fetch$(
-            { security: securitySettings, method: "delete", path, headers, body },
+            {
+                security: securitySettings$,
+                method: "delete",
+                path: path$,
+                headers: headers$,
+                body: body$,
+            },
             options
         );
 
-        const responseFields = {
+        const responseFields$ = {
             ContentType: response.headers.get("content-type") ?? "application/octet-stream",
             StatusCode: response.status,
             RawResponse: response,
@@ -78,7 +84,7 @@ export class TimeOff extends ClientSDK {
         }
 
         return operations.DeleteTimeoffEmployeesIdRequestsRequestIdResponse$.inboundSchema.parse(
-            responseFields
+            responseFields$
         );
     }
 
@@ -93,22 +99,23 @@ export class TimeOff extends ClientSDK {
         security: operations.GetTimeoffEmployeesIdBalanceSecurity,
         options?: RequestOptions
     ): Promise<operations.GetTimeoffEmployeesIdBalanceResponse> {
-        const headers = new Headers();
-        headers.set("user-agent", SDK_METADATA.userAgent);
-        headers.set("Accept", "application/json");
+        const headers$ = new Headers();
+        headers$.set("user-agent", SDK_METADATA.userAgent);
+        headers$.set("Accept", "application/json");
 
-        const payload = operations.GetTimeoffEmployeesIdBalanceRequest$.outboundSchema.parse(input);
-        const body = null;
+        const payload$ =
+            operations.GetTimeoffEmployeesIdBalanceRequest$.outboundSchema.parse(input);
+        const body$ = null;
 
-        const pathParams = {
-            id: enc$.encodeSimple("id", payload.id, { explode: false, charEncoding: "percent" }),
+        const pathParams$ = {
+            id: enc$.encodeSimple("id", payload$.id, { explode: false, charEncoding: "percent" }),
         };
 
-        const path = this.templateURLComponent("/timeoff/employees/{id}/balance")(pathParams);
+        const path$ = this.templateURLComponent("/timeoff/employees/{id}/balance")(pathParams$);
 
-        const query = [
-            enc$.encodeForm("date", payload.date, { explode: true, charEncoding: "percent" }),
-            enc$.encodeForm("policyType", payload.policyType, {
+        const query$ = [
+            enc$.encodeForm("date", payload$.date, { explode: true, charEncoding: "percent" }),
+            enc$.encodeForm("policyType", payload$.policyType, {
                 explode: true,
                 charEncoding: "percent",
             }),
@@ -116,17 +123,24 @@ export class TimeOff extends ClientSDK {
             .filter(Boolean)
             .join("&");
 
-        const securitySettings = this.resolveSecurity([
+        const securitySettings$ = this.resolveSecurity([
             { value: security?.password, fieldName: "password", type: "http:basic" },
             { value: security?.username, fieldName: "username", type: "http:basic" },
         ]);
 
         const response = await this.fetch$(
-            { security: securitySettings, method: "get", path, headers, query, body },
+            {
+                security: securitySettings$,
+                method: "get",
+                path: path$,
+                headers: headers$,
+                query: query$,
+                body: body$,
+            },
             options
         );
 
-        const responseFields = {
+        const responseFields$ = {
             ContentType: response.headers.get("content-type") ?? "application/octet-stream",
             StatusCode: response.status,
             RawResponse: response,
@@ -135,14 +149,14 @@ export class TimeOff extends ClientSDK {
         if (this.matchResponse(response, 200, "application/json")) {
             const responseBody = await response.json();
             const result = operations.GetTimeoffEmployeesIdBalanceResponse$.inboundSchema.parse({
-                ...responseFields,
+                ...responseFields$,
                 BalanceResult: responseBody,
             });
             return result;
         } else if (this.matchResponse(response, "default", "application/json")) {
             const responseBody = await response.json();
             const result = operations.GetTimeoffEmployeesIdBalanceResponse$.inboundSchema.parse({
-                ...responseFields,
+                ...responseFields$,
                 Error: responseBody,
             });
             return result;
@@ -163,37 +177,43 @@ export class TimeOff extends ClientSDK {
         security: operations.GetTimeoffEmployeesIdRequestsRequestIdSecurity,
         options?: RequestOptions
     ): Promise<operations.GetTimeoffEmployeesIdRequestsRequestIdResponse> {
-        const headers = new Headers();
-        headers.set("user-agent", SDK_METADATA.userAgent);
-        headers.set("Accept", "application/json");
+        const headers$ = new Headers();
+        headers$.set("user-agent", SDK_METADATA.userAgent);
+        headers$.set("Accept", "application/json");
 
-        const payload =
+        const payload$ =
             operations.GetTimeoffEmployeesIdRequestsRequestIdRequest$.outboundSchema.parse(input);
-        const body = null;
+        const body$ = null;
 
-        const pathParams = {
-            id: enc$.encodeSimple("id", payload.id, { explode: false, charEncoding: "percent" }),
-            requestId: enc$.encodeSimple("requestId", payload.requestId, {
+        const pathParams$ = {
+            id: enc$.encodeSimple("id", payload$.id, { explode: false, charEncoding: "percent" }),
+            requestId: enc$.encodeSimple("requestId", payload$.requestId, {
                 explode: false,
                 charEncoding: "percent",
             }),
         };
 
-        const path = this.templateURLComponent("/timeoff/employees/{id}/requests/{requestId}")(
-            pathParams
+        const path$ = this.templateURLComponent("/timeoff/employees/{id}/requests/{requestId}")(
+            pathParams$
         );
 
-        const securitySettings = this.resolveSecurity(
+        const securitySettings$ = this.resolveSecurity(
             [{ value: security?.basic, type: "http:basic" }],
             [{ value: security?.bearer, fieldName: "Authorization", type: "apiKey:header" }]
         );
 
         const response = await this.fetch$(
-            { security: securitySettings, method: "get", path, headers, body },
+            {
+                security: securitySettings$,
+                method: "get",
+                path: path$,
+                headers: headers$,
+                body: body$,
+            },
             options
         );
 
-        const responseFields = {
+        const responseFields$ = {
             ContentType: response.headers.get("content-type") ?? "application/octet-stream",
             StatusCode: response.status,
             RawResponse: response,
@@ -203,7 +223,7 @@ export class TimeOff extends ClientSDK {
             const responseBody = await response.json();
             const result =
                 operations.GetTimeoffEmployeesIdRequestsRequestIdResponse$.inboundSchema.parse({
-                    ...responseFields,
+                    ...responseFields$,
                     TimeoffRequest: responseBody,
                 });
             return result;
@@ -215,7 +235,7 @@ export class TimeOff extends ClientSDK {
         }
 
         return operations.GetTimeoffEmployeesIdRequestsRequestIdResponse$.inboundSchema.parse(
-            responseFields
+            responseFields$
         );
     }
 
@@ -230,41 +250,48 @@ export class TimeOff extends ClientSDK {
         security: operations.GetTimeoffOuttodaySecurity,
         options?: RequestOptions
     ): Promise<operations.GetTimeoffOuttodayResponse> {
-        const headers = new Headers();
-        headers.set("user-agent", SDK_METADATA.userAgent);
-        headers.set("Accept", "application/json");
+        const headers$ = new Headers();
+        headers$.set("user-agent", SDK_METADATA.userAgent);
+        headers$.set("Accept", "application/json");
 
-        const payload = operations.GetTimeoffOuttodayRequest$.outboundSchema.parse(input);
-        const body = null;
+        const payload$ = operations.GetTimeoffOuttodayRequest$.outboundSchema.parse(input);
+        const body$ = null;
 
-        const path = this.templateURLComponent("/timeoff/outtoday")();
+        const path$ = this.templateURLComponent("/timeoff/outtoday")();
 
-        const query = [
-            enc$.encodeForm("includeHourly", payload.includeHourly, {
+        const query$ = [
+            enc$.encodeForm("includeHourly", payload$.includeHourly, {
                 explode: true,
                 charEncoding: "percent",
             }),
-            enc$.encodeForm("includePrivate", payload.includePrivate, {
+            enc$.encodeForm("includePrivate", payload$.includePrivate, {
                 explode: true,
                 charEncoding: "percent",
             }),
-            enc$.encodeForm("siteId", payload.siteId, { explode: true, charEncoding: "percent" }),
-            enc$.encodeForm("today", payload.today, { explode: true, charEncoding: "percent" }),
+            enc$.encodeForm("siteId", payload$.siteId, { explode: true, charEncoding: "percent" }),
+            enc$.encodeForm("today", payload$.today, { explode: true, charEncoding: "percent" }),
         ]
             .filter(Boolean)
             .join("&");
 
-        const securitySettings = this.resolveSecurity(
+        const securitySettings$ = this.resolveSecurity(
             [{ value: security?.basic, type: "http:basic" }],
             [{ value: security?.bearer, fieldName: "Authorization", type: "apiKey:header" }]
         );
 
         const response = await this.fetch$(
-            { security: securitySettings, method: "get", path, headers, query, body },
+            {
+                security: securitySettings$,
+                method: "get",
+                path: path$,
+                headers: headers$,
+                query: query$,
+                body: body$,
+            },
             options
         );
 
-        const responseFields = {
+        const responseFields$ = {
             ContentType: response.headers.get("content-type") ?? "application/octet-stream",
             StatusCode: response.status,
             RawResponse: response,
@@ -273,14 +300,14 @@ export class TimeOff extends ClientSDK {
         if (this.matchResponse(response, 200, "application/json")) {
             const responseBody = await response.json();
             const result = operations.GetTimeoffOuttodayResponse$.inboundSchema.parse({
-                ...responseFields,
+                ...responseFields$,
                 OutTodays: responseBody,
             });
             return result;
         } else if (this.matchResponse(response, "default", "application/json")) {
             const responseBody = await response.json();
             const result = operations.GetTimeoffOuttodayResponse$.inboundSchema.parse({
-                ...responseFields,
+                ...responseFields$,
                 Error: responseBody,
             });
             return result;
@@ -301,17 +328,17 @@ export class TimeOff extends ClientSDK {
         security: operations.GetTimeoffPoliciesSecurity,
         options?: RequestOptions
     ): Promise<operations.GetTimeoffPoliciesResponse> {
-        const headers = new Headers();
-        headers.set("user-agent", SDK_METADATA.userAgent);
-        headers.set("Accept", "application/json");
+        const headers$ = new Headers();
+        headers$.set("user-agent", SDK_METADATA.userAgent);
+        headers$.set("Accept", "application/json");
 
-        const payload = operations.GetTimeoffPoliciesRequest$.outboundSchema.parse(input);
-        const body = null;
+        const payload$ = operations.GetTimeoffPoliciesRequest$.outboundSchema.parse(input);
+        const body$ = null;
 
-        const path = this.templateURLComponent("/timeoff/policies")();
+        const path$ = this.templateURLComponent("/timeoff/policies")();
 
-        const query = [
-            enc$.encodeForm("policyName", payload.policyName, {
+        const query$ = [
+            enc$.encodeForm("policyName", payload$.policyName, {
                 explode: true,
                 charEncoding: "percent",
             }),
@@ -319,17 +346,24 @@ export class TimeOff extends ClientSDK {
             .filter(Boolean)
             .join("&");
 
-        const securitySettings = this.resolveSecurity([
+        const securitySettings$ = this.resolveSecurity([
             { value: security?.password, fieldName: "password", type: "http:basic" },
             { value: security?.username, fieldName: "username", type: "http:basic" },
         ]);
 
         const response = await this.fetch$(
-            { security: securitySettings, method: "get", path, headers, query, body },
+            {
+                security: securitySettings$,
+                method: "get",
+                path: path$,
+                headers: headers$,
+                query: query$,
+                body: body$,
+            },
             options
         );
 
-        const responseFields = {
+        const responseFields$ = {
             ContentType: response.headers.get("content-type") ?? "application/octet-stream",
             StatusCode: response.status,
             RawResponse: response,
@@ -338,7 +372,7 @@ export class TimeOff extends ClientSDK {
         if (this.matchResponse(response, 200, "application/json")) {
             const responseBody = await response.json();
             const result = operations.GetTimeoffPoliciesResponse$.inboundSchema.parse({
-                ...responseFields,
+                ...responseFields$,
                 Policy: responseBody,
             });
             return result;
@@ -349,7 +383,7 @@ export class TimeOff extends ClientSDK {
             throw new errors.SDKError("Unexpected API response", response, responseBody);
         }
 
-        return operations.GetTimeoffPoliciesResponse$.inboundSchema.parse(responseFields);
+        return operations.GetTimeoffPoliciesResponse$.inboundSchema.parse(responseFields$);
     }
 
     /**
@@ -363,17 +397,17 @@ export class TimeOff extends ClientSDK {
         security: operations.GetTimeoffPoliciesNamesSecurity,
         options?: RequestOptions
     ): Promise<operations.GetTimeoffPoliciesNamesResponse> {
-        const headers = new Headers();
-        headers.set("user-agent", SDK_METADATA.userAgent);
-        headers.set("Accept", "application/json");
+        const headers$ = new Headers();
+        headers$.set("user-agent", SDK_METADATA.userAgent);
+        headers$.set("Accept", "application/json");
 
-        const payload = operations.GetTimeoffPoliciesNamesRequest$.outboundSchema.parse(input);
-        const body = null;
+        const payload$ = operations.GetTimeoffPoliciesNamesRequest$.outboundSchema.parse(input);
+        const body$ = null;
 
-        const path = this.templateURLComponent("/timeoff/policies/names")();
+        const path$ = this.templateURLComponent("/timeoff/policies/names")();
 
-        const query = [
-            enc$.encodeForm("policyTypeName", payload.policyTypeName, {
+        const query$ = [
+            enc$.encodeForm("policyTypeName", payload$.policyTypeName, {
                 explode: true,
                 charEncoding: "percent",
             }),
@@ -381,17 +415,24 @@ export class TimeOff extends ClientSDK {
             .filter(Boolean)
             .join("&");
 
-        const securitySettings = this.resolveSecurity([
+        const securitySettings$ = this.resolveSecurity([
             { value: security?.password, fieldName: "password", type: "http:basic" },
             { value: security?.username, fieldName: "username", type: "http:basic" },
         ]);
 
         const response = await this.fetch$(
-            { security: securitySettings, method: "get", path, headers, query, body },
+            {
+                security: securitySettings$,
+                method: "get",
+                path: path$,
+                headers: headers$,
+                query: query$,
+                body: body$,
+            },
             options
         );
 
-        const responseFields = {
+        const responseFields$ = {
             ContentType: response.headers.get("content-type") ?? "application/octet-stream",
             StatusCode: response.status,
             RawResponse: response,
@@ -400,7 +441,7 @@ export class TimeOff extends ClientSDK {
         if (this.matchResponse(response, 200, "application/json")) {
             const responseBody = await response.json();
             const result = operations.GetTimeoffPoliciesNamesResponse$.inboundSchema.parse({
-                ...responseFields,
+                ...responseFields$,
                 PolicyNames: responseBody,
             });
             return result;
@@ -420,23 +461,23 @@ export class TimeOff extends ClientSDK {
         security: operations.GetTimeoffPolicyTypesSecurity,
         options?: RequestOptions
     ): Promise<operations.GetTimeoffPolicyTypesResponse> {
-        const headers = new Headers();
-        headers.set("user-agent", SDK_METADATA.userAgent);
-        headers.set("Accept", "application/json");
+        const headers$ = new Headers();
+        headers$.set("user-agent", SDK_METADATA.userAgent);
+        headers$.set("Accept", "application/json");
 
-        const path = this.templateURLComponent("/timeoff/policy-types")();
+        const path$ = this.templateURLComponent("/timeoff/policy-types")();
 
-        const securitySettings = this.resolveSecurity([
+        const securitySettings$ = this.resolveSecurity([
             { value: security?.password, fieldName: "password", type: "http:basic" },
             { value: security?.username, fieldName: "username", type: "http:basic" },
         ]);
 
         const response = await this.fetch$(
-            { security: securitySettings, method: "get", path, headers },
+            { security: securitySettings$, method: "get", path: path$, headers: headers$ },
             options
         );
 
-        const responseFields = {
+        const responseFields$ = {
             ContentType: response.headers.get("content-type") ?? "application/octet-stream",
             StatusCode: response.status,
             RawResponse: response,
@@ -445,14 +486,14 @@ export class TimeOff extends ClientSDK {
         if (this.matchResponse(response, 200, "application/json")) {
             const responseBody = await response.json();
             const result = operations.GetTimeoffPolicyTypesResponse$.inboundSchema.parse({
-                ...responseFields,
+                ...responseFields$,
                 PolicyTypes: responseBody,
             });
             return result;
         } else if (this.matchResponse(response, "default", "application/json")) {
             const responseBody = await response.json();
             const result = operations.GetTimeoffPolicyTypesResponse$.inboundSchema.parse({
-                ...responseFields,
+                ...responseFields$,
                 Error: responseBody,
             });
             return result;
@@ -473,34 +514,40 @@ export class TimeOff extends ClientSDK {
         security: operations.GetTimeoffPolicyTypesPolicyTypeSecurity,
         options?: RequestOptions
     ): Promise<operations.GetTimeoffPolicyTypesPolicyTypeResponse> {
-        const headers = new Headers();
-        headers.set("user-agent", SDK_METADATA.userAgent);
-        headers.set("Accept", "application/json");
+        const headers$ = new Headers();
+        headers$.set("user-agent", SDK_METADATA.userAgent);
+        headers$.set("Accept", "application/json");
 
-        const payload =
+        const payload$ =
             operations.GetTimeoffPolicyTypesPolicyTypeRequest$.outboundSchema.parse(input);
-        const body = null;
+        const body$ = null;
 
-        const pathParams = {
-            policyType: enc$.encodeSimple("policyType", payload.policyType, {
+        const pathParams$ = {
+            policyType: enc$.encodeSimple("policyType", payload$.policyType, {
                 explode: false,
                 charEncoding: "percent",
             }),
         };
 
-        const path = this.templateURLComponent("/timeoff/policy-types/{policyType}")(pathParams);
+        const path$ = this.templateURLComponent("/timeoff/policy-types/{policyType}")(pathParams$);
 
-        const securitySettings = this.resolveSecurity([
+        const securitySettings$ = this.resolveSecurity([
             { value: security?.password, fieldName: "password", type: "http:basic" },
             { value: security?.username, fieldName: "username", type: "http:basic" },
         ]);
 
         const response = await this.fetch$(
-            { security: securitySettings, method: "get", path, headers, body },
+            {
+                security: securitySettings$,
+                method: "get",
+                path: path$,
+                headers: headers$,
+                body: body$,
+            },
             options
         );
 
-        const responseFields = {
+        const responseFields$ = {
             ContentType: response.headers.get("content-type") ?? "application/octet-stream",
             StatusCode: response.status,
             RawResponse: response,
@@ -509,7 +556,7 @@ export class TimeOff extends ClientSDK {
         if (this.matchResponse(response, 200, "application/json")) {
             const responseBody = await response.json();
             const result = operations.GetTimeoffPolicyTypesPolicyTypeResponse$.inboundSchema.parse({
-                ...responseFields,
+                ...responseFields$,
                 PolicyType: responseBody,
             });
             return result;
@@ -521,7 +568,7 @@ export class TimeOff extends ClientSDK {
         }
 
         return operations.GetTimeoffPolicyTypesPolicyTypeResponse$.inboundSchema.parse(
-            responseFields
+            responseFields$
         );
     }
 
@@ -536,38 +583,44 @@ export class TimeOff extends ClientSDK {
         security: operations.GetTimeoffPolicyTypesPolicyTypeReasonCodesSecurity,
         options?: RequestOptions
     ): Promise<operations.GetTimeoffPolicyTypesPolicyTypeReasonCodesResponse> {
-        const headers = new Headers();
-        headers.set("user-agent", SDK_METADATA.userAgent);
-        headers.set("Accept", "application/json");
+        const headers$ = new Headers();
+        headers$.set("user-agent", SDK_METADATA.userAgent);
+        headers$.set("Accept", "application/json");
 
-        const payload =
+        const payload$ =
             operations.GetTimeoffPolicyTypesPolicyTypeReasonCodesRequest$.outboundSchema.parse(
                 input
             );
-        const body = null;
+        const body$ = null;
 
-        const pathParams = {
-            policyType: enc$.encodeSimple("policyType", payload.policyType, {
+        const pathParams$ = {
+            policyType: enc$.encodeSimple("policyType", payload$.policyType, {
                 explode: false,
                 charEncoding: "percent",
             }),
         };
 
-        const path = this.templateURLComponent("/timeoff/policy-types/{policyType}/reason-codes")(
-            pathParams
+        const path$ = this.templateURLComponent("/timeoff/policy-types/{policyType}/reason-codes")(
+            pathParams$
         );
 
-        const securitySettings = this.resolveSecurity([
+        const securitySettings$ = this.resolveSecurity([
             { value: security?.password, fieldName: "password", type: "http:basic" },
             { value: security?.username, fieldName: "username", type: "http:basic" },
         ]);
 
         const response = await this.fetch$(
-            { security: securitySettings, method: "get", path, headers, body },
+            {
+                security: securitySettings$,
+                method: "get",
+                path: path$,
+                headers: headers$,
+                body: body$,
+            },
             options
         );
 
-        const responseFields = {
+        const responseFields$ = {
             ContentType: response.headers.get("content-type") ?? "application/octet-stream",
             StatusCode: response.status,
             RawResponse: response,
@@ -577,7 +630,7 @@ export class TimeOff extends ClientSDK {
             const responseBody = await response.json();
             const result =
                 operations.GetTimeoffPolicyTypesPolicyTypeReasonCodesResponse$.inboundSchema.parse({
-                    ...responseFields,
+                    ...responseFields$,
                     ReasonCodes: responseBody,
                 });
             return result;
@@ -589,7 +642,7 @@ export class TimeOff extends ClientSDK {
         }
 
         return operations.GetTimeoffPolicyTypesPolicyTypeReasonCodesResponse$.inboundSchema.parse(
-            responseFields
+            responseFields$
         );
     }
 
@@ -604,32 +657,39 @@ export class TimeOff extends ClientSDK {
         security: operations.GetTimeoffRequestsChangesSecurity,
         options?: RequestOptions
     ): Promise<operations.GetTimeoffRequestsChangesResponse> {
-        const headers = new Headers();
-        headers.set("user-agent", SDK_METADATA.userAgent);
-        headers.set("Accept", "application/json");
+        const headers$ = new Headers();
+        headers$.set("user-agent", SDK_METADATA.userAgent);
+        headers$.set("Accept", "application/json");
 
-        const payload = operations.GetTimeoffRequestsChangesRequest$.outboundSchema.parse(input);
-        const body = null;
+        const payload$ = operations.GetTimeoffRequestsChangesRequest$.outboundSchema.parse(input);
+        const body$ = null;
 
-        const path = this.templateURLComponent("/timeoff/requests/changes")();
+        const path$ = this.templateURLComponent("/timeoff/requests/changes")();
 
-        const query = [
-            enc$.encodeForm("since", payload.since, { explode: true, charEncoding: "percent" }),
+        const query$ = [
+            enc$.encodeForm("since", payload$.since, { explode: true, charEncoding: "percent" }),
         ]
             .filter(Boolean)
             .join("&");
 
-        const securitySettings = this.resolveSecurity(
+        const securitySettings$ = this.resolveSecurity(
             [{ value: security?.basic, type: "http:basic" }],
             [{ value: security?.bearer, fieldName: "Authorization", type: "apiKey:header" }]
         );
 
         const response = await this.fetch$(
-            { security: securitySettings, method: "get", path, headers, query, body },
+            {
+                security: securitySettings$,
+                method: "get",
+                path: path$,
+                headers: headers$,
+                query: query$,
+                body: body$,
+            },
             options
         );
 
-        const responseFields = {
+        const responseFields$ = {
             ContentType: response.headers.get("content-type") ?? "application/octet-stream",
             StatusCode: response.status,
             RawResponse: response,
@@ -638,7 +698,7 @@ export class TimeOff extends ClientSDK {
         if (this.matchResponse(response, 200, "application/json")) {
             const responseBody = await response.json();
             const result = operations.GetTimeoffRequestsChangesResponse$.inboundSchema.parse({
-                ...responseFields,
+                ...responseFields$,
                 TimeoffChanges: responseBody,
             });
             return result;
@@ -659,45 +719,52 @@ export class TimeOff extends ClientSDK {
         security: operations.GetTimeoffWhosoutSecurity,
         options?: RequestOptions
     ): Promise<operations.GetTimeoffWhosoutResponse> {
-        const headers = new Headers();
-        headers.set("user-agent", SDK_METADATA.userAgent);
-        headers.set("Accept", "application/json");
+        const headers$ = new Headers();
+        headers$.set("user-agent", SDK_METADATA.userAgent);
+        headers$.set("Accept", "application/json");
 
-        const payload = operations.GetTimeoffWhosoutRequest$.outboundSchema.parse(input);
-        const body = null;
+        const payload$ = operations.GetTimeoffWhosoutRequest$.outboundSchema.parse(input);
+        const body$ = null;
 
-        const path = this.templateURLComponent("/timeoff/whosout")();
+        const path$ = this.templateURLComponent("/timeoff/whosout")();
 
-        const query = [
-            enc$.encodeForm("from", payload.from, { explode: true, charEncoding: "percent" }),
-            enc$.encodeForm("includeHourly", payload.includeHourly, {
+        const query$ = [
+            enc$.encodeForm("from", payload$.from, { explode: true, charEncoding: "percent" }),
+            enc$.encodeForm("includeHourly", payload$.includeHourly, {
                 explode: true,
                 charEncoding: "percent",
             }),
-            enc$.encodeForm("includePending", payload.includePending, {
+            enc$.encodeForm("includePending", payload$.includePending, {
                 explode: true,
                 charEncoding: "percent",
             }),
-            enc$.encodeForm("includePrivate", payload.includePrivate, {
+            enc$.encodeForm("includePrivate", payload$.includePrivate, {
                 explode: true,
                 charEncoding: "percent",
             }),
-            enc$.encodeForm("to", payload.to, { explode: true, charEncoding: "percent" }),
+            enc$.encodeForm("to", payload$.to, { explode: true, charEncoding: "percent" }),
         ]
             .filter(Boolean)
             .join("&");
 
-        const securitySettings = this.resolveSecurity(
+        const securitySettings$ = this.resolveSecurity(
             [{ value: security?.basic, type: "http:basic" }],
             [{ value: security?.bearer, fieldName: "Authorization", type: "apiKey:header" }]
         );
 
         const response = await this.fetch$(
-            { security: securitySettings, method: "get", path, headers, query, body },
+            {
+                security: securitySettings$,
+                method: "get",
+                path: path$,
+                headers: headers$,
+                query: query$,
+                body: body$,
+            },
             options
         );
 
-        const responseFields = {
+        const responseFields$ = {
             ContentType: response.headers.get("content-type") ?? "application/octet-stream",
             StatusCode: response.status,
             RawResponse: response,
@@ -706,14 +773,14 @@ export class TimeOff extends ClientSDK {
         if (this.matchResponse(response, 200, "application/json")) {
             const responseBody = await response.json();
             const result = operations.GetTimeoffWhosoutResponse$.inboundSchema.parse({
-                ...responseFields,
+                ...responseFields$,
                 Requests: responseBody,
             });
             return result;
         } else if (this.matchResponse(response, "default", "application/json")) {
             const responseBody = await response.json();
             const result = operations.GetTimeoffWhosoutResponse$.inboundSchema.parse({
-                ...responseFields,
+                ...responseFields$,
                 Error: responseBody,
             });
             return result;
@@ -734,33 +801,39 @@ export class TimeOff extends ClientSDK {
         security: operations.PostTimeoffEmployeesIdAdjustmentsSecurity,
         options?: RequestOptions
     ): Promise<operations.PostTimeoffEmployeesIdAdjustmentsResponse> {
-        const headers = new Headers();
-        headers.set("user-agent", SDK_METADATA.userAgent);
-        headers.set("Content-Type", "application/json");
-        headers.set("Accept", "application/json");
+        const headers$ = new Headers();
+        headers$.set("user-agent", SDK_METADATA.userAgent);
+        headers$.set("Content-Type", "application/json");
+        headers$.set("Accept", "application/json");
 
-        const payload =
+        const payload$ =
             operations.PostTimeoffEmployeesIdAdjustmentsRequest$.outboundSchema.parse(input);
 
-        const body = enc$.encodeJSON("body", payload.AdjustmentRequest, { explode: true });
+        const body$ = enc$.encodeJSON("body", payload$.AdjustmentRequest, { explode: true });
 
-        const pathParams = {
-            id: enc$.encodeSimple("id", payload.id, { explode: false, charEncoding: "percent" }),
+        const pathParams$ = {
+            id: enc$.encodeSimple("id", payload$.id, { explode: false, charEncoding: "percent" }),
         };
 
-        const path = this.templateURLComponent("/timeoff/employees/{id}/adjustments")(pathParams);
+        const path$ = this.templateURLComponent("/timeoff/employees/{id}/adjustments")(pathParams$);
 
-        const securitySettings = this.resolveSecurity([
+        const securitySettings$ = this.resolveSecurity([
             { value: security?.password, fieldName: "password", type: "http:basic" },
             { value: security?.username, fieldName: "username", type: "http:basic" },
         ]);
 
         const response = await this.fetch$(
-            { security: securitySettings, method: "post", path, headers, body },
+            {
+                security: securitySettings$,
+                method: "post",
+                path: path$,
+                headers: headers$,
+                body: body$,
+            },
             options
         );
 
-        const responseFields = {
+        const responseFields$ = {
             ContentType: response.headers.get("content-type") ?? "application/octet-stream",
             StatusCode: response.status,
             RawResponse: response,
@@ -772,7 +845,7 @@ export class TimeOff extends ClientSDK {
             const responseBody = await response.json();
             const result =
                 operations.PostTimeoffEmployeesIdAdjustmentsResponse$.inboundSchema.parse({
-                    ...responseFields,
+                    ...responseFields$,
                     Error: responseBody,
                 });
             return result;
@@ -782,7 +855,7 @@ export class TimeOff extends ClientSDK {
         }
 
         return operations.PostTimeoffEmployeesIdAdjustmentsResponse$.inboundSchema.parse(
-            responseFields
+            responseFields$
         );
     }
 
@@ -797,33 +870,39 @@ export class TimeOff extends ClientSDK {
         security: operations.PostTimeoffEmployeesIdRequestsSecurity,
         options?: RequestOptions
     ): Promise<operations.PostTimeoffEmployeesIdRequestsResponse> {
-        const headers = new Headers();
-        headers.set("user-agent", SDK_METADATA.userAgent);
-        headers.set("Content-Type", "application/json");
-        headers.set("Accept", "*/*");
+        const headers$ = new Headers();
+        headers$.set("user-agent", SDK_METADATA.userAgent);
+        headers$.set("Content-Type", "application/json");
+        headers$.set("Accept", "*/*");
 
-        const payload =
+        const payload$ =
             operations.PostTimeoffEmployeesIdRequestsRequest$.outboundSchema.parse(input);
 
-        const body = enc$.encodeJSON("body", payload.SubmitTimeoffRequest, { explode: true });
+        const body$ = enc$.encodeJSON("body", payload$.SubmitTimeoffRequest, { explode: true });
 
-        const pathParams = {
-            id: enc$.encodeSimple("id", payload.id, { explode: false, charEncoding: "percent" }),
+        const pathParams$ = {
+            id: enc$.encodeSimple("id", payload$.id, { explode: false, charEncoding: "percent" }),
         };
 
-        const path = this.templateURLComponent("/timeoff/employees/{id}/requests")(pathParams);
+        const path$ = this.templateURLComponent("/timeoff/employees/{id}/requests")(pathParams$);
 
-        const securitySettings = this.resolveSecurity(
+        const securitySettings$ = this.resolveSecurity(
             [{ value: security?.basic, type: "http:basic" }],
             [{ value: security?.bearer, fieldName: "Authorization", type: "apiKey:header" }]
         );
 
         const response = await this.fetch$(
-            { security: securitySettings, method: "post", path, headers, body },
+            {
+                security: securitySettings$,
+                method: "post",
+                path: path$,
+                headers: headers$,
+                body: body$,
+            },
             options
         );
 
-        const responseFields = {
+        const responseFields$ = {
             ContentType: response.headers.get("content-type") ?? "application/octet-stream",
             StatusCode: response.status,
             RawResponse: response,
@@ -837,7 +916,7 @@ export class TimeOff extends ClientSDK {
         }
 
         return operations.PostTimeoffEmployeesIdRequestsResponse$.inboundSchema.parse(
-            responseFields
+            responseFields$
         );
     }
 
@@ -852,40 +931,46 @@ export class TimeOff extends ClientSDK {
         security: operations.PostTimeoffPolicyTypesPolicyTypeReasonCodesSecurity,
         options?: RequestOptions
     ): Promise<operations.PostTimeoffPolicyTypesPolicyTypeReasonCodesResponse> {
-        const headers = new Headers();
-        headers.set("user-agent", SDK_METADATA.userAgent);
-        headers.set("Content-Type", "application/json");
-        headers.set("Accept", "*/*");
+        const headers$ = new Headers();
+        headers$.set("user-agent", SDK_METADATA.userAgent);
+        headers$.set("Content-Type", "application/json");
+        headers$.set("Accept", "*/*");
 
-        const payload =
+        const payload$ =
             operations.PostTimeoffPolicyTypesPolicyTypeReasonCodesRequest$.outboundSchema.parse(
                 input
             );
 
-        const body = enc$.encodeJSON("body", payload.ReasonCodesNames, { explode: true });
+        const body$ = enc$.encodeJSON("body", payload$.ReasonCodesNames, { explode: true });
 
-        const pathParams = {
-            policyType: enc$.encodeSimple("policyType", payload.policyType, {
+        const pathParams$ = {
+            policyType: enc$.encodeSimple("policyType", payload$.policyType, {
                 explode: false,
                 charEncoding: "percent",
             }),
         };
 
-        const path = this.templateURLComponent("/timeoff/policy-types/{policyType}/reason-codes")(
-            pathParams
+        const path$ = this.templateURLComponent("/timeoff/policy-types/{policyType}/reason-codes")(
+            pathParams$
         );
 
-        const securitySettings = this.resolveSecurity([
+        const securitySettings$ = this.resolveSecurity([
             { value: security?.password, fieldName: "password", type: "http:basic" },
             { value: security?.username, fieldName: "username", type: "http:basic" },
         ]);
 
         const response = await this.fetch$(
-            { security: securitySettings, method: "post", path, headers, body },
+            {
+                security: securitySettings$,
+                method: "post",
+                path: path$,
+                headers: headers$,
+                body: body$,
+            },
             options
         );
 
-        const responseFields = {
+        const responseFields$ = {
             ContentType: response.headers.get("content-type") ?? "application/octet-stream",
             StatusCode: response.status,
             RawResponse: response,
@@ -899,7 +984,7 @@ export class TimeOff extends ClientSDK {
         }
 
         return operations.PostTimeoffPolicyTypesPolicyTypeReasonCodesResponse$.inboundSchema.parse(
-            responseFields
+            responseFields$
         );
     }
 }

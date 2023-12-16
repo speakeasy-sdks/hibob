@@ -32,35 +32,41 @@ export class Payroll extends ClientSDK {
         security: operations.DeletePeopleIdEquitiesEntryIdSecurity,
         options?: RequestOptions
     ): Promise<operations.DeletePeopleIdEquitiesEntryIdResponse> {
-        const headers = new Headers();
-        headers.set("user-agent", SDK_METADATA.userAgent);
-        headers.set("Accept", "*/*");
+        const headers$ = new Headers();
+        headers$.set("user-agent", SDK_METADATA.userAgent);
+        headers$.set("Accept", "*/*");
 
-        const payload =
+        const payload$ =
             operations.DeletePeopleIdEquitiesEntryIdRequest$.outboundSchema.parse(input);
-        const body = null;
+        const body$ = null;
 
-        const pathParams = {
-            entry_id: enc$.encodeSimple("entry_id", payload.entry_id, {
+        const pathParams$ = {
+            entry_id: enc$.encodeSimple("entry_id", payload$.entry_id, {
                 explode: false,
                 charEncoding: "percent",
             }),
-            id: enc$.encodeSimple("id", payload.id, { explode: false, charEncoding: "percent" }),
+            id: enc$.encodeSimple("id", payload$.id, { explode: false, charEncoding: "percent" }),
         };
 
-        const path = this.templateURLComponent("/people/{id}/equities/{entry_id}")(pathParams);
+        const path$ = this.templateURLComponent("/people/{id}/equities/{entry_id}")(pathParams$);
 
-        const securitySettings = this.resolveSecurity(
+        const securitySettings$ = this.resolveSecurity(
             [{ value: security?.basic, type: "http:basic" }],
             [{ value: security?.bearer, fieldName: "Authorization", type: "apiKey:header" }]
         );
 
         const response = await this.fetch$(
-            { security: securitySettings, method: "delete", path, headers, body },
+            {
+                security: securitySettings$,
+                method: "delete",
+                path: path$,
+                headers: headers$,
+                body: body$,
+            },
             options
         );
 
-        const responseFields = {
+        const responseFields$ = {
             ContentType: response.headers.get("content-type") ?? "application/octet-stream",
             StatusCode: response.status,
             RawResponse: response,
@@ -74,7 +80,7 @@ export class Payroll extends ClientSDK {
         }
 
         return operations.DeletePeopleIdEquitiesEntryIdResponse$.inboundSchema.parse(
-            responseFields
+            responseFields$
         );
     }
 
@@ -89,35 +95,41 @@ export class Payroll extends ClientSDK {
         security: operations.DeletePeopleIdSalariesEntryIdSecurity,
         options?: RequestOptions
     ): Promise<operations.DeletePeopleIdSalariesEntryIdResponse> {
-        const headers = new Headers();
-        headers.set("user-agent", SDK_METADATA.userAgent);
-        headers.set("Accept", "*/*");
+        const headers$ = new Headers();
+        headers$.set("user-agent", SDK_METADATA.userAgent);
+        headers$.set("Accept", "*/*");
 
-        const payload =
+        const payload$ =
             operations.DeletePeopleIdSalariesEntryIdRequest$.outboundSchema.parse(input);
-        const body = null;
+        const body$ = null;
 
-        const pathParams = {
-            entry_id: enc$.encodeSimple("entry_id", payload.entry_id, {
+        const pathParams$ = {
+            entry_id: enc$.encodeSimple("entry_id", payload$.entry_id, {
                 explode: false,
                 charEncoding: "percent",
             }),
-            id: enc$.encodeSimple("id", payload.id, { explode: false, charEncoding: "percent" }),
+            id: enc$.encodeSimple("id", payload$.id, { explode: false, charEncoding: "percent" }),
         };
 
-        const path = this.templateURLComponent("/people/{id}/salaries/{entry_id}")(pathParams);
+        const path$ = this.templateURLComponent("/people/{id}/salaries/{entry_id}")(pathParams$);
 
-        const securitySettings = this.resolveSecurity(
+        const securitySettings$ = this.resolveSecurity(
             [{ value: security?.basic, type: "http:basic" }],
             [{ value: security?.bearer, fieldName: "Authorization", type: "apiKey:header" }]
         );
 
         const response = await this.fetch$(
-            { security: securitySettings, method: "delete", path, headers, body },
+            {
+                security: securitySettings$,
+                method: "delete",
+                path: path$,
+                headers: headers$,
+                body: body$,
+            },
             options
         );
 
-        const responseFields = {
+        const responseFields$ = {
             ContentType: response.headers.get("content-type") ?? "application/octet-stream",
             StatusCode: response.status,
             RawResponse: response,
@@ -131,7 +143,7 @@ export class Payroll extends ClientSDK {
         }
 
         return operations.DeletePeopleIdSalariesEntryIdResponse$.inboundSchema.parse(
-            responseFields
+            responseFields$
         );
     }
 
@@ -146,35 +158,41 @@ export class Payroll extends ClientSDK {
         security: operations.DeletePeopleIdTrainingEntryIdSecurity,
         options?: RequestOptions
     ): Promise<operations.DeletePeopleIdTrainingEntryIdResponse> {
-        const headers = new Headers();
-        headers.set("user-agent", SDK_METADATA.userAgent);
-        headers.set("Accept", "*/*");
+        const headers$ = new Headers();
+        headers$.set("user-agent", SDK_METADATA.userAgent);
+        headers$.set("Accept", "*/*");
 
-        const payload =
+        const payload$ =
             operations.DeletePeopleIdTrainingEntryIdRequest$.outboundSchema.parse(input);
-        const body = null;
+        const body$ = null;
 
-        const pathParams = {
-            entry_id: enc$.encodeSimple("entry_id", payload.entry_id, {
+        const pathParams$ = {
+            entry_id: enc$.encodeSimple("entry_id", payload$.entry_id, {
                 explode: false,
                 charEncoding: "percent",
             }),
-            id: enc$.encodeSimple("id", payload.id, { explode: false, charEncoding: "percent" }),
+            id: enc$.encodeSimple("id", payload$.id, { explode: false, charEncoding: "percent" }),
         };
 
-        const path = this.templateURLComponent("/people/{id}/training/{entry_id}")(pathParams);
+        const path$ = this.templateURLComponent("/people/{id}/training/{entry_id}")(pathParams$);
 
-        const securitySettings = this.resolveSecurity(
+        const securitySettings$ = this.resolveSecurity(
             [{ value: security?.basic, type: "http:basic" }],
             [{ value: security?.bearer, fieldName: "Authorization", type: "apiKey:header" }]
         );
 
         const response = await this.fetch$(
-            { security: securitySettings, method: "delete", path, headers, body },
+            {
+                security: securitySettings$,
+                method: "delete",
+                path: path$,
+                headers: headers$,
+                body: body$,
+            },
             options
         );
 
-        const responseFields = {
+        const responseFields$ = {
             ContentType: response.headers.get("content-type") ?? "application/octet-stream",
             StatusCode: response.status,
             RawResponse: response,
@@ -188,7 +206,7 @@ export class Payroll extends ClientSDK {
         }
 
         return operations.DeletePeopleIdTrainingEntryIdResponse$.inboundSchema.parse(
-            responseFields
+            responseFields$
         );
     }
 
@@ -203,35 +221,41 @@ export class Payroll extends ClientSDK {
         security: operations.DeletePeopleIdVariableEntryIdSecurity,
         options?: RequestOptions
     ): Promise<operations.DeletePeopleIdVariableEntryIdResponse> {
-        const headers = new Headers();
-        headers.set("user-agent", SDK_METADATA.userAgent);
-        headers.set("Accept", "*/*");
+        const headers$ = new Headers();
+        headers$.set("user-agent", SDK_METADATA.userAgent);
+        headers$.set("Accept", "*/*");
 
-        const payload =
+        const payload$ =
             operations.DeletePeopleIdVariableEntryIdRequest$.outboundSchema.parse(input);
-        const body = null;
+        const body$ = null;
 
-        const pathParams = {
-            entry_id: enc$.encodeSimple("entry_id", payload.entry_id, {
+        const pathParams$ = {
+            entry_id: enc$.encodeSimple("entry_id", payload$.entry_id, {
                 explode: false,
                 charEncoding: "percent",
             }),
-            id: enc$.encodeSimple("id", payload.id, { explode: false, charEncoding: "percent" }),
+            id: enc$.encodeSimple("id", payload$.id, { explode: false, charEncoding: "percent" }),
         };
 
-        const path = this.templateURLComponent("/people/{id}/variable/{entry_id}")(pathParams);
+        const path$ = this.templateURLComponent("/people/{id}/variable/{entry_id}")(pathParams$);
 
-        const securitySettings = this.resolveSecurity(
+        const securitySettings$ = this.resolveSecurity(
             [{ value: security?.basic, type: "http:basic" }],
             [{ value: security?.bearer, fieldName: "Authorization", type: "apiKey:header" }]
         );
 
         const response = await this.fetch$(
-            { security: securitySettings, method: "delete", path, headers, body },
+            {
+                security: securitySettings$,
+                method: "delete",
+                path: path$,
+                headers: headers$,
+                body: body$,
+            },
             options
         );
 
-        const responseFields = {
+        const responseFields$ = {
             ContentType: response.headers.get("content-type") ?? "application/octet-stream",
             StatusCode: response.status,
             RawResponse: response,
@@ -245,7 +269,7 @@ export class Payroll extends ClientSDK {
         }
 
         return operations.DeletePeopleIdVariableEntryIdResponse$.inboundSchema.parse(
-            responseFields
+            responseFields$
         );
     }
 
@@ -259,21 +283,21 @@ export class Payroll extends ClientSDK {
         input: operations.GetPayrollHistoryRequest,
         options?: RequestOptions
     ): Promise<operations.GetPayrollHistoryResponse> {
-        const headers = new Headers();
-        headers.set("user-agent", SDK_METADATA.userAgent);
-        headers.set("Accept", "application/json");
+        const headers$ = new Headers();
+        headers$.set("user-agent", SDK_METADATA.userAgent);
+        headers$.set("Accept", "application/json");
 
-        const payload = operations.GetPayrollHistoryRequest$.outboundSchema.parse(input);
-        const body = null;
+        const payload$ = operations.GetPayrollHistoryRequest$.outboundSchema.parse(input);
+        const body$ = null;
 
-        const path = this.templateURLComponent("/payroll/history")();
+        const path$ = this.templateURLComponent("/payroll/history")();
 
-        const query = [
-            enc$.encodeForm("department", payload.department, {
+        const query$ = [
+            enc$.encodeForm("department", payload$.department, {
                 explode: true,
                 charEncoding: "percent",
             }),
-            enc$.encodeForm("showInactive", payload.showInactive, {
+            enc$.encodeForm("showInactive", payload$.showInactive, {
                 explode: true,
                 charEncoding: "percent",
             }),
@@ -281,18 +305,25 @@ export class Payroll extends ClientSDK {
             .filter(Boolean)
             .join("&");
 
-        const security =
+        const security$ =
             typeof this.options$.security === "function"
                 ? await this.options$.security()
                 : this.options$.security;
-        const securitySettings = this.resolveGlobalSecurity(security);
+        const securitySettings$ = this.resolveGlobalSecurity(security$);
 
         const response = await this.fetch$(
-            { security: securitySettings, method: "get", path, headers, query, body },
+            {
+                security: securitySettings$,
+                method: "get",
+                path: path$,
+                headers: headers$,
+                query: query$,
+                body: body$,
+            },
             options
         );
 
-        const responseFields = {
+        const responseFields$ = {
             ContentType: response.headers.get("content-type") ?? "application/octet-stream",
             StatusCode: response.status,
             RawResponse: response,
@@ -301,14 +332,14 @@ export class Payroll extends ClientSDK {
         if (this.matchResponse(response, 200, "application/json")) {
             const responseBody = await response.json();
             const result = operations.GetPayrollHistoryResponse$.inboundSchema.parse({
-                ...responseFields,
+                ...responseFields$,
                 Employees: responseBody,
             });
             return result;
         } else if (this.matchResponse(response, "default", "application/json")) {
             const responseBody = await response.json();
             const result = operations.GetPayrollHistoryResponse$.inboundSchema.parse({
-                ...responseFields,
+                ...responseFields$,
                 Error: responseBody,
             });
             return result;
@@ -329,30 +360,36 @@ export class Payroll extends ClientSDK {
         security: operations.GetPeopleIdEquitiesSecurity,
         options?: RequestOptions
     ): Promise<operations.GetPeopleIdEquitiesResponse> {
-        const headers = new Headers();
-        headers.set("user-agent", SDK_METADATA.userAgent);
-        headers.set("Accept", "application/json");
+        const headers$ = new Headers();
+        headers$.set("user-agent", SDK_METADATA.userAgent);
+        headers$.set("Accept", "application/json");
 
-        const payload = operations.GetPeopleIdEquitiesRequest$.outboundSchema.parse(input);
-        const body = null;
+        const payload$ = operations.GetPeopleIdEquitiesRequest$.outboundSchema.parse(input);
+        const body$ = null;
 
-        const pathParams = {
-            id: enc$.encodeSimple("id", payload.id, { explode: false, charEncoding: "percent" }),
+        const pathParams$ = {
+            id: enc$.encodeSimple("id", payload$.id, { explode: false, charEncoding: "percent" }),
         };
 
-        const path = this.templateURLComponent("/people/{id}/equities")(pathParams);
+        const path$ = this.templateURLComponent("/people/{id}/equities")(pathParams$);
 
-        const securitySettings = this.resolveSecurity(
+        const securitySettings$ = this.resolveSecurity(
             [{ value: security?.basic, type: "http:basic" }],
             [{ value: security?.bearer, fieldName: "Authorization", type: "apiKey:header" }]
         );
 
         const response = await this.fetch$(
-            { security: securitySettings, method: "get", path, headers, body },
+            {
+                security: securitySettings$,
+                method: "get",
+                path: path$,
+                headers: headers$,
+                body: body$,
+            },
             options
         );
 
-        const responseFields = {
+        const responseFields$ = {
             ContentType: response.headers.get("content-type") ?? "application/octet-stream",
             StatusCode: response.status,
             RawResponse: response,
@@ -361,7 +398,7 @@ export class Payroll extends ClientSDK {
         if (this.matchResponse(response, 200, "application/json")) {
             const responseBody = await response.json();
             const result = operations.GetPeopleIdEquitiesResponse$.inboundSchema.parse({
-                ...responseFields,
+                ...responseFields$,
                 EquityEntries: responseBody,
             });
             return result;
@@ -382,30 +419,36 @@ export class Payroll extends ClientSDK {
         security: operations.GetPeopleIdSalariesSecurity,
         options?: RequestOptions
     ): Promise<operations.GetPeopleIdSalariesResponse> {
-        const headers = new Headers();
-        headers.set("user-agent", SDK_METADATA.userAgent);
-        headers.set("Accept", "application/json");
+        const headers$ = new Headers();
+        headers$.set("user-agent", SDK_METADATA.userAgent);
+        headers$.set("Accept", "application/json");
 
-        const payload = operations.GetPeopleIdSalariesRequest$.outboundSchema.parse(input);
-        const body = null;
+        const payload$ = operations.GetPeopleIdSalariesRequest$.outboundSchema.parse(input);
+        const body$ = null;
 
-        const pathParams = {
-            id: enc$.encodeSimple("id", payload.id, { explode: false, charEncoding: "percent" }),
+        const pathParams$ = {
+            id: enc$.encodeSimple("id", payload$.id, { explode: false, charEncoding: "percent" }),
         };
 
-        const path = this.templateURLComponent("/people/{id}/salaries")(pathParams);
+        const path$ = this.templateURLComponent("/people/{id}/salaries")(pathParams$);
 
-        const securitySettings = this.resolveSecurity(
+        const securitySettings$ = this.resolveSecurity(
             [{ value: security?.basic, type: "http:basic" }],
             [{ value: security?.bearer, fieldName: "Authorization", type: "apiKey:header" }]
         );
 
         const response = await this.fetch$(
-            { security: securitySettings, method: "get", path, headers, body },
+            {
+                security: securitySettings$,
+                method: "get",
+                path: path$,
+                headers: headers$,
+                body: body$,
+            },
             options
         );
 
-        const responseFields = {
+        const responseFields$ = {
             ContentType: response.headers.get("content-type") ?? "application/octet-stream",
             StatusCode: response.status,
             RawResponse: response,
@@ -414,7 +457,7 @@ export class Payroll extends ClientSDK {
         if (this.matchResponse(response, 200, "application/json")) {
             const responseBody = await response.json();
             const result = operations.GetPeopleIdSalariesResponse$.inboundSchema.parse({
-                ...responseFields,
+                ...responseFields$,
                 SalaryEntries: responseBody,
             });
             return result;
@@ -435,30 +478,36 @@ export class Payroll extends ClientSDK {
         security: operations.GetPeopleIdTrainingSecurity,
         options?: RequestOptions
     ): Promise<operations.GetPeopleIdTrainingResponse> {
-        const headers = new Headers();
-        headers.set("user-agent", SDK_METADATA.userAgent);
-        headers.set("Accept", "application/json");
+        const headers$ = new Headers();
+        headers$.set("user-agent", SDK_METADATA.userAgent);
+        headers$.set("Accept", "application/json");
 
-        const payload = operations.GetPeopleIdTrainingRequest$.outboundSchema.parse(input);
-        const body = null;
+        const payload$ = operations.GetPeopleIdTrainingRequest$.outboundSchema.parse(input);
+        const body$ = null;
 
-        const pathParams = {
-            id: enc$.encodeSimple("id", payload.id, { explode: false, charEncoding: "percent" }),
+        const pathParams$ = {
+            id: enc$.encodeSimple("id", payload$.id, { explode: false, charEncoding: "percent" }),
         };
 
-        const path = this.templateURLComponent("/people/{id}/training")(pathParams);
+        const path$ = this.templateURLComponent("/people/{id}/training")(pathParams$);
 
-        const securitySettings = this.resolveSecurity(
+        const securitySettings$ = this.resolveSecurity(
             [{ value: security?.basic, type: "http:basic" }],
             [{ value: security?.bearer, fieldName: "Authorization", type: "apiKey:header" }]
         );
 
         const response = await this.fetch$(
-            { security: securitySettings, method: "get", path, headers, body },
+            {
+                security: securitySettings$,
+                method: "get",
+                path: path$,
+                headers: headers$,
+                body: body$,
+            },
             options
         );
 
-        const responseFields = {
+        const responseFields$ = {
             ContentType: response.headers.get("content-type") ?? "application/octet-stream",
             StatusCode: response.status,
             RawResponse: response,
@@ -467,7 +516,7 @@ export class Payroll extends ClientSDK {
         if (this.matchResponse(response, 200, "application/json")) {
             const responseBody = await response.json();
             const result = operations.GetPeopleIdTrainingResponse$.inboundSchema.parse({
-                ...responseFields,
+                ...responseFields$,
                 TrainingEntries: responseBody,
             });
             return result;
@@ -487,31 +536,37 @@ export class Payroll extends ClientSDK {
         input: operations.GetPeopleIdVariableRequest,
         options?: RequestOptions
     ): Promise<operations.GetPeopleIdVariableResponse> {
-        const headers = new Headers();
-        headers.set("user-agent", SDK_METADATA.userAgent);
-        headers.set("Accept", "application/json");
+        const headers$ = new Headers();
+        headers$.set("user-agent", SDK_METADATA.userAgent);
+        headers$.set("Accept", "application/json");
 
-        const payload = operations.GetPeopleIdVariableRequest$.outboundSchema.parse(input);
-        const body = null;
+        const payload$ = operations.GetPeopleIdVariableRequest$.outboundSchema.parse(input);
+        const body$ = null;
 
-        const pathParams = {
-            id: enc$.encodeSimple("id", payload.id, { explode: false, charEncoding: "percent" }),
+        const pathParams$ = {
+            id: enc$.encodeSimple("id", payload$.id, { explode: false, charEncoding: "percent" }),
         };
 
-        const path = this.templateURLComponent("/people/{id}/variable")(pathParams);
+        const path$ = this.templateURLComponent("/people/{id}/variable")(pathParams$);
 
-        const security =
+        const security$ =
             typeof this.options$.security === "function"
                 ? await this.options$.security()
                 : this.options$.security;
-        const securitySettings = this.resolveGlobalSecurity(security);
+        const securitySettings$ = this.resolveGlobalSecurity(security$);
 
         const response = await this.fetch$(
-            { security: securitySettings, method: "get", path, headers, body },
+            {
+                security: securitySettings$,
+                method: "get",
+                path: path$,
+                headers: headers$,
+                body: body$,
+            },
             options
         );
 
-        const responseFields = {
+        const responseFields$ = {
             ContentType: response.headers.get("content-type") ?? "application/octet-stream",
             StatusCode: response.status,
             RawResponse: response,
@@ -520,7 +575,7 @@ export class Payroll extends ClientSDK {
         if (this.matchResponse(response, 200, "application/json")) {
             const responseBody = await response.json();
             const result = operations.GetPeopleIdVariableResponse$.inboundSchema.parse({
-                ...responseFields,
+                ...responseFields$,
                 VariableEntries: responseBody,
             });
             return result;
@@ -541,32 +596,38 @@ export class Payroll extends ClientSDK {
         security: operations.PostPeopleIdEquitiesSecurity,
         options?: RequestOptions
     ): Promise<operations.PostPeopleIdEquitiesResponse> {
-        const headers = new Headers();
-        headers.set("user-agent", SDK_METADATA.userAgent);
-        headers.set("Content-Type", "application/json");
-        headers.set("Accept", "*/*");
+        const headers$ = new Headers();
+        headers$.set("user-agent", SDK_METADATA.userAgent);
+        headers$.set("Content-Type", "application/json");
+        headers$.set("Accept", "*/*");
 
-        const payload = operations.PostPeopleIdEquitiesRequest$.outboundSchema.parse(input);
+        const payload$ = operations.PostPeopleIdEquitiesRequest$.outboundSchema.parse(input);
 
-        const body = enc$.encodeJSON("body", payload.EquityEntry, { explode: true });
+        const body$ = enc$.encodeJSON("body", payload$.EquityEntry, { explode: true });
 
-        const pathParams = {
-            id: enc$.encodeSimple("id", payload.id, { explode: false, charEncoding: "percent" }),
+        const pathParams$ = {
+            id: enc$.encodeSimple("id", payload$.id, { explode: false, charEncoding: "percent" }),
         };
 
-        const path = this.templateURLComponent("/people/{id}/equities")(pathParams);
+        const path$ = this.templateURLComponent("/people/{id}/equities")(pathParams$);
 
-        const securitySettings = this.resolveSecurity(
+        const securitySettings$ = this.resolveSecurity(
             [{ value: security?.basic, type: "http:basic" }],
             [{ value: security?.bearer, fieldName: "Authorization", type: "apiKey:header" }]
         );
 
         const response = await this.fetch$(
-            { security: securitySettings, method: "post", path, headers, body },
+            {
+                security: securitySettings$,
+                method: "post",
+                path: path$,
+                headers: headers$,
+                body: body$,
+            },
             options
         );
 
-        const responseFields = {
+        const responseFields$ = {
             ContentType: response.headers.get("content-type") ?? "application/octet-stream",
             StatusCode: response.status,
             RawResponse: response,
@@ -579,7 +640,7 @@ export class Payroll extends ClientSDK {
             throw new errors.SDKError("Unexpected API response", response, responseBody);
         }
 
-        return operations.PostPeopleIdEquitiesResponse$.inboundSchema.parse(responseFields);
+        return operations.PostPeopleIdEquitiesResponse$.inboundSchema.parse(responseFields$);
     }
 
     /**
@@ -593,32 +654,38 @@ export class Payroll extends ClientSDK {
         security: operations.PostPeopleIdSalariesSecurity,
         options?: RequestOptions
     ): Promise<operations.PostPeopleIdSalariesResponse> {
-        const headers = new Headers();
-        headers.set("user-agent", SDK_METADATA.userAgent);
-        headers.set("Content-Type", "application/json");
-        headers.set("Accept", "*/*");
+        const headers$ = new Headers();
+        headers$.set("user-agent", SDK_METADATA.userAgent);
+        headers$.set("Content-Type", "application/json");
+        headers$.set("Accept", "*/*");
 
-        const payload = operations.PostPeopleIdSalariesRequest$.outboundSchema.parse(input);
+        const payload$ = operations.PostPeopleIdSalariesRequest$.outboundSchema.parse(input);
 
-        const body = enc$.encodeJSON("body", payload.SalaryEntry, { explode: true });
+        const body$ = enc$.encodeJSON("body", payload$.SalaryEntry, { explode: true });
 
-        const pathParams = {
-            id: enc$.encodeSimple("id", payload.id, { explode: false, charEncoding: "percent" }),
+        const pathParams$ = {
+            id: enc$.encodeSimple("id", payload$.id, { explode: false, charEncoding: "percent" }),
         };
 
-        const path = this.templateURLComponent("/people/{id}/salaries")(pathParams);
+        const path$ = this.templateURLComponent("/people/{id}/salaries")(pathParams$);
 
-        const securitySettings = this.resolveSecurity(
+        const securitySettings$ = this.resolveSecurity(
             [{ value: security?.basic, type: "http:basic" }],
             [{ value: security?.bearer, fieldName: "Authorization", type: "apiKey:header" }]
         );
 
         const response = await this.fetch$(
-            { security: securitySettings, method: "post", path, headers, body },
+            {
+                security: securitySettings$,
+                method: "post",
+                path: path$,
+                headers: headers$,
+                body: body$,
+            },
             options
         );
 
-        const responseFields = {
+        const responseFields$ = {
             ContentType: response.headers.get("content-type") ?? "application/octet-stream",
             StatusCode: response.status,
             RawResponse: response,
@@ -631,7 +698,7 @@ export class Payroll extends ClientSDK {
             throw new errors.SDKError("Unexpected API response", response, responseBody);
         }
 
-        return operations.PostPeopleIdSalariesResponse$.inboundSchema.parse(responseFields);
+        return operations.PostPeopleIdSalariesResponse$.inboundSchema.parse(responseFields$);
     }
 
     /**
@@ -645,32 +712,38 @@ export class Payroll extends ClientSDK {
         security: operations.PostPeopleIdTrainingSecurity,
         options?: RequestOptions
     ): Promise<operations.PostPeopleIdTrainingResponse> {
-        const headers = new Headers();
-        headers.set("user-agent", SDK_METADATA.userAgent);
-        headers.set("Content-Type", "application/json");
-        headers.set("Accept", "*/*");
+        const headers$ = new Headers();
+        headers$.set("user-agent", SDK_METADATA.userAgent);
+        headers$.set("Content-Type", "application/json");
+        headers$.set("Accept", "*/*");
 
-        const payload = operations.PostPeopleIdTrainingRequest$.outboundSchema.parse(input);
+        const payload$ = operations.PostPeopleIdTrainingRequest$.outboundSchema.parse(input);
 
-        const body = enc$.encodeJSON("body", payload.TrainingEntry, { explode: true });
+        const body$ = enc$.encodeJSON("body", payload$.TrainingEntry, { explode: true });
 
-        const pathParams = {
-            id: enc$.encodeSimple("id", payload.id, { explode: false, charEncoding: "percent" }),
+        const pathParams$ = {
+            id: enc$.encodeSimple("id", payload$.id, { explode: false, charEncoding: "percent" }),
         };
 
-        const path = this.templateURLComponent("/people/{id}/training")(pathParams);
+        const path$ = this.templateURLComponent("/people/{id}/training")(pathParams$);
 
-        const securitySettings = this.resolveSecurity(
+        const securitySettings$ = this.resolveSecurity(
             [{ value: security?.basic, type: "http:basic" }],
             [{ value: security?.bearer, fieldName: "Authorization", type: "apiKey:header" }]
         );
 
         const response = await this.fetch$(
-            { security: securitySettings, method: "post", path, headers, body },
+            {
+                security: securitySettings$,
+                method: "post",
+                path: path$,
+                headers: headers$,
+                body: body$,
+            },
             options
         );
 
-        const responseFields = {
+        const responseFields$ = {
             ContentType: response.headers.get("content-type") ?? "application/octet-stream",
             StatusCode: response.status,
             RawResponse: response,
@@ -683,7 +756,7 @@ export class Payroll extends ClientSDK {
             throw new errors.SDKError("Unexpected API response", response, responseBody);
         }
 
-        return operations.PostPeopleIdTrainingResponse$.inboundSchema.parse(responseFields);
+        return operations.PostPeopleIdTrainingResponse$.inboundSchema.parse(responseFields$);
     }
 
     /**
@@ -697,32 +770,38 @@ export class Payroll extends ClientSDK {
         security: operations.PostPeopleIdVariableSecurity,
         options?: RequestOptions
     ): Promise<operations.PostPeopleIdVariableResponse> {
-        const headers = new Headers();
-        headers.set("user-agent", SDK_METADATA.userAgent);
-        headers.set("Content-Type", "application/json");
-        headers.set("Accept", "*/*");
+        const headers$ = new Headers();
+        headers$.set("user-agent", SDK_METADATA.userAgent);
+        headers$.set("Content-Type", "application/json");
+        headers$.set("Accept", "*/*");
 
-        const payload = operations.PostPeopleIdVariableRequest$.outboundSchema.parse(input);
+        const payload$ = operations.PostPeopleIdVariableRequest$.outboundSchema.parse(input);
 
-        const body = enc$.encodeJSON("body", payload.VariableEntry, { explode: true });
+        const body$ = enc$.encodeJSON("body", payload$.VariableEntry, { explode: true });
 
-        const pathParams = {
-            id: enc$.encodeSimple("id", payload.id, { explode: false, charEncoding: "percent" }),
+        const pathParams$ = {
+            id: enc$.encodeSimple("id", payload$.id, { explode: false, charEncoding: "percent" }),
         };
 
-        const path = this.templateURLComponent("/people/{id}/variable")(pathParams);
+        const path$ = this.templateURLComponent("/people/{id}/variable")(pathParams$);
 
-        const securitySettings = this.resolveSecurity(
+        const securitySettings$ = this.resolveSecurity(
             [{ value: security?.basic, type: "http:basic" }],
             [{ value: security?.bearer, fieldName: "Authorization", type: "apiKey:header" }]
         );
 
         const response = await this.fetch$(
-            { security: securitySettings, method: "post", path, headers, body },
+            {
+                security: securitySettings$,
+                method: "post",
+                path: path$,
+                headers: headers$,
+                body: body$,
+            },
             options
         );
 
-        const responseFields = {
+        const responseFields$ = {
             ContentType: response.headers.get("content-type") ?? "application/octet-stream",
             StatusCode: response.status,
             RawResponse: response,
@@ -735,7 +814,7 @@ export class Payroll extends ClientSDK {
             throw new errors.SDKError("Unexpected API response", response, responseBody);
         }
 
-        return operations.PostPeopleIdVariableResponse$.inboundSchema.parse(responseFields);
+        return operations.PostPeopleIdVariableResponse$.inboundSchema.parse(responseFields$);
     }
 
     /**
@@ -749,36 +828,42 @@ export class Payroll extends ClientSDK {
         security: operations.PutPeopleIdEquitiesEntryIdSecurity,
         options?: RequestOptions
     ): Promise<operations.PutPeopleIdEquitiesEntryIdResponse> {
-        const headers = new Headers();
-        headers.set("user-agent", SDK_METADATA.userAgent);
-        headers.set("Content-Type", "application/json");
-        headers.set("Accept", "*/*");
+        const headers$ = new Headers();
+        headers$.set("user-agent", SDK_METADATA.userAgent);
+        headers$.set("Content-Type", "application/json");
+        headers$.set("Accept", "*/*");
 
-        const payload = operations.PutPeopleIdEquitiesEntryIdRequest$.outboundSchema.parse(input);
+        const payload$ = operations.PutPeopleIdEquitiesEntryIdRequest$.outboundSchema.parse(input);
 
-        const body = enc$.encodeJSON("body", payload.EquityEntry, { explode: true });
+        const body$ = enc$.encodeJSON("body", payload$.EquityEntry, { explode: true });
 
-        const pathParams = {
-            entry_id: enc$.encodeSimple("entry_id", payload.entry_id, {
+        const pathParams$ = {
+            entry_id: enc$.encodeSimple("entry_id", payload$.entry_id, {
                 explode: false,
                 charEncoding: "percent",
             }),
-            id: enc$.encodeSimple("id", payload.id, { explode: false, charEncoding: "percent" }),
+            id: enc$.encodeSimple("id", payload$.id, { explode: false, charEncoding: "percent" }),
         };
 
-        const path = this.templateURLComponent("/people/{id}/equities/{entry_id}")(pathParams);
+        const path$ = this.templateURLComponent("/people/{id}/equities/{entry_id}")(pathParams$);
 
-        const securitySettings = this.resolveSecurity(
+        const securitySettings$ = this.resolveSecurity(
             [{ value: security?.basic, type: "http:basic" }],
             [{ value: security?.bearer, fieldName: "Authorization", type: "apiKey:header" }]
         );
 
         const response = await this.fetch$(
-            { security: securitySettings, method: "put", path, headers, body },
+            {
+                security: securitySettings$,
+                method: "put",
+                path: path$,
+                headers: headers$,
+                body: body$,
+            },
             options
         );
 
-        const responseFields = {
+        const responseFields$ = {
             ContentType: response.headers.get("content-type") ?? "application/octet-stream",
             StatusCode: response.status,
             RawResponse: response,
@@ -791,6 +876,6 @@ export class Payroll extends ClientSDK {
             throw new errors.SDKError("Unexpected API response", response, responseBody);
         }
 
-        return operations.PutPeopleIdEquitiesEntryIdResponse$.inboundSchema.parse(responseFields);
+        return operations.PutPeopleIdEquitiesEntryIdResponse$.inboundSchema.parse(responseFields$);
     }
 }

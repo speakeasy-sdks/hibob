@@ -33,40 +33,46 @@ export class Metadata extends ClientSDK {
         security: operations.DeleteCompanyNamedListsListNameItemIdSecurity,
         options?: RequestOptions
     ): Promise<operations.DeleteCompanyNamedListsListNameItemIdResponse> {
-        const headers = new Headers();
-        headers.set("user-agent", SDK_METADATA.userAgent);
-        headers.set("Accept", "*/*");
+        const headers$ = new Headers();
+        headers$.set("user-agent", SDK_METADATA.userAgent);
+        headers$.set("Accept", "*/*");
 
-        const payload =
+        const payload$ =
             operations.DeleteCompanyNamedListsListNameItemIdRequest$.outboundSchema.parse(input);
-        const body = null;
+        const body$ = null;
 
-        const pathParams = {
-            itemId: enc$.encodeSimple("itemId", payload.itemId, {
+        const pathParams$ = {
+            itemId: enc$.encodeSimple("itemId", payload$.itemId, {
                 explode: false,
                 charEncoding: "percent",
             }),
-            listName: enc$.encodeSimple("listName", payload.listName, {
+            listName: enc$.encodeSimple("listName", payload$.listName, {
                 explode: false,
                 charEncoding: "percent",
             }),
         };
 
-        const path = this.templateURLComponent("/company/named-lists/{listName}/{itemId}")(
-            pathParams
+        const path$ = this.templateURLComponent("/company/named-lists/{listName}/{itemId}")(
+            pathParams$
         );
 
-        const securitySettings = this.resolveSecurity(
+        const securitySettings$ = this.resolveSecurity(
             [{ value: security?.basic, type: "http:basic" }],
             [{ value: security?.bearer, fieldName: "Authorization", type: "apiKey:header" }]
         );
 
         const response = await this.fetch$(
-            { security: securitySettings, method: "delete", path, headers, body },
+            {
+                security: securitySettings$,
+                method: "delete",
+                path: path$,
+                headers: headers$,
+                body: body$,
+            },
             options
         );
 
-        const responseFields = {
+        const responseFields$ = {
             ContentType: response.headers.get("content-type") ?? "application/octet-stream",
             StatusCode: response.status,
             RawResponse: response,
@@ -80,7 +86,7 @@ export class Metadata extends ClientSDK {
         }
 
         return operations.DeleteCompanyNamedListsListNameItemIdResponse$.inboundSchema.parse(
-            responseFields
+            responseFields$
         );
     }
 
@@ -95,34 +101,40 @@ export class Metadata extends ClientSDK {
         security: operations.DeleteCompanyPeopleFieldsFieldIdSecurity,
         options?: RequestOptions
     ): Promise<operations.DeleteCompanyPeopleFieldsFieldIdResponse> {
-        const headers = new Headers();
-        headers.set("user-agent", SDK_METADATA.userAgent);
-        headers.set("Accept", "*/*");
+        const headers$ = new Headers();
+        headers$.set("user-agent", SDK_METADATA.userAgent);
+        headers$.set("Accept", "*/*");
 
-        const payload =
+        const payload$ =
             operations.DeleteCompanyPeopleFieldsFieldIdRequest$.outboundSchema.parse(input);
-        const body = null;
+        const body$ = null;
 
-        const pathParams = {
-            fieldId: enc$.encodeSimple("fieldId", payload.fieldId, {
+        const pathParams$ = {
+            fieldId: enc$.encodeSimple("fieldId", payload$.fieldId, {
                 explode: false,
                 charEncoding: "percent",
             }),
         };
 
-        const path = this.templateURLComponent("/company/people/fields/{fieldId}")(pathParams);
+        const path$ = this.templateURLComponent("/company/people/fields/{fieldId}")(pathParams$);
 
-        const securitySettings = this.resolveSecurity(
+        const securitySettings$ = this.resolveSecurity(
             [{ value: security?.basic, type: "http:basic" }],
             [{ value: security?.bearer, fieldName: "Authorization", type: "apiKey:header" }]
         );
 
         const response = await this.fetch$(
-            { security: securitySettings, method: "delete", path, headers, body },
+            {
+                security: securitySettings$,
+                method: "delete",
+                path: path$,
+                headers: headers$,
+                body: body$,
+            },
             options
         );
 
-        const responseFields = {
+        const responseFields$ = {
             ContentType: response.headers.get("content-type") ?? "application/octet-stream",
             StatusCode: response.status,
             RawResponse: response,
@@ -136,7 +148,7 @@ export class Metadata extends ClientSDK {
         }
 
         return operations.DeleteCompanyPeopleFieldsFieldIdResponse$.inboundSchema.parse(
-            responseFields
+            responseFields$
         );
     }
 
@@ -151,17 +163,17 @@ export class Metadata extends ClientSDK {
         security: operations.GetCompanyNamedListsSecurity,
         options?: RequestOptions
     ): Promise<operations.GetCompanyNamedListsResponse> {
-        const headers = new Headers();
-        headers.set("user-agent", SDK_METADATA.userAgent);
-        headers.set("Accept", "application/json");
+        const headers$ = new Headers();
+        headers$.set("user-agent", SDK_METADATA.userAgent);
+        headers$.set("Accept", "application/json");
 
-        const payload = operations.GetCompanyNamedListsRequest$.outboundSchema.parse(input);
-        const body = null;
+        const payload$ = operations.GetCompanyNamedListsRequest$.outboundSchema.parse(input);
+        const body$ = null;
 
-        const path = this.templateURLComponent("/company/named-lists")();
+        const path$ = this.templateURLComponent("/company/named-lists")();
 
-        const query = [
-            enc$.encodeForm("includeArchived", payload.includeArchived, {
+        const query$ = [
+            enc$.encodeForm("includeArchived", payload$.includeArchived, {
                 explode: true,
                 charEncoding: "percent",
             }),
@@ -169,17 +181,24 @@ export class Metadata extends ClientSDK {
             .filter(Boolean)
             .join("&");
 
-        const securitySettings = this.resolveSecurity(
+        const securitySettings$ = this.resolveSecurity(
             [{ value: security?.basic, type: "http:basic" }],
             [{ value: security?.bearer, fieldName: "Authorization", type: "apiKey:header" }]
         );
 
         const response = await this.fetch$(
-            { security: securitySettings, method: "get", path, headers, query, body },
+            {
+                security: securitySettings$,
+                method: "get",
+                path: path$,
+                headers: headers$,
+                query: query$,
+                body: body$,
+            },
             options
         );
 
-        const responseFields = {
+        const responseFields$ = {
             ContentType: response.headers.get("content-type") ?? "application/octet-stream",
             StatusCode: response.status,
             RawResponse: response,
@@ -188,7 +207,7 @@ export class Metadata extends ClientSDK {
         if (this.matchResponse(response, 200, "application/json")) {
             const responseBody = await response.json();
             const result = operations.GetCompanyNamedListsResponse$.inboundSchema.parse({
-                ...responseFields,
+                ...responseFields$,
                 Lists: responseBody,
             });
             return result;
@@ -209,24 +228,25 @@ export class Metadata extends ClientSDK {
         security: operations.GetCompanyNamedListsListNameSecurity,
         options?: RequestOptions
     ): Promise<operations.GetCompanyNamedListsListNameResponse> {
-        const headers = new Headers();
-        headers.set("user-agent", SDK_METADATA.userAgent);
-        headers.set("Accept", "application/json");
+        const headers$ = new Headers();
+        headers$.set("user-agent", SDK_METADATA.userAgent);
+        headers$.set("Accept", "application/json");
 
-        const payload = operations.GetCompanyNamedListsListNameRequest$.outboundSchema.parse(input);
-        const body = null;
+        const payload$ =
+            operations.GetCompanyNamedListsListNameRequest$.outboundSchema.parse(input);
+        const body$ = null;
 
-        const pathParams = {
-            listName: enc$.encodeSimple("listName", payload.listName, {
+        const pathParams$ = {
+            listName: enc$.encodeSimple("listName", payload$.listName, {
                 explode: false,
                 charEncoding: "percent",
             }),
         };
 
-        const path = this.templateURLComponent("/company/named-lists/{listName}")(pathParams);
+        const path$ = this.templateURLComponent("/company/named-lists/{listName}")(pathParams$);
 
-        const query = [
-            enc$.encodeForm("includeArchived", payload.includeArchived, {
+        const query$ = [
+            enc$.encodeForm("includeArchived", payload$.includeArchived, {
                 explode: true,
                 charEncoding: "percent",
             }),
@@ -234,17 +254,24 @@ export class Metadata extends ClientSDK {
             .filter(Boolean)
             .join("&");
 
-        const securitySettings = this.resolveSecurity(
+        const securitySettings$ = this.resolveSecurity(
             [{ value: security?.basic, type: "http:basic" }],
             [{ value: security?.bearer, fieldName: "Authorization", type: "apiKey:header" }]
         );
 
         const response = await this.fetch$(
-            { security: securitySettings, method: "get", path, headers, query, body },
+            {
+                security: securitySettings$,
+                method: "get",
+                path: path$,
+                headers: headers$,
+                query: query$,
+                body: body$,
+            },
             options
         );
 
-        const responseFields = {
+        const responseFields$ = {
             ContentType: response.headers.get("content-type") ?? "application/octet-stream",
             StatusCode: response.status,
             RawResponse: response,
@@ -253,7 +280,7 @@ export class Metadata extends ClientSDK {
         if (this.matchResponse(response, 200, "application/json")) {
             const responseBody = await response.json();
             const result = operations.GetCompanyNamedListsListNameResponse$.inboundSchema.parse({
-                ...responseFields,
+                ...responseFields$,
                 List: responseBody,
             });
             return result;
@@ -264,7 +291,9 @@ export class Metadata extends ClientSDK {
             throw new errors.SDKError("Unexpected API response", response, responseBody);
         }
 
-        return operations.GetCompanyNamedListsListNameResponse$.inboundSchema.parse(responseFields);
+        return operations.GetCompanyNamedListsListNameResponse$.inboundSchema.parse(
+            responseFields$
+        );
     }
 
     /**
@@ -277,23 +306,23 @@ export class Metadata extends ClientSDK {
         security: operations.GetCompanyPeopleFieldsSecurity,
         options?: RequestOptions
     ): Promise<operations.GetCompanyPeopleFieldsResponse> {
-        const headers = new Headers();
-        headers.set("user-agent", SDK_METADATA.userAgent);
-        headers.set("Accept", "application/json");
+        const headers$ = new Headers();
+        headers$.set("user-agent", SDK_METADATA.userAgent);
+        headers$.set("Accept", "application/json");
 
-        const path = this.templateURLComponent("/company/people/fields")();
+        const path$ = this.templateURLComponent("/company/people/fields")();
 
-        const securitySettings = this.resolveSecurity(
+        const securitySettings$ = this.resolveSecurity(
             [{ value: security?.basic, type: "http:basic" }],
             [{ value: security?.bearer, fieldName: "Authorization", type: "apiKey:header" }]
         );
 
         const response = await this.fetch$(
-            { security: securitySettings, method: "get", path, headers },
+            { security: securitySettings$, method: "get", path: path$, headers: headers$ },
             options
         );
 
-        const responseFields = {
+        const responseFields$ = {
             ContentType: response.headers.get("content-type") ?? "application/octet-stream",
             StatusCode: response.status,
             RawResponse: response,
@@ -302,7 +331,7 @@ export class Metadata extends ClientSDK {
         if (this.matchResponse(response, 200, "application/json")) {
             const responseBody = await response.json();
             const result = operations.GetCompanyPeopleFieldsResponse$.inboundSchema.parse({
-                ...responseFields,
+                ...responseFields$,
                 Fields: responseBody,
             });
             return result;
@@ -322,23 +351,23 @@ export class Metadata extends ClientSDK {
         security: operations.GetMetadataObjectsPositionSecurity,
         options?: RequestOptions
     ): Promise<operations.GetMetadataObjectsPositionResponse> {
-        const headers = new Headers();
-        headers.set("user-agent", SDK_METADATA.userAgent);
-        headers.set("Accept", "application/json");
+        const headers$ = new Headers();
+        headers$.set("user-agent", SDK_METADATA.userAgent);
+        headers$.set("Accept", "application/json");
 
-        const path = this.templateURLComponent("/metadata/objects/position")();
+        const path$ = this.templateURLComponent("/metadata/objects/position")();
 
-        const securitySettings = this.resolveSecurity([
+        const securitySettings$ = this.resolveSecurity([
             { value: security?.password, fieldName: "password", type: "http:basic" },
             { value: security?.username, fieldName: "username", type: "http:basic" },
         ]);
 
         const response = await this.fetch$(
-            { security: securitySettings, method: "get", path, headers },
+            { security: securitySettings$, method: "get", path: path$, headers: headers$ },
             options
         );
 
-        const responseFields = {
+        const responseFields$ = {
             ContentType: response.headers.get("content-type") ?? "application/octet-stream",
             StatusCode: response.status,
             RawResponse: response,
@@ -347,14 +376,14 @@ export class Metadata extends ClientSDK {
         if (this.matchResponse(response, 200, "application/json")) {
             const responseBody = await response.json();
             const result = operations.GetMetadataObjectsPositionResponse$.inboundSchema.parse({
-                ...responseFields,
+                ...responseFields$,
                 ObjectsMetadata: responseBody,
             });
             return result;
         } else if (this.matchResponse(response, "default", "application/json")) {
             const responseBody = await response.json();
             const result = operations.GetMetadataObjectsPositionResponse$.inboundSchema.parse({
-                ...responseFields,
+                ...responseFields$,
                 Error: responseBody,
             });
             return result;
@@ -374,23 +403,23 @@ export class Metadata extends ClientSDK {
         security: operations.GetPeopleCustomTablesMetadataSecurity,
         options?: RequestOptions
     ): Promise<operations.GetPeopleCustomTablesMetadataResponse> {
-        const headers = new Headers();
-        headers.set("user-agent", SDK_METADATA.userAgent);
-        headers.set("Accept", "application/json");
+        const headers$ = new Headers();
+        headers$.set("user-agent", SDK_METADATA.userAgent);
+        headers$.set("Accept", "application/json");
 
-        const path = this.templateURLComponent("/people/custom-tables/metadata")();
+        const path$ = this.templateURLComponent("/people/custom-tables/metadata")();
 
-        const securitySettings = this.resolveSecurity(
+        const securitySettings$ = this.resolveSecurity(
             [{ value: security?.basic, type: "http:basic" }],
             [{ value: security?.bearer, fieldName: "Authorization", type: "apiKey:header" }]
         );
 
         const response = await this.fetch$(
-            { security: securitySettings, method: "get", path, headers },
+            { security: securitySettings$, method: "get", path: path$, headers: headers$ },
             options
         );
 
-        const responseFields = {
+        const responseFields$ = {
             ContentType: response.headers.get("content-type") ?? "application/octet-stream",
             StatusCode: response.status,
             RawResponse: response,
@@ -399,7 +428,7 @@ export class Metadata extends ClientSDK {
         if (this.matchResponse(response, 200, "application/json")) {
             const responseBody = await response.json();
             const result = operations.GetPeopleCustomTablesMetadataResponse$.inboundSchema.parse({
-                ...responseFields,
+                ...responseFields$,
                 CustomTableMetadataList: responseBody,
             });
             return result;
@@ -420,38 +449,44 @@ export class Metadata extends ClientSDK {
         security: operations.GetPeopleCustomTablesMetadataCustomTableIdSecurity,
         options?: RequestOptions
     ): Promise<operations.GetPeopleCustomTablesMetadataCustomTableIdResponse> {
-        const headers = new Headers();
-        headers.set("user-agent", SDK_METADATA.userAgent);
-        headers.set("Accept", "application/json");
+        const headers$ = new Headers();
+        headers$.set("user-agent", SDK_METADATA.userAgent);
+        headers$.set("Accept", "application/json");
 
-        const payload =
+        const payload$ =
             operations.GetPeopleCustomTablesMetadataCustomTableIdRequest$.outboundSchema.parse(
                 input
             );
-        const body = null;
+        const body$ = null;
 
-        const pathParams = {
-            custom_table_id: enc$.encodeSimple("custom_table_id", payload.custom_table_id, {
+        const pathParams$ = {
+            custom_table_id: enc$.encodeSimple("custom_table_id", payload$.custom_table_id, {
                 explode: false,
                 charEncoding: "percent",
             }),
         };
 
-        const path = this.templateURLComponent("/people/custom-tables/metadata/{custom_table_id}")(
-            pathParams
+        const path$ = this.templateURLComponent("/people/custom-tables/metadata/{custom_table_id}")(
+            pathParams$
         );
 
-        const securitySettings = this.resolveSecurity(
+        const securitySettings$ = this.resolveSecurity(
             [{ value: security?.basic, type: "http:basic" }],
             [{ value: security?.bearer, fieldName: "Authorization", type: "apiKey:header" }]
         );
 
         const response = await this.fetch$(
-            { security: securitySettings, method: "get", path, headers, body },
+            {
+                security: securitySettings$,
+                method: "get",
+                path: path$,
+                headers: headers$,
+                body: body$,
+            },
             options
         );
 
-        const responseFields = {
+        const responseFields$ = {
             ContentType: response.headers.get("content-type") ?? "application/octet-stream",
             StatusCode: response.status,
             RawResponse: response,
@@ -461,7 +496,7 @@ export class Metadata extends ClientSDK {
             const responseBody = await response.json();
             const result =
                 operations.GetPeopleCustomTablesMetadataCustomTableIdResponse$.inboundSchema.parse({
-                    ...responseFields,
+                    ...responseFields$,
                     CustomTableMetadata: responseBody,
                 });
             return result;
@@ -482,36 +517,42 @@ export class Metadata extends ClientSDK {
         security: operations.PostCompanyNamedListsListNameSecurity,
         options?: RequestOptions
     ): Promise<operations.PostCompanyNamedListsListNameResponse> {
-        const headers = new Headers();
-        headers.set("user-agent", SDK_METADATA.userAgent);
-        headers.set("Content-Type", "application/json");
-        headers.set("Accept", "application/json");
+        const headers$ = new Headers();
+        headers$.set("user-agent", SDK_METADATA.userAgent);
+        headers$.set("Content-Type", "application/json");
+        headers$.set("Accept", "application/json");
 
-        const payload =
+        const payload$ =
             operations.PostCompanyNamedListsListNameRequest$.outboundSchema.parse(input);
 
-        const body = enc$.encodeJSON("body", payload.NewListItem, { explode: true });
+        const body$ = enc$.encodeJSON("body", payload$.NewListItem, { explode: true });
 
-        const pathParams = {
-            listName: enc$.encodeSimple("listName", payload.listName, {
+        const pathParams$ = {
+            listName: enc$.encodeSimple("listName", payload$.listName, {
                 explode: false,
                 charEncoding: "percent",
             }),
         };
 
-        const path = this.templateURLComponent("/company/named-lists/{listName}")(pathParams);
+        const path$ = this.templateURLComponent("/company/named-lists/{listName}")(pathParams$);
 
-        const securitySettings = this.resolveSecurity(
+        const securitySettings$ = this.resolveSecurity(
             [{ value: security?.basic, type: "http:basic" }],
             [{ value: security?.bearer, fieldName: "Authorization", type: "apiKey:header" }]
         );
 
         const response = await this.fetch$(
-            { security: securitySettings, method: "post", path, headers, body },
+            {
+                security: securitySettings$,
+                method: "post",
+                path: path$,
+                headers: headers$,
+                body: body$,
+            },
             options
         );
 
-        const responseFields = {
+        const responseFields$ = {
             ContentType: response.headers.get("content-type") ?? "application/octet-stream",
             StatusCode: response.status,
             RawResponse: response,
@@ -520,7 +561,7 @@ export class Metadata extends ClientSDK {
         if (this.matchResponse(response, 200, "application/json")) {
             const responseBody = await response.json();
             const result = operations.PostCompanyNamedListsListNameResponse$.inboundSchema.parse({
-                ...responseFields,
+                ...responseFields$,
                 FlatListItemId: responseBody,
             });
             return result;
@@ -532,7 +573,7 @@ export class Metadata extends ClientSDK {
         }
 
         return operations.PostCompanyNamedListsListNameResponse$.inboundSchema.parse(
-            responseFields
+            responseFields$
         );
     }
 
@@ -547,27 +588,33 @@ export class Metadata extends ClientSDK {
         security: operations.PostCompanyPeopleFieldsSecurity,
         options?: RequestOptions
     ): Promise<operations.PostCompanyPeopleFieldsResponse> {
-        const headers = new Headers();
-        headers.set("user-agent", SDK_METADATA.userAgent);
-        headers.set("Content-Type", "application/json");
-        headers.set("Accept", "application/json");
+        const headers$ = new Headers();
+        headers$.set("user-agent", SDK_METADATA.userAgent);
+        headers$.set("Content-Type", "application/json");
+        headers$.set("Accept", "application/json");
 
-        const payload = shared.CreateFieldRequest$.outboundSchema.parse(input);
-        const body = enc$.encodeJSON("body", payload, { explode: true });
+        const payload$ = shared.CreateFieldRequest$.outboundSchema.parse(input);
+        const body$ = enc$.encodeJSON("body", payload$, { explode: true });
 
-        const path = this.templateURLComponent("/company/people/fields")();
+        const path$ = this.templateURLComponent("/company/people/fields")();
 
-        const securitySettings = this.resolveSecurity(
+        const securitySettings$ = this.resolveSecurity(
             [{ value: security?.basic, type: "http:basic" }],
             [{ value: security?.bearer, fieldName: "Authorization", type: "apiKey:header" }]
         );
 
         const response = await this.fetch$(
-            { security: securitySettings, method: "post", path, headers, body },
+            {
+                security: securitySettings$,
+                method: "post",
+                path: path$,
+                headers: headers$,
+                body: body$,
+            },
             options
         );
 
-        const responseFields = {
+        const responseFields$ = {
             ContentType: response.headers.get("content-type") ?? "application/octet-stream",
             StatusCode: response.status,
             RawResponse: response,
@@ -576,7 +623,7 @@ export class Metadata extends ClientSDK {
         if (this.matchResponse(response, 200, "application/json")) {
             const responseBody = await response.json();
             const result = operations.PostCompanyPeopleFieldsResponse$.inboundSchema.parse({
-                ...responseFields,
+                ...responseFields$,
                 FieldId: responseBody,
             });
             return result;
@@ -587,7 +634,7 @@ export class Metadata extends ClientSDK {
             throw new errors.SDKError("Unexpected API response", response, responseBody);
         }
 
-        return operations.PostCompanyPeopleFieldsResponse$.inboundSchema.parse(responseFields);
+        return operations.PostCompanyPeopleFieldsResponse$.inboundSchema.parse(responseFields$);
     }
 
     /**
@@ -601,42 +648,48 @@ export class Metadata extends ClientSDK {
         security: operations.PutCompanyNamedListsListNameItemIdSecurity,
         options?: RequestOptions
     ): Promise<operations.PutCompanyNamedListsListNameItemIdResponse> {
-        const headers = new Headers();
-        headers.set("user-agent", SDK_METADATA.userAgent);
-        headers.set("Content-Type", "application/json");
-        headers.set("Accept", "*/*");
+        const headers$ = new Headers();
+        headers$.set("user-agent", SDK_METADATA.userAgent);
+        headers$.set("Content-Type", "application/json");
+        headers$.set("Accept", "*/*");
 
-        const payload =
+        const payload$ =
             operations.PutCompanyNamedListsListNameItemIdRequest$.outboundSchema.parse(input);
 
-        const body = enc$.encodeJSON("body", payload.UpdateListItemRequest, { explode: true });
+        const body$ = enc$.encodeJSON("body", payload$.UpdateListItemRequest, { explode: true });
 
-        const pathParams = {
-            itemId: enc$.encodeSimple("itemId", payload.itemId, {
+        const pathParams$ = {
+            itemId: enc$.encodeSimple("itemId", payload$.itemId, {
                 explode: false,
                 charEncoding: "percent",
             }),
-            listName: enc$.encodeSimple("listName", payload.listName, {
+            listName: enc$.encodeSimple("listName", payload$.listName, {
                 explode: false,
                 charEncoding: "percent",
             }),
         };
 
-        const path = this.templateURLComponent("/company/named-lists/{listName}/{itemId}")(
-            pathParams
+        const path$ = this.templateURLComponent("/company/named-lists/{listName}/{itemId}")(
+            pathParams$
         );
 
-        const securitySettings = this.resolveSecurity(
+        const securitySettings$ = this.resolveSecurity(
             [{ value: security?.basic, type: "http:basic" }],
             [{ value: security?.bearer, fieldName: "Authorization", type: "apiKey:header" }]
         );
 
         const response = await this.fetch$(
-            { security: securitySettings, method: "put", path, headers, body },
+            {
+                security: securitySettings$,
+                method: "put",
+                path: path$,
+                headers: headers$,
+                body: body$,
+            },
             options
         );
 
-        const responseFields = {
+        const responseFields$ = {
             ContentType: response.headers.get("content-type") ?? "application/octet-stream",
             StatusCode: response.status,
             RawResponse: response,
@@ -650,7 +703,7 @@ export class Metadata extends ClientSDK {
         }
 
         return operations.PutCompanyNamedListsListNameItemIdResponse$.inboundSchema.parse(
-            responseFields
+            responseFields$
         );
     }
 
@@ -665,36 +718,42 @@ export class Metadata extends ClientSDK {
         security: operations.PutCompanyPeopleFieldsFieldIdSecurity,
         options?: RequestOptions
     ): Promise<operations.PutCompanyPeopleFieldsFieldIdResponse> {
-        const headers = new Headers();
-        headers.set("user-agent", SDK_METADATA.userAgent);
-        headers.set("Content-Type", "application/json");
-        headers.set("Accept", "*/*");
+        const headers$ = new Headers();
+        headers$.set("user-agent", SDK_METADATA.userAgent);
+        headers$.set("Content-Type", "application/json");
+        headers$.set("Accept", "*/*");
 
-        const payload =
+        const payload$ =
             operations.PutCompanyPeopleFieldsFieldIdRequest$.outboundSchema.parse(input);
 
-        const body = enc$.encodeJSON("body", payload.UpdateFieldRequest, { explode: true });
+        const body$ = enc$.encodeJSON("body", payload$.UpdateFieldRequest, { explode: true });
 
-        const pathParams = {
-            fieldId: enc$.encodeSimple("fieldId", payload.fieldId, {
+        const pathParams$ = {
+            fieldId: enc$.encodeSimple("fieldId", payload$.fieldId, {
                 explode: false,
                 charEncoding: "percent",
             }),
         };
 
-        const path = this.templateURLComponent("/company/people/fields/{fieldId}")(pathParams);
+        const path$ = this.templateURLComponent("/company/people/fields/{fieldId}")(pathParams$);
 
-        const securitySettings = this.resolveSecurity(
+        const securitySettings$ = this.resolveSecurity(
             [{ value: security?.basic, type: "http:basic" }],
             [{ value: security?.bearer, fieldName: "Authorization", type: "apiKey:header" }]
         );
 
         const response = await this.fetch$(
-            { security: securitySettings, method: "put", path, headers, body },
+            {
+                security: securitySettings$,
+                method: "put",
+                path: path$,
+                headers: headers$,
+                body: body$,
+            },
             options
         );
 
-        const responseFields = {
+        const responseFields$ = {
             ContentType: response.headers.get("content-type") ?? "application/octet-stream",
             StatusCode: response.status,
             RawResponse: response,
@@ -708,7 +767,7 @@ export class Metadata extends ClientSDK {
         }
 
         return operations.PutCompanyPeopleFieldsFieldIdResponse$.inboundSchema.parse(
-            responseFields
+            responseFields$
         );
     }
 }

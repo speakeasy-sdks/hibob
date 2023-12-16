@@ -32,46 +32,52 @@ export class CustomTables extends ClientSDK {
         security: operations.DeletePeopleCustomTablesEmployeeIdCustomTableIdEntryIdSecurity,
         options?: RequestOptions
     ): Promise<operations.DeletePeopleCustomTablesEmployeeIdCustomTableIdEntryIdResponse> {
-        const headers = new Headers();
-        headers.set("user-agent", SDK_METADATA.userAgent);
-        headers.set("Accept", "*/*");
+        const headers$ = new Headers();
+        headers$.set("user-agent", SDK_METADATA.userAgent);
+        headers$.set("Accept", "*/*");
 
-        const payload =
+        const payload$ =
             operations.DeletePeopleCustomTablesEmployeeIdCustomTableIdEntryIdRequest$.outboundSchema.parse(
                 input
             );
-        const body = null;
+        const body$ = null;
 
-        const pathParams = {
-            custom_table_id: enc$.encodeSimple("custom_table_id", payload.custom_table_id, {
+        const pathParams$ = {
+            custom_table_id: enc$.encodeSimple("custom_table_id", payload$.custom_table_id, {
                 explode: false,
                 charEncoding: "percent",
             }),
-            employee_id: enc$.encodeSimple("employee_id", payload.employee_id, {
+            employee_id: enc$.encodeSimple("employee_id", payload$.employee_id, {
                 explode: false,
                 charEncoding: "percent",
             }),
-            entry_id: enc$.encodeSimple("entry_id", payload.entry_id, {
+            entry_id: enc$.encodeSimple("entry_id", payload$.entry_id, {
                 explode: false,
                 charEncoding: "percent",
             }),
         };
 
-        const path = this.templateURLComponent(
+        const path$ = this.templateURLComponent(
             "/people/custom-tables/{employee_id}/{custom_table_id}/{entry_id}"
-        )(pathParams);
+        )(pathParams$);
 
-        const securitySettings = this.resolveSecurity(
+        const securitySettings$ = this.resolveSecurity(
             [{ value: security?.basic, type: "http:basic" }],
             [{ value: security?.bearer, fieldName: "Authorization", type: "apiKey:header" }]
         );
 
         const response = await this.fetch$(
-            { security: securitySettings, method: "delete", path, headers, body },
+            {
+                security: securitySettings$,
+                method: "delete",
+                path: path$,
+                headers: headers$,
+                body: body$,
+            },
             options
         );
 
-        const responseFields = {
+        const responseFields$ = {
             ContentType: response.headers.get("content-type") ?? "application/octet-stream",
             StatusCode: response.status,
             RawResponse: response,
@@ -85,7 +91,7 @@ export class CustomTables extends ClientSDK {
         }
 
         return operations.DeletePeopleCustomTablesEmployeeIdCustomTableIdEntryIdResponse$.inboundSchema.parse(
-            responseFields
+            responseFields$
         );
     }
 
@@ -100,33 +106,33 @@ export class CustomTables extends ClientSDK {
         security: operations.GetPeopleCustomTablesEmployeeIdCustomTableIdSecurity,
         options?: RequestOptions
     ): Promise<operations.GetPeopleCustomTablesEmployeeIdCustomTableIdResponse> {
-        const headers = new Headers();
-        headers.set("user-agent", SDK_METADATA.userAgent);
-        headers.set("Accept", "application/json");
+        const headers$ = new Headers();
+        headers$.set("user-agent", SDK_METADATA.userAgent);
+        headers$.set("Accept", "application/json");
 
-        const payload =
+        const payload$ =
             operations.GetPeopleCustomTablesEmployeeIdCustomTableIdRequest$.outboundSchema.parse(
                 input
             );
-        const body = null;
+        const body$ = null;
 
-        const pathParams = {
-            custom_table_id: enc$.encodeSimple("custom_table_id", payload.custom_table_id, {
+        const pathParams$ = {
+            custom_table_id: enc$.encodeSimple("custom_table_id", payload$.custom_table_id, {
                 explode: false,
                 charEncoding: "percent",
             }),
-            employee_id: enc$.encodeSimple("employee_id", payload.employee_id, {
+            employee_id: enc$.encodeSimple("employee_id", payload$.employee_id, {
                 explode: false,
                 charEncoding: "percent",
             }),
         };
 
-        const path = this.templateURLComponent(
+        const path$ = this.templateURLComponent(
             "/people/custom-tables/{employee_id}/{custom_table_id}"
-        )(pathParams);
+        )(pathParams$);
 
-        const query = [
-            enc$.encodeForm("includeHumanReadable", payload.includeHumanReadable, {
+        const query$ = [
+            enc$.encodeForm("includeHumanReadable", payload$.includeHumanReadable, {
                 explode: true,
                 charEncoding: "percent",
             }),
@@ -134,17 +140,24 @@ export class CustomTables extends ClientSDK {
             .filter(Boolean)
             .join("&");
 
-        const securitySettings = this.resolveSecurity(
+        const securitySettings$ = this.resolveSecurity(
             [{ value: security?.basic, type: "http:basic" }],
             [{ value: security?.bearer, fieldName: "Authorization", type: "apiKey:header" }]
         );
 
         const response = await this.fetch$(
-            { security: securitySettings, method: "get", path, headers, query, body },
+            {
+                security: securitySettings$,
+                method: "get",
+                path: path$,
+                headers: headers$,
+                query: query$,
+                body: body$,
+            },
             options
         );
 
-        const responseFields = {
+        const responseFields$ = {
             ContentType: response.headers.get("content-type") ?? "application/octet-stream",
             StatusCode: response.status,
             RawResponse: response,
@@ -155,7 +168,7 @@ export class CustomTables extends ClientSDK {
             const result =
                 operations.GetPeopleCustomTablesEmployeeIdCustomTableIdResponse$.inboundSchema.parse(
                     {
-                        ...responseFields,
+                        ...responseFields$,
                         CustomTableEntriesList: responseBody,
                     }
                 );
@@ -177,44 +190,50 @@ export class CustomTables extends ClientSDK {
         security: operations.PostPeopleCustomTablesEmployeeIdCustomTableIdSecurity,
         options?: RequestOptions
     ): Promise<operations.PostPeopleCustomTablesEmployeeIdCustomTableIdResponse> {
-        const headers = new Headers();
-        headers.set("user-agent", SDK_METADATA.userAgent);
-        headers.set("Content-Type", "application/json");
-        headers.set("Accept", "*/*");
+        const headers$ = new Headers();
+        headers$.set("user-agent", SDK_METADATA.userAgent);
+        headers$.set("Content-Type", "application/json");
+        headers$.set("Accept", "*/*");
 
-        const payload =
+        const payload$ =
             operations.PostPeopleCustomTablesEmployeeIdCustomTableIdRequest$.outboundSchema.parse(
                 input
             );
 
-        const body = enc$.encodeJSON("body", payload.RequestBody, { explode: true });
+        const body$ = enc$.encodeJSON("body", payload$.RequestBody, { explode: true });
 
-        const pathParams = {
-            custom_table_id: enc$.encodeSimple("custom_table_id", payload.custom_table_id, {
+        const pathParams$ = {
+            custom_table_id: enc$.encodeSimple("custom_table_id", payload$.custom_table_id, {
                 explode: false,
                 charEncoding: "percent",
             }),
-            employee_id: enc$.encodeSimple("employee_id", payload.employee_id, {
+            employee_id: enc$.encodeSimple("employee_id", payload$.employee_id, {
                 explode: false,
                 charEncoding: "percent",
             }),
         };
 
-        const path = this.templateURLComponent(
+        const path$ = this.templateURLComponent(
             "/people/custom-tables/{employee_id}/{custom_table_id}"
-        )(pathParams);
+        )(pathParams$);
 
-        const securitySettings = this.resolveSecurity(
+        const securitySettings$ = this.resolveSecurity(
             [{ value: security?.basic, type: "http:basic" }],
             [{ value: security?.bearer, fieldName: "Authorization", type: "apiKey:header" }]
         );
 
         const response = await this.fetch$(
-            { security: securitySettings, method: "post", path, headers, body },
+            {
+                security: securitySettings$,
+                method: "post",
+                path: path$,
+                headers: headers$,
+                body: body$,
+            },
             options
         );
 
-        const responseFields = {
+        const responseFields$ = {
             ContentType: response.headers.get("content-type") ?? "application/octet-stream",
             StatusCode: response.status,
             RawResponse: response,
@@ -228,7 +247,7 @@ export class CustomTables extends ClientSDK {
         }
 
         return operations.PostPeopleCustomTablesEmployeeIdCustomTableIdResponse$.inboundSchema.parse(
-            responseFields
+            responseFields$
         );
     }
 
@@ -243,48 +262,54 @@ export class CustomTables extends ClientSDK {
         security: operations.PutPeopleCustomTablesEmployeeIdCustomTableIdEntryIdSecurity,
         options?: RequestOptions
     ): Promise<operations.PutPeopleCustomTablesEmployeeIdCustomTableIdEntryIdResponse> {
-        const headers = new Headers();
-        headers.set("user-agent", SDK_METADATA.userAgent);
-        headers.set("Content-Type", "application/json");
-        headers.set("Accept", "*/*");
+        const headers$ = new Headers();
+        headers$.set("user-agent", SDK_METADATA.userAgent);
+        headers$.set("Content-Type", "application/json");
+        headers$.set("Accept", "*/*");
 
-        const payload =
+        const payload$ =
             operations.PutPeopleCustomTablesEmployeeIdCustomTableIdEntryIdRequest$.outboundSchema.parse(
                 input
             );
 
-        const body = enc$.encodeJSON("body", payload.RequestBody, { explode: true });
+        const body$ = enc$.encodeJSON("body", payload$.RequestBody, { explode: true });
 
-        const pathParams = {
-            custom_table_id: enc$.encodeSimple("custom_table_id", payload.custom_table_id, {
+        const pathParams$ = {
+            custom_table_id: enc$.encodeSimple("custom_table_id", payload$.custom_table_id, {
                 explode: false,
                 charEncoding: "percent",
             }),
-            employee_id: enc$.encodeSimple("employee_id", payload.employee_id, {
+            employee_id: enc$.encodeSimple("employee_id", payload$.employee_id, {
                 explode: false,
                 charEncoding: "percent",
             }),
-            entry_id: enc$.encodeSimple("entry_id", payload.entry_id, {
+            entry_id: enc$.encodeSimple("entry_id", payload$.entry_id, {
                 explode: false,
                 charEncoding: "percent",
             }),
         };
 
-        const path = this.templateURLComponent(
+        const path$ = this.templateURLComponent(
             "/people/custom-tables/{employee_id}/{custom_table_id}/{entry_id}"
-        )(pathParams);
+        )(pathParams$);
 
-        const securitySettings = this.resolveSecurity(
+        const securitySettings$ = this.resolveSecurity(
             [{ value: security?.basic, type: "http:basic" }],
             [{ value: security?.bearer, fieldName: "Authorization", type: "apiKey:header" }]
         );
 
         const response = await this.fetch$(
-            { security: securitySettings, method: "put", path, headers, body },
+            {
+                security: securitySettings$,
+                method: "put",
+                path: path$,
+                headers: headers$,
+                body: body$,
+            },
             options
         );
 
-        const responseFields = {
+        const responseFields$ = {
             ContentType: response.headers.get("content-type") ?? "application/octet-stream",
             StatusCode: response.status,
             RawResponse: response,
@@ -298,7 +323,7 @@ export class CustomTables extends ClientSDK {
         }
 
         return operations.PutPeopleCustomTablesEmployeeIdCustomTableIdEntryIdResponse$.inboundSchema.parse(
-            responseFields
+            responseFields$
         );
     }
 }
