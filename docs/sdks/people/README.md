@@ -55,17 +55,17 @@ import { DeletePeopleIdEmploymentEntryIdSecurity } from "hibob/sdk/models/operat
 async function run() {
   const sdk = new Hibob();
 
-  
   const operationSecurity: DeletePeopleIdEmploymentEntryIdSecurity = {
     basic: {
       password: "<YOUR_PASSWORD_HERE>",
       username: "<YOUR_USERNAME_HERE>",
     },
   };
+  
   const res = await sdk.people.deletePeopleIdEmploymentEntryId({
-      entryId: 511526,
-      id: "<ID>",
-    }, operationSecurity);
+    entryId: 511526,
+    id: "<ID>",
+  }, operationSecurity);
 
   if (res?.statusCode !== 200) {
     throw new Error("Unexpected status code: " + res?.statusCode || "-");
@@ -94,7 +94,7 @@ run();
 
 | Error Object    | Status Code     | Content Type    |
 | --------------- | --------------- | --------------- |
-| errors.SDKError | 400-600         | */*             |
+| errors.SDKError | 4xx-5xx         | */*             |
 
 ## deletePeopleIdEquitiesEntryId
 
@@ -109,17 +109,17 @@ import { DeletePeopleIdEquitiesEntryIdSecurity } from "hibob/sdk/models/operatio
 async function run() {
   const sdk = new Hibob();
 
-  
   const operationSecurity: DeletePeopleIdEquitiesEntryIdSecurity = {
     basic: {
       password: "<YOUR_PASSWORD_HERE>",
       username: "<YOUR_USERNAME_HERE>",
     },
   };
+  
   const res = await sdk.people.deletePeopleIdEquitiesEntryId({
-      entryId: 258748,
-      id: "<ID>",
-    }, operationSecurity);
+    entryId: 258748,
+    id: "<ID>",
+  }, operationSecurity);
 
   if (res?.statusCode !== 200) {
     throw new Error("Unexpected status code: " + res?.statusCode || "-");
@@ -148,7 +148,7 @@ run();
 
 | Error Object    | Status Code     | Content Type    |
 | --------------- | --------------- | --------------- |
-| errors.SDKError | 400-600         | */*             |
+| errors.SDKError | 4xx-5xx         | */*             |
 
 ## deletePeopleIdSalariesEntryId
 
@@ -163,17 +163,17 @@ import { DeletePeopleIdSalariesEntryIdSecurity } from "hibob/sdk/models/operatio
 async function run() {
   const sdk = new Hibob();
 
-  
   const operationSecurity: DeletePeopleIdSalariesEntryIdSecurity = {
     basic: {
       password: "<YOUR_PASSWORD_HERE>",
       username: "<YOUR_USERNAME_HERE>",
     },
   };
+  
   const res = await sdk.people.deletePeopleIdSalariesEntryId({
-      entryId: 831741,
-      id: "<ID>",
-    }, operationSecurity);
+    entryId: 831741,
+    id: "<ID>",
+  }, operationSecurity);
 
   if (res?.statusCode !== 200) {
     throw new Error("Unexpected status code: " + res?.statusCode || "-");
@@ -202,7 +202,7 @@ run();
 
 | Error Object    | Status Code     | Content Type    |
 | --------------- | --------------- | --------------- |
-| errors.SDKError | 400-600         | */*             |
+| errors.SDKError | 4xx-5xx         | */*             |
 
 ## deletePeopleIdTrainingEntryId
 
@@ -217,17 +217,17 @@ import { DeletePeopleIdTrainingEntryIdSecurity } from "hibob/sdk/models/operatio
 async function run() {
   const sdk = new Hibob();
 
-  
   const operationSecurity: DeletePeopleIdTrainingEntryIdSecurity = {
     basic: {
       password: "<YOUR_PASSWORD_HERE>",
       username: "<YOUR_USERNAME_HERE>",
     },
   };
+  
   const res = await sdk.people.deletePeopleIdTrainingEntryId({
-      entryId: 375590,
-      id: "<ID>",
-    }, operationSecurity);
+    entryId: 375590,
+    id: "<ID>",
+  }, operationSecurity);
 
   if (res?.statusCode !== 200) {
     throw new Error("Unexpected status code: " + res?.statusCode || "-");
@@ -256,7 +256,7 @@ run();
 
 | Error Object    | Status Code     | Content Type    |
 | --------------- | --------------- | --------------- |
-| errors.SDKError | 400-600         | */*             |
+| errors.SDKError | 4xx-5xx         | */*             |
 
 ## deletePeopleIdVariableEntryId
 
@@ -271,17 +271,17 @@ import { DeletePeopleIdVariableEntryIdSecurity } from "hibob/sdk/models/operatio
 async function run() {
   const sdk = new Hibob();
 
-  
   const operationSecurity: DeletePeopleIdVariableEntryIdSecurity = {
     basic: {
       password: "<YOUR_PASSWORD_HERE>",
       username: "<YOUR_USERNAME_HERE>",
     },
   };
+  
   const res = await sdk.people.deletePeopleIdVariableEntryId({
-      entryId: 318576,
-      id: "<ID>",
-    }, operationSecurity);
+    entryId: 318576,
+    id: "<ID>",
+  }, operationSecurity);
 
   if (res?.statusCode !== 200) {
     throw new Error("Unexpected status code: " + res?.statusCode || "-");
@@ -310,7 +310,7 @@ run();
 
 | Error Object    | Status Code     | Content Type    |
 | --------------- | --------------- | --------------- |
-| errors.SDKError | 400-600         | */*             |
+| errors.SDKError | 4xx-5xx         | */*             |
 
 ## deletePeopleIdWorkEntryId
 
@@ -325,17 +325,17 @@ import { DeletePeopleIdWorkEntryIdSecurity } from "hibob/sdk/models/operations";
 async function run() {
   const sdk = new Hibob();
 
-  
   const operationSecurity: DeletePeopleIdWorkEntryIdSecurity = {
     basic: {
       password: "<YOUR_PASSWORD_HERE>",
       username: "<YOUR_USERNAME_HERE>",
     },
   };
+  
   const res = await sdk.people.deletePeopleIdWorkEntryId({
-      entryId: 681162,
-      id: "<ID>",
-    }, operationSecurity);
+    entryId: 681162,
+    id: "<ID>",
+  }, operationSecurity);
 
   if (res?.statusCode !== 200) {
     throw new Error("Unexpected status code: " + res?.statusCode || "-");
@@ -364,7 +364,7 @@ run();
 
 | Error Object    | Status Code     | Content Type    |
 | --------------- | --------------- | --------------- |
-| errors.SDKError | 400-600         | */*             |
+| errors.SDKError | 4xx-5xx         | */*             |
 
 ## getAvatars
 
@@ -377,12 +377,11 @@ import { Hibob } from "hibob";
 
 async function run() {
   const sdk = new Hibob({
-      security: {
-        bearer: "<YOUR_API_KEY_HERE>",
-      },
-    });
+    security: {
+      bearer: "<YOUR_API_KEY_HERE>",
+    },
+  });
 
-  
   const res = await sdk.people.getAvatars({});
 
   if (res?.statusCode !== 200) {
@@ -411,7 +410,7 @@ run();
 
 | Error Object    | Status Code     | Content Type    |
 | --------------- | --------------- | --------------- |
-| errors.SDKError | 400-600         | */*             |
+| errors.SDKError | 4xx-5xx         | */*             |
 
 ## getAvatarsEmployeeId
 
@@ -424,15 +423,14 @@ import { Hibob } from "hibob";
 
 async function run() {
   const sdk = new Hibob({
-      security: {
-        bearer: "<YOUR_API_KEY_HERE>",
-      },
-    });
+    security: {
+      bearer: "<YOUR_API_KEY_HERE>",
+    },
+  });
 
-  
   const res = await sdk.people.getAvatarsEmployeeId({
-      employeeId: "string",
-    });
+    employeeId: "string",
+  });
 
   if (res?.statusCode !== 200) {
     throw new Error("Unexpected status code: " + res?.statusCode || "-");
@@ -460,7 +458,7 @@ run();
 
 | Error Object    | Status Code     | Content Type    |
 | --------------- | --------------- | --------------- |
-| errors.SDKError | 400-600         | */*             |
+| errors.SDKError | 4xx-5xx         | */*             |
 
 ## getMyAvatar
 
@@ -473,12 +471,11 @@ import { Hibob } from "hibob";
 
 async function run() {
   const sdk = new Hibob({
-      security: {
-        bearer: "<YOUR_API_KEY_HERE>",
-      },
-    });
+    security: {
+      bearer: "<YOUR_API_KEY_HERE>",
+    },
+  });
 
-  
   const res = await sdk.people.getMyAvatar();
 
   if (res?.statusCode !== 200) {
@@ -506,7 +503,7 @@ run();
 
 | Error Object    | Status Code     | Content Type    |
 | --------------- | --------------- | --------------- |
-| errors.SDKError | 400-600         | */*             |
+| errors.SDKError | 4xx-5xx         | */*             |
 
 ## ~~getPeople~~
 
@@ -523,13 +520,13 @@ import { GetPeopleSecurity } from "hibob/sdk/models/operations";
 async function run() {
   const sdk = new Hibob();
 
-  
   const operationSecurity: GetPeopleSecurity = {
     basic: {
       password: "<YOUR_PASSWORD_HERE>",
       username: "<YOUR_USERNAME_HERE>",
     },
   };
+  
   const res = await sdk.people.getPeople({}, operationSecurity);
 
   if (res?.statusCode !== 200) {
@@ -559,7 +556,7 @@ run();
 
 | Error Object    | Status Code     | Content Type    |
 | --------------- | --------------- | --------------- |
-| errors.SDKError | 400-600         | */*             |
+| errors.SDKError | 4xx-5xx         | */*             |
 
 ## ~~getPeopleIdentifier~~
 
@@ -576,19 +573,19 @@ import { GetPeopleIdentifierSecurity } from "hibob/sdk/models/operations";
 async function run() {
   const sdk = new Hibob();
 
-  
   const operationSecurity: GetPeopleIdentifierSecurity = {
     basic: {
       password: "<YOUR_PASSWORD_HERE>",
       username: "<YOUR_USERNAME_HERE>",
     },
   };
+  
   const res = await sdk.people.getPeopleIdentifier({
-      fields: [
-        "string",
-      ],
-      identifier: "string",
-    }, operationSecurity);
+    fields: [
+      "string",
+    ],
+    identifier: "string",
+  }, operationSecurity);
 
   if (res?.statusCode !== 200) {
     throw new Error("Unexpected status code: " + res?.statusCode || "-");
@@ -617,7 +614,7 @@ run();
 
 | Error Object    | Status Code     | Content Type    |
 | --------------- | --------------- | --------------- |
-| errors.SDKError | 400-600         | */*             |
+| errors.SDKError | 4xx-5xx         | */*             |
 
 ## getPeopleIdEmployment
 
@@ -632,16 +629,16 @@ import { GetPeopleIdEmploymentSecurity } from "hibob/sdk/models/operations";
 async function run() {
   const sdk = new Hibob();
 
-  
   const operationSecurity: GetPeopleIdEmploymentSecurity = {
     basic: {
       password: "<YOUR_PASSWORD_HERE>",
       username: "<YOUR_USERNAME_HERE>",
     },
   };
+  
   const res = await sdk.people.getPeopleIdEmployment({
-      id: "<ID>",
-    }, operationSecurity);
+    id: "<ID>",
+  }, operationSecurity);
 
   if (res?.statusCode !== 200) {
     throw new Error("Unexpected status code: " + res?.statusCode || "-");
@@ -670,7 +667,7 @@ run();
 
 | Error Object    | Status Code     | Content Type    |
 | --------------- | --------------- | --------------- |
-| errors.SDKError | 400-600         | */*             |
+| errors.SDKError | 4xx-5xx         | */*             |
 
 ## getPeopleIdEquities
 
@@ -685,16 +682,16 @@ import { GetPeopleIdEquitiesSecurity } from "hibob/sdk/models/operations";
 async function run() {
   const sdk = new Hibob();
 
-  
   const operationSecurity: GetPeopleIdEquitiesSecurity = {
     basic: {
       password: "<YOUR_PASSWORD_HERE>",
       username: "<YOUR_USERNAME_HERE>",
     },
   };
+  
   const res = await sdk.people.getPeopleIdEquities({
-      id: "<ID>",
-    }, operationSecurity);
+    id: "<ID>",
+  }, operationSecurity);
 
   if (res?.statusCode !== 200) {
     throw new Error("Unexpected status code: " + res?.statusCode || "-");
@@ -723,7 +720,7 @@ run();
 
 | Error Object    | Status Code     | Content Type    |
 | --------------- | --------------- | --------------- |
-| errors.SDKError | 400-600         | */*             |
+| errors.SDKError | 4xx-5xx         | */*             |
 
 ## getPeopleIdLifecycle
 
@@ -738,16 +735,16 @@ import { GetPeopleIdLifecycleSecurity } from "hibob/sdk/models/operations";
 async function run() {
   const sdk = new Hibob();
 
-  
   const operationSecurity: GetPeopleIdLifecycleSecurity = {
     basic: {
       password: "<YOUR_PASSWORD_HERE>",
       username: "<YOUR_USERNAME_HERE>",
     },
   };
+  
   const res = await sdk.people.getPeopleIdLifecycle({
-      id: "<ID>",
-    }, operationSecurity);
+    id: "<ID>",
+  }, operationSecurity);
 
   if (res?.statusCode !== 200) {
     throw new Error("Unexpected status code: " + res?.statusCode || "-");
@@ -776,7 +773,7 @@ run();
 
 | Error Object    | Status Code     | Content Type    |
 | --------------- | --------------- | --------------- |
-| errors.SDKError | 400-600         | */*             |
+| errors.SDKError | 4xx-5xx         | */*             |
 
 ## getPeopleIdSalaries
 
@@ -791,16 +788,16 @@ import { GetPeopleIdSalariesSecurity } from "hibob/sdk/models/operations";
 async function run() {
   const sdk = new Hibob();
 
-  
   const operationSecurity: GetPeopleIdSalariesSecurity = {
     basic: {
       password: "<YOUR_PASSWORD_HERE>",
       username: "<YOUR_USERNAME_HERE>",
     },
   };
+  
   const res = await sdk.people.getPeopleIdSalaries({
-      id: "<ID>",
-    }, operationSecurity);
+    id: "<ID>",
+  }, operationSecurity);
 
   if (res?.statusCode !== 200) {
     throw new Error("Unexpected status code: " + res?.statusCode || "-");
@@ -829,7 +826,7 @@ run();
 
 | Error Object    | Status Code     | Content Type    |
 | --------------- | --------------- | --------------- |
-| errors.SDKError | 400-600         | */*             |
+| errors.SDKError | 4xx-5xx         | */*             |
 
 ## getPeopleIdTraining
 
@@ -844,16 +841,16 @@ import { GetPeopleIdTrainingSecurity } from "hibob/sdk/models/operations";
 async function run() {
   const sdk = new Hibob();
 
-  
   const operationSecurity: GetPeopleIdTrainingSecurity = {
     basic: {
       password: "<YOUR_PASSWORD_HERE>",
       username: "<YOUR_USERNAME_HERE>",
     },
   };
+  
   const res = await sdk.people.getPeopleIdTraining({
-      id: "<ID>",
-    }, operationSecurity);
+    id: "<ID>",
+  }, operationSecurity);
 
   if (res?.statusCode !== 200) {
     throw new Error("Unexpected status code: " + res?.statusCode || "-");
@@ -882,7 +879,7 @@ run();
 
 | Error Object    | Status Code     | Content Type    |
 | --------------- | --------------- | --------------- |
-| errors.SDKError | 400-600         | */*             |
+| errors.SDKError | 4xx-5xx         | */*             |
 
 ## getPeopleIdVariable
 
@@ -895,15 +892,14 @@ import { Hibob } from "hibob";
 
 async function run() {
   const sdk = new Hibob({
-      security: {
-        bearer: "<YOUR_API_KEY_HERE>",
-      },
-    });
+    security: {
+      bearer: "<YOUR_API_KEY_HERE>",
+    },
+  });
 
-  
   const res = await sdk.people.getPeopleIdVariable({
-      id: "<ID>",
-    });
+    id: "<ID>",
+  });
 
   if (res?.statusCode !== 200) {
     throw new Error("Unexpected status code: " + res?.statusCode || "-");
@@ -931,7 +927,7 @@ run();
 
 | Error Object    | Status Code     | Content Type    |
 | --------------- | --------------- | --------------- |
-| errors.SDKError | 400-600         | */*             |
+| errors.SDKError | 4xx-5xx         | */*             |
 
 ## getPeopleIdWork
 
@@ -946,16 +942,16 @@ import { GetPeopleIdWorkSecurity } from "hibob/sdk/models/operations";
 async function run() {
   const sdk = new Hibob();
 
-  
   const operationSecurity: GetPeopleIdWorkSecurity = {
     basic: {
       password: "<YOUR_PASSWORD_HERE>",
       username: "<YOUR_USERNAME_HERE>",
     },
   };
+  
   const res = await sdk.people.getPeopleIdWork({
-      id: "<ID>",
-    }, operationSecurity);
+    id: "<ID>",
+  }, operationSecurity);
 
   if (res?.statusCode !== 200) {
     throw new Error("Unexpected status code: " + res?.statusCode || "-");
@@ -984,7 +980,7 @@ run();
 
 | Error Object    | Status Code     | Content Type    |
 | --------------- | --------------- | --------------- |
-| errors.SDKError | 400-600         | */*             |
+| errors.SDKError | 4xx-5xx         | */*             |
 
 ## getProfiles
 
@@ -997,12 +993,11 @@ import { Hibob } from "hibob";
 
 async function run() {
   const sdk = new Hibob({
-      security: {
-        bearer: "<YOUR_API_KEY_HERE>",
-      },
-    });
+    security: {
+      bearer: "<YOUR_API_KEY_HERE>",
+    },
+  });
 
-  
   const res = await sdk.people.getProfiles({});
 
   if (res?.statusCode !== 200) {
@@ -1031,7 +1026,7 @@ run();
 
 | Error Object    | Status Code     | Content Type    |
 | --------------- | --------------- | --------------- |
-| errors.SDKError | 400-600         | */*             |
+| errors.SDKError | 4xx-5xx         | */*             |
 
 ## postEmployeesEmployeeIdInvitations
 
@@ -1046,19 +1041,19 @@ import { PostEmployeesEmployeeIdInvitationsSecurity } from "hibob/sdk/models/ope
 async function run() {
   const sdk = new Hibob();
 
-  
   const operationSecurity: PostEmployeesEmployeeIdInvitationsSecurity = {
     basic: {
       password: "<YOUR_PASSWORD_HERE>",
       username: "<YOUR_USERNAME_HERE>",
     },
   };
+  
   const res = await sdk.people.postEmployeesEmployeeIdInvitations({
-      invitationByWizard: {
-        welcomeWizardId: 823551,
-      },
-      employeeId: "string",
-    }, operationSecurity);
+    invitationByWizard: {
+      welcomeWizardId: 823551,
+    },
+    employeeId: "string",
+  }, operationSecurity);
 
   if (res?.statusCode !== 200) {
     throw new Error("Unexpected status code: " + res?.statusCode || "-");
@@ -1087,7 +1082,7 @@ run();
 
 | Error Object    | Status Code     | Content Type    |
 | --------------- | --------------- | --------------- |
-| errors.SDKError | 400-600         | */*             |
+| errors.SDKError | 4xx-5xx         | */*             |
 
 ## postEmployeesEmployeeIdStartDate
 
@@ -1103,19 +1098,19 @@ import { RFCDate } from "hibob/types";
 async function run() {
   const sdk = new Hibob();
 
-  
   const operationSecurity: PostEmployeesEmployeeIdStartDateSecurity = {
     basic: {
       password: "<YOUR_PASSWORD_HERE>",
       username: "<YOUR_USERNAME_HERE>",
     },
   };
+  
   const res = await sdk.people.postEmployeesEmployeeIdStartDate({
-      startDateUpdate: {
-        startDate: new RFCDate("2022-12-10"),
-      },
-      employeeId: "string",
-    }, operationSecurity);
+    startDateUpdate: {
+      startDate: new RFCDate("2022-12-10"),
+    },
+    employeeId: "string",
+  }, operationSecurity);
 
   if (res?.statusCode !== 200) {
     throw new Error("Unexpected status code: " + res?.statusCode || "-");
@@ -1144,7 +1139,7 @@ run();
 
 | Error Object    | Status Code     | Content Type    |
 | --------------- | --------------- | --------------- |
-| errors.SDKError | 400-600         | */*             |
+| errors.SDKError | 4xx-5xx         | */*             |
 
 ## postEmployeesIdentifierTerminate
 
@@ -1161,20 +1156,20 @@ import { RFCDate } from "hibob/types";
 async function run() {
   const sdk = new Hibob();
 
-  
   const operationSecurity: PostEmployeesIdentifierTerminateSecurity = {
     basic: {
       password: "<YOUR_PASSWORD_HERE>",
       username: "<YOUR_USERNAME_HERE>",
     },
   };
+  
   const res = await sdk.people.postEmployeesIdentifierTerminate({
-      employeeTermination: {
-        noticePeriod: {},
-        terminationDate: new RFCDate("2023-04-21"),
-      },
-      identifier: "string",
-    }, operationSecurity);
+    employeeTermination: {
+      noticePeriod: {},
+      terminationDate: new RFCDate("2023-04-21"),
+    },
+    identifier: "string",
+  }, operationSecurity);
 
   if (res?.statusCode !== 200) {
     throw new Error("Unexpected status code: " + res?.statusCode || "-");
@@ -1203,7 +1198,7 @@ run();
 
 | Error Object    | Status Code     | Content Type    |
 | --------------- | --------------- | --------------- |
-| errors.SDKError | 400-600         | */*             |
+| errors.SDKError | 4xx-5xx         | */*             |
 
 ## postEmployeesIdentifierUninvite
 
@@ -1218,16 +1213,16 @@ import { PostEmployeesIdentifierUninviteSecurity } from "hibob/sdk/models/operat
 async function run() {
   const sdk = new Hibob();
 
-  
   const operationSecurity: PostEmployeesIdentifierUninviteSecurity = {
     basic: {
       password: "<YOUR_PASSWORD_HERE>",
       username: "<YOUR_USERNAME_HERE>",
     },
   };
+  
   const res = await sdk.people.postEmployeesIdentifierUninvite({
-      identifier: "string",
-    }, operationSecurity);
+    identifier: "string",
+  }, operationSecurity);
 
   if (res?.statusCode !== 200) {
     throw new Error("Unexpected status code: " + res?.statusCode || "-");
@@ -1256,7 +1251,7 @@ run();
 
 | Error Object    | Status Code     | Content Type    |
 | --------------- | --------------- | --------------- |
-| errors.SDKError | 400-600         | */*             |
+| errors.SDKError | 4xx-5xx         | */*             |
 
 ## postPeople
 
@@ -1272,22 +1267,22 @@ import { RFCDate } from "hibob/types";
 async function run() {
   const sdk = new Hibob();
 
-  
   const operationSecurity: PostPeopleSecurity = {
     basic: {
       password: "<YOUR_PASSWORD_HERE>",
       username: "<YOUR_USERNAME_HERE>",
     },
   };
+  
   const res = await sdk.people.postPeople({
-      email: "Lauryn20@hotmail.com",
-      firstName: "Addison",
-      surname: "string",
-      work: {
-        site: "string",
-        startDate: new RFCDate("2022-06-17"),
-      },
-    }, operationSecurity);
+    email: "Lauryn20@hotmail.com",
+    firstName: "Addison",
+    surname: "string",
+    work: {
+      site: "string",
+      startDate: new RFCDate("2022-06-17"),
+    },
+  }, operationSecurity);
 
   if (res?.statusCode !== 200) {
     throw new Error("Unexpected status code: " + res?.statusCode || "-");
@@ -1316,7 +1311,7 @@ run();
 
 | Error Object    | Status Code     | Content Type    |
 | --------------- | --------------- | --------------- |
-| errors.SDKError | 400-600         | */*             |
+| errors.SDKError | 4xx-5xx         | */*             |
 
 ## postPeopleSearch
 
@@ -1331,32 +1326,32 @@ import { PostPeopleSearchSecurity } from "hibob/sdk/models/operations";
 async function run() {
   const sdk = new Hibob();
 
-  
   const operationSecurity: PostPeopleSearchSecurity = {
     password: "<YOUR_PASSWORD_HERE>",
     username: "<YOUR_USERNAME_HERE>",
   };
+  
   const res = await sdk.people.postPeopleSearch({
-      fields: [
-        "root.id",
-        "root.firstName",
-        "root.surname",
-        "root.email",
-        "work.site",
-        "work.department",
-      ],
-      filters: [
-        {
-          fieldPath: "root.id",
-          operator: "equals",
-          values: [
-            "employeeId1",
-            "employeeId2",
-            "employeeId3",
-          ],
-        },
-      ],
-    }, operationSecurity);
+    fields: [
+      "root.id",
+      "root.firstName",
+      "root.surname",
+      "root.email",
+      "work.site",
+      "work.department",
+    ],
+    filters: [
+      {
+        fieldPath: "root.id",
+        operator: "equals",
+        values: [
+          "employeeId1",
+          "employeeId2",
+          "employeeId3",
+        ],
+      },
+    ],
+  }, operationSecurity);
 
   if (res?.statusCode !== 200) {
     throw new Error("Unexpected status code: " + res?.statusCode || "-");
@@ -1385,7 +1380,7 @@ run();
 
 | Error Object    | Status Code     | Content Type    |
 | --------------- | --------------- | --------------- |
-| errors.SDKError | 400-600         | */*             |
+| errors.SDKError | 4xx-5xx         | */*             |
 
 ## postPeopleIdentifier
 
@@ -1400,26 +1395,26 @@ import { PostPeopleIdentifierSecurity } from "hibob/sdk/models/operations";
 async function run() {
   const sdk = new Hibob();
 
-  
   const operationSecurity: PostPeopleIdentifierSecurity = {
     basic: {
       password: "<YOUR_PASSWORD_HERE>",
       username: "<YOUR_USERNAME_HERE>",
     },
   };
+  
   const res = await sdk.people.postPeopleIdentifier({
-      readSingleEmployeeRequestReference: {
-        fields: [
-          "root.id",
-          "root.firstName",
-          "root.surname",
-          "root.email",
-          "work.site",
-          "work.department",
-        ],
-      },
-      identifier: "string",
-    }, operationSecurity);
+    readSingleEmployeeRequestReference: {
+      fields: [
+        "root.id",
+        "root.firstName",
+        "root.surname",
+        "root.email",
+        "work.site",
+        "work.department",
+      ],
+    },
+    identifier: "string",
+  }, operationSecurity);
 
   if (res?.statusCode !== 200) {
     throw new Error("Unexpected status code: " + res?.statusCode || "-");
@@ -1448,7 +1443,7 @@ run();
 
 | Error Object    | Status Code     | Content Type    |
 | --------------- | --------------- | --------------- |
-| errors.SDKError | 400-600         | */*             |
+| errors.SDKError | 4xx-5xx         | */*             |
 
 ## postPeopleIdEmployment
 
@@ -1464,19 +1459,19 @@ import { RFCDate } from "hibob/types";
 async function run() {
   const sdk = new Hibob();
 
-  
   const operationSecurity: PostPeopleIdEmploymentSecurity = {
     basic: {
       password: "<YOUR_PASSWORD_HERE>",
       username: "<YOUR_USERNAME_HERE>",
     },
   };
+  
   const res = await sdk.people.postPeopleIdEmployment({
-      employmentEntry: {
-        effectiveDate: new RFCDate("2021-12-05"),
-      },
-      id: "<ID>",
-    }, operationSecurity);
+    employmentEntry: {
+      effectiveDate: new RFCDate("2021-12-05"),
+    },
+    id: "<ID>",
+  }, operationSecurity);
 
   if (res?.statusCode !== 200) {
     throw new Error("Unexpected status code: " + res?.statusCode || "-");
@@ -1505,7 +1500,7 @@ run();
 
 | Error Object    | Status Code     | Content Type    |
 | --------------- | --------------- | --------------- |
-| errors.SDKError | 400-600         | */*             |
+| errors.SDKError | 4xx-5xx         | */*             |
 
 ## postPeopleIdEquities
 
@@ -1521,25 +1516,25 @@ import { RFCDate } from "hibob/types";
 async function run() {
   const sdk = new Hibob();
 
-  
   const operationSecurity: PostPeopleIdEquitiesSecurity = {
     basic: {
       password: "<YOUR_PASSWORD_HERE>",
       username: "<YOUR_USERNAME_HERE>",
     },
   };
+  
   const res = await sdk.people.postPeopleIdEquities({
-      equityEntry: {
-        effectiveDate: new RFCDate("2022-11-21"),
-        equityType: "string",
-        exercisePrice: {
-          currency: "Rial Omani",
-          value: 954.25,
-        },
-        quantity: 5285.48,
+    equityEntry: {
+      effectiveDate: new RFCDate("2022-11-21"),
+      equityType: "string",
+      exercisePrice: {
+        currency: "Rial Omani",
+        value: 954.25,
       },
-      id: "<ID>",
-    }, operationSecurity);
+      quantity: 5285.48,
+    },
+    id: "<ID>",
+  }, operationSecurity);
 
   if (res?.statusCode !== 200) {
     throw new Error("Unexpected status code: " + res?.statusCode || "-");
@@ -1568,7 +1563,7 @@ run();
 
 | Error Object    | Status Code     | Content Type    |
 | --------------- | --------------- | --------------- |
-| errors.SDKError | 400-600         | */*             |
+| errors.SDKError | 4xx-5xx         | */*             |
 
 ## postPeopleIdSalaries
 
@@ -1584,24 +1579,24 @@ import { RFCDate } from "hibob/types";
 async function run() {
   const sdk = new Hibob();
 
-  
   const operationSecurity: PostPeopleIdSalariesSecurity = {
     basic: {
       password: "<YOUR_PASSWORD_HERE>",
       username: "<YOUR_USERNAME_HERE>",
     },
   };
+  
   const res = await sdk.people.postPeopleIdSalaries({
-      salaryEntry: {
-        base: {
-          currency: "Cuban Peso Convertible",
-          value: 3657.11,
-        },
-        effectiveDate: new RFCDate("2021-03-10"),
-        payPeriod: "string",
+    salaryEntry: {
+      base: {
+        currency: "Cuban Peso Convertible",
+        value: 3657.11,
       },
-      id: "<ID>",
-    }, operationSecurity);
+      effectiveDate: new RFCDate("2021-03-10"),
+      payPeriod: "string",
+    },
+    id: "<ID>",
+  }, operationSecurity);
 
   if (res?.statusCode !== 200) {
     throw new Error("Unexpected status code: " + res?.statusCode || "-");
@@ -1630,7 +1625,7 @@ run();
 
 | Error Object    | Status Code     | Content Type    |
 | --------------- | --------------- | --------------- |
-| errors.SDKError | 400-600         | */*             |
+| errors.SDKError | 4xx-5xx         | */*             |
 
 ## postPeopleIdTraining
 
@@ -1646,23 +1641,23 @@ import { RFCDate } from "hibob/types";
 async function run() {
   const sdk = new Hibob();
 
-  
   const operationSecurity: PostPeopleIdTrainingSecurity = {
     basic: {
       password: "<YOUR_PASSWORD_HERE>",
       username: "<YOUR_USERNAME_HERE>",
     },
   };
+  
   const res = await sdk.people.postPeopleIdTraining({
-      trainingEntry: {
-        cost: {
-          currency: "Danish Krone",
-          value: 9851.31,
-        },
-        effectiveDate: new RFCDate("2022-07-06"),
+    trainingEntry: {
+      cost: {
+        currency: "Danish Krone",
+        value: 9851.31,
       },
-      id: "<ID>",
-    }, operationSecurity);
+      effectiveDate: new RFCDate("2022-07-06"),
+    },
+    id: "<ID>",
+  }, operationSecurity);
 
   if (res?.statusCode !== 200) {
     throw new Error("Unexpected status code: " + res?.statusCode || "-");
@@ -1691,7 +1686,7 @@ run();
 
 | Error Object    | Status Code     | Content Type    |
 | --------------- | --------------- | --------------- |
-| errors.SDKError | 400-600         | */*             |
+| errors.SDKError | 4xx-5xx         | */*             |
 
 ## postPeopleIdVariable
 
@@ -1707,24 +1702,24 @@ import { RFCDate } from "hibob/types";
 async function run() {
   const sdk = new Hibob();
 
-  
   const operationSecurity: PostPeopleIdVariableSecurity = {
     basic: {
       password: "<YOUR_PASSWORD_HERE>",
       username: "<YOUR_USERNAME_HERE>",
     },
   };
+  
   const res = await sdk.people.postPeopleIdVariable({
-      variableEntry: {
-        amount: {
-          currency: "Algerian Dinar",
-          value: 54.57,
-        },
-        effectiveDate: new RFCDate("2022-08-17"),
-        paymentPeriod: "string",
+    variableEntry: {
+      amount: {
+        currency: "Algerian Dinar",
+        value: 54.57,
       },
-      id: "<ID>",
-    }, operationSecurity);
+      effectiveDate: new RFCDate("2022-08-17"),
+      paymentPeriod: "string",
+    },
+    id: "<ID>",
+  }, operationSecurity);
 
   if (res?.statusCode !== 200) {
     throw new Error("Unexpected status code: " + res?.statusCode || "-");
@@ -1753,7 +1748,7 @@ run();
 
 | Error Object    | Status Code     | Content Type    |
 | --------------- | --------------- | --------------- |
-| errors.SDKError | 400-600         | */*             |
+| errors.SDKError | 4xx-5xx         | */*             |
 
 ## postPeopleIdWork
 
@@ -1769,23 +1764,23 @@ import { RFCDate } from "hibob/types";
 async function run() {
   const sdk = new Hibob();
 
-  
   const operationSecurity: PostPeopleIdWorkSecurity = {
     basic: {
       password: "<YOUR_PASSWORD_HERE>",
       username: "<YOUR_USERNAME_HERE>",
     },
   };
+  
   const res = await sdk.people.postPeopleIdWork({
-      workEntry: {
-        customColumns: {},
-        effectiveDate: new RFCDate("2023-05-25"),
-        reportsTo: {
-          id: "<ID>",
-        },
+    workEntry: {
+      customColumns: {},
+      effectiveDate: new RFCDate("2023-05-25"),
+      reportsTo: {
+        id: "<ID>",
       },
-      id: "<ID>",
-    }, operationSecurity);
+    },
+    id: "<ID>",
+  }, operationSecurity);
 
   if (res?.statusCode !== 200) {
     throw new Error("Unexpected status code: " + res?.statusCode || "-");
@@ -1814,7 +1809,7 @@ run();
 
 | Error Object    | Status Code     | Content Type    |
 | --------------- | --------------- | --------------- |
-| errors.SDKError | 400-600         | */*             |
+| errors.SDKError | 4xx-5xx         | */*             |
 
 ## putAvatarsEmployeeId
 
@@ -1827,18 +1822,17 @@ import { Hibob } from "hibob";
 
 async function run() {
   const sdk = new Hibob({
-      security: {
-        bearer: "<YOUR_API_KEY_HERE>",
-      },
-    });
+    security: {
+      bearer: "<YOUR_API_KEY_HERE>",
+    },
+  });
 
-  
   const res = await sdk.people.putAvatarsEmployeeId({
-      uploadAvatar: {
-        url: "https://agitated-motor.net",
-      },
-      employeeId: "string",
-    });
+    uploadAvatar: {
+      url: "https://agitated-motor.net",
+    },
+    employeeId: "string",
+  });
 
   if (res?.statusCode !== 200) {
     throw new Error("Unexpected status code: " + res?.statusCode || "-");
@@ -1866,7 +1860,7 @@ run();
 
 | Error Object    | Status Code     | Content Type    |
 | --------------- | --------------- | --------------- |
-| errors.SDKError | 400-600         | */*             |
+| errors.SDKError | 4xx-5xx         | */*             |
 
 ## putPeopleIdentifier
 
@@ -1881,17 +1875,17 @@ import { PutPeopleIdentifierSecurity } from "hibob/sdk/models/operations";
 async function run() {
   const sdk = new Hibob();
 
-  
   const operationSecurity: PutPeopleIdentifierSecurity = {
     basic: {
       password: "<YOUR_PASSWORD_HERE>",
       username: "<YOUR_USERNAME_HERE>",
     },
   };
+  
   const res = await sdk.people.putPeopleIdentifier({
-      requestBody: {},
-      identifier: "string",
-    }, operationSecurity);
+    requestBody: {},
+    identifier: "string",
+  }, operationSecurity);
 
   if (res?.statusCode !== 200) {
     throw new Error("Unexpected status code: " + res?.statusCode || "-");
@@ -1920,7 +1914,7 @@ run();
 
 | Error Object    | Status Code     | Content Type    |
 | --------------- | --------------- | --------------- |
-| errors.SDKError | 400-600         | */*             |
+| errors.SDKError | 4xx-5xx         | */*             |
 
 ## putPeopleIdEmail
 
@@ -1935,17 +1929,17 @@ import { PutPeopleIdEmailSecurity } from "hibob/sdk/models/operations";
 async function run() {
   const sdk = new Hibob();
 
-  
   const operationSecurity: PutPeopleIdEmailSecurity = {
     basic: {
       password: "<YOUR_PASSWORD_HERE>",
       username: "<YOUR_USERNAME_HERE>",
     },
   };
+  
   const res = await sdk.people.putPeopleIdEmail({
-      changeEmail: {},
-      id: "<ID>",
-    }, operationSecurity);
+    changeEmail: {},
+    id: "<ID>",
+  }, operationSecurity);
 
   if (res?.statusCode !== 200) {
     throw new Error("Unexpected status code: " + res?.statusCode || "-");
@@ -1974,7 +1968,7 @@ run();
 
 | Error Object    | Status Code     | Content Type    |
 | --------------- | --------------- | --------------- |
-| errors.SDKError | 400-600         | */*             |
+| errors.SDKError | 4xx-5xx         | */*             |
 
 ## putPeopleIdEmploymentEntryId
 
@@ -1988,19 +1982,18 @@ import { RFCDate } from "hibob/types";
 
 async function run() {
   const sdk = new Hibob({
-      security: {
-        bearer: "<YOUR_API_KEY_HERE>",
-      },
-    });
+    security: {
+      bearer: "<YOUR_API_KEY_HERE>",
+    },
+  });
 
-  
   const res = await sdk.people.putPeopleIdEmploymentEntryId({
-      employmentEntry: {
-        effectiveDate: new RFCDate("2022-01-16"),
-      },
-      entryId: 799673,
-      id: "<ID>",
-    });
+    employmentEntry: {
+      effectiveDate: new RFCDate("2022-01-16"),
+    },
+    entryId: 799673,
+    id: "<ID>",
+  });
 
   if (res?.statusCode !== 200) {
     throw new Error("Unexpected status code: " + res?.statusCode || "-");
@@ -2028,7 +2021,7 @@ run();
 
 | Error Object    | Status Code     | Content Type    |
 | --------------- | --------------- | --------------- |
-| errors.SDKError | 400-600         | */*             |
+| errors.SDKError | 4xx-5xx         | */*             |
 
 ## putPeopleIdEquitiesEntryId
 
@@ -2044,26 +2037,26 @@ import { RFCDate } from "hibob/types";
 async function run() {
   const sdk = new Hibob();
 
-  
   const operationSecurity: PutPeopleIdEquitiesEntryIdSecurity = {
     basic: {
       password: "<YOUR_PASSWORD_HERE>",
       username: "<YOUR_USERNAME_HERE>",
     },
   };
+  
   const res = await sdk.people.putPeopleIdEquitiesEntryId({
-      equityEntry: {
-        effectiveDate: new RFCDate("2023-01-17"),
-        equityType: "string",
-        exercisePrice: {
-          currency: "Seychelles Rupee",
-          value: 5610.76,
-        },
-        quantity: 3860.21,
+    equityEntry: {
+      effectiveDate: new RFCDate("2023-01-17"),
+      equityType: "string",
+      exercisePrice: {
+        currency: "Seychelles Rupee",
+        value: 5610.76,
       },
-      entryId: 190967,
-      id: "<ID>",
-    }, operationSecurity);
+      quantity: 3860.21,
+    },
+    entryId: 190967,
+    id: "<ID>",
+  }, operationSecurity);
 
   if (res?.statusCode !== 200) {
     throw new Error("Unexpected status code: " + res?.statusCode || "-");
@@ -2092,7 +2085,7 @@ run();
 
 | Error Object    | Status Code     | Content Type    |
 | --------------- | --------------- | --------------- |
-| errors.SDKError | 400-600         | */*             |
+| errors.SDKError | 4xx-5xx         | */*             |
 
 ## putPeopleIdWorkEntryId
 
@@ -2106,23 +2099,22 @@ import { RFCDate } from "hibob/types";
 
 async function run() {
   const sdk = new Hibob({
-      security: {
-        bearer: "<YOUR_API_KEY_HERE>",
-      },
-    });
+    security: {
+      bearer: "<YOUR_API_KEY_HERE>",
+    },
+  });
 
-  
   const res = await sdk.people.putPeopleIdWorkEntryId({
-      workEntry: {
-        customColumns: {},
-        effectiveDate: new RFCDate("2021-07-01"),
-        reportsTo: {
-          id: "<ID>",
-        },
+    workEntry: {
+      customColumns: {},
+      effectiveDate: new RFCDate("2021-07-01"),
+      reportsTo: {
+        id: "<ID>",
       },
-      entryId: 410628,
-      id: "<ID>",
-    });
+    },
+    entryId: 410628,
+    id: "<ID>",
+  });
 
   if (res?.statusCode !== 200) {
     throw new Error("Unexpected status code: " + res?.statusCode || "-");
@@ -2150,4 +2142,4 @@ run();
 
 | Error Object    | Status Code     | Content Type    |
 | --------------- | --------------- | --------------- |
-| errors.SDKError | 400-600         | */*             |
+| errors.SDKError | 4xx-5xx         | */*             |

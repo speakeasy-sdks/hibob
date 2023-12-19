@@ -29,17 +29,17 @@ import { DeleteCompanyNamedListsListNameItemIdSecurity } from "hibob/sdk/models/
 async function run() {
   const sdk = new Hibob();
 
-  
   const operationSecurity: DeleteCompanyNamedListsListNameItemIdSecurity = {
     basic: {
       password: "<YOUR_PASSWORD_HERE>",
       username: "<YOUR_USERNAME_HERE>",
     },
   };
+  
   const res = await sdk.metadata.deleteCompanyNamedListsListNameItemId({
-      itemId: "string",
-      listName: "string",
-    }, operationSecurity);
+    itemId: "string",
+    listName: "string",
+  }, operationSecurity);
 
   if (res?.statusCode !== 200) {
     throw new Error("Unexpected status code: " + res?.statusCode || "-");
@@ -68,7 +68,7 @@ run();
 
 | Error Object    | Status Code     | Content Type    |
 | --------------- | --------------- | --------------- |
-| errors.SDKError | 400-600         | */*             |
+| errors.SDKError | 4xx-5xx         | */*             |
 
 ## deleteCompanyPeopleFieldsFieldId
 
@@ -83,16 +83,16 @@ import { DeleteCompanyPeopleFieldsFieldIdSecurity } from "hibob/sdk/models/opera
 async function run() {
   const sdk = new Hibob();
 
-  
   const operationSecurity: DeleteCompanyPeopleFieldsFieldIdSecurity = {
     basic: {
       password: "<YOUR_PASSWORD_HERE>",
       username: "<YOUR_USERNAME_HERE>",
     },
   };
+  
   const res = await sdk.metadata.deleteCompanyPeopleFieldsFieldId({
-      fieldId: "string",
-    }, operationSecurity);
+    fieldId: "string",
+  }, operationSecurity);
 
   if (res?.statusCode !== 200) {
     throw new Error("Unexpected status code: " + res?.statusCode || "-");
@@ -121,7 +121,7 @@ run();
 
 | Error Object    | Status Code     | Content Type    |
 | --------------- | --------------- | --------------- |
-| errors.SDKError | 400-600         | */*             |
+| errors.SDKError | 4xx-5xx         | */*             |
 
 ## getCompanyNamedLists
 
@@ -136,13 +136,13 @@ import { GetCompanyNamedListsSecurity } from "hibob/sdk/models/operations";
 async function run() {
   const sdk = new Hibob();
 
-  
   const operationSecurity: GetCompanyNamedListsSecurity = {
     basic: {
       password: "<YOUR_PASSWORD_HERE>",
       username: "<YOUR_USERNAME_HERE>",
     },
   };
+  
   const res = await sdk.metadata.getCompanyNamedLists({}, operationSecurity);
 
   if (res?.statusCode !== 200) {
@@ -172,7 +172,7 @@ run();
 
 | Error Object    | Status Code     | Content Type    |
 | --------------- | --------------- | --------------- |
-| errors.SDKError | 400-600         | */*             |
+| errors.SDKError | 4xx-5xx         | */*             |
 
 ## getCompanyNamedListsListName
 
@@ -187,16 +187,16 @@ import { GetCompanyNamedListsListNameSecurity } from "hibob/sdk/models/operation
 async function run() {
   const sdk = new Hibob();
 
-  
   const operationSecurity: GetCompanyNamedListsListNameSecurity = {
     basic: {
       password: "<YOUR_PASSWORD_HERE>",
       username: "<YOUR_USERNAME_HERE>",
     },
   };
+  
   const res = await sdk.metadata.getCompanyNamedListsListName({
-      listName: "string",
-    }, operationSecurity);
+    listName: "string",
+  }, operationSecurity);
 
   if (res?.statusCode !== 200) {
     throw new Error("Unexpected status code: " + res?.statusCode || "-");
@@ -225,7 +225,7 @@ run();
 
 | Error Object    | Status Code     | Content Type    |
 | --------------- | --------------- | --------------- |
-| errors.SDKError | 400-600         | */*             |
+| errors.SDKError | 4xx-5xx         | */*             |
 
 ## getCompanyPeopleFields
 
@@ -240,13 +240,13 @@ import { GetCompanyPeopleFieldsSecurity } from "hibob/sdk/models/operations";
 async function run() {
   const sdk = new Hibob();
 
-  
   const operationSecurity: GetCompanyPeopleFieldsSecurity = {
     basic: {
       password: "<YOUR_PASSWORD_HERE>",
       username: "<YOUR_USERNAME_HERE>",
     },
   };
+  
   const res = await sdk.metadata.getCompanyPeopleFields(operationSecurity);
 
   if (res?.statusCode !== 200) {
@@ -275,7 +275,7 @@ run();
 
 | Error Object    | Status Code     | Content Type    |
 | --------------- | --------------- | --------------- |
-| errors.SDKError | 400-600         | */*             |
+| errors.SDKError | 4xx-5xx         | */*             |
 
 ## getMetadataObjectsPosition
 
@@ -290,11 +290,11 @@ import { GetMetadataObjectsPositionSecurity } from "hibob/sdk/models/operations"
 async function run() {
   const sdk = new Hibob();
 
-  
   const operationSecurity: GetMetadataObjectsPositionSecurity = {
     password: "<YOUR_PASSWORD_HERE>",
     username: "<YOUR_USERNAME_HERE>",
   };
+  
   const res = await sdk.metadata.getMetadataObjectsPosition(operationSecurity);
 
   if (res?.statusCode !== 200) {
@@ -323,7 +323,7 @@ run();
 
 | Error Object    | Status Code     | Content Type    |
 | --------------- | --------------- | --------------- |
-| errors.SDKError | 400-600         | */*             |
+| errors.SDKError | 4xx-5xx         | */*             |
 
 ## getPeopleCustomTablesMetadata
 
@@ -338,13 +338,13 @@ import { GetPeopleCustomTablesMetadataSecurity } from "hibob/sdk/models/operatio
 async function run() {
   const sdk = new Hibob();
 
-  
   const operationSecurity: GetPeopleCustomTablesMetadataSecurity = {
     basic: {
       password: "<YOUR_PASSWORD_HERE>",
       username: "<YOUR_USERNAME_HERE>",
     },
   };
+  
   const res = await sdk.metadata.getPeopleCustomTablesMetadata(operationSecurity);
 
   if (res?.statusCode !== 200) {
@@ -373,7 +373,7 @@ run();
 
 | Error Object    | Status Code     | Content Type    |
 | --------------- | --------------- | --------------- |
-| errors.SDKError | 400-600         | */*             |
+| errors.SDKError | 4xx-5xx         | */*             |
 
 ## getPeopleCustomTablesMetadataCustomTableId
 
@@ -388,16 +388,16 @@ import { GetPeopleCustomTablesMetadataCustomTableIdSecurity } from "hibob/sdk/mo
 async function run() {
   const sdk = new Hibob();
 
-  
   const operationSecurity: GetPeopleCustomTablesMetadataCustomTableIdSecurity = {
     basic: {
       password: "<YOUR_PASSWORD_HERE>",
       username: "<YOUR_USERNAME_HERE>",
     },
   };
+  
   const res = await sdk.metadata.getPeopleCustomTablesMetadataCustomTableId({
-      customTableId: "string",
-    }, operationSecurity);
+    customTableId: "string",
+  }, operationSecurity);
 
   if (res?.statusCode !== 200) {
     throw new Error("Unexpected status code: " + res?.statusCode || "-");
@@ -426,7 +426,7 @@ run();
 
 | Error Object    | Status Code     | Content Type    |
 | --------------- | --------------- | --------------- |
-| errors.SDKError | 400-600         | */*             |
+| errors.SDKError | 4xx-5xx         | */*             |
 
 ## postCompanyNamedListsListName
 
@@ -441,19 +441,19 @@ import { PostCompanyNamedListsListNameSecurity } from "hibob/sdk/models/operatio
 async function run() {
   const sdk = new Hibob();
 
-  
   const operationSecurity: PostCompanyNamedListsListNameSecurity = {
     basic: {
       password: "<YOUR_PASSWORD_HERE>",
       username: "<YOUR_USERNAME_HERE>",
     },
   };
+  
   const res = await sdk.metadata.postCompanyNamedListsListName({
-      newListItem: {
-        name: "string",
-      },
-      listName: "string",
-    }, operationSecurity);
+    newListItem: {
+      name: "string",
+    },
+    listName: "string",
+  }, operationSecurity);
 
   if (res?.statusCode !== 200) {
     throw new Error("Unexpected status code: " + res?.statusCode || "-");
@@ -482,7 +482,7 @@ run();
 
 | Error Object    | Status Code     | Content Type    |
 | --------------- | --------------- | --------------- |
-| errors.SDKError | 400-600         | */*             |
+| errors.SDKError | 4xx-5xx         | */*             |
 
 ## postCompanyPeopleFields
 
@@ -497,18 +497,18 @@ import { PostCompanyPeopleFieldsSecurity } from "hibob/sdk/models/operations";
 async function run() {
   const sdk = new Hibob();
 
-  
   const operationSecurity: PostCompanyPeopleFieldsSecurity = {
     basic: {
       password: "<YOUR_PASSWORD_HERE>",
       username: "<YOUR_USERNAME_HERE>",
     },
   };
+  
   const res = await sdk.metadata.postCompanyPeopleFields({
-      category: "string",
-      name: "string",
-      type: "string",
-    }, operationSecurity);
+    category: "string",
+    name: "string",
+    type: "string",
+  }, operationSecurity);
 
   if (res?.statusCode !== 200) {
     throw new Error("Unexpected status code: " + res?.statusCode || "-");
@@ -537,7 +537,7 @@ run();
 
 | Error Object    | Status Code     | Content Type    |
 | --------------- | --------------- | --------------- |
-| errors.SDKError | 400-600         | */*             |
+| errors.SDKError | 4xx-5xx         | */*             |
 
 ## putCompanyNamedListsListNameItemId
 
@@ -552,18 +552,18 @@ import { PutCompanyNamedListsListNameItemIdSecurity } from "hibob/sdk/models/ope
 async function run() {
   const sdk = new Hibob();
 
-  
   const operationSecurity: PutCompanyNamedListsListNameItemIdSecurity = {
     basic: {
       password: "<YOUR_PASSWORD_HERE>",
       username: "<YOUR_USERNAME_HERE>",
     },
   };
+  
   const res = await sdk.metadata.putCompanyNamedListsListNameItemId({
-      updateListItemRequest: {},
-      itemId: "string",
-      listName: "string",
-    }, operationSecurity);
+    updateListItemRequest: {},
+    itemId: "string",
+    listName: "string",
+  }, operationSecurity);
 
   if (res?.statusCode !== 200) {
     throw new Error("Unexpected status code: " + res?.statusCode || "-");
@@ -592,7 +592,7 @@ run();
 
 | Error Object    | Status Code     | Content Type    |
 | --------------- | --------------- | --------------- |
-| errors.SDKError | 400-600         | */*             |
+| errors.SDKError | 4xx-5xx         | */*             |
 
 ## putCompanyPeopleFieldsFieldId
 
@@ -607,17 +607,17 @@ import { PutCompanyPeopleFieldsFieldIdSecurity } from "hibob/sdk/models/operatio
 async function run() {
   const sdk = new Hibob();
 
-  
   const operationSecurity: PutCompanyPeopleFieldsFieldIdSecurity = {
     basic: {
       password: "<YOUR_PASSWORD_HERE>",
       username: "<YOUR_USERNAME_HERE>",
     },
   };
+  
   const res = await sdk.metadata.putCompanyPeopleFieldsFieldId({
-      updateFieldRequest: {},
-      fieldId: "string",
-    }, operationSecurity);
+    updateFieldRequest: {},
+    fieldId: "string",
+  }, operationSecurity);
 
   if (res?.statusCode !== 200) {
     throw new Error("Unexpected status code: " + res?.statusCode || "-");
@@ -646,4 +646,4 @@ run();
 
 | Error Object    | Status Code     | Content Type    |
 | --------------- | --------------- | --------------- |
-| errors.SDKError | 400-600         | */*             |
+| errors.SDKError | 4xx-5xx         | */*             |

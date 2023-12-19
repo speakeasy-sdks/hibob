@@ -35,6 +35,7 @@ async function run() {
         password: "<YOUR_PASSWORD_HERE>",
         username: "<YOUR_USERNAME_HERE>",
     };
+
     const res = await sdk.attendance.postAttendanceImportImportMethod(
         {
             importAttendanceData: {
@@ -240,7 +241,7 @@ All SDK methods return a response object or throw an error. If Error objects are
 
 | Error Object    | Status Code     | Content Type    |
 | --------------- | --------------- | --------------- |
-| errors.SDKError | 400-600         | */*             |
+| errors.SDKError | 4xx-5xx         | */*             |
 
 Example
 
@@ -420,6 +421,7 @@ async function run() {
         password: "<YOUR_PASSWORD_HERE>",
         username: "<YOUR_USERNAME_HERE>",
     };
+
     const res = await sdk.attendance.postAttendanceImportImportMethod(
         {
             importAttendanceData: {
@@ -449,6 +451,50 @@ run();
 
 ```
 <!-- End Authentication [security] -->
+
+<!-- Start File uploads [file-upload] -->
+## File uploads
+
+Certain SDK methods accept files as part of a multi-part request. It is possible and typically recommended to upload files as a stream rather than reading the entire contents into memory. This avoids excessive memory consumption and potentially crashing with out-of-memory errors when working with very large files. The following example demonstrates how to attach a file stream to a request.
+
+> [!TIP]
+>
+> Depending on your JavaScript runtime, there are convenient utilities that return a handle to a file without reading the entire contents into memory:
+>
+> - **Node.js v20+:** Since v20, Node.js comes with a native `openAsBlob` function in [`node:fs`](https://nodejs.org/docs/latest-v20.x/api/fs.html#fsopenasblobpath-options).
+> - **Bun:** The native [`Bun.file`](https://bun.sh/docs/api/file-io#reading-files-bun-file) function produces a file handle that can be used for streaming file uploads.
+> - **Browsers:** All supported browsers return an instance to a [`File`](https://developer.mozilla.org/en-US/docs/Web/API/File) when reading the value from an `<input type="file">` element.
+> - **Node.js v18:** A file stream can be created using the `fileFrom` helper from [`fetch-blob/from.js`](https://www.npmjs.com/package/fetch-blob).
+
+```typescript
+import { Hibob } from "hibob";
+import { openAsBlob } from "node:fs";
+
+async function run() {
+    const sdk = new Hibob({
+        security: {
+            bearer: "<YOUR_API_KEY_HERE>",
+        },
+    });
+
+    const res = await sdk.documents.postDocsPeopleIdConfidentialUpload({
+        requestBody: {
+            file: await openAsBlob("./sample-file"),
+        },
+        id: "<ID>",
+    });
+
+    if (res?.statusCode !== 200) {
+        throw new Error("Unexpected status code: " + res?.statusCode || "-");
+    }
+
+    // handle response
+}
+
+run();
+
+```
+<!-- End File uploads [file-upload] -->
 
 <!-- Placeholder for Future Speakeasy SDK Sections -->
 

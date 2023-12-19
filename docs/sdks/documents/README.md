@@ -24,17 +24,17 @@ import { DeleteDocsPeopleIdConfidentialDocIdSecurity } from "hibob/sdk/models/op
 async function run() {
   const sdk = new Hibob();
 
-  
   const operationSecurity: DeleteDocsPeopleIdConfidentialDocIdSecurity = {
     basic: {
       password: "<YOUR_PASSWORD_HERE>",
       username: "<YOUR_USERNAME_HERE>",
     },
   };
+  
   const res = await sdk.documents.deleteDocsPeopleIdConfidentialDocId({
-      docId: "string",
-      id: "<ID>",
-    }, operationSecurity);
+    docId: "string",
+    id: "<ID>",
+  }, operationSecurity);
 
   if (res?.statusCode !== 200) {
     throw new Error("Unexpected status code: " + res?.statusCode || "-");
@@ -63,7 +63,7 @@ run();
 
 | Error Object    | Status Code     | Content Type    |
 | --------------- | --------------- | --------------- |
-| errors.SDKError | 400-600         | */*             |
+| errors.SDKError | 4xx-5xx         | */*             |
 
 ## deleteDocsPeopleIdSharedDocId
 
@@ -78,17 +78,17 @@ import { DeleteDocsPeopleIdSharedDocIdSecurity } from "hibob/sdk/models/operatio
 async function run() {
   const sdk = new Hibob();
 
-  
   const operationSecurity: DeleteDocsPeopleIdSharedDocIdSecurity = {
     basic: {
       password: "<YOUR_PASSWORD_HERE>",
       username: "<YOUR_USERNAME_HERE>",
     },
   };
+  
   const res = await sdk.documents.deleteDocsPeopleIdSharedDocId({
-      docId: "string",
-      id: "<ID>",
-    }, operationSecurity);
+    docId: "string",
+    id: "<ID>",
+  }, operationSecurity);
 
   if (res?.statusCode !== 200) {
     throw new Error("Unexpected status code: " + res?.statusCode || "-");
@@ -117,7 +117,7 @@ run();
 
 | Error Object    | Status Code     | Content Type    |
 | --------------- | --------------- | --------------- |
-| errors.SDKError | 400-600         | */*             |
+| errors.SDKError | 4xx-5xx         | */*             |
 
 ## getDocsPeopleId
 
@@ -130,15 +130,14 @@ import { Hibob } from "hibob";
 
 async function run() {
   const sdk = new Hibob({
-      security: {
-        bearer: "<YOUR_API_KEY_HERE>",
-      },
-    });
+    security: {
+      bearer: "<YOUR_API_KEY_HERE>",
+    },
+  });
 
-  
   const res = await sdk.documents.getDocsPeopleId({
-      id: "<ID>",
-    });
+    id: "<ID>",
+  });
 
   if (res?.statusCode !== 200) {
     throw new Error("Unexpected status code: " + res?.statusCode || "-");
@@ -166,7 +165,7 @@ run();
 
 | Error Object    | Status Code     | Content Type    |
 | --------------- | --------------- | --------------- |
-| errors.SDKError | 400-600         | */*             |
+| errors.SDKError | 4xx-5xx         | */*             |
 
 ## postDocsPeopleIdConfidential
 
@@ -179,20 +178,19 @@ import { Hibob } from "hibob";
 
 async function run() {
   const sdk = new Hibob({
-      security: {
-        bearer: "<YOUR_API_KEY_HERE>",
-      },
-    });
+    security: {
+      bearer: "<YOUR_API_KEY_HERE>",
+    },
+  });
 
-  
   const res = await sdk.documents.postDocsPeopleIdConfidential({
-      addDocument: {
-        tags: [
-          "string",
-        ],
-      },
-      id: "<ID>",
-    });
+    addDocument: {
+      tags: [
+        "string",
+      ],
+    },
+    id: "<ID>",
+  });
 
   if (res?.statusCode !== 200) {
     throw new Error("Unexpected status code: " + res?.statusCode || "-");
@@ -220,7 +218,7 @@ run();
 
 | Error Object    | Status Code     | Content Type    |
 | --------------- | --------------- | --------------- |
-| errors.SDKError | 400-600         | */*             |
+| errors.SDKError | 4xx-5xx         | */*             |
 
 ## postDocsPeopleIdConfidentialUpload
 
@@ -230,24 +228,21 @@ run();
 
 ```typescript
 import { Hibob } from "hibob";
+import { openAsBlob } from "node:fs";
 
 async function run() {
   const sdk = new Hibob({
-      security: {
-        bearer: "<YOUR_API_KEY_HERE>",
-      },
-    });
+    security: {
+      bearer: "<YOUR_API_KEY_HERE>",
+    },
+  });
 
-  
   const res = await sdk.documents.postDocsPeopleIdConfidentialUpload({
-      requestBody: {
-        file: {
-          content: new TextEncoder().encode("0xfAD95Ec4b0"),
-          fileName: "compatible_shoes.gif",
-        },
-      },
-      id: "<ID>",
-    });
+    requestBody: {
+      file: await openAsBlob("./sample-file"),
+    },
+    id: "<ID>",
+  });
 
   if (res?.statusCode !== 200) {
     throw new Error("Unexpected status code: " + res?.statusCode || "-");
@@ -275,7 +270,7 @@ run();
 
 | Error Object    | Status Code     | Content Type    |
 | --------------- | --------------- | --------------- |
-| errors.SDKError | 400-600         | */*             |
+| errors.SDKError | 4xx-5xx         | */*             |
 
 ## postDocsPeopleIdShared
 
@@ -288,20 +283,19 @@ import { Hibob } from "hibob";
 
 async function run() {
   const sdk = new Hibob({
-      security: {
-        bearer: "<YOUR_API_KEY_HERE>",
-      },
-    });
+    security: {
+      bearer: "<YOUR_API_KEY_HERE>",
+    },
+  });
 
-  
   const res = await sdk.documents.postDocsPeopleIdShared({
-      addDocument: {
-        tags: [
-          "string",
-        ],
-      },
-      id: "<ID>",
-    });
+    addDocument: {
+      tags: [
+        "string",
+      ],
+    },
+    id: "<ID>",
+  });
 
   if (res?.statusCode !== 200) {
     throw new Error("Unexpected status code: " + res?.statusCode || "-");
@@ -329,7 +323,7 @@ run();
 
 | Error Object    | Status Code     | Content Type    |
 | --------------- | --------------- | --------------- |
-| errors.SDKError | 400-600         | */*             |
+| errors.SDKError | 4xx-5xx         | */*             |
 
 ## postDocsPeopleIdSharedUpload
 
@@ -339,24 +333,21 @@ run();
 
 ```typescript
 import { Hibob } from "hibob";
+import { openAsBlob } from "node:fs";
 
 async function run() {
   const sdk = new Hibob({
-      security: {
-        bearer: "<YOUR_API_KEY_HERE>",
-      },
-    });
+    security: {
+      bearer: "<YOUR_API_KEY_HERE>",
+    },
+  });
 
-  
   const res = await sdk.documents.postDocsPeopleIdSharedUpload({
-      requestBody: {
-        file: {
-          content: new TextEncoder().encode("0xAcFe65CF10"),
-          fileName: "roughly_minnesota.pdf",
-        },
-      },
-      id: "<ID>",
-    });
+    requestBody: {
+      file: await openAsBlob("./sample-file"),
+    },
+    id: "<ID>",
+  });
 
   if (res?.statusCode !== 200) {
     throw new Error("Unexpected status code: " + res?.statusCode || "-");
@@ -384,4 +375,4 @@ run();
 
 | Error Object    | Status Code     | Content Type    |
 | --------------- | --------------- | --------------- |
-| errors.SDKError | 400-600         | */*             |
+| errors.SDKError | 4xx-5xx         | */*             |

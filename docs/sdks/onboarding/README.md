@@ -16,12 +16,11 @@ import { Hibob } from "hibob";
 
 async function run() {
   const sdk = new Hibob({
-      security: {
-        bearer: "<YOUR_API_KEY_HERE>",
-      },
-    });
+    security: {
+      bearer: "<YOUR_API_KEY_HERE>",
+    },
+  });
 
-  
   const res = await sdk.onboarding.getOnboardingWizards();
 
   if (res?.statusCode !== 200) {
@@ -49,4 +48,4 @@ run();
 
 | Error Object    | Status Code     | Content Type    |
 | --------------- | --------------- | --------------- |
-| errors.SDKError | 400-600         | */*             |
+| errors.SDKError | 4xx-5xx         | */*             |

@@ -21,13 +21,13 @@ import { GetCompanyReportsSecurity } from "hibob/sdk/models/operations";
 async function run() {
   const sdk = new Hibob();
 
-  
   const operationSecurity: GetCompanyReportsSecurity = {
     basic: {
       password: "<YOUR_PASSWORD_HERE>",
       username: "<YOUR_USERNAME_HERE>",
     },
   };
+  
   const res = await sdk.reports.getCompanyReports(operationSecurity);
 
   if (res?.statusCode !== 200) {
@@ -56,7 +56,7 @@ run();
 
 | Error Object    | Status Code     | Content Type    |
 | --------------- | --------------- | --------------- |
-| errors.SDKError | 400-600         | */*             |
+| errors.SDKError | 4xx-5xx         | */*             |
 
 ## getCompanyReportsDownloadReportName
 
@@ -71,16 +71,16 @@ import { GetCompanyReportsDownloadReportNameSecurity } from "hibob/sdk/models/op
 async function run() {
   const sdk = new Hibob();
 
-  
   const operationSecurity: GetCompanyReportsDownloadReportNameSecurity = {
     basic: {
       password: "<YOUR_PASSWORD_HERE>",
       username: "<YOUR_USERNAME_HERE>",
     },
   };
+  
   const res = await sdk.reports.getCompanyReportsDownloadReportName({
-      reportName: "string",
-    }, operationSecurity);
+    reportName: "string",
+  }, operationSecurity);
 
   if (res?.statusCode !== 200) {
     throw new Error("Unexpected status code: " + res?.statusCode || "-");
@@ -109,7 +109,7 @@ run();
 
 | Error Object    | Status Code     | Content Type    |
 | --------------- | --------------- | --------------- |
-| errors.SDKError | 400-600         | */*             |
+| errors.SDKError | 4xx-5xx         | */*             |
 
 ## getCompanyReportsReportIdDownload
 
@@ -124,17 +124,17 @@ import { GetCompanyReportsReportIdDownloadSecurity, QueryParamFormat } from "hib
 async function run() {
   const sdk = new Hibob();
 
-  
   const operationSecurity: GetCompanyReportsReportIdDownloadSecurity = {
     basic: {
       password: "<YOUR_PASSWORD_HERE>",
       username: "<YOUR_USERNAME_HERE>",
     },
   };
+  
   const res = await sdk.reports.getCompanyReportsReportIdDownload({
-      format: QueryParamFormat.Xlsx,
-      reportId: 3566.85,
-    }, operationSecurity);
+    format: QueryParamFormat.Xlsx,
+    reportId: 3566.85,
+  }, operationSecurity);
 
   if (res?.statusCode !== 200) {
     throw new Error("Unexpected status code: " + res?.statusCode || "-");
@@ -163,7 +163,7 @@ run();
 
 | Error Object    | Status Code     | Content Type    |
 | --------------- | --------------- | --------------- |
-| errors.SDKError | 400-600         | */*             |
+| errors.SDKError | 4xx-5xx         | */*             |
 
 ## getCompanyReportsReportIdDownloadAsync
 
@@ -178,17 +178,17 @@ import { Format, GetCompanyReportsReportIdDownloadAsyncSecurity } from "hibob/sd
 async function run() {
   const sdk = new Hibob();
 
-  
   const operationSecurity: GetCompanyReportsReportIdDownloadAsyncSecurity = {
     basic: {
       password: "<YOUR_PASSWORD_HERE>",
       username: "<YOUR_USERNAME_HERE>",
     },
   };
+  
   const res = await sdk.reports.getCompanyReportsReportIdDownloadAsync({
-      format: Format.Xlsx,
-      reportId: 7232.99,
-    }, operationSecurity);
+    format: Format.Xlsx,
+    reportId: 7232.99,
+  }, operationSecurity);
 
   if (res?.statusCode !== 200) {
     throw new Error("Unexpected status code: " + res?.statusCode || "-");
@@ -217,4 +217,4 @@ run();
 
 | Error Object    | Status Code     | Content Type    |
 | --------------- | --------------- | --------------- |
-| errors.SDKError | 400-600         | */*             |
+| errors.SDKError | 4xx-5xx         | */*             |

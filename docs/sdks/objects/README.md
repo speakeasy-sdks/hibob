@@ -18,25 +18,25 @@ import { PostObjectsPositionSearchSecurity } from "hibob/sdk/models/operations";
 async function run() {
   const sdk = new Hibob();
 
-  
   const operationSecurity: PostObjectsPositionSearchSecurity = {
     password: "<YOUR_PASSWORD_HERE>",
     username: "<YOUR_USERNAME_HERE>",
   };
+  
   const res = await sdk.objects.postObjectsPositionSearch({
-      fields: [
-        "string",
-      ],
-      filters: [
-        {
-          fieldId: "string",
-          operator: "string",
-          values: [
-            "string",
-          ],
-        },
-      ],
-    }, operationSecurity);
+    fields: [
+      "string",
+    ],
+    filters: [
+      {
+        fieldId: "string",
+        operator: "string",
+        values: [
+          "string",
+        ],
+      },
+    ],
+  }, operationSecurity);
 
   if (res?.statusCode !== 200) {
     throw new Error("Unexpected status code: " + res?.statusCode || "-");
@@ -65,4 +65,4 @@ run();
 
 | Error Object    | Status Code     | Content Type    |
 | --------------- | --------------- | --------------- |
-| errors.SDKError | 400-600         | */*             |
+| errors.SDKError | 4xx-5xx         | */*             |

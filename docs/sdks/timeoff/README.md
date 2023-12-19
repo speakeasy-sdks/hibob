@@ -31,17 +31,17 @@ import { DeleteTimeoffEmployeesIdRequestsRequestIdSecurity } from "hibob/sdk/mod
 async function run() {
   const sdk = new Hibob();
 
-  
   const operationSecurity: DeleteTimeoffEmployeesIdRequestsRequestIdSecurity = {
     basic: {
       password: "<YOUR_PASSWORD_HERE>",
       username: "<YOUR_USERNAME_HERE>",
     },
   };
+  
   const res = await sdk.timeOff.deleteTimeoffEmployeesIdRequestsRequestId({
-      id: "<ID>",
-      requestId: 313155,
-    }, operationSecurity);
+    id: "<ID>",
+    requestId: 313155,
+  }, operationSecurity);
 
   if (res?.statusCode !== 200) {
     throw new Error("Unexpected status code: " + res?.statusCode || "-");
@@ -70,7 +70,7 @@ run();
 
 | Error Object    | Status Code     | Content Type    |
 | --------------- | --------------- | --------------- |
-| errors.SDKError | 400-600         | */*             |
+| errors.SDKError | 4xx-5xx         | */*             |
 
 ## getTimeoffEmployeesIdBalance
 
@@ -86,16 +86,16 @@ import { RFCDate } from "hibob/types";
 async function run() {
   const sdk = new Hibob();
 
-  
   const operationSecurity: GetTimeoffEmployeesIdBalanceSecurity = {
     password: "<YOUR_PASSWORD_HERE>",
     username: "<YOUR_USERNAME_HERE>",
   };
+  
   const res = await sdk.timeOff.getTimeoffEmployeesIdBalance({
-      date: new RFCDate("2021-02-20"),
-      id: "<ID>",
-      policyType: "string",
-    }, operationSecurity);
+    date: new RFCDate("2021-02-20"),
+    id: "<ID>",
+    policyType: "string",
+  }, operationSecurity);
 
   if (res?.statusCode !== 200) {
     throw new Error("Unexpected status code: " + res?.statusCode || "-");
@@ -124,7 +124,7 @@ run();
 
 | Error Object    | Status Code     | Content Type    |
 | --------------- | --------------- | --------------- |
-| errors.SDKError | 400-600         | */*             |
+| errors.SDKError | 4xx-5xx         | */*             |
 
 ## getTimeoffEmployeesIdRequestsRequestId
 
@@ -139,17 +139,17 @@ import { GetTimeoffEmployeesIdRequestsRequestIdSecurity } from "hibob/sdk/models
 async function run() {
   const sdk = new Hibob();
 
-  
   const operationSecurity: GetTimeoffEmployeesIdRequestsRequestIdSecurity = {
     basic: {
       password: "<YOUR_PASSWORD_HERE>",
       username: "<YOUR_USERNAME_HERE>",
     },
   };
+  
   const res = await sdk.timeOff.getTimeoffEmployeesIdRequestsRequestId({
-      id: "<ID>",
-      requestId: 662911,
-    }, operationSecurity);
+    id: "<ID>",
+    requestId: 662911,
+  }, operationSecurity);
 
   if (res?.statusCode !== 200) {
     throw new Error("Unexpected status code: " + res?.statusCode || "-");
@@ -178,7 +178,7 @@ run();
 
 | Error Object    | Status Code     | Content Type    |
 | --------------- | --------------- | --------------- |
-| errors.SDKError | 400-600         | */*             |
+| errors.SDKError | 4xx-5xx         | */*             |
 
 ## getTimeoffOuttoday
 
@@ -194,13 +194,13 @@ import { RFCDate } from "hibob/types";
 async function run() {
   const sdk = new Hibob();
 
-  
   const operationSecurity: GetTimeoffOuttodaySecurity = {
     basic: {
       password: "<YOUR_PASSWORD_HERE>",
       username: "<YOUR_USERNAME_HERE>",
     },
   };
+  
   const res = await sdk.timeOff.getTimeoffOuttoday({}, operationSecurity);
 
   if (res?.statusCode !== 200) {
@@ -230,7 +230,7 @@ run();
 
 | Error Object    | Status Code     | Content Type    |
 | --------------- | --------------- | --------------- |
-| errors.SDKError | 400-600         | */*             |
+| errors.SDKError | 4xx-5xx         | */*             |
 
 ## getTimeoffPolicies
 
@@ -245,14 +245,14 @@ import { GetTimeoffPoliciesSecurity } from "hibob/sdk/models/operations";
 async function run() {
   const sdk = new Hibob();
 
-  
   const operationSecurity: GetTimeoffPoliciesSecurity = {
     password: "<YOUR_PASSWORD_HERE>",
     username: "<YOUR_USERNAME_HERE>",
   };
+  
   const res = await sdk.timeOff.getTimeoffPolicies({
-      policyName: "string",
-    }, operationSecurity);
+    policyName: "string",
+  }, operationSecurity);
 
   if (res?.statusCode !== 200) {
     throw new Error("Unexpected status code: " + res?.statusCode || "-");
@@ -281,7 +281,7 @@ run();
 
 | Error Object    | Status Code     | Content Type    |
 | --------------- | --------------- | --------------- |
-| errors.SDKError | 400-600         | */*             |
+| errors.SDKError | 4xx-5xx         | */*             |
 
 ## getTimeoffPoliciesNames
 
@@ -296,14 +296,14 @@ import { GetTimeoffPoliciesNamesSecurity } from "hibob/sdk/models/operations";
 async function run() {
   const sdk = new Hibob();
 
-  
   const operationSecurity: GetTimeoffPoliciesNamesSecurity = {
     password: "<YOUR_PASSWORD_HERE>",
     username: "<YOUR_USERNAME_HERE>",
   };
+  
   const res = await sdk.timeOff.getTimeoffPoliciesNames({
-      policyTypeName: "string",
-    }, operationSecurity);
+    policyTypeName: "string",
+  }, operationSecurity);
 
   if (res?.statusCode !== 200) {
     throw new Error("Unexpected status code: " + res?.statusCode || "-");
@@ -332,7 +332,7 @@ run();
 
 | Error Object    | Status Code     | Content Type    |
 | --------------- | --------------- | --------------- |
-| errors.SDKError | 400-600         | */*             |
+| errors.SDKError | 4xx-5xx         | */*             |
 
 ## getTimeoffPolicyTypes
 
@@ -347,11 +347,11 @@ import { GetTimeoffPolicyTypesSecurity } from "hibob/sdk/models/operations";
 async function run() {
   const sdk = new Hibob();
 
-  
   const operationSecurity: GetTimeoffPolicyTypesSecurity = {
     password: "<YOUR_PASSWORD_HERE>",
     username: "<YOUR_USERNAME_HERE>",
   };
+  
   const res = await sdk.timeOff.getTimeoffPolicyTypes(operationSecurity);
 
   if (res?.statusCode !== 200) {
@@ -380,7 +380,7 @@ run();
 
 | Error Object    | Status Code     | Content Type    |
 | --------------- | --------------- | --------------- |
-| errors.SDKError | 400-600         | */*             |
+| errors.SDKError | 4xx-5xx         | */*             |
 
 ## getTimeoffPolicyTypesPolicyType
 
@@ -395,14 +395,14 @@ import { GetTimeoffPolicyTypesPolicyTypeSecurity } from "hibob/sdk/models/operat
 async function run() {
   const sdk = new Hibob();
 
-  
   const operationSecurity: GetTimeoffPolicyTypesPolicyTypeSecurity = {
     password: "<YOUR_PASSWORD_HERE>",
     username: "<YOUR_USERNAME_HERE>",
   };
+  
   const res = await sdk.timeOff.getTimeoffPolicyTypesPolicyType({
-      policyType: "string",
-    }, operationSecurity);
+    policyType: "string",
+  }, operationSecurity);
 
   if (res?.statusCode !== 200) {
     throw new Error("Unexpected status code: " + res?.statusCode || "-");
@@ -431,7 +431,7 @@ run();
 
 | Error Object    | Status Code     | Content Type    |
 | --------------- | --------------- | --------------- |
-| errors.SDKError | 400-600         | */*             |
+| errors.SDKError | 4xx-5xx         | */*             |
 
 ## getTimeoffPolicyTypesPolicyTypeReasonCodes
 
@@ -446,14 +446,14 @@ import { GetTimeoffPolicyTypesPolicyTypeReasonCodesSecurity } from "hibob/sdk/mo
 async function run() {
   const sdk = new Hibob();
 
-  
   const operationSecurity: GetTimeoffPolicyTypesPolicyTypeReasonCodesSecurity = {
     password: "<YOUR_PASSWORD_HERE>",
     username: "<YOUR_USERNAME_HERE>",
   };
+  
   const res = await sdk.timeOff.getTimeoffPolicyTypesPolicyTypeReasonCodes({
-      policyType: "string",
-    }, operationSecurity);
+    policyType: "string",
+  }, operationSecurity);
 
   if (res?.statusCode !== 200) {
     throw new Error("Unexpected status code: " + res?.statusCode || "-");
@@ -482,7 +482,7 @@ run();
 
 | Error Object    | Status Code     | Content Type    |
 | --------------- | --------------- | --------------- |
-| errors.SDKError | 400-600         | */*             |
+| errors.SDKError | 4xx-5xx         | */*             |
 
 ## getTimeoffRequestsChanges
 
@@ -498,16 +498,16 @@ import { RFCDate } from "hibob/types";
 async function run() {
   const sdk = new Hibob();
 
-  
   const operationSecurity: GetTimeoffRequestsChangesSecurity = {
     basic: {
       password: "<YOUR_PASSWORD_HERE>",
       username: "<YOUR_USERNAME_HERE>",
     },
   };
+  
   const res = await sdk.timeOff.getTimeoffRequestsChanges({
-      since: new RFCDate("2021-06-11"),
-    }, operationSecurity);
+    since: new RFCDate("2021-06-11"),
+  }, operationSecurity);
 
   if (res?.statusCode !== 200) {
     throw new Error("Unexpected status code: " + res?.statusCode || "-");
@@ -536,7 +536,7 @@ run();
 
 | Error Object    | Status Code     | Content Type    |
 | --------------- | --------------- | --------------- |
-| errors.SDKError | 400-600         | */*             |
+| errors.SDKError | 4xx-5xx         | */*             |
 
 ## getTimeoffWhosout
 
@@ -552,17 +552,17 @@ import { RFCDate } from "hibob/types";
 async function run() {
   const sdk = new Hibob();
 
-  
   const operationSecurity: GetTimeoffWhosoutSecurity = {
     basic: {
       password: "<YOUR_PASSWORD_HERE>",
       username: "<YOUR_USERNAME_HERE>",
     },
   };
+  
   const res = await sdk.timeOff.getTimeoffWhosout({
-      from: new RFCDate("2021-03-11"),
-      to: new RFCDate("2022-04-17"),
-    }, operationSecurity);
+    from: new RFCDate("2021-03-11"),
+    to: new RFCDate("2022-04-17"),
+  }, operationSecurity);
 
   if (res?.statusCode !== 200) {
     throw new Error("Unexpected status code: " + res?.statusCode || "-");
@@ -591,7 +591,7 @@ run();
 
 | Error Object    | Status Code     | Content Type    |
 | --------------- | --------------- | --------------- |
-| errors.SDKError | 400-600         | */*             |
+| errors.SDKError | 4xx-5xx         | */*             |
 
 ## postTimeoffEmployeesIdAdjustments
 
@@ -608,15 +608,15 @@ import { RFCDate } from "hibob/types";
 async function run() {
   const sdk = new Hibob();
 
-  
   const operationSecurity: PostTimeoffEmployeesIdAdjustmentsSecurity = {
     password: "<YOUR_PASSWORD_HERE>",
     username: "<YOUR_USERNAME_HERE>",
   };
+  
   const res = await sdk.timeOff.postTimeoffEmployeesIdAdjustments({
-      adjustmentRequest: {},
-      id: "<ID>",
-    }, operationSecurity);
+    adjustmentRequest: {},
+    id: "<ID>",
+  }, operationSecurity);
 
   if (res?.statusCode !== 200) {
     throw new Error("Unexpected status code: " + res?.statusCode || "-");
@@ -645,7 +645,7 @@ run();
 
 | Error Object    | Status Code     | Content Type    |
 | --------------- | --------------- | --------------- |
-| errors.SDKError | 400-600         | */*             |
+| errors.SDKError | 4xx-5xx         | */*             |
 
 ## postTimeoffEmployeesIdRequests
 
@@ -667,20 +667,20 @@ import { RFCDate } from "hibob/types";
 async function run() {
   const sdk = new Hibob();
 
-  
   const operationSecurity: PostTimeoffEmployeesIdRequestsSecurity = {
     basic: {
       password: "<YOUR_PASSWORD_HERE>",
       username: "<YOUR_USERNAME_HERE>",
     },
   };
+  
   const res = await sdk.timeOff.postTimeoffEmployeesIdRequests({
-      submitTimeoffRequest: {
-        policyType: "string",
-        startDate: new RFCDate("2021-04-15"),
-      },
-      id: "<ID>",
-    }, operationSecurity);
+    submitTimeoffRequest: {
+      policyType: "string",
+      startDate: new RFCDate("2021-04-15"),
+    },
+    id: "<ID>",
+  }, operationSecurity);
 
   if (res?.statusCode !== 200) {
     throw new Error("Unexpected status code: " + res?.statusCode || "-");
@@ -709,7 +709,7 @@ run();
 
 | Error Object    | Status Code     | Content Type    |
 | --------------- | --------------- | --------------- |
-| errors.SDKError | 400-600         | */*             |
+| errors.SDKError | 4xx-5xx         | */*             |
 
 ## postTimeoffPolicyTypesPolicyTypeReasonCodes
 
@@ -724,19 +724,19 @@ import { PostTimeoffPolicyTypesPolicyTypeReasonCodesSecurity } from "hibob/sdk/m
 async function run() {
   const sdk = new Hibob();
 
-  
   const operationSecurity: PostTimeoffPolicyTypesPolicyTypeReasonCodesSecurity = {
     password: "<YOUR_PASSWORD_HERE>",
     username: "<YOUR_USERNAME_HERE>",
   };
+  
   const res = await sdk.timeOff.postTimeoffPolicyTypesPolicyTypeReasonCodes({
-      reasonCodesNames: {
-        reasonCodes: [
-          "string",
-        ],
-      },
-      policyType: "string",
-    }, operationSecurity);
+    reasonCodesNames: {
+      reasonCodes: [
+        "string",
+      ],
+    },
+    policyType: "string",
+  }, operationSecurity);
 
   if (res?.statusCode !== 200) {
     throw new Error("Unexpected status code: " + res?.statusCode || "-");
@@ -765,4 +765,4 @@ run();
 
 | Error Object    | Status Code     | Content Type    |
 | --------------- | --------------- | --------------- |
-| errors.SDKError | 400-600         | */*             |
+| errors.SDKError | 4xx-5xx         | */*             |

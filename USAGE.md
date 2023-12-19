@@ -13,6 +13,7 @@ async function run() {
         password: "<YOUR_PASSWORD_HERE>",
         username: "<YOUR_USERNAME_HERE>",
     };
+
     const res = await sdk.attendance.postAttendanceImportImportMethod(
         {
             importAttendanceData: {

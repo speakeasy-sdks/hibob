@@ -21,18 +21,18 @@ import { DeletePeopleCustomTablesEmployeeIdCustomTableIdEntryIdSecurity } from "
 async function run() {
   const sdk = new Hibob();
 
-  
   const operationSecurity: DeletePeopleCustomTablesEmployeeIdCustomTableIdEntryIdSecurity = {
     basic: {
       password: "<YOUR_PASSWORD_HERE>",
       username: "<YOUR_USERNAME_HERE>",
     },
   };
+  
   const res = await sdk.customTables.deletePeopleCustomTablesEmployeeIdCustomTableIdEntryId({
-      customTableId: "string",
-      employeeId: "string",
-      entryId: "string",
-    }, operationSecurity);
+    customTableId: "string",
+    employeeId: "string",
+    entryId: "string",
+  }, operationSecurity);
 
   if (res?.statusCode !== 200) {
     throw new Error("Unexpected status code: " + res?.statusCode || "-");
@@ -61,7 +61,7 @@ run();
 
 | Error Object    | Status Code     | Content Type    |
 | --------------- | --------------- | --------------- |
-| errors.SDKError | 400-600         | */*             |
+| errors.SDKError | 4xx-5xx         | */*             |
 
 ## getPeopleCustomTablesEmployeeIdCustomTableId
 
@@ -76,17 +76,17 @@ import { GetPeopleCustomTablesEmployeeIdCustomTableIdSecurity } from "hibob/sdk/
 async function run() {
   const sdk = new Hibob();
 
-  
   const operationSecurity: GetPeopleCustomTablesEmployeeIdCustomTableIdSecurity = {
     basic: {
       password: "<YOUR_PASSWORD_HERE>",
       username: "<YOUR_USERNAME_HERE>",
     },
   };
+  
   const res = await sdk.customTables.getPeopleCustomTablesEmployeeIdCustomTableId({
-      customTableId: "string",
-      employeeId: "string",
-    }, operationSecurity);
+    customTableId: "string",
+    employeeId: "string",
+  }, operationSecurity);
 
   if (res?.statusCode !== 200) {
     throw new Error("Unexpected status code: " + res?.statusCode || "-");
@@ -115,7 +115,7 @@ run();
 
 | Error Object    | Status Code     | Content Type    |
 | --------------- | --------------- | --------------- |
-| errors.SDKError | 400-600         | */*             |
+| errors.SDKError | 4xx-5xx         | */*             |
 
 ## postPeopleCustomTablesEmployeeIdCustomTableId
 
@@ -130,18 +130,18 @@ import { PostPeopleCustomTablesEmployeeIdCustomTableIdSecurity } from "hibob/sdk
 async function run() {
   const sdk = new Hibob();
 
-  
   const operationSecurity: PostPeopleCustomTablesEmployeeIdCustomTableIdSecurity = {
     basic: {
       password: "<YOUR_PASSWORD_HERE>",
       username: "<YOUR_USERNAME_HERE>",
     },
   };
+  
   const res = await sdk.customTables.postPeopleCustomTablesEmployeeIdCustomTableId({
-      requestBody: {},
-      customTableId: "string",
-      employeeId: "string",
-    }, operationSecurity);
+    requestBody: {},
+    customTableId: "string",
+    employeeId: "string",
+  }, operationSecurity);
 
   if (res?.statusCode !== 200) {
     throw new Error("Unexpected status code: " + res?.statusCode || "-");
@@ -170,7 +170,7 @@ run();
 
 | Error Object    | Status Code     | Content Type    |
 | --------------- | --------------- | --------------- |
-| errors.SDKError | 400-600         | */*             |
+| errors.SDKError | 4xx-5xx         | */*             |
 
 ## putPeopleCustomTablesEmployeeIdCustomTableIdEntryId
 
@@ -185,19 +185,19 @@ import { PutPeopleCustomTablesEmployeeIdCustomTableIdEntryIdSecurity } from "hib
 async function run() {
   const sdk = new Hibob();
 
-  
   const operationSecurity: PutPeopleCustomTablesEmployeeIdCustomTableIdEntryIdSecurity = {
     basic: {
       password: "<YOUR_PASSWORD_HERE>",
       username: "<YOUR_USERNAME_HERE>",
     },
   };
+  
   const res = await sdk.customTables.putPeopleCustomTablesEmployeeIdCustomTableIdEntryId({
-      requestBody: {},
-      customTableId: "string",
-      employeeId: "string",
-      entryId: "string",
-    }, operationSecurity);
+    requestBody: {},
+    customTableId: "string",
+    employeeId: "string",
+    entryId: "string",
+  }, operationSecurity);
 
   if (res?.statusCode !== 200) {
     throw new Error("Unexpected status code: " + res?.statusCode || "-");
@@ -226,4 +226,4 @@ run();
 
 | Error Object    | Status Code     | Content Type    |
 | --------------- | --------------- | --------------- |
-| errors.SDKError | 400-600         | */*             |
+| errors.SDKError | 4xx-5xx         | */*             |

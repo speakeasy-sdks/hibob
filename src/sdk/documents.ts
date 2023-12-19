@@ -317,6 +317,7 @@ export class Documents extends ClientSDK {
             operations.PostDocsPeopleIdConfidentialUploadRequest$.outboundSchema.parse(input);
 
         const body$ = new FormData();
+
         if (isBlobLike(payload$.RequestBody.file)) {
             body$.append("file", payload$.RequestBody.file);
         } else {
@@ -461,6 +462,7 @@ export class Documents extends ClientSDK {
             operations.PostDocsPeopleIdSharedUploadRequest$.outboundSchema.parse(input);
 
         const body$ = new FormData();
+
         if (isBlobLike(payload$.RequestBody.file)) {
             body$.append("file", payload$.RequestBody.file);
         } else {

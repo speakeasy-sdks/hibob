@@ -19,12 +19,11 @@ import { Hibob } from "hibob";
 
 async function run() {
   const sdk = new Hibob({
-      security: {
-        bearer: "<YOUR_API_KEY_HERE>",
-      },
-    });
+    security: {
+      bearer: "<YOUR_API_KEY_HERE>",
+    },
+  });
 
-  
   const res = await sdk.tasks.getMyTasks();
 
   if (res?.statusCode !== 200) {
@@ -52,7 +51,7 @@ run();
 
 | Error Object    | Status Code     | Content Type    |
 | --------------- | --------------- | --------------- |
-| errors.SDKError | 400-600         | */*             |
+| errors.SDKError | 4xx-5xx         | */*             |
 
 ## getTasks
 
@@ -65,12 +64,11 @@ import { Hibob } from "hibob";
 
 async function run() {
   const sdk = new Hibob({
-      security: {
-        bearer: "<YOUR_API_KEY_HERE>",
-      },
-    });
+    security: {
+      bearer: "<YOUR_API_KEY_HERE>",
+    },
+  });
 
-  
   const res = await sdk.tasks.getTasks();
 
   if (res?.statusCode !== 200) {
@@ -98,7 +96,7 @@ run();
 
 | Error Object    | Status Code     | Content Type    |
 | --------------- | --------------- | --------------- |
-| errors.SDKError | 400-600         | */*             |
+| errors.SDKError | 4xx-5xx         | */*             |
 
 ## getTasksPeopleId
 
@@ -113,16 +111,16 @@ import { GetTasksPeopleIdSecurity, TaskStatus } from "hibob/sdk/models/operation
 async function run() {
   const sdk = new Hibob();
 
-  
   const operationSecurity: GetTasksPeopleIdSecurity = {
     basic: {
       password: "<YOUR_PASSWORD_HERE>",
       username: "<YOUR_USERNAME_HERE>",
     },
   };
+  
   const res = await sdk.tasks.getTasksPeopleId({
-      id: "string",
-    }, operationSecurity);
+    id: "string",
+  }, operationSecurity);
 
   if (res?.statusCode !== 200) {
     throw new Error("Unexpected status code: " + res?.statusCode || "-");
@@ -151,7 +149,7 @@ run();
 
 | Error Object    | Status Code     | Content Type    |
 | --------------- | --------------- | --------------- |
-| errors.SDKError | 400-600         | */*             |
+| errors.SDKError | 4xx-5xx         | */*             |
 
 ## postTasksTaskIdComplete
 
@@ -166,16 +164,16 @@ import { PostTasksTaskIdCompleteSecurity } from "hibob/sdk/models/operations";
 async function run() {
   const sdk = new Hibob();
 
-  
   const operationSecurity: PostTasksTaskIdCompleteSecurity = {
     basic: {
       password: "<YOUR_PASSWORD_HERE>",
       username: "<YOUR_USERNAME_HERE>",
     },
   };
+  
   const res = await sdk.tasks.postTasksTaskIdComplete({
-      taskId: "string",
-    }, operationSecurity);
+    taskId: "string",
+  }, operationSecurity);
 
   if (res?.statusCode !== 200) {
     throw new Error("Unexpected status code: " + res?.statusCode || "-");
@@ -204,4 +202,4 @@ run();
 
 | Error Object    | Status Code     | Content Type    |
 | --------------- | --------------- | --------------- |
-| errors.SDKError | 400-600         | */*             |
+| errors.SDKError | 4xx-5xx         | */*             |
