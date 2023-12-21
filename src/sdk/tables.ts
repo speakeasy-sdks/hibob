@@ -699,6 +699,7 @@ export class Tables extends ClientSDK {
      */
     async getPeopleIdVariable(
         input: operations.GetPeopleIdVariableRequest,
+        security: operations.GetPeopleIdVariableSecurity,
         options?: RequestOptions
     ): Promise<operations.GetPeopleIdVariableResponse> {
         const headers$ = new Headers();
@@ -714,11 +715,10 @@ export class Tables extends ClientSDK {
 
         const path$ = this.templateURLComponent("/people/{id}/variable")(pathParams$);
 
-        const security$ =
-            typeof this.options$.security === "function"
-                ? await this.options$.security()
-                : this.options$.security;
-        const securitySettings$ = this.resolveGlobalSecurity(security$);
+        const securitySettings$ = this.resolveSecurity(
+            [{ value: security?.basic, type: "http:basic" }],
+            [{ value: security?.bearer, fieldName: "Authorization", type: "apiKey:header" }]
+        );
 
         const response = await this.fetch$(
             {
@@ -1165,6 +1165,7 @@ export class Tables extends ClientSDK {
      */
     async putPeopleIdEmploymentEntryId(
         input: operations.PutPeopleIdEmploymentEntryIdRequest,
+        security: operations.PutPeopleIdEmploymentEntryIdSecurity,
         options?: RequestOptions
     ): Promise<operations.PutPeopleIdEmploymentEntryIdResponse> {
         const headers$ = new Headers();
@@ -1187,11 +1188,10 @@ export class Tables extends ClientSDK {
 
         const path$ = this.templateURLComponent("/people/{id}/employment/{entry_id}")(pathParams$);
 
-        const security$ =
-            typeof this.options$.security === "function"
-                ? await this.options$.security()
-                : this.options$.security;
-        const securitySettings$ = this.resolveGlobalSecurity(security$);
+        const securitySettings$ = this.resolveSecurity(
+            [{ value: security?.basic, type: "http:basic" }],
+            [{ value: security?.bearer, fieldName: "Authorization", type: "apiKey:header" }]
+        );
 
         const response = await this.fetch$(
             {
@@ -1292,6 +1292,7 @@ export class Tables extends ClientSDK {
      */
     async putPeopleIdWorkEntryId(
         input: operations.PutPeopleIdWorkEntryIdRequest,
+        security: operations.PutPeopleIdWorkEntryIdSecurity,
         options?: RequestOptions
     ): Promise<operations.PutPeopleIdWorkEntryIdResponse> {
         const headers$ = new Headers();
@@ -1313,11 +1314,10 @@ export class Tables extends ClientSDK {
 
         const path$ = this.templateURLComponent("/people/{id}/work/{entry_id}")(pathParams$);
 
-        const security$ =
-            typeof this.options$.security === "function"
-                ? await this.options$.security()
-                : this.options$.security;
-        const securitySettings$ = this.resolveGlobalSecurity(security$);
+        const securitySettings$ = this.resolveSecurity(
+            [{ value: security?.basic, type: "http:basic" }],
+            [{ value: security?.bearer, fieldName: "Authorization", type: "apiKey:header" }]
+        );
 
         const response = await this.fetch$(
             {

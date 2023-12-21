@@ -5,6 +5,10 @@
 import * as shared from "../../../sdk/models/shared";
 import { z } from "zod";
 
+export type GetMyTasksSecurity = {
+    bearer: string;
+};
+
 export type GetMyTasksResponse = {
     /**
      * HTTP response content type for this operation

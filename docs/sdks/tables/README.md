@@ -623,17 +623,21 @@ Returns a list of variable payments for a given employee.<br /><b>Supported user
 
 ```typescript
 import { Hibob } from "hibob";
+import { GetPeopleIdVariableSecurity } from "hibob/sdk/models/operations";
 
 async function run() {
-  const sdk = new Hibob({
-    security: {
-      bearer: "<YOUR_API_KEY_HERE>",
-    },
-  });
+  const sdk = new Hibob();
 
+  const operationSecurity: GetPeopleIdVariableSecurity = {
+    basic: {
+      password: "<YOUR_PASSWORD_HERE>",
+      username: "<YOUR_USERNAME_HERE>",
+    },
+  };
+  
   const res = await sdk.tables.getPeopleIdVariable({
     id: "<ID>",
-  });
+  }, operationSecurity);
 
   if (res?.statusCode !== 200) {
     throw new Error("Unexpected status code: " + res?.statusCode || "-");
@@ -650,6 +654,7 @@ run();
 | Parameter                                                                                                                                                                      | Type                                                                                                                                                                           | Required                                                                                                                                                                       | Description                                                                                                                                                                    |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | `request`                                                                                                                                                                      | [operations.GetPeopleIdVariableRequest](../../sdk/models/operations/getpeopleidvariablerequest.md)                                                                             | :heavy_check_mark:                                                                                                                                                             | The request object to use for the request.                                                                                                                                     |
+| `security`                                                                                                                                                                     | [operations.GetPeopleIdVariableSecurity](../../sdk/models/operations/getpeopleidvariablesecurity.md)                                                                           | :heavy_check_mark:                                                                                                                                                             | The security requirements to use for the request.                                                                                                                              |
 | `options`                                                                                                                                                                      | RequestOptions                                                                                                                                                                 | :heavy_minus_sign:                                                                                                                                                             | Used to set various options for making HTTP requests.                                                                                                                          |
 | `options.fetchOptions`                                                                                                                                                         | [RequestInit](https://developer.mozilla.org/en-US/docs/Web/API/Request/Request#options)                                                                                        | :heavy_minus_sign:                                                                                                                                                             | Options that are passed to the underlying HTTP request. This can be used to inject extra headers for examples. All `Request` options, except `method` and `body`, are allowed. |
 
@@ -1090,22 +1095,26 @@ run();
 
 ```typescript
 import { Hibob } from "hibob";
+import { PutPeopleIdEmploymentEntryIdSecurity } from "hibob/sdk/models/operations";
 import { RFCDate } from "hibob/types";
 
 async function run() {
-  const sdk = new Hibob({
-    security: {
-      bearer: "<YOUR_API_KEY_HERE>",
-    },
-  });
+  const sdk = new Hibob();
 
+  const operationSecurity: PutPeopleIdEmploymentEntryIdSecurity = {
+    basic: {
+      password: "<YOUR_PASSWORD_HERE>",
+      username: "<YOUR_USERNAME_HERE>",
+    },
+  };
+  
   const res = await sdk.tables.putPeopleIdEmploymentEntryId({
     employmentEntry: {
       effectiveDate: new RFCDate("2022-01-16"),
     },
     entryId: 799673,
     id: "<ID>",
-  });
+  }, operationSecurity);
 
   if (res?.statusCode !== 200) {
     throw new Error("Unexpected status code: " + res?.statusCode || "-");
@@ -1122,6 +1131,7 @@ run();
 | Parameter                                                                                                                                                                      | Type                                                                                                                                                                           | Required                                                                                                                                                                       | Description                                                                                                                                                                    |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | `request`                                                                                                                                                                      | [operations.PutPeopleIdEmploymentEntryIdRequest](../../sdk/models/operations/putpeopleidemploymententryidrequest.md)                                                           | :heavy_check_mark:                                                                                                                                                             | The request object to use for the request.                                                                                                                                     |
+| `security`                                                                                                                                                                     | [operations.PutPeopleIdEmploymentEntryIdSecurity](../../sdk/models/operations/putpeopleidemploymententryidsecurity.md)                                                         | :heavy_check_mark:                                                                                                                                                             | The security requirements to use for the request.                                                                                                                              |
 | `options`                                                                                                                                                                      | RequestOptions                                                                                                                                                                 | :heavy_minus_sign:                                                                                                                                                             | Used to set various options for making HTTP requests.                                                                                                                          |
 | `options.fetchOptions`                                                                                                                                                         | [RequestInit](https://developer.mozilla.org/en-US/docs/Web/API/Request/Request#options)                                                                                        | :heavy_minus_sign:                                                                                                                                                             | Options that are passed to the underlying HTTP request. This can be used to inject extra headers for examples. All `Request` options, except `method` and `body`, are allowed. |
 
@@ -1207,15 +1217,19 @@ run();
 
 ```typescript
 import { Hibob } from "hibob";
+import { PutPeopleIdWorkEntryIdSecurity } from "hibob/sdk/models/operations";
 import { RFCDate } from "hibob/types";
 
 async function run() {
-  const sdk = new Hibob({
-    security: {
-      bearer: "<YOUR_API_KEY_HERE>",
-    },
-  });
+  const sdk = new Hibob();
 
+  const operationSecurity: PutPeopleIdWorkEntryIdSecurity = {
+    basic: {
+      password: "<YOUR_PASSWORD_HERE>",
+      username: "<YOUR_USERNAME_HERE>",
+    },
+  };
+  
   const res = await sdk.tables.putPeopleIdWorkEntryId({
     workEntry: {
       customColumns: {},
@@ -1226,7 +1240,7 @@ async function run() {
     },
     entryId: 410628,
     id: "<ID>",
-  });
+  }, operationSecurity);
 
   if (res?.statusCode !== 200) {
     throw new Error("Unexpected status code: " + res?.statusCode || "-");
@@ -1243,6 +1257,7 @@ run();
 | Parameter                                                                                                                                                                      | Type                                                                                                                                                                           | Required                                                                                                                                                                       | Description                                                                                                                                                                    |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | `request`                                                                                                                                                                      | [operations.PutPeopleIdWorkEntryIdRequest](../../sdk/models/operations/putpeopleidworkentryidrequest.md)                                                                       | :heavy_check_mark:                                                                                                                                                             | The request object to use for the request.                                                                                                                                     |
+| `security`                                                                                                                                                                     | [operations.PutPeopleIdWorkEntryIdSecurity](../../sdk/models/operations/putpeopleidworkentryidsecurity.md)                                                                     | :heavy_check_mark:                                                                                                                                                             | The security requirements to use for the request.                                                                                                                              |
 | `options`                                                                                                                                                                      | RequestOptions                                                                                                                                                                 | :heavy_minus_sign:                                                                                                                                                             | Used to set various options for making HTTP requests.                                                                                                                          |
 | `options.fetchOptions`                                                                                                                                                         | [RequestInit](https://developer.mozilla.org/en-US/docs/Web/API/Request/Request#options)                                                                                        | :heavy_minus_sign:                                                                                                                                                             | Options that are passed to the underlying HTTP request. This can be used to inject extra headers for examples. All `Request` options, except `method` and `body`, are allowed. |
 

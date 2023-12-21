@@ -5,6 +5,11 @@
 import * as shared from "../../../sdk/models/shared";
 import { z } from "zod";
 
+export type PutPeopleIdEmploymentEntryIdSecurity = {
+    basic?: shared.SchemeBasic | undefined;
+    bearer?: string | undefined;
+};
+
 export type PutPeopleIdEmploymentEntryIdRequest = {
     employmentEntry: shared.EmploymentEntry;
     /**

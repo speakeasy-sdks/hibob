@@ -13,16 +13,14 @@ Returns a list of the company positions, filtered by the specified attributes.  
 
 ```typescript
 import { Hibob } from "hibob";
-import { PostObjectsPositionSearchSecurity } from "hibob/sdk/models/operations";
 
 async function run() {
-  const sdk = new Hibob();
+  const sdk = new Hibob({
+    security: {
+      password: "<YOUR_PASSWORD_HERE>",
+    },
+  });
 
-  const operationSecurity: PostObjectsPositionSearchSecurity = {
-    password: "<YOUR_PASSWORD_HERE>",
-    username: "<YOUR_USERNAME_HERE>",
-  };
-  
   const res = await sdk.objects.postObjectsPositionSearch({
     fields: [
       "string",
@@ -36,7 +34,7 @@ async function run() {
         ],
       },
     ],
-  }, operationSecurity);
+  });
 
   if (res?.statusCode !== 200) {
     throw new Error("Unexpected status code: " + res?.statusCode || "-");
@@ -53,7 +51,6 @@ run();
 | Parameter                                                                                                                                                                      | Type                                                                                                                                                                           | Required                                                                                                                                                                       | Description                                                                                                                                                                    |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | `request`                                                                                                                                                                      | [shared.GetPositionsRequest](../../sdk/models/shared/getpositionsrequest.md)                                                                                                   | :heavy_check_mark:                                                                                                                                                             | The request object to use for the request.                                                                                                                                     |
-| `security`                                                                                                                                                                     | [operations.PostObjectsPositionSearchSecurity](../../sdk/models/operations/postobjectspositionsearchsecurity.md)                                                               | :heavy_check_mark:                                                                                                                                                             | The security requirements to use for the request.                                                                                                                              |
 | `options`                                                                                                                                                                      | RequestOptions                                                                                                                                                                 | :heavy_minus_sign:                                                                                                                                                             | Used to set various options for making HTTP requests.                                                                                                                          |
 | `options.fetchOptions`                                                                                                                                                         | [RequestInit](https://developer.mozilla.org/en-US/docs/Web/API/Request/Request#options)                                                                                        | :heavy_minus_sign:                                                                                                                                                             | Options that are passed to the underlying HTTP request. This can be used to inject extra headers for examples. All `Request` options, except `method` and `body`, are allowed. |
 

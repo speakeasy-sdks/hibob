@@ -96,7 +96,6 @@ export class TimeOff extends ClientSDK {
      */
     async getTimeoffEmployeesIdBalance(
         input: operations.GetTimeoffEmployeesIdBalanceRequest,
-        security: operations.GetTimeoffEmployeesIdBalanceSecurity,
         options?: RequestOptions
     ): Promise<operations.GetTimeoffEmployeesIdBalanceResponse> {
         const headers$ = new Headers();
@@ -123,10 +122,11 @@ export class TimeOff extends ClientSDK {
             .filter(Boolean)
             .join("&");
 
-        const securitySettings$ = this.resolveSecurity([
-            { value: security?.password, fieldName: "password", type: "http:basic" },
-            { value: security?.username, fieldName: "username", type: "http:basic" },
-        ]);
+        const security$ =
+            typeof this.options$.security === "function"
+                ? await this.options$.security()
+                : this.options$.security;
+        const securitySettings$ = this.resolveGlobalSecurity(security$);
 
         const response = await this.fetch$(
             {
@@ -325,7 +325,6 @@ export class TimeOff extends ClientSDK {
      */
     async getTimeoffPolicies(
         input: operations.GetTimeoffPoliciesRequest,
-        security: operations.GetTimeoffPoliciesSecurity,
         options?: RequestOptions
     ): Promise<operations.GetTimeoffPoliciesResponse> {
         const headers$ = new Headers();
@@ -346,10 +345,11 @@ export class TimeOff extends ClientSDK {
             .filter(Boolean)
             .join("&");
 
-        const securitySettings$ = this.resolveSecurity([
-            { value: security?.password, fieldName: "password", type: "http:basic" },
-            { value: security?.username, fieldName: "username", type: "http:basic" },
-        ]);
+        const security$ =
+            typeof this.options$.security === "function"
+                ? await this.options$.security()
+                : this.options$.security;
+        const securitySettings$ = this.resolveGlobalSecurity(security$);
 
         const response = await this.fetch$(
             {
@@ -394,7 +394,6 @@ export class TimeOff extends ClientSDK {
      */
     async getTimeoffPoliciesNames(
         input: operations.GetTimeoffPoliciesNamesRequest,
-        security: operations.GetTimeoffPoliciesNamesSecurity,
         options?: RequestOptions
     ): Promise<operations.GetTimeoffPoliciesNamesResponse> {
         const headers$ = new Headers();
@@ -415,10 +414,11 @@ export class TimeOff extends ClientSDK {
             .filter(Boolean)
             .join("&");
 
-        const securitySettings$ = this.resolveSecurity([
-            { value: security?.password, fieldName: "password", type: "http:basic" },
-            { value: security?.username, fieldName: "username", type: "http:basic" },
-        ]);
+        const security$ =
+            typeof this.options$.security === "function"
+                ? await this.options$.security()
+                : this.options$.security;
+        const securitySettings$ = this.resolveGlobalSecurity(security$);
 
         const response = await this.fetch$(
             {
@@ -458,7 +458,6 @@ export class TimeOff extends ClientSDK {
      * Get a list of all policy type names.<br /><b>Supported user types:</b> Service.
      */
     async getTimeoffPolicyTypes(
-        security: operations.GetTimeoffPolicyTypesSecurity,
         options?: RequestOptions
     ): Promise<operations.GetTimeoffPolicyTypesResponse> {
         const headers$ = new Headers();
@@ -467,10 +466,11 @@ export class TimeOff extends ClientSDK {
 
         const path$ = this.templateURLComponent("/timeoff/policy-types")();
 
-        const securitySettings$ = this.resolveSecurity([
-            { value: security?.password, fieldName: "password", type: "http:basic" },
-            { value: security?.username, fieldName: "username", type: "http:basic" },
-        ]);
+        const security$ =
+            typeof this.options$.security === "function"
+                ? await this.options$.security()
+                : this.options$.security;
+        const securitySettings$ = this.resolveGlobalSecurity(security$);
 
         const response = await this.fetch$(
             { security: securitySettings$, method: "get", path: path$, headers: headers$ },
@@ -511,7 +511,6 @@ export class TimeOff extends ClientSDK {
      */
     async getTimeoffPolicyTypesPolicyType(
         input: operations.GetTimeoffPolicyTypesPolicyTypeRequest,
-        security: operations.GetTimeoffPolicyTypesPolicyTypeSecurity,
         options?: RequestOptions
     ): Promise<operations.GetTimeoffPolicyTypesPolicyTypeResponse> {
         const headers$ = new Headers();
@@ -531,10 +530,11 @@ export class TimeOff extends ClientSDK {
 
         const path$ = this.templateURLComponent("/timeoff/policy-types/{policyType}")(pathParams$);
 
-        const securitySettings$ = this.resolveSecurity([
-            { value: security?.password, fieldName: "password", type: "http:basic" },
-            { value: security?.username, fieldName: "username", type: "http:basic" },
-        ]);
+        const security$ =
+            typeof this.options$.security === "function"
+                ? await this.options$.security()
+                : this.options$.security;
+        const securitySettings$ = this.resolveGlobalSecurity(security$);
 
         const response = await this.fetch$(
             {
@@ -580,7 +580,6 @@ export class TimeOff extends ClientSDK {
      */
     async getTimeoffPolicyTypesPolicyTypeReasonCodes(
         input: operations.GetTimeoffPolicyTypesPolicyTypeReasonCodesRequest,
-        security: operations.GetTimeoffPolicyTypesPolicyTypeReasonCodesSecurity,
         options?: RequestOptions
     ): Promise<operations.GetTimeoffPolicyTypesPolicyTypeReasonCodesResponse> {
         const headers$ = new Headers();
@@ -604,10 +603,11 @@ export class TimeOff extends ClientSDK {
             pathParams$
         );
 
-        const securitySettings$ = this.resolveSecurity([
-            { value: security?.password, fieldName: "password", type: "http:basic" },
-            { value: security?.username, fieldName: "username", type: "http:basic" },
-        ]);
+        const security$ =
+            typeof this.options$.security === "function"
+                ? await this.options$.security()
+                : this.options$.security;
+        const securitySettings$ = this.resolveGlobalSecurity(security$);
 
         const response = await this.fetch$(
             {
@@ -798,7 +798,6 @@ export class TimeOff extends ClientSDK {
      */
     async postTimeoffEmployeesIdAdjustments(
         input: operations.PostTimeoffEmployeesIdAdjustmentsRequest,
-        security: operations.PostTimeoffEmployeesIdAdjustmentsSecurity,
         options?: RequestOptions
     ): Promise<operations.PostTimeoffEmployeesIdAdjustmentsResponse> {
         const headers$ = new Headers();
@@ -817,10 +816,11 @@ export class TimeOff extends ClientSDK {
 
         const path$ = this.templateURLComponent("/timeoff/employees/{id}/adjustments")(pathParams$);
 
-        const securitySettings$ = this.resolveSecurity([
-            { value: security?.password, fieldName: "password", type: "http:basic" },
-            { value: security?.username, fieldName: "username", type: "http:basic" },
-        ]);
+        const security$ =
+            typeof this.options$.security === "function"
+                ? await this.options$.security()
+                : this.options$.security;
+        const securitySettings$ = this.resolveGlobalSecurity(security$);
 
         const response = await this.fetch$(
             {
@@ -928,7 +928,6 @@ export class TimeOff extends ClientSDK {
      */
     async postTimeoffPolicyTypesPolicyTypeReasonCodes(
         input: operations.PostTimeoffPolicyTypesPolicyTypeReasonCodesRequest,
-        security: operations.PostTimeoffPolicyTypesPolicyTypeReasonCodesSecurity,
         options?: RequestOptions
     ): Promise<operations.PostTimeoffPolicyTypesPolicyTypeReasonCodesResponse> {
         const headers$ = new Headers();
@@ -954,10 +953,11 @@ export class TimeOff extends ClientSDK {
             pathParams$
         );
 
-        const securitySettings$ = this.resolveSecurity([
-            { value: security?.password, fieldName: "password", type: "http:basic" },
-            { value: security?.username, fieldName: "username", type: "http:basic" },
-        ]);
+        const security$ =
+            typeof this.options$.security === "function"
+                ? await this.options$.security()
+                : this.options$.security;
+        const securitySettings$ = this.resolveGlobalSecurity(security$);
 
         const response = await this.fetch$(
             {

@@ -281,6 +281,7 @@ export class Payroll extends ClientSDK {
      */
     async getPayrollHistory(
         input: operations.GetPayrollHistoryRequest,
+        security: operations.GetPayrollHistorySecurity,
         options?: RequestOptions
     ): Promise<operations.GetPayrollHistoryResponse> {
         const headers$ = new Headers();
@@ -305,11 +306,10 @@ export class Payroll extends ClientSDK {
             .filter(Boolean)
             .join("&");
 
-        const security$ =
-            typeof this.options$.security === "function"
-                ? await this.options$.security()
-                : this.options$.security;
-        const securitySettings$ = this.resolveGlobalSecurity(security$);
+        const securitySettings$ = this.resolveSecurity(
+            [{ value: security?.basic, type: "http:basic" }],
+            [{ value: security?.bearer, fieldName: "Authorization", type: "apiKey:header" }]
+        );
 
         const response = await this.fetch$(
             {
@@ -534,6 +534,7 @@ export class Payroll extends ClientSDK {
      */
     async getPeopleIdVariable(
         input: operations.GetPeopleIdVariableRequest,
+        security: operations.GetPeopleIdVariableSecurity,
         options?: RequestOptions
     ): Promise<operations.GetPeopleIdVariableResponse> {
         const headers$ = new Headers();
@@ -549,11 +550,10 @@ export class Payroll extends ClientSDK {
 
         const path$ = this.templateURLComponent("/people/{id}/variable")(pathParams$);
 
-        const security$ =
-            typeof this.options$.security === "function"
-                ? await this.options$.security()
-                : this.options$.security;
-        const securitySettings$ = this.resolveGlobalSecurity(security$);
+        const securitySettings$ = this.resolveSecurity(
+            [{ value: security?.basic, type: "http:basic" }],
+            [{ value: security?.bearer, fieldName: "Authorization", type: "apiKey:header" }]
+        );
 
         const response = await this.fetch$(
             {

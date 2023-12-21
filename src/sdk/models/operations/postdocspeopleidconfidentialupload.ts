@@ -7,6 +7,10 @@ import * as shared from "../../../sdk/models/shared";
 import { blobLikeSchema } from "../../../sdk/types";
 import { z } from "zod";
 
+export type PostDocsPeopleIdConfidentialUploadSecurity = {
+    bearer: string;
+};
+
 export type FileT = {
     content: Uint8Array | string;
     fileName: string;

@@ -3,5 +3,6 @@
  */
 
 export type Security = {
-    bearer?: string | undefined;
+    password?: string | undefined;
+    username?: string | undefined;
 };

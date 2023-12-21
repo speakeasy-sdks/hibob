@@ -23,36 +23,29 @@ yarn add hibob
 
 ```typescript
 import { Hibob } from "hibob";
-import {
-    ImportMethod,
-    PostAttendanceImportImportMethodSecurity,
-} from "hibob/sdk/models/operations";
+import { ImportMethod } from "hibob/sdk/models/operations";
 
 async function run() {
-    const sdk = new Hibob();
-
-    const operationSecurity: PostAttendanceImportImportMethodSecurity = {
-        password: "<YOUR_PASSWORD_HERE>",
-        username: "<YOUR_USERNAME_HERE>",
-    };
-
-    const res = await sdk.attendance.postAttendanceImportImportMethod(
-        {
-            importAttendanceData: {
-                dateTimeFormat: "yyyy-MM-dd hh:mm a",
-                idType: "string",
-                requests: [
-                    {
-                        clockIn: "2022-06-12T08:00",
-                        clockOut: "2022-06-12T17:00",
-                        id: "12356733644",
-                    },
-                ],
-            },
-            importMethod: ImportMethod.Immediate,
+    const sdk = new Hibob({
+        security: {
+            password: "<YOUR_PASSWORD_HERE>",
         },
-        operationSecurity
-    );
+    });
+
+    const res = await sdk.attendance.postAttendanceImportImportMethod({
+        importAttendanceData: {
+            dateTimeFormat: "yyyy-MM-dd hh:mm a",
+            idType: "string",
+            requests: [
+                {
+                    clockIn: "2022-06-12T08:00",
+                    clockOut: "2022-06-12T17:00",
+                    id: "12356733644",
+                },
+            ],
+        },
+        importMethod: ImportMethod.Immediate,
+    });
 
     if (res?.statusCode !== 200) {
         throw new Error("Unexpected status code: " + res?.statusCode || "-");
@@ -247,37 +240,30 @@ Example
 
 ```typescript
 import { Hibob } from "hibob";
-import {
-    ImportMethod,
-    PostAttendanceImportImportMethodSecurity,
-} from "hibob/sdk/models/operations";
+import { ImportMethod } from "hibob/sdk/models/operations";
 
 async function run() {
-    const sdk = new Hibob();
-
-    const operationSecurity: PostAttendanceImportImportMethodSecurity = {
-        password: "<YOUR_PASSWORD_HERE>",
-        username: "<YOUR_USERNAME_HERE>",
-    };
+    const sdk = new Hibob({
+        security: {
+            password: "<YOUR_PASSWORD_HERE>",
+        },
+    });
 
     const res = await sdk.attendance
-        .postAttendanceImportImportMethod(
-            {
-                importAttendanceData: {
-                    dateTimeFormat: "yyyy-MM-dd hh:mm a",
-                    idType: "string",
-                    requests: [
-                        {
-                            clockIn: "2022-06-12T08:00",
-                            clockOut: "2022-06-12T17:00",
-                            id: "12356733644",
-                        },
-                    ],
-                },
-                importMethod: ImportMethod.Immediate,
+        .postAttendanceImportImportMethod({
+            importAttendanceData: {
+                dateTimeFormat: "yyyy-MM-dd hh:mm a",
+                idType: "string",
+                requests: [
+                    {
+                        clockIn: "2022-06-12T08:00",
+                        clockOut: "2022-06-12T17:00",
+                        id: "12356733644",
+                    },
+                ],
             },
-            operationSecurity
-        )
+            importMethod: ImportMethod.Immediate,
+        })
         .catch((err) => {
             throw err;
         });
@@ -374,24 +360,39 @@ const sdk = new Hibob({ httpClient });
 
 ### Per-Client Security Schemes
 
-This SDK supports the following security scheme globally:
+This SDK supports the following security schemes globally:
 
-| Name     | Type     | Scheme   |
-| -------- | -------- | -------- |
-| `bearer` | apiKey   | API key  |
+| Name       | Type       | Scheme     |
+| ---------- | ---------- | ---------- |
+| `password` | http       | HTTP Basic |
+| `username` | http       | HTTP Basic |
 
-You can set the security parameters through the `security` optional parameter when initializing the SDK client instance. For example:
+You can set the security parameters through the `security` optional parameter when initializing the SDK client instance. The selected scheme will be used by default to authenticate with the API for all operations that support it. For example:
 ```typescript
 import { Hibob } from "hibob";
+import { ImportMethod } from "hibob/sdk/models/operations";
 
 async function run() {
     const sdk = new Hibob({
         security: {
-            bearer: "<YOUR_API_KEY_HERE>",
+            password: "<YOUR_PASSWORD_HERE>",
         },
     });
 
-    const res = await sdk.people.getAvatars({});
+    const res = await sdk.attendance.postAttendanceImportImportMethod({
+        importAttendanceData: {
+            dateTimeFormat: "yyyy-MM-dd hh:mm a",
+            idType: "string",
+            requests: [
+                {
+                    clockIn: "2022-06-12T08:00",
+                    clockOut: "2022-06-12T17:00",
+                    id: "12356733644",
+                },
+            ],
+        },
+        importMethod: ImportMethod.Immediate,
+    });
 
     if (res?.statusCode !== 200) {
         throw new Error("Unexpected status code: " + res?.statusCode || "-");
@@ -409,33 +410,22 @@ run();
 Some operations in this SDK require the security scheme to be specified at the request level. For example:
 ```typescript
 import { Hibob } from "hibob";
-import {
-    ImportMethod,
-    PostAttendanceImportImportMethodSecurity,
-} from "hibob/sdk/models/operations";
+import { DeletePeopleIdEmploymentEntryIdSecurity } from "hibob/sdk/models/operations";
 
 async function run() {
     const sdk = new Hibob();
 
-    const operationSecurity: PostAttendanceImportImportMethodSecurity = {
-        password: "<YOUR_PASSWORD_HERE>",
-        username: "<YOUR_USERNAME_HERE>",
+    const operationSecurity: DeletePeopleIdEmploymentEntryIdSecurity = {
+        basic: {
+            password: "<YOUR_PASSWORD_HERE>",
+            username: "<YOUR_USERNAME_HERE>",
+        },
     };
 
-    const res = await sdk.attendance.postAttendanceImportImportMethod(
+    const res = await sdk.people.deletePeopleIdEmploymentEntryId(
         {
-            importAttendanceData: {
-                dateTimeFormat: "yyyy-MM-dd hh:mm a",
-                idType: "string",
-                requests: [
-                    {
-                        clockIn: "2022-06-12T08:00",
-                        clockOut: "2022-06-12T17:00",
-                        id: "12356733644",
-                    },
-                ],
-            },
-            importMethod: ImportMethod.Immediate,
+            entryId: 511526,
+            id: "<ID>",
         },
         operationSecurity
     );
@@ -468,21 +458,25 @@ Certain SDK methods accept files as part of a multi-part request. It is possible
 
 ```typescript
 import { Hibob } from "hibob";
+import { PostDocsPeopleIdConfidentialUploadSecurity } from "hibob/sdk/models/operations";
 import { openAsBlob } from "node:fs";
 
 async function run() {
-    const sdk = new Hibob({
-        security: {
-            bearer: "<YOUR_API_KEY_HERE>",
-        },
-    });
+    const sdk = new Hibob();
 
-    const res = await sdk.documents.postDocsPeopleIdConfidentialUpload({
-        requestBody: {
-            file: await openAsBlob("./sample-file"),
+    const operationSecurity: PostDocsPeopleIdConfidentialUploadSecurity = {
+        bearer: "<YOUR_API_KEY_HERE>",
+    };
+
+    const res = await sdk.documents.postDocsPeopleIdConfidentialUpload(
+        {
+            requestBody: {
+                file: await openAsBlob("./sample-file"),
+            },
+            id: "<ID>",
         },
-        id: "<ID>",
-    });
+        operationSecurity
+    );
 
     if (res?.statusCode !== 200) {
         throw new Error("Unexpected status code: " + res?.statusCode || "-");

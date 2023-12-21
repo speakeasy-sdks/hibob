@@ -5,11 +5,6 @@
 import * as shared from "../../../sdk/models/shared";
 import { z } from "zod";
 
-export type PostTimeoffPolicyTypesPolicyTypeReasonCodesSecurity = {
-    password: string;
-    username: string;
-};
-
 export type PostTimeoffPolicyTypesPolicyTypeReasonCodesRequest = {
     reasonCodesNames: shared.ReasonCodesNames;
     /**

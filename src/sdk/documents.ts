@@ -173,6 +173,7 @@ export class Documents extends ClientSDK {
      */
     async getDocsPeopleId(
         input: operations.GetDocsPeopleIdRequest,
+        security: operations.GetDocsPeopleIdSecurity,
         options?: RequestOptions
     ): Promise<operations.GetDocsPeopleIdResponse> {
         const headers$ = new Headers();
@@ -188,11 +189,10 @@ export class Documents extends ClientSDK {
 
         const path$ = this.templateURLComponent("/docs/people/{id}")(pathParams$);
 
-        const security$ =
-            typeof this.options$.security === "function"
-                ? await this.options$.security()
-                : this.options$.security;
-        const securitySettings$ = this.resolveGlobalSecurity(security$);
+        const securitySettings$ = this.resolveSecurity(
+            [{ value: security?.basic, type: "http:basic" }],
+            [{ value: security?.bearer, fieldName: "Authorization", type: "apiKey:header" }]
+        );
 
         const response = await this.fetch$(
             {
@@ -239,6 +239,7 @@ export class Documents extends ClientSDK {
      */
     async postDocsPeopleIdConfidential(
         input: operations.PostDocsPeopleIdConfidentialRequest,
+        security: operations.PostDocsPeopleIdConfidentialSecurity,
         options?: RequestOptions
     ): Promise<operations.PostDocsPeopleIdConfidentialResponse> {
         const headers$ = new Headers();
@@ -257,11 +258,10 @@ export class Documents extends ClientSDK {
 
         const path$ = this.templateURLComponent("/docs/people/{id}/confidential")(pathParams$);
 
-        const security$ =
-            typeof this.options$.security === "function"
-                ? await this.options$.security()
-                : this.options$.security;
-        const securitySettings$ = this.resolveGlobalSecurity(security$);
+        const securitySettings$ = this.resolveSecurity(
+            [{ value: security?.basic, type: "http:basic" }],
+            [{ value: security?.bearer, fieldName: "Authorization", type: "apiKey:header" }]
+        );
 
         const response = await this.fetch$(
             {
@@ -307,6 +307,7 @@ export class Documents extends ClientSDK {
      */
     async postDocsPeopleIdConfidentialUpload(
         input: operations.PostDocsPeopleIdConfidentialUploadRequest,
+        security: operations.PostDocsPeopleIdConfidentialUploadSecurity,
         options?: RequestOptions
     ): Promise<operations.PostDocsPeopleIdConfidentialUploadResponse> {
         const headers$ = new Headers();
@@ -336,11 +337,9 @@ export class Documents extends ClientSDK {
             pathParams$
         );
 
-        const security$ =
-            typeof this.options$.security === "function"
-                ? await this.options$.security()
-                : this.options$.security;
-        const securitySettings$ = this.resolveGlobalSecurity(security$);
+        const securitySettings$ = this.resolveSecurity([
+            { value: security?.bearer, fieldName: "Authorization", type: "apiKey:header" },
+        ]);
 
         const response = await this.fetch$(
             {
@@ -387,6 +386,7 @@ export class Documents extends ClientSDK {
      */
     async postDocsPeopleIdShared(
         input: operations.PostDocsPeopleIdSharedRequest,
+        security: operations.PostDocsPeopleIdSharedSecurity,
         options?: RequestOptions
     ): Promise<operations.PostDocsPeopleIdSharedResponse> {
         const headers$ = new Headers();
@@ -404,11 +404,10 @@ export class Documents extends ClientSDK {
 
         const path$ = this.templateURLComponent("/docs/people/{id}/shared")(pathParams$);
 
-        const security$ =
-            typeof this.options$.security === "function"
-                ? await this.options$.security()
-                : this.options$.security;
-        const securitySettings$ = this.resolveGlobalSecurity(security$);
+        const securitySettings$ = this.resolveSecurity(
+            [{ value: security?.basic, type: "http:basic" }],
+            [{ value: security?.bearer, fieldName: "Authorization", type: "apiKey:header" }]
+        );
 
         const response = await this.fetch$(
             {
@@ -452,6 +451,7 @@ export class Documents extends ClientSDK {
      */
     async postDocsPeopleIdSharedUpload(
         input: operations.PostDocsPeopleIdSharedUploadRequest,
+        security: operations.PostDocsPeopleIdSharedUploadSecurity,
         options?: RequestOptions
     ): Promise<operations.PostDocsPeopleIdSharedUploadResponse> {
         const headers$ = new Headers();
@@ -479,11 +479,9 @@ export class Documents extends ClientSDK {
 
         const path$ = this.templateURLComponent("/docs/people/{id}/shared/upload")(pathParams$);
 
-        const security$ =
-            typeof this.options$.security === "function"
-                ? await this.options$.security()
-                : this.options$.security;
-        const securitySettings$ = this.resolveGlobalSecurity(security$);
+        const securitySettings$ = this.resolveSecurity([
+            { value: security?.bearer, fieldName: "Authorization", type: "apiKey:header" },
+        ]);
 
         const response = await this.fetch$(
             {

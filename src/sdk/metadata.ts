@@ -348,7 +348,6 @@ export class Metadata extends ClientSDK {
      * Returns a list of all fields of object type position.<br/><b>Supported user types:</b> Service.
      */
     async getMetadataObjectsPosition(
-        security: operations.GetMetadataObjectsPositionSecurity,
         options?: RequestOptions
     ): Promise<operations.GetMetadataObjectsPositionResponse> {
         const headers$ = new Headers();
@@ -357,10 +356,11 @@ export class Metadata extends ClientSDK {
 
         const path$ = this.templateURLComponent("/metadata/objects/position")();
 
-        const securitySettings$ = this.resolveSecurity([
-            { value: security?.password, fieldName: "password", type: "http:basic" },
-            { value: security?.username, fieldName: "username", type: "http:basic" },
-        ]);
+        const security$ =
+            typeof this.options$.security === "function"
+                ? await this.options$.security()
+                : this.options$.security;
+        const securitySettings$ = this.resolveGlobalSecurity(security$);
 
         const response = await this.fetch$(
             { security: securitySettings$, method: "get", path: path$, headers: headers$ },

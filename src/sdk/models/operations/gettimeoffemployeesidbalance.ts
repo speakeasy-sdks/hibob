@@ -6,11 +6,6 @@ import * as shared from "../../../sdk/models/shared";
 import { RFCDate } from "../../../sdk/types";
 import { z } from "zod";
 
-export type GetTimeoffEmployeesIdBalanceSecurity = {
-    password: string;
-    username: string;
-};
-
 export type GetTimeoffEmployeesIdBalanceRequest = {
     /**
      * Point in time.

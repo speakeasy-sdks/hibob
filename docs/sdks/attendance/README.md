@@ -13,16 +13,15 @@
 
 ```typescript
 import { Hibob } from "hibob";
-import { ImportMethod, PostAttendanceImportImportMethodSecurity } from "hibob/sdk/models/operations";
+import { ImportMethod } from "hibob/sdk/models/operations";
 
 async function run() {
-  const sdk = new Hibob();
+  const sdk = new Hibob({
+    security: {
+      password: "<YOUR_PASSWORD_HERE>",
+    },
+  });
 
-  const operationSecurity: PostAttendanceImportImportMethodSecurity = {
-    password: "<YOUR_PASSWORD_HERE>",
-    username: "<YOUR_USERNAME_HERE>",
-  };
-  
   const res = await sdk.attendance.postAttendanceImportImportMethod({
     importAttendanceData: {
       dateTimeFormat: "yyyy-MM-dd hh:mm a",
@@ -36,7 +35,7 @@ async function run() {
       ],
     },
     importMethod: ImportMethod.Immediate,
-  }, operationSecurity);
+  });
 
   if (res?.statusCode !== 200) {
     throw new Error("Unexpected status code: " + res?.statusCode || "-");
@@ -53,7 +52,6 @@ run();
 | Parameter                                                                                                                                                                      | Type                                                                                                                                                                           | Required                                                                                                                                                                       | Description                                                                                                                                                                    |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | `request`                                                                                                                                                                      | [operations.PostAttendanceImportImportMethodRequest](../../sdk/models/operations/postattendanceimportimportmethodrequest.md)                                                   | :heavy_check_mark:                                                                                                                                                             | The request object to use for the request.                                                                                                                                     |
-| `security`                                                                                                                                                                     | [operations.PostAttendanceImportImportMethodSecurity](../../sdk/models/operations/postattendanceimportimportmethodsecurity.md)                                                 | :heavy_check_mark:                                                                                                                                                             | The security requirements to use for the request.                                                                                                                              |
 | `options`                                                                                                                                                                      | RequestOptions                                                                                                                                                                 | :heavy_minus_sign:                                                                                                                                                             | Used to set various options for making HTTP requests.                                                                                                                          |
 | `options.fetchOptions`                                                                                                                                                         | [RequestInit](https://developer.mozilla.org/en-US/docs/Web/API/Request/Request#options)                                                                                        | :heavy_minus_sign:                                                                                                                                                             | Options that are passed to the underlying HTTP request. This can be used to inject extra headers for examples. All `Request` options, except `method` and `body`, are allowed. |
 

@@ -5,6 +5,11 @@
 import * as shared from "../../../sdk/models/shared";
 import { z } from "zod";
 
+export type GetProfilesSecurity = {
+    basic?: shared.SchemeBasic | undefined;
+    bearer?: string | undefined;
+};
+
 export type GetProfilesRequest = {
     /**
      * Optional field name to sort by. This defaults to firstName.

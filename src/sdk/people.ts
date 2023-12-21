@@ -405,6 +405,7 @@ export class People extends ClientSDK {
      */
     async getAvatars(
         input: operations.GetAvatarsRequest,
+        security: operations.GetAvatarsSecurity,
         options?: RequestOptions
     ): Promise<operations.GetAvatarsResponse> {
         const headers$ = new Headers();
@@ -422,11 +423,10 @@ export class People extends ClientSDK {
             .filter(Boolean)
             .join("&");
 
-        const security$ =
-            typeof this.options$.security === "function"
-                ? await this.options$.security()
-                : this.options$.security;
-        const securitySettings$ = this.resolveGlobalSecurity(security$);
+        const securitySettings$ = this.resolveSecurity(
+            [{ value: security?.basic, type: "http:basic" }],
+            [{ value: security?.bearer, fieldName: "Authorization", type: "apiKey:header" }]
+        );
 
         const response = await this.fetch$(
             {
@@ -464,6 +464,7 @@ export class People extends ClientSDK {
      */
     async getAvatarsEmployeeId(
         input: operations.GetAvatarsEmployeeIdRequest,
+        security: operations.GetAvatarsEmployeeIdSecurity,
         options?: RequestOptions
     ): Promise<operations.GetAvatarsEmployeeIdResponse> {
         const headers$ = new Headers();
@@ -482,11 +483,10 @@ export class People extends ClientSDK {
 
         const path$ = this.templateURLComponent("/avatars/{employeeId}")(pathParams$);
 
-        const security$ =
-            typeof this.options$.security === "function"
-                ? await this.options$.security()
-                : this.options$.security;
-        const securitySettings$ = this.resolveGlobalSecurity(security$);
+        const securitySettings$ = this.resolveSecurity(
+            [{ value: security?.basic, type: "http:basic" }],
+            [{ value: security?.bearer, fieldName: "Authorization", type: "apiKey:header" }]
+        );
 
         const response = await this.fetch$(
             {
@@ -521,18 +521,19 @@ export class People extends ClientSDK {
      * @remarks
      * Returns the avatar image URL of the logged-in user.<b>Supported user types:</b> Employee.
      */
-    async getMyAvatar(options?: RequestOptions): Promise<operations.GetMyAvatarResponse> {
+    async getMyAvatar(
+        security: operations.GetMyAvatarSecurity,
+        options?: RequestOptions
+    ): Promise<operations.GetMyAvatarResponse> {
         const headers$ = new Headers();
         headers$.set("user-agent", SDK_METADATA.userAgent);
         headers$.set("Accept", "*/*");
 
         const path$ = this.templateURLComponent("/my/avatar")();
 
-        const security$ =
-            typeof this.options$.security === "function"
-                ? await this.options$.security()
-                : this.options$.security;
-        const securitySettings$ = this.resolveGlobalSecurity(security$);
+        const securitySettings$ = this.resolveSecurity([
+            { value: security?.bearer, fieldName: "Authorization", type: "apiKey:header" },
+        ]);
 
         const response = await this.fetch$(
             { security: securitySettings$, method: "get", path: path$, headers: headers$ },
@@ -1026,6 +1027,7 @@ export class People extends ClientSDK {
      */
     async getPeopleIdVariable(
         input: operations.GetPeopleIdVariableRequest,
+        security: operations.GetPeopleIdVariableSecurity,
         options?: RequestOptions
     ): Promise<operations.GetPeopleIdVariableResponse> {
         const headers$ = new Headers();
@@ -1041,11 +1043,10 @@ export class People extends ClientSDK {
 
         const path$ = this.templateURLComponent("/people/{id}/variable")(pathParams$);
 
-        const security$ =
-            typeof this.options$.security === "function"
-                ? await this.options$.security()
-                : this.options$.security;
-        const securitySettings$ = this.resolveGlobalSecurity(security$);
+        const securitySettings$ = this.resolveSecurity(
+            [{ value: security?.basic, type: "http:basic" }],
+            [{ value: security?.bearer, fieldName: "Authorization", type: "apiKey:header" }]
+        );
 
         const response = await this.fetch$(
             {
@@ -1144,6 +1145,7 @@ export class People extends ClientSDK {
      */
     async getProfiles(
         input: operations.GetProfilesRequest,
+        security: operations.GetProfilesSecurity,
         options?: RequestOptions
     ): Promise<operations.GetProfilesResponse> {
         const headers$ = new Headers();
@@ -1161,11 +1163,10 @@ export class People extends ClientSDK {
             .filter(Boolean)
             .join("&");
 
-        const security$ =
-            typeof this.options$.security === "function"
-                ? await this.options$.security()
-                : this.options$.security;
-        const securitySettings$ = this.resolveGlobalSecurity(security$);
+        const securitySettings$ = this.resolveSecurity(
+            [{ value: security?.basic, type: "http:basic" }],
+            [{ value: security?.bearer, fieldName: "Authorization", type: "apiKey:header" }]
+        );
 
         const response = await this.fetch$(
             {
@@ -1547,7 +1548,6 @@ export class People extends ClientSDK {
      */
     async postPeopleSearch(
         input: shared.ReadEmployeesRequestReference,
-        security: operations.PostPeopleSearchSecurity,
         options?: RequestOptions
     ): Promise<operations.PostPeopleSearchResponse> {
         const headers$ = new Headers();
@@ -1560,10 +1560,11 @@ export class People extends ClientSDK {
 
         const path$ = this.templateURLComponent("/people/search")();
 
-        const securitySettings$ = this.resolveSecurity([
-            { value: security?.password, fieldName: "password", type: "http:basic" },
-            { value: security?.username, fieldName: "username", type: "http:basic" },
-        ]);
+        const security$ =
+            typeof this.options$.security === "function"
+                ? await this.options$.security()
+                : this.options$.security;
+        const securitySettings$ = this.resolveGlobalSecurity(security$);
 
         const response = await this.fetch$(
             {
@@ -2031,6 +2032,7 @@ export class People extends ClientSDK {
      */
     async putAvatarsEmployeeId(
         input: operations.PutAvatarsEmployeeIdRequest,
+        security: operations.PutAvatarsEmployeeIdSecurity,
         options?: RequestOptions
     ): Promise<operations.PutAvatarsEmployeeIdResponse> {
         const headers$ = new Headers();
@@ -2051,11 +2053,10 @@ export class People extends ClientSDK {
 
         const path$ = this.templateURLComponent("/avatars/{employeeId}")(pathParams$);
 
-        const security$ =
-            typeof this.options$.security === "function"
-                ? await this.options$.security()
-                : this.options$.security;
-        const securitySettings$ = this.resolveGlobalSecurity(security$);
+        const securitySettings$ = this.resolveSecurity(
+            [{ value: security?.basic, type: "http:basic" }],
+            [{ value: security?.bearer, fieldName: "Authorization", type: "apiKey:header" }]
+        );
 
         const response = await this.fetch$(
             {
@@ -2211,6 +2212,7 @@ export class People extends ClientSDK {
      */
     async putPeopleIdEmploymentEntryId(
         input: operations.PutPeopleIdEmploymentEntryIdRequest,
+        security: operations.PutPeopleIdEmploymentEntryIdSecurity,
         options?: RequestOptions
     ): Promise<operations.PutPeopleIdEmploymentEntryIdResponse> {
         const headers$ = new Headers();
@@ -2233,11 +2235,10 @@ export class People extends ClientSDK {
 
         const path$ = this.templateURLComponent("/people/{id}/employment/{entry_id}")(pathParams$);
 
-        const security$ =
-            typeof this.options$.security === "function"
-                ? await this.options$.security()
-                : this.options$.security;
-        const securitySettings$ = this.resolveGlobalSecurity(security$);
+        const securitySettings$ = this.resolveSecurity(
+            [{ value: security?.basic, type: "http:basic" }],
+            [{ value: security?.bearer, fieldName: "Authorization", type: "apiKey:header" }]
+        );
 
         const response = await this.fetch$(
             {
@@ -2338,6 +2339,7 @@ export class People extends ClientSDK {
      */
     async putPeopleIdWorkEntryId(
         input: operations.PutPeopleIdWorkEntryIdRequest,
+        security: operations.PutPeopleIdWorkEntryIdSecurity,
         options?: RequestOptions
     ): Promise<operations.PutPeopleIdWorkEntryIdResponse> {
         const headers$ = new Headers();
@@ -2359,11 +2361,10 @@ export class People extends ClientSDK {
 
         const path$ = this.templateURLComponent("/people/{id}/work/{entry_id}")(pathParams$);
 
-        const security$ =
-            typeof this.options$.security === "function"
-                ? await this.options$.security()
-                : this.options$.security;
-        const securitySettings$ = this.resolveGlobalSecurity(security$);
+        const securitySettings$ = this.resolveSecurity(
+            [{ value: security?.basic, type: "http:basic" }],
+            [{ value: security?.bearer, fieldName: "Authorization", type: "apiKey:header" }]
+        );
 
         const response = await this.fetch$(
             {

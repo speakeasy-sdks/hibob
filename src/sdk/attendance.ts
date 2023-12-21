@@ -29,7 +29,6 @@ export class Attendance extends ClientSDK {
      */
     async postAttendanceImportImportMethod(
         input: operations.PostAttendanceImportImportMethodRequest,
-        security: operations.PostAttendanceImportImportMethodSecurity,
         options?: RequestOptions
     ): Promise<operations.PostAttendanceImportImportMethodResponse> {
         const headers$ = new Headers();
@@ -51,10 +50,11 @@ export class Attendance extends ClientSDK {
 
         const path$ = this.templateURLComponent("/attendance/import/{importMethod}")(pathParams$);
 
-        const securitySettings$ = this.resolveSecurity([
-            { value: security?.password, fieldName: "password", type: "http:basic" },
-            { value: security?.username, fieldName: "username", type: "http:basic" },
-        ]);
+        const security$ =
+            typeof this.options$.security === "function"
+                ? await this.options$.security()
+                : this.options$.security;
+        const securitySettings$ = this.resolveGlobalSecurity(security$);
 
         const response = await this.fetch$(
             {

@@ -5,6 +5,10 @@
 import * as shared from "../../../sdk/models/shared";
 import { z } from "zod";
 
+export type GetOnboardingWizardsSecurity = {
+    bearer: string;
+};
+
 export type GetOnboardingWizardsResponse = {
     /**
      * HTTP response content type for this operation

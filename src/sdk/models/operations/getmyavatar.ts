@@ -4,6 +4,10 @@
 
 import { z } from "zod";
 
+export type GetMyAvatarSecurity = {
+    bearer: string;
+};
+
 export type GetMyAvatarResponse = {
     /**
      * HTTP response content type for this operation

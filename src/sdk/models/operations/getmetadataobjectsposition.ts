@@ -5,11 +5,6 @@
 import * as shared from "../../../sdk/models/shared";
 import { z } from "zod";
 
-export type GetMetadataObjectsPositionSecurity = {
-    password: string;
-    username: string;
-};
-
 export type GetMetadataObjectsPositionResponse = {
     /**
      * HTTP response content type for this operation

@@ -5,11 +5,6 @@
 import * as shared from "../../../sdk/models/shared";
 import { z } from "zod";
 
-export type PostPeopleSearchSecurity = {
-    password: string;
-    username: string;
-};
-
 export type PostPeopleSearchResponse = {
     /**
      * HTTP response content type for this operation

@@ -5,11 +5,6 @@
 import * as shared from "../../../sdk/models/shared";
 import { z } from "zod";
 
-export type GetTimeoffPoliciesNamesSecurity = {
-    password: string;
-    username: string;
-};
-
 export type GetTimeoffPoliciesNamesRequest = {
     /**
      * Policy type name.

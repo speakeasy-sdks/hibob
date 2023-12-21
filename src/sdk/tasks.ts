@@ -27,18 +27,19 @@ export class Tasks extends ClientSDK {
      * @remarks
      * <b>Supported user types:</b> Employee.
      */
-    async getMyTasks(options?: RequestOptions): Promise<operations.GetMyTasksResponse> {
+    async getMyTasks(
+        security: operations.GetMyTasksSecurity,
+        options?: RequestOptions
+    ): Promise<operations.GetMyTasksResponse> {
         const headers$ = new Headers();
         headers$.set("user-agent", SDK_METADATA.userAgent);
         headers$.set("Accept", "application/json");
 
         const path$ = this.templateURLComponent("/my/tasks")();
 
-        const security$ =
-            typeof this.options$.security === "function"
-                ? await this.options$.security()
-                : this.options$.security;
-        const securitySettings$ = this.resolveGlobalSecurity(security$);
+        const securitySettings$ = this.resolveSecurity([
+            { value: security?.bearer, fieldName: "Authorization", type: "apiKey:header" },
+        ]);
 
         const response = await this.fetch$(
             { security: securitySettings$, method: "get", path: path$, headers: headers$ },
@@ -70,18 +71,20 @@ export class Tasks extends ClientSDK {
      * @remarks
      * <b>Supported user types:</b> Employee.
      */
-    async getTasks(options?: RequestOptions): Promise<operations.GetTasksResponse> {
+    async getTasks(
+        security: operations.GetTasksSecurity,
+        options?: RequestOptions
+    ): Promise<operations.GetTasksResponse> {
         const headers$ = new Headers();
         headers$.set("user-agent", SDK_METADATA.userAgent);
         headers$.set("Accept", "application/json");
 
         const path$ = this.templateURLComponent("/tasks")();
 
-        const security$ =
-            typeof this.options$.security === "function"
-                ? await this.options$.security()
-                : this.options$.security;
-        const securitySettings$ = this.resolveGlobalSecurity(security$);
+        const securitySettings$ = this.resolveSecurity(
+            [{ value: security?.basic, type: "http:basic" }],
+            [{ value: security?.bearer, fieldName: "Authorization", type: "apiKey:header" }]
+        );
 
         const response = await this.fetch$(
             { security: securitySettings$, method: "get", path: path$, headers: headers$ },

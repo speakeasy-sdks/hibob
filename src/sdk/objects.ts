@@ -30,7 +30,6 @@ export class Objects extends ClientSDK {
      */
     async postObjectsPositionSearch(
         input: shared.GetPositionsRequest,
-        security: operations.PostObjectsPositionSearchSecurity,
         options?: RequestOptions
     ): Promise<operations.PostObjectsPositionSearchResponse> {
         const headers$ = new Headers();
@@ -43,10 +42,11 @@ export class Objects extends ClientSDK {
 
         const path$ = this.templateURLComponent("/objects/position/search")();
 
-        const securitySettings$ = this.resolveSecurity([
-            { value: security?.password, fieldName: "password", type: "http:basic" },
-            { value: security?.username, fieldName: "username", type: "http:basic" },
-        ]);
+        const security$ =
+            typeof this.options$.security === "function"
+                ? await this.options$.security()
+                : this.options$.security;
+        const securitySettings$ = this.resolveGlobalSecurity(security$);
 
         const response = await this.fetch$(
             {
