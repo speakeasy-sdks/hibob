@@ -2,8 +2,8 @@ configVersion: 1.0.0
 management:
   docChecksum: 0649cae6c7f8b7b063dcf4f8c6329b9a
   docVersion: 1.0.0
-  speakeasyVersion: 1.128.1
-  generationVersion: 2.223.0
+  speakeasyVersion: 1.129.1
+  generationVersion: 2.223.3
 generation:
   comments: {}
   sdkClassName: hibob
@@ -14,14 +14,14 @@ generation:
     nameResolutionDec2023: false
 features:
   typescript:
-    core: 3.3.9
+    core: 3.3.12
     deprecations: 2.81.1
     globalSecurity: 2.82.2
     globalServerURLs: 2.82.1
     inputOutputModels: 2.83.0
     methodSecurity: 2.82.0
 typescript:
-  version: 2.5.2
+  version: 2.5.3
   author: roopak
   clientServerStatusCodesAsErrors: false
   flattenGlobalSecurity: false
