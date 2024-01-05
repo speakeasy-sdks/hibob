@@ -90,7 +90,7 @@ async function run() {
   });
 
   const res = await sdk.timeOff.getTimeoffEmployeesIdBalance({
-    date: new RFCDate("2021-02-20"),
+    date: new RFCDate("2022-02-20"),
     id: "<ID>",
     policyType: "string",
   });
@@ -488,7 +488,7 @@ async function run() {
   };
   
   const res = await sdk.timeOff.getTimeoffRequestsChanges({
-    since: new RFCDate("2021-06-11"),
+    since: new RFCDate("2022-06-11"),
   }, operationSecurity);
 
   if (res?.statusCode !== 200) {
@@ -542,8 +542,8 @@ async function run() {
   };
   
   const res = await sdk.timeOff.getTimeoffWhosout({
-    from: new RFCDate("2021-03-11"),
-    to: new RFCDate("2022-04-17"),
+    from: new RFCDate("2022-03-11"),
+    to: new RFCDate("2023-04-17"),
   }, operationSecurity);
 
   if (res?.statusCode !== 200) {
@@ -656,7 +656,7 @@ async function run() {
   const res = await sdk.timeOff.postTimeoffEmployeesIdRequests({
     submitTimeoffRequest: {
       policyType: "string",
-      startDate: new RFCDate("2021-04-15"),
+      startDate: new RFCDate("2022-04-15"),
     },
     id: "<ID>",
   }, operationSecurity);

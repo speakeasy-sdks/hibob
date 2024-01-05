@@ -744,7 +744,7 @@ async function run() {
   
   const res = await sdk.tables.postPeopleIdEmployment({
     employmentEntry: {
-      effectiveDate: new RFCDate("2021-12-05"),
+      effectiveDate: new RFCDate("2022-12-06"),
     },
     id: "<ID>",
   }, operationSecurity);
@@ -801,7 +801,7 @@ async function run() {
   
   const res = await sdk.tables.postPeopleIdEquities({
     equityEntry: {
-      effectiveDate: new RFCDate("2022-11-21"),
+      effectiveDate: new RFCDate("2023-11-21"),
       equityType: "string",
       exercisePrice: {
         currency: "Rial Omani",
@@ -868,7 +868,7 @@ async function run() {
         currency: "Cuban Peso Convertible",
         value: 3657.11,
       },
-      effectiveDate: new RFCDate("2021-03-10"),
+      effectiveDate: new RFCDate("2022-03-10"),
       payPeriod: "string",
     },
     id: "<ID>",
@@ -930,7 +930,7 @@ async function run() {
         currency: "Danish Krone",
         value: 9851.31,
       },
-      effectiveDate: new RFCDate("2022-07-06"),
+      effectiveDate: new RFCDate("2023-07-06"),
     },
     id: "<ID>",
   }, operationSecurity);
@@ -991,7 +991,7 @@ async function run() {
         currency: "Algerian Dinar",
         value: 54.57,
       },
-      effectiveDate: new RFCDate("2022-08-17"),
+      effectiveDate: new RFCDate("2023-08-17"),
       paymentPeriod: "string",
     },
     id: "<ID>",
@@ -1050,7 +1050,7 @@ async function run() {
   const res = await sdk.tables.postPeopleIdWork({
     workEntry: {
       customColumns: {},
-      effectiveDate: new RFCDate("2023-05-25"),
+      effectiveDate: new RFCDate("2024-05-24"),
       reportsTo: {
         id: "<ID>",
       },
@@ -1110,7 +1110,7 @@ async function run() {
   
   const res = await sdk.tables.putPeopleIdEmploymentEntryId({
     employmentEntry: {
-      effectiveDate: new RFCDate("2022-01-16"),
+      effectiveDate: new RFCDate("2023-01-16"),
     },
     entryId: 799673,
     id: "<ID>",
@@ -1168,7 +1168,7 @@ async function run() {
   
   const res = await sdk.tables.putPeopleIdEquitiesEntryId({
     equityEntry: {
-      effectiveDate: new RFCDate("2023-01-17"),
+      effectiveDate: new RFCDate("2024-01-18"),
       equityType: "string",
       exercisePrice: {
         currency: "Seychelles Rupee",
@@ -1233,7 +1233,7 @@ async function run() {
   const res = await sdk.tables.putPeopleIdWorkEntryId({
     workEntry: {
       customColumns: {},
-      effectiveDate: new RFCDate("2021-07-01"),
+      effectiveDate: new RFCDate("2022-07-01"),
       reportsTo: {
         id: "<ID>",
       },
