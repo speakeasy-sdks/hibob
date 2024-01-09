@@ -59,7 +59,7 @@ export class People extends ClientSDK {
         const response = await this.fetch$(
             {
                 security: securitySettings$,
-                method: "delete",
+                method: "DELETE",
                 path: path$,
                 headers: headers$,
                 body: body$,
@@ -122,7 +122,7 @@ export class People extends ClientSDK {
         const response = await this.fetch$(
             {
                 security: securitySettings$,
-                method: "delete",
+                method: "DELETE",
                 path: path$,
                 headers: headers$,
                 body: body$,
@@ -185,7 +185,7 @@ export class People extends ClientSDK {
         const response = await this.fetch$(
             {
                 security: securitySettings$,
-                method: "delete",
+                method: "DELETE",
                 path: path$,
                 headers: headers$,
                 body: body$,
@@ -248,7 +248,7 @@ export class People extends ClientSDK {
         const response = await this.fetch$(
             {
                 security: securitySettings$,
-                method: "delete",
+                method: "DELETE",
                 path: path$,
                 headers: headers$,
                 body: body$,
@@ -311,7 +311,7 @@ export class People extends ClientSDK {
         const response = await this.fetch$(
             {
                 security: securitySettings$,
-                method: "delete",
+                method: "DELETE",
                 path: path$,
                 headers: headers$,
                 body: body$,
@@ -373,7 +373,7 @@ export class People extends ClientSDK {
         const response = await this.fetch$(
             {
                 security: securitySettings$,
-                method: "delete",
+                method: "DELETE",
                 path: path$,
                 headers: headers$,
                 body: body$,
@@ -431,7 +431,7 @@ export class People extends ClientSDK {
         const response = await this.fetch$(
             {
                 security: securitySettings$,
-                method: "get",
+                method: "GET",
                 path: path$,
                 headers: headers$,
                 query: query$,
@@ -491,7 +491,7 @@ export class People extends ClientSDK {
         const response = await this.fetch$(
             {
                 security: securitySettings$,
-                method: "get",
+                method: "GET",
                 path: path$,
                 headers: headers$,
                 body: body$,
@@ -536,7 +536,7 @@ export class People extends ClientSDK {
         ]);
 
         const response = await this.fetch$(
-            { security: securitySettings$, method: "get", path: path$, headers: headers$ },
+            { security: securitySettings$, method: "GET", path: path$, headers: headers$ },
             options
         );
 
@@ -603,7 +603,7 @@ export class People extends ClientSDK {
         const response = await this.fetch$(
             {
                 security: securitySettings$,
-                method: "get",
+                method: "GET",
                 path: path$,
                 headers: headers$,
                 query: query$,
@@ -689,7 +689,7 @@ export class People extends ClientSDK {
         const response = await this.fetch$(
             {
                 security: securitySettings$,
-                method: "get",
+                method: "GET",
                 path: path$,
                 headers: headers$,
                 query: query$,
@@ -756,7 +756,7 @@ export class People extends ClientSDK {
         const response = await this.fetch$(
             {
                 security: securitySettings$,
-                method: "get",
+                method: "GET",
                 path: path$,
                 headers: headers$,
                 body: body$,
@@ -815,7 +815,7 @@ export class People extends ClientSDK {
         const response = await this.fetch$(
             {
                 security: securitySettings$,
-                method: "get",
+                method: "GET",
                 path: path$,
                 headers: headers$,
                 body: body$,
@@ -874,7 +874,7 @@ export class People extends ClientSDK {
         const response = await this.fetch$(
             {
                 security: securitySettings$,
-                method: "get",
+                method: "GET",
                 path: path$,
                 headers: headers$,
                 body: body$,
@@ -933,7 +933,7 @@ export class People extends ClientSDK {
         const response = await this.fetch$(
             {
                 security: securitySettings$,
-                method: "get",
+                method: "GET",
                 path: path$,
                 headers: headers$,
                 body: body$,
@@ -992,7 +992,7 @@ export class People extends ClientSDK {
         const response = await this.fetch$(
             {
                 security: securitySettings$,
-                method: "get",
+                method: "GET",
                 path: path$,
                 headers: headers$,
                 body: body$,
@@ -1051,7 +1051,7 @@ export class People extends ClientSDK {
         const response = await this.fetch$(
             {
                 security: securitySettings$,
-                method: "get",
+                method: "GET",
                 path: path$,
                 headers: headers$,
                 body: body$,
@@ -1110,7 +1110,7 @@ export class People extends ClientSDK {
         const response = await this.fetch$(
             {
                 security: securitySettings$,
-                method: "get",
+                method: "GET",
                 path: path$,
                 headers: headers$,
                 body: body$,
@@ -1171,7 +1171,7 @@ export class People extends ClientSDK {
         const response = await this.fetch$(
             {
                 security: securitySettings$,
-                method: "get",
+                method: "GET",
                 path: path$,
                 headers: headers$,
                 query: query$,
@@ -1244,7 +1244,7 @@ export class People extends ClientSDK {
         const response = await this.fetch$(
             {
                 security: securitySettings$,
-                method: "post",
+                method: "POST",
                 path: path$,
                 headers: headers$,
                 body: body$,
@@ -1316,7 +1316,7 @@ export class People extends ClientSDK {
         const response = await this.fetch$(
             {
                 security: securitySettings$,
-                method: "post",
+                method: "POST",
                 path: path$,
                 headers: headers$,
                 body: body$,
@@ -1389,7 +1389,7 @@ export class People extends ClientSDK {
         const response = await this.fetch$(
             {
                 security: securitySettings$,
-                method: "post",
+                method: "POST",
                 path: path$,
                 headers: headers$,
                 body: body$,
@@ -1451,7 +1451,7 @@ export class People extends ClientSDK {
         const response = await this.fetch$(
             {
                 security: securitySettings$,
-                method: "post",
+                method: "POST",
                 path: path$,
                 headers: headers$,
                 body: body$,
@@ -1513,7 +1513,7 @@ export class People extends ClientSDK {
         const response = await this.fetch$(
             {
                 security: securitySettings$,
-                method: "post",
+                method: "POST",
                 path: path$,
                 headers: headers$,
                 body: body$,
@@ -1569,7 +1569,7 @@ export class People extends ClientSDK {
         const response = await this.fetch$(
             {
                 security: securitySettings$,
-                method: "post",
+                method: "POST",
                 path: path$,
                 headers: headers$,
                 body: body$,
@@ -1642,7 +1642,7 @@ export class People extends ClientSDK {
         const response = await this.fetch$(
             {
                 security: securitySettings$,
-                method: "post",
+                method: "POST",
                 path: path$,
                 headers: headers$,
                 body: body$,
@@ -1710,7 +1710,7 @@ export class People extends ClientSDK {
         const response = await this.fetch$(
             {
                 security: securitySettings$,
-                method: "post",
+                method: "POST",
                 path: path$,
                 headers: headers$,
                 body: body$,
@@ -1768,7 +1768,7 @@ export class People extends ClientSDK {
         const response = await this.fetch$(
             {
                 security: securitySettings$,
-                method: "post",
+                method: "POST",
                 path: path$,
                 headers: headers$,
                 body: body$,
@@ -1826,7 +1826,7 @@ export class People extends ClientSDK {
         const response = await this.fetch$(
             {
                 security: securitySettings$,
-                method: "post",
+                method: "POST",
                 path: path$,
                 headers: headers$,
                 body: body$,
@@ -1884,7 +1884,7 @@ export class People extends ClientSDK {
         const response = await this.fetch$(
             {
                 security: securitySettings$,
-                method: "post",
+                method: "POST",
                 path: path$,
                 headers: headers$,
                 body: body$,
@@ -1942,7 +1942,7 @@ export class People extends ClientSDK {
         const response = await this.fetch$(
             {
                 security: securitySettings$,
-                method: "post",
+                method: "POST",
                 path: path$,
                 headers: headers$,
                 body: body$,
@@ -2000,7 +2000,7 @@ export class People extends ClientSDK {
         const response = await this.fetch$(
             {
                 security: securitySettings$,
-                method: "post",
+                method: "POST",
                 path: path$,
                 headers: headers$,
                 body: body$,
@@ -2061,7 +2061,7 @@ export class People extends ClientSDK {
         const response = await this.fetch$(
             {
                 security: securitySettings$,
-                method: "put",
+                method: "PUT",
                 path: path$,
                 headers: headers$,
                 body: body$,
@@ -2122,7 +2122,7 @@ export class People extends ClientSDK {
         const response = await this.fetch$(
             {
                 security: securitySettings$,
-                method: "put",
+                method: "PUT",
                 path: path$,
                 headers: headers$,
                 body: body$,
@@ -2180,7 +2180,7 @@ export class People extends ClientSDK {
         const response = await this.fetch$(
             {
                 security: securitySettings$,
-                method: "put",
+                method: "PUT",
                 path: path$,
                 headers: headers$,
                 body: body$,
@@ -2243,7 +2243,7 @@ export class People extends ClientSDK {
         const response = await this.fetch$(
             {
                 security: securitySettings$,
-                method: "put",
+                method: "PUT",
                 path: path$,
                 headers: headers$,
                 body: body$,
@@ -2307,7 +2307,7 @@ export class People extends ClientSDK {
         const response = await this.fetch$(
             {
                 security: securitySettings$,
-                method: "put",
+                method: "PUT",
                 path: path$,
                 headers: headers$,
                 body: body$,
@@ -2369,7 +2369,7 @@ export class People extends ClientSDK {
         const response = await this.fetch$(
             {
                 security: securitySettings$,
-                method: "put",
+                method: "PUT",
                 path: path$,
                 headers: headers$,
                 body: body$,
