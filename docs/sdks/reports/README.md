@@ -28,13 +28,10 @@ async function run() {
     },
   };
   
-  const res = await sdk.reports.getCompanyReports(operationSecurity);
+  const result = await sdk.reports.getCompanyReports(operationSecurity);
 
-  if (res?.statusCode !== 200) {
-    throw new Error("Unexpected status code: " + res?.statusCode || "-");
-  }
-  
-  // handle response
+  // Handle the result
+  console.log(result)
 }
 
 run();
@@ -78,15 +75,12 @@ async function run() {
     },
   };
   
-  const res = await sdk.reports.getCompanyReportsDownloadReportName({
+  const result = await sdk.reports.getCompanyReportsDownloadReportName({
     reportName: "string",
   }, operationSecurity);
 
-  if (res?.statusCode !== 200) {
-    throw new Error("Unexpected status code: " + res?.statusCode || "-");
-  }
-  
-  // handle response
+  // Handle the result
+  console.log(result)
 }
 
 run();
@@ -131,16 +125,13 @@ async function run() {
     },
   };
   
-  const res = await sdk.reports.getCompanyReportsReportIdDownload({
+  const result = await sdk.reports.getCompanyReportsReportIdDownload({
     format: QueryParamFormat.Xlsx,
     reportId: 3566.85,
   }, operationSecurity);
 
-  if (res?.statusCode !== 200) {
-    throw new Error("Unexpected status code: " + res?.statusCode || "-");
-  }
-  
-  // handle response
+  // Handle the result
+  console.log(result)
 }
 
 run();
@@ -185,16 +176,13 @@ async function run() {
     },
   };
   
-  const res = await sdk.reports.getCompanyReportsReportIdDownloadAsync({
+  const result = await sdk.reports.getCompanyReportsReportIdDownloadAsync({
     format: Format.Xlsx,
     reportId: 7232.99,
   }, operationSecurity);
 
-  if (res?.statusCode !== 200) {
-    throw new Error("Unexpected status code: " + res?.statusCode || "-");
-  }
-  
-  // handle response
+  // Handle the result
+  console.log(result)
 }
 
 run();

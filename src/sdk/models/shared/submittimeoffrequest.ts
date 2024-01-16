@@ -152,15 +152,17 @@ export namespace SubmitTimeoffRequest$ {
                 .string()
                 .transform((v) => new RFCDate(v))
                 .optional(),
-            endDatePortion: EndDatePortion$.optional(),
+            endDatePortion: EndDatePortion$.default(EndDatePortion.AllDay),
             hours: z.number().int().optional(),
             minutes: z.number().int().optional(),
             policyType: z.string(),
             reasonCode: z.number().int().optional(),
-            requestRangeType: SubmitTimeoffRequestRequestRangeType$.optional(),
-            skipManagerApproval: z.boolean().optional(),
+            requestRangeType: SubmitTimeoffRequestRequestRangeType$.default(
+                SubmitTimeoffRequestRequestRangeType.Days
+            ),
+            skipManagerApproval: z.boolean().default(false),
             startDate: z.string().transform((v) => new RFCDate(v)),
-            startDatePortion: StartDatePortion$.optional(),
+            startDatePortion: StartDatePortion$.default(StartDatePortion.AllDay),
         })
         .transform((v) => {
             return {
@@ -195,15 +197,15 @@ export namespace SubmitTimeoffRequest$ {
         dayPortion?: DayPortion | undefined;
         description?: string | undefined;
         endDate?: string | undefined;
-        endDatePortion?: EndDatePortion | undefined;
+        endDatePortion: EndDatePortion;
         hours?: number | undefined;
         minutes?: number | undefined;
         policyType: string;
         reasonCode?: number | undefined;
-        requestRangeType?: SubmitTimeoffRequestRequestRangeType | undefined;
-        skipManagerApproval?: boolean | undefined;
+        requestRangeType: SubmitTimeoffRequestRequestRangeType;
+        skipManagerApproval: boolean;
         startDate: string;
-        startDatePortion?: StartDatePortion | undefined;
+        startDatePortion: StartDatePortion;
     };
 
     export const outboundSchema: z.ZodType<Outbound, z.ZodTypeDef, SubmitTimeoffRequest> = z
@@ -217,15 +219,17 @@ export namespace SubmitTimeoffRequest$ {
                 .instanceof(RFCDate)
                 .transform((v) => v.toString())
                 .optional(),
-            endDatePortion: EndDatePortion$.optional(),
+            endDatePortion: EndDatePortion$.default(EndDatePortion.AllDay),
             hours: z.number().int().optional(),
             minutes: z.number().int().optional(),
             policyType: z.string(),
             reasonCode: z.number().int().optional(),
-            requestRangeType: SubmitTimeoffRequestRequestRangeType$.optional(),
-            skipManagerApproval: z.boolean().optional(),
+            requestRangeType: SubmitTimeoffRequestRequestRangeType$.default(
+                SubmitTimeoffRequestRequestRangeType.Days
+            ),
+            skipManagerApproval: z.boolean().default(false),
             startDate: z.instanceof(RFCDate).transform((v) => v.toString()),
-            startDatePortion: StartDatePortion$.optional(),
+            startDatePortion: StartDatePortion$.default(StartDatePortion.AllDay),
         })
         .transform((v) => {
             return {
@@ -235,21 +239,15 @@ export namespace SubmitTimeoffRequest$ {
                 ...(v.dayPortion === undefined ? null : { dayPortion: v.dayPortion }),
                 ...(v.description === undefined ? null : { description: v.description }),
                 ...(v.endDate === undefined ? null : { endDate: v.endDate }),
-                ...(v.endDatePortion === undefined ? null : { endDatePortion: v.endDatePortion }),
+                endDatePortion: v.endDatePortion,
                 ...(v.hours === undefined ? null : { hours: v.hours }),
                 ...(v.minutes === undefined ? null : { minutes: v.minutes }),
                 policyType: v.policyType,
                 ...(v.reasonCode === undefined ? null : { reasonCode: v.reasonCode }),
-                ...(v.requestRangeType === undefined
-                    ? null
-                    : { requestRangeType: v.requestRangeType }),
-                ...(v.skipManagerApproval === undefined
-                    ? null
-                    : { skipManagerApproval: v.skipManagerApproval }),
+                requestRangeType: v.requestRangeType,
+                skipManagerApproval: v.skipManagerApproval,
                 startDate: v.startDate,
-                ...(v.startDatePortion === undefined
-                    ? null
-                    : { startDatePortion: v.startDatePortion }),
+                startDatePortion: v.startDatePortion,
             };
         });
 }

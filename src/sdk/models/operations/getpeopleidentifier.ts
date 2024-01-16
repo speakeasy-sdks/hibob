@@ -64,9 +64,9 @@ export namespace GetPeopleIdentifierRequest$ {
     export const inboundSchema: z.ZodType<GetPeopleIdentifierRequest, z.ZodTypeDef, Inbound> = z
         .object({
             fields: z.array(z.string()),
-            humanReadable: z.boolean().optional(),
+            humanReadable: z.boolean().default(false),
             identifier: z.string(),
-            includeHumanReadable: z.boolean().optional(),
+            includeHumanReadable: z.boolean().default(false),
         })
         .transform((v) => {
             return {
@@ -81,26 +81,24 @@ export namespace GetPeopleIdentifierRequest$ {
 
     export type Outbound = {
         fields: Array<string>;
-        humanReadable?: boolean | undefined;
+        humanReadable: boolean;
         identifier: string;
-        includeHumanReadable?: boolean | undefined;
+        includeHumanReadable: boolean;
     };
 
     export const outboundSchema: z.ZodType<Outbound, z.ZodTypeDef, GetPeopleIdentifierRequest> = z
         .object({
             fields: z.array(z.string()),
-            humanReadable: z.boolean().optional(),
+            humanReadable: z.boolean().default(false),
             identifier: z.string(),
-            includeHumanReadable: z.boolean().optional(),
+            includeHumanReadable: z.boolean().default(false),
         })
         .transform((v) => {
             return {
                 fields: v.fields,
-                ...(v.humanReadable === undefined ? null : { humanReadable: v.humanReadable }),
+                humanReadable: v.humanReadable,
                 identifier: v.identifier,
-                ...(v.includeHumanReadable === undefined
-                    ? null
-                    : { includeHumanReadable: v.includeHumanReadable }),
+                includeHumanReadable: v.includeHumanReadable,
             };
         });
 }

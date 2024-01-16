@@ -126,11 +126,11 @@ export class Reports extends ClientSDK {
         };
 
         if (this.matchResponse(response, 200, "application/json")) {
-            const responseBody = await response.arrayBuffer();
+            const responseBody = response.body ?? undefined;
             const result =
                 operations.GetCompanyReportsDownloadReportNameResponse$.inboundSchema.parse({
                     ...responseFields$,
-                    bytes: new Uint8Array(responseBody),
+                    stream: responseBody,
                 });
             return result;
         } else if (this.matchStatusCode(response, 204)) {
@@ -218,11 +218,11 @@ export class Reports extends ClientSDK {
         };
 
         if (this.matchResponse(response, 200, "application/json")) {
-            const responseBody = await response.arrayBuffer();
+            const responseBody = response.body ?? undefined;
             const result =
                 operations.GetCompanyReportsReportIdDownloadResponse$.inboundSchema.parse({
                     ...responseFields$,
-                    bytes: new Uint8Array(responseBody),
+                    stream: responseBody,
                 });
             return result;
         } else if (this.matchResponse(response, "default", "application/json")) {

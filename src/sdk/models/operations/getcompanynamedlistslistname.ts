@@ -53,7 +53,7 @@ export namespace GetCompanyNamedListsListNameRequest$ {
         Inbound
     > = z
         .object({
-            includeArchived: z.boolean().optional(),
+            includeArchived: z.boolean().default(false),
             listName: z.string(),
         })
         .transform((v) => {
@@ -66,7 +66,7 @@ export namespace GetCompanyNamedListsListNameRequest$ {
         });
 
     export type Outbound = {
-        includeArchived?: boolean | undefined;
+        includeArchived: boolean;
         listName: string;
     };
 
@@ -76,14 +76,12 @@ export namespace GetCompanyNamedListsListNameRequest$ {
         GetCompanyNamedListsListNameRequest
     > = z
         .object({
-            includeArchived: z.boolean().optional(),
+            includeArchived: z.boolean().default(false),
             listName: z.string(),
         })
         .transform((v) => {
             return {
-                ...(v.includeArchived === undefined
-                    ? null
-                    : { includeArchived: v.includeArchived }),
+                includeArchived: v.includeArchived,
                 listName: v.listName,
             };
         });

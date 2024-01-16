@@ -32,7 +32,7 @@ async function run() {
         },
     });
 
-    const res = await sdk.attendance.postAttendanceImportImportMethod({
+    const result = await sdk.attendance.postAttendanceImportImportMethod({
         importAttendanceData: {
             dateTimeFormat: "yyyy-MM-dd hh:mm a",
             idType: "string",
@@ -47,11 +47,8 @@ async function run() {
         importMethod: ImportMethod.Immediate,
     });
 
-    if (res?.statusCode !== 200) {
-        throw new Error("Unexpected status code: " + res?.statusCode || "-");
-    }
-
-    // handle response
+    // Handle the result
+    console.log(result);
 }
 
 run();
@@ -249,8 +246,9 @@ async function run() {
         },
     });
 
-    const res = await sdk.attendance
-        .postAttendanceImportImportMethod({
+    let result;
+    try {
+        result = await sdk.attendance.postAttendanceImportImportMethod({
             importAttendanceData: {
                 dateTimeFormat: "yyyy-MM-dd hh:mm a",
                 idType: "string",
@@ -263,16 +261,14 @@ async function run() {
                 ],
             },
             importMethod: ImportMethod.Immediate,
-        })
-        .catch((err) => {
-            throw err;
         });
-
-    if (res?.statusCode !== 200) {
-        throw new Error("Unexpected status code: " + res?.statusCode || "-");
+    } catch (err) {
+        // Handle errors here
+        throw err;
     }
 
-    // handle response
+    // Handle the result
+    console.log(result);
 }
 
 run();
@@ -287,19 +283,87 @@ run();
 
 ### Select Server by Index
 
-You can override the default server globally by passing a server index to the `serverIdx: number` optional parameter when initializing the SDK client instance. The selected server will then be used as the default on the operations that use it. This table lists the indexes associated with the available servers:
+You can override the default server globally by passing a server index to the `serverIdx` optional parameter when initializing the SDK client instance. The selected server will then be used as the default on the operations that use it. This table lists the indexes associated with the available servers:
 
 | # | Server | Variables |
 | - | ------ | --------- |
 | 0 | `https://api.hibob.com/v1` | None |
 | 1 | `https://api.sandbox.hibob.com/v1` | None |
 
+```typescript
+import { Hibob } from "hibob";
+import { ImportMethod } from "hibob/sdk/models/operations";
 
+async function run() {
+    const sdk = new Hibob({
+        serverIdx: 1,
+        security: {
+            password: "<YOUR_PASSWORD_HERE>",
+        },
+    });
+
+    const result = await sdk.attendance.postAttendanceImportImportMethod({
+        importAttendanceData: {
+            dateTimeFormat: "yyyy-MM-dd hh:mm a",
+            idType: "string",
+            requests: [
+                {
+                    clockIn: "2022-06-12T08:00",
+                    clockOut: "2022-06-12T17:00",
+                    id: "12356733644",
+                },
+            ],
+        },
+        importMethod: ImportMethod.Immediate,
+    });
+
+    // Handle the result
+    console.log(result);
+}
+
+run();
+
+```
 
 
 ### Override Server URL Per-Client
 
-The default server can also be overridden globally by passing a URL to the `serverURL: str` optional parameter when initializing the SDK client instance. For example:
+The default server can also be overridden globally by passing a URL to the `serverURL` optional parameter when initializing the SDK client instance. For example:
+
+```typescript
+import { Hibob } from "hibob";
+import { ImportMethod } from "hibob/sdk/models/operations";
+
+async function run() {
+    const sdk = new Hibob({
+        serverURL: "https://api.hibob.com/v1",
+        security: {
+            password: "<YOUR_PASSWORD_HERE>",
+        },
+    });
+
+    const result = await sdk.attendance.postAttendanceImportImportMethod({
+        importAttendanceData: {
+            dateTimeFormat: "yyyy-MM-dd hh:mm a",
+            idType: "string",
+            requests: [
+                {
+                    clockIn: "2022-06-12T08:00",
+                    clockOut: "2022-06-12T17:00",
+                    id: "12356733644",
+                },
+            ],
+        },
+        importMethod: ImportMethod.Immediate,
+    });
+
+    // Handle the result
+    console.log(result);
+}
+
+run();
+
+```
 <!-- End Server Selection [server] -->
 
 
@@ -379,7 +443,7 @@ async function run() {
         },
     });
 
-    const res = await sdk.attendance.postAttendanceImportImportMethod({
+    const result = await sdk.attendance.postAttendanceImportImportMethod({
         importAttendanceData: {
             dateTimeFormat: "yyyy-MM-dd hh:mm a",
             idType: "string",
@@ -394,11 +458,8 @@ async function run() {
         importMethod: ImportMethod.Immediate,
     });
 
-    if (res?.statusCode !== 200) {
-        throw new Error("Unexpected status code: " + res?.statusCode || "-");
-    }
-
-    // handle response
+    // Handle the result
+    console.log(result);
 }
 
 run();
@@ -422,7 +483,7 @@ async function run() {
         },
     };
 
-    const res = await sdk.people.deletePeopleIdEmploymentEntryId(
+    const result = await sdk.people.deletePeopleIdEmploymentEntryId(
         {
             entryId: 511526,
             id: "<ID>",
@@ -430,11 +491,8 @@ async function run() {
         operationSecurity
     );
 
-    if (res?.statusCode !== 200) {
-        throw new Error("Unexpected status code: " + res?.statusCode || "-");
-    }
-
-    // handle response
+    // Handle the result
+    console.log(result);
 }
 
 run();
@@ -468,7 +526,7 @@ async function run() {
         bearer: "<YOUR_API_KEY_HERE>",
     };
 
-    const res = await sdk.documents.postDocsPeopleIdConfidentialUpload(
+    const result = await sdk.documents.postDocsPeopleIdConfidentialUpload(
         {
             requestBody: {
                 file: await openAsBlob("./sample-file"),
@@ -478,17 +536,20 @@ async function run() {
         operationSecurity
     );
 
-    if (res?.statusCode !== 200) {
-        throw new Error("Unexpected status code: " + res?.statusCode || "-");
-    }
-
-    // handle response
+    // Handle the result
+    console.log(result);
 }
 
 run();
 
 ```
 <!-- End File uploads [file-upload] -->
+
+<!-- Start Requirements [requirements] -->
+## Requirements
+
+For supported JavaScript runtimes, please consult [RUNTIMES.md](RUNTIMES.md).
+<!-- End Requirements [requirements] -->
 
 <!-- Placeholder for Future Speakeasy SDK Sections -->
 

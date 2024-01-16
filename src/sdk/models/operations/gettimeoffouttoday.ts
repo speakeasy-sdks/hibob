@@ -64,8 +64,8 @@ export namespace GetTimeoffOuttodayRequest$ {
 
     export const inboundSchema: z.ZodType<GetTimeoffOuttodayRequest, z.ZodTypeDef, Inbound> = z
         .object({
-            includeHourly: z.boolean().optional(),
-            includePrivate: z.boolean().optional(),
+            includeHourly: z.boolean().default(false),
+            includePrivate: z.boolean().default(false),
             siteId: z.number().int().optional(),
             today: z
                 .string()
@@ -82,16 +82,16 @@ export namespace GetTimeoffOuttodayRequest$ {
         });
 
     export type Outbound = {
-        includeHourly?: boolean | undefined;
-        includePrivate?: boolean | undefined;
+        includeHourly: boolean;
+        includePrivate: boolean;
         siteId?: number | undefined;
         today?: string | undefined;
     };
 
     export const outboundSchema: z.ZodType<Outbound, z.ZodTypeDef, GetTimeoffOuttodayRequest> = z
         .object({
-            includeHourly: z.boolean().optional(),
-            includePrivate: z.boolean().optional(),
+            includeHourly: z.boolean().default(false),
+            includePrivate: z.boolean().default(false),
             siteId: z.number().int().optional(),
             today: z
                 .instanceof(RFCDate)
@@ -100,8 +100,8 @@ export namespace GetTimeoffOuttodayRequest$ {
         })
         .transform((v) => {
             return {
-                ...(v.includeHourly === undefined ? null : { includeHourly: v.includeHourly }),
-                ...(v.includePrivate === undefined ? null : { includePrivate: v.includePrivate }),
+                includeHourly: v.includeHourly,
+                includePrivate: v.includePrivate,
                 ...(v.siteId === undefined ? null : { siteId: v.siteId }),
                 ...(v.today === undefined ? null : { today: v.today }),
             };

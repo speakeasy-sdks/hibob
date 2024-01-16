@@ -31,16 +31,13 @@ async function run() {
     },
   };
   
-  const res = await sdk.documents.deleteDocsPeopleIdConfidentialDocId({
+  const result = await sdk.documents.deleteDocsPeopleIdConfidentialDocId({
     docId: "string",
     id: "<ID>",
   }, operationSecurity);
 
-  if (res?.statusCode !== 200) {
-    throw new Error("Unexpected status code: " + res?.statusCode || "-");
-  }
-  
-  // handle response
+  // Handle the result
+  console.log(result)
 }
 
 run();
@@ -85,16 +82,13 @@ async function run() {
     },
   };
   
-  const res = await sdk.documents.deleteDocsPeopleIdSharedDocId({
+  const result = await sdk.documents.deleteDocsPeopleIdSharedDocId({
     docId: "string",
     id: "<ID>",
   }, operationSecurity);
 
-  if (res?.statusCode !== 200) {
-    throw new Error("Unexpected status code: " + res?.statusCode || "-");
-  }
-  
-  // handle response
+  // Handle the result
+  console.log(result)
 }
 
 run();
@@ -139,15 +133,12 @@ async function run() {
     },
   };
   
-  const res = await sdk.documents.getDocsPeopleId({
+  const result = await sdk.documents.getDocsPeopleId({
     id: "<ID>",
   }, operationSecurity);
 
-  if (res?.statusCode !== 200) {
-    throw new Error("Unexpected status code: " + res?.statusCode || "-");
-  }
-  
-  // handle response
+  // Handle the result
+  console.log(result)
 }
 
 run();
@@ -192,7 +183,7 @@ async function run() {
     },
   };
   
-  const res = await sdk.documents.postDocsPeopleIdConfidential({
+  const result = await sdk.documents.postDocsPeopleIdConfidential({
     addDocument: {
       tags: [
         "string",
@@ -201,11 +192,8 @@ async function run() {
     id: "<ID>",
   }, operationSecurity);
 
-  if (res?.statusCode !== 200) {
-    throw new Error("Unexpected status code: " + res?.statusCode || "-");
-  }
-  
-  // handle response
+  // Handle the result
+  console.log(result)
 }
 
 run();
@@ -248,18 +236,15 @@ async function run() {
     bearer: "<YOUR_API_KEY_HERE>",
   };
   
-  const res = await sdk.documents.postDocsPeopleIdConfidentialUpload({
+  const result = await sdk.documents.postDocsPeopleIdConfidentialUpload({
     requestBody: {
       file: await openAsBlob("./sample-file"),
     },
     id: "<ID>",
   }, operationSecurity);
 
-  if (res?.statusCode !== 200) {
-    throw new Error("Unexpected status code: " + res?.statusCode || "-");
-  }
-  
-  // handle response
+  // Handle the result
+  console.log(result)
 }
 
 run();
@@ -304,7 +289,7 @@ async function run() {
     },
   };
   
-  const res = await sdk.documents.postDocsPeopleIdShared({
+  const result = await sdk.documents.postDocsPeopleIdShared({
     addDocument: {
       tags: [
         "string",
@@ -313,11 +298,8 @@ async function run() {
     id: "<ID>",
   }, operationSecurity);
 
-  if (res?.statusCode !== 200) {
-    throw new Error("Unexpected status code: " + res?.statusCode || "-");
-  }
-  
-  // handle response
+  // Handle the result
+  console.log(result)
 }
 
 run();
@@ -360,18 +342,15 @@ async function run() {
     bearer: "<YOUR_API_KEY_HERE>",
   };
   
-  const res = await sdk.documents.postDocsPeopleIdSharedUpload({
+  const result = await sdk.documents.postDocsPeopleIdSharedUpload({
     requestBody: {
       file: await openAsBlob("./sample-file"),
     },
     id: "<ID>",
   }, operationSecurity);
 
-  if (res?.statusCode !== 200) {
-    throw new Error("Unexpected status code: " + res?.statusCode || "-");
-  }
-  
-  // handle response
+  // Handle the result
+  console.log(result)
 }
 
 run();

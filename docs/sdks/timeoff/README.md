@@ -38,16 +38,13 @@ async function run() {
     },
   };
   
-  const res = await sdk.timeOff.deleteTimeoffEmployeesIdRequestsRequestId({
+  const result = await sdk.timeOff.deleteTimeoffEmployeesIdRequestsRequestId({
     id: "<ID>",
     requestId: 313155,
   }, operationSecurity);
 
-  if (res?.statusCode !== 200) {
-    throw new Error("Unexpected status code: " + res?.statusCode || "-");
-  }
-  
-  // handle response
+  // Handle the result
+  console.log(result)
 }
 
 run();
@@ -80,7 +77,7 @@ Retrieve the balance for a given employee, for a given policy type, as of a give
 
 ```typescript
 import { Hibob } from "hibob";
-import { RFCDate } from "hibob/types";
+import { RFCDate } from "hibob/sdk/types";
 
 async function run() {
   const sdk = new Hibob({
@@ -89,17 +86,14 @@ async function run() {
     },
   });
 
-  const res = await sdk.timeOff.getTimeoffEmployeesIdBalance({
+  const result = await sdk.timeOff.getTimeoffEmployeesIdBalance({
     date: new RFCDate("2022-02-20"),
     id: "<ID>",
     policyType: "string",
   });
 
-  if (res?.statusCode !== 200) {
-    throw new Error("Unexpected status code: " + res?.statusCode || "-");
-  }
-  
-  // handle response
+  // Handle the result
+  console.log(result)
 }
 
 run();
@@ -143,16 +137,13 @@ async function run() {
     },
   };
   
-  const res = await sdk.timeOff.getTimeoffEmployeesIdRequestsRequestId({
+  const result = await sdk.timeOff.getTimeoffEmployeesIdRequestsRequestId({
     id: "<ID>",
     requestId: 662911,
   }, operationSecurity);
 
-  if (res?.statusCode !== 200) {
-    throw new Error("Unexpected status code: " + res?.statusCode || "-");
-  }
-  
-  // handle response
+  // Handle the result
+  console.log(result)
 }
 
 run();
@@ -186,7 +177,7 @@ Returns the list of people that have a time off request today or on the specifie
 ```typescript
 import { Hibob } from "hibob";
 import { GetTimeoffOuttodaySecurity } from "hibob/sdk/models/operations";
-import { RFCDate } from "hibob/types";
+import { RFCDate } from "hibob/sdk/types";
 
 async function run() {
   const sdk = new Hibob();
@@ -198,13 +189,10 @@ async function run() {
     },
   };
   
-  const res = await sdk.timeOff.getTimeoffOuttoday({}, operationSecurity);
+  const result = await sdk.timeOff.getTimeoffOuttoday({}, operationSecurity);
 
-  if (res?.statusCode !== 200) {
-    throw new Error("Unexpected status code: " + res?.statusCode || "-");
-  }
-  
-  // handle response
+  // Handle the result
+  console.log(result)
 }
 
 run();
@@ -245,15 +233,12 @@ async function run() {
     },
   });
 
-  const res = await sdk.timeOff.getTimeoffPolicies({
+  const result = await sdk.timeOff.getTimeoffPolicies({
     policyName: "string",
   });
 
-  if (res?.statusCode !== 200) {
-    throw new Error("Unexpected status code: " + res?.statusCode || "-");
-  }
-  
-  // handle response
+  // Handle the result
+  console.log(result)
 }
 
 run();
@@ -293,15 +278,12 @@ async function run() {
     },
   });
 
-  const res = await sdk.timeOff.getTimeoffPoliciesNames({
+  const result = await sdk.timeOff.getTimeoffPoliciesNames({
     policyTypeName: "string",
   });
 
-  if (res?.statusCode !== 200) {
-    throw new Error("Unexpected status code: " + res?.statusCode || "-");
-  }
-  
-  // handle response
+  // Handle the result
+  console.log(result)
 }
 
 run();
@@ -341,13 +323,10 @@ async function run() {
     },
   });
 
-  const res = await sdk.timeOff.getTimeoffPolicyTypes();
+  const result = await sdk.timeOff.getTimeoffPolicyTypes();
 
-  if (res?.statusCode !== 200) {
-    throw new Error("Unexpected status code: " + res?.statusCode || "-");
-  }
-  
-  // handle response
+  // Handle the result
+  console.log(result)
 }
 
 run();
@@ -386,15 +365,12 @@ async function run() {
     },
   });
 
-  const res = await sdk.timeOff.getTimeoffPolicyTypesPolicyType({
+  const result = await sdk.timeOff.getTimeoffPolicyTypesPolicyType({
     policyType: "string",
   });
 
-  if (res?.statusCode !== 200) {
-    throw new Error("Unexpected status code: " + res?.statusCode || "-");
-  }
-  
-  // handle response
+  // Handle the result
+  console.log(result)
 }
 
 run();
@@ -434,15 +410,12 @@ async function run() {
     },
   });
 
-  const res = await sdk.timeOff.getTimeoffPolicyTypesPolicyTypeReasonCodes({
+  const result = await sdk.timeOff.getTimeoffPolicyTypesPolicyTypeReasonCodes({
     policyType: "string",
   });
 
-  if (res?.statusCode !== 200) {
-    throw new Error("Unexpected status code: " + res?.statusCode || "-");
-  }
-  
-  // handle response
+  // Handle the result
+  console.log(result)
 }
 
 run();
@@ -475,7 +448,7 @@ Returns the list of time off requests approved or canceled since the specified d
 ```typescript
 import { Hibob } from "hibob";
 import { GetTimeoffRequestsChangesSecurity } from "hibob/sdk/models/operations";
-import { RFCDate } from "hibob/types";
+import { RFCDate } from "hibob/sdk/types";
 
 async function run() {
   const sdk = new Hibob();
@@ -487,15 +460,12 @@ async function run() {
     },
   };
   
-  const res = await sdk.timeOff.getTimeoffRequestsChanges({
+  const result = await sdk.timeOff.getTimeoffRequestsChanges({
     since: new RFCDate("2022-06-11"),
   }, operationSecurity);
 
-  if (res?.statusCode !== 200) {
-    throw new Error("Unexpected status code: " + res?.statusCode || "-");
-  }
-  
-  // handle response
+  // Handle the result
+  console.log(result)
 }
 
 run();
@@ -529,7 +499,7 @@ Returns time off information for a given date range.<br /><b>Supported user type
 ```typescript
 import { Hibob } from "hibob";
 import { GetTimeoffWhosoutSecurity } from "hibob/sdk/models/operations";
-import { RFCDate } from "hibob/types";
+import { RFCDate } from "hibob/sdk/types";
 
 async function run() {
   const sdk = new Hibob();
@@ -541,16 +511,13 @@ async function run() {
     },
   };
   
-  const res = await sdk.timeOff.getTimeoffWhosout({
+  const result = await sdk.timeOff.getTimeoffWhosout({
     from: new RFCDate("2022-03-11"),
     to: new RFCDate("2023-04-17"),
   }, operationSecurity);
 
-  if (res?.statusCode !== 200) {
-    throw new Error("Unexpected status code: " + res?.statusCode || "-");
-  }
-  
-  // handle response
+  // Handle the result
+  console.log(result)
 }
 
 run();
@@ -584,7 +551,7 @@ Create a balance adjustment for a given employee for a given effective date.<br 
 ```typescript
 import { Hibob } from "hibob";
 import { AdjustmentType } from "hibob/sdk/models/shared";
-import { RFCDate } from "hibob/types";
+import { RFCDate } from "hibob/sdk/types";
 
 async function run() {
   const sdk = new Hibob({
@@ -593,16 +560,13 @@ async function run() {
     },
   });
 
-  const res = await sdk.timeOff.postTimeoffEmployeesIdAdjustments({
+  const result = await sdk.timeOff.postTimeoffEmployeesIdAdjustments({
     adjustmentRequest: {},
     id: "<ID>",
   });
 
-  if (res?.statusCode !== 200) {
-    throw new Error("Unexpected status code: " + res?.statusCode || "-");
-  }
-  
-  // handle response
+  // Handle the result
+  console.log(result)
 }
 
 run();
@@ -641,7 +605,7 @@ import {
   StartDatePortion,
   SubmitTimeoffRequestRequestRangeType,
 } from "hibob/sdk/models/shared";
-import { RFCDate } from "hibob/types";
+import { RFCDate } from "hibob/sdk/types";
 
 async function run() {
   const sdk = new Hibob();
@@ -653,7 +617,7 @@ async function run() {
     },
   };
   
-  const res = await sdk.timeOff.postTimeoffEmployeesIdRequests({
+  const result = await sdk.timeOff.postTimeoffEmployeesIdRequests({
     submitTimeoffRequest: {
       policyType: "string",
       startDate: new RFCDate("2022-04-15"),
@@ -661,11 +625,8 @@ async function run() {
     id: "<ID>",
   }, operationSecurity);
 
-  if (res?.statusCode !== 200) {
-    throw new Error("Unexpected status code: " + res?.statusCode || "-");
-  }
-  
-  // handle response
+  // Handle the result
+  console.log(result)
 }
 
 run();
@@ -706,7 +667,7 @@ async function run() {
     },
   });
 
-  const res = await sdk.timeOff.postTimeoffPolicyTypesPolicyTypeReasonCodes({
+  const result = await sdk.timeOff.postTimeoffPolicyTypesPolicyTypeReasonCodes({
     reasonCodesNames: {
       reasonCodes: [
         "string",
@@ -715,11 +676,8 @@ async function run() {
     policyType: "string",
   });
 
-  if (res?.statusCode !== 200) {
-    throw new Error("Unexpected status code: " + res?.statusCode || "-");
-  }
-  
-  // handle response
+  // Handle the result
+  console.log(result)
 }
 
 run();

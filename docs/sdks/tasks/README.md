@@ -25,13 +25,10 @@ async function run() {
     bearer: "<YOUR_API_KEY_HERE>",
   };
   
-  const res = await sdk.tasks.getMyTasks(operationSecurity);
+  const result = await sdk.tasks.getMyTasks(operationSecurity);
 
-  if (res?.statusCode !== 200) {
-    throw new Error("Unexpected status code: " + res?.statusCode || "-");
-  }
-  
-  // handle response
+  // Handle the result
+  console.log(result)
 }
 
 run();
@@ -75,13 +72,10 @@ async function run() {
     },
   };
   
-  const res = await sdk.tasks.getTasks(operationSecurity);
+  const result = await sdk.tasks.getTasks(operationSecurity);
 
-  if (res?.statusCode !== 200) {
-    throw new Error("Unexpected status code: " + res?.statusCode || "-");
-  }
-  
-  // handle response
+  // Handle the result
+  console.log(result)
 }
 
 run();
@@ -125,15 +119,12 @@ async function run() {
     },
   };
   
-  const res = await sdk.tasks.getTasksPeopleId({
+  const result = await sdk.tasks.getTasksPeopleId({
     id: "string",
   }, operationSecurity);
 
-  if (res?.statusCode !== 200) {
-    throw new Error("Unexpected status code: " + res?.statusCode || "-");
-  }
-  
-  // handle response
+  // Handle the result
+  console.log(result)
 }
 
 run();
@@ -178,15 +169,12 @@ async function run() {
     },
   };
   
-  const res = await sdk.tasks.postTasksTaskIdComplete({
+  const result = await sdk.tasks.postTasksTaskIdComplete({
     taskId: "string",
   }, operationSecurity);
 
-  if (res?.statusCode !== 200) {
-    throw new Error("Unexpected status code: " + res?.statusCode || "-");
-  }
-  
-  // handle response
+  // Handle the result
+  console.log(result)
 }
 
 run();

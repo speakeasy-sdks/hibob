@@ -29,7 +29,7 @@ export namespace GetPositionsRequest$ {
         .object({
             fields: z.array(z.string()),
             filters: z.array(FilterInstruction$.inboundSchema),
-            includeHumanReadable: z.boolean().optional(),
+            includeHumanReadable: z.boolean().default(false),
         })
         .transform((v) => {
             return {
@@ -44,22 +44,20 @@ export namespace GetPositionsRequest$ {
     export type Outbound = {
         fields: Array<string>;
         filters: Array<FilterInstruction$.Outbound>;
-        includeHumanReadable?: boolean | undefined;
+        includeHumanReadable: boolean;
     };
 
     export const outboundSchema: z.ZodType<Outbound, z.ZodTypeDef, GetPositionsRequest> = z
         .object({
             fields: z.array(z.string()),
             filters: z.array(FilterInstruction$.outboundSchema),
-            includeHumanReadable: z.boolean().optional(),
+            includeHumanReadable: z.boolean().default(false),
         })
         .transform((v) => {
             return {
                 fields: v.fields,
                 filters: v.filters,
-                ...(v.includeHumanReadable === undefined
-                    ? null
-                    : { includeHumanReadable: v.includeHumanReadable }),
+                includeHumanReadable: v.includeHumanReadable,
             };
         });
 }

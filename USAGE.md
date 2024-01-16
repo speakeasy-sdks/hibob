@@ -10,7 +10,7 @@ async function run() {
         },
     });
 
-    const res = await sdk.attendance.postAttendanceImportImportMethod({
+    const result = await sdk.attendance.postAttendanceImportImportMethod({
         importAttendanceData: {
             dateTimeFormat: "yyyy-MM-dd hh:mm a",
             idType: "string",
@@ -25,11 +25,8 @@ async function run() {
         importMethod: ImportMethod.Immediate,
     });
 
-    if (res?.statusCode !== 200) {
-        throw new Error("Unexpected status code: " + res?.statusCode || "-");
-    }
-
-    // handle response
+    // Handle the result
+    console.log(result);
 }
 
 run();

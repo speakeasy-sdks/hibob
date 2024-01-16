@@ -22,13 +22,10 @@ async function run() {
     bearer: "<YOUR_API_KEY_HERE>",
   };
   
-  const res = await sdk.onboarding.getOnboardingWizards(operationSecurity);
+  const result = await sdk.onboarding.getOnboardingWizards(operationSecurity);
 
-  if (res?.statusCode !== 200) {
-    throw new Error("Unexpected status code: " + res?.statusCode || "-");
-  }
-  
-  // handle response
+  // Handle the result
+  console.log(result)
 }
 
 run();

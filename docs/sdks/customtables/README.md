@@ -28,17 +28,14 @@ async function run() {
     },
   };
   
-  const res = await sdk.customTables.deletePeopleCustomTablesEmployeeIdCustomTableIdEntryId({
+  const result = await sdk.customTables.deletePeopleCustomTablesEmployeeIdCustomTableIdEntryId({
     customTableId: "string",
     employeeId: "string",
     entryId: "string",
   }, operationSecurity);
 
-  if (res?.statusCode !== 200) {
-    throw new Error("Unexpected status code: " + res?.statusCode || "-");
-  }
-  
-  // handle response
+  // Handle the result
+  console.log(result)
 }
 
 run();
@@ -83,16 +80,13 @@ async function run() {
     },
   };
   
-  const res = await sdk.customTables.getPeopleCustomTablesEmployeeIdCustomTableId({
+  const result = await sdk.customTables.getPeopleCustomTablesEmployeeIdCustomTableId({
     customTableId: "string",
     employeeId: "string",
   }, operationSecurity);
 
-  if (res?.statusCode !== 200) {
-    throw new Error("Unexpected status code: " + res?.statusCode || "-");
-  }
-  
-  // handle response
+  // Handle the result
+  console.log(result)
 }
 
 run();
@@ -137,17 +131,14 @@ async function run() {
     },
   };
   
-  const res = await sdk.customTables.postPeopleCustomTablesEmployeeIdCustomTableId({
+  const result = await sdk.customTables.postPeopleCustomTablesEmployeeIdCustomTableId({
     requestBody: {},
     customTableId: "string",
     employeeId: "string",
   }, operationSecurity);
 
-  if (res?.statusCode !== 200) {
-    throw new Error("Unexpected status code: " + res?.statusCode || "-");
-  }
-  
-  // handle response
+  // Handle the result
+  console.log(result)
 }
 
 run();
@@ -192,18 +183,15 @@ async function run() {
     },
   };
   
-  const res = await sdk.customTables.putPeopleCustomTablesEmployeeIdCustomTableIdEntryId({
+  const result = await sdk.customTables.putPeopleCustomTablesEmployeeIdCustomTableIdEntryId({
     requestBody: {},
     customTableId: "string",
     employeeId: "string",
     entryId: "string",
   }, operationSecurity);
 
-  if (res?.statusCode !== 200) {
-    throw new Error("Unexpected status code: " + res?.statusCode || "-");
-  }
-  
-  // handle response
+  // Handle the result
+  console.log(result)
 }
 
 run();

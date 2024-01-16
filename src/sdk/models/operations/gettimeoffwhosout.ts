@@ -70,9 +70,9 @@ export namespace GetTimeoffWhosoutRequest$ {
     export const inboundSchema: z.ZodType<GetTimeoffWhosoutRequest, z.ZodTypeDef, Inbound> = z
         .object({
             from: z.string().transform((v) => new RFCDate(v)),
-            includeHourly: z.boolean().optional(),
-            includePending: z.boolean().optional(),
-            includePrivate: z.boolean().optional(),
+            includeHourly: z.boolean().default(false),
+            includePending: z.boolean().default(false),
+            includePrivate: z.boolean().default(false),
             to: z.string().transform((v) => new RFCDate(v)),
         })
         .transform((v) => {
@@ -87,26 +87,26 @@ export namespace GetTimeoffWhosoutRequest$ {
 
     export type Outbound = {
         from: string;
-        includeHourly?: boolean | undefined;
-        includePending?: boolean | undefined;
-        includePrivate?: boolean | undefined;
+        includeHourly: boolean;
+        includePending: boolean;
+        includePrivate: boolean;
         to: string;
     };
 
     export const outboundSchema: z.ZodType<Outbound, z.ZodTypeDef, GetTimeoffWhosoutRequest> = z
         .object({
             from: z.instanceof(RFCDate).transform((v) => v.toString()),
-            includeHourly: z.boolean().optional(),
-            includePending: z.boolean().optional(),
-            includePrivate: z.boolean().optional(),
+            includeHourly: z.boolean().default(false),
+            includePending: z.boolean().default(false),
+            includePrivate: z.boolean().default(false),
             to: z.instanceof(RFCDate).transform((v) => v.toString()),
         })
         .transform((v) => {
             return {
                 from: v.from,
-                ...(v.includeHourly === undefined ? null : { includeHourly: v.includeHourly }),
-                ...(v.includePending === undefined ? null : { includePending: v.includePending }),
-                ...(v.includePrivate === undefined ? null : { includePrivate: v.includePrivate }),
+                includeHourly: v.includeHourly,
+                includePending: v.includePending,
+                includePrivate: v.includePrivate,
                 to: v.to,
             };
         });

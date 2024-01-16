@@ -44,7 +44,7 @@ export namespace GetCompanyNamedListsRequest$ {
 
     export const inboundSchema: z.ZodType<GetCompanyNamedListsRequest, z.ZodTypeDef, Inbound> = z
         .object({
-            includeArchived: z.boolean().optional(),
+            includeArchived: z.boolean().default(false),
         })
         .transform((v) => {
             return {
@@ -55,18 +55,16 @@ export namespace GetCompanyNamedListsRequest$ {
         });
 
     export type Outbound = {
-        includeArchived?: boolean | undefined;
+        includeArchived: boolean;
     };
 
     export const outboundSchema: z.ZodType<Outbound, z.ZodTypeDef, GetCompanyNamedListsRequest> = z
         .object({
-            includeArchived: z.boolean().optional(),
+            includeArchived: z.boolean().default(false),
         })
         .transform((v) => {
             return {
-                ...(v.includeArchived === undefined
-                    ? null
-                    : { includeArchived: v.includeArchived }),
+                includeArchived: v.includeArchived,
             };
         });
 }

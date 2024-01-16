@@ -60,7 +60,7 @@ export namespace GetPeopleCustomTablesEmployeeIdCustomTableIdRequest$ {
         .object({
             custom_table_id: z.string(),
             employee_id: z.string(),
-            includeHumanReadable: z.boolean().optional(),
+            includeHumanReadable: z.boolean().default(false),
         })
         .transform((v) => {
             return {
@@ -75,7 +75,7 @@ export namespace GetPeopleCustomTablesEmployeeIdCustomTableIdRequest$ {
     export type Outbound = {
         custom_table_id: string;
         employee_id: string;
-        includeHumanReadable?: boolean | undefined;
+        includeHumanReadable: boolean;
     };
 
     export const outboundSchema: z.ZodType<
@@ -86,15 +86,13 @@ export namespace GetPeopleCustomTablesEmployeeIdCustomTableIdRequest$ {
         .object({
             customTableId: z.string(),
             employeeId: z.string(),
-            includeHumanReadable: z.boolean().optional(),
+            includeHumanReadable: z.boolean().default(false),
         })
         .transform((v) => {
             return {
                 custom_table_id: v.customTableId,
                 employee_id: v.employeeId,
-                ...(v.includeHumanReadable === undefined
-                    ? null
-                    : { includeHumanReadable: v.includeHumanReadable }),
+                includeHumanReadable: v.includeHumanReadable,
             };
         });
 }

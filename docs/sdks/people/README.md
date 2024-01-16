@@ -62,16 +62,13 @@ async function run() {
     },
   };
   
-  const res = await sdk.people.deletePeopleIdEmploymentEntryId({
+  const result = await sdk.people.deletePeopleIdEmploymentEntryId({
     entryId: 511526,
     id: "<ID>",
   }, operationSecurity);
 
-  if (res?.statusCode !== 200) {
-    throw new Error("Unexpected status code: " + res?.statusCode || "-");
-  }
-  
-  // handle response
+  // Handle the result
+  console.log(result)
 }
 
 run();
@@ -116,16 +113,13 @@ async function run() {
     },
   };
   
-  const res = await sdk.people.deletePeopleIdEquitiesEntryId({
+  const result = await sdk.people.deletePeopleIdEquitiesEntryId({
     entryId: 258748,
     id: "<ID>",
   }, operationSecurity);
 
-  if (res?.statusCode !== 200) {
-    throw new Error("Unexpected status code: " + res?.statusCode || "-");
-  }
-  
-  // handle response
+  // Handle the result
+  console.log(result)
 }
 
 run();
@@ -170,16 +164,13 @@ async function run() {
     },
   };
   
-  const res = await sdk.people.deletePeopleIdSalariesEntryId({
+  const result = await sdk.people.deletePeopleIdSalariesEntryId({
     entryId: 831741,
     id: "<ID>",
   }, operationSecurity);
 
-  if (res?.statusCode !== 200) {
-    throw new Error("Unexpected status code: " + res?.statusCode || "-");
-  }
-  
-  // handle response
+  // Handle the result
+  console.log(result)
 }
 
 run();
@@ -224,16 +215,13 @@ async function run() {
     },
   };
   
-  const res = await sdk.people.deletePeopleIdTrainingEntryId({
+  const result = await sdk.people.deletePeopleIdTrainingEntryId({
     entryId: 375590,
     id: "<ID>",
   }, operationSecurity);
 
-  if (res?.statusCode !== 200) {
-    throw new Error("Unexpected status code: " + res?.statusCode || "-");
-  }
-  
-  // handle response
+  // Handle the result
+  console.log(result)
 }
 
 run();
@@ -278,16 +266,13 @@ async function run() {
     },
   };
   
-  const res = await sdk.people.deletePeopleIdVariableEntryId({
+  const result = await sdk.people.deletePeopleIdVariableEntryId({
     entryId: 318576,
     id: "<ID>",
   }, operationSecurity);
 
-  if (res?.statusCode !== 200) {
-    throw new Error("Unexpected status code: " + res?.statusCode || "-");
-  }
-  
-  // handle response
+  // Handle the result
+  console.log(result)
 }
 
 run();
@@ -332,16 +317,13 @@ async function run() {
     },
   };
   
-  const res = await sdk.people.deletePeopleIdWorkEntryId({
+  const result = await sdk.people.deletePeopleIdWorkEntryId({
     entryId: 681162,
     id: "<ID>",
   }, operationSecurity);
 
-  if (res?.statusCode !== 200) {
-    throw new Error("Unexpected status code: " + res?.statusCode || "-");
-  }
-  
-  // handle response
+  // Handle the result
+  console.log(result)
 }
 
 run();
@@ -386,13 +368,10 @@ async function run() {
     },
   };
   
-  const res = await sdk.people.getAvatars({}, operationSecurity);
+  const result = await sdk.people.getAvatars({}, operationSecurity);
 
-  if (res?.statusCode !== 200) {
-    throw new Error("Unexpected status code: " + res?.statusCode || "-");
-  }
-  
-  // handle response
+  // Handle the result
+  console.log(result)
 }
 
 run();
@@ -437,15 +416,12 @@ async function run() {
     },
   };
   
-  const res = await sdk.people.getAvatarsEmployeeId({
+  const result = await sdk.people.getAvatarsEmployeeId({
     employeeId: "string",
   }, operationSecurity);
 
-  if (res?.statusCode !== 200) {
-    throw new Error("Unexpected status code: " + res?.statusCode || "-");
-  }
-  
-  // handle response
+  // Handle the result
+  console.log(result)
 }
 
 run();
@@ -487,13 +463,10 @@ async function run() {
     bearer: "<YOUR_API_KEY_HERE>",
   };
   
-  const res = await sdk.people.getMyAvatar(operationSecurity);
+  const result = await sdk.people.getMyAvatar(operationSecurity);
 
-  if (res?.statusCode !== 200) {
-    throw new Error("Unexpected status code: " + res?.statusCode || "-");
-  }
-  
-  // handle response
+  // Handle the result
+  console.log(result)
 }
 
 run();
@@ -539,13 +512,10 @@ async function run() {
     },
   };
   
-  const res = await sdk.people.getPeople({}, operationSecurity);
+  const result = await sdk.people.getPeople({}, operationSecurity);
 
-  if (res?.statusCode !== 200) {
-    throw new Error("Unexpected status code: " + res?.statusCode || "-");
-  }
-  
-  // handle response
+  // Handle the result
+  console.log(result)
 }
 
 run();
@@ -592,18 +562,15 @@ async function run() {
     },
   };
   
-  const res = await sdk.people.getPeopleIdentifier({
+  const result = await sdk.people.getPeopleIdentifier({
     fields: [
       "string",
     ],
     identifier: "string",
   }, operationSecurity);
 
-  if (res?.statusCode !== 200) {
-    throw new Error("Unexpected status code: " + res?.statusCode || "-");
-  }
-  
-  // handle response
+  // Handle the result
+  console.log(result)
 }
 
 run();
@@ -648,15 +615,12 @@ async function run() {
     },
   };
   
-  const res = await sdk.people.getPeopleIdEmployment({
+  const result = await sdk.people.getPeopleIdEmployment({
     id: "<ID>",
   }, operationSecurity);
 
-  if (res?.statusCode !== 200) {
-    throw new Error("Unexpected status code: " + res?.statusCode || "-");
-  }
-  
-  // handle response
+  // Handle the result
+  console.log(result)
 }
 
 run();
@@ -701,15 +665,12 @@ async function run() {
     },
   };
   
-  const res = await sdk.people.getPeopleIdEquities({
+  const result = await sdk.people.getPeopleIdEquities({
     id: "<ID>",
   }, operationSecurity);
 
-  if (res?.statusCode !== 200) {
-    throw new Error("Unexpected status code: " + res?.statusCode || "-");
-  }
-  
-  // handle response
+  // Handle the result
+  console.log(result)
 }
 
 run();
@@ -754,15 +715,12 @@ async function run() {
     },
   };
   
-  const res = await sdk.people.getPeopleIdLifecycle({
+  const result = await sdk.people.getPeopleIdLifecycle({
     id: "<ID>",
   }, operationSecurity);
 
-  if (res?.statusCode !== 200) {
-    throw new Error("Unexpected status code: " + res?.statusCode || "-");
-  }
-  
-  // handle response
+  // Handle the result
+  console.log(result)
 }
 
 run();
@@ -807,15 +765,12 @@ async function run() {
     },
   };
   
-  const res = await sdk.people.getPeopleIdSalaries({
+  const result = await sdk.people.getPeopleIdSalaries({
     id: "<ID>",
   }, operationSecurity);
 
-  if (res?.statusCode !== 200) {
-    throw new Error("Unexpected status code: " + res?.statusCode || "-");
-  }
-  
-  // handle response
+  // Handle the result
+  console.log(result)
 }
 
 run();
@@ -860,15 +815,12 @@ async function run() {
     },
   };
   
-  const res = await sdk.people.getPeopleIdTraining({
+  const result = await sdk.people.getPeopleIdTraining({
     id: "<ID>",
   }, operationSecurity);
 
-  if (res?.statusCode !== 200) {
-    throw new Error("Unexpected status code: " + res?.statusCode || "-");
-  }
-  
-  // handle response
+  // Handle the result
+  console.log(result)
 }
 
 run();
@@ -913,15 +865,12 @@ async function run() {
     },
   };
   
-  const res = await sdk.people.getPeopleIdVariable({
+  const result = await sdk.people.getPeopleIdVariable({
     id: "<ID>",
   }, operationSecurity);
 
-  if (res?.statusCode !== 200) {
-    throw new Error("Unexpected status code: " + res?.statusCode || "-");
-  }
-  
-  // handle response
+  // Handle the result
+  console.log(result)
 }
 
 run();
@@ -966,15 +915,12 @@ async function run() {
     },
   };
   
-  const res = await sdk.people.getPeopleIdWork({
+  const result = await sdk.people.getPeopleIdWork({
     id: "<ID>",
   }, operationSecurity);
 
-  if (res?.statusCode !== 200) {
-    throw new Error("Unexpected status code: " + res?.statusCode || "-");
-  }
-  
-  // handle response
+  // Handle the result
+  console.log(result)
 }
 
 run();
@@ -1019,13 +965,10 @@ async function run() {
     },
   };
   
-  const res = await sdk.people.getProfiles({}, operationSecurity);
+  const result = await sdk.people.getProfiles({}, operationSecurity);
 
-  if (res?.statusCode !== 200) {
-    throw new Error("Unexpected status code: " + res?.statusCode || "-");
-  }
-  
-  // handle response
+  // Handle the result
+  console.log(result)
 }
 
 run();
@@ -1070,18 +1013,15 @@ async function run() {
     },
   };
   
-  const res = await sdk.people.postEmployeesEmployeeIdInvitations({
+  const result = await sdk.people.postEmployeesEmployeeIdInvitations({
     invitationByWizard: {
       welcomeWizardId: 823551,
     },
     employeeId: "string",
   }, operationSecurity);
 
-  if (res?.statusCode !== 200) {
-    throw new Error("Unexpected status code: " + res?.statusCode || "-");
-  }
-  
-  // handle response
+  // Handle the result
+  console.log(result)
 }
 
 run();
@@ -1115,7 +1055,7 @@ run();
 ```typescript
 import { Hibob } from "hibob";
 import { PostEmployeesEmployeeIdStartDateSecurity } from "hibob/sdk/models/operations";
-import { RFCDate } from "hibob/types";
+import { RFCDate } from "hibob/sdk/types";
 
 async function run() {
   const sdk = new Hibob();
@@ -1127,18 +1067,15 @@ async function run() {
     },
   };
   
-  const res = await sdk.people.postEmployeesEmployeeIdStartDate({
+  const result = await sdk.people.postEmployeesEmployeeIdStartDate({
     startDateUpdate: {
       startDate: new RFCDate("2023-12-10"),
     },
     employeeId: "string",
   }, operationSecurity);
 
-  if (res?.statusCode !== 200) {
-    throw new Error("Unexpected status code: " + res?.statusCode || "-");
-  }
-  
-  // handle response
+  // Handle the result
+  console.log(result)
 }
 
 run();
@@ -1173,7 +1110,7 @@ This changes the employee’s status to Terminated according to specified termin
 import { Hibob } from "hibob";
 import { PostEmployeesIdentifierTerminateSecurity } from "hibob/sdk/models/operations";
 import { EmployeeTerminationUnit } from "hibob/sdk/models/shared";
-import { RFCDate } from "hibob/types";
+import { RFCDate } from "hibob/sdk/types";
 
 async function run() {
   const sdk = new Hibob();
@@ -1185,7 +1122,7 @@ async function run() {
     },
   };
   
-  const res = await sdk.people.postEmployeesIdentifierTerminate({
+  const result = await sdk.people.postEmployeesIdentifierTerminate({
     employeeTermination: {
       noticePeriod: {},
       terminationDate: new RFCDate("2024-04-20"),
@@ -1193,11 +1130,8 @@ async function run() {
     identifier: "string",
   }, operationSecurity);
 
-  if (res?.statusCode !== 200) {
-    throw new Error("Unexpected status code: " + res?.statusCode || "-");
-  }
-  
-  // handle response
+  // Handle the result
+  console.log(result)
 }
 
 run();
@@ -1242,15 +1176,12 @@ async function run() {
     },
   };
   
-  const res = await sdk.people.postEmployeesIdentifierUninvite({
+  const result = await sdk.people.postEmployeesIdentifierUninvite({
     identifier: "string",
   }, operationSecurity);
 
-  if (res?.statusCode !== 200) {
-    throw new Error("Unexpected status code: " + res?.statusCode || "-");
-  }
-  
-  // handle response
+  // Handle the result
+  console.log(result)
 }
 
 run();
@@ -1284,7 +1215,7 @@ run();
 ```typescript
 import { Hibob } from "hibob";
 import { PostPeopleSecurity } from "hibob/sdk/models/operations";
-import { RFCDate } from "hibob/types";
+import { RFCDate } from "hibob/sdk/types";
 
 async function run() {
   const sdk = new Hibob();
@@ -1296,7 +1227,7 @@ async function run() {
     },
   };
   
-  const res = await sdk.people.postPeople({
+  const result = await sdk.people.postPeople({
     email: "Lauryn20@hotmail.com",
     firstName: "Addison",
     surname: "string",
@@ -1306,11 +1237,8 @@ async function run() {
     },
   }, operationSecurity);
 
-  if (res?.statusCode !== 200) {
-    throw new Error("Unexpected status code: " + res?.statusCode || "-");
-  }
-  
-  // handle response
+  // Handle the result
+  console.log(result)
 }
 
 run();
@@ -1351,7 +1279,7 @@ async function run() {
     },
   });
 
-  const res = await sdk.people.postPeopleSearch({
+  const result = await sdk.people.postPeopleSearch({
     fields: [
       "root.id",
       "root.firstName",
@@ -1373,11 +1301,8 @@ async function run() {
     ],
   });
 
-  if (res?.statusCode !== 200) {
-    throw new Error("Unexpected status code: " + res?.statusCode || "-");
-  }
-  
-  // handle response
+  // Handle the result
+  console.log(result)
 }
 
 run();
@@ -1421,7 +1346,7 @@ async function run() {
     },
   };
   
-  const res = await sdk.people.postPeopleIdentifier({
+  const result = await sdk.people.postPeopleIdentifier({
     readSingleEmployeeRequestReference: {
       fields: [
         "root.id",
@@ -1435,11 +1360,8 @@ async function run() {
     identifier: "string",
   }, operationSecurity);
 
-  if (res?.statusCode !== 200) {
-    throw new Error("Unexpected status code: " + res?.statusCode || "-");
-  }
-  
-  // handle response
+  // Handle the result
+  console.log(result)
 }
 
 run();
@@ -1473,7 +1395,7 @@ run();
 ```typescript
 import { Hibob } from "hibob";
 import { PostPeopleIdEmploymentSecurity } from "hibob/sdk/models/operations";
-import { RFCDate } from "hibob/types";
+import { RFCDate } from "hibob/sdk/types";
 
 async function run() {
   const sdk = new Hibob();
@@ -1485,18 +1407,15 @@ async function run() {
     },
   };
   
-  const res = await sdk.people.postPeopleIdEmployment({
+  const result = await sdk.people.postPeopleIdEmployment({
     employmentEntry: {
       effectiveDate: new RFCDate("2022-12-06"),
     },
     id: "<ID>",
   }, operationSecurity);
 
-  if (res?.statusCode !== 200) {
-    throw new Error("Unexpected status code: " + res?.statusCode || "-");
-  }
-  
-  // handle response
+  // Handle the result
+  console.log(result)
 }
 
 run();
@@ -1530,7 +1449,7 @@ run();
 ```typescript
 import { Hibob } from "hibob";
 import { PostPeopleIdEquitiesSecurity } from "hibob/sdk/models/operations";
-import { RFCDate } from "hibob/types";
+import { RFCDate } from "hibob/sdk/types";
 
 async function run() {
   const sdk = new Hibob();
@@ -1542,7 +1461,7 @@ async function run() {
     },
   };
   
-  const res = await sdk.people.postPeopleIdEquities({
+  const result = await sdk.people.postPeopleIdEquities({
     equityEntry: {
       effectiveDate: new RFCDate("2023-11-21"),
       equityType: "string",
@@ -1555,11 +1474,8 @@ async function run() {
     id: "<ID>",
   }, operationSecurity);
 
-  if (res?.statusCode !== 200) {
-    throw new Error("Unexpected status code: " + res?.statusCode || "-");
-  }
-  
-  // handle response
+  // Handle the result
+  console.log(result)
 }
 
 run();
@@ -1593,7 +1509,7 @@ run();
 ```typescript
 import { Hibob } from "hibob";
 import { PostPeopleIdSalariesSecurity } from "hibob/sdk/models/operations";
-import { RFCDate } from "hibob/types";
+import { RFCDate } from "hibob/sdk/types";
 
 async function run() {
   const sdk = new Hibob();
@@ -1605,7 +1521,7 @@ async function run() {
     },
   };
   
-  const res = await sdk.people.postPeopleIdSalaries({
+  const result = await sdk.people.postPeopleIdSalaries({
     salaryEntry: {
       base: {
         currency: "Cuban Peso Convertible",
@@ -1617,11 +1533,8 @@ async function run() {
     id: "<ID>",
   }, operationSecurity);
 
-  if (res?.statusCode !== 200) {
-    throw new Error("Unexpected status code: " + res?.statusCode || "-");
-  }
-  
-  // handle response
+  // Handle the result
+  console.log(result)
 }
 
 run();
@@ -1655,7 +1568,7 @@ run();
 ```typescript
 import { Hibob } from "hibob";
 import { PostPeopleIdTrainingSecurity } from "hibob/sdk/models/operations";
-import { RFCDate } from "hibob/types";
+import { RFCDate } from "hibob/sdk/types";
 
 async function run() {
   const sdk = new Hibob();
@@ -1667,7 +1580,7 @@ async function run() {
     },
   };
   
-  const res = await sdk.people.postPeopleIdTraining({
+  const result = await sdk.people.postPeopleIdTraining({
     trainingEntry: {
       cost: {
         currency: "Danish Krone",
@@ -1678,11 +1591,8 @@ async function run() {
     id: "<ID>",
   }, operationSecurity);
 
-  if (res?.statusCode !== 200) {
-    throw new Error("Unexpected status code: " + res?.statusCode || "-");
-  }
-  
-  // handle response
+  // Handle the result
+  console.log(result)
 }
 
 run();
@@ -1716,7 +1626,7 @@ run();
 ```typescript
 import { Hibob } from "hibob";
 import { PostPeopleIdVariableSecurity } from "hibob/sdk/models/operations";
-import { RFCDate } from "hibob/types";
+import { RFCDate } from "hibob/sdk/types";
 
 async function run() {
   const sdk = new Hibob();
@@ -1728,7 +1638,7 @@ async function run() {
     },
   };
   
-  const res = await sdk.people.postPeopleIdVariable({
+  const result = await sdk.people.postPeopleIdVariable({
     variableEntry: {
       amount: {
         currency: "Algerian Dinar",
@@ -1740,11 +1650,8 @@ async function run() {
     id: "<ID>",
   }, operationSecurity);
 
-  if (res?.statusCode !== 200) {
-    throw new Error("Unexpected status code: " + res?.statusCode || "-");
-  }
-  
-  // handle response
+  // Handle the result
+  console.log(result)
 }
 
 run();
@@ -1778,7 +1685,7 @@ run();
 ```typescript
 import { Hibob } from "hibob";
 import { PostPeopleIdWorkSecurity } from "hibob/sdk/models/operations";
-import { RFCDate } from "hibob/types";
+import { RFCDate } from "hibob/sdk/types";
 
 async function run() {
   const sdk = new Hibob();
@@ -1790,7 +1697,7 @@ async function run() {
     },
   };
   
-  const res = await sdk.people.postPeopleIdWork({
+  const result = await sdk.people.postPeopleIdWork({
     workEntry: {
       customColumns: {},
       effectiveDate: new RFCDate("2024-05-24"),
@@ -1801,11 +1708,8 @@ async function run() {
     id: "<ID>",
   }, operationSecurity);
 
-  if (res?.statusCode !== 200) {
-    throw new Error("Unexpected status code: " + res?.statusCode || "-");
-  }
-  
-  // handle response
+  // Handle the result
+  console.log(result)
 }
 
 run();
@@ -1850,18 +1754,15 @@ async function run() {
     },
   };
   
-  const res = await sdk.people.putAvatarsEmployeeId({
+  const result = await sdk.people.putAvatarsEmployeeId({
     uploadAvatar: {
       url: "https://agitated-motor.net",
     },
     employeeId: "string",
   }, operationSecurity);
 
-  if (res?.statusCode !== 200) {
-    throw new Error("Unexpected status code: " + res?.statusCode || "-");
-  }
-  
-  // handle response
+  // Handle the result
+  console.log(result)
 }
 
 run();
@@ -1906,16 +1807,13 @@ async function run() {
     },
   };
   
-  const res = await sdk.people.putPeopleIdentifier({
+  const result = await sdk.people.putPeopleIdentifier({
     requestBody: {},
     identifier: "string",
   }, operationSecurity);
 
-  if (res?.statusCode !== 200) {
-    throw new Error("Unexpected status code: " + res?.statusCode || "-");
-  }
-  
-  // handle response
+  // Handle the result
+  console.log(result)
 }
 
 run();
@@ -1960,16 +1858,13 @@ async function run() {
     },
   };
   
-  const res = await sdk.people.putPeopleIdEmail({
+  const result = await sdk.people.putPeopleIdEmail({
     changeEmail: {},
     id: "<ID>",
   }, operationSecurity);
 
-  if (res?.statusCode !== 200) {
-    throw new Error("Unexpected status code: " + res?.statusCode || "-");
-  }
-  
-  // handle response
+  // Handle the result
+  console.log(result)
 }
 
 run();
@@ -2003,7 +1898,7 @@ run();
 ```typescript
 import { Hibob } from "hibob";
 import { PutPeopleIdEmploymentEntryIdSecurity } from "hibob/sdk/models/operations";
-import { RFCDate } from "hibob/types";
+import { RFCDate } from "hibob/sdk/types";
 
 async function run() {
   const sdk = new Hibob();
@@ -2015,7 +1910,7 @@ async function run() {
     },
   };
   
-  const res = await sdk.people.putPeopleIdEmploymentEntryId({
+  const result = await sdk.people.putPeopleIdEmploymentEntryId({
     employmentEntry: {
       effectiveDate: new RFCDate("2023-01-16"),
     },
@@ -2023,11 +1918,8 @@ async function run() {
     id: "<ID>",
   }, operationSecurity);
 
-  if (res?.statusCode !== 200) {
-    throw new Error("Unexpected status code: " + res?.statusCode || "-");
-  }
-  
-  // handle response
+  // Handle the result
+  console.log(result)
 }
 
 run();
@@ -2061,7 +1953,7 @@ run();
 ```typescript
 import { Hibob } from "hibob";
 import { PutPeopleIdEquitiesEntryIdSecurity } from "hibob/sdk/models/operations";
-import { RFCDate } from "hibob/types";
+import { RFCDate } from "hibob/sdk/types";
 
 async function run() {
   const sdk = new Hibob();
@@ -2073,7 +1965,7 @@ async function run() {
     },
   };
   
-  const res = await sdk.people.putPeopleIdEquitiesEntryId({
+  const result = await sdk.people.putPeopleIdEquitiesEntryId({
     equityEntry: {
       effectiveDate: new RFCDate("2024-01-18"),
       equityType: "string",
@@ -2087,11 +1979,8 @@ async function run() {
     id: "<ID>",
   }, operationSecurity);
 
-  if (res?.statusCode !== 200) {
-    throw new Error("Unexpected status code: " + res?.statusCode || "-");
-  }
-  
-  // handle response
+  // Handle the result
+  console.log(result)
 }
 
 run();
@@ -2125,7 +2014,7 @@ run();
 ```typescript
 import { Hibob } from "hibob";
 import { PutPeopleIdWorkEntryIdSecurity } from "hibob/sdk/models/operations";
-import { RFCDate } from "hibob/types";
+import { RFCDate } from "hibob/sdk/types";
 
 async function run() {
   const sdk = new Hibob();
@@ -2137,7 +2026,7 @@ async function run() {
     },
   };
   
-  const res = await sdk.people.putPeopleIdWorkEntryId({
+  const result = await sdk.people.putPeopleIdWorkEntryId({
     workEntry: {
       customColumns: {},
       effectiveDate: new RFCDate("2022-07-01"),
@@ -2149,11 +2038,8 @@ async function run() {
     id: "<ID>",
   }, operationSecurity);
 
-  if (res?.statusCode !== 200) {
-    throw new Error("Unexpected status code: " + res?.statusCode || "-");
-  }
-  
-  // handle response
+  // Handle the result
+  console.log(result)
 }
 
 run();

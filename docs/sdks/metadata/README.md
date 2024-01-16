@@ -36,16 +36,13 @@ async function run() {
     },
   };
   
-  const res = await sdk.metadata.deleteCompanyNamedListsListNameItemId({
+  const result = await sdk.metadata.deleteCompanyNamedListsListNameItemId({
     itemId: "string",
     listName: "string",
   }, operationSecurity);
 
-  if (res?.statusCode !== 200) {
-    throw new Error("Unexpected status code: " + res?.statusCode || "-");
-  }
-  
-  // handle response
+  // Handle the result
+  console.log(result)
 }
 
 run();
@@ -90,15 +87,12 @@ async function run() {
     },
   };
   
-  const res = await sdk.metadata.deleteCompanyPeopleFieldsFieldId({
+  const result = await sdk.metadata.deleteCompanyPeopleFieldsFieldId({
     fieldId: "string",
   }, operationSecurity);
 
-  if (res?.statusCode !== 200) {
-    throw new Error("Unexpected status code: " + res?.statusCode || "-");
-  }
-  
-  // handle response
+  // Handle the result
+  console.log(result)
 }
 
 run();
@@ -143,13 +137,10 @@ async function run() {
     },
   };
   
-  const res = await sdk.metadata.getCompanyNamedLists({}, operationSecurity);
+  const result = await sdk.metadata.getCompanyNamedLists({}, operationSecurity);
 
-  if (res?.statusCode !== 200) {
-    throw new Error("Unexpected status code: " + res?.statusCode || "-");
-  }
-  
-  // handle response
+  // Handle the result
+  console.log(result)
 }
 
 run();
@@ -194,15 +185,12 @@ async function run() {
     },
   };
   
-  const res = await sdk.metadata.getCompanyNamedListsListName({
+  const result = await sdk.metadata.getCompanyNamedListsListName({
     listName: "string",
   }, operationSecurity);
 
-  if (res?.statusCode !== 200) {
-    throw new Error("Unexpected status code: " + res?.statusCode || "-");
-  }
-  
-  // handle response
+  // Handle the result
+  console.log(result)
 }
 
 run();
@@ -247,13 +235,10 @@ async function run() {
     },
   };
   
-  const res = await sdk.metadata.getCompanyPeopleFields(operationSecurity);
+  const result = await sdk.metadata.getCompanyPeopleFields(operationSecurity);
 
-  if (res?.statusCode !== 200) {
-    throw new Error("Unexpected status code: " + res?.statusCode || "-");
-  }
-  
-  // handle response
+  // Handle the result
+  console.log(result)
 }
 
 run();
@@ -293,13 +278,10 @@ async function run() {
     },
   });
 
-  const res = await sdk.metadata.getMetadataObjectsPosition();
+  const result = await sdk.metadata.getMetadataObjectsPosition();
 
-  if (res?.statusCode !== 200) {
-    throw new Error("Unexpected status code: " + res?.statusCode || "-");
-  }
-  
-  // handle response
+  // Handle the result
+  console.log(result)
 }
 
 run();
@@ -342,13 +324,10 @@ async function run() {
     },
   };
   
-  const res = await sdk.metadata.getPeopleCustomTablesMetadata(operationSecurity);
+  const result = await sdk.metadata.getPeopleCustomTablesMetadata(operationSecurity);
 
-  if (res?.statusCode !== 200) {
-    throw new Error("Unexpected status code: " + res?.statusCode || "-");
-  }
-  
-  // handle response
+  // Handle the result
+  console.log(result)
 }
 
 run();
@@ -392,15 +371,12 @@ async function run() {
     },
   };
   
-  const res = await sdk.metadata.getPeopleCustomTablesMetadataCustomTableId({
+  const result = await sdk.metadata.getPeopleCustomTablesMetadataCustomTableId({
     customTableId: "string",
   }, operationSecurity);
 
-  if (res?.statusCode !== 200) {
-    throw new Error("Unexpected status code: " + res?.statusCode || "-");
-  }
-  
-  // handle response
+  // Handle the result
+  console.log(result)
 }
 
 run();
@@ -445,18 +421,15 @@ async function run() {
     },
   };
   
-  const res = await sdk.metadata.postCompanyNamedListsListName({
+  const result = await sdk.metadata.postCompanyNamedListsListName({
     newListItem: {
       name: "string",
     },
     listName: "string",
   }, operationSecurity);
 
-  if (res?.statusCode !== 200) {
-    throw new Error("Unexpected status code: " + res?.statusCode || "-");
-  }
-  
-  // handle response
+  // Handle the result
+  console.log(result)
 }
 
 run();
@@ -501,17 +474,14 @@ async function run() {
     },
   };
   
-  const res = await sdk.metadata.postCompanyPeopleFields({
+  const result = await sdk.metadata.postCompanyPeopleFields({
     category: "string",
     name: "string",
     type: "string",
   }, operationSecurity);
 
-  if (res?.statusCode !== 200) {
-    throw new Error("Unexpected status code: " + res?.statusCode || "-");
-  }
-  
-  // handle response
+  // Handle the result
+  console.log(result)
 }
 
 run();
@@ -556,17 +526,14 @@ async function run() {
     },
   };
   
-  const res = await sdk.metadata.putCompanyNamedListsListNameItemId({
+  const result = await sdk.metadata.putCompanyNamedListsListNameItemId({
     updateListItemRequest: {},
     itemId: "string",
     listName: "string",
   }, operationSecurity);
 
-  if (res?.statusCode !== 200) {
-    throw new Error("Unexpected status code: " + res?.statusCode || "-");
-  }
-  
-  // handle response
+  // Handle the result
+  console.log(result)
 }
 
 run();
@@ -611,16 +578,13 @@ async function run() {
     },
   };
   
-  const res = await sdk.metadata.putCompanyPeopleFieldsFieldId({
+  const result = await sdk.metadata.putCompanyPeopleFieldsFieldId({
     updateFieldRequest: {},
     fieldId: "string",
   }, operationSecurity);
 
-  if (res?.statusCode !== 200) {
-    throw new Error("Unexpected status code: " + res?.statusCode || "-");
-  }
-  
-  // handle response
+  // Handle the result
+  console.log(result)
 }
 
 run();
