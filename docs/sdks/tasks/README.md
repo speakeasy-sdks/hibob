@@ -54,7 +54,7 @@ run();
 
 ## getTasks
 
-<b>Supported user types:</b> Employee.
+<b>Supported user types:</b> Employee, Service.
 
 ### Example Usage
 

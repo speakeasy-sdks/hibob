@@ -1,7 +1,7 @@
 {
   "type": "commonjs",
   "name": "hibob",
-  "version": "2.6.0",
+  "version": "2.6.1",
   "author": "roopak",
   "main": "./index.js",
   "sideEffects": false,

@@ -169,7 +169,7 @@ export class Documents extends ClientSDK {
      * Download employee's documents
      *
      * @remarks
-     * Returns a list of documents and download links.<br /><b>Supported user types:</b> Employee.
+     * Returns a list of documents and download links.<br /><b>Supported user types:</b> Employee, Service.
      */
     async getDocsPeopleId(
         input: operations.GetDocsPeopleIdRequest,
@@ -235,7 +235,7 @@ export class Documents extends ClientSDK {
      * Upload a document to the employee's confidential folder
      *
      * @remarks
-     * <b>Supported user types:</b> Employee.
+     * <b>Supported user types:</b> Employee, Service.
      */
     async postDocsPeopleIdConfidential(
         input: operations.PostDocsPeopleIdConfidentialRequest,
@@ -382,7 +382,7 @@ export class Documents extends ClientSDK {
      * Upload a document to the employee's shared folder
      *
      * @remarks
-     * <b>Supported user types:</b> Employee.
+     * <b>Supported user types:</b> Employee, Service.
      */
     async postDocsPeopleIdShared(
         input: operations.PostDocsPeopleIdSharedRequest,

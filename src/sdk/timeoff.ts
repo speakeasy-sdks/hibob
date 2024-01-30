@@ -650,7 +650,7 @@ export class TimeOff extends ClientSDK {
      * Get all new/deleted time off requests since the specified date.
      *
      * @remarks
-     * Returns the list of time off requests approved or canceled since the specified date.<br /><b>Supported user types:</b> Employee, Service.
+     * Returns the list of time off requests that are pending, approved or canceled since the specified date.<br /><b>Supported user types:</b> Employee, Service.
      */
     async getTimeoffRequestsChanges(
         input: operations.GetTimeoffRequestsChangesRequest,
@@ -667,6 +667,10 @@ export class TimeOff extends ClientSDK {
         const path$ = this.templateURLComponent("/timeoff/requests/changes")();
 
         const query$ = [
+            enc$.encodeForm("includePending", payload$.includePending, {
+                explode: true,
+                charEncoding: "percent",
+            }),
             enc$.encodeForm("since", payload$.since, { explode: true, charEncoding: "percent" }),
         ]
             .filter(Boolean)

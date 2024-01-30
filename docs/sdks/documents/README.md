@@ -115,7 +115,7 @@ run();
 
 ## getDocsPeopleId
 
-Returns a list of documents and download links.<br /><b>Supported user types:</b> Employee.
+Returns a list of documents and download links.<br /><b>Supported user types:</b> Employee, Service.
 
 ### Example Usage
 
@@ -165,7 +165,7 @@ run();
 
 ## postDocsPeopleIdConfidential
 
-<b>Supported user types:</b> Employee.
+<b>Supported user types:</b> Employee, Service.
 
 ### Example Usage
 
@@ -271,7 +271,7 @@ run();
 
 ## postDocsPeopleIdShared
 
-<b>Supported user types:</b> Employee.
+<b>Supported user types:</b> Employee, Service.
 
 ### Example Usage
 

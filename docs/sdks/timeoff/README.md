@@ -441,7 +441,7 @@ run();
 
 ## getTimeoffRequestsChanges
 
-Returns the list of time off requests approved or canceled since the specified date.<br /><b>Supported user types:</b> Employee, Service.
+Returns the list of time off requests that are pending, approved or canceled since the specified date.<br /><b>Supported user types:</b> Employee, Service.
 
 ### Example Usage
 

@@ -69,7 +69,7 @@ export class Tasks extends ClientSDK {
      * Read all open tasks.
      *
      * @remarks
-     * <b>Supported user types:</b> Employee.
+     * <b>Supported user types:</b> Employee, Service.
      */
     async getTasks(
         security: operations.GetTasksSecurity,

@@ -13,6 +13,10 @@ export type GetTimeoffRequestsChangesSecurity = {
 
 export type GetTimeoffRequestsChangesRequest = {
     /**
+     * Optional parameter. Indicates whether to include pending requests in the results.
+     */
+    includePending?: boolean | undefined;
+    /**
      * Timestamp starting from which to return the changes. Should be in ISO-8601 format, e.g. 2050-04-05T14:30:24.345Z or 2050-04-05T12:30-02:00.
      */
     since: RFCDate;
@@ -40,21 +44,27 @@ export type GetTimeoffRequestsChangesResponse = {
 /** @internal */
 export namespace GetTimeoffRequestsChangesRequest$ {
     export type Inbound = {
+        includePending?: boolean | undefined;
         since: string;
     };
 
     export const inboundSchema: z.ZodType<GetTimeoffRequestsChangesRequest, z.ZodTypeDef, Inbound> =
         z
             .object({
+                includePending: z.boolean().default(false),
                 since: z.string().transform((v) => new RFCDate(v)),
             })
             .transform((v) => {
                 return {
+                    ...(v.includePending === undefined
+                        ? null
+                        : { includePending: v.includePending }),
                     since: v.since,
                 };
             });
 
     export type Outbound = {
+        includePending: boolean;
         since: string;
     };
 
@@ -64,10 +74,12 @@ export namespace GetTimeoffRequestsChangesRequest$ {
         GetTimeoffRequestsChangesRequest
     > = z
         .object({
+            includePending: z.boolean().default(false),
             since: z.instanceof(RFCDate).transform((v) => v.toString()),
         })
         .transform((v) => {
             return {
+                includePending: v.includePending,
                 since: v.since,
             };
         });
