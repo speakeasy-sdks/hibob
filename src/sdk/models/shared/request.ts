@@ -8,7 +8,7 @@ import { z } from "zod";
 /**
  * The type of request duration.<br> <b>portionOnRange</b> is when the request is for every morning or every afternoon during the days requested.<br> <b>hoursOnRange</b> is when the request is for X hours every day during the days requested.
  */
-export enum TypeT {
+export enum Type {
     Days = "days",
     Hours = "hours",
     PortionOnRange = "portionOnRange",
@@ -76,11 +76,11 @@ export type Request = {
     /**
      * The type of request duration.<br> <b>portionOnRange</b> is when the request is for every morning or every afternoon during the days requested.<br> <b>hoursOnRange</b> is when the request is for X hours every day during the days requested.
      */
-    type?: TypeT | undefined;
+    type?: Type | undefined;
 };
 
 /** @internal */
-export const TypeT$ = z.nativeEnum(TypeT);
+export const Type$ = z.nativeEnum(Type);
 
 /** @internal */
 export namespace Request$ {
@@ -100,7 +100,7 @@ export namespace Request$ {
         startDate?: string | undefined;
         startPortion?: string | undefined;
         status?: string | undefined;
-        type?: TypeT | undefined;
+        type?: Type | undefined;
     };
 
     export const inboundSchema: z.ZodType<Request, z.ZodTypeDef, Inbound> = z
@@ -129,7 +129,7 @@ export namespace Request$ {
                 .optional(),
             startPortion: z.string().optional(),
             status: z.string().optional(),
-            type: TypeT$.optional(),
+            type: Type$.optional(),
         })
         .transform((v) => {
             return {
@@ -172,7 +172,7 @@ export namespace Request$ {
         startDate?: string | undefined;
         startPortion?: string | undefined;
         status?: string | undefined;
-        type?: TypeT | undefined;
+        type?: Type | undefined;
     };
 
     export const outboundSchema: z.ZodType<Outbound, z.ZodTypeDef, Request> = z
@@ -201,7 +201,7 @@ export namespace Request$ {
                 .optional(),
             startPortion: z.string().optional(),
             status: z.string().optional(),
-            type: TypeT$.optional(),
+            type: Type$.optional(),
         })
         .transform((v) => {
             return {

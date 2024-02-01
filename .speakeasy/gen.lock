@@ -4,9 +4,9 @@ management:
   docChecksum: 41775c00c4073ce606498798e2db8afa
   docVersion: 1.0.0
   speakeasyVersion: internal
-  generationVersion: 2.239.4
-  releaseVersion: 2.6.1
-  configChecksum: 9d94153bba80b5a0680c2e7747f929d4
+  generationVersion: 2.245.1
+  releaseVersion: 2.6.2
+  configChecksum: b3c3964ce0038c05a84d91db5cc3b9fb
   repoURL: https://github.com/speakeasy-sdks/hibob.git
   repoSubDirectory: .
   installationURL: https://github.com/speakeasy-sdks/hibob
@@ -14,7 +14,7 @@ management:
 features:
   typescript:
     constsAndDefaults: 0.1.1
-    core: 3.4.7
+    core: 3.4.8
     deprecations: 2.81.1
     downloadStreams: 0.1.1
     globalSecurity: 2.82.2
@@ -579,7 +579,7 @@ generatedFiles:
   - docs/sdk/models/shared/timeoffchangetype.md
   - docs/sdk/models/shared/timeoffchange.md
   - docs/sdk/models/shared/requests.md
-  - docs/sdk/models/shared/typet.md
+  - docs/sdk/models/shared/type.md
   - docs/sdk/models/shared/request.md
   - docs/sdk/models/shared/adjustmenttype.md
   - docs/sdk/models/shared/adjustmentrequest.md
