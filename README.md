@@ -471,25 +471,16 @@ run();
 Some operations in this SDK require the security scheme to be specified at the request level. For example:
 ```typescript
 import { Hibob } from "hibob";
-import { DeletePeopleIdEmploymentEntryIdSecurity } from "hibob/sdk/models/operations";
+import { GetMyAvatarSecurity } from "hibob/sdk/models/operations";
 
 async function run() {
     const sdk = new Hibob();
 
-    const operationSecurity: DeletePeopleIdEmploymentEntryIdSecurity = {
-        basic: {
-            password: "<YOUR_PASSWORD_HERE>",
-            username: "<YOUR_USERNAME_HERE>",
-        },
+    const operationSecurity: GetMyAvatarSecurity = {
+        bearer: "<YOUR_API_KEY_HERE>",
     };
 
-    const result = await sdk.people.deletePeopleIdEmploymentEntryId(
-        {
-            entryId: 511526,
-            id: "<ID>",
-        },
-        operationSecurity
-    );
+    const result = await sdk.people.getMyAvatar(operationSecurity);
 
     // Handle the result
     console.log(result);
@@ -516,25 +507,21 @@ Certain SDK methods accept files as part of a multi-part request. It is possible
 
 ```typescript
 import { Hibob } from "hibob";
-import { PostDocsPeopleIdConfidentialUploadSecurity } from "hibob/sdk/models/operations";
 import { openAsBlob } from "node:fs";
 
 async function run() {
-    const sdk = new Hibob();
-
-    const operationSecurity: PostDocsPeopleIdConfidentialUploadSecurity = {
-        bearer: "<YOUR_API_KEY_HERE>",
-    };
-
-    const result = await sdk.documents.postDocsPeopleIdConfidentialUpload(
-        {
-            requestBody: {
-                file: await openAsBlob("./sample-file"),
-            },
-            id: "<ID>",
+    const sdk = new Hibob({
+        security: {
+            password: "<YOUR_PASSWORD_HERE>",
         },
-        operationSecurity
-    );
+    });
+
+    const result = await sdk.documents.postDocsPeopleIdConfidentialUpload({
+        requestBody: {
+            file: await openAsBlob("./sample-file"),
+        },
+        id: "<ID>",
+    });
 
     // Handle the result
     console.log(result);

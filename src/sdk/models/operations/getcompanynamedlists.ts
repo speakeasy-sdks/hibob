@@ -5,11 +5,6 @@
 import * as shared from "../../../sdk/models/shared";
 import { z } from "zod";
 
-export type GetCompanyNamedListsSecurity = {
-    basic?: shared.SchemeBasic | undefined;
-    bearer?: string | undefined;
-};
-
 export type GetCompanyNamedListsRequest = {
     /**
      * Whether to include archived items in the response.

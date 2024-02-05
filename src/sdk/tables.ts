@@ -25,11 +25,10 @@ export class Tables extends ClientSDK {
      * Deletes an employment entry from a given employee's employment history.
      *
      * @remarks
-     * <b>Supported user types:</b> Employee, Service.
+     * <b>Supported user types:</b> Service.
      */
     async deletePeopleIdEmploymentEntryId(
         input: operations.DeletePeopleIdEmploymentEntryIdRequest,
-        security: operations.DeletePeopleIdEmploymentEntryIdSecurity,
         options?: RequestOptions
     ): Promise<operations.DeletePeopleIdEmploymentEntryIdResponse> {
         const headers$ = new Headers();
@@ -50,10 +49,11 @@ export class Tables extends ClientSDK {
 
         const path$ = this.templateURLComponent("/people/{id}/employment/{entry_id}")(pathParams$);
 
-        const securitySettings$ = this.resolveSecurity(
-            [{ value: security?.basic, type: "http:basic" }],
-            [{ value: security?.bearer, fieldName: "Authorization", type: "apiKey:header" }]
-        );
+        const security$ =
+            typeof this.options$.security === "function"
+                ? await this.options$.security()
+                : this.options$.security;
+        const securitySettings$ = this.resolveGlobalSecurity(security$);
 
         const response = await this.fetch$(
             {
@@ -88,11 +88,10 @@ export class Tables extends ClientSDK {
      * Deletes an equity grant for an employee.
      *
      * @remarks
-     * <b>Supported user types:</b> Employee, Service.
+     * <b>Supported user types:</b> Service.
      */
     async deletePeopleIdEquitiesEntryId(
         input: operations.DeletePeopleIdEquitiesEntryIdRequest,
-        security: operations.DeletePeopleIdEquitiesEntryIdSecurity,
         options?: RequestOptions
     ): Promise<operations.DeletePeopleIdEquitiesEntryIdResponse> {
         const headers$ = new Headers();
@@ -113,10 +112,11 @@ export class Tables extends ClientSDK {
 
         const path$ = this.templateURLComponent("/people/{id}/equities/{entry_id}")(pathParams$);
 
-        const securitySettings$ = this.resolveSecurity(
-            [{ value: security?.basic, type: "http:basic" }],
-            [{ value: security?.bearer, fieldName: "Authorization", type: "apiKey:header" }]
-        );
+        const security$ =
+            typeof this.options$.security === "function"
+                ? await this.options$.security()
+                : this.options$.security;
+        const securitySettings$ = this.resolveGlobalSecurity(security$);
 
         const response = await this.fetch$(
             {
@@ -151,11 +151,10 @@ export class Tables extends ClientSDK {
      * Deletes a salary entry from the employee's list.
      *
      * @remarks
-     * <b>Supported user types:</b> Employee, Service.
+     * <b>Supported user types:</b> Service.
      */
     async deletePeopleIdSalariesEntryId(
         input: operations.DeletePeopleIdSalariesEntryIdRequest,
-        security: operations.DeletePeopleIdSalariesEntryIdSecurity,
         options?: RequestOptions
     ): Promise<operations.DeletePeopleIdSalariesEntryIdResponse> {
         const headers$ = new Headers();
@@ -176,10 +175,11 @@ export class Tables extends ClientSDK {
 
         const path$ = this.templateURLComponent("/people/{id}/salaries/{entry_id}")(pathParams$);
 
-        const securitySettings$ = this.resolveSecurity(
-            [{ value: security?.basic, type: "http:basic" }],
-            [{ value: security?.bearer, fieldName: "Authorization", type: "apiKey:header" }]
-        );
+        const security$ =
+            typeof this.options$.security === "function"
+                ? await this.options$.security()
+                : this.options$.security;
+        const securitySettings$ = this.resolveGlobalSecurity(security$);
 
         const response = await this.fetch$(
             {
@@ -214,11 +214,10 @@ export class Tables extends ClientSDK {
      * Deletes any training records for an employee.
      *
      * @remarks
-     * <b>Supported user types:</b> Employee, Service.
+     * <b>Supported user types:</b> Service.
      */
     async deletePeopleIdTrainingEntryId(
         input: operations.DeletePeopleIdTrainingEntryIdRequest,
-        security: operations.DeletePeopleIdTrainingEntryIdSecurity,
         options?: RequestOptions
     ): Promise<operations.DeletePeopleIdTrainingEntryIdResponse> {
         const headers$ = new Headers();
@@ -239,10 +238,11 @@ export class Tables extends ClientSDK {
 
         const path$ = this.templateURLComponent("/people/{id}/training/{entry_id}")(pathParams$);
 
-        const securitySettings$ = this.resolveSecurity(
-            [{ value: security?.basic, type: "http:basic" }],
-            [{ value: security?.bearer, fieldName: "Authorization", type: "apiKey:header" }]
-        );
+        const security$ =
+            typeof this.options$.security === "function"
+                ? await this.options$.security()
+                : this.options$.security;
+        const securitySettings$ = this.resolveGlobalSecurity(security$);
 
         const response = await this.fetch$(
             {
@@ -277,11 +277,10 @@ export class Tables extends ClientSDK {
      * Deletes a training record for an employee.
      *
      * @remarks
-     * <b>Supported user types:</b> Employee, Service.
+     * <b>Supported user types:</b> Service.
      */
     async deletePeopleIdVariableEntryId(
         input: operations.DeletePeopleIdVariableEntryIdRequest,
-        security: operations.DeletePeopleIdVariableEntryIdSecurity,
         options?: RequestOptions
     ): Promise<operations.DeletePeopleIdVariableEntryIdResponse> {
         const headers$ = new Headers();
@@ -302,10 +301,11 @@ export class Tables extends ClientSDK {
 
         const path$ = this.templateURLComponent("/people/{id}/variable/{entry_id}")(pathParams$);
 
-        const securitySettings$ = this.resolveSecurity(
-            [{ value: security?.basic, type: "http:basic" }],
-            [{ value: security?.bearer, fieldName: "Authorization", type: "apiKey:header" }]
-        );
+        const security$ =
+            typeof this.options$.security === "function"
+                ? await this.options$.security()
+                : this.options$.security;
+        const securitySettings$ = this.resolveGlobalSecurity(security$);
 
         const response = await this.fetch$(
             {
@@ -340,11 +340,10 @@ export class Tables extends ClientSDK {
      * Deletes a work entry from a given employee's work history.
      *
      * @remarks
-     * <b>Supported user types:</b> Employee, Service
+     * <b>Supported user types:</b> Service
      */
     async deletePeopleIdWorkEntryId(
         input: operations.DeletePeopleIdWorkEntryIdRequest,
-        security: operations.DeletePeopleIdWorkEntryIdSecurity,
         options?: RequestOptions
     ): Promise<operations.DeletePeopleIdWorkEntryIdResponse> {
         const headers$ = new Headers();
@@ -364,10 +363,11 @@ export class Tables extends ClientSDK {
 
         const path$ = this.templateURLComponent("/people/{id}/work/{entry_id}")(pathParams$);
 
-        const securitySettings$ = this.resolveSecurity(
-            [{ value: security?.basic, type: "http:basic" }],
-            [{ value: security?.bearer, fieldName: "Authorization", type: "apiKey:header" }]
-        );
+        const security$ =
+            typeof this.options$.security === "function"
+                ? await this.options$.security()
+                : this.options$.security;
+        const securitySettings$ = this.resolveGlobalSecurity(security$);
 
         const response = await this.fetch$(
             {
@@ -400,11 +400,10 @@ export class Tables extends ClientSDK {
      * List employee's employment history.
      *
      * @remarks
-     * <b>Note:</b> Changes to this API are planned to take effect on May 31, 2024.  Make sure to review all of the details in the <a href='https://help.hibob.com/hc/en-us/articles/19726260483601'>Working pattern API Changes</a>  article in the help center.<br> <br>Returns a list of employment history entries for a given employee.<br /><b>Supported user types:</b> Employee, Service<br><br><b>Note</b>: The values of the list fields represent the list item ID and not the list item value. To obtain the corresponding list item value, use the HiBob metadata API to determine the field list name. Then, use the list item ID to locate the list item value. For more information, see <a href='https://apidocs.hibob.com/docs/how-to-work-with-lists-public-api'>How to work with lists Public API</a>. - Basic: [] - Bearer: []
+     * <b>Note:</b> Changes to this API are planned to take effect on May 31, 2024.  Make sure to review all of the details in the <a href='https://help.hibob.com/hc/en-us/articles/19726260483601'>Working pattern API Changes</a>  article in the help center.<br> <br>Returns a list of employment history entries for a given employee.<br /><b>Supported user types:</b> Service<br><br><b>Note</b>: The values of the list fields represent the list item ID and not the list item value. To obtain the corresponding list item value, use the HiBob metadata API to determine the field list name. Then, use the list item ID to locate the list item value. For more information, see <a href='https://apidocs.hibob.com/docs/how-to-work-with-lists-public-api'>How to work with lists Public API</a>.
      */
     async getPeopleIdEmployment(
         input: operations.GetPeopleIdEmploymentRequest,
-        security: operations.GetPeopleIdEmploymentSecurity,
         options?: RequestOptions
     ): Promise<operations.GetPeopleIdEmploymentResponse> {
         const headers$ = new Headers();
@@ -420,10 +419,11 @@ export class Tables extends ClientSDK {
 
         const path$ = this.templateURLComponent("/people/{id}/employment")(pathParams$);
 
-        const securitySettings$ = this.resolveSecurity(
-            [{ value: security?.basic, type: "http:basic" }],
-            [{ value: security?.bearer, fieldName: "Authorization", type: "apiKey:header" }]
-        );
+        const security$ =
+            typeof this.options$.security === "function"
+                ? await this.options$.security()
+                : this.options$.security;
+        const securitySettings$ = this.resolveGlobalSecurity(security$);
 
         const response = await this.fetch$(
             {
@@ -459,11 +459,10 @@ export class Tables extends ClientSDK {
      * List the employee's equity grants.
      *
      * @remarks
-     * Returns a list of equity grants for a given employee.<br /><b>Supported user types:</b> Employee, Service<br><br><b>Note</b>: The values of the list fields represent the list item ID and not the list item value. To obtain the corresponding list item value, use the HiBob metadata API to determine the field list name. Then, use the list item ID to locate the list item value. For more information, see <a href='https://apidocs.hibob.com/docs/how-to-work-with-lists-public-api'>How to work with lists Public API</a>.
+     * Returns a list of equity grants for a given employee.<br /><b>Supported user types:</b> Service<br><br><b>Note</b>: The values of the list fields represent the list item ID and not the list item value. To obtain the corresponding list item value, use the HiBob metadata API to determine the field list name. Then, use the list item ID to locate the list item value. For more information, see <a href='https://apidocs.hibob.com/docs/how-to-work-with-lists-public-api'>How to work with lists Public API</a>.
      */
     async getPeopleIdEquities(
         input: operations.GetPeopleIdEquitiesRequest,
-        security: operations.GetPeopleIdEquitiesSecurity,
         options?: RequestOptions
     ): Promise<operations.GetPeopleIdEquitiesResponse> {
         const headers$ = new Headers();
@@ -479,10 +478,11 @@ export class Tables extends ClientSDK {
 
         const path$ = this.templateURLComponent("/people/{id}/equities")(pathParams$);
 
-        const securitySettings$ = this.resolveSecurity(
-            [{ value: security?.basic, type: "http:basic" }],
-            [{ value: security?.bearer, fieldName: "Authorization", type: "apiKey:header" }]
-        );
+        const security$ =
+            typeof this.options$.security === "function"
+                ? await this.options$.security()
+                : this.options$.security;
+        const securitySettings$ = this.resolveGlobalSecurity(security$);
 
         const response = await this.fetch$(
             {
@@ -518,11 +518,10 @@ export class Tables extends ClientSDK {
      * List employee's life-cycle status history.
      *
      * @remarks
-     * Returns a list of life-cycle history entries for a given employee.<br /><b>Supported user types:</b> Employee, Service<br><br><b>Note</b>: TThe values of the list fields represent the list item ID and not the list item value. To obtain the corresponding list item value, use the HiBob metadata API to determine the field list name. Then, use the list item ID to locate the list item value. For more information, see <a href='https://apidocs.hibob.com/docs/how-to-work-with-lists-public-api'>How to work with lists Public API</a>.
+     * Returns a list of life-cycle history entries for a given employee.<br /><b>Supported user types:</b> Service<br><br><b>Note</b>: TThe values of the list fields represent the list item ID and not the list item value. To obtain the corresponding list item value, use the HiBob metadata API to determine the field list name. Then, use the list item ID to locate the list item value. For more information, see <a href='https://apidocs.hibob.com/docs/how-to-work-with-lists-public-api'>How to work with lists Public API</a>.
      */
     async getPeopleIdLifecycle(
         input: operations.GetPeopleIdLifecycleRequest,
-        security: operations.GetPeopleIdLifecycleSecurity,
         options?: RequestOptions
     ): Promise<operations.GetPeopleIdLifecycleResponse> {
         const headers$ = new Headers();
@@ -538,10 +537,11 @@ export class Tables extends ClientSDK {
 
         const path$ = this.templateURLComponent("/people/{id}/lifecycle")(pathParams$);
 
-        const securitySettings$ = this.resolveSecurity(
-            [{ value: security?.basic, type: "http:basic" }],
-            [{ value: security?.bearer, fieldName: "Authorization", type: "apiKey:header" }]
-        );
+        const security$ =
+            typeof this.options$.security === "function"
+                ? await this.options$.security()
+                : this.options$.security;
+        const securitySettings$ = this.resolveGlobalSecurity(security$);
 
         const response = await this.fetch$(
             {
@@ -577,11 +577,10 @@ export class Tables extends ClientSDK {
      * List employee's salary history.
      *
      * @remarks
-     * Returns a list of salary history entries for a given employee.<br /><b>Supported user types:</b> Employee, Service<br><br><b>Note</b>: The values of the list fields represent the list item ID and not the list item value. To obtain the corresponding list item value, use the HiBob metadata API to determine the field list name. Then, use the list item ID to locate the list item value. For more information, see <a href='https://apidocs.hibob.com/docs/how-to-work-with-lists-public-api'>How to work with lists Public API</a>.
+     * Returns a list of salary history entries for a given employee.<br /><b>Supported user types:</b> Service<br><br><b>Note</b>: The values of the list fields represent the list item ID and not the list item value. To obtain the corresponding list item value, use the HiBob metadata API to determine the field list name. Then, use the list item ID to locate the list item value. For more information, see <a href='https://apidocs.hibob.com/docs/how-to-work-with-lists-public-api'>How to work with lists Public API</a>.
      */
     async getPeopleIdSalaries(
         input: operations.GetPeopleIdSalariesRequest,
-        security: operations.GetPeopleIdSalariesSecurity,
         options?: RequestOptions
     ): Promise<operations.GetPeopleIdSalariesResponse> {
         const headers$ = new Headers();
@@ -597,10 +596,11 @@ export class Tables extends ClientSDK {
 
         const path$ = this.templateURLComponent("/people/{id}/salaries")(pathParams$);
 
-        const securitySettings$ = this.resolveSecurity(
-            [{ value: security?.basic, type: "http:basic" }],
-            [{ value: security?.bearer, fieldName: "Authorization", type: "apiKey:header" }]
-        );
+        const security$ =
+            typeof this.options$.security === "function"
+                ? await this.options$.security()
+                : this.options$.security;
+        const securitySettings$ = this.resolveGlobalSecurity(security$);
 
         const response = await this.fetch$(
             {
@@ -636,11 +636,10 @@ export class Tables extends ClientSDK {
      * List the employee's training records.
      *
      * @remarks
-     * Returns a list of training records for a given employee<br /><b>Supported user types:</b> Employee, Service<br><br><b>Note</b>: The values of the list fields represent the list item ID and not the list item value. To obtain the corresponding list item value, use the HiBob metadata API to determine the field list name. Then, use the list item ID to locate the list item value. For more information, see <a href='https://apidocs.hibob.com/docs/how-to-work-with-lists-public-api'>How to work with lists Public API</a>.
+     * Returns a list of training records for a given employee<br /><b>Supported user types:</b> Service<br><br><b>Note</b>: The values of the list fields represent the list item ID and not the list item value. To obtain the corresponding list item value, use the HiBob metadata API to determine the field list name. Then, use the list item ID to locate the list item value. For more information, see <a href='https://apidocs.hibob.com/docs/how-to-work-with-lists-public-api'>How to work with lists Public API</a>.
      */
     async getPeopleIdTraining(
         input: operations.GetPeopleIdTrainingRequest,
-        security: operations.GetPeopleIdTrainingSecurity,
         options?: RequestOptions
     ): Promise<operations.GetPeopleIdTrainingResponse> {
         const headers$ = new Headers();
@@ -656,10 +655,11 @@ export class Tables extends ClientSDK {
 
         const path$ = this.templateURLComponent("/people/{id}/training")(pathParams$);
 
-        const securitySettings$ = this.resolveSecurity(
-            [{ value: security?.basic, type: "http:basic" }],
-            [{ value: security?.bearer, fieldName: "Authorization", type: "apiKey:header" }]
-        );
+        const security$ =
+            typeof this.options$.security === "function"
+                ? await this.options$.security()
+                : this.options$.security;
+        const securitySettings$ = this.resolveGlobalSecurity(security$);
 
         const response = await this.fetch$(
             {
@@ -695,11 +695,10 @@ export class Tables extends ClientSDK {
      * List employee's variable payments
      *
      * @remarks
-     * Returns a list of variable payments for a given employee.<br /><b>Supported user types:</b> Employee, Service.<br><br><b>Note</b>: The values of the list fields represent the list item ID and not the list item value. To obtain the corresponding list item value, use the HiBob metadata API to determine the field list name. Then, use the list item ID to locate the list item value. For more information, see <a href='https://apidocs.hibob.com/docs/how-to-work-with-lists-public-api'>How to work with lists Public API</a>.
+     * Returns a list of variable payments for a given employee.<br /><b>Supported user types:</b> Service.<br><br><b>Note</b>: The values of the list fields represent the list item ID and not the list item value. To obtain the corresponding list item value, use the HiBob metadata API to determine the field list name. Then, use the list item ID to locate the list item value. For more information, see <a href='https://apidocs.hibob.com/docs/how-to-work-with-lists-public-api'>How to work with lists Public API</a>.
      */
     async getPeopleIdVariable(
         input: operations.GetPeopleIdVariableRequest,
-        security: operations.GetPeopleIdVariableSecurity,
         options?: RequestOptions
     ): Promise<operations.GetPeopleIdVariableResponse> {
         const headers$ = new Headers();
@@ -715,10 +714,11 @@ export class Tables extends ClientSDK {
 
         const path$ = this.templateURLComponent("/people/{id}/variable")(pathParams$);
 
-        const securitySettings$ = this.resolveSecurity(
-            [{ value: security?.basic, type: "http:basic" }],
-            [{ value: security?.bearer, fieldName: "Authorization", type: "apiKey:header" }]
-        );
+        const security$ =
+            typeof this.options$.security === "function"
+                ? await this.options$.security()
+                : this.options$.security;
+        const securitySettings$ = this.resolveGlobalSecurity(security$);
 
         const response = await this.fetch$(
             {
@@ -754,11 +754,10 @@ export class Tables extends ClientSDK {
      * List employee's work history
      *
      * @remarks
-     * Returns a list of work history entries for a given employee.<br /><b>Supported user types:</b> Employee, Service.<br><br><b>Note</b>: The values of the list fields represent the list item ID and not the list item value. To obtain the corresponding list item value, use the HiBob metadata API to determine the field list name. Then, use the list item ID to locate the list item value. For more information, see <a href='https://apidocs.hibob.com/docs/how-to-work-with-lists-public-api'>How to work with lists Public API</a>.
+     * Returns a list of work history entries for a given employee.<br /><b>Supported user types:</b> Service.<br><br><b>Note</b>: The values of the list fields represent the list item ID and not the list item value. To obtain the corresponding list item value, use the HiBob metadata API to determine the field list name. Then, use the list item ID to locate the list item value. For more information, see <a href='https://apidocs.hibob.com/docs/how-to-work-with-lists-public-api'>How to work with lists Public API</a>.
      */
     async getPeopleIdWork(
         input: operations.GetPeopleIdWorkRequest,
-        security: operations.GetPeopleIdWorkSecurity,
         options?: RequestOptions
     ): Promise<operations.GetPeopleIdWorkResponse> {
         const headers$ = new Headers();
@@ -774,10 +773,11 @@ export class Tables extends ClientSDK {
 
         const path$ = this.templateURLComponent("/people/{id}/work")(pathParams$);
 
-        const securitySettings$ = this.resolveSecurity(
-            [{ value: security?.basic, type: "http:basic" }],
-            [{ value: security?.bearer, fieldName: "Authorization", type: "apiKey:header" }]
-        );
+        const security$ =
+            typeof this.options$.security === "function"
+                ? await this.options$.security()
+                : this.options$.security;
+        const securitySettings$ = this.resolveGlobalSecurity(security$);
 
         const response = await this.fetch$(
             {
@@ -813,11 +813,10 @@ export class Tables extends ClientSDK {
      * Creates a new employment entry for a given employee.
      *
      * @remarks
-     * <b>Supported user types:</b> Employee, Service<br><br><b>Note</b>: The values of the list fields represent the list item ID and not the list item value. To obtain the corresponding list item value, use the HiBob metadata API to determine the field list name. Then, use the list item ID to locate the list item value. For more information, see <a href='https://apidocs.hibob.com/docs/how-to-work-with-lists-public-api'>How to work with lists Public API</a>.
+     * <b>Supported user types:</b> Service<br><br><b>Note</b>: The values of the list fields represent the list item ID and not the list item value. To obtain the corresponding list item value, use the HiBob metadata API to determine the field list name. Then, use the list item ID to locate the list item value. For more information, see <a href='https://apidocs.hibob.com/docs/how-to-work-with-lists-public-api'>How to work with lists Public API</a>.
      */
     async postPeopleIdEmployment(
         input: operations.PostPeopleIdEmploymentRequest,
-        security: operations.PostPeopleIdEmploymentSecurity,
         options?: RequestOptions
     ): Promise<operations.PostPeopleIdEmploymentResponse> {
         const headers$ = new Headers();
@@ -835,10 +834,11 @@ export class Tables extends ClientSDK {
 
         const path$ = this.templateURLComponent("/people/{id}/employment")(pathParams$);
 
-        const securitySettings$ = this.resolveSecurity(
-            [{ value: security?.basic, type: "http:basic" }],
-            [{ value: security?.bearer, fieldName: "Authorization", type: "apiKey:header" }]
-        );
+        const security$ =
+            typeof this.options$.security === "function"
+                ? await this.options$.security()
+                : this.options$.security;
+        const securitySettings$ = this.resolveGlobalSecurity(security$);
 
         const response = await this.fetch$(
             {
@@ -871,11 +871,10 @@ export class Tables extends ClientSDK {
      * Creates a new equity grant for a given employee.
      *
      * @remarks
-     * <b>Supported user types:</b> Employee, Service<br><br><b>Note</b>: The values of the list fields represent the list item ID and not the list item value. To obtain the corresponding list item value, use the HiBob metadata API to determine the field list name. Then, use the list item ID to locate the list item value. For more information, see <a href='https://apidocs.hibob.com/docs/how-to-work-with-lists-public-api'>How to work with lists Public API</a>.
+     * <b>Supported user types:</b> Service<br><br><b>Note</b>: The values of the list fields represent the list item ID and not the list item value. To obtain the corresponding list item value, use the HiBob metadata API to determine the field list name. Then, use the list item ID to locate the list item value. For more information, see <a href='https://apidocs.hibob.com/docs/how-to-work-with-lists-public-api'>How to work with lists Public API</a>.
      */
     async postPeopleIdEquities(
         input: operations.PostPeopleIdEquitiesRequest,
-        security: operations.PostPeopleIdEquitiesSecurity,
         options?: RequestOptions
     ): Promise<operations.PostPeopleIdEquitiesResponse> {
         const headers$ = new Headers();
@@ -893,10 +892,11 @@ export class Tables extends ClientSDK {
 
         const path$ = this.templateURLComponent("/people/{id}/equities")(pathParams$);
 
-        const securitySettings$ = this.resolveSecurity(
-            [{ value: security?.basic, type: "http:basic" }],
-            [{ value: security?.bearer, fieldName: "Authorization", type: "apiKey:header" }]
-        );
+        const security$ =
+            typeof this.options$.security === "function"
+                ? await this.options$.security()
+                : this.options$.security;
+        const securitySettings$ = this.resolveGlobalSecurity(security$);
 
         const response = await this.fetch$(
             {
@@ -929,11 +929,10 @@ export class Tables extends ClientSDK {
      * Creates a new salary entry for a given employee.
      *
      * @remarks
-     * <b>Supported user types:</b> Employee, Service<br><br><b>Note</b>: The values of the list fields represent the list item ID and not the list item value. To obtain the corresponding list item value, use the HiBob metadata API to determine the field list name. Then, use the list item ID to locate the list item value. For more information, see <a href='https://apidocs.hibob.com/docs/how-to-work-with-lists-public-api'>How to work with lists Public API</a>.
+     * <b>Supported user types:</b> Service<br><br><b>Note</b>: The values of the list fields represent the list item ID and not the list item value. To obtain the corresponding list item value, use the HiBob metadata API to determine the field list name. Then, use the list item ID to locate the list item value. For more information, see <a href='https://apidocs.hibob.com/docs/how-to-work-with-lists-public-api'>How to work with lists Public API</a>.
      */
     async postPeopleIdSalaries(
         input: operations.PostPeopleIdSalariesRequest,
-        security: operations.PostPeopleIdSalariesSecurity,
         options?: RequestOptions
     ): Promise<operations.PostPeopleIdSalariesResponse> {
         const headers$ = new Headers();
@@ -951,10 +950,11 @@ export class Tables extends ClientSDK {
 
         const path$ = this.templateURLComponent("/people/{id}/salaries")(pathParams$);
 
-        const securitySettings$ = this.resolveSecurity(
-            [{ value: security?.basic, type: "http:basic" }],
-            [{ value: security?.bearer, fieldName: "Authorization", type: "apiKey:header" }]
-        );
+        const security$ =
+            typeof this.options$.security === "function"
+                ? await this.options$.security()
+                : this.options$.security;
+        const securitySettings$ = this.resolveGlobalSecurity(security$);
 
         const response = await this.fetch$(
             {
@@ -987,11 +987,10 @@ export class Tables extends ClientSDK {
      * Creates a new training records for a given employee
      *
      * @remarks
-     * <b>Supported user types:</b> Employee, Service<br><br><b>Note</b>: The values of the list fields represent the list item ID and not the list item value. To obtain the corresponding list item value, use the HiBob metadata API to determine the field list name. Then, use the list item ID to locate the list item value. For more information, see <a href='https://apidocs.hibob.com/docs/how-to-work-with-lists-public-api'>How to work with lists Public API</a>.
+     * <b>Supported user types:</b> Service<br><br><b>Note</b>: The values of the list fields represent the list item ID and not the list item value. To obtain the corresponding list item value, use the HiBob metadata API to determine the field list name. Then, use the list item ID to locate the list item value. For more information, see <a href='https://apidocs.hibob.com/docs/how-to-work-with-lists-public-api'>How to work with lists Public API</a>.
      */
     async postPeopleIdTraining(
         input: operations.PostPeopleIdTrainingRequest,
-        security: operations.PostPeopleIdTrainingSecurity,
         options?: RequestOptions
     ): Promise<operations.PostPeopleIdTrainingResponse> {
         const headers$ = new Headers();
@@ -1009,10 +1008,11 @@ export class Tables extends ClientSDK {
 
         const path$ = this.templateURLComponent("/people/{id}/training")(pathParams$);
 
-        const securitySettings$ = this.resolveSecurity(
-            [{ value: security?.basic, type: "http:basic" }],
-            [{ value: security?.bearer, fieldName: "Authorization", type: "apiKey:header" }]
-        );
+        const security$ =
+            typeof this.options$.security === "function"
+                ? await this.options$.security()
+                : this.options$.security;
+        const securitySettings$ = this.resolveGlobalSecurity(security$);
 
         const response = await this.fetch$(
             {
@@ -1045,11 +1045,10 @@ export class Tables extends ClientSDK {
      * Creates a new variable payment for a given employee.
      *
      * @remarks
-     * <b>Supported user types:</b> Employee, Service<br><br><b>Note</b>:The values of the list fields represent the list item ID and not the list item value. To obtain the corresponding list item value, use the HiBob metadata API to determine the field list name. Then, use the list item ID to locate the list item value. For more information, see <a href='https://apidocs.hibob.com/docs/how-to-work-with-lists-public-api'>How to work with lists Public API</a>.
+     * <b>Supported user types:</b> Service<br><br><b>Note</b>:The values of the list fields represent the list item ID and not the list item value. To obtain the corresponding list item value, use the HiBob metadata API to determine the field list name. Then, use the list item ID to locate the list item value. For more information, see <a href='https://apidocs.hibob.com/docs/how-to-work-with-lists-public-api'>How to work with lists Public API</a>.
      */
     async postPeopleIdVariable(
         input: operations.PostPeopleIdVariableRequest,
-        security: operations.PostPeopleIdVariableSecurity,
         options?: RequestOptions
     ): Promise<operations.PostPeopleIdVariableResponse> {
         const headers$ = new Headers();
@@ -1067,10 +1066,11 @@ export class Tables extends ClientSDK {
 
         const path$ = this.templateURLComponent("/people/{id}/variable")(pathParams$);
 
-        const securitySettings$ = this.resolveSecurity(
-            [{ value: security?.basic, type: "http:basic" }],
-            [{ value: security?.bearer, fieldName: "Authorization", type: "apiKey:header" }]
-        );
+        const security$ =
+            typeof this.options$.security === "function"
+                ? await this.options$.security()
+                : this.options$.security;
+        const securitySettings$ = this.resolveGlobalSecurity(security$);
 
         const response = await this.fetch$(
             {
@@ -1103,11 +1103,10 @@ export class Tables extends ClientSDK {
      * Creates a new work entry for a given employee.
      *
      * @remarks
-     * <b>Supported user types:</b> Employee, Service<br><br><b>Note</b>: The values of the list fields represent the list item ID and not the list item value. To obtain the corresponding list item value, use the HiBob metadata API to determine the field list name. Then, use the list item ID to locate the list item value. For more information, see <a href='https://apidocs.hibob.com/docs/how-to-work-with-lists-public-api'>How to work with lists Public API</a>.
+     * <b>Supported user types:</b> Service<br><br><b>Note</b>: The values of the list fields represent the list item ID and not the list item value. To obtain the corresponding list item value, use the HiBob metadata API to determine the field list name. Then, use the list item ID to locate the list item value. For more information, see <a href='https://apidocs.hibob.com/docs/how-to-work-with-lists-public-api'>How to work with lists Public API</a>.
      */
     async postPeopleIdWork(
         input: operations.PostPeopleIdWorkRequest,
-        security: operations.PostPeopleIdWorkSecurity,
         options?: RequestOptions
     ): Promise<operations.PostPeopleIdWorkResponse> {
         const headers$ = new Headers();
@@ -1125,10 +1124,11 @@ export class Tables extends ClientSDK {
 
         const path$ = this.templateURLComponent("/people/{id}/work")(pathParams$);
 
-        const securitySettings$ = this.resolveSecurity(
-            [{ value: security?.basic, type: "http:basic" }],
-            [{ value: security?.bearer, fieldName: "Authorization", type: "apiKey:header" }]
-        );
+        const security$ =
+            typeof this.options$.security === "function"
+                ? await this.options$.security()
+                : this.options$.security;
+        const securitySettings$ = this.resolveGlobalSecurity(security$);
 
         const response = await this.fetch$(
             {
@@ -1161,11 +1161,10 @@ export class Tables extends ClientSDK {
      * Updates an employment entry from a given employee's employment history.
      *
      * @remarks
-     * <b>Supported user types:</b> Employee, Service.<br><br><b>Note</b>: The values of the list fields represent the list item ID and not the list item value. To obtain the corresponding list item value, use the HiBob metadata API to determine the field list name. Then, use the list item ID to locate the list item value. For more information, see <a href='https://apidocs.hibob.com/docs/how-to-work-with-lists-public-api'>How to work with lists Public API</a>.
+     * <b>Supported user types:</b> Service.<br><br><b>Note</b>: The values of the list fields represent the list item ID and not the list item value. To obtain the corresponding list item value, use the HiBob metadata API to determine the field list name. Then, use the list item ID to locate the list item value. For more information, see <a href='https://apidocs.hibob.com/docs/how-to-work-with-lists-public-api'>How to work with lists Public API</a>.
      */
     async putPeopleIdEmploymentEntryId(
         input: operations.PutPeopleIdEmploymentEntryIdRequest,
-        security: operations.PutPeopleIdEmploymentEntryIdSecurity,
         options?: RequestOptions
     ): Promise<operations.PutPeopleIdEmploymentEntryIdResponse> {
         const headers$ = new Headers();
@@ -1188,10 +1187,11 @@ export class Tables extends ClientSDK {
 
         const path$ = this.templateURLComponent("/people/{id}/employment/{entry_id}")(pathParams$);
 
-        const securitySettings$ = this.resolveSecurity(
-            [{ value: security?.basic, type: "http:basic" }],
-            [{ value: security?.bearer, fieldName: "Authorization", type: "apiKey:header" }]
-        );
+        const security$ =
+            typeof this.options$.security === "function"
+                ? await this.options$.security()
+                : this.options$.security;
+        const securitySettings$ = this.resolveGlobalSecurity(security$);
 
         const response = await this.fetch$(
             {
@@ -1226,11 +1226,10 @@ export class Tables extends ClientSDK {
      * Updates an equity grant for an employee
      *
      * @remarks
-     * <b>Supported user types:</b> Employee, Service<br><br><b>Note</b>: The values of the list fields represent the list item ID and not the list item value. To obtain the corresponding list item value, use the HiBob metadata API to determine the field list name. Then, use the list item ID to locate the list item value. For more information, see <a href='https://apidocs.hibob.com/docs/how-to-work-with-lists-public-api'>How to work with lists Public API</a>. - Basic: [] - Bearer: []
+     * <b>Supported user types:</b> Service<br><br><b>Note</b>: The values of the list fields represent the list item ID and not the list item value. To obtain the corresponding list item value, use the HiBob metadata API to determine the field list name. Then, use the list item ID to locate the list item value. For more information, see <a href='https://apidocs.hibob.com/docs/how-to-work-with-lists-public-api'>How to work with lists Public API</a>. - Basic: [] - Bearer: []
      */
     async putPeopleIdEquitiesEntryId(
         input: operations.PutPeopleIdEquitiesEntryIdRequest,
-        security: operations.PutPeopleIdEquitiesEntryIdSecurity,
         options?: RequestOptions
     ): Promise<operations.PutPeopleIdEquitiesEntryIdResponse> {
         const headers$ = new Headers();
@@ -1252,10 +1251,11 @@ export class Tables extends ClientSDK {
 
         const path$ = this.templateURLComponent("/people/{id}/equities/{entry_id}")(pathParams$);
 
-        const securitySettings$ = this.resolveSecurity(
-            [{ value: security?.basic, type: "http:basic" }],
-            [{ value: security?.bearer, fieldName: "Authorization", type: "apiKey:header" }]
-        );
+        const security$ =
+            typeof this.options$.security === "function"
+                ? await this.options$.security()
+                : this.options$.security;
+        const securitySettings$ = this.resolveGlobalSecurity(security$);
 
         const response = await this.fetch$(
             {
@@ -1288,11 +1288,10 @@ export class Tables extends ClientSDK {
      * Updates a work entry from employee's work history
      *
      * @remarks
-     * <b>Supported user types:</b> Employee, Service<br><br><b>Note</b>: The values of the list fields represent the list item ID and not the list item value. To obtain the corresponding list item value, use the HiBob metadata API to determine the field list name. Then, use the list item ID to locate the list item value. For more information, see <a href='https://apidocs.hibob.com/docs/how-to-work-with-lists-public-api'>How to work with lists Public API</a>.
+     * <b>Supported user types:</b> Service<br><br><b>Note</b>: The values of the list fields represent the list item ID and not the list item value. To obtain the corresponding list item value, use the HiBob metadata API to determine the field list name. Then, use the list item ID to locate the list item value. For more information, see <a href='https://apidocs.hibob.com/docs/how-to-work-with-lists-public-api'>How to work with lists Public API</a>.
      */
     async putPeopleIdWorkEntryId(
         input: operations.PutPeopleIdWorkEntryIdRequest,
-        security: operations.PutPeopleIdWorkEntryIdSecurity,
         options?: RequestOptions
     ): Promise<operations.PutPeopleIdWorkEntryIdResponse> {
         const headers$ = new Headers();
@@ -1314,10 +1313,11 @@ export class Tables extends ClientSDK {
 
         const path$ = this.templateURLComponent("/people/{id}/work/{entry_id}")(pathParams$);
 
-        const securitySettings$ = this.resolveSecurity(
-            [{ value: security?.basic, type: "http:basic" }],
-            [{ value: security?.bearer, fieldName: "Authorization", type: "apiKey:header" }]
-        );
+        const security$ =
+            typeof this.options$.security === "function"
+                ? await this.options$.security()
+                : this.options$.security;
+        const securitySettings$ = this.resolveGlobalSecurity(security$);
 
         const response = await this.fetch$(
             {

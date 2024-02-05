@@ -5,11 +5,6 @@
 import * as shared from "../../../sdk/models/shared";
 import { z } from "zod";
 
-export type GetPeopleCustomTablesMetadataSecurity = {
-    basic?: shared.SchemeBasic | undefined;
-    bearer?: string | undefined;
-};
-
 export type GetPeopleCustomTablesMetadataResponse = {
     /**
      * HTTP response content type for this operation

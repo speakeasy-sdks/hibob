@@ -20,28 +20,24 @@
 
 ## deleteTimeoffEmployeesIdRequestsRequestId
 
-Cancels an existing time off request.<br /><b>Supported user types:</b> Employee, Service.
+Cancels an existing time off request.<br /><b>Supported user types:</b> Service.
 
 ### Example Usage
 
 ```typescript
 import { Hibob } from "hibob";
-import { DeleteTimeoffEmployeesIdRequestsRequestIdSecurity } from "hibob/sdk/models/operations";
 
 async function run() {
-  const sdk = new Hibob();
-
-  const operationSecurity: DeleteTimeoffEmployeesIdRequestsRequestIdSecurity = {
-    basic: {
+  const sdk = new Hibob({
+    security: {
       password: "<YOUR_PASSWORD_HERE>",
-      username: "<YOUR_USERNAME_HERE>",
     },
-  };
-  
+  });
+
   const result = await sdk.timeOff.deleteTimeoffEmployeesIdRequestsRequestId({
     id: "<ID>",
     requestId: 313155,
-  }, operationSecurity);
+  });
 
   // Handle the result
   console.log(result)
@@ -55,7 +51,6 @@ run();
 | Parameter                                                                                                                                                                      | Type                                                                                                                                                                           | Required                                                                                                                                                                       | Description                                                                                                                                                                    |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | `request`                                                                                                                                                                      | [operations.DeleteTimeoffEmployeesIdRequestsRequestIdRequest](../../sdk/models/operations/deletetimeoffemployeesidrequestsrequestidrequest.md)                                 | :heavy_check_mark:                                                                                                                                                             | The request object to use for the request.                                                                                                                                     |
-| `security`                                                                                                                                                                     | [operations.DeleteTimeoffEmployeesIdRequestsRequestIdSecurity](../../sdk/models/operations/deletetimeoffemployeesidrequestsrequestidsecurity.md)                               | :heavy_check_mark:                                                                                                                                                             | The security requirements to use for the request.                                                                                                                              |
 | `options`                                                                                                                                                                      | RequestOptions                                                                                                                                                                 | :heavy_minus_sign:                                                                                                                                                             | Used to set various options for making HTTP requests.                                                                                                                          |
 | `options.fetchOptions`                                                                                                                                                         | [RequestInit](https://developer.mozilla.org/en-US/docs/Web/API/Request/Request#options)                                                                                        | :heavy_minus_sign:                                                                                                                                                             | Options that are passed to the underlying HTTP request. This can be used to inject extra headers for examples. All `Request` options, except `method` and `body`, are allowed. |
 
@@ -119,28 +114,24 @@ run();
 
 ## getTimeoffEmployeesIdRequestsRequestId
 
-Supplies detailed info about an existing time off request.<br /><b>Supported user types:</b> Employee, Service.
+Supplies detailed info about an existing time off request.<br /><b>Supported user types:</b> Service.
 
 ### Example Usage
 
 ```typescript
 import { Hibob } from "hibob";
-import { GetTimeoffEmployeesIdRequestsRequestIdSecurity } from "hibob/sdk/models/operations";
 
 async function run() {
-  const sdk = new Hibob();
-
-  const operationSecurity: GetTimeoffEmployeesIdRequestsRequestIdSecurity = {
-    basic: {
+  const sdk = new Hibob({
+    security: {
       password: "<YOUR_PASSWORD_HERE>",
-      username: "<YOUR_USERNAME_HERE>",
     },
-  };
-  
+  });
+
   const result = await sdk.timeOff.getTimeoffEmployeesIdRequestsRequestId({
     id: "<ID>",
     requestId: 662911,
-  }, operationSecurity);
+  });
 
   // Handle the result
   console.log(result)
@@ -154,7 +145,6 @@ run();
 | Parameter                                                                                                                                                                      | Type                                                                                                                                                                           | Required                                                                                                                                                                       | Description                                                                                                                                                                    |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | `request`                                                                                                                                                                      | [operations.GetTimeoffEmployeesIdRequestsRequestIdRequest](../../sdk/models/operations/gettimeoffemployeesidrequestsrequestidrequest.md)                                       | :heavy_check_mark:                                                                                                                                                             | The request object to use for the request.                                                                                                                                     |
-| `security`                                                                                                                                                                     | [operations.GetTimeoffEmployeesIdRequestsRequestIdSecurity](../../sdk/models/operations/gettimeoffemployeesidrequestsrequestidsecurity.md)                                     | :heavy_check_mark:                                                                                                                                                             | The security requirements to use for the request.                                                                                                                              |
 | `options`                                                                                                                                                                      | RequestOptions                                                                                                                                                                 | :heavy_minus_sign:                                                                                                                                                             | Used to set various options for making HTTP requests.                                                                                                                          |
 | `options.fetchOptions`                                                                                                                                                         | [RequestInit](https://developer.mozilla.org/en-US/docs/Web/API/Request/Request#options)                                                                                        | :heavy_minus_sign:                                                                                                                                                             | Options that are passed to the underlying HTTP request. This can be used to inject extra headers for examples. All `Request` options, except `method` and `body`, are allowed. |
 
@@ -170,26 +160,22 @@ run();
 
 ## getTimeoffOuttoday
 
-Returns the list of people that have a time off request today or on the specified date.<br /><b>Supported user types:</b> Employee, Service.
+Returns the list of people that have a time off request today or on the specified date.<br /><b>Supported user types:</b> Service.
 
 ### Example Usage
 
 ```typescript
 import { Hibob } from "hibob";
-import { GetTimeoffOuttodaySecurity } from "hibob/sdk/models/operations";
 import { RFCDate } from "hibob/sdk/types";
 
 async function run() {
-  const sdk = new Hibob();
-
-  const operationSecurity: GetTimeoffOuttodaySecurity = {
-    basic: {
+  const sdk = new Hibob({
+    security: {
       password: "<YOUR_PASSWORD_HERE>",
-      username: "<YOUR_USERNAME_HERE>",
     },
-  };
-  
-  const result = await sdk.timeOff.getTimeoffOuttoday({}, operationSecurity);
+  });
+
+  const result = await sdk.timeOff.getTimeoffOuttoday({});
 
   // Handle the result
   console.log(result)
@@ -203,7 +189,6 @@ run();
 | Parameter                                                                                                                                                                      | Type                                                                                                                                                                           | Required                                                                                                                                                                       | Description                                                                                                                                                                    |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | `request`                                                                                                                                                                      | [operations.GetTimeoffOuttodayRequest](../../sdk/models/operations/gettimeoffouttodayrequest.md)                                                                               | :heavy_check_mark:                                                                                                                                                             | The request object to use for the request.                                                                                                                                     |
-| `security`                                                                                                                                                                     | [operations.GetTimeoffOuttodaySecurity](../../sdk/models/operations/gettimeoffouttodaysecurity.md)                                                                             | :heavy_check_mark:                                                                                                                                                             | The security requirements to use for the request.                                                                                                                              |
 | `options`                                                                                                                                                                      | RequestOptions                                                                                                                                                                 | :heavy_minus_sign:                                                                                                                                                             | Used to set various options for making HTTP requests.                                                                                                                          |
 | `options.fetchOptions`                                                                                                                                                         | [RequestInit](https://developer.mozilla.org/en-US/docs/Web/API/Request/Request#options)                                                                                        | :heavy_minus_sign:                                                                                                                                                             | Options that are passed to the underlying HTTP request. This can be used to inject extra headers for examples. All `Request` options, except `method` and `body`, are allowed. |
 
@@ -441,28 +426,24 @@ run();
 
 ## getTimeoffRequestsChanges
 
-Returns the list of time off requests that are pending, approved or canceled since the specified date.<br /><b>Supported user types:</b> Employee, Service.
+Returns the list of time off requests that are pending, approved or canceled since the specified date.<br /><b>Supported user types:</b> Service.
 
 ### Example Usage
 
 ```typescript
 import { Hibob } from "hibob";
-import { GetTimeoffRequestsChangesSecurity } from "hibob/sdk/models/operations";
 import { RFCDate } from "hibob/sdk/types";
 
 async function run() {
-  const sdk = new Hibob();
-
-  const operationSecurity: GetTimeoffRequestsChangesSecurity = {
-    basic: {
+  const sdk = new Hibob({
+    security: {
       password: "<YOUR_PASSWORD_HERE>",
-      username: "<YOUR_USERNAME_HERE>",
     },
-  };
-  
+  });
+
   const result = await sdk.timeOff.getTimeoffRequestsChanges({
     since: new RFCDate("2022-06-11"),
-  }, operationSecurity);
+  });
 
   // Handle the result
   console.log(result)
@@ -476,7 +457,6 @@ run();
 | Parameter                                                                                                                                                                      | Type                                                                                                                                                                           | Required                                                                                                                                                                       | Description                                                                                                                                                                    |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | `request`                                                                                                                                                                      | [operations.GetTimeoffRequestsChangesRequest](../../sdk/models/operations/gettimeoffrequestschangesrequest.md)                                                                 | :heavy_check_mark:                                                                                                                                                             | The request object to use for the request.                                                                                                                                     |
-| `security`                                                                                                                                                                     | [operations.GetTimeoffRequestsChangesSecurity](../../sdk/models/operations/gettimeoffrequestschangessecurity.md)                                                               | :heavy_check_mark:                                                                                                                                                             | The security requirements to use for the request.                                                                                                                              |
 | `options`                                                                                                                                                                      | RequestOptions                                                                                                                                                                 | :heavy_minus_sign:                                                                                                                                                             | Used to set various options for making HTTP requests.                                                                                                                          |
 | `options.fetchOptions`                                                                                                                                                         | [RequestInit](https://developer.mozilla.org/en-US/docs/Web/API/Request/Request#options)                                                                                        | :heavy_minus_sign:                                                                                                                                                             | Options that are passed to the underlying HTTP request. This can be used to inject extra headers for examples. All `Request` options, except `method` and `body`, are allowed. |
 
@@ -492,29 +472,25 @@ run();
 
 ## getTimeoffWhosout
 
-Returns time off information for a given date range.<br /><b>Supported user types:</b> Employee, Service.
+Returns time off information for a given date range.<br /><b>Supported user types:</b> Service.
 
 ### Example Usage
 
 ```typescript
 import { Hibob } from "hibob";
-import { GetTimeoffWhosoutSecurity } from "hibob/sdk/models/operations";
 import { RFCDate } from "hibob/sdk/types";
 
 async function run() {
-  const sdk = new Hibob();
-
-  const operationSecurity: GetTimeoffWhosoutSecurity = {
-    basic: {
+  const sdk = new Hibob({
+    security: {
       password: "<YOUR_PASSWORD_HERE>",
-      username: "<YOUR_USERNAME_HERE>",
     },
-  };
-  
+  });
+
   const result = await sdk.timeOff.getTimeoffWhosout({
     from: new RFCDate("2022-03-11"),
     to: new RFCDate("2023-04-17"),
-  }, operationSecurity);
+  });
 
   // Handle the result
   console.log(result)
@@ -528,7 +504,6 @@ run();
 | Parameter                                                                                                                                                                      | Type                                                                                                                                                                           | Required                                                                                                                                                                       | Description                                                                                                                                                                    |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | `request`                                                                                                                                                                      | [operations.GetTimeoffWhosoutRequest](../../sdk/models/operations/gettimeoffwhosoutrequest.md)                                                                                 | :heavy_check_mark:                                                                                                                                                             | The request object to use for the request.                                                                                                                                     |
-| `security`                                                                                                                                                                     | [operations.GetTimeoffWhosoutSecurity](../../sdk/models/operations/gettimeoffwhosoutsecurity.md)                                                                               | :heavy_check_mark:                                                                                                                                                             | The security requirements to use for the request.                                                                                                                              |
 | `options`                                                                                                                                                                      | RequestOptions                                                                                                                                                                 | :heavy_minus_sign:                                                                                                                                                             | Used to set various options for making HTTP requests.                                                                                                                          |
 | `options.fetchOptions`                                                                                                                                                         | [RequestInit](https://developer.mozilla.org/en-US/docs/Web/API/Request/Request#options)                                                                                        | :heavy_minus_sign:                                                                                                                                                             | Options that are passed to the underlying HTTP request. This can be used to inject extra headers for examples. All `Request` options, except `method` and `body`, are allowed. |
 
@@ -592,13 +567,12 @@ run();
 
 ## postTimeoffEmployeesIdRequests
 
-Submits a new timeoff request.<br /><b>Supported user types:</b> Employee, Service.
+Submits a new timeoff request.<br /><b>Supported user types:</b> Service.
 
 ### Example Usage
 
 ```typescript
 import { Hibob } from "hibob";
-import { PostTimeoffEmployeesIdRequestsSecurity } from "hibob/sdk/models/operations";
 import {
   DayPortion,
   EndDatePortion,
@@ -608,22 +582,19 @@ import {
 import { RFCDate } from "hibob/sdk/types";
 
 async function run() {
-  const sdk = new Hibob();
-
-  const operationSecurity: PostTimeoffEmployeesIdRequestsSecurity = {
-    basic: {
+  const sdk = new Hibob({
+    security: {
       password: "<YOUR_PASSWORD_HERE>",
-      username: "<YOUR_USERNAME_HERE>",
     },
-  };
-  
+  });
+
   const result = await sdk.timeOff.postTimeoffEmployeesIdRequests({
     submitTimeoffRequest: {
       policyType: "string",
       startDate: new RFCDate("2022-04-15"),
     },
     id: "<ID>",
-  }, operationSecurity);
+  });
 
   // Handle the result
   console.log(result)
@@ -637,7 +608,6 @@ run();
 | Parameter                                                                                                                                                                      | Type                                                                                                                                                                           | Required                                                                                                                                                                       | Description                                                                                                                                                                    |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | `request`                                                                                                                                                                      | [operations.PostTimeoffEmployeesIdRequestsRequest](../../sdk/models/operations/posttimeoffemployeesidrequestsrequest.md)                                                       | :heavy_check_mark:                                                                                                                                                             | The request object to use for the request.                                                                                                                                     |
-| `security`                                                                                                                                                                     | [operations.PostTimeoffEmployeesIdRequestsSecurity](../../sdk/models/operations/posttimeoffemployeesidrequestssecurity.md)                                                     | :heavy_check_mark:                                                                                                                                                             | The security requirements to use for the request.                                                                                                                              |
 | `options`                                                                                                                                                                      | RequestOptions                                                                                                                                                                 | :heavy_minus_sign:                                                                                                                                                             | Used to set various options for making HTTP requests.                                                                                                                          |
 | `options.fetchOptions`                                                                                                                                                         | [RequestInit](https://developer.mozilla.org/en-US/docs/Web/API/Request/Request#options)                                                                                        | :heavy_minus_sign:                                                                                                                                                             | Options that are passed to the underlying HTTP request. This can be used to inject extra headers for examples. All `Request` options, except `method` and `body`, are allowed. |
 

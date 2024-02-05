@@ -5,11 +5,6 @@
 import * as shared from "../../../sdk/models/shared";
 import { z } from "zod";
 
-export type PostCompanyNamedListsListNameSecurity = {
-    basic?: shared.SchemeBasic | undefined;
-    bearer?: string | undefined;
-};
-
 export type PostCompanyNamedListsListNameRequest = {
     /**
      * The <b>parentId</b> attribute is optional and only applies to hierarchy lists. When <b>parentId</b> is specified, the newly created list item will be placed under the specific hierarchy parent node.

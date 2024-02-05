@@ -18,28 +18,24 @@
 
 ## deleteCompanyNamedListsListNameItemId
 
-<b>Supported user types:</b> Employee, Service.
+<b>Supported user types:</b> Service.
 
 ### Example Usage
 
 ```typescript
 import { Hibob } from "hibob";
-import { DeleteCompanyNamedListsListNameItemIdSecurity } from "hibob/sdk/models/operations";
 
 async function run() {
-  const sdk = new Hibob();
-
-  const operationSecurity: DeleteCompanyNamedListsListNameItemIdSecurity = {
-    basic: {
+  const sdk = new Hibob({
+    security: {
       password: "<YOUR_PASSWORD_HERE>",
-      username: "<YOUR_USERNAME_HERE>",
     },
-  };
-  
+  });
+
   const result = await sdk.metadata.deleteCompanyNamedListsListNameItemId({
     itemId: "string",
     listName: "string",
-  }, operationSecurity);
+  });
 
   // Handle the result
   console.log(result)
@@ -53,7 +49,6 @@ run();
 | Parameter                                                                                                                                                                      | Type                                                                                                                                                                           | Required                                                                                                                                                                       | Description                                                                                                                                                                    |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | `request`                                                                                                                                                                      | [operations.DeleteCompanyNamedListsListNameItemIdRequest](../../sdk/models/operations/deletecompanynamedlistslistnameitemidrequest.md)                                         | :heavy_check_mark:                                                                                                                                                             | The request object to use for the request.                                                                                                                                     |
-| `security`                                                                                                                                                                     | [operations.DeleteCompanyNamedListsListNameItemIdSecurity](../../sdk/models/operations/deletecompanynamedlistslistnameitemidsecurity.md)                                       | :heavy_check_mark:                                                                                                                                                             | The security requirements to use for the request.                                                                                                                              |
 | `options`                                                                                                                                                                      | RequestOptions                                                                                                                                                                 | :heavy_minus_sign:                                                                                                                                                             | Used to set various options for making HTTP requests.                                                                                                                          |
 | `options.fetchOptions`                                                                                                                                                         | [RequestInit](https://developer.mozilla.org/en-US/docs/Web/API/Request/Request#options)                                                                                        | :heavy_minus_sign:                                                                                                                                                             | Options that are passed to the underlying HTTP request. This can be used to inject extra headers for examples. All `Request` options, except `method` and `body`, are allowed. |
 
@@ -69,27 +64,23 @@ run();
 
 ## deleteCompanyPeopleFieldsFieldId
 
-<b>Supported user types:</b> Employee, Service.
+<b>Supported user types:</b> Service.
 
 ### Example Usage
 
 ```typescript
 import { Hibob } from "hibob";
-import { DeleteCompanyPeopleFieldsFieldIdSecurity } from "hibob/sdk/models/operations";
 
 async function run() {
-  const sdk = new Hibob();
-
-  const operationSecurity: DeleteCompanyPeopleFieldsFieldIdSecurity = {
-    basic: {
+  const sdk = new Hibob({
+    security: {
       password: "<YOUR_PASSWORD_HERE>",
-      username: "<YOUR_USERNAME_HERE>",
     },
-  };
-  
+  });
+
   const result = await sdk.metadata.deleteCompanyPeopleFieldsFieldId({
     fieldId: "string",
-  }, operationSecurity);
+  });
 
   // Handle the result
   console.log(result)
@@ -103,7 +94,6 @@ run();
 | Parameter                                                                                                                                                                      | Type                                                                                                                                                                           | Required                                                                                                                                                                       | Description                                                                                                                                                                    |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | `request`                                                                                                                                                                      | [operations.DeleteCompanyPeopleFieldsFieldIdRequest](../../sdk/models/operations/deletecompanypeoplefieldsfieldidrequest.md)                                                   | :heavy_check_mark:                                                                                                                                                             | The request object to use for the request.                                                                                                                                     |
-| `security`                                                                                                                                                                     | [operations.DeleteCompanyPeopleFieldsFieldIdSecurity](../../sdk/models/operations/deletecompanypeoplefieldsfieldidsecurity.md)                                                 | :heavy_check_mark:                                                                                                                                                             | The security requirements to use for the request.                                                                                                                              |
 | `options`                                                                                                                                                                      | RequestOptions                                                                                                                                                                 | :heavy_minus_sign:                                                                                                                                                             | Used to set various options for making HTTP requests.                                                                                                                          |
 | `options.fetchOptions`                                                                                                                                                         | [RequestInit](https://developer.mozilla.org/en-US/docs/Web/API/Request/Request#options)                                                                                        | :heavy_minus_sign:                                                                                                                                                             | Options that are passed to the underlying HTTP request. This can be used to inject extra headers for examples. All `Request` options, except `method` and `body`, are allowed. |
 
@@ -119,25 +109,21 @@ run();
 
 ## getCompanyNamedLists
 
-<b>Supported user types:</b> Employee, Service.
+<b>Supported user types:</b> Service.
 
 ### Example Usage
 
 ```typescript
 import { Hibob } from "hibob";
-import { GetCompanyNamedListsSecurity } from "hibob/sdk/models/operations";
 
 async function run() {
-  const sdk = new Hibob();
-
-  const operationSecurity: GetCompanyNamedListsSecurity = {
-    basic: {
+  const sdk = new Hibob({
+    security: {
       password: "<YOUR_PASSWORD_HERE>",
-      username: "<YOUR_USERNAME_HERE>",
     },
-  };
-  
-  const result = await sdk.metadata.getCompanyNamedLists({}, operationSecurity);
+  });
+
+  const result = await sdk.metadata.getCompanyNamedLists({});
 
   // Handle the result
   console.log(result)
@@ -151,7 +137,6 @@ run();
 | Parameter                                                                                                                                                                      | Type                                                                                                                                                                           | Required                                                                                                                                                                       | Description                                                                                                                                                                    |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | `request`                                                                                                                                                                      | [operations.GetCompanyNamedListsRequest](../../sdk/models/operations/getcompanynamedlistsrequest.md)                                                                           | :heavy_check_mark:                                                                                                                                                             | The request object to use for the request.                                                                                                                                     |
-| `security`                                                                                                                                                                     | [operations.GetCompanyNamedListsSecurity](../../sdk/models/operations/getcompanynamedlistssecurity.md)                                                                         | :heavy_check_mark:                                                                                                                                                             | The security requirements to use for the request.                                                                                                                              |
 | `options`                                                                                                                                                                      | RequestOptions                                                                                                                                                                 | :heavy_minus_sign:                                                                                                                                                             | Used to set various options for making HTTP requests.                                                                                                                          |
 | `options.fetchOptions`                                                                                                                                                         | [RequestInit](https://developer.mozilla.org/en-US/docs/Web/API/Request/Request#options)                                                                                        | :heavy_minus_sign:                                                                                                                                                             | Options that are passed to the underlying HTTP request. This can be used to inject extra headers for examples. All `Request` options, except `method` and `body`, are allowed. |
 
@@ -167,27 +152,23 @@ run();
 
 ## getCompanyNamedListsListName
 
-<b>Supported user types:</b> Employee, Service.
+<b>Supported user types:</b> Service.
 
 ### Example Usage
 
 ```typescript
 import { Hibob } from "hibob";
-import { GetCompanyNamedListsListNameSecurity } from "hibob/sdk/models/operations";
 
 async function run() {
-  const sdk = new Hibob();
-
-  const operationSecurity: GetCompanyNamedListsListNameSecurity = {
-    basic: {
+  const sdk = new Hibob({
+    security: {
       password: "<YOUR_PASSWORD_HERE>",
-      username: "<YOUR_USERNAME_HERE>",
     },
-  };
-  
+  });
+
   const result = await sdk.metadata.getCompanyNamedListsListName({
     listName: "string",
-  }, operationSecurity);
+  });
 
   // Handle the result
   console.log(result)
@@ -201,7 +182,6 @@ run();
 | Parameter                                                                                                                                                                      | Type                                                                                                                                                                           | Required                                                                                                                                                                       | Description                                                                                                                                                                    |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | `request`                                                                                                                                                                      | [operations.GetCompanyNamedListsListNameRequest](../../sdk/models/operations/getcompanynamedlistslistnamerequest.md)                                                           | :heavy_check_mark:                                                                                                                                                             | The request object to use for the request.                                                                                                                                     |
-| `security`                                                                                                                                                                     | [operations.GetCompanyNamedListsListNameSecurity](../../sdk/models/operations/getcompanynamedlistslistnamesecurity.md)                                                         | :heavy_check_mark:                                                                                                                                                             | The security requirements to use for the request.                                                                                                                              |
 | `options`                                                                                                                                                                      | RequestOptions                                                                                                                                                                 | :heavy_minus_sign:                                                                                                                                                             | Used to set various options for making HTTP requests.                                                                                                                          |
 | `options.fetchOptions`                                                                                                                                                         | [RequestInit](https://developer.mozilla.org/en-US/docs/Web/API/Request/Request#options)                                                                                        | :heavy_minus_sign:                                                                                                                                                             | Options that are passed to the underlying HTTP request. This can be used to inject extra headers for examples. All `Request` options, except `method` and `body`, are allowed. |
 
@@ -217,25 +197,21 @@ run();
 
 ## getCompanyPeopleFields
 
-<b>Supported user types:</b> Employee, Service.
+<b>Supported user types:</b> Service.
 
 ### Example Usage
 
 ```typescript
 import { Hibob } from "hibob";
-import { GetCompanyPeopleFieldsSecurity } from "hibob/sdk/models/operations";
 
 async function run() {
-  const sdk = new Hibob();
-
-  const operationSecurity: GetCompanyPeopleFieldsSecurity = {
-    basic: {
+  const sdk = new Hibob({
+    security: {
       password: "<YOUR_PASSWORD_HERE>",
-      username: "<YOUR_USERNAME_HERE>",
     },
-  };
-  
-  const result = await sdk.metadata.getCompanyPeopleFields(operationSecurity);
+  });
+
+  const result = await sdk.metadata.getCompanyPeopleFields();
 
   // Handle the result
   console.log(result)
@@ -248,7 +224,6 @@ run();
 
 | Parameter                                                                                                                                                                      | Type                                                                                                                                                                           | Required                                                                                                                                                                       | Description                                                                                                                                                                    |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `security`                                                                                                                                                                     | [operations.GetCompanyPeopleFieldsSecurity](../../sdk/models/operations/getcompanypeoplefieldssecurity.md)                                                                     | :heavy_check_mark:                                                                                                                                                             | The security requirements to use for the request.                                                                                                                              |
 | `options`                                                                                                                                                                      | RequestOptions                                                                                                                                                                 | :heavy_minus_sign:                                                                                                                                                             | Used to set various options for making HTTP requests.                                                                                                                          |
 | `options.fetchOptions`                                                                                                                                                         | [RequestInit](https://developer.mozilla.org/en-US/docs/Web/API/Request/Request#options)                                                                                        | :heavy_minus_sign:                                                                                                                                                             | Options that are passed to the underlying HTTP request. This can be used to inject extra headers for examples. All `Request` options, except `method` and `body`, are allowed. |
 
@@ -306,25 +281,21 @@ run();
 
 ## getPeopleCustomTablesMetadata
 
-<b>Supported user types:</b> Employee, Service.
+<b>Supported user types:</b> Service.
 
 ### Example Usage
 
 ```typescript
 import { Hibob } from "hibob";
-import { GetPeopleCustomTablesMetadataSecurity } from "hibob/sdk/models/operations";
 
 async function run() {
-  const sdk = new Hibob();
-
-  const operationSecurity: GetPeopleCustomTablesMetadataSecurity = {
-    basic: {
+  const sdk = new Hibob({
+    security: {
       password: "<YOUR_PASSWORD_HERE>",
-      username: "<YOUR_USERNAME_HERE>",
     },
-  };
-  
-  const result = await sdk.metadata.getPeopleCustomTablesMetadata(operationSecurity);
+  });
+
+  const result = await sdk.metadata.getPeopleCustomTablesMetadata();
 
   // Handle the result
   console.log(result)
@@ -337,7 +308,6 @@ run();
 
 | Parameter                                                                                                                                                                      | Type                                                                                                                                                                           | Required                                                                                                                                                                       | Description                                                                                                                                                                    |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `security`                                                                                                                                                                     | [operations.GetPeopleCustomTablesMetadataSecurity](../../sdk/models/operations/getpeoplecustomtablesmetadatasecurity.md)                                                       | :heavy_check_mark:                                                                                                                                                             | The security requirements to use for the request.                                                                                                                              |
 | `options`                                                                                                                                                                      | RequestOptions                                                                                                                                                                 | :heavy_minus_sign:                                                                                                                                                             | Used to set various options for making HTTP requests.                                                                                                                          |
 | `options.fetchOptions`                                                                                                                                                         | [RequestInit](https://developer.mozilla.org/en-US/docs/Web/API/Request/Request#options)                                                                                        | :heavy_minus_sign:                                                                                                                                                             | Options that are passed to the underlying HTTP request. This can be used to inject extra headers for examples. All `Request` options, except `method` and `body`, are allowed. |
 
@@ -353,27 +323,23 @@ run();
 
 ## getPeopleCustomTablesMetadataCustomTableId
 
-<b>Supported user types:</b> Employee, Service.
+<b>Supported user types:</b> Service.
 
 ### Example Usage
 
 ```typescript
 import { Hibob } from "hibob";
-import { GetPeopleCustomTablesMetadataCustomTableIdSecurity } from "hibob/sdk/models/operations";
 
 async function run() {
-  const sdk = new Hibob();
-
-  const operationSecurity: GetPeopleCustomTablesMetadataCustomTableIdSecurity = {
-    basic: {
+  const sdk = new Hibob({
+    security: {
       password: "<YOUR_PASSWORD_HERE>",
-      username: "<YOUR_USERNAME_HERE>",
     },
-  };
-  
+  });
+
   const result = await sdk.metadata.getPeopleCustomTablesMetadataCustomTableId({
     customTableId: "string",
-  }, operationSecurity);
+  });
 
   // Handle the result
   console.log(result)
@@ -387,7 +353,6 @@ run();
 | Parameter                                                                                                                                                                      | Type                                                                                                                                                                           | Required                                                                                                                                                                       | Description                                                                                                                                                                    |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | `request`                                                                                                                                                                      | [operations.GetPeopleCustomTablesMetadataCustomTableIdRequest](../../sdk/models/operations/getpeoplecustomtablesmetadatacustomtableidrequest.md)                               | :heavy_check_mark:                                                                                                                                                             | The request object to use for the request.                                                                                                                                     |
-| `security`                                                                                                                                                                     | [operations.GetPeopleCustomTablesMetadataCustomTableIdSecurity](../../sdk/models/operations/getpeoplecustomtablesmetadatacustomtableidsecurity.md)                             | :heavy_check_mark:                                                                                                                                                             | The security requirements to use for the request.                                                                                                                              |
 | `options`                                                                                                                                                                      | RequestOptions                                                                                                                                                                 | :heavy_minus_sign:                                                                                                                                                             | Used to set various options for making HTTP requests.                                                                                                                          |
 | `options.fetchOptions`                                                                                                                                                         | [RequestInit](https://developer.mozilla.org/en-US/docs/Web/API/Request/Request#options)                                                                                        | :heavy_minus_sign:                                                                                                                                                             | Options that are passed to the underlying HTTP request. This can be used to inject extra headers for examples. All `Request` options, except `method` and `body`, are allowed. |
 
@@ -403,30 +368,26 @@ run();
 
 ## postCompanyNamedListsListName
 
-<b>Supported user types:</b> Employee, Service.
+<b>Supported user types:</b> Service.
 
 ### Example Usage
 
 ```typescript
 import { Hibob } from "hibob";
-import { PostCompanyNamedListsListNameSecurity } from "hibob/sdk/models/operations";
 
 async function run() {
-  const sdk = new Hibob();
-
-  const operationSecurity: PostCompanyNamedListsListNameSecurity = {
-    basic: {
+  const sdk = new Hibob({
+    security: {
       password: "<YOUR_PASSWORD_HERE>",
-      username: "<YOUR_USERNAME_HERE>",
     },
-  };
-  
+  });
+
   const result = await sdk.metadata.postCompanyNamedListsListName({
     newListItem: {
       name: "string",
     },
     listName: "string",
-  }, operationSecurity);
+  });
 
   // Handle the result
   console.log(result)
@@ -440,7 +401,6 @@ run();
 | Parameter                                                                                                                                                                      | Type                                                                                                                                                                           | Required                                                                                                                                                                       | Description                                                                                                                                                                    |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | `request`                                                                                                                                                                      | [operations.PostCompanyNamedListsListNameRequest](../../sdk/models/operations/postcompanynamedlistslistnamerequest.md)                                                         | :heavy_check_mark:                                                                                                                                                             | The request object to use for the request.                                                                                                                                     |
-| `security`                                                                                                                                                                     | [operations.PostCompanyNamedListsListNameSecurity](../../sdk/models/operations/postcompanynamedlistslistnamesecurity.md)                                                       | :heavy_check_mark:                                                                                                                                                             | The security requirements to use for the request.                                                                                                                              |
 | `options`                                                                                                                                                                      | RequestOptions                                                                                                                                                                 | :heavy_minus_sign:                                                                                                                                                             | Used to set various options for making HTTP requests.                                                                                                                          |
 | `options.fetchOptions`                                                                                                                                                         | [RequestInit](https://developer.mozilla.org/en-US/docs/Web/API/Request/Request#options)                                                                                        | :heavy_minus_sign:                                                                                                                                                             | Options that are passed to the underlying HTTP request. This can be used to inject extra headers for examples. All `Request` options, except `method` and `body`, are allowed. |
 
@@ -456,29 +416,25 @@ run();
 
 ## postCompanyPeopleFields
 
-<b>Supported user types:</b> Employee, Service.
+<b>Supported user types:</b> Service.
 
 ### Example Usage
 
 ```typescript
 import { Hibob } from "hibob";
-import { PostCompanyPeopleFieldsSecurity } from "hibob/sdk/models/operations";
 
 async function run() {
-  const sdk = new Hibob();
-
-  const operationSecurity: PostCompanyPeopleFieldsSecurity = {
-    basic: {
+  const sdk = new Hibob({
+    security: {
       password: "<YOUR_PASSWORD_HERE>",
-      username: "<YOUR_USERNAME_HERE>",
     },
-  };
-  
+  });
+
   const result = await sdk.metadata.postCompanyPeopleFields({
     category: "string",
     name: "string",
     type: "string",
-  }, operationSecurity);
+  });
 
   // Handle the result
   console.log(result)
@@ -492,7 +448,6 @@ run();
 | Parameter                                                                                                                                                                      | Type                                                                                                                                                                           | Required                                                                                                                                                                       | Description                                                                                                                                                                    |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | `request`                                                                                                                                                                      | [shared.CreateFieldRequest](../../sdk/models/shared/createfieldrequest.md)                                                                                                     | :heavy_check_mark:                                                                                                                                                             | The request object to use for the request.                                                                                                                                     |
-| `security`                                                                                                                                                                     | [operations.PostCompanyPeopleFieldsSecurity](../../sdk/models/operations/postcompanypeoplefieldssecurity.md)                                                                   | :heavy_check_mark:                                                                                                                                                             | The security requirements to use for the request.                                                                                                                              |
 | `options`                                                                                                                                                                      | RequestOptions                                                                                                                                                                 | :heavy_minus_sign:                                                                                                                                                             | Used to set various options for making HTTP requests.                                                                                                                          |
 | `options.fetchOptions`                                                                                                                                                         | [RequestInit](https://developer.mozilla.org/en-US/docs/Web/API/Request/Request#options)                                                                                        | :heavy_minus_sign:                                                                                                                                                             | Options that are passed to the underlying HTTP request. This can be used to inject extra headers for examples. All `Request` options, except `method` and `body`, are allowed. |
 
@@ -508,29 +463,25 @@ run();
 
 ## putCompanyNamedListsListNameItemId
 
-<b>Supported user types:</b> Employee, Service.
+<b>Supported user types:</b> Service.
 
 ### Example Usage
 
 ```typescript
 import { Hibob } from "hibob";
-import { PutCompanyNamedListsListNameItemIdSecurity } from "hibob/sdk/models/operations";
 
 async function run() {
-  const sdk = new Hibob();
-
-  const operationSecurity: PutCompanyNamedListsListNameItemIdSecurity = {
-    basic: {
+  const sdk = new Hibob({
+    security: {
       password: "<YOUR_PASSWORD_HERE>",
-      username: "<YOUR_USERNAME_HERE>",
     },
-  };
-  
+  });
+
   const result = await sdk.metadata.putCompanyNamedListsListNameItemId({
     updateListItemRequest: {},
     itemId: "string",
     listName: "string",
-  }, operationSecurity);
+  });
 
   // Handle the result
   console.log(result)
@@ -544,7 +495,6 @@ run();
 | Parameter                                                                                                                                                                      | Type                                                                                                                                                                           | Required                                                                                                                                                                       | Description                                                                                                                                                                    |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | `request`                                                                                                                                                                      | [operations.PutCompanyNamedListsListNameItemIdRequest](../../sdk/models/operations/putcompanynamedlistslistnameitemidrequest.md)                                               | :heavy_check_mark:                                                                                                                                                             | The request object to use for the request.                                                                                                                                     |
-| `security`                                                                                                                                                                     | [operations.PutCompanyNamedListsListNameItemIdSecurity](../../sdk/models/operations/putcompanynamedlistslistnameitemidsecurity.md)                                             | :heavy_check_mark:                                                                                                                                                             | The security requirements to use for the request.                                                                                                                              |
 | `options`                                                                                                                                                                      | RequestOptions                                                                                                                                                                 | :heavy_minus_sign:                                                                                                                                                             | Used to set various options for making HTTP requests.                                                                                                                          |
 | `options.fetchOptions`                                                                                                                                                         | [RequestInit](https://developer.mozilla.org/en-US/docs/Web/API/Request/Request#options)                                                                                        | :heavy_minus_sign:                                                                                                                                                             | Options that are passed to the underlying HTTP request. This can be used to inject extra headers for examples. All `Request` options, except `method` and `body`, are allowed. |
 
@@ -560,28 +510,24 @@ run();
 
 ## putCompanyPeopleFieldsFieldId
 
-<b>Supported user types:</b> Employee, Service.
+<b>Supported user types:</b> Service.
 
 ### Example Usage
 
 ```typescript
 import { Hibob } from "hibob";
-import { PutCompanyPeopleFieldsFieldIdSecurity } from "hibob/sdk/models/operations";
 
 async function run() {
-  const sdk = new Hibob();
-
-  const operationSecurity: PutCompanyPeopleFieldsFieldIdSecurity = {
-    basic: {
+  const sdk = new Hibob({
+    security: {
       password: "<YOUR_PASSWORD_HERE>",
-      username: "<YOUR_USERNAME_HERE>",
     },
-  };
-  
+  });
+
   const result = await sdk.metadata.putCompanyPeopleFieldsFieldId({
     updateFieldRequest: {},
     fieldId: "string",
-  }, operationSecurity);
+  });
 
   // Handle the result
   console.log(result)
@@ -595,7 +541,6 @@ run();
 | Parameter                                                                                                                                                                      | Type                                                                                                                                                                           | Required                                                                                                                                                                       | Description                                                                                                                                                                    |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | `request`                                                                                                                                                                      | [operations.PutCompanyPeopleFieldsFieldIdRequest](../../sdk/models/operations/putcompanypeoplefieldsfieldidrequest.md)                                                         | :heavy_check_mark:                                                                                                                                                             | The request object to use for the request.                                                                                                                                     |
-| `security`                                                                                                                                                                     | [operations.PutCompanyPeopleFieldsFieldIdSecurity](../../sdk/models/operations/putcompanypeoplefieldsfieldidsecurity.md)                                                       | :heavy_check_mark:                                                                                                                                                             | The security requirements to use for the request.                                                                                                                              |
 | `options`                                                                                                                                                                      | RequestOptions                                                                                                                                                                 | :heavy_minus_sign:                                                                                                                                                             | Used to set various options for making HTTP requests.                                                                                                                          |
 | `options.fetchOptions`                                                                                                                                                         | [RequestInit](https://developer.mozilla.org/en-US/docs/Web/API/Request/Request#options)                                                                                        | :heavy_minus_sign:                                                                                                                                                             | Options that are passed to the underlying HTTP request. This can be used to inject extra headers for examples. All `Request` options, except `method` and `body`, are allowed. |
 

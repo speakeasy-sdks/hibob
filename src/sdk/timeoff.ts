@@ -25,11 +25,10 @@ export class TimeOff extends ClientSDK {
      * Cancel an existing timeoff request
      *
      * @remarks
-     * Cancels an existing time off request.<br /><b>Supported user types:</b> Employee, Service.
+     * Cancels an existing time off request.<br /><b>Supported user types:</b> Service.
      */
     async deleteTimeoffEmployeesIdRequestsRequestId(
         input: operations.DeleteTimeoffEmployeesIdRequestsRequestIdRequest,
-        security: operations.DeleteTimeoffEmployeesIdRequestsRequestIdSecurity,
         options?: RequestOptions
     ): Promise<operations.DeleteTimeoffEmployeesIdRequestsRequestIdResponse> {
         const headers$ = new Headers();
@@ -54,10 +53,11 @@ export class TimeOff extends ClientSDK {
             pathParams$
         );
 
-        const securitySettings$ = this.resolveSecurity(
-            [{ value: security?.basic, type: "http:basic" }],
-            [{ value: security?.bearer, fieldName: "Authorization", type: "apiKey:header" }]
-        );
+        const security$ =
+            typeof this.options$.security === "function"
+                ? await this.options$.security()
+                : this.options$.security;
+        const securitySettings$ = this.resolveGlobalSecurity(security$);
 
         const response = await this.fetch$(
             {
@@ -170,11 +170,10 @@ export class TimeOff extends ClientSDK {
      * Get the details of an existing timeoff request.
      *
      * @remarks
-     * Supplies detailed info about an existing time off request.<br /><b>Supported user types:</b> Employee, Service.
+     * Supplies detailed info about an existing time off request.<br /><b>Supported user types:</b> Service.
      */
     async getTimeoffEmployeesIdRequestsRequestId(
         input: operations.GetTimeoffEmployeesIdRequestsRequestIdRequest,
-        security: operations.GetTimeoffEmployeesIdRequestsRequestIdSecurity,
         options?: RequestOptions
     ): Promise<operations.GetTimeoffEmployeesIdRequestsRequestIdResponse> {
         const headers$ = new Headers();
@@ -197,10 +196,11 @@ export class TimeOff extends ClientSDK {
             pathParams$
         );
 
-        const securitySettings$ = this.resolveSecurity(
-            [{ value: security?.basic, type: "http:basic" }],
-            [{ value: security?.bearer, fieldName: "Authorization", type: "apiKey:header" }]
-        );
+        const security$ =
+            typeof this.options$.security === "function"
+                ? await this.options$.security()
+                : this.options$.security;
+        const securitySettings$ = this.resolveGlobalSecurity(security$);
 
         const response = await this.fetch$(
             {
@@ -243,11 +243,10 @@ export class TimeOff extends ClientSDK {
      * Read a list of who's out of the office today or on the specified date.
      *
      * @remarks
-     * Returns the list of people that have a time off request today or on the specified date.<br /><b>Supported user types:</b> Employee, Service.
+     * Returns the list of people that have a time off request today or on the specified date.<br /><b>Supported user types:</b> Service.
      */
     async getTimeoffOuttoday(
         input: operations.GetTimeoffOuttodayRequest,
-        security: operations.GetTimeoffOuttodaySecurity,
         options?: RequestOptions
     ): Promise<operations.GetTimeoffOuttodayResponse> {
         const headers$ = new Headers();
@@ -274,10 +273,11 @@ export class TimeOff extends ClientSDK {
             .filter(Boolean)
             .join("&");
 
-        const securitySettings$ = this.resolveSecurity(
-            [{ value: security?.basic, type: "http:basic" }],
-            [{ value: security?.bearer, fieldName: "Authorization", type: "apiKey:header" }]
-        );
+        const security$ =
+            typeof this.options$.security === "function"
+                ? await this.options$.security()
+                : this.options$.security;
+        const securitySettings$ = this.resolveGlobalSecurity(security$);
 
         const response = await this.fetch$(
             {
@@ -650,11 +650,10 @@ export class TimeOff extends ClientSDK {
      * Get all new/deleted time off requests since the specified date.
      *
      * @remarks
-     * Returns the list of time off requests that are pending, approved or canceled since the specified date.<br /><b>Supported user types:</b> Employee, Service.
+     * Returns the list of time off requests that are pending, approved or canceled since the specified date.<br /><b>Supported user types:</b> Service.
      */
     async getTimeoffRequestsChanges(
         input: operations.GetTimeoffRequestsChangesRequest,
-        security: operations.GetTimeoffRequestsChangesSecurity,
         options?: RequestOptions
     ): Promise<operations.GetTimeoffRequestsChangesResponse> {
         const headers$ = new Headers();
@@ -676,10 +675,11 @@ export class TimeOff extends ClientSDK {
             .filter(Boolean)
             .join("&");
 
-        const securitySettings$ = this.resolveSecurity(
-            [{ value: security?.basic, type: "http:basic" }],
-            [{ value: security?.bearer, fieldName: "Authorization", type: "apiKey:header" }]
-        );
+        const security$ =
+            typeof this.options$.security === "function"
+                ? await this.options$.security()
+                : this.options$.security;
+        const securitySettings$ = this.resolveGlobalSecurity(security$);
 
         const response = await this.fetch$(
             {
@@ -716,11 +716,10 @@ export class TimeOff extends ClientSDK {
      * Read a list of who's out of the office.
      *
      * @remarks
-     * Returns time off information for a given date range.<br /><b>Supported user types:</b> Employee, Service.
+     * Returns time off information for a given date range.<br /><b>Supported user types:</b> Service.
      */
     async getTimeoffWhosout(
         input: operations.GetTimeoffWhosoutRequest,
-        security: operations.GetTimeoffWhosoutSecurity,
         options?: RequestOptions
     ): Promise<operations.GetTimeoffWhosoutResponse> {
         const headers$ = new Headers();
@@ -751,10 +750,11 @@ export class TimeOff extends ClientSDK {
             .filter(Boolean)
             .join("&");
 
-        const securitySettings$ = this.resolveSecurity(
-            [{ value: security?.basic, type: "http:basic" }],
-            [{ value: security?.bearer, fieldName: "Authorization", type: "apiKey:header" }]
-        );
+        const security$ =
+            typeof this.options$.security === "function"
+                ? await this.options$.security()
+                : this.options$.security;
+        const securitySettings$ = this.resolveGlobalSecurity(security$);
 
         const response = await this.fetch$(
             {
@@ -867,11 +867,10 @@ export class TimeOff extends ClientSDK {
      * Submit a new time off request.
      *
      * @remarks
-     * Submits a new timeoff request.<br /><b>Supported user types:</b> Employee, Service.
+     * Submits a new timeoff request.<br /><b>Supported user types:</b> Service.
      */
     async postTimeoffEmployeesIdRequests(
         input: operations.PostTimeoffEmployeesIdRequestsRequest,
-        security: operations.PostTimeoffEmployeesIdRequestsSecurity,
         options?: RequestOptions
     ): Promise<operations.PostTimeoffEmployeesIdRequestsResponse> {
         const headers$ = new Headers();
@@ -890,10 +889,11 @@ export class TimeOff extends ClientSDK {
 
         const path$ = this.templateURLComponent("/timeoff/employees/{id}/requests")(pathParams$);
 
-        const securitySettings$ = this.resolveSecurity(
-            [{ value: security?.basic, type: "http:basic" }],
-            [{ value: security?.bearer, fieldName: "Authorization", type: "apiKey:header" }]
-        );
+        const security$ =
+            typeof this.options$.security === "function"
+                ? await this.options$.security()
+                : this.options$.security;
+        const securitySettings$ = this.resolveGlobalSecurity(security$);
 
         const response = await this.fetch$(
             {

@@ -13,28 +13,24 @@
 
 ## deleteDocsPeopleIdConfidentialDocId
 
-<b>Supported user types:</b> Employee, Service.
+<b>Supported user types:</b> Service.
 
 ### Example Usage
 
 ```typescript
 import { Hibob } from "hibob";
-import { DeleteDocsPeopleIdConfidentialDocIdSecurity } from "hibob/sdk/models/operations";
 
 async function run() {
-  const sdk = new Hibob();
-
-  const operationSecurity: DeleteDocsPeopleIdConfidentialDocIdSecurity = {
-    basic: {
+  const sdk = new Hibob({
+    security: {
       password: "<YOUR_PASSWORD_HERE>",
-      username: "<YOUR_USERNAME_HERE>",
     },
-  };
-  
+  });
+
   const result = await sdk.documents.deleteDocsPeopleIdConfidentialDocId({
     docId: "string",
     id: "<ID>",
-  }, operationSecurity);
+  });
 
   // Handle the result
   console.log(result)
@@ -48,7 +44,6 @@ run();
 | Parameter                                                                                                                                                                      | Type                                                                                                                                                                           | Required                                                                                                                                                                       | Description                                                                                                                                                                    |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | `request`                                                                                                                                                                      | [operations.DeleteDocsPeopleIdConfidentialDocIdRequest](../../sdk/models/operations/deletedocspeopleidconfidentialdocidrequest.md)                                             | :heavy_check_mark:                                                                                                                                                             | The request object to use for the request.                                                                                                                                     |
-| `security`                                                                                                                                                                     | [operations.DeleteDocsPeopleIdConfidentialDocIdSecurity](../../sdk/models/operations/deletedocspeopleidconfidentialdocidsecurity.md)                                           | :heavy_check_mark:                                                                                                                                                             | The security requirements to use for the request.                                                                                                                              |
 | `options`                                                                                                                                                                      | RequestOptions                                                                                                                                                                 | :heavy_minus_sign:                                                                                                                                                             | Used to set various options for making HTTP requests.                                                                                                                          |
 | `options.fetchOptions`                                                                                                                                                         | [RequestInit](https://developer.mozilla.org/en-US/docs/Web/API/Request/Request#options)                                                                                        | :heavy_minus_sign:                                                                                                                                                             | Options that are passed to the underlying HTTP request. This can be used to inject extra headers for examples. All `Request` options, except `method` and `body`, are allowed. |
 
@@ -64,28 +59,24 @@ run();
 
 ## deleteDocsPeopleIdSharedDocId
 
-<b>Supported user types:</b> Employee, Service.
+<b>Supported user types:</b> Service.
 
 ### Example Usage
 
 ```typescript
 import { Hibob } from "hibob";
-import { DeleteDocsPeopleIdSharedDocIdSecurity } from "hibob/sdk/models/operations";
 
 async function run() {
-  const sdk = new Hibob();
-
-  const operationSecurity: DeleteDocsPeopleIdSharedDocIdSecurity = {
-    basic: {
+  const sdk = new Hibob({
+    security: {
       password: "<YOUR_PASSWORD_HERE>",
-      username: "<YOUR_USERNAME_HERE>",
     },
-  };
-  
+  });
+
   const result = await sdk.documents.deleteDocsPeopleIdSharedDocId({
     docId: "string",
     id: "<ID>",
-  }, operationSecurity);
+  });
 
   // Handle the result
   console.log(result)
@@ -99,7 +90,6 @@ run();
 | Parameter                                                                                                                                                                      | Type                                                                                                                                                                           | Required                                                                                                                                                                       | Description                                                                                                                                                                    |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | `request`                                                                                                                                                                      | [operations.DeleteDocsPeopleIdSharedDocIdRequest](../../sdk/models/operations/deletedocspeopleidshareddocidrequest.md)                                                         | :heavy_check_mark:                                                                                                                                                             | The request object to use for the request.                                                                                                                                     |
-| `security`                                                                                                                                                                     | [operations.DeleteDocsPeopleIdSharedDocIdSecurity](../../sdk/models/operations/deletedocspeopleidshareddocidsecurity.md)                                                       | :heavy_check_mark:                                                                                                                                                             | The security requirements to use for the request.                                                                                                                              |
 | `options`                                                                                                                                                                      | RequestOptions                                                                                                                                                                 | :heavy_minus_sign:                                                                                                                                                             | Used to set various options for making HTTP requests.                                                                                                                          |
 | `options.fetchOptions`                                                                                                                                                         | [RequestInit](https://developer.mozilla.org/en-US/docs/Web/API/Request/Request#options)                                                                                        | :heavy_minus_sign:                                                                                                                                                             | Options that are passed to the underlying HTTP request. This can be used to inject extra headers for examples. All `Request` options, except `method` and `body`, are allowed. |
 
@@ -115,27 +105,23 @@ run();
 
 ## getDocsPeopleId
 
-Returns a list of documents and download links.<br /><b>Supported user types:</b> Employee, Service.
+Returns a list of documents and download links.<br /><b>Supported user types:</b> Service.
 
 ### Example Usage
 
 ```typescript
 import { Hibob } from "hibob";
-import { GetDocsPeopleIdSecurity } from "hibob/sdk/models/operations";
 
 async function run() {
-  const sdk = new Hibob();
-
-  const operationSecurity: GetDocsPeopleIdSecurity = {
-    basic: {
+  const sdk = new Hibob({
+    security: {
       password: "<YOUR_PASSWORD_HERE>",
-      username: "<YOUR_USERNAME_HERE>",
     },
-  };
-  
+  });
+
   const result = await sdk.documents.getDocsPeopleId({
     id: "<ID>",
-  }, operationSecurity);
+  });
 
   // Handle the result
   console.log(result)
@@ -149,7 +135,6 @@ run();
 | Parameter                                                                                                                                                                      | Type                                                                                                                                                                           | Required                                                                                                                                                                       | Description                                                                                                                                                                    |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | `request`                                                                                                                                                                      | [operations.GetDocsPeopleIdRequest](../../sdk/models/operations/getdocspeopleidrequest.md)                                                                                     | :heavy_check_mark:                                                                                                                                                             | The request object to use for the request.                                                                                                                                     |
-| `security`                                                                                                                                                                     | [operations.GetDocsPeopleIdSecurity](../../sdk/models/operations/getdocspeopleidsecurity.md)                                                                                   | :heavy_check_mark:                                                                                                                                                             | The security requirements to use for the request.                                                                                                                              |
 | `options`                                                                                                                                                                      | RequestOptions                                                                                                                                                                 | :heavy_minus_sign:                                                                                                                                                             | Used to set various options for making HTTP requests.                                                                                                                          |
 | `options.fetchOptions`                                                                                                                                                         | [RequestInit](https://developer.mozilla.org/en-US/docs/Web/API/Request/Request#options)                                                                                        | :heavy_minus_sign:                                                                                                                                                             | Options that are passed to the underlying HTTP request. This can be used to inject extra headers for examples. All `Request` options, except `method` and `body`, are allowed. |
 
@@ -165,24 +150,20 @@ run();
 
 ## postDocsPeopleIdConfidential
 
-<b>Supported user types:</b> Employee, Service.
+<b>Supported user types:</b> Service.
 
 ### Example Usage
 
 ```typescript
 import { Hibob } from "hibob";
-import { PostDocsPeopleIdConfidentialSecurity } from "hibob/sdk/models/operations";
 
 async function run() {
-  const sdk = new Hibob();
-
-  const operationSecurity: PostDocsPeopleIdConfidentialSecurity = {
-    basic: {
+  const sdk = new Hibob({
+    security: {
       password: "<YOUR_PASSWORD_HERE>",
-      username: "<YOUR_USERNAME_HERE>",
     },
-  };
-  
+  });
+
   const result = await sdk.documents.postDocsPeopleIdConfidential({
     addDocument: {
       tags: [
@@ -190,7 +171,7 @@ async function run() {
       ],
     },
     id: "<ID>",
-  }, operationSecurity);
+  });
 
   // Handle the result
   console.log(result)
@@ -204,7 +185,6 @@ run();
 | Parameter                                                                                                                                                                      | Type                                                                                                                                                                           | Required                                                                                                                                                                       | Description                                                                                                                                                                    |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | `request`                                                                                                                                                                      | [operations.PostDocsPeopleIdConfidentialRequest](../../sdk/models/operations/postdocspeopleidconfidentialrequest.md)                                                           | :heavy_check_mark:                                                                                                                                                             | The request object to use for the request.                                                                                                                                     |
-| `security`                                                                                                                                                                     | [operations.PostDocsPeopleIdConfidentialSecurity](../../sdk/models/operations/postdocspeopleidconfidentialsecurity.md)                                                         | :heavy_check_mark:                                                                                                                                                             | The security requirements to use for the request.                                                                                                                              |
 | `options`                                                                                                                                                                      | RequestOptions                                                                                                                                                                 | :heavy_minus_sign:                                                                                                                                                             | Used to set various options for making HTTP requests.                                                                                                                          |
 | `options.fetchOptions`                                                                                                                                                         | [RequestInit](https://developer.mozilla.org/en-US/docs/Web/API/Request/Request#options)                                                                                        | :heavy_minus_sign:                                                                                                                                                             | Options that are passed to the underlying HTTP request. This can be used to inject extra headers for examples. All `Request` options, except `method` and `body`, are allowed. |
 
@@ -220,28 +200,27 @@ run();
 
 ## postDocsPeopleIdConfidentialUpload
 
-<b>Supported user types:</b> Employee, Service.
+<b>Supported user types:</b> Service.
 
 ### Example Usage
 
 ```typescript
 import { Hibob } from "hibob";
-import { PostDocsPeopleIdConfidentialUploadSecurity } from "hibob/sdk/models/operations";
 import { openAsBlob } from "node:fs";
 
 async function run() {
-  const sdk = new Hibob();
+  const sdk = new Hibob({
+    security: {
+      password: "<YOUR_PASSWORD_HERE>",
+    },
+  });
 
-  const operationSecurity: PostDocsPeopleIdConfidentialUploadSecurity = {
-    bearer: "<YOUR_API_KEY_HERE>",
-  };
-  
   const result = await sdk.documents.postDocsPeopleIdConfidentialUpload({
     requestBody: {
       file: await openAsBlob("./sample-file"),
     },
     id: "<ID>",
-  }, operationSecurity);
+  });
 
   // Handle the result
   console.log(result)
@@ -255,7 +234,6 @@ run();
 | Parameter                                                                                                                                                                      | Type                                                                                                                                                                           | Required                                                                                                                                                                       | Description                                                                                                                                                                    |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | `request`                                                                                                                                                                      | [operations.PostDocsPeopleIdConfidentialUploadRequest](../../sdk/models/operations/postdocspeopleidconfidentialuploadrequest.md)                                               | :heavy_check_mark:                                                                                                                                                             | The request object to use for the request.                                                                                                                                     |
-| `security`                                                                                                                                                                     | [operations.PostDocsPeopleIdConfidentialUploadSecurity](../../sdk/models/operations/postdocspeopleidconfidentialuploadsecurity.md)                                             | :heavy_check_mark:                                                                                                                                                             | The security requirements to use for the request.                                                                                                                              |
 | `options`                                                                                                                                                                      | RequestOptions                                                                                                                                                                 | :heavy_minus_sign:                                                                                                                                                             | Used to set various options for making HTTP requests.                                                                                                                          |
 | `options.fetchOptions`                                                                                                                                                         | [RequestInit](https://developer.mozilla.org/en-US/docs/Web/API/Request/Request#options)                                                                                        | :heavy_minus_sign:                                                                                                                                                             | Options that are passed to the underlying HTTP request. This can be used to inject extra headers for examples. All `Request` options, except `method` and `body`, are allowed. |
 
@@ -271,24 +249,20 @@ run();
 
 ## postDocsPeopleIdShared
 
-<b>Supported user types:</b> Employee, Service.
+<b>Supported user types:</b> Service.
 
 ### Example Usage
 
 ```typescript
 import { Hibob } from "hibob";
-import { PostDocsPeopleIdSharedSecurity } from "hibob/sdk/models/operations";
 
 async function run() {
-  const sdk = new Hibob();
-
-  const operationSecurity: PostDocsPeopleIdSharedSecurity = {
-    basic: {
+  const sdk = new Hibob({
+    security: {
       password: "<YOUR_PASSWORD_HERE>",
-      username: "<YOUR_USERNAME_HERE>",
     },
-  };
-  
+  });
+
   const result = await sdk.documents.postDocsPeopleIdShared({
     addDocument: {
       tags: [
@@ -296,7 +270,7 @@ async function run() {
       ],
     },
     id: "<ID>",
-  }, operationSecurity);
+  });
 
   // Handle the result
   console.log(result)
@@ -310,7 +284,6 @@ run();
 | Parameter                                                                                                                                                                      | Type                                                                                                                                                                           | Required                                                                                                                                                                       | Description                                                                                                                                                                    |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | `request`                                                                                                                                                                      | [operations.PostDocsPeopleIdSharedRequest](../../sdk/models/operations/postdocspeopleidsharedrequest.md)                                                                       | :heavy_check_mark:                                                                                                                                                             | The request object to use for the request.                                                                                                                                     |
-| `security`                                                                                                                                                                     | [operations.PostDocsPeopleIdSharedSecurity](../../sdk/models/operations/postdocspeopleidsharedsecurity.md)                                                                     | :heavy_check_mark:                                                                                                                                                             | The security requirements to use for the request.                                                                                                                              |
 | `options`                                                                                                                                                                      | RequestOptions                                                                                                                                                                 | :heavy_minus_sign:                                                                                                                                                             | Used to set various options for making HTTP requests.                                                                                                                          |
 | `options.fetchOptions`                                                                                                                                                         | [RequestInit](https://developer.mozilla.org/en-US/docs/Web/API/Request/Request#options)                                                                                        | :heavy_minus_sign:                                                                                                                                                             | Options that are passed to the underlying HTTP request. This can be used to inject extra headers for examples. All `Request` options, except `method` and `body`, are allowed. |
 
@@ -326,28 +299,27 @@ run();
 
 ## postDocsPeopleIdSharedUpload
 
-<b>Supported user types:</b> Employee, Service.
+<b>Supported user types:</b> Service.
 
 ### Example Usage
 
 ```typescript
 import { Hibob } from "hibob";
-import { PostDocsPeopleIdSharedUploadSecurity } from "hibob/sdk/models/operations";
 import { openAsBlob } from "node:fs";
 
 async function run() {
-  const sdk = new Hibob();
+  const sdk = new Hibob({
+    security: {
+      password: "<YOUR_PASSWORD_HERE>",
+    },
+  });
 
-  const operationSecurity: PostDocsPeopleIdSharedUploadSecurity = {
-    bearer: "<YOUR_API_KEY_HERE>",
-  };
-  
   const result = await sdk.documents.postDocsPeopleIdSharedUpload({
     requestBody: {
       file: await openAsBlob("./sample-file"),
     },
     id: "<ID>",
-  }, operationSecurity);
+  });
 
   // Handle the result
   console.log(result)
@@ -361,7 +333,6 @@ run();
 | Parameter                                                                                                                                                                      | Type                                                                                                                                                                           | Required                                                                                                                                                                       | Description                                                                                                                                                                    |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | `request`                                                                                                                                                                      | [operations.PostDocsPeopleIdSharedUploadRequest](../../sdk/models/operations/postdocspeopleidshareduploadrequest.md)                                                           | :heavy_check_mark:                                                                                                                                                             | The request object to use for the request.                                                                                                                                     |
-| `security`                                                                                                                                                                     | [operations.PostDocsPeopleIdSharedUploadSecurity](../../sdk/models/operations/postdocspeopleidshareduploadsecurity.md)                                                         | :heavy_check_mark:                                                                                                                                                             | The security requirements to use for the request.                                                                                                                              |
 | `options`                                                                                                                                                                      | RequestOptions                                                                                                                                                                 | :heavy_minus_sign:                                                                                                                                                             | Used to set various options for making HTTP requests.                                                                                                                          |
 | `options.fetchOptions`                                                                                                                                                         | [RequestInit](https://developer.mozilla.org/en-US/docs/Web/API/Request/Request#options)                                                                                        | :heavy_minus_sign:                                                                                                                                                             | Options that are passed to the underlying HTTP request. This can be used to inject extra headers for examples. All `Request` options, except `method` and `body`, are allowed. |
 

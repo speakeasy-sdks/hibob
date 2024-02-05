@@ -25,10 +25,9 @@ export class Reports extends ClientSDK {
      * Read company reports
      *
      * @remarks
-     * Returns a list of all the defined company reports. The data is filtered based on the access level of the user. Only viewable categories are returned.<br /><b>Supported user types:</b> Employee, Service.
+     * Returns a list of all the defined company reports. The data is filtered based on the access level of the user. Only viewable categories are returned.<br /><b>Supported user types:</b> Service.
      */
     async getCompanyReports(
-        security: operations.GetCompanyReportsSecurity,
         options?: RequestOptions
     ): Promise<operations.GetCompanyReportsResponse> {
         const headers$ = new Headers();
@@ -37,10 +36,11 @@ export class Reports extends ClientSDK {
 
         const path$ = this.templateURLComponent("/company/reports")();
 
-        const securitySettings$ = this.resolveSecurity(
-            [{ value: security?.basic, type: "http:basic" }],
-            [{ value: security?.bearer, fieldName: "Authorization", type: "apiKey:header" }]
-        );
+        const security$ =
+            typeof this.options$.security === "function"
+                ? await this.options$.security()
+                : this.options$.security;
+        const securitySettings$ = this.resolveGlobalSecurity(security$);
 
         const response = await this.fetch$(
             { security: securitySettings$, method: "GET", path: path$, headers: headers$ },
@@ -77,11 +77,10 @@ export class Reports extends ClientSDK {
      * Download report by file URL
      *
      * @remarks
-     * Returns the report data file when it is ready. If the file is not ready yet the response will be 204. It will then have to try again.<br />(This URL is the response of the previous API: https://api.hibob.com/v1/company/reports/reportId/download-async)<br /><b>Supported user types:</b> Employee, Service.
+     * Returns the report data file when it is ready. If the file is not ready yet the response will be 204. It will then have to try again.<br />(This URL is the response of the previous API: https://api.hibob.com/v1/company/reports/reportId/download-async)<br /><b>Supported user types:</b> Service.
      */
     async getCompanyReportsDownloadReportName(
         input: operations.GetCompanyReportsDownloadReportNameRequest,
-        security: operations.GetCompanyReportsDownloadReportNameSecurity,
         options?: RequestOptions
     ): Promise<operations.GetCompanyReportsDownloadReportNameResponse> {
         const headers$ = new Headers();
@@ -103,10 +102,11 @@ export class Reports extends ClientSDK {
             pathParams$
         );
 
-        const securitySettings$ = this.resolveSecurity(
-            [{ value: security?.basic, type: "http:basic" }],
-            [{ value: security?.bearer, fieldName: "Authorization", type: "apiKey:header" }]
-        );
+        const security$ =
+            typeof this.options$.security === "function"
+                ? await this.options$.security()
+                : this.options$.security;
+        const securitySettings$ = this.resolveGlobalSecurity(security$);
 
         const response = await this.fetch$(
             {
@@ -157,11 +157,10 @@ export class Reports extends ClientSDK {
      * Download the report by ID
      *
      * @remarks
-     * Returns a report data file in the specified format.<br /><b>Supported user types:</b> Employee, Service.
+     * Returns a report data file in the specified format.<br /><b>Supported user types:</b> Service.
      */
     async getCompanyReportsReportIdDownload(
         input: operations.GetCompanyReportsReportIdDownloadRequest,
-        security: operations.GetCompanyReportsReportIdDownloadSecurity,
         options?: RequestOptions
     ): Promise<operations.GetCompanyReportsReportIdDownloadResponse> {
         const headers$ = new Headers();
@@ -194,10 +193,11 @@ export class Reports extends ClientSDK {
             .filter(Boolean)
             .join("&");
 
-        const securitySettings$ = this.resolveSecurity(
-            [{ value: security?.basic, type: "http:basic" }],
-            [{ value: security?.bearer, fieldName: "Authorization", type: "apiKey:header" }]
-        );
+        const security$ =
+            typeof this.options$.security === "function"
+                ? await this.options$.security()
+                : this.options$.security;
+        const securitySettings$ = this.resolveGlobalSecurity(security$);
 
         const response = await this.fetch$(
             {
@@ -243,11 +243,10 @@ export class Reports extends ClientSDK {
      * Get the report download URL for polling
      *
      * @remarks
-     * Returns the polling URL report file of the specified format under "Location" in the response header.<br /><b>Supported user types:</b> Employee, Service.
+     * Returns the polling URL report file of the specified format under "Location" in the response header.<br /><b>Supported user types:</b> Service.
      */
     async getCompanyReportsReportIdDownloadAsync(
         input: operations.GetCompanyReportsReportIdDownloadAsyncRequest,
-        security: operations.GetCompanyReportsReportIdDownloadAsyncSecurity,
         options?: RequestOptions
     ): Promise<operations.GetCompanyReportsReportIdDownloadAsyncResponse> {
         const headers$ = new Headers();
@@ -280,10 +279,11 @@ export class Reports extends ClientSDK {
             .filter(Boolean)
             .join("&");
 
-        const securitySettings$ = this.resolveSecurity(
-            [{ value: security?.basic, type: "http:basic" }],
-            [{ value: security?.bearer, fieldName: "Authorization", type: "apiKey:header" }]
-        );
+        const security$ =
+            typeof this.options$.security === "function"
+                ? await this.options$.security()
+                : this.options$.security;
+        const securitySettings$ = this.resolveGlobalSecurity(security$);
 
         const response = await this.fetch$(
             {

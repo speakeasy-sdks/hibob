@@ -5,11 +5,6 @@
 import * as shared from "../../../sdk/models/shared";
 import { z } from "zod";
 
-export type GetCompanyPeopleFieldsSecurity = {
-    basic?: shared.SchemeBasic | undefined;
-    bearer?: string | undefined;
-};
-
 export type GetCompanyPeopleFieldsResponse = {
     /**
      * HTTP response content type for this operation

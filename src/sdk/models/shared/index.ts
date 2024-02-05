@@ -65,7 +65,6 @@ export * from "./request";
 export * from "./requests";
 export * from "./salaryentries";
 export * from "./salaryentry";
-export * from "./schemebasic";
 export * from "./security";
 export * from "./startdateupdate";
 export * from "./submittimeoffrequest";

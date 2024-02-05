@@ -54,25 +54,21 @@ run();
 
 ## getTasks
 
-<b>Supported user types:</b> Employee, Service.
+<b>Supported user types:</b> Service.
 
 ### Example Usage
 
 ```typescript
 import { Hibob } from "hibob";
-import { GetTasksSecurity } from "hibob/sdk/models/operations";
 
 async function run() {
-  const sdk = new Hibob();
-
-  const operationSecurity: GetTasksSecurity = {
-    basic: {
+  const sdk = new Hibob({
+    security: {
       password: "<YOUR_PASSWORD_HERE>",
-      username: "<YOUR_USERNAME_HERE>",
     },
-  };
-  
-  const result = await sdk.tasks.getTasks(operationSecurity);
+  });
+
+  const result = await sdk.tasks.getTasks();
 
   // Handle the result
   console.log(result)
@@ -85,7 +81,6 @@ run();
 
 | Parameter                                                                                                                                                                      | Type                                                                                                                                                                           | Required                                                                                                                                                                       | Description                                                                                                                                                                    |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `security`                                                                                                                                                                     | [operations.GetTasksSecurity](../../sdk/models/operations/gettaskssecurity.md)                                                                                                 | :heavy_check_mark:                                                                                                                                                             | The security requirements to use for the request.                                                                                                                              |
 | `options`                                                                                                                                                                      | RequestOptions                                                                                                                                                                 | :heavy_minus_sign:                                                                                                                                                             | Used to set various options for making HTTP requests.                                                                                                                          |
 | `options.fetchOptions`                                                                                                                                                         | [RequestInit](https://developer.mozilla.org/en-US/docs/Web/API/Request/Request#options)                                                                                        | :heavy_minus_sign:                                                                                                                                                             | Options that are passed to the underlying HTTP request. This can be used to inject extra headers for examples. All `Request` options, except `method` and `body`, are allowed. |
 
@@ -101,27 +96,24 @@ run();
 
 ## getTasksPeopleId
 
-<b>Supported user types:</b> Employee, Service.
+<b>Supported user types:</b> Service.
 
 ### Example Usage
 
 ```typescript
 import { Hibob } from "hibob";
-import { GetTasksPeopleIdSecurity, TaskStatus } from "hibob/sdk/models/operations";
+import { TaskStatus } from "hibob/sdk/models/operations";
 
 async function run() {
-  const sdk = new Hibob();
-
-  const operationSecurity: GetTasksPeopleIdSecurity = {
-    basic: {
+  const sdk = new Hibob({
+    security: {
       password: "<YOUR_PASSWORD_HERE>",
-      username: "<YOUR_USERNAME_HERE>",
     },
-  };
-  
+  });
+
   const result = await sdk.tasks.getTasksPeopleId({
     id: "string",
-  }, operationSecurity);
+  });
 
   // Handle the result
   console.log(result)
@@ -135,7 +127,6 @@ run();
 | Parameter                                                                                                                                                                      | Type                                                                                                                                                                           | Required                                                                                                                                                                       | Description                                                                                                                                                                    |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | `request`                                                                                                                                                                      | [operations.GetTasksPeopleIdRequest](../../sdk/models/operations/gettaskspeopleidrequest.md)                                                                                   | :heavy_check_mark:                                                                                                                                                             | The request object to use for the request.                                                                                                                                     |
-| `security`                                                                                                                                                                     | [operations.GetTasksPeopleIdSecurity](../../sdk/models/operations/gettaskspeopleidsecurity.md)                                                                                 | :heavy_check_mark:                                                                                                                                                             | The security requirements to use for the request.                                                                                                                              |
 | `options`                                                                                                                                                                      | RequestOptions                                                                                                                                                                 | :heavy_minus_sign:                                                                                                                                                             | Used to set various options for making HTTP requests.                                                                                                                          |
 | `options.fetchOptions`                                                                                                                                                         | [RequestInit](https://developer.mozilla.org/en-US/docs/Web/API/Request/Request#options)                                                                                        | :heavy_minus_sign:                                                                                                                                                             | Options that are passed to the underlying HTTP request. This can be used to inject extra headers for examples. All `Request` options, except `method` and `body`, are allowed. |
 
@@ -151,27 +142,23 @@ run();
 
 ## postTasksTaskIdComplete
 
-<b>Supported user types:</b> Employee, Service.
+<b>Supported user types:</b> Service.
 
 ### Example Usage
 
 ```typescript
 import { Hibob } from "hibob";
-import { PostTasksTaskIdCompleteSecurity } from "hibob/sdk/models/operations";
 
 async function run() {
-  const sdk = new Hibob();
-
-  const operationSecurity: PostTasksTaskIdCompleteSecurity = {
-    basic: {
+  const sdk = new Hibob({
+    security: {
       password: "<YOUR_PASSWORD_HERE>",
-      username: "<YOUR_USERNAME_HERE>",
     },
-  };
-  
+  });
+
   const result = await sdk.tasks.postTasksTaskIdComplete({
     taskId: "string",
-  }, operationSecurity);
+  });
 
   // Handle the result
   console.log(result)
@@ -185,7 +172,6 @@ run();
 | Parameter                                                                                                                                                                      | Type                                                                                                                                                                           | Required                                                                                                                                                                       | Description                                                                                                                                                                    |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | `request`                                                                                                                                                                      | [operations.PostTasksTaskIdCompleteRequest](../../sdk/models/operations/posttaskstaskidcompleterequest.md)                                                                     | :heavy_check_mark:                                                                                                                                                             | The request object to use for the request.                                                                                                                                     |
-| `security`                                                                                                                                                                     | [operations.PostTasksTaskIdCompleteSecurity](../../sdk/models/operations/posttaskstaskidcompletesecurity.md)                                                                   | :heavy_check_mark:                                                                                                                                                             | The security requirements to use for the request.                                                                                                                              |
 | `options`                                                                                                                                                                      | RequestOptions                                                                                                                                                                 | :heavy_minus_sign:                                                                                                                                                             | Used to set various options for making HTTP requests.                                                                                                                          |
 | `options.fetchOptions`                                                                                                                                                         | [RequestInit](https://developer.mozilla.org/en-US/docs/Web/API/Request/Request#options)                                                                                        | :heavy_minus_sign:                                                                                                                                                             | Options that are passed to the underlying HTTP request. This can be used to inject extra headers for examples. All `Request` options, except `method` and `body`, are allowed. |
 

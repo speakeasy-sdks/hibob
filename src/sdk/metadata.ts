@@ -26,11 +26,10 @@ export class Metadata extends ClientSDK {
      * Delete an item from an existing list.
      *
      * @remarks
-     * <b>Supported user types:</b> Employee, Service.
+     * <b>Supported user types:</b> Service.
      */
     async deleteCompanyNamedListsListNameItemId(
         input: operations.DeleteCompanyNamedListsListNameItemIdRequest,
-        security: operations.DeleteCompanyNamedListsListNameItemIdSecurity,
         options?: RequestOptions
     ): Promise<operations.DeleteCompanyNamedListsListNameItemIdResponse> {
         const headers$ = new Headers();
@@ -56,10 +55,11 @@ export class Metadata extends ClientSDK {
             pathParams$
         );
 
-        const securitySettings$ = this.resolveSecurity(
-            [{ value: security?.basic, type: "http:basic" }],
-            [{ value: security?.bearer, fieldName: "Authorization", type: "apiKey:header" }]
-        );
+        const security$ =
+            typeof this.options$.security === "function"
+                ? await this.options$.security()
+                : this.options$.security;
+        const securitySettings$ = this.resolveGlobalSecurity(security$);
 
         const response = await this.fetch$(
             {
@@ -94,11 +94,10 @@ export class Metadata extends ClientSDK {
      * Delete an existing field.
      *
      * @remarks
-     * <b>Supported user types:</b> Employee, Service.
+     * <b>Supported user types:</b> Service.
      */
     async deleteCompanyPeopleFieldsFieldId(
         input: operations.DeleteCompanyPeopleFieldsFieldIdRequest,
-        security: operations.DeleteCompanyPeopleFieldsFieldIdSecurity,
         options?: RequestOptions
     ): Promise<operations.DeleteCompanyPeopleFieldsFieldIdResponse> {
         const headers$ = new Headers();
@@ -118,10 +117,11 @@ export class Metadata extends ClientSDK {
 
         const path$ = this.templateURLComponent("/company/people/fields/{fieldId}")(pathParams$);
 
-        const securitySettings$ = this.resolveSecurity(
-            [{ value: security?.basic, type: "http:basic" }],
-            [{ value: security?.bearer, fieldName: "Authorization", type: "apiKey:header" }]
-        );
+        const security$ =
+            typeof this.options$.security === "function"
+                ? await this.options$.security()
+                : this.options$.security;
+        const securitySettings$ = this.resolveGlobalSecurity(security$);
 
         const response = await this.fetch$(
             {
@@ -156,11 +156,10 @@ export class Metadata extends ClientSDK {
      * Get all company lists
      *
      * @remarks
-     * <b>Supported user types:</b> Employee, Service.
+     * <b>Supported user types:</b> Service.
      */
     async getCompanyNamedLists(
         input: operations.GetCompanyNamedListsRequest,
-        security: operations.GetCompanyNamedListsSecurity,
         options?: RequestOptions
     ): Promise<operations.GetCompanyNamedListsResponse> {
         const headers$ = new Headers();
@@ -181,10 +180,11 @@ export class Metadata extends ClientSDK {
             .filter(Boolean)
             .join("&");
 
-        const securitySettings$ = this.resolveSecurity(
-            [{ value: security?.basic, type: "http:basic" }],
-            [{ value: security?.bearer, fieldName: "Authorization", type: "apiKey:header" }]
-        );
+        const security$ =
+            typeof this.options$.security === "function"
+                ? await this.options$.security()
+                : this.options$.security;
+        const securitySettings$ = this.resolveGlobalSecurity(security$);
 
         const response = await this.fetch$(
             {
@@ -221,11 +221,10 @@ export class Metadata extends ClientSDK {
      * Get a specific company list by name.
      *
      * @remarks
-     * <b>Supported user types:</b> Employee, Service.
+     * <b>Supported user types:</b> Service.
      */
     async getCompanyNamedListsListName(
         input: operations.GetCompanyNamedListsListNameRequest,
-        security: operations.GetCompanyNamedListsListNameSecurity,
         options?: RequestOptions
     ): Promise<operations.GetCompanyNamedListsListNameResponse> {
         const headers$ = new Headers();
@@ -254,10 +253,11 @@ export class Metadata extends ClientSDK {
             .filter(Boolean)
             .join("&");
 
-        const securitySettings$ = this.resolveSecurity(
-            [{ value: security?.basic, type: "http:basic" }],
-            [{ value: security?.bearer, fieldName: "Authorization", type: "apiKey:header" }]
-        );
+        const security$ =
+            typeof this.options$.security === "function"
+                ? await this.options$.security()
+                : this.options$.security;
+        const securitySettings$ = this.resolveGlobalSecurity(security$);
 
         const response = await this.fetch$(
             {
@@ -300,10 +300,9 @@ export class Metadata extends ClientSDK {
      * Get all company fields.
      *
      * @remarks
-     * <b>Supported user types:</b> Employee, Service.
+     * <b>Supported user types:</b> Service.
      */
     async getCompanyPeopleFields(
-        security: operations.GetCompanyPeopleFieldsSecurity,
         options?: RequestOptions
     ): Promise<operations.GetCompanyPeopleFieldsResponse> {
         const headers$ = new Headers();
@@ -312,10 +311,11 @@ export class Metadata extends ClientSDK {
 
         const path$ = this.templateURLComponent("/company/people/fields")();
 
-        const securitySettings$ = this.resolveSecurity(
-            [{ value: security?.basic, type: "http:basic" }],
-            [{ value: security?.bearer, fieldName: "Authorization", type: "apiKey:header" }]
-        );
+        const security$ =
+            typeof this.options$.security === "function"
+                ? await this.options$.security()
+                : this.options$.security;
+        const securitySettings$ = this.resolveGlobalSecurity(security$);
 
         const response = await this.fetch$(
             { security: securitySettings$, method: "GET", path: path$, headers: headers$ },
@@ -397,10 +397,9 @@ export class Metadata extends ClientSDK {
      * Read metadata of custom tables defined
      *
      * @remarks
-     * <b>Supported user types:</b> Employee, Service.
+     * <b>Supported user types:</b> Service.
      */
     async getPeopleCustomTablesMetadata(
-        security: operations.GetPeopleCustomTablesMetadataSecurity,
         options?: RequestOptions
     ): Promise<operations.GetPeopleCustomTablesMetadataResponse> {
         const headers$ = new Headers();
@@ -409,10 +408,11 @@ export class Metadata extends ClientSDK {
 
         const path$ = this.templateURLComponent("/people/custom-tables/metadata")();
 
-        const securitySettings$ = this.resolveSecurity(
-            [{ value: security?.basic, type: "http:basic" }],
-            [{ value: security?.bearer, fieldName: "Authorization", type: "apiKey:header" }]
-        );
+        const security$ =
+            typeof this.options$.security === "function"
+                ? await this.options$.security()
+                : this.options$.security;
+        const securitySettings$ = this.resolveGlobalSecurity(security$);
 
         const response = await this.fetch$(
             { security: securitySettings$, method: "GET", path: path$, headers: headers$ },
@@ -442,11 +442,10 @@ export class Metadata extends ClientSDK {
      * Read metadata for specific custom table
      *
      * @remarks
-     * <b>Supported user types:</b> Employee, Service.
+     * <b>Supported user types:</b> Service.
      */
     async getPeopleCustomTablesMetadataCustomTableId(
         input: operations.GetPeopleCustomTablesMetadataCustomTableIdRequest,
-        security: operations.GetPeopleCustomTablesMetadataCustomTableIdSecurity,
         options?: RequestOptions
     ): Promise<operations.GetPeopleCustomTablesMetadataCustomTableIdResponse> {
         const headers$ = new Headers();
@@ -470,10 +469,11 @@ export class Metadata extends ClientSDK {
             pathParams$
         );
 
-        const securitySettings$ = this.resolveSecurity(
-            [{ value: security?.basic, type: "http:basic" }],
-            [{ value: security?.bearer, fieldName: "Authorization", type: "apiKey:header" }]
-        );
+        const security$ =
+            typeof this.options$.security === "function"
+                ? await this.options$.security()
+                : this.options$.security;
+        const securitySettings$ = this.resolveGlobalSecurity(security$);
 
         const response = await this.fetch$(
             {
@@ -510,11 +510,10 @@ export class Metadata extends ClientSDK {
      * Add a new item to an existing list.
      *
      * @remarks
-     * <b>Supported user types:</b> Employee, Service.
+     * <b>Supported user types:</b> Service.
      */
     async postCompanyNamedListsListName(
         input: operations.PostCompanyNamedListsListNameRequest,
-        security: operations.PostCompanyNamedListsListNameSecurity,
         options?: RequestOptions
     ): Promise<operations.PostCompanyNamedListsListNameResponse> {
         const headers$ = new Headers();
@@ -536,10 +535,11 @@ export class Metadata extends ClientSDK {
 
         const path$ = this.templateURLComponent("/company/named-lists/{listName}")(pathParams$);
 
-        const securitySettings$ = this.resolveSecurity(
-            [{ value: security?.basic, type: "http:basic" }],
-            [{ value: security?.bearer, fieldName: "Authorization", type: "apiKey:header" }]
-        );
+        const security$ =
+            typeof this.options$.security === "function"
+                ? await this.options$.security()
+                : this.options$.security;
+        const securitySettings$ = this.resolveGlobalSecurity(security$);
 
         const response = await this.fetch$(
             {
@@ -581,11 +581,10 @@ export class Metadata extends ClientSDK {
      * Create a new field.
      *
      * @remarks
-     * <b>Supported user types:</b> Employee, Service.
+     * <b>Supported user types:</b> Service.
      */
     async postCompanyPeopleFields(
         input: shared.CreateFieldRequest,
-        security: operations.PostCompanyPeopleFieldsSecurity,
         options?: RequestOptions
     ): Promise<operations.PostCompanyPeopleFieldsResponse> {
         const headers$ = new Headers();
@@ -598,10 +597,11 @@ export class Metadata extends ClientSDK {
 
         const path$ = this.templateURLComponent("/company/people/fields")();
 
-        const securitySettings$ = this.resolveSecurity(
-            [{ value: security?.basic, type: "http:basic" }],
-            [{ value: security?.bearer, fieldName: "Authorization", type: "apiKey:header" }]
-        );
+        const security$ =
+            typeof this.options$.security === "function"
+                ? await this.options$.security()
+                : this.options$.security;
+        const securitySettings$ = this.resolveGlobalSecurity(security$);
 
         const response = await this.fetch$(
             {
@@ -641,11 +641,10 @@ export class Metadata extends ClientSDK {
      * Update an existing item from a list.
      *
      * @remarks
-     * <b>Supported user types:</b> Employee, Service.
+     * <b>Supported user types:</b> Service.
      */
     async putCompanyNamedListsListNameItemId(
         input: operations.PutCompanyNamedListsListNameItemIdRequest,
-        security: operations.PutCompanyNamedListsListNameItemIdSecurity,
         options?: RequestOptions
     ): Promise<operations.PutCompanyNamedListsListNameItemIdResponse> {
         const headers$ = new Headers();
@@ -673,10 +672,11 @@ export class Metadata extends ClientSDK {
             pathParams$
         );
 
-        const securitySettings$ = this.resolveSecurity(
-            [{ value: security?.basic, type: "http:basic" }],
-            [{ value: security?.bearer, fieldName: "Authorization", type: "apiKey:header" }]
-        );
+        const security$ =
+            typeof this.options$.security === "function"
+                ? await this.options$.security()
+                : this.options$.security;
+        const securitySettings$ = this.resolveGlobalSecurity(security$);
 
         const response = await this.fetch$(
             {
@@ -711,11 +711,10 @@ export class Metadata extends ClientSDK {
      * Update an existing field
      *
      * @remarks
-     * <b>Supported user types:</b> Employee, Service.
+     * <b>Supported user types:</b> Service.
      */
     async putCompanyPeopleFieldsFieldId(
         input: operations.PutCompanyPeopleFieldsFieldIdRequest,
-        security: operations.PutCompanyPeopleFieldsFieldIdSecurity,
         options?: RequestOptions
     ): Promise<operations.PutCompanyPeopleFieldsFieldIdResponse> {
         const headers$ = new Headers();
@@ -737,10 +736,11 @@ export class Metadata extends ClientSDK {
 
         const path$ = this.templateURLComponent("/company/people/fields/{fieldId}")(pathParams$);
 
-        const securitySettings$ = this.resolveSecurity(
-            [{ value: security?.basic, type: "http:basic" }],
-            [{ value: security?.bearer, fieldName: "Authorization", type: "apiKey:header" }]
-        );
+        const security$ =
+            typeof this.options$.security === "function"
+                ? await this.options$.security()
+                : this.options$.security;
+        const securitySettings$ = this.resolveGlobalSecurity(security$);
 
         const response = await this.fetch$(
             {

@@ -69,22 +69,20 @@ export class Tasks extends ClientSDK {
      * Read all open tasks.
      *
      * @remarks
-     * <b>Supported user types:</b> Employee, Service.
+     * <b>Supported user types:</b> Service.
      */
-    async getTasks(
-        security: operations.GetTasksSecurity,
-        options?: RequestOptions
-    ): Promise<operations.GetTasksResponse> {
+    async getTasks(options?: RequestOptions): Promise<operations.GetTasksResponse> {
         const headers$ = new Headers();
         headers$.set("user-agent", SDK_METADATA.userAgent);
         headers$.set("Accept", "application/json");
 
         const path$ = this.templateURLComponent("/tasks")();
 
-        const securitySettings$ = this.resolveSecurity(
-            [{ value: security?.basic, type: "http:basic" }],
-            [{ value: security?.bearer, fieldName: "Authorization", type: "apiKey:header" }]
-        );
+        const security$ =
+            typeof this.options$.security === "function"
+                ? await this.options$.security()
+                : this.options$.security;
+        const securitySettings$ = this.resolveGlobalSecurity(security$);
 
         const response = await this.fetch$(
             { security: securitySettings$, method: "GET", path: path$, headers: headers$ },
@@ -114,11 +112,10 @@ export class Tasks extends ClientSDK {
      * Read tasks of a specific employee
      *
      * @remarks
-     * <b>Supported user types:</b> Employee, Service.
+     * <b>Supported user types:</b> Service.
      */
     async getTasksPeopleId(
         input: operations.GetTasksPeopleIdRequest,
-        security: operations.GetTasksPeopleIdSecurity,
         options?: RequestOptions
     ): Promise<operations.GetTasksPeopleIdResponse> {
         const headers$ = new Headers();
@@ -143,10 +140,11 @@ export class Tasks extends ClientSDK {
             .filter(Boolean)
             .join("&");
 
-        const securitySettings$ = this.resolveSecurity(
-            [{ value: security?.basic, type: "http:basic" }],
-            [{ value: security?.bearer, fieldName: "Authorization", type: "apiKey:header" }]
-        );
+        const security$ =
+            typeof this.options$.security === "function"
+                ? await this.options$.security()
+                : this.options$.security;
+        const securitySettings$ = this.resolveGlobalSecurity(security$);
 
         const response = await this.fetch$(
             {
@@ -190,11 +188,10 @@ export class Tasks extends ClientSDK {
      * Mark a task as complete
      *
      * @remarks
-     * <b>Supported user types:</b> Employee, Service.
+     * <b>Supported user types:</b> Service.
      */
     async postTasksTaskIdComplete(
         input: operations.PostTasksTaskIdCompleteRequest,
-        security: operations.PostTasksTaskIdCompleteSecurity,
         options?: RequestOptions
     ): Promise<operations.PostTasksTaskIdCompleteResponse> {
         const headers$ = new Headers();
@@ -213,10 +210,11 @@ export class Tasks extends ClientSDK {
 
         const path$ = this.templateURLComponent("/tasks/{taskId}/complete")(pathParams$);
 
-        const securitySettings$ = this.resolveSecurity(
-            [{ value: security?.basic, type: "http:basic" }],
-            [{ value: security?.bearer, fieldName: "Authorization", type: "apiKey:header" }]
-        );
+        const security$ =
+            typeof this.options$.security === "function"
+                ? await this.options$.security()
+                : this.options$.security;
+        const securitySettings$ = this.resolveGlobalSecurity(security$);
 
         const response = await this.fetch$(
             {

@@ -5,11 +5,6 @@
 import * as shared from "../../../sdk/models/shared";
 import { z } from "zod";
 
-export type PostPeopleIdEmploymentSecurity = {
-    basic?: shared.SchemeBasic | undefined;
-    bearer?: string | undefined;
-};
-
 export type PostPeopleIdEmploymentRequest = {
     /**
      * Employment entry to add. This must not conflict with another entry on the same effective date.

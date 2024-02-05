@@ -5,11 +5,6 @@
 import * as shared from "../../../sdk/models/shared";
 import { z } from "zod";
 
-export type PostPeopleIdentifierSecurity = {
-    basic?: shared.SchemeBasic | undefined;
-    bearer?: string | undefined;
-};
-
 export type PostPeopleIdentifierRequest = {
     /**
      * Read request content that allows you to select fields and other options

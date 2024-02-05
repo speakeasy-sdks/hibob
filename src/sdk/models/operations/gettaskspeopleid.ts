@@ -5,11 +5,6 @@
 import * as shared from "../../../sdk/models/shared";
 import { z } from "zod";
 
-export type GetTasksPeopleIdSecurity = {
-    basic?: shared.SchemeBasic | undefined;
-    bearer?: string | undefined;
-};
-
 /**
  * filter tasks by open / closed status. Not sending task_status will return all tasks.
  */

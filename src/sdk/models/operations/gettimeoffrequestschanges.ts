@@ -6,11 +6,6 @@ import * as shared from "../../../sdk/models/shared";
 import { RFCDate } from "../../../sdk/types";
 import { z } from "zod";
 
-export type GetTimeoffRequestsChangesSecurity = {
-    basic?: shared.SchemeBasic | undefined;
-    bearer?: string | undefined;
-};
-
 export type GetTimeoffRequestsChangesRequest = {
     /**
      * Optional parameter. Indicates whether to include pending requests in the results.

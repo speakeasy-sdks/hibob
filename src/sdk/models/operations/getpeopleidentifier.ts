@@ -5,11 +5,6 @@
 import * as shared from "../../../sdk/models/shared";
 import { z } from "zod";
 
-export type GetPeopleIdentifierSecurity = {
-    basic?: shared.SchemeBasic | undefined;
-    bearer?: string | undefined;
-};
-
 export type GetPeopleIdentifierRequest = {
     /**
      * Whether to supply fields (paths) instead of empty list as a default in order  to not exceed data permitted.

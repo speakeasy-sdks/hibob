@@ -24,10 +24,9 @@ export class Onboarding extends ClientSDK {
      * Get a summary of all onboarding wizards.
      *
      * @remarks
-     * Wizard info includes Wizard ID, name and description.<br /><b>Supported user types:</b> Employee, Service.
+     * Wizard info includes Wizard ID, name and description.<br /><b>Supported user types:</b> Service.
      */
     async getOnboardingWizards(
-        security: operations.GetOnboardingWizardsSecurity,
         options?: RequestOptions
     ): Promise<operations.GetOnboardingWizardsResponse> {
         const headers$ = new Headers();
@@ -36,9 +35,11 @@ export class Onboarding extends ClientSDK {
 
         const path$ = this.templateURLComponent("/onboarding/wizards")();
 
-        const securitySettings$ = this.resolveSecurity([
-            { value: security?.bearer, fieldName: "Authorization", type: "apiKey:header" },
-        ]);
+        const security$ =
+            typeof this.options$.security === "function"
+                ? await this.options$.security()
+                : this.options$.security;
+        const securitySettings$ = this.resolveGlobalSecurity(security$);
 
         const response = await this.fetch$(
             { security: securitySettings$, method: "GET", path: path$, headers: headers$ },

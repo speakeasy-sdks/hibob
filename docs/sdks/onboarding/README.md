@@ -7,22 +7,21 @@
 
 ## getOnboardingWizards
 
-Wizard info includes Wizard ID, name and description.<br /><b>Supported user types:</b> Employee, Service.
+Wizard info includes Wizard ID, name and description.<br /><b>Supported user types:</b> Service.
 
 ### Example Usage
 
 ```typescript
 import { Hibob } from "hibob";
-import { GetOnboardingWizardsSecurity } from "hibob/sdk/models/operations";
 
 async function run() {
-  const sdk = new Hibob();
+  const sdk = new Hibob({
+    security: {
+      password: "<YOUR_PASSWORD_HERE>",
+    },
+  });
 
-  const operationSecurity: GetOnboardingWizardsSecurity = {
-    bearer: "<YOUR_API_KEY_HERE>",
-  };
-  
-  const result = await sdk.onboarding.getOnboardingWizards(operationSecurity);
+  const result = await sdk.onboarding.getOnboardingWizards();
 
   // Handle the result
   console.log(result)
@@ -35,7 +34,6 @@ run();
 
 | Parameter                                                                                                                                                                      | Type                                                                                                                                                                           | Required                                                                                                                                                                       | Description                                                                                                                                                                    |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `security`                                                                                                                                                                     | [operations.GetOnboardingWizardsSecurity](../../sdk/models/operations/getonboardingwizardssecurity.md)                                                                         | :heavy_check_mark:                                                                                                                                                             | The security requirements to use for the request.                                                                                                                              |
 | `options`                                                                                                                                                                      | RequestOptions                                                                                                                                                                 | :heavy_minus_sign:                                                                                                                                                             | Used to set various options for making HTTP requests.                                                                                                                          |
 | `options.fetchOptions`                                                                                                                                                         | [RequestInit](https://developer.mozilla.org/en-US/docs/Web/API/Request/Request#options)                                                                                        | :heavy_minus_sign:                                                                                                                                                             | Options that are passed to the underlying HTTP request. This can be used to inject extra headers for examples. All `Request` options, except `method` and `body`, are allowed. |
 

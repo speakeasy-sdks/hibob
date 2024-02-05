@@ -447,3 +447,13 @@ Based on:
 - [typescript v2.6.2] .
 ### Releases
 - [NPM v2.6.2] https://www.npmjs.com/package/hibob/v/2.6.2 - .
+
+## 2024-02-05 13:08:48
+### Changes
+Based on:
+- OpenAPI Doc 1.0.0 
+- Speakeasy CLI 1.166.1 (2.249.1) https://github.com/speakeasy-api/speakeasy
+### Generated
+- [typescript v3.0.0] .
+### Releases
+- [NPM v3.0.0] https://www.npmjs.com/package/hibob/v/3.0.0 - .

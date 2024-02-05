@@ -25,11 +25,10 @@ export class CustomTables extends ClientSDK {
      * Delete custom table entry
      *
      * @remarks
-     * <b>Supported user types:</b> Employee, Service.
+     * <b>Supported user types:</b> Service.
      */
     async deletePeopleCustomTablesEmployeeIdCustomTableIdEntryId(
         input: operations.DeletePeopleCustomTablesEmployeeIdCustomTableIdEntryIdRequest,
-        security: operations.DeletePeopleCustomTablesEmployeeIdCustomTableIdEntryIdSecurity,
         options?: RequestOptions
     ): Promise<operations.DeletePeopleCustomTablesEmployeeIdCustomTableIdEntryIdResponse> {
         const headers$ = new Headers();
@@ -61,10 +60,11 @@ export class CustomTables extends ClientSDK {
             "/people/custom-tables/{employee_id}/{custom_table_id}/{entry_id}"
         )(pathParams$);
 
-        const securitySettings$ = this.resolveSecurity(
-            [{ value: security?.basic, type: "http:basic" }],
-            [{ value: security?.bearer, fieldName: "Authorization", type: "apiKey:header" }]
-        );
+        const security$ =
+            typeof this.options$.security === "function"
+                ? await this.options$.security()
+                : this.options$.security;
+        const securitySettings$ = this.resolveGlobalSecurity(security$);
 
         const response = await this.fetch$(
             {
@@ -99,11 +99,10 @@ export class CustomTables extends ClientSDK {
      * Read all entries of the given custom table
      *
      * @remarks
-     * <b>Supported user types:</b> Employee, Service.
+     * <b>Supported user types:</b> Service.
      */
     async getPeopleCustomTablesEmployeeIdCustomTableId(
         input: operations.GetPeopleCustomTablesEmployeeIdCustomTableIdRequest,
-        security: operations.GetPeopleCustomTablesEmployeeIdCustomTableIdSecurity,
         options?: RequestOptions
     ): Promise<operations.GetPeopleCustomTablesEmployeeIdCustomTableIdResponse> {
         const headers$ = new Headers();
@@ -140,10 +139,11 @@ export class CustomTables extends ClientSDK {
             .filter(Boolean)
             .join("&");
 
-        const securitySettings$ = this.resolveSecurity(
-            [{ value: security?.basic, type: "http:basic" }],
-            [{ value: security?.bearer, fieldName: "Authorization", type: "apiKey:header" }]
-        );
+        const security$ =
+            typeof this.options$.security === "function"
+                ? await this.options$.security()
+                : this.options$.security;
+        const securitySettings$ = this.resolveGlobalSecurity(security$);
 
         const response = await this.fetch$(
             {
@@ -183,11 +183,10 @@ export class CustomTables extends ClientSDK {
      * Create new custom table entry
      *
      * @remarks
-     * <b>Supported user types:</b> Employee, Service.
+     * <b>Supported user types:</b> Service.
      */
     async postPeopleCustomTablesEmployeeIdCustomTableId(
         input: operations.PostPeopleCustomTablesEmployeeIdCustomTableIdRequest,
-        security: operations.PostPeopleCustomTablesEmployeeIdCustomTableIdSecurity,
         options?: RequestOptions
     ): Promise<operations.PostPeopleCustomTablesEmployeeIdCustomTableIdResponse> {
         const headers$ = new Headers();
@@ -217,10 +216,11 @@ export class CustomTables extends ClientSDK {
             "/people/custom-tables/{employee_id}/{custom_table_id}"
         )(pathParams$);
 
-        const securitySettings$ = this.resolveSecurity(
-            [{ value: security?.basic, type: "http:basic" }],
-            [{ value: security?.bearer, fieldName: "Authorization", type: "apiKey:header" }]
-        );
+        const security$ =
+            typeof this.options$.security === "function"
+                ? await this.options$.security()
+                : this.options$.security;
+        const securitySettings$ = this.resolveGlobalSecurity(security$);
 
         const response = await this.fetch$(
             {
@@ -255,11 +255,10 @@ export class CustomTables extends ClientSDK {
      * Update custom table entry
      *
      * @remarks
-     * <b>Supported user types:</b> Employee, Service.
+     * <b>Supported user types:</b> Service.
      */
     async putPeopleCustomTablesEmployeeIdCustomTableIdEntryId(
         input: operations.PutPeopleCustomTablesEmployeeIdCustomTableIdEntryIdRequest,
-        security: operations.PutPeopleCustomTablesEmployeeIdCustomTableIdEntryIdSecurity,
         options?: RequestOptions
     ): Promise<operations.PutPeopleCustomTablesEmployeeIdCustomTableIdEntryIdResponse> {
         const headers$ = new Headers();
@@ -293,10 +292,11 @@ export class CustomTables extends ClientSDK {
             "/people/custom-tables/{employee_id}/{custom_table_id}/{entry_id}"
         )(pathParams$);
 
-        const securitySettings$ = this.resolveSecurity(
-            [{ value: security?.basic, type: "http:basic" }],
-            [{ value: security?.bearer, fieldName: "Authorization", type: "apiKey:header" }]
-        );
+        const security$ =
+            typeof this.options$.security === "function"
+                ? await this.options$.security()
+                : this.options$.security;
+        const securitySettings$ = this.resolveGlobalSecurity(security$);
 
         const response = await this.fetch$(
             {

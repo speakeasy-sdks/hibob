@@ -5,11 +5,6 @@
 import * as shared from "../../../sdk/models/shared";
 import { z } from "zod";
 
-export type GetPeopleSecurity = {
-    basic?: shared.SchemeBasic | undefined;
-    bearer?: string | undefined;
-};
-
 export type GetPeopleRequest = {
     /**
      * Whether to supply humanReadable values in JSON instead of machine-readable format (default).
