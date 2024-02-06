@@ -7,7 +7,7 @@
 
 ## postAttendanceImportImportMethod
 
-<b>Supported user types:</b> Service
+Import attendance data
 
 ### Example Usage
 

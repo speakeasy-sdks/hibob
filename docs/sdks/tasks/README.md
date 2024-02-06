@@ -54,7 +54,7 @@ run();
 
 ## getTasks
 
-<b>Supported user types:</b> Service.
+Read all open tasks.
 
 ### Example Usage
 
@@ -96,7 +96,7 @@ run();
 
 ## getTasksPeopleId
 
-<b>Supported user types:</b> Service.
+Read tasks of a specific employee 
 
 ### Example Usage
 
@@ -142,7 +142,7 @@ run();
 
 ## postTasksTaskIdComplete
 
-<b>Supported user types:</b> Service.
+Mark a task as complete
 
 ### Example Usage
 

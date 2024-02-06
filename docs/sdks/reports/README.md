@@ -10,7 +10,7 @@
 
 ## getCompanyReports
 
-Returns a list of all the defined company reports. The data is filtered based on the access level of the user. Only viewable categories are returned.<br /><b>Supported user types:</b> Service.
+Returns a list of all the defined company reports. The data is filtered based on the access level of the user. Only viewable categories are returned.<br />
 
 ### Example Usage
 
@@ -52,7 +52,7 @@ run();
 
 ## getCompanyReportsDownloadReportName
 
-Returns the report data file when it is ready. If the file is not ready yet the response will be 204. It will then have to try again.<br />(This URL is the response of the previous API: https://api.hibob.com/v1/company/reports/reportId/download-async)<br /><b>Supported user types:</b> Service.
+Returns the report data file when it is ready. If the file is not ready yet the response will be 204. It will then have to try again.<br />(This URL is the response of the previous API: https://api.hibob.com/v1/company/reports/reportId/download-async)<br />
 
 ### Example Usage
 
@@ -144,7 +144,7 @@ run();
 
 ## getCompanyReportsReportIdDownloadAsync
 
-Returns the polling URL report file of the specified format under "Location" in the response header.<br /><b>Supported user types:</b> Service.
+Returns the polling URL report file of the specified format under "Location" in the response header.<br />
 
 ### Example Usage
 

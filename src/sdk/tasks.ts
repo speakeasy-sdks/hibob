@@ -67,9 +67,6 @@ export class Tasks extends ClientSDK {
 
     /**
      * Read all open tasks.
-     *
-     * @remarks
-     * <b>Supported user types:</b> Service.
      */
     async getTasks(options?: RequestOptions): Promise<operations.GetTasksResponse> {
         const headers$ = new Headers();
@@ -110,9 +107,6 @@ export class Tasks extends ClientSDK {
 
     /**
      * Read tasks of a specific employee
-     *
-     * @remarks
-     * <b>Supported user types:</b> Service.
      */
     async getTasksPeopleId(
         input: operations.GetTasksPeopleIdRequest,
@@ -186,9 +180,6 @@ export class Tasks extends ClientSDK {
 
     /**
      * Mark a task as complete
-     *
-     * @remarks
-     * <b>Supported user types:</b> Service.
      */
     async postTasksTaskIdComplete(
         input: operations.PostTasksTaskIdCompleteRequest,

@@ -23,9 +23,6 @@ export class Attendance extends ClientSDK {
     }
     /**
      * Import attendance data
-     *
-     * @remarks
-     * <b>Supported user types:</b> Service
      */
     async postAttendanceImportImportMethod(
         input: operations.PostAttendanceImportImportMethodRequest,

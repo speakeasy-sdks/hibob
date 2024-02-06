@@ -25,7 +25,7 @@ export class TimeOff extends ClientSDK {
      * Cancel an existing timeoff request
      *
      * @remarks
-     * Cancels an existing time off request.<br /><b>Supported user types:</b> Service.
+     * Cancels an existing time off request.<br />
      */
     async deleteTimeoffEmployeesIdRequestsRequestId(
         input: operations.DeleteTimeoffEmployeesIdRequestsRequestIdRequest,
@@ -92,7 +92,7 @@ export class TimeOff extends ClientSDK {
      * Get the balance for a given employee
      *
      * @remarks
-     * Retrieve the balance for a given employee, for a given policy type, as of a given date.<br /><b>Supported user types:</b> Service
+     * Retrieve the balance for a given employee, for a given policy type, as of a given date.<br />
      */
     async getTimeoffEmployeesIdBalance(
         input: operations.GetTimeoffEmployeesIdBalanceRequest,
@@ -170,7 +170,7 @@ export class TimeOff extends ClientSDK {
      * Get the details of an existing timeoff request.
      *
      * @remarks
-     * Supplies detailed info about an existing time off request.<br /><b>Supported user types:</b> Service.
+     * Supplies detailed info about an existing time off request.<br />
      */
     async getTimeoffEmployeesIdRequestsRequestId(
         input: operations.GetTimeoffEmployeesIdRequestsRequestIdRequest,
@@ -243,7 +243,7 @@ export class TimeOff extends ClientSDK {
      * Read a list of who's out of the office today or on the specified date.
      *
      * @remarks
-     * Returns the list of people that have a time off request today or on the specified date.<br /><b>Supported user types:</b> Service.
+     * Returns the list of people that have a time off request today or on the specified date.<br />
      */
     async getTimeoffOuttoday(
         input: operations.GetTimeoffOuttodayRequest,
@@ -321,7 +321,7 @@ export class TimeOff extends ClientSDK {
      * Get Policy details.
      *
      * @remarks
-     * Get details about a given policy.<br /><b>Supported user types:</b> Service.
+     * Get details about a given policy.<br />
      */
     async getTimeoffPolicies(
         input: operations.GetTimeoffPoliciesRequest,
@@ -390,7 +390,7 @@ export class TimeOff extends ClientSDK {
      * Get a list of policy names for a given policy type.
      *
      * @remarks
-     * Get a list of policy names for the user's defined policy type.<br /><b>Supported user types:</b> Service.
+     * Get a list of policy names for the user's defined policy type.<br />
      */
     async getTimeoffPoliciesNames(
         input: operations.GetTimeoffPoliciesNamesRequest,
@@ -455,7 +455,7 @@ export class TimeOff extends ClientSDK {
      * Get all policy types names.
      *
      * @remarks
-     * Get a list of all policy type names.<br /><b>Supported user types:</b> Service.
+     * Get a list of all policy type names.<br />
      */
     async getTimeoffPolicyTypes(
         options?: RequestOptions
@@ -507,7 +507,7 @@ export class TimeOff extends ClientSDK {
      * Get Policy type details
      *
      * @remarks
-     * Get details about a given policy type.<br /><b>Supported user types:</b> Service.
+     * Get details about a given policy type.<br />
      */
     async getTimeoffPolicyTypesPolicyType(
         input: operations.GetTimeoffPolicyTypesPolicyTypeRequest,
@@ -576,7 +576,7 @@ export class TimeOff extends ClientSDK {
      * Get Policy type reason codes
      *
      * @remarks
-     * Get list of reason codes for a given policy type.<br /><b>Supported user types:</b> Service.
+     * Get list of reason codes for a given policy type.<br />
      */
     async getTimeoffPolicyTypesPolicyTypeReasonCodes(
         input: operations.GetTimeoffPolicyTypesPolicyTypeReasonCodesRequest,
@@ -650,7 +650,7 @@ export class TimeOff extends ClientSDK {
      * Get all new/deleted time off requests since the specified date.
      *
      * @remarks
-     * Returns the list of time off requests that are pending, approved or canceled since the specified date.<br /><b>Supported user types:</b> Service.
+     * Returns the list of time off requests that are pending, approved or canceled since the specified date.<br />
      */
     async getTimeoffRequestsChanges(
         input: operations.GetTimeoffRequestsChangesRequest,
@@ -798,7 +798,7 @@ export class TimeOff extends ClientSDK {
      * Create a balance adjustment.
      *
      * @remarks
-     * Create a balance adjustment for a given employee for a given effective date.<br /><b>Supported user types:</b> Service
+     * Create a balance adjustment for a given employee for a given effective date.<br />
      */
     async postTimeoffEmployeesIdAdjustments(
         input: operations.PostTimeoffEmployeesIdAdjustmentsRequest,
@@ -867,7 +867,7 @@ export class TimeOff extends ClientSDK {
      * Submit a new time off request.
      *
      * @remarks
-     * Submits a new timeoff request.<br /><b>Supported user types:</b> Service.
+     * Submits a new timeoff request.<br />
      */
     async postTimeoffEmployeesIdRequests(
         input: operations.PostTimeoffEmployeesIdRequestsRequest,

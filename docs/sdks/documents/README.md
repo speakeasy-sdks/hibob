@@ -13,7 +13,7 @@
 
 ## deleteDocsPeopleIdConfidentialDocId
 
-<b>Supported user types:</b> Service.
+Delete a specific document from the employee's confidential folder.
 
 ### Example Usage
 
@@ -59,7 +59,7 @@ run();
 
 ## deleteDocsPeopleIdSharedDocId
 
-<b>Supported user types:</b> Service.
+Delete specific document from the employee's shared folder.
 
 ### Example Usage
 
@@ -105,7 +105,7 @@ run();
 
 ## getDocsPeopleId
 
-Returns a list of documents and download links.<br /><b>Supported user types:</b> Service.
+Returns a list of documents and download links.<br />
 
 ### Example Usage
 
@@ -150,7 +150,7 @@ run();
 
 ## postDocsPeopleIdConfidential
 
-<b>Supported user types:</b> Service.
+Upload a document to the employee's confidential folder
 
 ### Example Usage
 
@@ -200,7 +200,7 @@ run();
 
 ## postDocsPeopleIdConfidentialUpload
 
-<b>Supported user types:</b> Service.
+Upload a file to the employee's confidential folder.
 
 ### Example Usage
 
@@ -249,7 +249,7 @@ run();
 
 ## postDocsPeopleIdShared
 
-<b>Supported user types:</b> Service.
+Upload a document to the employee's shared folder
 
 ### Example Usage
 
@@ -299,7 +299,7 @@ run();
 
 ## postDocsPeopleIdSharedUpload
 
-<b>Supported user types:</b> Service.
+Upload a file to the employee's shared folder.
 
 ### Example Usage
 

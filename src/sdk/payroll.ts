@@ -23,9 +23,6 @@ export class Payroll extends ClientSDK {
     }
     /**
      * Deletes an equity grant for an employee.
-     *
-     * @remarks
-     * <b>Supported user types:</b> Service.
      */
     async deletePeopleIdEquitiesEntryId(
         input: operations.DeletePeopleIdEquitiesEntryIdRequest,
@@ -86,9 +83,6 @@ export class Payroll extends ClientSDK {
 
     /**
      * Deletes a salary entry from the employee's list.
-     *
-     * @remarks
-     * <b>Supported user types:</b> Service.
      */
     async deletePeopleIdSalariesEntryId(
         input: operations.DeletePeopleIdSalariesEntryIdRequest,
@@ -149,9 +143,6 @@ export class Payroll extends ClientSDK {
 
     /**
      * Deletes any training records for an employee.
-     *
-     * @remarks
-     * <b>Supported user types:</b> Service.
      */
     async deletePeopleIdTrainingEntryId(
         input: operations.DeletePeopleIdTrainingEntryIdRequest,
@@ -212,9 +203,6 @@ export class Payroll extends ClientSDK {
 
     /**
      * Deletes a training record for an employee.
-     *
-     * @remarks
-     * <b>Supported user types:</b> Service.
      */
     async deletePeopleIdVariableEntryId(
         input: operations.DeletePeopleIdVariableEntryIdRequest,
@@ -275,9 +263,6 @@ export class Payroll extends ClientSDK {
 
     /**
      * Read payroll history.
-     *
-     * @remarks
-     * <b>Supported user types:</b> Service.
      */
     async getPayrollHistory(
         input: operations.GetPayrollHistoryRequest,
@@ -412,7 +397,7 @@ export class Payroll extends ClientSDK {
      * List employee's salary history.
      *
      * @remarks
-     * Returns a list of salary history entries for a given employee.<br /><b>Supported user types:</b> Service<br><br><b>Note</b>: The values of the list fields represent the list item ID and not the list item value. To obtain the corresponding list item value, use the HiBob metadata API to determine the field list name. Then, use the list item ID to locate the list item value. For more information, see <a href='https://apidocs.hibob.com/docs/how-to-work-with-lists-public-api'>How to work with lists Public API</a>.
+     * Returns a list of salary history entries for a given employee.<br /><br><br><b>Note</b>: The values of the list fields represent the list item ID and not the list item value. To obtain the corresponding list item value, use the HiBob metadata API to determine the field list name. Then, use the list item ID to locate the list item value. For more information, see <a href='https://apidocs.hibob.com/docs/how-to-work-with-lists-public-api'>How to work with lists Public API</a>.
      */
     async getPeopleIdSalaries(
         input: operations.GetPeopleIdSalariesRequest,
@@ -471,7 +456,7 @@ export class Payroll extends ClientSDK {
      * List the employee's training records.
      *
      * @remarks
-     * Returns a list of training records for a given employee<br /><b>Supported user types:</b> Service<br><br><b>Note</b>: The values of the list fields represent the list item ID and not the list item value. To obtain the corresponding list item value, use the HiBob metadata API to determine the field list name. Then, use the list item ID to locate the list item value. For more information, see <a href='https://apidocs.hibob.com/docs/how-to-work-with-lists-public-api'>How to work with lists Public API</a>.
+     * Returns a list of training records for a given employee<br /><br><br><b>Note</b>: The values of the list fields represent the list item ID and not the list item value. To obtain the corresponding list item value, use the HiBob metadata API to determine the field list name. Then, use the list item ID to locate the list item value. For more information, see <a href='https://apidocs.hibob.com/docs/how-to-work-with-lists-public-api'>How to work with lists Public API</a>.
      */
     async getPeopleIdTraining(
         input: operations.GetPeopleIdTrainingRequest,
@@ -530,7 +515,7 @@ export class Payroll extends ClientSDK {
      * List employee's variable payments
      *
      * @remarks
-     * Returns a list of variable payments for a given employee.<br /><b>Supported user types:</b> Service.<br><br><b>Note</b>: The values of the list fields represent the list item ID and not the list item value. To obtain the corresponding list item value, use the HiBob metadata API to determine the field list name. Then, use the list item ID to locate the list item value. For more information, see <a href='https://apidocs.hibob.com/docs/how-to-work-with-lists-public-api'>How to work with lists Public API</a>.
+     * Returns a list of variable payments for a given employee.<br /><br><b>Note</b>: The values of the list fields represent the list item ID and not the list item value. To obtain the corresponding list item value, use the HiBob metadata API to determine the field list name. Then, use the list item ID to locate the list item value. For more information, see <a href='https://apidocs.hibob.com/docs/how-to-work-with-lists-public-api'>How to work with lists Public API</a>.
      */
     async getPeopleIdVariable(
         input: operations.GetPeopleIdVariableRequest,
@@ -589,7 +574,7 @@ export class Payroll extends ClientSDK {
      * Creates a new equity grant for a given employee.
      *
      * @remarks
-     * <b>Supported user types:</b> Service<br><br><b>Note</b>: The values of the list fields represent the list item ID and not the list item value. To obtain the corresponding list item value, use the HiBob metadata API to determine the field list name. Then, use the list item ID to locate the list item value. For more information, see <a href='https://apidocs.hibob.com/docs/how-to-work-with-lists-public-api'>How to work with lists Public API</a>.
+     * <br><br><b>Note</b>: The values of the list fields represent the list item ID and not the list item value. To obtain the corresponding list item value, use the HiBob metadata API to determine the field list name. Then, use the list item ID to locate the list item value. For more information, see <a href='https://apidocs.hibob.com/docs/how-to-work-with-lists-public-api'>How to work with lists Public API</a>.
      */
     async postPeopleIdEquities(
         input: operations.PostPeopleIdEquitiesRequest,
@@ -647,7 +632,7 @@ export class Payroll extends ClientSDK {
      * Creates a new salary entry for a given employee.
      *
      * @remarks
-     * <b>Supported user types:</b> Service<br><br><b>Note</b>: The values of the list fields represent the list item ID and not the list item value. To obtain the corresponding list item value, use the HiBob metadata API to determine the field list name. Then, use the list item ID to locate the list item value. For more information, see <a href='https://apidocs.hibob.com/docs/how-to-work-with-lists-public-api'>How to work with lists Public API</a>.
+     * <br><br><b>Note</b>: The values of the list fields represent the list item ID and not the list item value. To obtain the corresponding list item value, use the HiBob metadata API to determine the field list name. Then, use the list item ID to locate the list item value. For more information, see <a href='https://apidocs.hibob.com/docs/how-to-work-with-lists-public-api'>How to work with lists Public API</a>.
      */
     async postPeopleIdSalaries(
         input: operations.PostPeopleIdSalariesRequest,
@@ -705,7 +690,7 @@ export class Payroll extends ClientSDK {
      * Creates a new training records for a given employee
      *
      * @remarks
-     * <b>Supported user types:</b> Service<br><br><b>Note</b>: The values of the list fields represent the list item ID and not the list item value. To obtain the corresponding list item value, use the HiBob metadata API to determine the field list name. Then, use the list item ID to locate the list item value. For more information, see <a href='https://apidocs.hibob.com/docs/how-to-work-with-lists-public-api'>How to work with lists Public API</a>.
+     * <br><br><b>Note</b>: The values of the list fields represent the list item ID and not the list item value. To obtain the corresponding list item value, use the HiBob metadata API to determine the field list name. Then, use the list item ID to locate the list item value. For more information, see <a href='https://apidocs.hibob.com/docs/how-to-work-with-lists-public-api'>How to work with lists Public API</a>.
      */
     async postPeopleIdTraining(
         input: operations.PostPeopleIdTrainingRequest,
@@ -763,7 +748,7 @@ export class Payroll extends ClientSDK {
      * Creates a new variable payment for a given employee.
      *
      * @remarks
-     * <b>Supported user types:</b> Service<br><br><b>Note</b>:The values of the list fields represent the list item ID and not the list item value. To obtain the corresponding list item value, use the HiBob metadata API to determine the field list name. Then, use the list item ID to locate the list item value. For more information, see <a href='https://apidocs.hibob.com/docs/how-to-work-with-lists-public-api'>How to work with lists Public API</a>.
+     * <br><br><b>Note</b>:The values of the list fields represent the list item ID and not the list item value. To obtain the corresponding list item value, use the HiBob metadata API to determine the field list name. Then, use the list item ID to locate the list item value. For more information, see <a href='https://apidocs.hibob.com/docs/how-to-work-with-lists-public-api'>How to work with lists Public API</a>.
      */
     async postPeopleIdVariable(
         input: operations.PostPeopleIdVariableRequest,
@@ -821,7 +806,7 @@ export class Payroll extends ClientSDK {
      * Updates an equity grant for an employee
      *
      * @remarks
-     * <b>Supported user types:</b> Service<br><br><b>Note</b>: The values of the list fields represent the list item ID and not the list item value. To obtain the corresponding list item value, use the HiBob metadata API to determine the field list name. Then, use the list item ID to locate the list item value. For more information, see <a href='https://apidocs.hibob.com/docs/how-to-work-with-lists-public-api'>How to work with lists Public API</a>. - Basic: [] - Bearer: []
+     * <br><br><b>Note</b>: The values of the list fields represent the list item ID and not the list item value. To obtain the corresponding list item value, use the HiBob metadata API to determine the field list name. Then, use the list item ID to locate the list item value. For more information, see <a href='https://apidocs.hibob.com/docs/how-to-work-with-lists-public-api'>How to work with lists Public API</a>. - Basic: [] - Bearer: []
      */
     async putPeopleIdEquitiesEntryId(
         input: operations.PutPeopleIdEquitiesEntryIdRequest,

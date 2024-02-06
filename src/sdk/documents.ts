@@ -24,9 +24,6 @@ export class Documents extends ClientSDK {
     }
     /**
      * Delete a specific document from the employee's confidential folder.
-     *
-     * @remarks
-     * <b>Supported user types:</b> Service.
      */
     async deleteDocsPeopleIdConfidentialDocId(
         input: operations.DeleteDocsPeopleIdConfidentialDocIdRequest,
@@ -97,9 +94,6 @@ export class Documents extends ClientSDK {
 
     /**
      * Delete specific document from the employee's shared folder.
-     *
-     * @remarks
-     * <b>Supported user types:</b> Service.
      */
     async deleteDocsPeopleIdSharedDocId(
         input: operations.DeleteDocsPeopleIdSharedDocIdRequest,
@@ -169,7 +163,7 @@ export class Documents extends ClientSDK {
      * Download employee's documents
      *
      * @remarks
-     * Returns a list of documents and download links.<br /><b>Supported user types:</b> Service.
+     * Returns a list of documents and download links.<br />
      */
     async getDocsPeopleId(
         input: operations.GetDocsPeopleIdRequest,
@@ -233,9 +227,6 @@ export class Documents extends ClientSDK {
 
     /**
      * Upload a document to the employee's confidential folder
-     *
-     * @remarks
-     * <b>Supported user types:</b> Service.
      */
     async postDocsPeopleIdConfidential(
         input: operations.PostDocsPeopleIdConfidentialRequest,
@@ -301,9 +292,6 @@ export class Documents extends ClientSDK {
 
     /**
      * Upload a file to the employee's confidential folder.
-     *
-     * @remarks
-     * <b>Supported user types:</b> Service.
      */
     async postDocsPeopleIdConfidentialUpload(
         input: operations.PostDocsPeopleIdConfidentialUploadRequest,
@@ -381,9 +369,6 @@ export class Documents extends ClientSDK {
 
     /**
      * Upload a document to the employee's shared folder
-     *
-     * @remarks
-     * <b>Supported user types:</b> Service.
      */
     async postDocsPeopleIdShared(
         input: operations.PostDocsPeopleIdSharedRequest,
@@ -446,9 +431,6 @@ export class Documents extends ClientSDK {
 
     /**
      * Upload a file to the employee's shared folder.
-     *
-     * @remarks
-     * <b>Supported user types:</b> Service.
      */
     async postDocsPeopleIdSharedUpload(
         input: operations.PostDocsPeopleIdSharedUploadRequest,

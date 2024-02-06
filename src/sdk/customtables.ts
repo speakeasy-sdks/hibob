@@ -23,9 +23,6 @@ export class CustomTables extends ClientSDK {
     }
     /**
      * Delete custom table entry
-     *
-     * @remarks
-     * <b>Supported user types:</b> Service.
      */
     async deletePeopleCustomTablesEmployeeIdCustomTableIdEntryId(
         input: operations.DeletePeopleCustomTablesEmployeeIdCustomTableIdEntryIdRequest,
@@ -97,9 +94,6 @@ export class CustomTables extends ClientSDK {
 
     /**
      * Read all entries of the given custom table
-     *
-     * @remarks
-     * <b>Supported user types:</b> Service.
      */
     async getPeopleCustomTablesEmployeeIdCustomTableId(
         input: operations.GetPeopleCustomTablesEmployeeIdCustomTableIdRequest,
@@ -181,9 +175,6 @@ export class CustomTables extends ClientSDK {
 
     /**
      * Create new custom table entry
-     *
-     * @remarks
-     * <b>Supported user types:</b> Service.
      */
     async postPeopleCustomTablesEmployeeIdCustomTableId(
         input: operations.PostPeopleCustomTablesEmployeeIdCustomTableIdRequest,
@@ -253,9 +244,6 @@ export class CustomTables extends ClientSDK {
 
     /**
      * Update custom table entry
-     *
-     * @remarks
-     * <b>Supported user types:</b> Service.
      */
     async putPeopleCustomTablesEmployeeIdCustomTableIdEntryId(
         input: operations.PutPeopleCustomTablesEmployeeIdCustomTableIdEntryIdRequest,

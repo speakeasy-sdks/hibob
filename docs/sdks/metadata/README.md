@@ -18,7 +18,7 @@
 
 ## deleteCompanyNamedListsListNameItemId
 
-<b>Supported user types:</b> Service.
+Delete an item from an existing list.
 
 ### Example Usage
 
@@ -64,7 +64,7 @@ run();
 
 ## deleteCompanyPeopleFieldsFieldId
 
-<b>Supported user types:</b> Service.
+Delete an existing field.
 
 ### Example Usage
 
@@ -109,7 +109,7 @@ run();
 
 ## getCompanyNamedLists
 
-<b>Supported user types:</b> Service.
+Get all company lists
 
 ### Example Usage
 
@@ -152,7 +152,7 @@ run();
 
 ## getCompanyNamedListsListName
 
-<b>Supported user types:</b> Service.
+Get a specific company list by name.
 
 ### Example Usage
 
@@ -197,7 +197,7 @@ run();
 
 ## getCompanyPeopleFields
 
-<b>Supported user types:</b> Service.
+Get all company fields.
 
 ### Example Usage
 
@@ -239,7 +239,7 @@ run();
 
 ## getMetadataObjectsPosition
 
-Returns a list of all fields of object type position.<br/><b>Supported user types:</b> Service.
+Returns a list of all fields of object type position.<br/>
 
 ### Example Usage
 
@@ -281,7 +281,7 @@ run();
 
 ## getPeopleCustomTablesMetadata
 
-<b>Supported user types:</b> Service.
+Read metadata of custom tables defined
 
 ### Example Usage
 
@@ -323,7 +323,7 @@ run();
 
 ## getPeopleCustomTablesMetadataCustomTableId
 
-<b>Supported user types:</b> Service.
+Read metadata for specific custom table
 
 ### Example Usage
 
@@ -368,7 +368,7 @@ run();
 
 ## postCompanyNamedListsListName
 
-<b>Supported user types:</b> Service.
+Add a new item to an existing list.
 
 ### Example Usage
 
@@ -416,7 +416,7 @@ run();
 
 ## postCompanyPeopleFields
 
-<b>Supported user types:</b> Service.
+Create a new field.
 
 ### Example Usage
 
@@ -463,7 +463,7 @@ run();
 
 ## putCompanyNamedListsListNameItemId
 
-<b>Supported user types:</b> Service.
+Update an existing item from a list.
 
 ### Example Usage
 
@@ -510,7 +510,7 @@ run();
 
 ## putCompanyPeopleFieldsFieldId
 
-<b>Supported user types:</b> Service.
+Update an existing field
 
 ### Example Usage
 

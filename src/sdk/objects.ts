@@ -26,7 +26,7 @@ export class Objects extends ClientSDK {
      * Read company positions
      *
      * @remarks
-     * Returns a list of the company positions, filtered by the specified attributes.  <br /><b>Supported user types:</b> Service.<br><br><b>Note</b>
+     * Returns a list of the company positions, filtered by the specified attributes.  <br /><br><b>Note</b>
      */
     async postObjectsPositionSearch(
         input: shared.GetPositionsRequest,

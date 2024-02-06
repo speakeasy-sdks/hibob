@@ -20,7 +20,7 @@
 
 ## deleteTimeoffEmployeesIdRequestsRequestId
 
-Cancels an existing time off request.<br /><b>Supported user types:</b> Service.
+Cancels an existing time off request.<br />
 
 ### Example Usage
 
@@ -66,7 +66,7 @@ run();
 
 ## getTimeoffEmployeesIdBalance
 
-Retrieve the balance for a given employee, for a given policy type, as of a given date.<br /><b>Supported user types:</b> Service
+Retrieve the balance for a given employee, for a given policy type, as of a given date.<br />
 
 ### Example Usage
 
@@ -114,7 +114,7 @@ run();
 
 ## getTimeoffEmployeesIdRequestsRequestId
 
-Supplies detailed info about an existing time off request.<br /><b>Supported user types:</b> Service.
+Supplies detailed info about an existing time off request.<br />
 
 ### Example Usage
 
@@ -160,7 +160,7 @@ run();
 
 ## getTimeoffOuttoday
 
-Returns the list of people that have a time off request today or on the specified date.<br /><b>Supported user types:</b> Service.
+Returns the list of people that have a time off request today or on the specified date.<br />
 
 ### Example Usage
 
@@ -204,7 +204,7 @@ run();
 
 ## getTimeoffPolicies
 
-Get details about a given policy.<br /><b>Supported user types:</b> Service.
+Get details about a given policy.<br />
 
 ### Example Usage
 
@@ -249,7 +249,7 @@ run();
 
 ## getTimeoffPoliciesNames
 
-Get a list of policy names for the user's defined policy type.<br /><b>Supported user types:</b> Service.
+Get a list of policy names for the user's defined policy type.<br />
 
 ### Example Usage
 
@@ -294,7 +294,7 @@ run();
 
 ## getTimeoffPolicyTypes
 
-Get a list of all policy type names.<br /><b>Supported user types:</b> Service.
+Get a list of all policy type names.<br />
 
 ### Example Usage
 
@@ -336,7 +336,7 @@ run();
 
 ## getTimeoffPolicyTypesPolicyType
 
-Get details about a given policy type.<br /><b>Supported user types:</b> Service.
+Get details about a given policy type.<br />
 
 ### Example Usage
 
@@ -381,7 +381,7 @@ run();
 
 ## getTimeoffPolicyTypesPolicyTypeReasonCodes
 
-Get list of reason codes for a given policy type.<br /><b>Supported user types:</b> Service.
+Get list of reason codes for a given policy type.<br />
 
 ### Example Usage
 
@@ -426,7 +426,7 @@ run();
 
 ## getTimeoffRequestsChanges
 
-Returns the list of time off requests that are pending, approved or canceled since the specified date.<br /><b>Supported user types:</b> Service.
+Returns the list of time off requests that are pending, approved or canceled since the specified date.<br />
 
 ### Example Usage
 
@@ -519,7 +519,7 @@ run();
 
 ## postTimeoffEmployeesIdAdjustments
 
-Create a balance adjustment for a given employee for a given effective date.<br /><b>Supported user types:</b> Service
+Create a balance adjustment for a given employee for a given effective date.<br />
 
 ### Example Usage
 
@@ -567,7 +567,7 @@ run();
 
 ## postTimeoffEmployeesIdRequests
 
-Submits a new timeoff request.<br /><b>Supported user types:</b> Service.
+Submits a new timeoff request.<br />
 
 ### Example Usage
 

@@ -28,7 +28,7 @@
 
 ## deletePeopleIdEmploymentEntryId
 
-<b>Supported user types:</b> Service.
+Deletes an employment entry from a given employee's employment history.
 
 ### Example Usage
 
@@ -74,7 +74,7 @@ run();
 
 ## deletePeopleIdEquitiesEntryId
 
-<b>Supported user types:</b> Service.
+Deletes an equity grant for an employee.
 
 ### Example Usage
 
@@ -120,7 +120,7 @@ run();
 
 ## deletePeopleIdSalariesEntryId
 
-<b>Supported user types:</b> Service.
+Deletes a salary entry from the employee's list.
 
 ### Example Usage
 
@@ -166,7 +166,7 @@ run();
 
 ## deletePeopleIdTrainingEntryId
 
-<b>Supported user types:</b> Service.
+Deletes any training records for an employee.
 
 ### Example Usage
 
@@ -212,7 +212,7 @@ run();
 
 ## deletePeopleIdVariableEntryId
 
-<b>Supported user types:</b> Service.
+Deletes a training record for an employee.
 
 ### Example Usage
 
@@ -258,7 +258,7 @@ run();
 
 ## deletePeopleIdWorkEntryId
 
-<b>Supported user types:</b> Service
+Deletes a work entry from a given employee's work history.
 
 ### Example Usage
 
@@ -304,7 +304,7 @@ run();
 
 ## getPeopleIdEmployment
 
-<b>Note:</b> Changes to this API are planned to take effect on May 31, 2024.  Make sure to review all of the details in the <a href='https://help.hibob.com/hc/en-us/articles/19726260483601'>Working pattern API Changes</a>  article in the help center.<br> <br>Returns a list of employment history entries for a given employee.<br /><b>Supported user types:</b> Service<br><br><b>Note</b>: The values of the list fields represent the list item ID and not the list item value. To obtain the corresponding list item value, use the HiBob metadata API to determine the field list name. Then, use the list item ID to locate the list item value. For more information, see <a href='https://apidocs.hibob.com/docs/how-to-work-with-lists-public-api'>How to work with lists Public API</a>.
+<b>Note:</b> Changes to this API are planned to take effect on May 31, 2024.  Make sure to review all of the details in the <a href='https://help.hibob.com/hc/en-us/articles/19726260483601'>Working pattern API Changes</a>  article in the help center.<br> <br>Returns a list of employment history entries for a given employee.<br /><br><br><b>Note</b>: The values of the list fields represent the list item ID and not the list item value. To obtain the corresponding list item value, use the HiBob metadata API to determine the field list name. Then, use the list item ID to locate the list item value. For more information, see <a href='https://apidocs.hibob.com/docs/how-to-work-with-lists-public-api'>How to work with lists Public API</a>.
 
 ### Example Usage
 
@@ -394,7 +394,7 @@ run();
 
 ## getPeopleIdLifecycle
 
-Returns a list of life-cycle history entries for a given employee.<br /><b>Supported user types:</b> Service<br><br><b>Note</b>: TThe values of the list fields represent the list item ID and not the list item value. To obtain the corresponding list item value, use the HiBob metadata API to determine the field list name. Then, use the list item ID to locate the list item value. For more information, see <a href='https://apidocs.hibob.com/docs/how-to-work-with-lists-public-api'>How to work with lists Public API</a>.
+Returns a list of life-cycle history entries for a given employee.<br /><br><br><b>Note</b>: TThe values of the list fields represent the list item ID and not the list item value. To obtain the corresponding list item value, use the HiBob metadata API to determine the field list name. Then, use the list item ID to locate the list item value. For more information, see <a href='https://apidocs.hibob.com/docs/how-to-work-with-lists-public-api'>How to work with lists Public API</a>.
 
 ### Example Usage
 
@@ -439,7 +439,7 @@ run();
 
 ## getPeopleIdSalaries
 
-Returns a list of salary history entries for a given employee.<br /><b>Supported user types:</b> Service<br><br><b>Note</b>: The values of the list fields represent the list item ID and not the list item value. To obtain the corresponding list item value, use the HiBob metadata API to determine the field list name. Then, use the list item ID to locate the list item value. For more information, see <a href='https://apidocs.hibob.com/docs/how-to-work-with-lists-public-api'>How to work with lists Public API</a>.
+Returns a list of salary history entries for a given employee.<br /><br><br><b>Note</b>: The values of the list fields represent the list item ID and not the list item value. To obtain the corresponding list item value, use the HiBob metadata API to determine the field list name. Then, use the list item ID to locate the list item value. For more information, see <a href='https://apidocs.hibob.com/docs/how-to-work-with-lists-public-api'>How to work with lists Public API</a>.
 
 ### Example Usage
 
@@ -484,7 +484,7 @@ run();
 
 ## getPeopleIdTraining
 
-Returns a list of training records for a given employee<br /><b>Supported user types:</b> Service<br><br><b>Note</b>: The values of the list fields represent the list item ID and not the list item value. To obtain the corresponding list item value, use the HiBob metadata API to determine the field list name. Then, use the list item ID to locate the list item value. For more information, see <a href='https://apidocs.hibob.com/docs/how-to-work-with-lists-public-api'>How to work with lists Public API</a>.
+Returns a list of training records for a given employee<br /><br><br><b>Note</b>: The values of the list fields represent the list item ID and not the list item value. To obtain the corresponding list item value, use the HiBob metadata API to determine the field list name. Then, use the list item ID to locate the list item value. For more information, see <a href='https://apidocs.hibob.com/docs/how-to-work-with-lists-public-api'>How to work with lists Public API</a>.
 
 ### Example Usage
 
@@ -529,7 +529,7 @@ run();
 
 ## getPeopleIdVariable
 
-Returns a list of variable payments for a given employee.<br /><b>Supported user types:</b> Service.<br><br><b>Note</b>: The values of the list fields represent the list item ID and not the list item value. To obtain the corresponding list item value, use the HiBob metadata API to determine the field list name. Then, use the list item ID to locate the list item value. For more information, see <a href='https://apidocs.hibob.com/docs/how-to-work-with-lists-public-api'>How to work with lists Public API</a>.
+Returns a list of variable payments for a given employee.<br /><br><b>Note</b>: The values of the list fields represent the list item ID and not the list item value. To obtain the corresponding list item value, use the HiBob metadata API to determine the field list name. Then, use the list item ID to locate the list item value. For more information, see <a href='https://apidocs.hibob.com/docs/how-to-work-with-lists-public-api'>How to work with lists Public API</a>.
 
 ### Example Usage
 
@@ -574,7 +574,7 @@ run();
 
 ## getPeopleIdWork
 
-Returns a list of work history entries for a given employee.<br /><b>Supported user types:</b> Service.<br><br><b>Note</b>: The values of the list fields represent the list item ID and not the list item value. To obtain the corresponding list item value, use the HiBob metadata API to determine the field list name. Then, use the list item ID to locate the list item value. For more information, see <a href='https://apidocs.hibob.com/docs/how-to-work-with-lists-public-api'>How to work with lists Public API</a>.
+Returns a list of work history entries for a given employee.<br /><br><b>Note</b>: The values of the list fields represent the list item ID and not the list item value. To obtain the corresponding list item value, use the HiBob metadata API to determine the field list name. Then, use the list item ID to locate the list item value. For more information, see <a href='https://apidocs.hibob.com/docs/how-to-work-with-lists-public-api'>How to work with lists Public API</a>.
 
 ### Example Usage
 
@@ -619,7 +619,7 @@ run();
 
 ## postPeopleIdEmployment
 
-<b>Supported user types:</b> Service<br><br><b>Note</b>: The values of the list fields represent the list item ID and not the list item value. To obtain the corresponding list item value, use the HiBob metadata API to determine the field list name. Then, use the list item ID to locate the list item value. For more information, see <a href='https://apidocs.hibob.com/docs/how-to-work-with-lists-public-api'>How to work with lists Public API</a>.
+<br><br><b>Note</b>: The values of the list fields represent the list item ID and not the list item value. To obtain the corresponding list item value, use the HiBob metadata API to determine the field list name. Then, use the list item ID to locate the list item value. For more information, see <a href='https://apidocs.hibob.com/docs/how-to-work-with-lists-public-api'>How to work with lists Public API</a>.
 
 ### Example Usage
 
@@ -668,7 +668,7 @@ run();
 
 ## postPeopleIdEquities
 
-<b>Supported user types:</b> Service<br><br><b>Note</b>: The values of the list fields represent the list item ID and not the list item value. To obtain the corresponding list item value, use the HiBob metadata API to determine the field list name. Then, use the list item ID to locate the list item value. For more information, see <a href='https://apidocs.hibob.com/docs/how-to-work-with-lists-public-api'>How to work with lists Public API</a>.
+<br><br><b>Note</b>: The values of the list fields represent the list item ID and not the list item value. To obtain the corresponding list item value, use the HiBob metadata API to determine the field list name. Then, use the list item ID to locate the list item value. For more information, see <a href='https://apidocs.hibob.com/docs/how-to-work-with-lists-public-api'>How to work with lists Public API</a>.
 
 ### Example Usage
 
@@ -723,7 +723,7 @@ run();
 
 ## postPeopleIdSalaries
 
-<b>Supported user types:</b> Service<br><br><b>Note</b>: The values of the list fields represent the list item ID and not the list item value. To obtain the corresponding list item value, use the HiBob metadata API to determine the field list name. Then, use the list item ID to locate the list item value. For more information, see <a href='https://apidocs.hibob.com/docs/how-to-work-with-lists-public-api'>How to work with lists Public API</a>.
+<br><br><b>Note</b>: The values of the list fields represent the list item ID and not the list item value. To obtain the corresponding list item value, use the HiBob metadata API to determine the field list name. Then, use the list item ID to locate the list item value. For more information, see <a href='https://apidocs.hibob.com/docs/how-to-work-with-lists-public-api'>How to work with lists Public API</a>.
 
 ### Example Usage
 
@@ -777,7 +777,7 @@ run();
 
 ## postPeopleIdTraining
 
-<b>Supported user types:</b> Service<br><br><b>Note</b>: The values of the list fields represent the list item ID and not the list item value. To obtain the corresponding list item value, use the HiBob metadata API to determine the field list name. Then, use the list item ID to locate the list item value. For more information, see <a href='https://apidocs.hibob.com/docs/how-to-work-with-lists-public-api'>How to work with lists Public API</a>.
+<br><br><b>Note</b>: The values of the list fields represent the list item ID and not the list item value. To obtain the corresponding list item value, use the HiBob metadata API to determine the field list name. Then, use the list item ID to locate the list item value. For more information, see <a href='https://apidocs.hibob.com/docs/how-to-work-with-lists-public-api'>How to work with lists Public API</a>.
 
 ### Example Usage
 
@@ -830,7 +830,7 @@ run();
 
 ## postPeopleIdVariable
 
-<b>Supported user types:</b> Service<br><br><b>Note</b>:The values of the list fields represent the list item ID and not the list item value. To obtain the corresponding list item value, use the HiBob metadata API to determine the field list name. Then, use the list item ID to locate the list item value. For more information, see <a href='https://apidocs.hibob.com/docs/how-to-work-with-lists-public-api'>How to work with lists Public API</a>.
+<br><br><b>Note</b>:The values of the list fields represent the list item ID and not the list item value. To obtain the corresponding list item value, use the HiBob metadata API to determine the field list name. Then, use the list item ID to locate the list item value. For more information, see <a href='https://apidocs.hibob.com/docs/how-to-work-with-lists-public-api'>How to work with lists Public API</a>.
 
 ### Example Usage
 
@@ -884,7 +884,7 @@ run();
 
 ## postPeopleIdWork
 
-<b>Supported user types:</b> Service<br><br><b>Note</b>: The values of the list fields represent the list item ID and not the list item value. To obtain the corresponding list item value, use the HiBob metadata API to determine the field list name. Then, use the list item ID to locate the list item value. For more information, see <a href='https://apidocs.hibob.com/docs/how-to-work-with-lists-public-api'>How to work with lists Public API</a>.
+<br><br><b>Note</b>: The values of the list fields represent the list item ID and not the list item value. To obtain the corresponding list item value, use the HiBob metadata API to determine the field list name. Then, use the list item ID to locate the list item value. For more information, see <a href='https://apidocs.hibob.com/docs/how-to-work-with-lists-public-api'>How to work with lists Public API</a>.
 
 ### Example Usage
 
@@ -937,7 +937,7 @@ run();
 
 ## putPeopleIdEmploymentEntryId
 
-<b>Supported user types:</b> Service.<br><br><b>Note</b>: The values of the list fields represent the list item ID and not the list item value. To obtain the corresponding list item value, use the HiBob metadata API to determine the field list name. Then, use the list item ID to locate the list item value. For more information, see <a href='https://apidocs.hibob.com/docs/how-to-work-with-lists-public-api'>How to work with lists Public API</a>.
+<br><b>Note</b>: The values of the list fields represent the list item ID and not the list item value. To obtain the corresponding list item value, use the HiBob metadata API to determine the field list name. Then, use the list item ID to locate the list item value. For more information, see <a href='https://apidocs.hibob.com/docs/how-to-work-with-lists-public-api'>How to work with lists Public API</a>.
 
 ### Example Usage
 
@@ -987,7 +987,7 @@ run();
 
 ## putPeopleIdEquitiesEntryId
 
-<b>Supported user types:</b> Service<br><br><b>Note</b>: The values of the list fields represent the list item ID and not the list item value. To obtain the corresponding list item value, use the HiBob metadata API to determine the field list name. Then, use the list item ID to locate the list item value. For more information, see <a href='https://apidocs.hibob.com/docs/how-to-work-with-lists-public-api'>How to work with lists Public API</a>. - Basic: [] - Bearer: []
+<br><br><b>Note</b>: The values of the list fields represent the list item ID and not the list item value. To obtain the corresponding list item value, use the HiBob metadata API to determine the field list name. Then, use the list item ID to locate the list item value. For more information, see <a href='https://apidocs.hibob.com/docs/how-to-work-with-lists-public-api'>How to work with lists Public API</a>. - Basic: [] - Bearer: []
 
 ### Example Usage
 
@@ -1043,7 +1043,7 @@ run();
 
 ## putPeopleIdWorkEntryId
 
-<b>Supported user types:</b> Service<br><br><b>Note</b>: The values of the list fields represent the list item ID and not the list item value. To obtain the corresponding list item value, use the HiBob metadata API to determine the field list name. Then, use the list item ID to locate the list item value. For more information, see <a href='https://apidocs.hibob.com/docs/how-to-work-with-lists-public-api'>How to work with lists Public API</a>.
+<br><br><b>Note</b>: The values of the list fields represent the list item ID and not the list item value. To obtain the corresponding list item value, use the HiBob metadata API to determine the field list name. Then, use the list item ID to locate the list item value. For more information, see <a href='https://apidocs.hibob.com/docs/how-to-work-with-lists-public-api'>How to work with lists Public API</a>.
 
 ### Example Usage
 

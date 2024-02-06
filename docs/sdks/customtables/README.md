@@ -10,7 +10,7 @@
 
 ## deletePeopleCustomTablesEmployeeIdCustomTableIdEntryId
 
-<b>Supported user types:</b> Service.
+Delete custom table entry
 
 ### Example Usage
 
@@ -57,7 +57,7 @@ run();
 
 ## getPeopleCustomTablesEmployeeIdCustomTableId
 
-<b>Supported user types:</b> Service.
+Read all entries of the given custom table
 
 ### Example Usage
 
@@ -103,7 +103,7 @@ run();
 
 ## postPeopleCustomTablesEmployeeIdCustomTableId
 
-<b>Supported user types:</b> Service.
+Create new custom table entry
 
 ### Example Usage
 
@@ -150,7 +150,7 @@ run();
 
 ## putPeopleCustomTablesEmployeeIdCustomTableIdEntryId
 
-<b>Supported user types:</b> Service.
+Update custom table entry
 
 ### Example Usage
 

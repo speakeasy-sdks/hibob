@@ -7,7 +7,7 @@
 
 ## postObjectsPositionSearch
 
-Returns a list of the company positions, filtered by the specified attributes.  <br /><b>Supported user types:</b> Service.<br><br><b>Note</b>
+Returns a list of the company positions, filtered by the specified attributes.  <br /><br><b>Note</b>
 
 ### Example Usage
 

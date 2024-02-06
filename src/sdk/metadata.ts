@@ -24,9 +24,6 @@ export class Metadata extends ClientSDK {
     }
     /**
      * Delete an item from an existing list.
-     *
-     * @remarks
-     * <b>Supported user types:</b> Service.
      */
     async deleteCompanyNamedListsListNameItemId(
         input: operations.DeleteCompanyNamedListsListNameItemIdRequest,
@@ -92,9 +89,6 @@ export class Metadata extends ClientSDK {
 
     /**
      * Delete an existing field.
-     *
-     * @remarks
-     * <b>Supported user types:</b> Service.
      */
     async deleteCompanyPeopleFieldsFieldId(
         input: operations.DeleteCompanyPeopleFieldsFieldIdRequest,
@@ -154,9 +148,6 @@ export class Metadata extends ClientSDK {
 
     /**
      * Get all company lists
-     *
-     * @remarks
-     * <b>Supported user types:</b> Service.
      */
     async getCompanyNamedLists(
         input: operations.GetCompanyNamedListsRequest,
@@ -219,9 +210,6 @@ export class Metadata extends ClientSDK {
 
     /**
      * Get a specific company list by name.
-     *
-     * @remarks
-     * <b>Supported user types:</b> Service.
      */
     async getCompanyNamedListsListName(
         input: operations.GetCompanyNamedListsListNameRequest,
@@ -298,9 +286,6 @@ export class Metadata extends ClientSDK {
 
     /**
      * Get all company fields.
-     *
-     * @remarks
-     * <b>Supported user types:</b> Service.
      */
     async getCompanyPeopleFields(
         options?: RequestOptions
@@ -345,7 +330,7 @@ export class Metadata extends ClientSDK {
      * Get all positions fields
      *
      * @remarks
-     * Returns a list of all fields of object type position.<br/><b>Supported user types:</b> Service.
+     * Returns a list of all fields of object type position.<br/>
      */
     async getMetadataObjectsPosition(
         options?: RequestOptions
@@ -395,9 +380,6 @@ export class Metadata extends ClientSDK {
 
     /**
      * Read metadata of custom tables defined
-     *
-     * @remarks
-     * <b>Supported user types:</b> Service.
      */
     async getPeopleCustomTablesMetadata(
         options?: RequestOptions
@@ -440,9 +422,6 @@ export class Metadata extends ClientSDK {
 
     /**
      * Read metadata for specific custom table
-     *
-     * @remarks
-     * <b>Supported user types:</b> Service.
      */
     async getPeopleCustomTablesMetadataCustomTableId(
         input: operations.GetPeopleCustomTablesMetadataCustomTableIdRequest,
@@ -508,9 +487,6 @@ export class Metadata extends ClientSDK {
 
     /**
      * Add a new item to an existing list.
-     *
-     * @remarks
-     * <b>Supported user types:</b> Service.
      */
     async postCompanyNamedListsListName(
         input: operations.PostCompanyNamedListsListNameRequest,
@@ -579,9 +555,6 @@ export class Metadata extends ClientSDK {
 
     /**
      * Create a new field.
-     *
-     * @remarks
-     * <b>Supported user types:</b> Service.
      */
     async postCompanyPeopleFields(
         input: shared.CreateFieldRequest,
@@ -639,9 +612,6 @@ export class Metadata extends ClientSDK {
 
     /**
      * Update an existing item from a list.
-     *
-     * @remarks
-     * <b>Supported user types:</b> Service.
      */
     async putCompanyNamedListsListNameItemId(
         input: operations.PutCompanyNamedListsListNameItemIdRequest,
@@ -709,9 +679,6 @@ export class Metadata extends ClientSDK {
 
     /**
      * Update an existing field
-     *
-     * @remarks
-     * <b>Supported user types:</b> Service.
      */
     async putCompanyPeopleFieldsFieldId(
         input: operations.PutCompanyPeopleFieldsFieldIdRequest,
