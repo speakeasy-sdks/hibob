@@ -51,9 +51,7 @@ export namespace GetTimeoffRequestsChangesRequest$ {
             })
             .transform((v) => {
                 return {
-                    ...(v.includePending === undefined
-                        ? null
-                        : { includePending: v.includePending }),
+                    includePending: v.includePending,
                     since: v.since,
                 };
             });

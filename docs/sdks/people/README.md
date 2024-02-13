@@ -1020,8 +1020,14 @@ async function run() {
 
   const result = await sdk.people.postEmployeesIdentifierTerminate({
     employeeTermination: {
-      noticePeriod: {},
-      terminationDate: new RFCDate("2024-04-20"),
+      lastDayOfWork: new RFCDate("2025-09-22"),
+      noticePeriod: {
+        length: 30,
+        unit: EmployeeTerminationUnit.Days,
+      },
+      reasonType: "End of Contract",
+      terminationDate: new RFCDate("2025-09-23"),
+      terminationReason: "Redundant",
     },
     identifier: "string",
   });

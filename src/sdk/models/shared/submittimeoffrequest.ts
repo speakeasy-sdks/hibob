@@ -172,21 +172,15 @@ export namespace SubmitTimeoffRequest$ {
                 ...(v.dayPortion === undefined ? null : { dayPortion: v.dayPortion }),
                 ...(v.description === undefined ? null : { description: v.description }),
                 ...(v.endDate === undefined ? null : { endDate: v.endDate }),
-                ...(v.endDatePortion === undefined ? null : { endDatePortion: v.endDatePortion }),
+                endDatePortion: v.endDatePortion,
                 ...(v.hours === undefined ? null : { hours: v.hours }),
                 ...(v.minutes === undefined ? null : { minutes: v.minutes }),
                 policyType: v.policyType,
                 ...(v.reasonCode === undefined ? null : { reasonCode: v.reasonCode }),
-                ...(v.requestRangeType === undefined
-                    ? null
-                    : { requestRangeType: v.requestRangeType }),
-                ...(v.skipManagerApproval === undefined
-                    ? null
-                    : { skipManagerApproval: v.skipManagerApproval }),
+                requestRangeType: v.requestRangeType,
+                skipManagerApproval: v.skipManagerApproval,
                 startDate: v.startDate,
-                ...(v.startDatePortion === undefined
-                    ? null
-                    : { startDatePortion: v.startDatePortion }),
+                startDatePortion: v.startDatePortion,
             };
         });
 

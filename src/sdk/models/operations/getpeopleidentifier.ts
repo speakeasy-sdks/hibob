@@ -66,11 +66,9 @@ export namespace GetPeopleIdentifierRequest$ {
         .transform((v) => {
             return {
                 fields: v.fields,
-                ...(v.humanReadable === undefined ? null : { humanReadable: v.humanReadable }),
+                humanReadable: v.humanReadable,
                 identifier: v.identifier,
-                ...(v.includeHumanReadable === undefined
-                    ? null
-                    : { includeHumanReadable: v.includeHumanReadable }),
+                includeHumanReadable: v.includeHumanReadable,
             };
         });
 

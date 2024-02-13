@@ -59,10 +59,8 @@ export namespace GetPeopleRequest$ {
         })
         .transform((v) => {
             return {
-                ...(v.humanReadable === undefined ? null : { humanReadable: v.humanReadable }),
-                ...(v.includeHumanReadable === undefined
-                    ? null
-                    : { includeHumanReadable: v.includeHumanReadable }),
+                humanReadable: v.humanReadable,
+                includeHumanReadable: v.includeHumanReadable,
                 ...(v.showInactive === undefined ? null : { showInactive: v.showInactive }),
             };
         });

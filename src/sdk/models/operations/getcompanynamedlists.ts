@@ -43,9 +43,7 @@ export namespace GetCompanyNamedListsRequest$ {
         })
         .transform((v) => {
             return {
-                ...(v.includeArchived === undefined
-                    ? null
-                    : { includeArchived: v.includeArchived }),
+                includeArchived: v.includeArchived,
             };
         });
 

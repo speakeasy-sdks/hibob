@@ -73,9 +73,9 @@ export namespace GetTimeoffWhosoutRequest$ {
         .transform((v) => {
             return {
                 from: v.from,
-                ...(v.includeHourly === undefined ? null : { includeHourly: v.includeHourly }),
-                ...(v.includePending === undefined ? null : { includePending: v.includePending }),
-                ...(v.includePrivate === undefined ? null : { includePrivate: v.includePrivate }),
+                includeHourly: v.includeHourly,
+                includePending: v.includePending,
+                includePrivate: v.includePrivate,
                 to: v.to,
             };
         });

@@ -61,9 +61,7 @@ export namespace GetPeopleCustomTablesEmployeeIdCustomTableIdRequest$ {
             return {
                 customTableId: v.custom_table_id,
                 employeeId: v.employee_id,
-                ...(v.includeHumanReadable === undefined
-                    ? null
-                    : { includeHumanReadable: v.includeHumanReadable }),
+                includeHumanReadable: v.includeHumanReadable,
             };
         });
 

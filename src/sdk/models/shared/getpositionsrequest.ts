@@ -35,9 +35,7 @@ export namespace GetPositionsRequest$ {
             return {
                 fields: v.fields,
                 filters: v.filters,
-                ...(v.includeHumanReadable === undefined
-                    ? null
-                    : { includeHumanReadable: v.includeHumanReadable }),
+                includeHumanReadable: v.includeHumanReadable,
             };
         });
 

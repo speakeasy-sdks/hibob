@@ -69,8 +69,8 @@ export namespace GetTimeoffOuttodayRequest$ {
         })
         .transform((v) => {
             return {
-                ...(v.includeHourly === undefined ? null : { includeHourly: v.includeHourly }),
-                ...(v.includePrivate === undefined ? null : { includePrivate: v.includePrivate }),
+                includeHourly: v.includeHourly,
+                includePrivate: v.includePrivate,
                 ...(v.siteId === undefined ? null : { siteId: v.siteId }),
                 ...(v.today === undefined ? null : { today: v.today }),
             };
