@@ -33,8 +33,8 @@ async function run() {
   });
 
   const result = await sdk.metadata.deleteCompanyNamedListsListNameItemId({
-    itemId: "string",
-    listName: "string",
+    itemId: "<value>",
+    listName: "<value>",
   });
 
   // Handle the result
@@ -79,7 +79,7 @@ async function run() {
   });
 
   const result = await sdk.metadata.deleteCompanyPeopleFieldsFieldId({
-    fieldId: "string",
+    fieldId: "<value>",
   });
 
   // Handle the result
@@ -167,7 +167,7 @@ async function run() {
   });
 
   const result = await sdk.metadata.getCompanyNamedListsListName({
-    listName: "string",
+    listName: "<value>",
   });
 
   // Handle the result
@@ -338,7 +338,7 @@ async function run() {
   });
 
   const result = await sdk.metadata.getPeopleCustomTablesMetadataCustomTableId({
-    customTableId: "string",
+    customTableId: "<value>",
   });
 
   // Handle the result
@@ -384,9 +384,9 @@ async function run() {
 
   const result = await sdk.metadata.postCompanyNamedListsListName({
     newListItem: {
-      name: "string",
+      name: "<value>",
     },
-    listName: "string",
+    listName: "<value>",
   });
 
   // Handle the result
@@ -431,9 +431,9 @@ async function run() {
   });
 
   const result = await sdk.metadata.postCompanyPeopleFields({
-    category: "string",
-    name: "string",
-    type: "string",
+    category: "<value>",
+    name: "<value>",
+    type: "<value>",
   });
 
   // Handle the result
@@ -479,8 +479,8 @@ async function run() {
 
   const result = await sdk.metadata.putCompanyNamedListsListNameItemId({
     updateListItemRequest: {},
-    itemId: "string",
-    listName: "string",
+    itemId: "<value>",
+    listName: "<value>",
   });
 
   // Handle the result
@@ -526,7 +526,7 @@ async function run() {
 
   const result = await sdk.metadata.putCompanyPeopleFieldsFieldId({
     updateFieldRequest: {},
-    fieldId: "string",
+    fieldId: "<value>",
   });
 
   // Handle the result

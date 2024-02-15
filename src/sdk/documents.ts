@@ -22,6 +22,7 @@ export class Documents extends ClientSDK {
         this.options$ = options;
         void this.options$;
     }
+
     /**
      * Delete a specific document from the employee's confidential folder.
      */

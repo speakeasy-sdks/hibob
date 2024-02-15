@@ -35,7 +35,7 @@ async function run() {
     const result = await sdk.attendance.postAttendanceImportImportMethod({
         importAttendanceData: {
             dateTimeFormat: "yyyy-MM-dd hh:mm a",
-            idType: "string",
+            idType: "<value>",
             requests: [
                 {
                     clockIn: "2022-06-12T08:00",
@@ -251,7 +251,7 @@ async function run() {
         result = await sdk.attendance.postAttendanceImportImportMethod({
             importAttendanceData: {
                 dateTimeFormat: "yyyy-MM-dd hh:mm a",
-                idType: "string",
+                idType: "<value>",
                 requests: [
                     {
                         clockIn: "2022-06-12T08:00",
@@ -305,7 +305,7 @@ async function run() {
     const result = await sdk.attendance.postAttendanceImportImportMethod({
         importAttendanceData: {
             dateTimeFormat: "yyyy-MM-dd hh:mm a",
-            idType: "string",
+            idType: "<value>",
             requests: [
                 {
                     clockIn: "2022-06-12T08:00",
@@ -345,7 +345,7 @@ async function run() {
     const result = await sdk.attendance.postAttendanceImportImportMethod({
         importAttendanceData: {
             dateTimeFormat: "yyyy-MM-dd hh:mm a",
-            idType: "string",
+            idType: "<value>",
             requests: [
                 {
                     clockIn: "2022-06-12T08:00",
@@ -446,7 +446,7 @@ async function run() {
     const result = await sdk.attendance.postAttendanceImportImportMethod({
         importAttendanceData: {
             dateTimeFormat: "yyyy-MM-dd hh:mm a",
-            idType: "string",
+            idType: "<value>",
             requests: [
                 {
                     clockIn: "2022-06-12T08:00",
@@ -471,12 +471,11 @@ run();
 Some operations in this SDK require the security scheme to be specified at the request level. For example:
 ```typescript
 import { Hibob } from "hibob";
-import { GetMyAvatarSecurity } from "hibob/sdk/models/operations";
 
 async function run() {
     const sdk = new Hibob();
 
-    const operationSecurity: GetMyAvatarSecurity = {
+    const operationSecurity = {
         bearer: "<YOUR_API_KEY_HERE>",
     };
 
@@ -520,7 +519,7 @@ async function run() {
         requestBody: {
             file: await openAsBlob("./sample-file"),
         },
-        id: "<ID>",
+        id: "<id>",
     });
 
     // Handle the result

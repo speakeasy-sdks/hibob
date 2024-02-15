@@ -21,6 +21,7 @@ export class Tables extends ClientSDK {
         this.options$ = options;
         void this.options$;
     }
+
     /**
      * Deletes an employment entry from a given employee's employment history.
      */

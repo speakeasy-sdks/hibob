@@ -21,6 +21,7 @@ export class CustomTables extends ClientSDK {
         this.options$ = options;
         void this.options$;
     }
+
     /**
      * Delete custom table entry
      */

@@ -23,14 +23,14 @@ async function run() {
 
   const result = await sdk.objects.postObjectsPositionSearch({
     fields: [
-      "string",
+      "<value>",
     ],
     filters: [
       {
-        fieldId: "string",
-        operator: "string",
+        fieldId: "<value>",
+        operator: "<value>",
         values: [
-          "string",
+          "<value>",
         ],
       },
     ],

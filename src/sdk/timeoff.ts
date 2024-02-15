@@ -21,6 +21,7 @@ export class TimeOff extends ClientSDK {
         this.options$ = options;
         void this.options$;
     }
+
     /**
      * Cancel an existing timeoff request
      *

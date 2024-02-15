@@ -20,6 +20,7 @@ export class Onboarding extends ClientSDK {
         this.options$ = options;
         void this.options$;
     }
+
     /**
      * Get a summary of all onboarding wizards.
      *

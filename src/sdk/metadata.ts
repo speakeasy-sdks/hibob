@@ -22,6 +22,7 @@ export class Metadata extends ClientSDK {
         this.options$ = options;
         void this.options$;
     }
+
     /**
      * Delete an item from an existing list.
      */

@@ -25,9 +25,9 @@ async function run() {
   });
 
   const result = await sdk.customTables.deletePeopleCustomTablesEmployeeIdCustomTableIdEntryId({
-    customTableId: "string",
-    employeeId: "string",
-    entryId: "string",
+    customTableId: "<value>",
+    employeeId: "<value>",
+    entryId: "<value>",
   });
 
   // Handle the result
@@ -72,8 +72,8 @@ async function run() {
   });
 
   const result = await sdk.customTables.getPeopleCustomTablesEmployeeIdCustomTableId({
-    customTableId: "string",
-    employeeId: "string",
+    customTableId: "<value>",
+    employeeId: "<value>",
   });
 
   // Handle the result
@@ -119,8 +119,8 @@ async function run() {
 
   const result = await sdk.customTables.postPeopleCustomTablesEmployeeIdCustomTableId({
     requestBody: {},
-    customTableId: "string",
-    employeeId: "string",
+    customTableId: "<value>",
+    employeeId: "<value>",
   });
 
   // Handle the result
@@ -166,9 +166,9 @@ async function run() {
 
   const result = await sdk.customTables.putPeopleCustomTablesEmployeeIdCustomTableIdEntryId({
     requestBody: {},
-    customTableId: "string",
-    employeeId: "string",
-    entryId: "string",
+    customTableId: "<value>",
+    employeeId: "<value>",
+    entryId: "<value>",
   });
 
   // Handle the result

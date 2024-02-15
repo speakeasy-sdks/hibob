@@ -25,7 +25,7 @@ async function run() {
   const result = await sdk.attendance.postAttendanceImportImportMethod({
     importAttendanceData: {
       dateTimeFormat: "yyyy-MM-dd hh:mm a",
-      idType: "string",
+      idType: "<value>",
       requests: [
         {
           clockIn: "2022-06-12T08:00",

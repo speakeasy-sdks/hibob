@@ -35,7 +35,7 @@ async function run() {
   });
 
   const result = await sdk.timeOff.deleteTimeoffEmployeesIdRequestsRequestId({
-    id: "<ID>",
+    id: "<id>",
     requestId: 313155,
   });
 
@@ -83,8 +83,8 @@ async function run() {
 
   const result = await sdk.timeOff.getTimeoffEmployeesIdBalance({
     date: new RFCDate("2022-02-20"),
-    id: "<ID>",
-    policyType: "string",
+    id: "<id>",
+    policyType: "<value>",
   });
 
   // Handle the result
@@ -129,7 +129,7 @@ async function run() {
   });
 
   const result = await sdk.timeOff.getTimeoffEmployeesIdRequestsRequestId({
-    id: "<ID>",
+    id: "<id>",
     requestId: 662911,
   });
 
@@ -166,7 +166,6 @@ Returns the list of people that have a time off request today or on the specifie
 
 ```typescript
 import { Hibob } from "hibob";
-import { RFCDate } from "hibob/sdk/types";
 
 async function run() {
   const sdk = new Hibob({
@@ -219,7 +218,7 @@ async function run() {
   });
 
   const result = await sdk.timeOff.getTimeoffPolicies({
-    policyName: "string",
+    policyName: "<value>",
   });
 
   // Handle the result
@@ -264,7 +263,7 @@ async function run() {
   });
 
   const result = await sdk.timeOff.getTimeoffPoliciesNames({
-    policyTypeName: "string",
+    policyTypeName: "<value>",
   });
 
   // Handle the result
@@ -351,7 +350,7 @@ async function run() {
   });
 
   const result = await sdk.timeOff.getTimeoffPolicyTypesPolicyType({
-    policyType: "string",
+    policyType: "<value>",
   });
 
   // Handle the result
@@ -396,7 +395,7 @@ async function run() {
   });
 
   const result = await sdk.timeOff.getTimeoffPolicyTypesPolicyTypeReasonCodes({
-    policyType: "string",
+    policyType: "<value>",
   });
 
   // Handle the result
@@ -525,8 +524,6 @@ Create a balance adjustment for a given employee for a given effective date.<br 
 
 ```typescript
 import { Hibob } from "hibob";
-import { AdjustmentType } from "hibob/sdk/models/shared";
-import { RFCDate } from "hibob/sdk/types";
 
 async function run() {
   const sdk = new Hibob({
@@ -537,7 +534,7 @@ async function run() {
 
   const result = await sdk.timeOff.postTimeoffEmployeesIdAdjustments({
     adjustmentRequest: {},
-    id: "<ID>",
+    id: "<id>",
   });
 
   // Handle the result
@@ -573,12 +570,6 @@ Submits a new timeoff request.<br />
 
 ```typescript
 import { Hibob } from "hibob";
-import {
-  DayPortion,
-  EndDatePortion,
-  StartDatePortion,
-  SubmitTimeoffRequestRequestRangeType,
-} from "hibob/sdk/models/shared";
 import { RFCDate } from "hibob/sdk/types";
 
 async function run() {
@@ -590,10 +581,10 @@ async function run() {
 
   const result = await sdk.timeOff.postTimeoffEmployeesIdRequests({
     submitTimeoffRequest: {
-      policyType: "string",
+      policyType: "<value>",
       startDate: new RFCDate("2022-04-15"),
     },
-    id: "<ID>",
+    id: "<id>",
   });
 
   // Handle the result
@@ -640,10 +631,10 @@ async function run() {
   const result = await sdk.timeOff.postTimeoffPolicyTypesPolicyTypeReasonCodes({
     reasonCodesNames: {
       reasonCodes: [
-        "string",
+        "<value>",
       ],
     },
-    policyType: "string",
+    policyType: "<value>",
   });
 
   // Handle the result

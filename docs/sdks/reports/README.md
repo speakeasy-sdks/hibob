@@ -67,7 +67,7 @@ async function run() {
   });
 
   const result = await sdk.reports.getCompanyReportsDownloadReportName({
-    reportName: "string",
+    reportName: "<value>",
   });
 
   // Handle the result

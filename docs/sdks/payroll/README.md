@@ -36,7 +36,7 @@ async function run() {
 
   const result = await sdk.payroll.deletePeopleIdEquitiesEntryId({
     entryId: 258748,
-    id: "<ID>",
+    id: "<id>",
   });
 
   // Handle the result
@@ -82,7 +82,7 @@ async function run() {
 
   const result = await sdk.payroll.deletePeopleIdSalariesEntryId({
     entryId: 831741,
-    id: "<ID>",
+    id: "<id>",
   });
 
   // Handle the result
@@ -128,7 +128,7 @@ async function run() {
 
   const result = await sdk.payroll.deletePeopleIdTrainingEntryId({
     entryId: 375590,
-    id: "<ID>",
+    id: "<id>",
   });
 
   // Handle the result
@@ -174,7 +174,7 @@ async function run() {
 
   const result = await sdk.payroll.deletePeopleIdVariableEntryId({
     entryId: 318576,
-    id: "<ID>",
+    id: "<id>",
   });
 
   // Handle the result
@@ -262,7 +262,7 @@ async function run() {
   });
 
   const result = await sdk.payroll.getPeopleIdEquities({
-    id: "<ID>",
+    id: "<id>",
   });
 
   // Handle the result
@@ -307,7 +307,7 @@ async function run() {
   });
 
   const result = await sdk.payroll.getPeopleIdSalaries({
-    id: "<ID>",
+    id: "<id>",
   });
 
   // Handle the result
@@ -352,7 +352,7 @@ async function run() {
   });
 
   const result = await sdk.payroll.getPeopleIdTraining({
-    id: "<ID>",
+    id: "<id>",
   });
 
   // Handle the result
@@ -397,7 +397,7 @@ async function run() {
   });
 
   const result = await sdk.payroll.getPeopleIdVariable({
-    id: "<ID>",
+    id: "<id>",
   });
 
   // Handle the result
@@ -445,14 +445,14 @@ async function run() {
   const result = await sdk.payroll.postPeopleIdEquities({
     equityEntry: {
       effectiveDate: new RFCDate("2023-11-21"),
-      equityType: "string",
+      equityType: "<value>",
       exercisePrice: {
         currency: "Rial Omani",
         value: 954.25,
       },
       quantity: 5285.48,
     },
-    id: "<ID>",
+    id: "<id>",
   });
 
   // Handle the result
@@ -504,9 +504,9 @@ async function run() {
         value: 3657.11,
       },
       effectiveDate: new RFCDate("2022-03-10"),
-      payPeriod: "string",
+      payPeriod: "<value>",
     },
-    id: "<ID>",
+    id: "<id>",
   });
 
   // Handle the result
@@ -559,7 +559,7 @@ async function run() {
       },
       effectiveDate: new RFCDate("2023-07-06"),
     },
-    id: "<ID>",
+    id: "<id>",
   });
 
   // Handle the result
@@ -611,9 +611,9 @@ async function run() {
         value: 54.57,
       },
       effectiveDate: new RFCDate("2023-08-17"),
-      paymentPeriod: "string",
+      paymentPeriod: "<value>",
     },
-    id: "<ID>",
+    id: "<id>",
   });
 
   // Handle the result
@@ -661,7 +661,7 @@ async function run() {
   const result = await sdk.payroll.putPeopleIdEquitiesEntryId({
     equityEntry: {
       effectiveDate: new RFCDate("2024-01-18"),
-      equityType: "string",
+      equityType: "<value>",
       exercisePrice: {
         currency: "Seychelles Rupee",
         value: 5610.76,
@@ -669,7 +669,7 @@ async function run() {
       quantity: 3860.21,
     },
     entryId: 190967,
-    id: "<ID>",
+    id: "<id>",
   });
 
   // Handle the result

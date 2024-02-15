@@ -60,7 +60,7 @@ async function run() {
 
   const result = await sdk.people.deletePeopleIdEmploymentEntryId({
     entryId: 511526,
-    id: "<ID>",
+    id: "<id>",
   });
 
   // Handle the result
@@ -106,7 +106,7 @@ async function run() {
 
   const result = await sdk.people.deletePeopleIdEquitiesEntryId({
     entryId: 258748,
-    id: "<ID>",
+    id: "<id>",
   });
 
   // Handle the result
@@ -152,7 +152,7 @@ async function run() {
 
   const result = await sdk.people.deletePeopleIdSalariesEntryId({
     entryId: 831741,
-    id: "<ID>",
+    id: "<id>",
   });
 
   // Handle the result
@@ -198,7 +198,7 @@ async function run() {
 
   const result = await sdk.people.deletePeopleIdTrainingEntryId({
     entryId: 375590,
-    id: "<ID>",
+    id: "<id>",
   });
 
   // Handle the result
@@ -244,7 +244,7 @@ async function run() {
 
   const result = await sdk.people.deletePeopleIdVariableEntryId({
     entryId: 318576,
-    id: "<ID>",
+    id: "<id>",
   });
 
   // Handle the result
@@ -290,7 +290,7 @@ async function run() {
 
   const result = await sdk.people.deletePeopleIdWorkEntryId({
     entryId: 681162,
-    id: "<ID>",
+    id: "<id>",
   });
 
   // Handle the result
@@ -378,7 +378,7 @@ async function run() {
   });
 
   const result = await sdk.people.getAvatarsEmployeeId({
-    employeeId: "string",
+    employeeId: "<value>",
   });
 
   // Handle the result
@@ -414,12 +414,11 @@ Returns the avatar image URL of the logged-in user.<b>Supported user types:</b> 
 
 ```typescript
 import { Hibob } from "hibob";
-import { GetMyAvatarSecurity } from "hibob/sdk/models/operations";
 
 async function run() {
   const sdk = new Hibob();
 
-  const operationSecurity: GetMyAvatarSecurity = {
+  const operationSecurity = {
     bearer: "<YOUR_API_KEY_HERE>",
   };
   
@@ -515,9 +514,9 @@ async function run() {
 
   const result = await sdk.people.getPeopleIdentifier({
     fields: [
-      "string",
+      "<value>",
     ],
-    identifier: "string",
+    identifier: "<value>",
   });
 
   // Handle the result
@@ -562,7 +561,7 @@ async function run() {
   });
 
   const result = await sdk.people.getPeopleIdEmployment({
-    id: "<ID>",
+    id: "<id>",
   });
 
   // Handle the result
@@ -607,7 +606,7 @@ async function run() {
   });
 
   const result = await sdk.people.getPeopleIdEquities({
-    id: "<ID>",
+    id: "<id>",
   });
 
   // Handle the result
@@ -652,7 +651,7 @@ async function run() {
   });
 
   const result = await sdk.people.getPeopleIdLifecycle({
-    id: "<ID>",
+    id: "<id>",
   });
 
   // Handle the result
@@ -697,7 +696,7 @@ async function run() {
   });
 
   const result = await sdk.people.getPeopleIdSalaries({
-    id: "<ID>",
+    id: "<id>",
   });
 
   // Handle the result
@@ -742,7 +741,7 @@ async function run() {
   });
 
   const result = await sdk.people.getPeopleIdTraining({
-    id: "<ID>",
+    id: "<id>",
   });
 
   // Handle the result
@@ -787,7 +786,7 @@ async function run() {
   });
 
   const result = await sdk.people.getPeopleIdVariable({
-    id: "<ID>",
+    id: "<id>",
   });
 
   // Handle the result
@@ -832,7 +831,7 @@ async function run() {
   });
 
   const result = await sdk.people.getPeopleIdWork({
-    id: "<ID>",
+    id: "<id>",
   });
 
   // Handle the result
@@ -923,7 +922,7 @@ async function run() {
     invitationByWizard: {
       welcomeWizardId: 823551,
     },
-    employeeId: "string",
+    employeeId: "<value>",
   });
 
   // Handle the result
@@ -972,7 +971,7 @@ async function run() {
     startDateUpdate: {
       startDate: new RFCDate("2023-12-10"),
     },
-    employeeId: "string",
+    employeeId: "<value>",
   });
 
   // Handle the result
@@ -1029,7 +1028,7 @@ async function run() {
       terminationDate: new RFCDate("2025-09-23"),
       terminationReason: "Redundant",
     },
-    identifier: "string",
+    identifier: "<value>",
   });
 
   // Handle the result
@@ -1074,7 +1073,7 @@ async function run() {
   });
 
   const result = await sdk.people.postEmployeesIdentifierUninvite({
-    identifier: "string",
+    identifier: "<value>",
   });
 
   // Handle the result
@@ -1122,9 +1121,9 @@ async function run() {
   const result = await sdk.people.postPeople({
     email: "Lauryn20@hotmail.com",
     firstName: "Addison",
-    surname: "string",
+    surname: "<value>",
     work: {
-      site: "string",
+      site: "<value>",
       startDate: new RFCDate("2023-06-17"),
     },
   });
@@ -1244,7 +1243,7 @@ async function run() {
         "work.department",
       ],
     },
-    identifier: "string",
+    identifier: "<value>",
   });
 
   // Handle the result
@@ -1293,7 +1292,7 @@ async function run() {
     employmentEntry: {
       effectiveDate: new RFCDate("2022-12-06"),
     },
-    id: "<ID>",
+    id: "<id>",
   });
 
   // Handle the result
@@ -1341,14 +1340,14 @@ async function run() {
   const result = await sdk.people.postPeopleIdEquities({
     equityEntry: {
       effectiveDate: new RFCDate("2023-11-21"),
-      equityType: "string",
+      equityType: "<value>",
       exercisePrice: {
         currency: "Rial Omani",
         value: 954.25,
       },
       quantity: 5285.48,
     },
-    id: "<ID>",
+    id: "<id>",
   });
 
   // Handle the result
@@ -1400,9 +1399,9 @@ async function run() {
         value: 3657.11,
       },
       effectiveDate: new RFCDate("2022-03-10"),
-      payPeriod: "string",
+      payPeriod: "<value>",
     },
-    id: "<ID>",
+    id: "<id>",
   });
 
   // Handle the result
@@ -1455,7 +1454,7 @@ async function run() {
       },
       effectiveDate: new RFCDate("2023-07-06"),
     },
-    id: "<ID>",
+    id: "<id>",
   });
 
   // Handle the result
@@ -1507,9 +1506,9 @@ async function run() {
         value: 54.57,
       },
       effectiveDate: new RFCDate("2023-08-17"),
-      paymentPeriod: "string",
+      paymentPeriod: "<value>",
     },
-    id: "<ID>",
+    id: "<id>",
   });
 
   // Handle the result
@@ -1559,10 +1558,10 @@ async function run() {
       customColumns: {},
       effectiveDate: new RFCDate("2024-05-24"),
       reportsTo: {
-        id: "<ID>",
+        id: "<id>",
       },
     },
-    id: "<ID>",
+    id: "<id>",
   });
 
   // Handle the result
@@ -1610,7 +1609,7 @@ async function run() {
     uploadAvatar: {
       url: "https://agitated-motor.net",
     },
-    employeeId: "string",
+    employeeId: "<value>",
   });
 
   // Handle the result
@@ -1656,7 +1655,7 @@ async function run() {
 
   const result = await sdk.people.putPeopleIdentifier({
     requestBody: {},
-    identifier: "string",
+    identifier: "<value>",
   });
 
   // Handle the result
@@ -1702,7 +1701,7 @@ async function run() {
 
   const result = await sdk.people.putPeopleIdEmail({
     changeEmail: {},
-    id: "<ID>",
+    id: "<id>",
   });
 
   // Handle the result
@@ -1752,7 +1751,7 @@ async function run() {
       effectiveDate: new RFCDate("2023-01-16"),
     },
     entryId: 799673,
-    id: "<ID>",
+    id: "<id>",
   });
 
   // Handle the result
@@ -1800,7 +1799,7 @@ async function run() {
   const result = await sdk.people.putPeopleIdEquitiesEntryId({
     equityEntry: {
       effectiveDate: new RFCDate("2024-01-18"),
-      equityType: "string",
+      equityType: "<value>",
       exercisePrice: {
         currency: "Seychelles Rupee",
         value: 5610.76,
@@ -1808,7 +1807,7 @@ async function run() {
       quantity: 3860.21,
     },
     entryId: 190967,
-    id: "<ID>",
+    id: "<id>",
   });
 
   // Handle the result
@@ -1858,11 +1857,11 @@ async function run() {
       customColumns: {},
       effectiveDate: new RFCDate("2022-07-01"),
       reportsTo: {
-        id: "<ID>",
+        id: "<id>",
       },
     },
     entryId: 410628,
-    id: "<ID>",
+    id: "<id>",
   });
 
   // Handle the result

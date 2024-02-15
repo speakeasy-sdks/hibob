@@ -21,6 +21,7 @@ export class Reports extends ClientSDK {
         this.options$ = options;
         void this.options$;
     }
+
     /**
      * Read company reports
      *

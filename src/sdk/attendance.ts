@@ -21,6 +21,7 @@ export class Attendance extends ClientSDK {
         this.options$ = options;
         void this.options$;
     }
+
     /**
      * Import attendance data
      */

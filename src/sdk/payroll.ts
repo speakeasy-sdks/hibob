@@ -21,6 +21,7 @@ export class Payroll extends ClientSDK {
         this.options$ = options;
         void this.options$;
     }
+
     /**
      * Deletes an equity grant for an employee.
      */

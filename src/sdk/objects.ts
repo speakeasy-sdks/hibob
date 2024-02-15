@@ -22,6 +22,7 @@ export class Objects extends ClientSDK {
         this.options$ = options;
         void this.options$;
     }
+
     /**
      * Read company positions
      *

@@ -16,12 +16,11 @@
 
 ```typescript
 import { Hibob } from "hibob";
-import { GetMyTasksSecurity } from "hibob/sdk/models/operations";
 
 async function run() {
   const sdk = new Hibob();
 
-  const operationSecurity: GetMyTasksSecurity = {
+  const operationSecurity = {
     bearer: "<YOUR_API_KEY_HERE>",
   };
   
@@ -102,7 +101,6 @@ Read tasks of a specific employee
 
 ```typescript
 import { Hibob } from "hibob";
-import { TaskStatus } from "hibob/sdk/models/operations";
 
 async function run() {
   const sdk = new Hibob({
@@ -112,7 +110,7 @@ async function run() {
   });
 
   const result = await sdk.tasks.getTasksPeopleId({
-    id: "string",
+    id: "<value>",
   });
 
   // Handle the result
@@ -157,7 +155,7 @@ async function run() {
   });
 
   const result = await sdk.tasks.postTasksTaskIdComplete({
-    taskId: "string",
+    taskId: "<value>",
   });
 
   // Handle the result

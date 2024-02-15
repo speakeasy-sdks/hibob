@@ -28,8 +28,8 @@ async function run() {
   });
 
   const result = await sdk.documents.deleteDocsPeopleIdConfidentialDocId({
-    docId: "string",
-    id: "<ID>",
+    docId: "<value>",
+    id: "<id>",
   });
 
   // Handle the result
@@ -74,8 +74,8 @@ async function run() {
   });
 
   const result = await sdk.documents.deleteDocsPeopleIdSharedDocId({
-    docId: "string",
-    id: "<ID>",
+    docId: "<value>",
+    id: "<id>",
   });
 
   // Handle the result
@@ -120,7 +120,7 @@ async function run() {
   });
 
   const result = await sdk.documents.getDocsPeopleId({
-    id: "<ID>",
+    id: "<id>",
   });
 
   // Handle the result
@@ -167,10 +167,10 @@ async function run() {
   const result = await sdk.documents.postDocsPeopleIdConfidential({
     addDocument: {
       tags: [
-        "string",
+        "<value>",
       ],
     },
-    id: "<ID>",
+    id: "<id>",
   });
 
   // Handle the result
@@ -219,7 +219,7 @@ async function run() {
     requestBody: {
       file: await openAsBlob("./sample-file"),
     },
-    id: "<ID>",
+    id: "<id>",
   });
 
   // Handle the result
@@ -266,10 +266,10 @@ async function run() {
   const result = await sdk.documents.postDocsPeopleIdShared({
     addDocument: {
       tags: [
-        "string",
+        "<value>",
       ],
     },
-    id: "<ID>",
+    id: "<id>",
   });
 
   // Handle the result
@@ -318,7 +318,7 @@ async function run() {
     requestBody: {
       file: await openAsBlob("./sample-file"),
     },
-    id: "<ID>",
+    id: "<id>",
   });
 
   // Handle the result

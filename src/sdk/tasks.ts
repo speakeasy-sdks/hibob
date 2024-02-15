@@ -21,6 +21,7 @@ export class Tasks extends ClientSDK {
         this.options$ = options;
         void this.options$;
     }
+
     /**
      * Read my tasks
      *
