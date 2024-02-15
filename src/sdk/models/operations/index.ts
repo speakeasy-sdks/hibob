@@ -78,6 +78,7 @@ export * from "./postpeopleidwork";
 export * from "./postpeoplesearch";
 export * from "./posttaskstaskidcomplete";
 export * from "./posttimeoffemployeesidadjustments";
+export * from "./posttimeoffemployeesiddiffhoursrequests";
 export * from "./posttimeoffemployeesidrequests";
 export * from "./posttimeoffpolicytypespolicytypereasoncodes";
 export * from "./putavatarsemployeeid";

@@ -15,6 +15,7 @@
 * [getTimeoffRequestsChanges](#gettimeoffrequestschanges) - Get all new/deleted time off requests since the specified date.
 * [getTimeoffWhosout](#gettimeoffwhosout) - Read a list of who's out of the office.
 * [postTimeoffEmployeesIdAdjustments](#posttimeoffemployeesidadjustments) - Create a balance adjustment.
+* [postTimeoffEmployeesIdDiffHoursRequests](#posttimeoffemployeesiddiffhoursrequests) - Submit a new time off request of different hours per day.
 * [postTimeoffEmployeesIdRequests](#posttimeoffemployeesidrequests) - Submit a new time off request.
 * [postTimeoffPolicyTypesPolicyTypeReasonCodes](#posttimeoffpolicytypespolicytypereasoncodes) - Add a list of reason codes for a given policy type.
 
@@ -556,6 +557,82 @@ run();
 ### Response
 
 **Promise<[operations.PostTimeoffEmployeesIdAdjustmentsResponse](../../sdk/models/operations/posttimeoffemployeesidadjustmentsresponse.md)>**
+### Errors
+
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4xx-5xx         | */*             |
+
+## postTimeoffEmployeesIdDiffHoursRequests
+
+Submits a new timeoff request of different hours per day.<br /><b>Supported user types:</b> Employee, Service.
+
+### Example Usage
+
+```typescript
+import { Hibob } from "hibob";
+import { RFCDate } from "hibob/sdk/types";
+
+async function run() {
+  const sdk = new Hibob();
+
+  const operationSecurity = {
+    basic: {
+      password: "<YOUR_PASSWORD_HERE>",
+      username: "<YOUR_USERNAME_HERE>",
+    },
+  };
+  
+  const result = await sdk.timeOff.postTimeoffEmployeesIdDiffHoursRequests({
+    submitTimeoffRequestDiffHours: {
+      approver: "3452152476387906847",
+      description: "Vacation",
+      durations: [
+        {
+          date: new RFCDate("2024-01-03"),
+          hours: 0,
+          minutes: 15,
+        },
+        {
+          date: new RFCDate("2024-01-04"),
+          hours: 0,
+          minutes: 0,
+        },
+        {
+          date: new RFCDate("2024-01-05"),
+          hours: 2,
+          minutes: 45,
+        },
+      ],
+      endDate: new RFCDate("2024-01-05"),
+      policyType: "Holiday",
+      reasonCode: 3000,
+      skipManagerApproval: false,
+      startDate: new RFCDate("2024-01-03"),
+    },
+    id: "<id>",
+  }, operationSecurity);
+
+  // Handle the result
+  console.log(result)
+}
+
+run();
+```
+
+### Parameters
+
+| Parameter                                                                                                                                                                      | Type                                                                                                                                                                           | Required                                                                                                                                                                       | Description                                                                                                                                                                    |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                                                                                                      | [operations.PostTimeoffEmployeesIdDiffHoursRequestsRequest](../../sdk/models/operations/posttimeoffemployeesiddiffhoursrequestsrequest.md)                                     | :heavy_check_mark:                                                                                                                                                             | The request object to use for the request.                                                                                                                                     |
+| `security`                                                                                                                                                                     | [operations.PostTimeoffEmployeesIdDiffHoursRequestsSecurity](../../sdk/models/operations/posttimeoffemployeesiddiffhoursrequestssecurity.md)                                   | :heavy_check_mark:                                                                                                                                                             | The security requirements to use for the request.                                                                                                                              |
+| `options`                                                                                                                                                                      | RequestOptions                                                                                                                                                                 | :heavy_minus_sign:                                                                                                                                                             | Used to set various options for making HTTP requests.                                                                                                                          |
+| `options.fetchOptions`                                                                                                                                                         | [RequestInit](https://developer.mozilla.org/en-US/docs/Web/API/Request/Request#options)                                                                                        | :heavy_minus_sign:                                                                                                                                                             | Options that are passed to the underlying HTTP request. This can be used to inject extra headers for examples. All `Request` options, except `method` and `body`, are allowed. |
+
+
+### Response
+
+**Promise<[operations.PostTimeoffEmployeesIdDiffHoursRequestsResponse](../../sdk/models/operations/posttimeoffemployeesiddiffhoursrequestsresponse.md)>**
 ### Errors
 
 | Error Object    | Status Code     | Content Type    |

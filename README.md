@@ -214,6 +214,7 @@ run();
 * [getTimeoffRequestsChanges](docs/sdks/timeoff/README.md#gettimeoffrequestschanges) - Get all new/deleted time off requests since the specified date.
 * [getTimeoffWhosout](docs/sdks/timeoff/README.md#gettimeoffwhosout) - Read a list of who's out of the office.
 * [postTimeoffEmployeesIdAdjustments](docs/sdks/timeoff/README.md#posttimeoffemployeesidadjustments) - Create a balance adjustment.
+* [postTimeoffEmployeesIdDiffHoursRequests](docs/sdks/timeoff/README.md#posttimeoffemployeesiddiffhoursrequests) - Submit a new time off request of different hours per day.
 * [postTimeoffEmployeesIdRequests](docs/sdks/timeoff/README.md#posttimeoffemployeesidrequests) - Submit a new time off request.
 * [postTimeoffPolicyTypesPolicyTypeReasonCodes](docs/sdks/timeoff/README.md#posttimeoffpolicytypespolicytypereasoncodes) - Add a list of reason codes for a given policy type.
 <!-- End Available Resources and Operations [operations] -->

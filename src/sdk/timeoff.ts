@@ -865,6 +865,71 @@ export class TimeOff extends ClientSDK {
     }
 
     /**
+     * Submit a new time off request of different hours per day.
+     *
+     * @remarks
+     * Submits a new timeoff request of different hours per day.<br /><b>Supported user types:</b> Employee, Service.
+     */
+    async postTimeoffEmployeesIdDiffHoursRequests(
+        input: operations.PostTimeoffEmployeesIdDiffHoursRequestsRequest,
+        security: operations.PostTimeoffEmployeesIdDiffHoursRequestsSecurity,
+        options?: RequestOptions
+    ): Promise<operations.PostTimeoffEmployeesIdDiffHoursRequestsResponse> {
+        const headers$ = new Headers();
+        headers$.set("user-agent", SDK_METADATA.userAgent);
+        headers$.set("Content-Type", "application/json");
+        headers$.set("Accept", "*/*");
+
+        const payload$ =
+            operations.PostTimeoffEmployeesIdDiffHoursRequestsRequest$.outboundSchema.parse(input);
+
+        const body$ = enc$.encodeJSON("body", payload$.SubmitTimeoffRequestDiffHours, {
+            explode: true,
+        });
+
+        const pathParams$ = {
+            id: enc$.encodeSimple("id", payload$.id, { explode: false, charEncoding: "percent" }),
+        };
+
+        const path$ = this.templateURLComponent("/timeoff/employees/{id}/diffHours/requests")(
+            pathParams$
+        );
+
+        const securitySettings$ = this.resolveSecurity(
+            [{ value: security?.basic, type: "http:basic" }],
+            [{ value: security?.bearer, fieldName: "Authorization", type: "apiKey:header" }]
+        );
+
+        const response = await this.fetch$(
+            {
+                security: securitySettings$,
+                method: "POST",
+                path: path$,
+                headers: headers$,
+                body: body$,
+            },
+            options
+        );
+
+        const responseFields$ = {
+            ContentType: response.headers.get("content-type") ?? "application/octet-stream",
+            StatusCode: response.status,
+            RawResponse: response,
+        };
+
+        if (this.matchStatusCode(response, 200)) {
+            // fallthrough
+        } else {
+            const responseBody = await response.text();
+            throw new errors.SDKError("Unexpected API response", response, responseBody);
+        }
+
+        return operations.PostTimeoffEmployeesIdDiffHoursRequestsResponse$.inboundSchema.parse(
+            responseFields$
+        );
+    }
+
+    /**
      * Submit a new time off request.
      *
      * @remarks

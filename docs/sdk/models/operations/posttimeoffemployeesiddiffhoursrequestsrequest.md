@@ -1,0 +1,9 @@
+# PostTimeoffEmployeesIdDiffHoursRequestsRequest
+
+
+## Fields
+
+| Field                                                                                               | Type                                                                                                | Required                                                                                            | Description                                                                                         |
+| --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- |
+| `submitTimeoffRequestDiffHours`                                                                     | [shared.SubmitTimeoffRequestDiffHours](../../../sdk/models/shared/submittimeoffrequestdiffhours.md) | :heavy_check_mark:                                                                                  | N/A                                                                                                 |
+| `id`                                                                                                | *string*                                                                                            | :heavy_check_mark:                                                                                  | Employee ID.                                                                                        |

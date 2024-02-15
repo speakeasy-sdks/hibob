@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: cfede491-df0f-4c5d-b64e-31715f9d4209
 management:
-  docChecksum: cd60246590001fcf121e718267232b2a
+  docChecksum: 590288aa93e9760cebbad2019f0a99af
   docVersion: 1.0.0
   speakeasyVersion: internal
   generationVersion: 2.258.2
-  releaseVersion: 4.0.3
-  configChecksum: 3c878ab384a2482b9e656f3f6bb84a0e
+  releaseVersion: 4.0.4
+  configChecksum: 89c77f5e4265c8c5bf1bc171aa412fe2
   repoURL: https://github.com/speakeasy-sdks/hibob.git
   repoSubDirectory: .
   installationURL: https://github.com/speakeasy-sdks/hibob
@@ -143,6 +143,7 @@ generatedFiles:
   - src/sdk/models/operations/gettimeoffrequestschanges.ts
   - src/sdk/models/operations/gettimeoffwhosout.ts
   - src/sdk/models/operations/posttimeoffemployeesidadjustments.ts
+  - src/sdk/models/operations/posttimeoffemployeesiddiffhoursrequests.ts
   - src/sdk/models/operations/posttimeoffemployeesidrequests.ts
   - src/sdk/models/operations/posttimeoffpolicytypespolicytypereasoncodes.ts
   - src/sdk/models/shared/importattendanceresponse.ts
@@ -224,6 +225,8 @@ generatedFiles:
   - src/sdk/models/shared/requests.ts
   - src/sdk/models/shared/request.ts
   - src/sdk/models/shared/adjustmentrequest.ts
+  - src/sdk/models/shared/submittimeoffrequestdiffhours.ts
+  - src/sdk/models/shared/schemebasic.ts
   - src/sdk/models/shared/submittimeoffrequest.ts
   - src/sdk/models/shared/reasoncodesnames.ts
   - src/sdk/models/shared/security.ts
@@ -401,6 +404,9 @@ generatedFiles:
   - docs/sdk/models/operations/gettimeoffwhosoutresponse.md
   - docs/sdk/models/operations/posttimeoffemployeesidadjustmentsrequest.md
   - docs/sdk/models/operations/posttimeoffemployeesidadjustmentsresponse.md
+  - docs/sdk/models/operations/posttimeoffemployeesiddiffhoursrequestssecurity.md
+  - docs/sdk/models/operations/posttimeoffemployeesiddiffhoursrequestsrequest.md
+  - docs/sdk/models/operations/posttimeoffemployeesiddiffhoursrequestsresponse.md
   - docs/sdk/models/operations/posttimeoffemployeesidrequestsrequest.md
   - docs/sdk/models/operations/posttimeoffemployeesidrequestsresponse.md
   - docs/sdk/models/operations/posttimeoffpolicytypespolicytypereasoncodesrequest.md
@@ -508,6 +514,9 @@ generatedFiles:
   - docs/sdk/models/shared/request.md
   - docs/sdk/models/shared/adjustmenttype.md
   - docs/sdk/models/shared/adjustmentrequest.md
+  - docs/sdk/models/shared/durations.md
+  - docs/sdk/models/shared/submittimeoffrequestdiffhours.md
+  - docs/sdk/models/shared/schemebasic.md
   - docs/sdk/models/shared/dayportion.md
   - docs/sdk/models/shared/enddateportion.md
   - docs/sdk/models/shared/submittimeoffrequestrequestrangetype.md
