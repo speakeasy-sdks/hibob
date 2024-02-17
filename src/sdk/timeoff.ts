@@ -49,7 +49,6 @@ export class TimeOff extends ClientSDK {
                 charEncoding: "percent",
             }),
         };
-
         const path$ = this.templateURLComponent("/timeoff/employees/{id}/requests/{requestId}")(
             pathParams$
         );
@@ -110,7 +109,6 @@ export class TimeOff extends ClientSDK {
         const pathParams$ = {
             id: enc$.encodeSimple("id", payload$.id, { explode: false, charEncoding: "percent" }),
         };
-
         const path$ = this.templateURLComponent("/timeoff/employees/{id}/balance")(pathParams$);
 
         const query$ = [
@@ -192,7 +190,6 @@ export class TimeOff extends ClientSDK {
                 charEncoding: "percent",
             }),
         };
-
         const path$ = this.templateURLComponent("/timeoff/employees/{id}/requests/{requestId}")(
             pathParams$
         );
@@ -528,7 +525,6 @@ export class TimeOff extends ClientSDK {
                 charEncoding: "percent",
             }),
         };
-
         const path$ = this.templateURLComponent("/timeoff/policy-types/{policyType}")(pathParams$);
 
         const security$ =
@@ -599,7 +595,6 @@ export class TimeOff extends ClientSDK {
                 charEncoding: "percent",
             }),
         };
-
         const path$ = this.templateURLComponent("/timeoff/policy-types/{policyType}/reason-codes")(
             pathParams$
         );
@@ -818,7 +813,6 @@ export class TimeOff extends ClientSDK {
         const pathParams$ = {
             id: enc$.encodeSimple("id", payload$.id, { explode: false, charEncoding: "percent" }),
         };
-
         const path$ = this.templateURLComponent("/timeoff/employees/{id}/adjustments")(pathParams$);
 
         const security$ =
@@ -890,7 +884,6 @@ export class TimeOff extends ClientSDK {
         const pathParams$ = {
             id: enc$.encodeSimple("id", payload$.id, { explode: false, charEncoding: "percent" }),
         };
-
         const path$ = this.templateURLComponent("/timeoff/employees/{id}/diffHours/requests")(
             pathParams$
         );
@@ -952,7 +945,6 @@ export class TimeOff extends ClientSDK {
         const pathParams$ = {
             id: enc$.encodeSimple("id", payload$.id, { explode: false, charEncoding: "percent" }),
         };
-
         const path$ = this.templateURLComponent("/timeoff/employees/{id}/requests")(pathParams$);
 
         const security$ =
@@ -1018,7 +1010,6 @@ export class TimeOff extends ClientSDK {
                 charEncoding: "percent",
             }),
         };
-
         const path$ = this.templateURLComponent("/timeoff/policy-types/{policyType}/reason-codes")(
             pathParams$
         );

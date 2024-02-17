@@ -4,7 +4,7 @@ management:
   docChecksum: 590288aa93e9760cebbad2019f0a99af
   docVersion: 1.0.0
   speakeasyVersion: internal
-  generationVersion: 2.258.2
+  generationVersion: 2.262.2
   releaseVersion: 4.0.4
   configChecksum: 89c77f5e4265c8c5bf1bc171aa412fe2
   repoURL: https://github.com/speakeasy-sdks/hibob.git

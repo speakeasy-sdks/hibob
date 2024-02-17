@@ -45,7 +45,6 @@ export class Attendance extends ClientSDK {
                 charEncoding: "percent",
             }),
         };
-
         const path$ = this.templateURLComponent("/attendance/import/{importMethod}")(pathParams$);
 
         const security$ =

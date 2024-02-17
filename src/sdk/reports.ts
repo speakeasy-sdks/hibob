@@ -98,7 +98,6 @@ export class Reports extends ClientSDK {
                 charEncoding: "percent",
             }),
         };
-
         const path$ = this.templateURLComponent("/company/reports/download/{reportName}")(
             pathParams$
         );
@@ -178,7 +177,6 @@ export class Reports extends ClientSDK {
                 charEncoding: "percent",
             }),
         };
-
         const path$ = this.templateURLComponent("/company/reports/{reportId}/download")(
             pathParams$
         );
@@ -264,7 +262,6 @@ export class Reports extends ClientSDK {
                 charEncoding: "percent",
             }),
         };
-
         const path$ = this.templateURLComponent("/company/reports/{reportId}/download-async")(
             pathParams$
         );

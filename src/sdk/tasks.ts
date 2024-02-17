@@ -123,7 +123,6 @@ export class Tasks extends ClientSDK {
         const pathParams$ = {
             id: enc$.encodeSimple("id", payload$.id, { explode: false, charEncoding: "percent" }),
         };
-
         const path$ = this.templateURLComponent("/tasks/people/{id}")(pathParams$);
 
         const query$ = [
@@ -199,7 +198,6 @@ export class Tasks extends ClientSDK {
                 charEncoding: "percent",
             }),
         };
-
         const path$ = this.templateURLComponent("/tasks/{taskId}/complete")(pathParams$);
 
         const security$ =

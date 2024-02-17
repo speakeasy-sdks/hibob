@@ -45,7 +45,6 @@ export class People extends ClientSDK {
             }),
             id: enc$.encodeSimple("id", payload$.id, { explode: false, charEncoding: "percent" }),
         };
-
         const path$ = this.templateURLComponent("/people/{id}/employment/{entry_id}")(pathParams$);
 
         const security$ =
@@ -105,7 +104,6 @@ export class People extends ClientSDK {
             }),
             id: enc$.encodeSimple("id", payload$.id, { explode: false, charEncoding: "percent" }),
         };
-
         const path$ = this.templateURLComponent("/people/{id}/equities/{entry_id}")(pathParams$);
 
         const security$ =
@@ -165,7 +163,6 @@ export class People extends ClientSDK {
             }),
             id: enc$.encodeSimple("id", payload$.id, { explode: false, charEncoding: "percent" }),
         };
-
         const path$ = this.templateURLComponent("/people/{id}/salaries/{entry_id}")(pathParams$);
 
         const security$ =
@@ -225,7 +222,6 @@ export class People extends ClientSDK {
             }),
             id: enc$.encodeSimple("id", payload$.id, { explode: false, charEncoding: "percent" }),
         };
-
         const path$ = this.templateURLComponent("/people/{id}/training/{entry_id}")(pathParams$);
 
         const security$ =
@@ -285,7 +281,6 @@ export class People extends ClientSDK {
             }),
             id: enc$.encodeSimple("id", payload$.id, { explode: false, charEncoding: "percent" }),
         };
-
         const path$ = this.templateURLComponent("/people/{id}/variable/{entry_id}")(pathParams$);
 
         const security$ =
@@ -344,7 +339,6 @@ export class People extends ClientSDK {
             }),
             id: enc$.encodeSimple("id", payload$.id, { explode: false, charEncoding: "percent" }),
         };
-
         const path$ = this.templateURLComponent("/people/{id}/work/{entry_id}")(pathParams$);
 
         const security$ =
@@ -462,7 +456,6 @@ export class People extends ClientSDK {
                 charEncoding: "percent",
             }),
         };
-
         const path$ = this.templateURLComponent("/avatars/{employeeId}")(pathParams$);
 
         const security$ =
@@ -646,7 +639,6 @@ export class People extends ClientSDK {
                 charEncoding: "percent",
             }),
         };
-
         const path$ = this.templateURLComponent("/people/{identifier}")(pathParams$);
 
         const query$ = [
@@ -727,7 +719,6 @@ export class People extends ClientSDK {
         const pathParams$ = {
             id: enc$.encodeSimple("id", payload$.id, { explode: false, charEncoding: "percent" }),
         };
-
         const path$ = this.templateURLComponent("/people/{id}/employment")(pathParams$);
 
         const security$ =
@@ -786,7 +777,6 @@ export class People extends ClientSDK {
         const pathParams$ = {
             id: enc$.encodeSimple("id", payload$.id, { explode: false, charEncoding: "percent" }),
         };
-
         const path$ = this.templateURLComponent("/people/{id}/equities")(pathParams$);
 
         const security$ =
@@ -845,7 +835,6 @@ export class People extends ClientSDK {
         const pathParams$ = {
             id: enc$.encodeSimple("id", payload$.id, { explode: false, charEncoding: "percent" }),
         };
-
         const path$ = this.templateURLComponent("/people/{id}/lifecycle")(pathParams$);
 
         const security$ =
@@ -904,7 +893,6 @@ export class People extends ClientSDK {
         const pathParams$ = {
             id: enc$.encodeSimple("id", payload$.id, { explode: false, charEncoding: "percent" }),
         };
-
         const path$ = this.templateURLComponent("/people/{id}/salaries")(pathParams$);
 
         const security$ =
@@ -963,7 +951,6 @@ export class People extends ClientSDK {
         const pathParams$ = {
             id: enc$.encodeSimple("id", payload$.id, { explode: false, charEncoding: "percent" }),
         };
-
         const path$ = this.templateURLComponent("/people/{id}/training")(pathParams$);
 
         const security$ =
@@ -1022,7 +1009,6 @@ export class People extends ClientSDK {
         const pathParams$ = {
             id: enc$.encodeSimple("id", payload$.id, { explode: false, charEncoding: "percent" }),
         };
-
         const path$ = this.templateURLComponent("/people/{id}/variable")(pathParams$);
 
         const security$ =
@@ -1081,7 +1067,6 @@ export class People extends ClientSDK {
         const pathParams$ = {
             id: enc$.encodeSimple("id", payload$.id, { explode: false, charEncoding: "percent" }),
         };
-
         const path$ = this.templateURLComponent("/people/{id}/work")(pathParams$);
 
         const security$ =
@@ -1212,7 +1197,6 @@ export class People extends ClientSDK {
                 charEncoding: "percent",
             }),
         };
-
         const path$ = this.templateURLComponent("/employees/{employeeId}/invitations")(pathParams$);
 
         const security$ =
@@ -1281,7 +1265,6 @@ export class People extends ClientSDK {
                 charEncoding: "percent",
             }),
         };
-
         const path$ = this.templateURLComponent("/employees/{employeeId}/start-date")(pathParams$);
 
         const security$ =
@@ -1354,7 +1337,6 @@ export class People extends ClientSDK {
                 charEncoding: "percent",
             }),
         };
-
         const path$ = this.templateURLComponent("/employees/{identifier}/terminate")(pathParams$);
 
         const security$ =
@@ -1413,7 +1395,6 @@ export class People extends ClientSDK {
                 charEncoding: "percent",
             }),
         };
-
         const path$ = this.templateURLComponent("/employees/{identifier}/uninvite")(pathParams$);
 
         const security$ =
@@ -1604,7 +1585,6 @@ export class People extends ClientSDK {
                 charEncoding: "percent",
             }),
         };
-
         const path$ = this.templateURLComponent("/people/{identifier}")(pathParams$);
 
         const security$ =
@@ -1672,7 +1652,6 @@ export class People extends ClientSDK {
         const pathParams$ = {
             id: enc$.encodeSimple("id", payload$.id, { explode: false, charEncoding: "percent" }),
         };
-
         const path$ = this.templateURLComponent("/people/{id}/employment")(pathParams$);
 
         const security$ =
@@ -1730,7 +1709,6 @@ export class People extends ClientSDK {
         const pathParams$ = {
             id: enc$.encodeSimple("id", payload$.id, { explode: false, charEncoding: "percent" }),
         };
-
         const path$ = this.templateURLComponent("/people/{id}/equities")(pathParams$);
 
         const security$ =
@@ -1788,7 +1766,6 @@ export class People extends ClientSDK {
         const pathParams$ = {
             id: enc$.encodeSimple("id", payload$.id, { explode: false, charEncoding: "percent" }),
         };
-
         const path$ = this.templateURLComponent("/people/{id}/salaries")(pathParams$);
 
         const security$ =
@@ -1846,7 +1823,6 @@ export class People extends ClientSDK {
         const pathParams$ = {
             id: enc$.encodeSimple("id", payload$.id, { explode: false, charEncoding: "percent" }),
         };
-
         const path$ = this.templateURLComponent("/people/{id}/training")(pathParams$);
 
         const security$ =
@@ -1904,7 +1880,6 @@ export class People extends ClientSDK {
         const pathParams$ = {
             id: enc$.encodeSimple("id", payload$.id, { explode: false, charEncoding: "percent" }),
         };
-
         const path$ = this.templateURLComponent("/people/{id}/variable")(pathParams$);
 
         const security$ =
@@ -1962,7 +1937,6 @@ export class People extends ClientSDK {
         const pathParams$ = {
             id: enc$.encodeSimple("id", payload$.id, { explode: false, charEncoding: "percent" }),
         };
-
         const path$ = this.templateURLComponent("/people/{id}/work")(pathParams$);
 
         const security$ =
@@ -2023,7 +1997,6 @@ export class People extends ClientSDK {
                 charEncoding: "percent",
             }),
         };
-
         const path$ = this.templateURLComponent("/avatars/{employeeId}")(pathParams$);
 
         const security$ =
@@ -2084,7 +2057,6 @@ export class People extends ClientSDK {
                 charEncoding: "percent",
             }),
         };
-
         const path$ = this.templateURLComponent("/people/{identifier}")(pathParams$);
 
         const security$ =
@@ -2142,7 +2114,6 @@ export class People extends ClientSDK {
         const pathParams$ = {
             id: enc$.encodeSimple("id", payload$.id, { explode: false, charEncoding: "percent" }),
         };
-
         const path$ = this.templateURLComponent("/people/{id}/email")(pathParams$);
 
         const security$ =
@@ -2205,7 +2176,6 @@ export class People extends ClientSDK {
             }),
             id: enc$.encodeSimple("id", payload$.id, { explode: false, charEncoding: "percent" }),
         };
-
         const path$ = this.templateURLComponent("/people/{id}/employment/{entry_id}")(pathParams$);
 
         const security$ =
@@ -2269,7 +2239,6 @@ export class People extends ClientSDK {
             }),
             id: enc$.encodeSimple("id", payload$.id, { explode: false, charEncoding: "percent" }),
         };
-
         const path$ = this.templateURLComponent("/people/{id}/equities/{entry_id}")(pathParams$);
 
         const security$ =
@@ -2331,7 +2300,6 @@ export class People extends ClientSDK {
             }),
             id: enc$.encodeSimple("id", payload$.id, { explode: false, charEncoding: "percent" }),
         };
-
         const path$ = this.templateURLComponent("/people/{id}/work/{entry_id}")(pathParams$);
 
         const security$ =

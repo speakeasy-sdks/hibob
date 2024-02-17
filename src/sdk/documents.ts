@@ -45,7 +45,6 @@ export class Documents extends ClientSDK {
             }),
             id: enc$.encodeSimple("id", payload$.id, { explode: false, charEncoding: "percent" }),
         };
-
         const path$ = this.templateURLComponent("/docs/people/{id}/confidential/{docId}")(
             pathParams$
         );
@@ -115,7 +114,6 @@ export class Documents extends ClientSDK {
             }),
             id: enc$.encodeSimple("id", payload$.id, { explode: false, charEncoding: "percent" }),
         };
-
         const path$ = this.templateURLComponent("/docs/people/{id}/shared/{docId}")(pathParams$);
 
         const security$ =
@@ -180,7 +178,6 @@ export class Documents extends ClientSDK {
         const pathParams$ = {
             id: enc$.encodeSimple("id", payload$.id, { explode: false, charEncoding: "percent" }),
         };
-
         const path$ = this.templateURLComponent("/docs/people/{id}")(pathParams$);
 
         const security$ =
@@ -246,7 +243,6 @@ export class Documents extends ClientSDK {
         const pathParams$ = {
             id: enc$.encodeSimple("id", payload$.id, { explode: false, charEncoding: "percent" }),
         };
-
         const path$ = this.templateURLComponent("/docs/people/{id}/confidential")(pathParams$);
 
         const security$ =
@@ -320,7 +316,6 @@ export class Documents extends ClientSDK {
         const pathParams$ = {
             id: enc$.encodeSimple("id", payload$.id, { explode: false, charEncoding: "percent" }),
         };
-
         const path$ = this.templateURLComponent("/docs/people/{id}/confidential/upload")(
             pathParams$
         );
@@ -387,7 +382,6 @@ export class Documents extends ClientSDK {
         const pathParams$ = {
             id: enc$.encodeSimple("id", payload$.id, { explode: false, charEncoding: "percent" }),
         };
-
         const path$ = this.templateURLComponent("/docs/people/{id}/shared")(pathParams$);
 
         const security$ =
@@ -459,7 +453,6 @@ export class Documents extends ClientSDK {
         const pathParams$ = {
             id: enc$.encodeSimple("id", payload$.id, { explode: false, charEncoding: "percent" }),
         };
-
         const path$ = this.templateURLComponent("/docs/people/{id}/shared/upload")(pathParams$);
 
         const security$ =

@@ -48,7 +48,6 @@ export class Metadata extends ClientSDK {
                 charEncoding: "percent",
             }),
         };
-
         const path$ = this.templateURLComponent("/company/named-lists/{listName}/{itemId}")(
             pathParams$
         );
@@ -109,7 +108,6 @@ export class Metadata extends ClientSDK {
                 charEncoding: "percent",
             }),
         };
-
         const path$ = this.templateURLComponent("/company/people/fields/{fieldId}")(pathParams$);
 
         const security$ =
@@ -230,7 +228,6 @@ export class Metadata extends ClientSDK {
                 charEncoding: "percent",
             }),
         };
-
         const path$ = this.templateURLComponent("/company/named-lists/{listName}")(pathParams$);
 
         const query$ = [
@@ -444,7 +441,6 @@ export class Metadata extends ClientSDK {
                 charEncoding: "percent",
             }),
         };
-
         const path$ = this.templateURLComponent("/people/custom-tables/metadata/{custom_table_id}")(
             pathParams$
         );
@@ -509,7 +505,6 @@ export class Metadata extends ClientSDK {
                 charEncoding: "percent",
             }),
         };
-
         const path$ = this.templateURLComponent("/company/named-lists/{listName}")(pathParams$);
 
         const security$ =
@@ -638,7 +633,6 @@ export class Metadata extends ClientSDK {
                 charEncoding: "percent",
             }),
         };
-
         const path$ = this.templateURLComponent("/company/named-lists/{listName}/{itemId}")(
             pathParams$
         );
@@ -701,7 +695,6 @@ export class Metadata extends ClientSDK {
                 charEncoding: "percent",
             }),
         };
-
         const path$ = this.templateURLComponent("/company/people/fields/{fieldId}")(pathParams$);
 
         const security$ =

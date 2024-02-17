@@ -53,7 +53,6 @@ export class CustomTables extends ClientSDK {
                 charEncoding: "percent",
             }),
         };
-
         const path$ = this.templateURLComponent(
             "/people/custom-tables/{employee_id}/{custom_table_id}/{entry_id}"
         )(pathParams$);
@@ -120,7 +119,6 @@ export class CustomTables extends ClientSDK {
                 charEncoding: "percent",
             }),
         };
-
         const path$ = this.templateURLComponent(
             "/people/custom-tables/{employee_id}/{custom_table_id}"
         )(pathParams$);
@@ -203,7 +201,6 @@ export class CustomTables extends ClientSDK {
                 charEncoding: "percent",
             }),
         };
-
         const path$ = this.templateURLComponent(
             "/people/custom-tables/{employee_id}/{custom_table_id}"
         )(pathParams$);
@@ -276,7 +273,6 @@ export class CustomTables extends ClientSDK {
                 charEncoding: "percent",
             }),
         };
-
         const path$ = this.templateURLComponent(
             "/people/custom-tables/{employee_id}/{custom_table_id}/{entry_id}"
         )(pathParams$);
