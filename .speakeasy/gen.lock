@@ -4,9 +4,9 @@ management:
   docChecksum: 590288aa93e9760cebbad2019f0a99af
   docVersion: 1.0.0
   speakeasyVersion: internal
-  generationVersion: 2.262.2
-  releaseVersion: 4.0.4
-  configChecksum: 89c77f5e4265c8c5bf1bc171aa412fe2
+  generationVersion: 2.263.3
+  releaseVersion: 4.1.0
+  configChecksum: e2c460c69c6d90eef07607516d473bb4
   repoURL: https://github.com/speakeasy-sdks/hibob.git
   repoSubDirectory: .
   installationURL: https://github.com/speakeasy-sdks/hibob
@@ -14,7 +14,7 @@ management:
 features:
   typescript:
     constsAndDefaults: 0.1.3
-    core: 3.4.10
+    core: 3.5.1
     deprecations: 2.81.1
     downloadStreams: 0.1.1
     globalSecurity: 2.82.2
@@ -38,7 +38,6 @@ generatedFiles:
   - .eslintrc.js
   - .npmignore
   - RUNTIMES.md
-  - package-lock.json
   - package.json
   - src/index.ts
   - src/lib/base64.ts
@@ -539,3 +538,6 @@ generatedFiles:
   - docs/sdks/timeoff/README.md
   - USAGE.md
   - .gitattributes
+  - src/hooks/hooks.ts
+  - src/hooks/types.ts
+  - src/hooks/index.ts
