@@ -8,7 +8,11 @@ generation:
     parameterOrderingFeb2024: false
     requestResponseComponentNamesFeb2024: false
 typescript:
-  version: 4.0.4
+  version: 4.1.0
+  additionalDependencies:
+    dependencies: {}
+    devDependencies: {}
+    peerDependencies: {}
   author: roopak
   clientServerStatusCodesAsErrors: false
   flattenGlobalSecurity: false
