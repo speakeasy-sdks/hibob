@@ -11,6 +11,7 @@ import { z } from "zod";
 export enum QueryParamFormat {
     Csv = "csv",
     Xlsx = "xlsx",
+    Json = "json",
 }
 
 export type GetCompanyReportsReportIdDownloadRequest = {

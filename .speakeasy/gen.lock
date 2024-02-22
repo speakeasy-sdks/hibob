@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: cfede491-df0f-4c5d-b64e-31715f9d4209
 management:
-  docChecksum: 590288aa93e9760cebbad2019f0a99af
+  docChecksum: 828c9433a782ba5a1f6952f4db0033d5
   docVersion: 1.0.0
   speakeasyVersion: internal
   generationVersion: 2.263.3
-  releaseVersion: 4.1.0
-  configChecksum: e2c460c69c6d90eef07607516d473bb4
+  releaseVersion: 4.1.1
+  configChecksum: ab47d78838973effdfc0c6db2149b090
   repoURL: https://github.com/speakeasy-sdks/hibob.git
   repoSubDirectory: .
   installationURL: https://github.com/speakeasy-sdks/hibob

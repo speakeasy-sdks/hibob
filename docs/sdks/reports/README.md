@@ -113,7 +113,7 @@ async function run() {
   });
 
   const result = await sdk.reports.getCompanyReportsReportIdDownload({
-    format: QueryParamFormat.Xlsx,
+    format: QueryParamFormat.Json,
     reportId: 3566.85,
   });
 

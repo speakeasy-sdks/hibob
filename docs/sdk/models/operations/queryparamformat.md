@@ -9,3 +9,4 @@ File format
 | ------ | ------ |
 | `Csv`  | csv    |
 | `Xlsx` | xlsx   |
+| `Json` | json   |
