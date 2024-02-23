@@ -276,7 +276,6 @@ export class Documents extends ClientSDK {
 
         const payload$ =
             operations.PostDocsPeopleIdConfidentialRequest$.outboundSchema.parse(input);
-
         const body$ = enc$.encodeJSON("body", payload$.AddDocument, { explode: true });
 
         const pathParams$ = {
@@ -347,7 +346,6 @@ export class Documents extends ClientSDK {
 
         const payload$ =
             operations.PostDocsPeopleIdConfidentialUploadRequest$.outboundSchema.parse(input);
-
         const body$ = new FormData();
 
         if (isBlobLike(payload$.RequestBody.file)) {
@@ -431,7 +429,6 @@ export class Documents extends ClientSDK {
         headers$.set("Accept", "application/json");
 
         const payload$ = operations.PostDocsPeopleIdSharedRequest$.outboundSchema.parse(input);
-
         const body$ = enc$.encodeJSON("body", payload$.AddDocument, { explode: true });
 
         const pathParams$ = {
@@ -500,7 +497,6 @@ export class Documents extends ClientSDK {
 
         const payload$ =
             operations.PostDocsPeopleIdSharedUploadRequest$.outboundSchema.parse(input);
-
         const body$ = new FormData();
 
         if (isBlobLike(payload$.RequestBody.file)) {

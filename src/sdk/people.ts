@@ -1348,7 +1348,6 @@ export class People extends ClientSDK {
 
         const payload$ =
             operations.PostEmployeesEmployeeIdInvitationsRequest$.outboundSchema.parse(input);
-
         const body$ = enc$.encodeJSON("body", payload$.InvitationByWizard, { explode: true });
 
         const pathParams$ = {
@@ -1424,7 +1423,6 @@ export class People extends ClientSDK {
 
         const payload$ =
             operations.PostEmployeesEmployeeIdStartDateRequest$.outboundSchema.parse(input);
-
         const body$ = enc$.encodeJSON("body", payload$.StartDateUpdate, { explode: true });
 
         const pathParams$ = {
@@ -1504,7 +1502,6 @@ export class People extends ClientSDK {
 
         const payload$ =
             operations.PostEmployeesIdentifierTerminateRequest$.outboundSchema.parse(input);
-
         const body$ = enc$.encodeJSON("body", payload$.EmployeeTermination, { explode: true });
 
         const pathParams$ = {
@@ -1782,7 +1779,6 @@ export class People extends ClientSDK {
         headers$.set("Accept", "application/json");
 
         const payload$ = operations.PostPeopleIdentifierRequest$.outboundSchema.parse(input);
-
         const body$ = enc$.encodeJSON("body", payload$.ReadSingleEmployeeRequestReference, {
             explode: true,
         });
@@ -1862,7 +1858,6 @@ export class People extends ClientSDK {
         headers$.set("Accept", "*/*");
 
         const payload$ = operations.PostPeopleIdEmploymentRequest$.outboundSchema.parse(input);
-
         const body$ = enc$.encodeJSON("body", payload$.EmploymentEntry, { explode: true });
 
         const pathParams$ = {
@@ -1927,7 +1922,6 @@ export class People extends ClientSDK {
         headers$.set("Accept", "*/*");
 
         const payload$ = operations.PostPeopleIdEquitiesRequest$.outboundSchema.parse(input);
-
         const body$ = enc$.encodeJSON("body", payload$.EquityEntry, { explode: true });
 
         const pathParams$ = {
@@ -1992,7 +1986,6 @@ export class People extends ClientSDK {
         headers$.set("Accept", "*/*");
 
         const payload$ = operations.PostPeopleIdSalariesRequest$.outboundSchema.parse(input);
-
         const body$ = enc$.encodeJSON("body", payload$.SalaryEntry, { explode: true });
 
         const pathParams$ = {
@@ -2057,7 +2050,6 @@ export class People extends ClientSDK {
         headers$.set("Accept", "*/*");
 
         const payload$ = operations.PostPeopleIdTrainingRequest$.outboundSchema.parse(input);
-
         const body$ = enc$.encodeJSON("body", payload$.TrainingEntry, { explode: true });
 
         const pathParams$ = {
@@ -2122,7 +2114,6 @@ export class People extends ClientSDK {
         headers$.set("Accept", "*/*");
 
         const payload$ = operations.PostPeopleIdVariableRequest$.outboundSchema.parse(input);
-
         const body$ = enc$.encodeJSON("body", payload$.VariableEntry, { explode: true });
 
         const pathParams$ = {
@@ -2187,7 +2178,6 @@ export class People extends ClientSDK {
         headers$.set("Accept", "*/*");
 
         const payload$ = operations.PostPeopleIdWorkRequest$.outboundSchema.parse(input);
-
         const body$ = enc$.encodeJSON("body", payload$.WorkEntry, { explode: true });
 
         const pathParams$ = {
@@ -2252,7 +2242,6 @@ export class People extends ClientSDK {
         headers$.set("Accept", "*/*");
 
         const payload$ = operations.PutAvatarsEmployeeIdRequest$.outboundSchema.parse(input);
-
         const body$ = enc$.encodeJSON("body", payload$.UploadAvatar, { explode: true });
 
         const pathParams$ = {
@@ -2320,7 +2309,6 @@ export class People extends ClientSDK {
         headers$.set("Accept", "*/*");
 
         const payload$ = operations.PutPeopleIdentifierRequest$.outboundSchema.parse(input);
-
         const body$ = enc$.encodeJSON("body", payload$.RequestBody, { explode: true });
 
         const pathParams$ = {
@@ -2388,7 +2376,6 @@ export class People extends ClientSDK {
         headers$.set("Accept", "*/*");
 
         const payload$ = operations.PutPeopleIdEmailRequest$.outboundSchema.parse(input);
-
         const body$ = enc$.encodeJSON("body", payload$.ChangeEmail, { explode: true });
 
         const pathParams$ = {
@@ -2454,7 +2441,6 @@ export class People extends ClientSDK {
 
         const payload$ =
             operations.PutPeopleIdEmploymentEntryIdRequest$.outboundSchema.parse(input);
-
         const body$ = enc$.encodeJSON("body", payload$.EmploymentEntry, { explode: true });
 
         const pathParams$ = {
@@ -2525,7 +2511,6 @@ export class People extends ClientSDK {
         headers$.set("Accept", "*/*");
 
         const payload$ = operations.PutPeopleIdEquitiesEntryIdRequest$.outboundSchema.parse(input);
-
         const body$ = enc$.encodeJSON("body", payload$.EquityEntry, { explode: true });
 
         const pathParams$ = {
@@ -2594,7 +2579,6 @@ export class People extends ClientSDK {
         headers$.set("Accept", "*/*");
 
         const payload$ = operations.PutPeopleIdWorkEntryIdRequest$.outboundSchema.parse(input);
-
         const body$ = enc$.encodeJSON("body", payload$.WorkEntry, { explode: true });
 
         const pathParams$ = {

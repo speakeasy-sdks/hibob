@@ -584,7 +584,6 @@ export class Metadata extends ClientSDK {
 
         const payload$ =
             operations.PostCompanyNamedListsListNameRequest$.outboundSchema.parse(input);
-
         const body$ = enc$.encodeJSON("body", payload$.NewListItem, { explode: true });
 
         const pathParams$ = {
@@ -724,7 +723,6 @@ export class Metadata extends ClientSDK {
 
         const payload$ =
             operations.PutCompanyNamedListsListNameItemIdRequest$.outboundSchema.parse(input);
-
         const body$ = enc$.encodeJSON("body", payload$.UpdateListItemRequest, { explode: true });
 
         const pathParams$ = {
@@ -798,7 +796,6 @@ export class Metadata extends ClientSDK {
 
         const payload$ =
             operations.PutCompanyPeopleFieldsFieldIdRequest$.outboundSchema.parse(input);
-
         const body$ = enc$.encodeJSON("body", payload$.UpdateFieldRequest, { explode: true });
 
         const pathParams$ = {

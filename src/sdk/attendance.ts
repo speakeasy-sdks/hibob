@@ -51,7 +51,6 @@ export class Attendance extends ClientSDK {
 
         const payload$ =
             operations.PostAttendanceImportImportMethodRequest$.outboundSchema.parse(input);
-
         const body$ = enc$.encodeJSON("body", payload$.ImportAttendanceData, { explode: true });
 
         const pathParams$ = {

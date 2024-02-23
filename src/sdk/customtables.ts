@@ -220,7 +220,6 @@ export class CustomTables extends ClientSDK {
             operations.PostPeopleCustomTablesEmployeeIdCustomTableIdRequest$.outboundSchema.parse(
                 input
             );
-
         const body$ = enc$.encodeJSON("body", payload$.RequestBody, { explode: true });
 
         const pathParams$ = {
@@ -298,7 +297,6 @@ export class CustomTables extends ClientSDK {
             operations.PutPeopleCustomTablesEmployeeIdCustomTableIdEntryIdRequest$.outboundSchema.parse(
                 input
             );
-
         const body$ = enc$.encodeJSON("body", payload$.RequestBody, { explode: true });
 
         const pathParams$ = {

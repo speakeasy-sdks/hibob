@@ -897,7 +897,6 @@ export class TimeOff extends ClientSDK {
 
         const payload$ =
             operations.PostTimeoffEmployeesIdAdjustmentsRequest$.outboundSchema.parse(input);
-
         const body$ = enc$.encodeJSON("body", payload$.AdjustmentRequest, { explode: true });
 
         const pathParams$ = {
@@ -974,7 +973,6 @@ export class TimeOff extends ClientSDK {
 
         const payload$ =
             operations.PostTimeoffEmployeesIdDiffHoursRequestsRequest$.outboundSchema.parse(input);
-
         const body$ = enc$.encodeJSON("body", payload$.SubmitTimeoffRequestDiffHours, {
             explode: true,
         });
@@ -1045,7 +1043,6 @@ export class TimeOff extends ClientSDK {
 
         const payload$ =
             operations.PostTimeoffEmployeesIdRequestsRequest$.outboundSchema.parse(input);
-
         const body$ = enc$.encodeJSON("body", payload$.SubmitTimeoffRequest, { explode: true });
 
         const pathParams$ = {
@@ -1115,7 +1112,6 @@ export class TimeOff extends ClientSDK {
             operations.PostTimeoffPolicyTypesPolicyTypeReasonCodesRequest$.outboundSchema.parse(
                 input
             );
-
         const body$ = enc$.encodeJSON("body", payload$.ReasonCodesNames, { explode: true });
 
         const pathParams$ = {

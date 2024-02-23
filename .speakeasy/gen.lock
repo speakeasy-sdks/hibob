@@ -4,9 +4,9 @@ management:
   docChecksum: 828c9433a782ba5a1f6952f4db0033d5
   docVersion: 1.0.0
   speakeasyVersion: internal
-  generationVersion: 2.263.3
-  releaseVersion: 4.1.1
-  configChecksum: ab47d78838973effdfc0c6db2149b090
+  generationVersion: 2.269.0
+  releaseVersion: 4.2.0
+  configChecksum: 36780af0e3408d9010928f2ec2701102
   repoURL: https://github.com/speakeasy-sdks/hibob.git
   repoSubDirectory: .
   installationURL: https://github.com/speakeasy-sdks/hibob
@@ -21,6 +21,7 @@ features:
     globalServerURLs: 2.82.3
     inputOutputModels: 2.82.0
     methodSecurity: 2.82.1
+    responseFormat: 0.1.0
 generatedFiles:
   - src/sdk/attendance.ts
   - src/sdk/people.ts
