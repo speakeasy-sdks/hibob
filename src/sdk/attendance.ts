@@ -6,6 +6,7 @@ import { SDKHooks } from "../hooks";
 import { SDK_METADATA, SDKOptions, serverURLFromOptions } from "../lib/config";
 import * as enc$ from "../lib/encodings";
 import { HTTPClient } from "../lib/http";
+import * as schemas$ from "../lib/schemas";
 import { ClientSDK, RequestOptions } from "../lib/sdks";
 import * as errors from "../sdk/models/errors";
 import * as operations from "../sdk/models/operations";
@@ -49,8 +50,12 @@ export class Attendance extends ClientSDK {
         headers$.set("Content-Type", "application/json");
         headers$.set("Accept", "application/json");
 
-        const payload$ =
-            operations.PostAttendanceImportImportMethodRequest$.outboundSchema.parse(input);
+        const payload$ = schemas$.parse(
+            input,
+            (value$) =>
+                operations.PostAttendanceImportImportMethodRequest$.outboundSchema.parse(value$),
+            "Input validation failed"
+        );
         const body$ = enc$.encodeJSON("body", payload$.ImportAttendanceData, { explode: true });
 
         const pathParams$ = {
@@ -71,9 +76,8 @@ export class Attendance extends ClientSDK {
 
         const context = { operationID: "post_/attendance/import/{importMethod}" };
         const doOptions = { context, errorCodes: [] };
-        const request = await this.createRequest$(
+        const request = this.createRequest$(
             {
-                context,
                 security: securitySettings$,
                 method: "POST",
                 path: path$,
@@ -94,11 +98,17 @@ export class Attendance extends ClientSDK {
 
         if (this.matchResponse(response, 200, "application/json")) {
             const responseBody = await response.json();
-            const result = operations.PostAttendanceImportImportMethodResponse$.inboundSchema.parse(
-                {
-                    ...responseFields$,
-                    ImportAttendanceResponse: responseBody,
-                }
+            const result = schemas$.parse(
+                responseBody,
+                (val$) => {
+                    return operations.PostAttendanceImportImportMethodResponse$.inboundSchema.parse(
+                        {
+                            ...responseFields$,
+                            ImportAttendanceResponse: val$,
+                        }
+                    );
+                },
+                "Response validation failed"
             );
             return result;
         } else if (this.matchStatusCode(response, [400, 403])) {
@@ -108,8 +118,13 @@ export class Attendance extends ClientSDK {
             throw new errors.SDKError("Unexpected API response", response, responseBody);
         }
 
-        return operations.PostAttendanceImportImportMethodResponse$.inboundSchema.parse(
-            responseFields$
+        return schemas$.parse(
+            undefined,
+            () =>
+                operations.PostAttendanceImportImportMethodResponse$.inboundSchema.parse(
+                    responseFields$
+                ),
+            "Response validation failed"
         );
     }
 }

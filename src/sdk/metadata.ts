@@ -6,6 +6,7 @@ import { SDKHooks } from "../hooks";
 import { SDK_METADATA, SDKOptions, serverURLFromOptions } from "../lib/config";
 import * as enc$ from "../lib/encodings";
 import { HTTPClient } from "../lib/http";
+import * as schemas$ from "../lib/schemas";
 import { ClientSDK, RequestOptions } from "../lib/sdks";
 import * as errors from "../sdk/models/errors";
 import * as operations from "../sdk/models/operations";
@@ -49,8 +50,14 @@ export class Metadata extends ClientSDK {
         headers$.set("user-agent", SDK_METADATA.userAgent);
         headers$.set("Accept", "*/*");
 
-        const payload$ =
-            operations.DeleteCompanyNamedListsListNameItemIdRequest$.outboundSchema.parse(input);
+        const payload$ = schemas$.parse(
+            input,
+            (value$) =>
+                operations.DeleteCompanyNamedListsListNameItemIdRequest$.outboundSchema.parse(
+                    value$
+                ),
+            "Input validation failed"
+        );
         const body$ = null;
 
         const pathParams$ = {
@@ -77,9 +84,8 @@ export class Metadata extends ClientSDK {
 
         const context = { operationID: "delete_/company/named-lists/{listName}/{itemId}" };
         const doOptions = { context, errorCodes: [] };
-        const request = await this.createRequest$(
+        const request = this.createRequest$(
             {
-                context,
                 security: securitySettings$,
                 method: "DELETE",
                 path: path$,
@@ -105,8 +111,13 @@ export class Metadata extends ClientSDK {
             throw new errors.SDKError("Unexpected API response", response, responseBody);
         }
 
-        return operations.DeleteCompanyNamedListsListNameItemIdResponse$.inboundSchema.parse(
-            responseFields$
+        return schemas$.parse(
+            undefined,
+            () =>
+                operations.DeleteCompanyNamedListsListNameItemIdResponse$.inboundSchema.parse(
+                    responseFields$
+                ),
+            "Response validation failed"
         );
     }
 
@@ -121,8 +132,12 @@ export class Metadata extends ClientSDK {
         headers$.set("user-agent", SDK_METADATA.userAgent);
         headers$.set("Accept", "*/*");
 
-        const payload$ =
-            operations.DeleteCompanyPeopleFieldsFieldIdRequest$.outboundSchema.parse(input);
+        const payload$ = schemas$.parse(
+            input,
+            (value$) =>
+                operations.DeleteCompanyPeopleFieldsFieldIdRequest$.outboundSchema.parse(value$),
+            "Input validation failed"
+        );
         const body$ = null;
 
         const pathParams$ = {
@@ -143,9 +158,8 @@ export class Metadata extends ClientSDK {
 
         const context = { operationID: "delete_/company/people/fields/{fieldId}" };
         const doOptions = { context, errorCodes: [] };
-        const request = await this.createRequest$(
+        const request = this.createRequest$(
             {
-                context,
                 security: securitySettings$,
                 method: "DELETE",
                 path: path$,
@@ -171,8 +185,13 @@ export class Metadata extends ClientSDK {
             throw new errors.SDKError("Unexpected API response", response, responseBody);
         }
 
-        return operations.DeleteCompanyPeopleFieldsFieldIdResponse$.inboundSchema.parse(
-            responseFields$
+        return schemas$.parse(
+            undefined,
+            () =>
+                operations.DeleteCompanyPeopleFieldsFieldIdResponse$.inboundSchema.parse(
+                    responseFields$
+                ),
+            "Response validation failed"
         );
     }
 
@@ -187,7 +206,11 @@ export class Metadata extends ClientSDK {
         headers$.set("user-agent", SDK_METADATA.userAgent);
         headers$.set("Accept", "application/json");
 
-        const payload$ = operations.GetCompanyNamedListsRequest$.outboundSchema.parse(input);
+        const payload$ = schemas$.parse(
+            input,
+            (value$) => operations.GetCompanyNamedListsRequest$.outboundSchema.parse(value$),
+            "Input validation failed"
+        );
         const body$ = null;
 
         const path$ = this.templateURLComponent("/company/named-lists")();
@@ -209,9 +232,8 @@ export class Metadata extends ClientSDK {
 
         const context = { operationID: "get_/company/named-lists" };
         const doOptions = { context, errorCodes: [] };
-        const request = await this.createRequest$(
+        const request = this.createRequest$(
             {
-                context,
                 security: securitySettings$,
                 method: "GET",
                 path: path$,
@@ -232,10 +254,16 @@ export class Metadata extends ClientSDK {
 
         if (this.matchResponse(response, 200, "application/json")) {
             const responseBody = await response.json();
-            const result = operations.GetCompanyNamedListsResponse$.inboundSchema.parse({
-                ...responseFields$,
-                Lists: responseBody,
-            });
+            const result = schemas$.parse(
+                responseBody,
+                (val$) => {
+                    return operations.GetCompanyNamedListsResponse$.inboundSchema.parse({
+                        ...responseFields$,
+                        Lists: val$,
+                    });
+                },
+                "Response validation failed"
+            );
             return result;
         } else {
             const responseBody = await response.text();
@@ -254,8 +282,12 @@ export class Metadata extends ClientSDK {
         headers$.set("user-agent", SDK_METADATA.userAgent);
         headers$.set("Accept", "application/json");
 
-        const payload$ =
-            operations.GetCompanyNamedListsListNameRequest$.outboundSchema.parse(input);
+        const payload$ = schemas$.parse(
+            input,
+            (value$) =>
+                operations.GetCompanyNamedListsListNameRequest$.outboundSchema.parse(value$),
+            "Input validation failed"
+        );
         const body$ = null;
 
         const pathParams$ = {
@@ -283,9 +315,8 @@ export class Metadata extends ClientSDK {
 
         const context = { operationID: "get_/company/named-lists/{listName}" };
         const doOptions = { context, errorCodes: [] };
-        const request = await this.createRequest$(
+        const request = this.createRequest$(
             {
-                context,
                 security: securitySettings$,
                 method: "GET",
                 path: path$,
@@ -306,10 +337,16 @@ export class Metadata extends ClientSDK {
 
         if (this.matchResponse(response, 200, "application/json")) {
             const responseBody = await response.json();
-            const result = operations.GetCompanyNamedListsListNameResponse$.inboundSchema.parse({
-                ...responseFields$,
-                List: responseBody,
-            });
+            const result = schemas$.parse(
+                responseBody,
+                (val$) => {
+                    return operations.GetCompanyNamedListsListNameResponse$.inboundSchema.parse({
+                        ...responseFields$,
+                        List: val$,
+                    });
+                },
+                "Response validation failed"
+            );
             return result;
         } else if (this.matchStatusCode(response, 404)) {
             // fallthrough
@@ -318,8 +355,13 @@ export class Metadata extends ClientSDK {
             throw new errors.SDKError("Unexpected API response", response, responseBody);
         }
 
-        return operations.GetCompanyNamedListsListNameResponse$.inboundSchema.parse(
-            responseFields$
+        return schemas$.parse(
+            undefined,
+            () =>
+                operations.GetCompanyNamedListsListNameResponse$.inboundSchema.parse(
+                    responseFields$
+                ),
+            "Response validation failed"
         );
     }
 
@@ -345,9 +387,8 @@ export class Metadata extends ClientSDK {
 
         const context = { operationID: "get_/company/people/fields" };
         const doOptions = { context, errorCodes: [] };
-        const request = await this.createRequest$(
+        const request = this.createRequest$(
             {
-                context,
                 security: securitySettings$,
                 method: "GET",
                 path: path$,
@@ -367,10 +408,16 @@ export class Metadata extends ClientSDK {
 
         if (this.matchResponse(response, 200, "application/json")) {
             const responseBody = await response.json();
-            const result = operations.GetCompanyPeopleFieldsResponse$.inboundSchema.parse({
-                ...responseFields$,
-                Fields: responseBody,
-            });
+            const result = schemas$.parse(
+                responseBody,
+                (val$) => {
+                    return operations.GetCompanyPeopleFieldsResponse$.inboundSchema.parse({
+                        ...responseFields$,
+                        Fields: val$,
+                    });
+                },
+                "Response validation failed"
+            );
             return result;
         } else {
             const responseBody = await response.text();
@@ -403,9 +450,8 @@ export class Metadata extends ClientSDK {
 
         const context = { operationID: "get_/metadata/objects/position" };
         const doOptions = { context, errorCodes: [] };
-        const request = await this.createRequest$(
+        const request = this.createRequest$(
             {
-                context,
                 security: securitySettings$,
                 method: "GET",
                 path: path$,
@@ -425,17 +471,29 @@ export class Metadata extends ClientSDK {
 
         if (this.matchResponse(response, 200, "application/json")) {
             const responseBody = await response.json();
-            const result = operations.GetMetadataObjectsPositionResponse$.inboundSchema.parse({
-                ...responseFields$,
-                ObjectsMetadata: responseBody,
-            });
+            const result = schemas$.parse(
+                responseBody,
+                (val$) => {
+                    return operations.GetMetadataObjectsPositionResponse$.inboundSchema.parse({
+                        ...responseFields$,
+                        ObjectsMetadata: val$,
+                    });
+                },
+                "Response validation failed"
+            );
             return result;
         } else if (this.matchResponse(response, "default", "application/json")) {
             const responseBody = await response.json();
-            const result = operations.GetMetadataObjectsPositionResponse$.inboundSchema.parse({
-                ...responseFields$,
-                Error: responseBody,
-            });
+            const result = schemas$.parse(
+                responseBody,
+                (val$) => {
+                    return operations.GetMetadataObjectsPositionResponse$.inboundSchema.parse({
+                        ...responseFields$,
+                        Error: val$,
+                    });
+                },
+                "Response validation failed"
+            );
             return result;
         } else {
             const responseBody = await response.text();
@@ -465,9 +523,8 @@ export class Metadata extends ClientSDK {
 
         const context = { operationID: "get_/people/custom-tables/metadata" };
         const doOptions = { context, errorCodes: [] };
-        const request = await this.createRequest$(
+        const request = this.createRequest$(
             {
-                context,
                 security: securitySettings$,
                 method: "GET",
                 path: path$,
@@ -487,10 +544,16 @@ export class Metadata extends ClientSDK {
 
         if (this.matchResponse(response, 200, "application/json")) {
             const responseBody = await response.json();
-            const result = operations.GetPeopleCustomTablesMetadataResponse$.inboundSchema.parse({
-                ...responseFields$,
-                CustomTableMetadataList: responseBody,
-            });
+            const result = schemas$.parse(
+                responseBody,
+                (val$) => {
+                    return operations.GetPeopleCustomTablesMetadataResponse$.inboundSchema.parse({
+                        ...responseFields$,
+                        CustomTableMetadataList: val$,
+                    });
+                },
+                "Response validation failed"
+            );
             return result;
         } else {
             const responseBody = await response.text();
@@ -509,10 +572,14 @@ export class Metadata extends ClientSDK {
         headers$.set("user-agent", SDK_METADATA.userAgent);
         headers$.set("Accept", "application/json");
 
-        const payload$ =
-            operations.GetPeopleCustomTablesMetadataCustomTableIdRequest$.outboundSchema.parse(
-                input
-            );
+        const payload$ = schemas$.parse(
+            input,
+            (value$) =>
+                operations.GetPeopleCustomTablesMetadataCustomTableIdRequest$.outboundSchema.parse(
+                    value$
+                ),
+            "Input validation failed"
+        );
         const body$ = null;
 
         const pathParams$ = {
@@ -535,9 +602,8 @@ export class Metadata extends ClientSDK {
 
         const context = { operationID: "get_/people/custom-tables/metadata/{custom_table_id}" };
         const doOptions = { context, errorCodes: [] };
-        const request = await this.createRequest$(
+        const request = this.createRequest$(
             {
-                context,
                 security: securitySettings$,
                 method: "GET",
                 path: path$,
@@ -558,11 +624,18 @@ export class Metadata extends ClientSDK {
 
         if (this.matchResponse(response, 200, "application/json")) {
             const responseBody = await response.json();
-            const result =
-                operations.GetPeopleCustomTablesMetadataCustomTableIdResponse$.inboundSchema.parse({
-                    ...responseFields$,
-                    CustomTableMetadata: responseBody,
-                });
+            const result = schemas$.parse(
+                responseBody,
+                (val$) => {
+                    return operations.GetPeopleCustomTablesMetadataCustomTableIdResponse$.inboundSchema.parse(
+                        {
+                            ...responseFields$,
+                            CustomTableMetadata: val$,
+                        }
+                    );
+                },
+                "Response validation failed"
+            );
             return result;
         } else {
             const responseBody = await response.text();
@@ -582,8 +655,12 @@ export class Metadata extends ClientSDK {
         headers$.set("Content-Type", "application/json");
         headers$.set("Accept", "application/json");
 
-        const payload$ =
-            operations.PostCompanyNamedListsListNameRequest$.outboundSchema.parse(input);
+        const payload$ = schemas$.parse(
+            input,
+            (value$) =>
+                operations.PostCompanyNamedListsListNameRequest$.outboundSchema.parse(value$),
+            "Input validation failed"
+        );
         const body$ = enc$.encodeJSON("body", payload$.NewListItem, { explode: true });
 
         const pathParams$ = {
@@ -604,9 +681,8 @@ export class Metadata extends ClientSDK {
 
         const context = { operationID: "post_/company/named-lists/{listName}" };
         const doOptions = { context, errorCodes: [] };
-        const request = await this.createRequest$(
+        const request = this.createRequest$(
             {
-                context,
                 security: securitySettings$,
                 method: "POST",
                 path: path$,
@@ -627,10 +703,16 @@ export class Metadata extends ClientSDK {
 
         if (this.matchResponse(response, 200, "application/json")) {
             const responseBody = await response.json();
-            const result = operations.PostCompanyNamedListsListNameResponse$.inboundSchema.parse({
-                ...responseFields$,
-                FlatListItemId: responseBody,
-            });
+            const result = schemas$.parse(
+                responseBody,
+                (val$) => {
+                    return operations.PostCompanyNamedListsListNameResponse$.inboundSchema.parse({
+                        ...responseFields$,
+                        FlatListItemId: val$,
+                    });
+                },
+                "Response validation failed"
+            );
             return result;
         } else if (this.matchStatusCode(response, [404, 409])) {
             // fallthrough
@@ -639,8 +721,13 @@ export class Metadata extends ClientSDK {
             throw new errors.SDKError("Unexpected API response", response, responseBody);
         }
 
-        return operations.PostCompanyNamedListsListNameResponse$.inboundSchema.parse(
-            responseFields$
+        return schemas$.parse(
+            undefined,
+            () =>
+                operations.PostCompanyNamedListsListNameResponse$.inboundSchema.parse(
+                    responseFields$
+                ),
+            "Response validation failed"
         );
     }
 
@@ -656,7 +743,11 @@ export class Metadata extends ClientSDK {
         headers$.set("Content-Type", "application/json");
         headers$.set("Accept", "application/json");
 
-        const payload$ = shared.CreateFieldRequest$.outboundSchema.parse(input);
+        const payload$ = schemas$.parse(
+            input,
+            (value$) => shared.CreateFieldRequest$.outboundSchema.parse(value$),
+            "Input validation failed"
+        );
         const body$ = enc$.encodeJSON("body", payload$, { explode: true });
 
         const path$ = this.templateURLComponent("/company/people/fields")();
@@ -671,9 +762,8 @@ export class Metadata extends ClientSDK {
 
         const context = { operationID: "post_/company/people/fields" };
         const doOptions = { context, errorCodes: [] };
-        const request = await this.createRequest$(
+        const request = this.createRequest$(
             {
-                context,
                 security: securitySettings$,
                 method: "POST",
                 path: path$,
@@ -694,10 +784,16 @@ export class Metadata extends ClientSDK {
 
         if (this.matchResponse(response, 200, "application/json")) {
             const responseBody = await response.json();
-            const result = operations.PostCompanyPeopleFieldsResponse$.inboundSchema.parse({
-                ...responseFields$,
-                FieldId: responseBody,
-            });
+            const result = schemas$.parse(
+                responseBody,
+                (val$) => {
+                    return operations.PostCompanyPeopleFieldsResponse$.inboundSchema.parse({
+                        ...responseFields$,
+                        FieldId: val$,
+                    });
+                },
+                "Response validation failed"
+            );
             return result;
         } else if (this.matchStatusCode(response, [400, 404])) {
             // fallthrough
@@ -706,7 +802,11 @@ export class Metadata extends ClientSDK {
             throw new errors.SDKError("Unexpected API response", response, responseBody);
         }
 
-        return operations.PostCompanyPeopleFieldsResponse$.inboundSchema.parse(responseFields$);
+        return schemas$.parse(
+            undefined,
+            () => operations.PostCompanyPeopleFieldsResponse$.inboundSchema.parse(responseFields$),
+            "Response validation failed"
+        );
     }
 
     /**
@@ -721,8 +821,12 @@ export class Metadata extends ClientSDK {
         headers$.set("Content-Type", "application/json");
         headers$.set("Accept", "*/*");
 
-        const payload$ =
-            operations.PutCompanyNamedListsListNameItemIdRequest$.outboundSchema.parse(input);
+        const payload$ = schemas$.parse(
+            input,
+            (value$) =>
+                operations.PutCompanyNamedListsListNameItemIdRequest$.outboundSchema.parse(value$),
+            "Input validation failed"
+        );
         const body$ = enc$.encodeJSON("body", payload$.UpdateListItemRequest, { explode: true });
 
         const pathParams$ = {
@@ -749,9 +853,8 @@ export class Metadata extends ClientSDK {
 
         const context = { operationID: "put_/company/named-lists/{listName}/{itemId}" };
         const doOptions = { context, errorCodes: [] };
-        const request = await this.createRequest$(
+        const request = this.createRequest$(
             {
-                context,
                 security: securitySettings$,
                 method: "PUT",
                 path: path$,
@@ -777,8 +880,13 @@ export class Metadata extends ClientSDK {
             throw new errors.SDKError("Unexpected API response", response, responseBody);
         }
 
-        return operations.PutCompanyNamedListsListNameItemIdResponse$.inboundSchema.parse(
-            responseFields$
+        return schemas$.parse(
+            undefined,
+            () =>
+                operations.PutCompanyNamedListsListNameItemIdResponse$.inboundSchema.parse(
+                    responseFields$
+                ),
+            "Response validation failed"
         );
     }
 
@@ -794,8 +902,12 @@ export class Metadata extends ClientSDK {
         headers$.set("Content-Type", "application/json");
         headers$.set("Accept", "*/*");
 
-        const payload$ =
-            operations.PutCompanyPeopleFieldsFieldIdRequest$.outboundSchema.parse(input);
+        const payload$ = schemas$.parse(
+            input,
+            (value$) =>
+                operations.PutCompanyPeopleFieldsFieldIdRequest$.outboundSchema.parse(value$),
+            "Input validation failed"
+        );
         const body$ = enc$.encodeJSON("body", payload$.UpdateFieldRequest, { explode: true });
 
         const pathParams$ = {
@@ -816,9 +928,8 @@ export class Metadata extends ClientSDK {
 
         const context = { operationID: "put_/company/people/fields/{fieldId}" };
         const doOptions = { context, errorCodes: [] };
-        const request = await this.createRequest$(
+        const request = this.createRequest$(
             {
-                context,
                 security: securitySettings$,
                 method: "PUT",
                 path: path$,
@@ -844,8 +955,13 @@ export class Metadata extends ClientSDK {
             throw new errors.SDKError("Unexpected API response", response, responseBody);
         }
 
-        return operations.PutCompanyPeopleFieldsFieldIdResponse$.inboundSchema.parse(
-            responseFields$
+        return schemas$.parse(
+            undefined,
+            () =>
+                operations.PutCompanyPeopleFieldsFieldIdResponse$.inboundSchema.parse(
+                    responseFields$
+                ),
+            "Response validation failed"
         );
     }
 }

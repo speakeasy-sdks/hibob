@@ -4,9 +4,9 @@ management:
   docChecksum: 828c9433a782ba5a1f6952f4db0033d5
   docVersion: 1.0.0
   speakeasyVersion: internal
-  generationVersion: 2.269.0
-  releaseVersion: 4.2.0
-  configChecksum: 36780af0e3408d9010928f2ec2701102
+  generationVersion: 2.272.4
+  releaseVersion: 4.3.0
+  configChecksum: 1a3fdb7aa62300f6c6fb780707e21439
   repoURL: https://github.com/speakeasy-sdks/hibob.git
   repoSubDirectory: .
   installationURL: https://github.com/speakeasy-sdks/hibob
@@ -14,10 +14,10 @@ management:
 features:
   typescript:
     constsAndDefaults: 0.1.3
-    core: 3.5.1
+    core: 3.6.1
     deprecations: 2.81.1
     downloadStreams: 0.1.1
-    globalSecurity: 2.82.2
+    globalSecurity: 2.82.3
     globalServerURLs: 2.82.3
     inputOutputModels: 2.82.0
     methodSecurity: 2.82.1
@@ -47,11 +47,13 @@ generatedFiles:
   - src/lib/event-streams.ts
   - src/lib/http.ts
   - src/lib/retries.ts
+  - src/lib/schemas.ts
   - src/lib/sdks.ts
   - src/lib/security.ts
   - src/lib/url.ts
   - src/sdk/index.ts
   - src/sdk/models/errors/sdkerror.ts
+  - src/sdk/models/errors/sdkvalidationerror.ts
   - src/sdk/types/blobs.ts
   - src/sdk/types/decimal.ts
   - src/sdk/types/index.ts

@@ -6,6 +6,7 @@ import { SDKHooks } from "../hooks";
 import { SDK_METADATA, SDKOptions, serverURLFromOptions } from "../lib/config";
 import * as enc$ from "../lib/encodings";
 import { HTTPClient } from "../lib/http";
+import * as schemas$ from "../lib/schemas";
 import { ClientSDK, RequestOptions } from "../lib/sdks";
 import * as errors from "../sdk/models/errors";
 import * as operations from "../sdk/models/operations";
@@ -51,10 +52,14 @@ export class TimeOff extends ClientSDK {
         headers$.set("user-agent", SDK_METADATA.userAgent);
         headers$.set("Accept", "*/*");
 
-        const payload$ =
-            operations.DeleteTimeoffEmployeesIdRequestsRequestIdRequest$.outboundSchema.parse(
-                input
-            );
+        const payload$ = schemas$.parse(
+            input,
+            (value$) =>
+                operations.DeleteTimeoffEmployeesIdRequestsRequestIdRequest$.outboundSchema.parse(
+                    value$
+                ),
+            "Input validation failed"
+        );
         const body$ = null;
 
         const pathParams$ = {
@@ -78,9 +83,8 @@ export class TimeOff extends ClientSDK {
 
         const context = { operationID: "delete_/timeoff/employees/{id}/requests/{requestId}" };
         const doOptions = { context, errorCodes: [] };
-        const request = await this.createRequest$(
+        const request = this.createRequest$(
             {
-                context,
                 security: securitySettings$,
                 method: "DELETE",
                 path: path$,
@@ -106,8 +110,13 @@ export class TimeOff extends ClientSDK {
             throw new errors.SDKError("Unexpected API response", response, responseBody);
         }
 
-        return operations.DeleteTimeoffEmployeesIdRequestsRequestIdResponse$.inboundSchema.parse(
-            responseFields$
+        return schemas$.parse(
+            undefined,
+            () =>
+                operations.DeleteTimeoffEmployeesIdRequestsRequestIdResponse$.inboundSchema.parse(
+                    responseFields$
+                ),
+            "Response validation failed"
         );
     }
 
@@ -125,8 +134,12 @@ export class TimeOff extends ClientSDK {
         headers$.set("user-agent", SDK_METADATA.userAgent);
         headers$.set("Accept", "application/json");
 
-        const payload$ =
-            operations.GetTimeoffEmployeesIdBalanceRequest$.outboundSchema.parse(input);
+        const payload$ = schemas$.parse(
+            input,
+            (value$) =>
+                operations.GetTimeoffEmployeesIdBalanceRequest$.outboundSchema.parse(value$),
+            "Input validation failed"
+        );
         const body$ = null;
 
         const pathParams$ = {
@@ -152,9 +165,8 @@ export class TimeOff extends ClientSDK {
 
         const context = { operationID: "get_/timeoff/employees/{id}/balance" };
         const doOptions = { context, errorCodes: [] };
-        const request = await this.createRequest$(
+        const request = this.createRequest$(
             {
-                context,
                 security: securitySettings$,
                 method: "GET",
                 path: path$,
@@ -175,17 +187,29 @@ export class TimeOff extends ClientSDK {
 
         if (this.matchResponse(response, 200, "application/json")) {
             const responseBody = await response.json();
-            const result = operations.GetTimeoffEmployeesIdBalanceResponse$.inboundSchema.parse({
-                ...responseFields$,
-                BalanceResult: responseBody,
-            });
+            const result = schemas$.parse(
+                responseBody,
+                (val$) => {
+                    return operations.GetTimeoffEmployeesIdBalanceResponse$.inboundSchema.parse({
+                        ...responseFields$,
+                        BalanceResult: val$,
+                    });
+                },
+                "Response validation failed"
+            );
             return result;
         } else if (this.matchResponse(response, "default", "application/json")) {
             const responseBody = await response.json();
-            const result = operations.GetTimeoffEmployeesIdBalanceResponse$.inboundSchema.parse({
-                ...responseFields$,
-                Error: responseBody,
-            });
+            const result = schemas$.parse(
+                responseBody,
+                (val$) => {
+                    return operations.GetTimeoffEmployeesIdBalanceResponse$.inboundSchema.parse({
+                        ...responseFields$,
+                        Error: val$,
+                    });
+                },
+                "Response validation failed"
+            );
             return result;
         } else {
             const responseBody = await response.text();
@@ -207,8 +231,14 @@ export class TimeOff extends ClientSDK {
         headers$.set("user-agent", SDK_METADATA.userAgent);
         headers$.set("Accept", "application/json");
 
-        const payload$ =
-            operations.GetTimeoffEmployeesIdRequestsRequestIdRequest$.outboundSchema.parse(input);
+        const payload$ = schemas$.parse(
+            input,
+            (value$) =>
+                operations.GetTimeoffEmployeesIdRequestsRequestIdRequest$.outboundSchema.parse(
+                    value$
+                ),
+            "Input validation failed"
+        );
         const body$ = null;
 
         const pathParams$ = {
@@ -232,9 +262,8 @@ export class TimeOff extends ClientSDK {
 
         const context = { operationID: "get_/timeoff/employees/{id}/requests/{requestId}" };
         const doOptions = { context, errorCodes: [] };
-        const request = await this.createRequest$(
+        const request = this.createRequest$(
             {
-                context,
                 security: securitySettings$,
                 method: "GET",
                 path: path$,
@@ -255,11 +284,18 @@ export class TimeOff extends ClientSDK {
 
         if (this.matchResponse(response, 200, "application/json")) {
             const responseBody = await response.json();
-            const result =
-                operations.GetTimeoffEmployeesIdRequestsRequestIdResponse$.inboundSchema.parse({
-                    ...responseFields$,
-                    TimeoffRequest: responseBody,
-                });
+            const result = schemas$.parse(
+                responseBody,
+                (val$) => {
+                    return operations.GetTimeoffEmployeesIdRequestsRequestIdResponse$.inboundSchema.parse(
+                        {
+                            ...responseFields$,
+                            TimeoffRequest: val$,
+                        }
+                    );
+                },
+                "Response validation failed"
+            );
             return result;
         } else if (this.matchStatusCode(response, 404)) {
             // fallthrough
@@ -268,8 +304,13 @@ export class TimeOff extends ClientSDK {
             throw new errors.SDKError("Unexpected API response", response, responseBody);
         }
 
-        return operations.GetTimeoffEmployeesIdRequestsRequestIdResponse$.inboundSchema.parse(
-            responseFields$
+        return schemas$.parse(
+            undefined,
+            () =>
+                operations.GetTimeoffEmployeesIdRequestsRequestIdResponse$.inboundSchema.parse(
+                    responseFields$
+                ),
+            "Response validation failed"
         );
     }
 
@@ -287,7 +328,11 @@ export class TimeOff extends ClientSDK {
         headers$.set("user-agent", SDK_METADATA.userAgent);
         headers$.set("Accept", "application/json");
 
-        const payload$ = operations.GetTimeoffOuttodayRequest$.outboundSchema.parse(input);
+        const payload$ = schemas$.parse(
+            input,
+            (value$) => operations.GetTimeoffOuttodayRequest$.outboundSchema.parse(value$),
+            "Input validation failed"
+        );
         const body$ = null;
 
         const path$ = this.templateURLComponent("/timeoff/outtoday")();
@@ -315,9 +360,8 @@ export class TimeOff extends ClientSDK {
 
         const context = { operationID: "get_/timeoff/outtoday" };
         const doOptions = { context, errorCodes: [] };
-        const request = await this.createRequest$(
+        const request = this.createRequest$(
             {
-                context,
                 security: securitySettings$,
                 method: "GET",
                 path: path$,
@@ -338,17 +382,29 @@ export class TimeOff extends ClientSDK {
 
         if (this.matchResponse(response, 200, "application/json")) {
             const responseBody = await response.json();
-            const result = operations.GetTimeoffOuttodayResponse$.inboundSchema.parse({
-                ...responseFields$,
-                OutTodays: responseBody,
-            });
+            const result = schemas$.parse(
+                responseBody,
+                (val$) => {
+                    return operations.GetTimeoffOuttodayResponse$.inboundSchema.parse({
+                        ...responseFields$,
+                        OutTodays: val$,
+                    });
+                },
+                "Response validation failed"
+            );
             return result;
         } else if (this.matchResponse(response, "default", "application/json")) {
             const responseBody = await response.json();
-            const result = operations.GetTimeoffOuttodayResponse$.inboundSchema.parse({
-                ...responseFields$,
-                Error: responseBody,
-            });
+            const result = schemas$.parse(
+                responseBody,
+                (val$) => {
+                    return operations.GetTimeoffOuttodayResponse$.inboundSchema.parse({
+                        ...responseFields$,
+                        Error: val$,
+                    });
+                },
+                "Response validation failed"
+            );
             return result;
         } else {
             const responseBody = await response.text();
@@ -370,7 +426,11 @@ export class TimeOff extends ClientSDK {
         headers$.set("user-agent", SDK_METADATA.userAgent);
         headers$.set("Accept", "application/json");
 
-        const payload$ = operations.GetTimeoffPoliciesRequest$.outboundSchema.parse(input);
+        const payload$ = schemas$.parse(
+            input,
+            (value$) => operations.GetTimeoffPoliciesRequest$.outboundSchema.parse(value$),
+            "Input validation failed"
+        );
         const body$ = null;
 
         const path$ = this.templateURLComponent("/timeoff/policies")();
@@ -392,9 +452,8 @@ export class TimeOff extends ClientSDK {
 
         const context = { operationID: "get_/timeoff/policies" };
         const doOptions = { context, errorCodes: [] };
-        const request = await this.createRequest$(
+        const request = this.createRequest$(
             {
-                context,
                 security: securitySettings$,
                 method: "GET",
                 path: path$,
@@ -415,10 +474,16 @@ export class TimeOff extends ClientSDK {
 
         if (this.matchResponse(response, 200, "application/json")) {
             const responseBody = await response.json();
-            const result = operations.GetTimeoffPoliciesResponse$.inboundSchema.parse({
-                ...responseFields$,
-                Policy: responseBody,
-            });
+            const result = schemas$.parse(
+                responseBody,
+                (val$) => {
+                    return operations.GetTimeoffPoliciesResponse$.inboundSchema.parse({
+                        ...responseFields$,
+                        Policy: val$,
+                    });
+                },
+                "Response validation failed"
+            );
             return result;
         } else if (this.matchStatusCode(response, 404)) {
             // fallthrough
@@ -427,7 +492,11 @@ export class TimeOff extends ClientSDK {
             throw new errors.SDKError("Unexpected API response", response, responseBody);
         }
 
-        return operations.GetTimeoffPoliciesResponse$.inboundSchema.parse(responseFields$);
+        return schemas$.parse(
+            undefined,
+            () => operations.GetTimeoffPoliciesResponse$.inboundSchema.parse(responseFields$),
+            "Response validation failed"
+        );
     }
 
     /**
@@ -444,7 +513,11 @@ export class TimeOff extends ClientSDK {
         headers$.set("user-agent", SDK_METADATA.userAgent);
         headers$.set("Accept", "application/json");
 
-        const payload$ = operations.GetTimeoffPoliciesNamesRequest$.outboundSchema.parse(input);
+        const payload$ = schemas$.parse(
+            input,
+            (value$) => operations.GetTimeoffPoliciesNamesRequest$.outboundSchema.parse(value$),
+            "Input validation failed"
+        );
         const body$ = null;
 
         const path$ = this.templateURLComponent("/timeoff/policies/names")();
@@ -466,9 +539,8 @@ export class TimeOff extends ClientSDK {
 
         const context = { operationID: "get_/timeoff/policies/names" };
         const doOptions = { context, errorCodes: [] };
-        const request = await this.createRequest$(
+        const request = this.createRequest$(
             {
-                context,
                 security: securitySettings$,
                 method: "GET",
                 path: path$,
@@ -489,10 +561,16 @@ export class TimeOff extends ClientSDK {
 
         if (this.matchResponse(response, 200, "application/json")) {
             const responseBody = await response.json();
-            const result = operations.GetTimeoffPoliciesNamesResponse$.inboundSchema.parse({
-                ...responseFields$,
-                PolicyNames: responseBody,
-            });
+            const result = schemas$.parse(
+                responseBody,
+                (val$) => {
+                    return operations.GetTimeoffPoliciesNamesResponse$.inboundSchema.parse({
+                        ...responseFields$,
+                        PolicyNames: val$,
+                    });
+                },
+                "Response validation failed"
+            );
             return result;
         } else {
             const responseBody = await response.text();
@@ -525,9 +603,8 @@ export class TimeOff extends ClientSDK {
 
         const context = { operationID: "get_/timeoff/policy-types" };
         const doOptions = { context, errorCodes: [] };
-        const request = await this.createRequest$(
+        const request = this.createRequest$(
             {
-                context,
                 security: securitySettings$,
                 method: "GET",
                 path: path$,
@@ -547,17 +624,29 @@ export class TimeOff extends ClientSDK {
 
         if (this.matchResponse(response, 200, "application/json")) {
             const responseBody = await response.json();
-            const result = operations.GetTimeoffPolicyTypesResponse$.inboundSchema.parse({
-                ...responseFields$,
-                PolicyTypes: responseBody,
-            });
+            const result = schemas$.parse(
+                responseBody,
+                (val$) => {
+                    return operations.GetTimeoffPolicyTypesResponse$.inboundSchema.parse({
+                        ...responseFields$,
+                        PolicyTypes: val$,
+                    });
+                },
+                "Response validation failed"
+            );
             return result;
         } else if (this.matchResponse(response, "default", "application/json")) {
             const responseBody = await response.json();
-            const result = operations.GetTimeoffPolicyTypesResponse$.inboundSchema.parse({
-                ...responseFields$,
-                Error: responseBody,
-            });
+            const result = schemas$.parse(
+                responseBody,
+                (val$) => {
+                    return operations.GetTimeoffPolicyTypesResponse$.inboundSchema.parse({
+                        ...responseFields$,
+                        Error: val$,
+                    });
+                },
+                "Response validation failed"
+            );
             return result;
         } else {
             const responseBody = await response.text();
@@ -579,8 +668,12 @@ export class TimeOff extends ClientSDK {
         headers$.set("user-agent", SDK_METADATA.userAgent);
         headers$.set("Accept", "application/json");
 
-        const payload$ =
-            operations.GetTimeoffPolicyTypesPolicyTypeRequest$.outboundSchema.parse(input);
+        const payload$ = schemas$.parse(
+            input,
+            (value$) =>
+                operations.GetTimeoffPolicyTypesPolicyTypeRequest$.outboundSchema.parse(value$),
+            "Input validation failed"
+        );
         const body$ = null;
 
         const pathParams$ = {
@@ -601,9 +694,8 @@ export class TimeOff extends ClientSDK {
 
         const context = { operationID: "get_/timeoff/policy-types/{policyType}" };
         const doOptions = { context, errorCodes: [] };
-        const request = await this.createRequest$(
+        const request = this.createRequest$(
             {
-                context,
                 security: securitySettings$,
                 method: "GET",
                 path: path$,
@@ -624,10 +716,16 @@ export class TimeOff extends ClientSDK {
 
         if (this.matchResponse(response, 200, "application/json")) {
             const responseBody = await response.json();
-            const result = operations.GetTimeoffPolicyTypesPolicyTypeResponse$.inboundSchema.parse({
-                ...responseFields$,
-                PolicyType: responseBody,
-            });
+            const result = schemas$.parse(
+                responseBody,
+                (val$) => {
+                    return operations.GetTimeoffPolicyTypesPolicyTypeResponse$.inboundSchema.parse({
+                        ...responseFields$,
+                        PolicyType: val$,
+                    });
+                },
+                "Response validation failed"
+            );
             return result;
         } else if (this.matchStatusCode(response, 404)) {
             // fallthrough
@@ -636,8 +734,13 @@ export class TimeOff extends ClientSDK {
             throw new errors.SDKError("Unexpected API response", response, responseBody);
         }
 
-        return operations.GetTimeoffPolicyTypesPolicyTypeResponse$.inboundSchema.parse(
-            responseFields$
+        return schemas$.parse(
+            undefined,
+            () =>
+                operations.GetTimeoffPolicyTypesPolicyTypeResponse$.inboundSchema.parse(
+                    responseFields$
+                ),
+            "Response validation failed"
         );
     }
 
@@ -655,10 +758,14 @@ export class TimeOff extends ClientSDK {
         headers$.set("user-agent", SDK_METADATA.userAgent);
         headers$.set("Accept", "application/json");
 
-        const payload$ =
-            operations.GetTimeoffPolicyTypesPolicyTypeReasonCodesRequest$.outboundSchema.parse(
-                input
-            );
+        const payload$ = schemas$.parse(
+            input,
+            (value$) =>
+                operations.GetTimeoffPolicyTypesPolicyTypeReasonCodesRequest$.outboundSchema.parse(
+                    value$
+                ),
+            "Input validation failed"
+        );
         const body$ = null;
 
         const pathParams$ = {
@@ -681,9 +788,8 @@ export class TimeOff extends ClientSDK {
 
         const context = { operationID: "get_/timeoff/policy-types/{policyType}/reason-codes" };
         const doOptions = { context, errorCodes: [] };
-        const request = await this.createRequest$(
+        const request = this.createRequest$(
             {
-                context,
                 security: securitySettings$,
                 method: "GET",
                 path: path$,
@@ -704,11 +810,18 @@ export class TimeOff extends ClientSDK {
 
         if (this.matchResponse(response, 200, "application/json")) {
             const responseBody = await response.json();
-            const result =
-                operations.GetTimeoffPolicyTypesPolicyTypeReasonCodesResponse$.inboundSchema.parse({
-                    ...responseFields$,
-                    ReasonCodes: responseBody,
-                });
+            const result = schemas$.parse(
+                responseBody,
+                (val$) => {
+                    return operations.GetTimeoffPolicyTypesPolicyTypeReasonCodesResponse$.inboundSchema.parse(
+                        {
+                            ...responseFields$,
+                            ReasonCodes: val$,
+                        }
+                    );
+                },
+                "Response validation failed"
+            );
             return result;
         } else if (this.matchStatusCode(response, 404)) {
             // fallthrough
@@ -717,8 +830,13 @@ export class TimeOff extends ClientSDK {
             throw new errors.SDKError("Unexpected API response", response, responseBody);
         }
 
-        return operations.GetTimeoffPolicyTypesPolicyTypeReasonCodesResponse$.inboundSchema.parse(
-            responseFields$
+        return schemas$.parse(
+            undefined,
+            () =>
+                operations.GetTimeoffPolicyTypesPolicyTypeReasonCodesResponse$.inboundSchema.parse(
+                    responseFields$
+                ),
+            "Response validation failed"
         );
     }
 
@@ -736,7 +854,11 @@ export class TimeOff extends ClientSDK {
         headers$.set("user-agent", SDK_METADATA.userAgent);
         headers$.set("Accept", "application/json");
 
-        const payload$ = operations.GetTimeoffRequestsChangesRequest$.outboundSchema.parse(input);
+        const payload$ = schemas$.parse(
+            input,
+            (value$) => operations.GetTimeoffRequestsChangesRequest$.outboundSchema.parse(value$),
+            "Input validation failed"
+        );
         const body$ = null;
 
         const path$ = this.templateURLComponent("/timeoff/requests/changes")();
@@ -759,9 +881,8 @@ export class TimeOff extends ClientSDK {
 
         const context = { operationID: "get_/timeoff/requests/changes" };
         const doOptions = { context, errorCodes: [] };
-        const request = await this.createRequest$(
+        const request = this.createRequest$(
             {
-                context,
                 security: securitySettings$,
                 method: "GET",
                 path: path$,
@@ -782,10 +903,16 @@ export class TimeOff extends ClientSDK {
 
         if (this.matchResponse(response, 200, "application/json")) {
             const responseBody = await response.json();
-            const result = operations.GetTimeoffRequestsChangesResponse$.inboundSchema.parse({
-                ...responseFields$,
-                TimeoffChanges: responseBody,
-            });
+            const result = schemas$.parse(
+                responseBody,
+                (val$) => {
+                    return operations.GetTimeoffRequestsChangesResponse$.inboundSchema.parse({
+                        ...responseFields$,
+                        TimeoffChanges: val$,
+                    });
+                },
+                "Response validation failed"
+            );
             return result;
         } else {
             const responseBody = await response.text();
@@ -807,7 +934,11 @@ export class TimeOff extends ClientSDK {
         headers$.set("user-agent", SDK_METADATA.userAgent);
         headers$.set("Accept", "application/json");
 
-        const payload$ = operations.GetTimeoffWhosoutRequest$.outboundSchema.parse(input);
+        const payload$ = schemas$.parse(
+            input,
+            (value$) => operations.GetTimeoffWhosoutRequest$.outboundSchema.parse(value$),
+            "Input validation failed"
+        );
         const body$ = null;
 
         const path$ = this.templateURLComponent("/timeoff/whosout")();
@@ -839,9 +970,8 @@ export class TimeOff extends ClientSDK {
 
         const context = { operationID: "get_/timeoff/whosout" };
         const doOptions = { context, errorCodes: [] };
-        const request = await this.createRequest$(
+        const request = this.createRequest$(
             {
-                context,
                 security: securitySettings$,
                 method: "GET",
                 path: path$,
@@ -862,17 +992,29 @@ export class TimeOff extends ClientSDK {
 
         if (this.matchResponse(response, 200, "application/json")) {
             const responseBody = await response.json();
-            const result = operations.GetTimeoffWhosoutResponse$.inboundSchema.parse({
-                ...responseFields$,
-                Requests: responseBody,
-            });
+            const result = schemas$.parse(
+                responseBody,
+                (val$) => {
+                    return operations.GetTimeoffWhosoutResponse$.inboundSchema.parse({
+                        ...responseFields$,
+                        Requests: val$,
+                    });
+                },
+                "Response validation failed"
+            );
             return result;
         } else if (this.matchResponse(response, "default", "application/json")) {
             const responseBody = await response.json();
-            const result = operations.GetTimeoffWhosoutResponse$.inboundSchema.parse({
-                ...responseFields$,
-                Error: responseBody,
-            });
+            const result = schemas$.parse(
+                responseBody,
+                (val$) => {
+                    return operations.GetTimeoffWhosoutResponse$.inboundSchema.parse({
+                        ...responseFields$,
+                        Error: val$,
+                    });
+                },
+                "Response validation failed"
+            );
             return result;
         } else {
             const responseBody = await response.text();
@@ -895,8 +1037,12 @@ export class TimeOff extends ClientSDK {
         headers$.set("Content-Type", "application/json");
         headers$.set("Accept", "application/json");
 
-        const payload$ =
-            operations.PostTimeoffEmployeesIdAdjustmentsRequest$.outboundSchema.parse(input);
+        const payload$ = schemas$.parse(
+            input,
+            (value$) =>
+                operations.PostTimeoffEmployeesIdAdjustmentsRequest$.outboundSchema.parse(value$),
+            "Input validation failed"
+        );
         const body$ = enc$.encodeJSON("body", payload$.AdjustmentRequest, { explode: true });
 
         const pathParams$ = {
@@ -914,9 +1060,8 @@ export class TimeOff extends ClientSDK {
 
         const context = { operationID: "post_/timeoff/employees/{id}/adjustments" };
         const doOptions = { context, errorCodes: [] };
-        const request = await this.createRequest$(
+        const request = this.createRequest$(
             {
-                context,
                 security: securitySettings$,
                 method: "POST",
                 path: path$,
@@ -939,19 +1084,31 @@ export class TimeOff extends ClientSDK {
             // fallthrough
         } else if (this.matchResponse(response, "default", "application/json")) {
             const responseBody = await response.json();
-            const result =
-                operations.PostTimeoffEmployeesIdAdjustmentsResponse$.inboundSchema.parse({
-                    ...responseFields$,
-                    Error: responseBody,
-                });
+            const result = schemas$.parse(
+                responseBody,
+                (val$) => {
+                    return operations.PostTimeoffEmployeesIdAdjustmentsResponse$.inboundSchema.parse(
+                        {
+                            ...responseFields$,
+                            Error: val$,
+                        }
+                    );
+                },
+                "Response validation failed"
+            );
             return result;
         } else {
             const responseBody = await response.text();
             throw new errors.SDKError("Unexpected API response", response, responseBody);
         }
 
-        return operations.PostTimeoffEmployeesIdAdjustmentsResponse$.inboundSchema.parse(
-            responseFields$
+        return schemas$.parse(
+            undefined,
+            () =>
+                operations.PostTimeoffEmployeesIdAdjustmentsResponse$.inboundSchema.parse(
+                    responseFields$
+                ),
+            "Response validation failed"
         );
     }
 
@@ -971,8 +1128,14 @@ export class TimeOff extends ClientSDK {
         headers$.set("Content-Type", "application/json");
         headers$.set("Accept", "*/*");
 
-        const payload$ =
-            operations.PostTimeoffEmployeesIdDiffHoursRequestsRequest$.outboundSchema.parse(input);
+        const payload$ = schemas$.parse(
+            input,
+            (value$) =>
+                operations.PostTimeoffEmployeesIdDiffHoursRequestsRequest$.outboundSchema.parse(
+                    value$
+                ),
+            "Input validation failed"
+        );
         const body$ = enc$.encodeJSON("body", payload$.SubmitTimeoffRequestDiffHours, {
             explode: true,
         });
@@ -993,9 +1156,8 @@ export class TimeOff extends ClientSDK {
 
         const context = { operationID: "post_/timeoff/employees/{id}/diffHours/requests" };
         const doOptions = { context, errorCodes: [] };
-        const request = await this.createRequest$(
+        const request = this.createRequest$(
             {
-                context,
                 security: securitySettings$,
                 method: "POST",
                 path: path$,
@@ -1021,8 +1183,13 @@ export class TimeOff extends ClientSDK {
             throw new errors.SDKError("Unexpected API response", response, responseBody);
         }
 
-        return operations.PostTimeoffEmployeesIdDiffHoursRequestsResponse$.inboundSchema.parse(
-            responseFields$
+        return schemas$.parse(
+            undefined,
+            () =>
+                operations.PostTimeoffEmployeesIdDiffHoursRequestsResponse$.inboundSchema.parse(
+                    responseFields$
+                ),
+            "Response validation failed"
         );
     }
 
@@ -1041,8 +1208,12 @@ export class TimeOff extends ClientSDK {
         headers$.set("Content-Type", "application/json");
         headers$.set("Accept", "*/*");
 
-        const payload$ =
-            operations.PostTimeoffEmployeesIdRequestsRequest$.outboundSchema.parse(input);
+        const payload$ = schemas$.parse(
+            input,
+            (value$) =>
+                operations.PostTimeoffEmployeesIdRequestsRequest$.outboundSchema.parse(value$),
+            "Input validation failed"
+        );
         const body$ = enc$.encodeJSON("body", payload$.SubmitTimeoffRequest, { explode: true });
 
         const pathParams$ = {
@@ -1060,9 +1231,8 @@ export class TimeOff extends ClientSDK {
 
         const context = { operationID: "post_/timeoff/employees/{id}/requests" };
         const doOptions = { context, errorCodes: [] };
-        const request = await this.createRequest$(
+        const request = this.createRequest$(
             {
-                context,
                 security: securitySettings$,
                 method: "POST",
                 path: path$,
@@ -1088,8 +1258,13 @@ export class TimeOff extends ClientSDK {
             throw new errors.SDKError("Unexpected API response", response, responseBody);
         }
 
-        return operations.PostTimeoffEmployeesIdRequestsResponse$.inboundSchema.parse(
-            responseFields$
+        return schemas$.parse(
+            undefined,
+            () =>
+                operations.PostTimeoffEmployeesIdRequestsResponse$.inboundSchema.parse(
+                    responseFields$
+                ),
+            "Response validation failed"
         );
     }
 
@@ -1108,10 +1283,14 @@ export class TimeOff extends ClientSDK {
         headers$.set("Content-Type", "application/json");
         headers$.set("Accept", "*/*");
 
-        const payload$ =
-            operations.PostTimeoffPolicyTypesPolicyTypeReasonCodesRequest$.outboundSchema.parse(
-                input
-            );
+        const payload$ = schemas$.parse(
+            input,
+            (value$) =>
+                operations.PostTimeoffPolicyTypesPolicyTypeReasonCodesRequest$.outboundSchema.parse(
+                    value$
+                ),
+            "Input validation failed"
+        );
         const body$ = enc$.encodeJSON("body", payload$.ReasonCodesNames, { explode: true });
 
         const pathParams$ = {
@@ -1134,9 +1313,8 @@ export class TimeOff extends ClientSDK {
 
         const context = { operationID: "post_/timeoff/policy-types/{policyType}/reason-codes" };
         const doOptions = { context, errorCodes: [] };
-        const request = await this.createRequest$(
+        const request = this.createRequest$(
             {
-                context,
                 security: securitySettings$,
                 method: "POST",
                 path: path$,
@@ -1162,8 +1340,13 @@ export class TimeOff extends ClientSDK {
             throw new errors.SDKError("Unexpected API response", response, responseBody);
         }
 
-        return operations.PostTimeoffPolicyTypesPolicyTypeReasonCodesResponse$.inboundSchema.parse(
-            responseFields$
+        return schemas$.parse(
+            undefined,
+            () =>
+                operations.PostTimeoffPolicyTypesPolicyTypeReasonCodesResponse$.inboundSchema.parse(
+                    responseFields$
+                ),
+            "Response validation failed"
         );
     }
 }

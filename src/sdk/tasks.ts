@@ -6,6 +6,7 @@ import { SDKHooks } from "../hooks";
 import { SDK_METADATA, SDKOptions, serverURLFromOptions } from "../lib/config";
 import * as enc$ from "../lib/encodings";
 import { HTTPClient } from "../lib/http";
+import * as schemas$ from "../lib/schemas";
 import { ClientSDK, RequestOptions } from "../lib/sdks";
 import * as errors from "../sdk/models/errors";
 import * as operations from "../sdk/models/operations";
@@ -61,9 +62,8 @@ export class Tasks extends ClientSDK {
 
         const context = { operationID: "get_/my/tasks" };
         const doOptions = { context, errorCodes: [] };
-        const request = await this.createRequest$(
+        const request = this.createRequest$(
             {
-                context,
                 security: securitySettings$,
                 method: "GET",
                 path: path$,
@@ -83,10 +83,16 @@ export class Tasks extends ClientSDK {
 
         if (this.matchResponse(response, 200, "application/json")) {
             const responseBody = await response.json();
-            const result = operations.GetMyTasksResponse$.inboundSchema.parse({
-                ...responseFields$,
-                Tasks: responseBody,
-            });
+            const result = schemas$.parse(
+                responseBody,
+                (val$) => {
+                    return operations.GetMyTasksResponse$.inboundSchema.parse({
+                        ...responseFields$,
+                        Tasks: val$,
+                    });
+                },
+                "Response validation failed"
+            );
             return result;
         } else {
             const responseBody = await response.text();
@@ -114,9 +120,8 @@ export class Tasks extends ClientSDK {
 
         const context = { operationID: "get_/tasks" };
         const doOptions = { context, errorCodes: [] };
-        const request = await this.createRequest$(
+        const request = this.createRequest$(
             {
-                context,
                 security: securitySettings$,
                 method: "GET",
                 path: path$,
@@ -136,10 +141,16 @@ export class Tasks extends ClientSDK {
 
         if (this.matchResponse(response, 200, "application/json")) {
             const responseBody = await response.json();
-            const result = operations.GetTasksResponse$.inboundSchema.parse({
-                ...responseFields$,
-                Tasks: responseBody,
-            });
+            const result = schemas$.parse(
+                responseBody,
+                (val$) => {
+                    return operations.GetTasksResponse$.inboundSchema.parse({
+                        ...responseFields$,
+                        Tasks: val$,
+                    });
+                },
+                "Response validation failed"
+            );
             return result;
         } else {
             const responseBody = await response.text();
@@ -158,7 +169,11 @@ export class Tasks extends ClientSDK {
         headers$.set("user-agent", SDK_METADATA.userAgent);
         headers$.set("Accept", "application/json");
 
-        const payload$ = operations.GetTasksPeopleIdRequest$.outboundSchema.parse(input);
+        const payload$ = schemas$.parse(
+            input,
+            (value$) => operations.GetTasksPeopleIdRequest$.outboundSchema.parse(value$),
+            "Input validation failed"
+        );
         const body$ = null;
 
         const pathParams$ = {
@@ -183,9 +198,8 @@ export class Tasks extends ClientSDK {
 
         const context = { operationID: "get_/tasks/people/{id}" };
         const doOptions = { context, errorCodes: [] };
-        const request = await this.createRequest$(
+        const request = this.createRequest$(
             {
-                context,
                 security: securitySettings$,
                 method: "GET",
                 path: path$,
@@ -206,17 +220,29 @@ export class Tasks extends ClientSDK {
 
         if (this.matchResponse(response, 200, "application/json")) {
             const responseBody = await response.json();
-            const result = operations.GetTasksPeopleIdResponse$.inboundSchema.parse({
-                ...responseFields$,
-                Tasks: responseBody,
-            });
+            const result = schemas$.parse(
+                responseBody,
+                (val$) => {
+                    return operations.GetTasksPeopleIdResponse$.inboundSchema.parse({
+                        ...responseFields$,
+                        Tasks: val$,
+                    });
+                },
+                "Response validation failed"
+            );
             return result;
         } else if (this.matchResponse(response, "default", "application/json")) {
             const responseBody = await response.json();
-            const result = operations.GetTasksPeopleIdResponse$.inboundSchema.parse({
-                ...responseFields$,
-                Error: responseBody,
-            });
+            const result = schemas$.parse(
+                responseBody,
+                (val$) => {
+                    return operations.GetTasksPeopleIdResponse$.inboundSchema.parse({
+                        ...responseFields$,
+                        Error: val$,
+                    });
+                },
+                "Response validation failed"
+            );
             return result;
         } else {
             const responseBody = await response.text();
@@ -235,7 +261,11 @@ export class Tasks extends ClientSDK {
         headers$.set("user-agent", SDK_METADATA.userAgent);
         headers$.set("Accept", "application/json");
 
-        const payload$ = operations.PostTasksTaskIdCompleteRequest$.outboundSchema.parse(input);
+        const payload$ = schemas$.parse(
+            input,
+            (value$) => operations.PostTasksTaskIdCompleteRequest$.outboundSchema.parse(value$),
+            "Input validation failed"
+        );
         const body$ = null;
 
         const pathParams$ = {
@@ -256,9 +286,8 @@ export class Tasks extends ClientSDK {
 
         const context = { operationID: "post_/tasks/{taskId}/complete" };
         const doOptions = { context, errorCodes: [] };
-        const request = await this.createRequest$(
+        const request = this.createRequest$(
             {
-                context,
                 security: securitySettings$,
                 method: "POST",
                 path: path$,
@@ -279,17 +308,29 @@ export class Tasks extends ClientSDK {
 
         if (this.matchResponse(response, 200, "application/json")) {
             const responseBody = await response.json();
-            const result = operations.PostTasksTaskIdCompleteResponse$.inboundSchema.parse({
-                ...responseFields$,
-                Tasks: responseBody,
-            });
+            const result = schemas$.parse(
+                responseBody,
+                (val$) => {
+                    return operations.PostTasksTaskIdCompleteResponse$.inboundSchema.parse({
+                        ...responseFields$,
+                        Tasks: val$,
+                    });
+                },
+                "Response validation failed"
+            );
             return result;
         } else if (this.matchResponse(response, "default", "application/json")) {
             const responseBody = await response.json();
-            const result = operations.PostTasksTaskIdCompleteResponse$.inboundSchema.parse({
-                ...responseFields$,
-                Error: responseBody,
-            });
+            const result = schemas$.parse(
+                responseBody,
+                (val$) => {
+                    return operations.PostTasksTaskIdCompleteResponse$.inboundSchema.parse({
+                        ...responseFields$,
+                        Error: val$,
+                    });
+                },
+                "Response validation failed"
+            );
             return result;
         } else {
             const responseBody = await response.text();

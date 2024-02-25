@@ -6,6 +6,7 @@ import { SDKHooks } from "../hooks";
 import { SDK_METADATA, SDKOptions, serverURLFromOptions } from "../lib/config";
 import * as enc$ from "../lib/encodings";
 import { HTTPClient } from "../lib/http";
+import * as schemas$ from "../lib/schemas";
 import { ClientSDK, RequestOptions } from "../lib/sdks";
 import * as errors from "../sdk/models/errors";
 import * as operations from "../sdk/models/operations";
@@ -48,8 +49,12 @@ export class Tables extends ClientSDK {
         headers$.set("user-agent", SDK_METADATA.userAgent);
         headers$.set("Accept", "*/*");
 
-        const payload$ =
-            operations.DeletePeopleIdEmploymentEntryIdRequest$.outboundSchema.parse(input);
+        const payload$ = schemas$.parse(
+            input,
+            (value$) =>
+                operations.DeletePeopleIdEmploymentEntryIdRequest$.outboundSchema.parse(value$),
+            "Input validation failed"
+        );
         const body$ = null;
 
         const pathParams$ = {
@@ -71,9 +76,8 @@ export class Tables extends ClientSDK {
 
         const context = { operationID: "delete_/people/{id}/employment/{entry_id}" };
         const doOptions = { context, errorCodes: [] };
-        const request = await this.createRequest$(
+        const request = this.createRequest$(
             {
-                context,
                 security: securitySettings$,
                 method: "DELETE",
                 path: path$,
@@ -99,8 +103,13 @@ export class Tables extends ClientSDK {
             throw new errors.SDKError("Unexpected API response", response, responseBody);
         }
 
-        return operations.DeletePeopleIdEmploymentEntryIdResponse$.inboundSchema.parse(
-            responseFields$
+        return schemas$.parse(
+            undefined,
+            () =>
+                operations.DeletePeopleIdEmploymentEntryIdResponse$.inboundSchema.parse(
+                    responseFields$
+                ),
+            "Response validation failed"
         );
     }
 
@@ -115,8 +124,12 @@ export class Tables extends ClientSDK {
         headers$.set("user-agent", SDK_METADATA.userAgent);
         headers$.set("Accept", "*/*");
 
-        const payload$ =
-            operations.DeletePeopleIdEquitiesEntryIdRequest$.outboundSchema.parse(input);
+        const payload$ = schemas$.parse(
+            input,
+            (value$) =>
+                operations.DeletePeopleIdEquitiesEntryIdRequest$.outboundSchema.parse(value$),
+            "Input validation failed"
+        );
         const body$ = null;
 
         const pathParams$ = {
@@ -138,9 +151,8 @@ export class Tables extends ClientSDK {
 
         const context = { operationID: "delete_/people/{id}/equities/{entry_id}" };
         const doOptions = { context, errorCodes: [] };
-        const request = await this.createRequest$(
+        const request = this.createRequest$(
             {
-                context,
                 security: securitySettings$,
                 method: "DELETE",
                 path: path$,
@@ -166,8 +178,13 @@ export class Tables extends ClientSDK {
             throw new errors.SDKError("Unexpected API response", response, responseBody);
         }
 
-        return operations.DeletePeopleIdEquitiesEntryIdResponse$.inboundSchema.parse(
-            responseFields$
+        return schemas$.parse(
+            undefined,
+            () =>
+                operations.DeletePeopleIdEquitiesEntryIdResponse$.inboundSchema.parse(
+                    responseFields$
+                ),
+            "Response validation failed"
         );
     }
 
@@ -182,8 +199,12 @@ export class Tables extends ClientSDK {
         headers$.set("user-agent", SDK_METADATA.userAgent);
         headers$.set("Accept", "*/*");
 
-        const payload$ =
-            operations.DeletePeopleIdSalariesEntryIdRequest$.outboundSchema.parse(input);
+        const payload$ = schemas$.parse(
+            input,
+            (value$) =>
+                operations.DeletePeopleIdSalariesEntryIdRequest$.outboundSchema.parse(value$),
+            "Input validation failed"
+        );
         const body$ = null;
 
         const pathParams$ = {
@@ -205,9 +226,8 @@ export class Tables extends ClientSDK {
 
         const context = { operationID: "delete_/people/{id}/salaries/{entry_id}" };
         const doOptions = { context, errorCodes: [] };
-        const request = await this.createRequest$(
+        const request = this.createRequest$(
             {
-                context,
                 security: securitySettings$,
                 method: "DELETE",
                 path: path$,
@@ -233,8 +253,13 @@ export class Tables extends ClientSDK {
             throw new errors.SDKError("Unexpected API response", response, responseBody);
         }
 
-        return operations.DeletePeopleIdSalariesEntryIdResponse$.inboundSchema.parse(
-            responseFields$
+        return schemas$.parse(
+            undefined,
+            () =>
+                operations.DeletePeopleIdSalariesEntryIdResponse$.inboundSchema.parse(
+                    responseFields$
+                ),
+            "Response validation failed"
         );
     }
 
@@ -249,8 +274,12 @@ export class Tables extends ClientSDK {
         headers$.set("user-agent", SDK_METADATA.userAgent);
         headers$.set("Accept", "*/*");
 
-        const payload$ =
-            operations.DeletePeopleIdTrainingEntryIdRequest$.outboundSchema.parse(input);
+        const payload$ = schemas$.parse(
+            input,
+            (value$) =>
+                operations.DeletePeopleIdTrainingEntryIdRequest$.outboundSchema.parse(value$),
+            "Input validation failed"
+        );
         const body$ = null;
 
         const pathParams$ = {
@@ -272,9 +301,8 @@ export class Tables extends ClientSDK {
 
         const context = { operationID: "delete_/people/{id}/training/{entry_id}" };
         const doOptions = { context, errorCodes: [] };
-        const request = await this.createRequest$(
+        const request = this.createRequest$(
             {
-                context,
                 security: securitySettings$,
                 method: "DELETE",
                 path: path$,
@@ -300,8 +328,13 @@ export class Tables extends ClientSDK {
             throw new errors.SDKError("Unexpected API response", response, responseBody);
         }
 
-        return operations.DeletePeopleIdTrainingEntryIdResponse$.inboundSchema.parse(
-            responseFields$
+        return schemas$.parse(
+            undefined,
+            () =>
+                operations.DeletePeopleIdTrainingEntryIdResponse$.inboundSchema.parse(
+                    responseFields$
+                ),
+            "Response validation failed"
         );
     }
 
@@ -316,8 +349,12 @@ export class Tables extends ClientSDK {
         headers$.set("user-agent", SDK_METADATA.userAgent);
         headers$.set("Accept", "*/*");
 
-        const payload$ =
-            operations.DeletePeopleIdVariableEntryIdRequest$.outboundSchema.parse(input);
+        const payload$ = schemas$.parse(
+            input,
+            (value$) =>
+                operations.DeletePeopleIdVariableEntryIdRequest$.outboundSchema.parse(value$),
+            "Input validation failed"
+        );
         const body$ = null;
 
         const pathParams$ = {
@@ -339,9 +376,8 @@ export class Tables extends ClientSDK {
 
         const context = { operationID: "delete_/people/{id}/variable/{entry_id}" };
         const doOptions = { context, errorCodes: [] };
-        const request = await this.createRequest$(
+        const request = this.createRequest$(
             {
-                context,
                 security: securitySettings$,
                 method: "DELETE",
                 path: path$,
@@ -367,8 +403,13 @@ export class Tables extends ClientSDK {
             throw new errors.SDKError("Unexpected API response", response, responseBody);
         }
 
-        return operations.DeletePeopleIdVariableEntryIdResponse$.inboundSchema.parse(
-            responseFields$
+        return schemas$.parse(
+            undefined,
+            () =>
+                operations.DeletePeopleIdVariableEntryIdResponse$.inboundSchema.parse(
+                    responseFields$
+                ),
+            "Response validation failed"
         );
     }
 
@@ -383,7 +424,11 @@ export class Tables extends ClientSDK {
         headers$.set("user-agent", SDK_METADATA.userAgent);
         headers$.set("Accept", "*/*");
 
-        const payload$ = operations.DeletePeopleIdWorkEntryIdRequest$.outboundSchema.parse(input);
+        const payload$ = schemas$.parse(
+            input,
+            (value$) => operations.DeletePeopleIdWorkEntryIdRequest$.outboundSchema.parse(value$),
+            "Input validation failed"
+        );
         const body$ = null;
 
         const pathParams$ = {
@@ -405,9 +450,8 @@ export class Tables extends ClientSDK {
 
         const context = { operationID: "delete_/people/{id}/work/{entry_id}" };
         const doOptions = { context, errorCodes: [] };
-        const request = await this.createRequest$(
+        const request = this.createRequest$(
             {
-                context,
                 security: securitySettings$,
                 method: "DELETE",
                 path: path$,
@@ -433,7 +477,12 @@ export class Tables extends ClientSDK {
             throw new errors.SDKError("Unexpected API response", response, responseBody);
         }
 
-        return operations.DeletePeopleIdWorkEntryIdResponse$.inboundSchema.parse(responseFields$);
+        return schemas$.parse(
+            undefined,
+            () =>
+                operations.DeletePeopleIdWorkEntryIdResponse$.inboundSchema.parse(responseFields$),
+            "Response validation failed"
+        );
     }
 
     /**
@@ -450,7 +499,11 @@ export class Tables extends ClientSDK {
         headers$.set("user-agent", SDK_METADATA.userAgent);
         headers$.set("Accept", "application/json");
 
-        const payload$ = operations.GetPeopleIdEmploymentRequest$.outboundSchema.parse(input);
+        const payload$ = schemas$.parse(
+            input,
+            (value$) => operations.GetPeopleIdEmploymentRequest$.outboundSchema.parse(value$),
+            "Input validation failed"
+        );
         const body$ = null;
 
         const pathParams$ = {
@@ -468,9 +521,8 @@ export class Tables extends ClientSDK {
 
         const context = { operationID: "get_/people/{id}/employment" };
         const doOptions = { context, errorCodes: [] };
-        const request = await this.createRequest$(
+        const request = this.createRequest$(
             {
-                context,
                 security: securitySettings$,
                 method: "GET",
                 path: path$,
@@ -491,10 +543,16 @@ export class Tables extends ClientSDK {
 
         if (this.matchResponse(response, 200, "application/json")) {
             const responseBody = await response.json();
-            const result = operations.GetPeopleIdEmploymentResponse$.inboundSchema.parse({
-                ...responseFields$,
-                EmploymentEntries: responseBody,
-            });
+            const result = schemas$.parse(
+                responseBody,
+                (val$) => {
+                    return operations.GetPeopleIdEmploymentResponse$.inboundSchema.parse({
+                        ...responseFields$,
+                        EmploymentEntries: val$,
+                    });
+                },
+                "Response validation failed"
+            );
             return result;
         } else {
             const responseBody = await response.text();
@@ -516,7 +574,11 @@ export class Tables extends ClientSDK {
         headers$.set("user-agent", SDK_METADATA.userAgent);
         headers$.set("Accept", "application/json");
 
-        const payload$ = operations.GetPeopleIdEquitiesRequest$.outboundSchema.parse(input);
+        const payload$ = schemas$.parse(
+            input,
+            (value$) => operations.GetPeopleIdEquitiesRequest$.outboundSchema.parse(value$),
+            "Input validation failed"
+        );
         const body$ = null;
 
         const pathParams$ = {
@@ -534,9 +596,8 @@ export class Tables extends ClientSDK {
 
         const context = { operationID: "get_/people/{id}/equities" };
         const doOptions = { context, errorCodes: [] };
-        const request = await this.createRequest$(
+        const request = this.createRequest$(
             {
-                context,
                 security: securitySettings$,
                 method: "GET",
                 path: path$,
@@ -557,10 +618,16 @@ export class Tables extends ClientSDK {
 
         if (this.matchResponse(response, 200, "application/json")) {
             const responseBody = await response.json();
-            const result = operations.GetPeopleIdEquitiesResponse$.inboundSchema.parse({
-                ...responseFields$,
-                EquityEntries: responseBody,
-            });
+            const result = schemas$.parse(
+                responseBody,
+                (val$) => {
+                    return operations.GetPeopleIdEquitiesResponse$.inboundSchema.parse({
+                        ...responseFields$,
+                        EquityEntries: val$,
+                    });
+                },
+                "Response validation failed"
+            );
             return result;
         } else {
             const responseBody = await response.text();
@@ -582,7 +649,11 @@ export class Tables extends ClientSDK {
         headers$.set("user-agent", SDK_METADATA.userAgent);
         headers$.set("Accept", "application/json");
 
-        const payload$ = operations.GetPeopleIdLifecycleRequest$.outboundSchema.parse(input);
+        const payload$ = schemas$.parse(
+            input,
+            (value$) => operations.GetPeopleIdLifecycleRequest$.outboundSchema.parse(value$),
+            "Input validation failed"
+        );
         const body$ = null;
 
         const pathParams$ = {
@@ -600,9 +671,8 @@ export class Tables extends ClientSDK {
 
         const context = { operationID: "get_/people/{id}/lifecycle" };
         const doOptions = { context, errorCodes: [] };
-        const request = await this.createRequest$(
+        const request = this.createRequest$(
             {
-                context,
                 security: securitySettings$,
                 method: "GET",
                 path: path$,
@@ -623,10 +693,16 @@ export class Tables extends ClientSDK {
 
         if (this.matchResponse(response, 200, "application/json")) {
             const responseBody = await response.json();
-            const result = operations.GetPeopleIdLifecycleResponse$.inboundSchema.parse({
-                ...responseFields$,
-                LifeCycleEntries: responseBody,
-            });
+            const result = schemas$.parse(
+                responseBody,
+                (val$) => {
+                    return operations.GetPeopleIdLifecycleResponse$.inboundSchema.parse({
+                        ...responseFields$,
+                        LifeCycleEntries: val$,
+                    });
+                },
+                "Response validation failed"
+            );
             return result;
         } else {
             const responseBody = await response.text();
@@ -648,7 +724,11 @@ export class Tables extends ClientSDK {
         headers$.set("user-agent", SDK_METADATA.userAgent);
         headers$.set("Accept", "application/json");
 
-        const payload$ = operations.GetPeopleIdSalariesRequest$.outboundSchema.parse(input);
+        const payload$ = schemas$.parse(
+            input,
+            (value$) => operations.GetPeopleIdSalariesRequest$.outboundSchema.parse(value$),
+            "Input validation failed"
+        );
         const body$ = null;
 
         const pathParams$ = {
@@ -666,9 +746,8 @@ export class Tables extends ClientSDK {
 
         const context = { operationID: "get_/people/{id}/salaries" };
         const doOptions = { context, errorCodes: [] };
-        const request = await this.createRequest$(
+        const request = this.createRequest$(
             {
-                context,
                 security: securitySettings$,
                 method: "GET",
                 path: path$,
@@ -689,10 +768,16 @@ export class Tables extends ClientSDK {
 
         if (this.matchResponse(response, 200, "application/json")) {
             const responseBody = await response.json();
-            const result = operations.GetPeopleIdSalariesResponse$.inboundSchema.parse({
-                ...responseFields$,
-                SalaryEntries: responseBody,
-            });
+            const result = schemas$.parse(
+                responseBody,
+                (val$) => {
+                    return operations.GetPeopleIdSalariesResponse$.inboundSchema.parse({
+                        ...responseFields$,
+                        SalaryEntries: val$,
+                    });
+                },
+                "Response validation failed"
+            );
             return result;
         } else {
             const responseBody = await response.text();
@@ -714,7 +799,11 @@ export class Tables extends ClientSDK {
         headers$.set("user-agent", SDK_METADATA.userAgent);
         headers$.set("Accept", "application/json");
 
-        const payload$ = operations.GetPeopleIdTrainingRequest$.outboundSchema.parse(input);
+        const payload$ = schemas$.parse(
+            input,
+            (value$) => operations.GetPeopleIdTrainingRequest$.outboundSchema.parse(value$),
+            "Input validation failed"
+        );
         const body$ = null;
 
         const pathParams$ = {
@@ -732,9 +821,8 @@ export class Tables extends ClientSDK {
 
         const context = { operationID: "get_/people/{id}/training" };
         const doOptions = { context, errorCodes: [] };
-        const request = await this.createRequest$(
+        const request = this.createRequest$(
             {
-                context,
                 security: securitySettings$,
                 method: "GET",
                 path: path$,
@@ -755,10 +843,16 @@ export class Tables extends ClientSDK {
 
         if (this.matchResponse(response, 200, "application/json")) {
             const responseBody = await response.json();
-            const result = operations.GetPeopleIdTrainingResponse$.inboundSchema.parse({
-                ...responseFields$,
-                TrainingEntries: responseBody,
-            });
+            const result = schemas$.parse(
+                responseBody,
+                (val$) => {
+                    return operations.GetPeopleIdTrainingResponse$.inboundSchema.parse({
+                        ...responseFields$,
+                        TrainingEntries: val$,
+                    });
+                },
+                "Response validation failed"
+            );
             return result;
         } else {
             const responseBody = await response.text();
@@ -780,7 +874,11 @@ export class Tables extends ClientSDK {
         headers$.set("user-agent", SDK_METADATA.userAgent);
         headers$.set("Accept", "application/json");
 
-        const payload$ = operations.GetPeopleIdVariableRequest$.outboundSchema.parse(input);
+        const payload$ = schemas$.parse(
+            input,
+            (value$) => operations.GetPeopleIdVariableRequest$.outboundSchema.parse(value$),
+            "Input validation failed"
+        );
         const body$ = null;
 
         const pathParams$ = {
@@ -798,9 +896,8 @@ export class Tables extends ClientSDK {
 
         const context = { operationID: "get_/people/{id}/variable" };
         const doOptions = { context, errorCodes: [] };
-        const request = await this.createRequest$(
+        const request = this.createRequest$(
             {
-                context,
                 security: securitySettings$,
                 method: "GET",
                 path: path$,
@@ -821,10 +918,16 @@ export class Tables extends ClientSDK {
 
         if (this.matchResponse(response, 200, "application/json")) {
             const responseBody = await response.json();
-            const result = operations.GetPeopleIdVariableResponse$.inboundSchema.parse({
-                ...responseFields$,
-                VariableEntries: responseBody,
-            });
+            const result = schemas$.parse(
+                responseBody,
+                (val$) => {
+                    return operations.GetPeopleIdVariableResponse$.inboundSchema.parse({
+                        ...responseFields$,
+                        VariableEntries: val$,
+                    });
+                },
+                "Response validation failed"
+            );
             return result;
         } else {
             const responseBody = await response.text();
@@ -846,7 +949,11 @@ export class Tables extends ClientSDK {
         headers$.set("user-agent", SDK_METADATA.userAgent);
         headers$.set("Accept", "application/json");
 
-        const payload$ = operations.GetPeopleIdWorkRequest$.outboundSchema.parse(input);
+        const payload$ = schemas$.parse(
+            input,
+            (value$) => operations.GetPeopleIdWorkRequest$.outboundSchema.parse(value$),
+            "Input validation failed"
+        );
         const body$ = null;
 
         const pathParams$ = {
@@ -864,9 +971,8 @@ export class Tables extends ClientSDK {
 
         const context = { operationID: "get_/people/{id}/work" };
         const doOptions = { context, errorCodes: [] };
-        const request = await this.createRequest$(
+        const request = this.createRequest$(
             {
-                context,
                 security: securitySettings$,
                 method: "GET",
                 path: path$,
@@ -887,10 +993,16 @@ export class Tables extends ClientSDK {
 
         if (this.matchResponse(response, 200, "application/json")) {
             const responseBody = await response.json();
-            const result = operations.GetPeopleIdWorkResponse$.inboundSchema.parse({
-                ...responseFields$,
-                WorkEntries: responseBody,
-            });
+            const result = schemas$.parse(
+                responseBody,
+                (val$) => {
+                    return operations.GetPeopleIdWorkResponse$.inboundSchema.parse({
+                        ...responseFields$,
+                        WorkEntries: val$,
+                    });
+                },
+                "Response validation failed"
+            );
             return result;
         } else {
             const responseBody = await response.text();
@@ -913,7 +1025,11 @@ export class Tables extends ClientSDK {
         headers$.set("Content-Type", "application/json");
         headers$.set("Accept", "*/*");
 
-        const payload$ = operations.PostPeopleIdEmploymentRequest$.outboundSchema.parse(input);
+        const payload$ = schemas$.parse(
+            input,
+            (value$) => operations.PostPeopleIdEmploymentRequest$.outboundSchema.parse(value$),
+            "Input validation failed"
+        );
         const body$ = enc$.encodeJSON("body", payload$.EmploymentEntry, { explode: true });
 
         const pathParams$ = {
@@ -931,9 +1047,8 @@ export class Tables extends ClientSDK {
 
         const context = { operationID: "post_/people/{id}/employment" };
         const doOptions = { context, errorCodes: [] };
-        const request = await this.createRequest$(
+        const request = this.createRequest$(
             {
-                context,
                 security: securitySettings$,
                 method: "POST",
                 path: path$,
@@ -959,7 +1074,11 @@ export class Tables extends ClientSDK {
             throw new errors.SDKError("Unexpected API response", response, responseBody);
         }
 
-        return operations.PostPeopleIdEmploymentResponse$.inboundSchema.parse(responseFields$);
+        return schemas$.parse(
+            undefined,
+            () => operations.PostPeopleIdEmploymentResponse$.inboundSchema.parse(responseFields$),
+            "Response validation failed"
+        );
     }
 
     /**
@@ -977,7 +1096,11 @@ export class Tables extends ClientSDK {
         headers$.set("Content-Type", "application/json");
         headers$.set("Accept", "*/*");
 
-        const payload$ = operations.PostPeopleIdEquitiesRequest$.outboundSchema.parse(input);
+        const payload$ = schemas$.parse(
+            input,
+            (value$) => operations.PostPeopleIdEquitiesRequest$.outboundSchema.parse(value$),
+            "Input validation failed"
+        );
         const body$ = enc$.encodeJSON("body", payload$.EquityEntry, { explode: true });
 
         const pathParams$ = {
@@ -995,9 +1118,8 @@ export class Tables extends ClientSDK {
 
         const context = { operationID: "post_/people/{id}/equities" };
         const doOptions = { context, errorCodes: [] };
-        const request = await this.createRequest$(
+        const request = this.createRequest$(
             {
-                context,
                 security: securitySettings$,
                 method: "POST",
                 path: path$,
@@ -1023,7 +1145,11 @@ export class Tables extends ClientSDK {
             throw new errors.SDKError("Unexpected API response", response, responseBody);
         }
 
-        return operations.PostPeopleIdEquitiesResponse$.inboundSchema.parse(responseFields$);
+        return schemas$.parse(
+            undefined,
+            () => operations.PostPeopleIdEquitiesResponse$.inboundSchema.parse(responseFields$),
+            "Response validation failed"
+        );
     }
 
     /**
@@ -1041,7 +1167,11 @@ export class Tables extends ClientSDK {
         headers$.set("Content-Type", "application/json");
         headers$.set("Accept", "*/*");
 
-        const payload$ = operations.PostPeopleIdSalariesRequest$.outboundSchema.parse(input);
+        const payload$ = schemas$.parse(
+            input,
+            (value$) => operations.PostPeopleIdSalariesRequest$.outboundSchema.parse(value$),
+            "Input validation failed"
+        );
         const body$ = enc$.encodeJSON("body", payload$.SalaryEntry, { explode: true });
 
         const pathParams$ = {
@@ -1059,9 +1189,8 @@ export class Tables extends ClientSDK {
 
         const context = { operationID: "post_/people/{id}/salaries" };
         const doOptions = { context, errorCodes: [] };
-        const request = await this.createRequest$(
+        const request = this.createRequest$(
             {
-                context,
                 security: securitySettings$,
                 method: "POST",
                 path: path$,
@@ -1087,7 +1216,11 @@ export class Tables extends ClientSDK {
             throw new errors.SDKError("Unexpected API response", response, responseBody);
         }
 
-        return operations.PostPeopleIdSalariesResponse$.inboundSchema.parse(responseFields$);
+        return schemas$.parse(
+            undefined,
+            () => operations.PostPeopleIdSalariesResponse$.inboundSchema.parse(responseFields$),
+            "Response validation failed"
+        );
     }
 
     /**
@@ -1105,7 +1238,11 @@ export class Tables extends ClientSDK {
         headers$.set("Content-Type", "application/json");
         headers$.set("Accept", "*/*");
 
-        const payload$ = operations.PostPeopleIdTrainingRequest$.outboundSchema.parse(input);
+        const payload$ = schemas$.parse(
+            input,
+            (value$) => operations.PostPeopleIdTrainingRequest$.outboundSchema.parse(value$),
+            "Input validation failed"
+        );
         const body$ = enc$.encodeJSON("body", payload$.TrainingEntry, { explode: true });
 
         const pathParams$ = {
@@ -1123,9 +1260,8 @@ export class Tables extends ClientSDK {
 
         const context = { operationID: "post_/people/{id}/training" };
         const doOptions = { context, errorCodes: [] };
-        const request = await this.createRequest$(
+        const request = this.createRequest$(
             {
-                context,
                 security: securitySettings$,
                 method: "POST",
                 path: path$,
@@ -1151,7 +1287,11 @@ export class Tables extends ClientSDK {
             throw new errors.SDKError("Unexpected API response", response, responseBody);
         }
 
-        return operations.PostPeopleIdTrainingResponse$.inboundSchema.parse(responseFields$);
+        return schemas$.parse(
+            undefined,
+            () => operations.PostPeopleIdTrainingResponse$.inboundSchema.parse(responseFields$),
+            "Response validation failed"
+        );
     }
 
     /**
@@ -1169,7 +1309,11 @@ export class Tables extends ClientSDK {
         headers$.set("Content-Type", "application/json");
         headers$.set("Accept", "*/*");
 
-        const payload$ = operations.PostPeopleIdVariableRequest$.outboundSchema.parse(input);
+        const payload$ = schemas$.parse(
+            input,
+            (value$) => operations.PostPeopleIdVariableRequest$.outboundSchema.parse(value$),
+            "Input validation failed"
+        );
         const body$ = enc$.encodeJSON("body", payload$.VariableEntry, { explode: true });
 
         const pathParams$ = {
@@ -1187,9 +1331,8 @@ export class Tables extends ClientSDK {
 
         const context = { operationID: "post_/people/{id}/variable" };
         const doOptions = { context, errorCodes: [] };
-        const request = await this.createRequest$(
+        const request = this.createRequest$(
             {
-                context,
                 security: securitySettings$,
                 method: "POST",
                 path: path$,
@@ -1215,7 +1358,11 @@ export class Tables extends ClientSDK {
             throw new errors.SDKError("Unexpected API response", response, responseBody);
         }
 
-        return operations.PostPeopleIdVariableResponse$.inboundSchema.parse(responseFields$);
+        return schemas$.parse(
+            undefined,
+            () => operations.PostPeopleIdVariableResponse$.inboundSchema.parse(responseFields$),
+            "Response validation failed"
+        );
     }
 
     /**
@@ -1233,7 +1380,11 @@ export class Tables extends ClientSDK {
         headers$.set("Content-Type", "application/json");
         headers$.set("Accept", "*/*");
 
-        const payload$ = operations.PostPeopleIdWorkRequest$.outboundSchema.parse(input);
+        const payload$ = schemas$.parse(
+            input,
+            (value$) => operations.PostPeopleIdWorkRequest$.outboundSchema.parse(value$),
+            "Input validation failed"
+        );
         const body$ = enc$.encodeJSON("body", payload$.WorkEntry, { explode: true });
 
         const pathParams$ = {
@@ -1251,9 +1402,8 @@ export class Tables extends ClientSDK {
 
         const context = { operationID: "post_/people/{id}/work" };
         const doOptions = { context, errorCodes: [] };
-        const request = await this.createRequest$(
+        const request = this.createRequest$(
             {
-                context,
                 security: securitySettings$,
                 method: "POST",
                 path: path$,
@@ -1279,7 +1429,11 @@ export class Tables extends ClientSDK {
             throw new errors.SDKError("Unexpected API response", response, responseBody);
         }
 
-        return operations.PostPeopleIdWorkResponse$.inboundSchema.parse(responseFields$);
+        return schemas$.parse(
+            undefined,
+            () => operations.PostPeopleIdWorkResponse$.inboundSchema.parse(responseFields$),
+            "Response validation failed"
+        );
     }
 
     /**
@@ -1297,8 +1451,12 @@ export class Tables extends ClientSDK {
         headers$.set("Content-Type", "application/json");
         headers$.set("Accept", "*/*");
 
-        const payload$ =
-            operations.PutPeopleIdEmploymentEntryIdRequest$.outboundSchema.parse(input);
+        const payload$ = schemas$.parse(
+            input,
+            (value$) =>
+                operations.PutPeopleIdEmploymentEntryIdRequest$.outboundSchema.parse(value$),
+            "Input validation failed"
+        );
         const body$ = enc$.encodeJSON("body", payload$.EmploymentEntry, { explode: true });
 
         const pathParams$ = {
@@ -1320,9 +1478,8 @@ export class Tables extends ClientSDK {
 
         const context = { operationID: "put_/people/{id}/employment/{entry_id}" };
         const doOptions = { context, errorCodes: [] };
-        const request = await this.createRequest$(
+        const request = this.createRequest$(
             {
-                context,
                 security: securitySettings$,
                 method: "PUT",
                 path: path$,
@@ -1348,8 +1505,13 @@ export class Tables extends ClientSDK {
             throw new errors.SDKError("Unexpected API response", response, responseBody);
         }
 
-        return operations.PutPeopleIdEmploymentEntryIdResponse$.inboundSchema.parse(
-            responseFields$
+        return schemas$.parse(
+            undefined,
+            () =>
+                operations.PutPeopleIdEmploymentEntryIdResponse$.inboundSchema.parse(
+                    responseFields$
+                ),
+            "Response validation failed"
         );
     }
 
@@ -1368,7 +1530,11 @@ export class Tables extends ClientSDK {
         headers$.set("Content-Type", "application/json");
         headers$.set("Accept", "*/*");
 
-        const payload$ = operations.PutPeopleIdEquitiesEntryIdRequest$.outboundSchema.parse(input);
+        const payload$ = schemas$.parse(
+            input,
+            (value$) => operations.PutPeopleIdEquitiesEntryIdRequest$.outboundSchema.parse(value$),
+            "Input validation failed"
+        );
         const body$ = enc$.encodeJSON("body", payload$.EquityEntry, { explode: true });
 
         const pathParams$ = {
@@ -1390,9 +1556,8 @@ export class Tables extends ClientSDK {
 
         const context = { operationID: "put_/people/{id}/equities/{entry_id}" };
         const doOptions = { context, errorCodes: [] };
-        const request = await this.createRequest$(
+        const request = this.createRequest$(
             {
-                context,
                 security: securitySettings$,
                 method: "PUT",
                 path: path$,
@@ -1418,7 +1583,12 @@ export class Tables extends ClientSDK {
             throw new errors.SDKError("Unexpected API response", response, responseBody);
         }
 
-        return operations.PutPeopleIdEquitiesEntryIdResponse$.inboundSchema.parse(responseFields$);
+        return schemas$.parse(
+            undefined,
+            () =>
+                operations.PutPeopleIdEquitiesEntryIdResponse$.inboundSchema.parse(responseFields$),
+            "Response validation failed"
+        );
     }
 
     /**
@@ -1436,7 +1606,11 @@ export class Tables extends ClientSDK {
         headers$.set("Content-Type", "application/json");
         headers$.set("Accept", "*/*");
 
-        const payload$ = operations.PutPeopleIdWorkEntryIdRequest$.outboundSchema.parse(input);
+        const payload$ = schemas$.parse(
+            input,
+            (value$) => operations.PutPeopleIdWorkEntryIdRequest$.outboundSchema.parse(value$),
+            "Input validation failed"
+        );
         const body$ = enc$.encodeJSON("body", payload$.WorkEntry, { explode: true });
 
         const pathParams$ = {
@@ -1458,9 +1632,8 @@ export class Tables extends ClientSDK {
 
         const context = { operationID: "put_/people/{id}/work/{entry_id}" };
         const doOptions = { context, errorCodes: [] };
-        const request = await this.createRequest$(
+        const request = this.createRequest$(
             {
-                context,
                 security: securitySettings$,
                 method: "PUT",
                 path: path$,
@@ -1486,6 +1659,10 @@ export class Tables extends ClientSDK {
             throw new errors.SDKError("Unexpected API response", response, responseBody);
         }
 
-        return operations.PutPeopleIdWorkEntryIdResponse$.inboundSchema.parse(responseFields$);
+        return schemas$.parse(
+            undefined,
+            () => operations.PutPeopleIdWorkEntryIdResponse$.inboundSchema.parse(responseFields$),
+            "Response validation failed"
+        );
     }
 }

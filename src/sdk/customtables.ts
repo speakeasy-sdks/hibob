@@ -6,6 +6,7 @@ import { SDKHooks } from "../hooks";
 import { SDK_METADATA, SDKOptions, serverURLFromOptions } from "../lib/config";
 import * as enc$ from "../lib/encodings";
 import { HTTPClient } from "../lib/http";
+import * as schemas$ from "../lib/schemas";
 import { ClientSDK, RequestOptions } from "../lib/sdks";
 import * as errors from "../sdk/models/errors";
 import * as operations from "../sdk/models/operations";
@@ -48,10 +49,14 @@ export class CustomTables extends ClientSDK {
         headers$.set("user-agent", SDK_METADATA.userAgent);
         headers$.set("Accept", "*/*");
 
-        const payload$ =
-            operations.DeletePeopleCustomTablesEmployeeIdCustomTableIdEntryIdRequest$.outboundSchema.parse(
-                input
-            );
+        const payload$ = schemas$.parse(
+            input,
+            (value$) =>
+                operations.DeletePeopleCustomTablesEmployeeIdCustomTableIdEntryIdRequest$.outboundSchema.parse(
+                    value$
+                ),
+            "Input validation failed"
+        );
         const body$ = null;
 
         const pathParams$ = {
@@ -84,9 +89,8 @@ export class CustomTables extends ClientSDK {
             operationID: "delete_/people/custom-tables/{employee_id}/{custom_table_id}/{entry_id}",
         };
         const doOptions = { context, errorCodes: [] };
-        const request = await this.createRequest$(
+        const request = this.createRequest$(
             {
-                context,
                 security: securitySettings$,
                 method: "DELETE",
                 path: path$,
@@ -112,8 +116,13 @@ export class CustomTables extends ClientSDK {
             throw new errors.SDKError("Unexpected API response", response, responseBody);
         }
 
-        return operations.DeletePeopleCustomTablesEmployeeIdCustomTableIdEntryIdResponse$.inboundSchema.parse(
-            responseFields$
+        return schemas$.parse(
+            undefined,
+            () =>
+                operations.DeletePeopleCustomTablesEmployeeIdCustomTableIdEntryIdResponse$.inboundSchema.parse(
+                    responseFields$
+                ),
+            "Response validation failed"
         );
     }
 
@@ -128,10 +137,14 @@ export class CustomTables extends ClientSDK {
         headers$.set("user-agent", SDK_METADATA.userAgent);
         headers$.set("Accept", "application/json");
 
-        const payload$ =
-            operations.GetPeopleCustomTablesEmployeeIdCustomTableIdRequest$.outboundSchema.parse(
-                input
-            );
+        const payload$ = schemas$.parse(
+            input,
+            (value$) =>
+                operations.GetPeopleCustomTablesEmployeeIdCustomTableIdRequest$.outboundSchema.parse(
+                    value$
+                ),
+            "Input validation failed"
+        );
         const body$ = null;
 
         const pathParams$ = {
@@ -167,9 +180,8 @@ export class CustomTables extends ClientSDK {
             operationID: "get_/people/custom-tables/{employee_id}/{custom_table_id}",
         };
         const doOptions = { context, errorCodes: [] };
-        const request = await this.createRequest$(
+        const request = this.createRequest$(
             {
-                context,
                 security: securitySettings$,
                 method: "GET",
                 path: path$,
@@ -190,13 +202,18 @@ export class CustomTables extends ClientSDK {
 
         if (this.matchResponse(response, 200, "application/json")) {
             const responseBody = await response.json();
-            const result =
-                operations.GetPeopleCustomTablesEmployeeIdCustomTableIdResponse$.inboundSchema.parse(
-                    {
-                        ...responseFields$,
-                        CustomTableEntriesList: responseBody,
-                    }
-                );
+            const result = schemas$.parse(
+                responseBody,
+                (val$) => {
+                    return operations.GetPeopleCustomTablesEmployeeIdCustomTableIdResponse$.inboundSchema.parse(
+                        {
+                            ...responseFields$,
+                            CustomTableEntriesList: val$,
+                        }
+                    );
+                },
+                "Response validation failed"
+            );
             return result;
         } else {
             const responseBody = await response.text();
@@ -216,10 +233,14 @@ export class CustomTables extends ClientSDK {
         headers$.set("Content-Type", "application/json");
         headers$.set("Accept", "*/*");
 
-        const payload$ =
-            operations.PostPeopleCustomTablesEmployeeIdCustomTableIdRequest$.outboundSchema.parse(
-                input
-            );
+        const payload$ = schemas$.parse(
+            input,
+            (value$) =>
+                operations.PostPeopleCustomTablesEmployeeIdCustomTableIdRequest$.outboundSchema.parse(
+                    value$
+                ),
+            "Input validation failed"
+        );
         const body$ = enc$.encodeJSON("body", payload$.RequestBody, { explode: true });
 
         const pathParams$ = {
@@ -248,9 +269,8 @@ export class CustomTables extends ClientSDK {
             operationID: "post_/people/custom-tables/{employee_id}/{custom_table_id}",
         };
         const doOptions = { context, errorCodes: [] };
-        const request = await this.createRequest$(
+        const request = this.createRequest$(
             {
-                context,
                 security: securitySettings$,
                 method: "POST",
                 path: path$,
@@ -276,8 +296,13 @@ export class CustomTables extends ClientSDK {
             throw new errors.SDKError("Unexpected API response", response, responseBody);
         }
 
-        return operations.PostPeopleCustomTablesEmployeeIdCustomTableIdResponse$.inboundSchema.parse(
-            responseFields$
+        return schemas$.parse(
+            undefined,
+            () =>
+                operations.PostPeopleCustomTablesEmployeeIdCustomTableIdResponse$.inboundSchema.parse(
+                    responseFields$
+                ),
+            "Response validation failed"
         );
     }
 
@@ -293,10 +318,14 @@ export class CustomTables extends ClientSDK {
         headers$.set("Content-Type", "application/json");
         headers$.set("Accept", "*/*");
 
-        const payload$ =
-            operations.PutPeopleCustomTablesEmployeeIdCustomTableIdEntryIdRequest$.outboundSchema.parse(
-                input
-            );
+        const payload$ = schemas$.parse(
+            input,
+            (value$) =>
+                operations.PutPeopleCustomTablesEmployeeIdCustomTableIdEntryIdRequest$.outboundSchema.parse(
+                    value$
+                ),
+            "Input validation failed"
+        );
         const body$ = enc$.encodeJSON("body", payload$.RequestBody, { explode: true });
 
         const pathParams$ = {
@@ -329,9 +358,8 @@ export class CustomTables extends ClientSDK {
             operationID: "put_/people/custom-tables/{employee_id}/{custom_table_id}/{entry_id}",
         };
         const doOptions = { context, errorCodes: [] };
-        const request = await this.createRequest$(
+        const request = this.createRequest$(
             {
-                context,
                 security: securitySettings$,
                 method: "PUT",
                 path: path$,
@@ -357,8 +385,13 @@ export class CustomTables extends ClientSDK {
             throw new errors.SDKError("Unexpected API response", response, responseBody);
         }
 
-        return operations.PutPeopleCustomTablesEmployeeIdCustomTableIdEntryIdResponse$.inboundSchema.parse(
-            responseFields$
+        return schemas$.parse(
+            undefined,
+            () =>
+                operations.PutPeopleCustomTablesEmployeeIdCustomTableIdEntryIdResponse$.inboundSchema.parse(
+                    responseFields$
+                ),
+            "Response validation failed"
         );
     }
 }

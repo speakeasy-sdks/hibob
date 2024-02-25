@@ -6,6 +6,7 @@ import { SDKHooks } from "../hooks";
 import { SDK_METADATA, SDKOptions, serverURLFromOptions } from "../lib/config";
 import * as enc$ from "../lib/encodings";
 import { HTTPClient } from "../lib/http";
+import * as schemas$ from "../lib/schemas";
 import { ClientSDK, RequestOptions } from "../lib/sdks";
 import * as errors from "../sdk/models/errors";
 import * as operations from "../sdk/models/operations";
@@ -62,9 +63,8 @@ export class Reports extends ClientSDK {
 
         const context = { operationID: "get_/company/reports" };
         const doOptions = { context, errorCodes: [] };
-        const request = await this.createRequest$(
+        const request = this.createRequest$(
             {
-                context,
                 security: securitySettings$,
                 method: "GET",
                 path: path$,
@@ -84,17 +84,29 @@ export class Reports extends ClientSDK {
 
         if (this.matchResponse(response, 200, "application/json")) {
             const responseBody = await response.json();
-            const result = operations.GetCompanyReportsResponse$.inboundSchema.parse({
-                ...responseFields$,
-                Reports: responseBody,
-            });
+            const result = schemas$.parse(
+                responseBody,
+                (val$) => {
+                    return operations.GetCompanyReportsResponse$.inboundSchema.parse({
+                        ...responseFields$,
+                        Reports: val$,
+                    });
+                },
+                "Response validation failed"
+            );
             return result;
         } else if (this.matchResponse(response, "default", "application/json")) {
             const responseBody = await response.json();
-            const result = operations.GetCompanyReportsResponse$.inboundSchema.parse({
-                ...responseFields$,
-                Error: responseBody,
-            });
+            const result = schemas$.parse(
+                responseBody,
+                (val$) => {
+                    return operations.GetCompanyReportsResponse$.inboundSchema.parse({
+                        ...responseFields$,
+                        Error: val$,
+                    });
+                },
+                "Response validation failed"
+            );
             return result;
         } else {
             const responseBody = await response.text();
@@ -116,8 +128,12 @@ export class Reports extends ClientSDK {
         headers$.set("user-agent", SDK_METADATA.userAgent);
         headers$.set("Accept", "application/json");
 
-        const payload$ =
-            operations.GetCompanyReportsDownloadReportNameRequest$.outboundSchema.parse(input);
+        const payload$ = schemas$.parse(
+            input,
+            (value$) =>
+                operations.GetCompanyReportsDownloadReportNameRequest$.outboundSchema.parse(value$),
+            "Input validation failed"
+        );
         const body$ = null;
 
         const pathParams$ = {
@@ -140,9 +156,8 @@ export class Reports extends ClientSDK {
 
         const context = { operationID: "get_/company/reports/download/{reportName}" };
         const doOptions = { context, errorCodes: [] };
-        const request = await this.createRequest$(
+        const request = this.createRequest$(
             {
-                context,
                 security: securitySettings$,
                 method: "GET",
                 path: path$,
@@ -163,29 +178,48 @@ export class Reports extends ClientSDK {
 
         if (this.matchResponse(response, 200, "application/json")) {
             const responseBody = response.body ?? undefined;
-            const result =
-                operations.GetCompanyReportsDownloadReportNameResponse$.inboundSchema.parse({
-                    ...responseFields$,
-                    stream: responseBody,
-                });
+            const result = schemas$.parse(
+                responseBody,
+                (val$) => {
+                    return operations.GetCompanyReportsDownloadReportNameResponse$.inboundSchema.parse(
+                        {
+                            ...responseFields$,
+                            stream: val$,
+                        }
+                    );
+                },
+                "Response validation failed"
+            );
             return result;
         } else if (this.matchStatusCode(response, 204)) {
             // fallthrough
         } else if (this.matchResponse(response, "default", "application/json")) {
             const responseBody = await response.json();
-            const result =
-                operations.GetCompanyReportsDownloadReportNameResponse$.inboundSchema.parse({
-                    ...responseFields$,
-                    Error: responseBody,
-                });
+            const result = schemas$.parse(
+                responseBody,
+                (val$) => {
+                    return operations.GetCompanyReportsDownloadReportNameResponse$.inboundSchema.parse(
+                        {
+                            ...responseFields$,
+                            Error: val$,
+                        }
+                    );
+                },
+                "Response validation failed"
+            );
             return result;
         } else {
             const responseBody = await response.text();
             throw new errors.SDKError("Unexpected API response", response, responseBody);
         }
 
-        return operations.GetCompanyReportsDownloadReportNameResponse$.inboundSchema.parse(
-            responseFields$
+        return schemas$.parse(
+            undefined,
+            () =>
+                operations.GetCompanyReportsDownloadReportNameResponse$.inboundSchema.parse(
+                    responseFields$
+                ),
+            "Response validation failed"
         );
     }
 
@@ -203,8 +237,12 @@ export class Reports extends ClientSDK {
         headers$.set("user-agent", SDK_METADATA.userAgent);
         headers$.set("Accept", "application/json");
 
-        const payload$ =
-            operations.GetCompanyReportsReportIdDownloadRequest$.outboundSchema.parse(input);
+        const payload$ = schemas$.parse(
+            input,
+            (value$) =>
+                operations.GetCompanyReportsReportIdDownloadRequest$.outboundSchema.parse(value$),
+            "Input validation failed"
+        );
         const body$ = null;
 
         const pathParams$ = {
@@ -236,9 +274,8 @@ export class Reports extends ClientSDK {
 
         const context = { operationID: "get_/company/reports/{reportId}/download" };
         const doOptions = { context, errorCodes: [] };
-        const request = await this.createRequest$(
+        const request = this.createRequest$(
             {
-                context,
                 security: securitySettings$,
                 method: "GET",
                 path: path$,
@@ -259,19 +296,33 @@ export class Reports extends ClientSDK {
 
         if (this.matchResponse(response, 200, "application/json")) {
             const responseBody = response.body ?? undefined;
-            const result =
-                operations.GetCompanyReportsReportIdDownloadResponse$.inboundSchema.parse({
-                    ...responseFields$,
-                    stream: responseBody,
-                });
+            const result = schemas$.parse(
+                responseBody,
+                (val$) => {
+                    return operations.GetCompanyReportsReportIdDownloadResponse$.inboundSchema.parse(
+                        {
+                            ...responseFields$,
+                            stream: val$,
+                        }
+                    );
+                },
+                "Response validation failed"
+            );
             return result;
         } else if (this.matchResponse(response, "default", "application/json")) {
             const responseBody = await response.json();
-            const result =
-                operations.GetCompanyReportsReportIdDownloadResponse$.inboundSchema.parse({
-                    ...responseFields$,
-                    Error: responseBody,
-                });
+            const result = schemas$.parse(
+                responseBody,
+                (val$) => {
+                    return operations.GetCompanyReportsReportIdDownloadResponse$.inboundSchema.parse(
+                        {
+                            ...responseFields$,
+                            Error: val$,
+                        }
+                    );
+                },
+                "Response validation failed"
+            );
             return result;
         } else {
             const responseBody = await response.text();
@@ -293,8 +344,14 @@ export class Reports extends ClientSDK {
         headers$.set("user-agent", SDK_METADATA.userAgent);
         headers$.set("Accept", "application/json");
 
-        const payload$ =
-            operations.GetCompanyReportsReportIdDownloadAsyncRequest$.outboundSchema.parse(input);
+        const payload$ = schemas$.parse(
+            input,
+            (value$) =>
+                operations.GetCompanyReportsReportIdDownloadAsyncRequest$.outboundSchema.parse(
+                    value$
+                ),
+            "Input validation failed"
+        );
         const body$ = null;
 
         const pathParams$ = {
@@ -326,9 +383,8 @@ export class Reports extends ClientSDK {
 
         const context = { operationID: "get_/company/reports/{reportId}/download-async" };
         const doOptions = { context, errorCodes: [] };
-        const request = await this.createRequest$(
+        const request = this.createRequest$(
             {
-                context,
                 security: securitySettings$,
                 method: "GET",
                 path: path$,
@@ -351,19 +407,31 @@ export class Reports extends ClientSDK {
             // fallthrough
         } else if (this.matchResponse(response, "default", "application/json")) {
             const responseBody = await response.json();
-            const result =
-                operations.GetCompanyReportsReportIdDownloadAsyncResponse$.inboundSchema.parse({
-                    ...responseFields$,
-                    Error: responseBody,
-                });
+            const result = schemas$.parse(
+                responseBody,
+                (val$) => {
+                    return operations.GetCompanyReportsReportIdDownloadAsyncResponse$.inboundSchema.parse(
+                        {
+                            ...responseFields$,
+                            Error: val$,
+                        }
+                    );
+                },
+                "Response validation failed"
+            );
             return result;
         } else {
             const responseBody = await response.text();
             throw new errors.SDKError("Unexpected API response", response, responseBody);
         }
 
-        return operations.GetCompanyReportsReportIdDownloadAsyncResponse$.inboundSchema.parse(
-            responseFields$
+        return schemas$.parse(
+            undefined,
+            () =>
+                operations.GetCompanyReportsReportIdDownloadAsyncResponse$.inboundSchema.parse(
+                    responseFields$
+                ),
+            "Response validation failed"
         );
     }
 }

@@ -6,6 +6,7 @@ import { SDKHooks } from "../hooks";
 import { SDK_METADATA, SDKOptions, serverURLFromOptions } from "../lib/config";
 import * as enc$ from "../lib/encodings";
 import { HTTPClient } from "../lib/http";
+import * as schemas$ from "../lib/schemas";
 import { ClientSDK, RequestOptions } from "../lib/sdks";
 import * as errors from "../sdk/models/errors";
 import * as operations from "../sdk/models/operations";
@@ -49,8 +50,12 @@ export class Documents extends ClientSDK {
         headers$.set("user-agent", SDK_METADATA.userAgent);
         headers$.set("Accept", "application/json");
 
-        const payload$ =
-            operations.DeleteDocsPeopleIdConfidentialDocIdRequest$.outboundSchema.parse(input);
+        const payload$ = schemas$.parse(
+            input,
+            (value$) =>
+                operations.DeleteDocsPeopleIdConfidentialDocIdRequest$.outboundSchema.parse(value$),
+            "Input validation failed"
+        );
         const body$ = null;
 
         const pathParams$ = {
@@ -74,9 +79,8 @@ export class Documents extends ClientSDK {
 
         const context = { operationID: "delete_/docs/people/{id}/confidential/{docId}" };
         const doOptions = { context, errorCodes: [] };
-        const request = await this.createRequest$(
+        const request = this.createRequest$(
             {
-                context,
                 security: securitySettings$,
                 method: "DELETE",
                 path: path$,
@@ -99,19 +103,31 @@ export class Documents extends ClientSDK {
             // fallthrough
         } else if (this.matchResponse(response, "default", "application/json")) {
             const responseBody = await response.json();
-            const result =
-                operations.DeleteDocsPeopleIdConfidentialDocIdResponse$.inboundSchema.parse({
-                    ...responseFields$,
-                    Error: responseBody,
-                });
+            const result = schemas$.parse(
+                responseBody,
+                (val$) => {
+                    return operations.DeleteDocsPeopleIdConfidentialDocIdResponse$.inboundSchema.parse(
+                        {
+                            ...responseFields$,
+                            Error: val$,
+                        }
+                    );
+                },
+                "Response validation failed"
+            );
             return result;
         } else {
             const responseBody = await response.text();
             throw new errors.SDKError("Unexpected API response", response, responseBody);
         }
 
-        return operations.DeleteDocsPeopleIdConfidentialDocIdResponse$.inboundSchema.parse(
-            responseFields$
+        return schemas$.parse(
+            undefined,
+            () =>
+                operations.DeleteDocsPeopleIdConfidentialDocIdResponse$.inboundSchema.parse(
+                    responseFields$
+                ),
+            "Response validation failed"
         );
     }
 
@@ -126,8 +142,12 @@ export class Documents extends ClientSDK {
         headers$.set("user-agent", SDK_METADATA.userAgent);
         headers$.set("Accept", "application/json");
 
-        const payload$ =
-            operations.DeleteDocsPeopleIdSharedDocIdRequest$.outboundSchema.parse(input);
+        const payload$ = schemas$.parse(
+            input,
+            (value$) =>
+                operations.DeleteDocsPeopleIdSharedDocIdRequest$.outboundSchema.parse(value$),
+            "Input validation failed"
+        );
         const body$ = null;
 
         const pathParams$ = {
@@ -149,9 +169,8 @@ export class Documents extends ClientSDK {
 
         const context = { operationID: "delete_/docs/people/{id}/shared/{docId}" };
         const doOptions = { context, errorCodes: [] };
-        const request = await this.createRequest$(
+        const request = this.createRequest$(
             {
-                context,
                 security: securitySettings$,
                 method: "DELETE",
                 path: path$,
@@ -174,18 +193,29 @@ export class Documents extends ClientSDK {
             // fallthrough
         } else if (this.matchResponse(response, "default", "application/json")) {
             const responseBody = await response.json();
-            const result = operations.DeleteDocsPeopleIdSharedDocIdResponse$.inboundSchema.parse({
-                ...responseFields$,
-                Error: responseBody,
-            });
+            const result = schemas$.parse(
+                responseBody,
+                (val$) => {
+                    return operations.DeleteDocsPeopleIdSharedDocIdResponse$.inboundSchema.parse({
+                        ...responseFields$,
+                        Error: val$,
+                    });
+                },
+                "Response validation failed"
+            );
             return result;
         } else {
             const responseBody = await response.text();
             throw new errors.SDKError("Unexpected API response", response, responseBody);
         }
 
-        return operations.DeleteDocsPeopleIdSharedDocIdResponse$.inboundSchema.parse(
-            responseFields$
+        return schemas$.parse(
+            undefined,
+            () =>
+                operations.DeleteDocsPeopleIdSharedDocIdResponse$.inboundSchema.parse(
+                    responseFields$
+                ),
+            "Response validation failed"
         );
     }
 
@@ -203,7 +233,11 @@ export class Documents extends ClientSDK {
         headers$.set("user-agent", SDK_METADATA.userAgent);
         headers$.set("Accept", "application/json");
 
-        const payload$ = operations.GetDocsPeopleIdRequest$.outboundSchema.parse(input);
+        const payload$ = schemas$.parse(
+            input,
+            (value$) => operations.GetDocsPeopleIdRequest$.outboundSchema.parse(value$),
+            "Input validation failed"
+        );
         const body$ = null;
 
         const pathParams$ = {
@@ -221,9 +255,8 @@ export class Documents extends ClientSDK {
 
         const context = { operationID: "get_/docs/people/{id}" };
         const doOptions = { context, errorCodes: [] };
-        const request = await this.createRequest$(
+        const request = this.createRequest$(
             {
-                context,
                 security: securitySettings$,
                 method: "GET",
                 path: path$,
@@ -244,17 +277,29 @@ export class Documents extends ClientSDK {
 
         if (this.matchResponse(response, 200, "application/json")) {
             const responseBody = await response.json();
-            const result = operations.GetDocsPeopleIdResponse$.inboundSchema.parse({
-                ...responseFields$,
-                EmployeeDocumentResponse: responseBody,
-            });
+            const result = schemas$.parse(
+                responseBody,
+                (val$) => {
+                    return operations.GetDocsPeopleIdResponse$.inboundSchema.parse({
+                        ...responseFields$,
+                        EmployeeDocumentResponse: val$,
+                    });
+                },
+                "Response validation failed"
+            );
             return result;
         } else if (this.matchResponse(response, "default", "application/json")) {
             const responseBody = await response.json();
-            const result = operations.GetDocsPeopleIdResponse$.inboundSchema.parse({
-                ...responseFields$,
-                Error: responseBody,
-            });
+            const result = schemas$.parse(
+                responseBody,
+                (val$) => {
+                    return operations.GetDocsPeopleIdResponse$.inboundSchema.parse({
+                        ...responseFields$,
+                        Error: val$,
+                    });
+                },
+                "Response validation failed"
+            );
             return result;
         } else {
             const responseBody = await response.text();
@@ -274,8 +319,12 @@ export class Documents extends ClientSDK {
         headers$.set("Content-Type", "application/json");
         headers$.set("Accept", "application/json");
 
-        const payload$ =
-            operations.PostDocsPeopleIdConfidentialRequest$.outboundSchema.parse(input);
+        const payload$ = schemas$.parse(
+            input,
+            (value$) =>
+                operations.PostDocsPeopleIdConfidentialRequest$.outboundSchema.parse(value$),
+            "Input validation failed"
+        );
         const body$ = enc$.encodeJSON("body", payload$.AddDocument, { explode: true });
 
         const pathParams$ = {
@@ -293,9 +342,8 @@ export class Documents extends ClientSDK {
 
         const context = { operationID: "post_/docs/people/{id}/confidential" };
         const doOptions = { context, errorCodes: [] };
-        const request = await this.createRequest$(
+        const request = this.createRequest$(
             {
-                context,
                 security: securitySettings$,
                 method: "POST",
                 path: path$,
@@ -318,18 +366,29 @@ export class Documents extends ClientSDK {
             // fallthrough
         } else if (this.matchResponse(response, "default", "application/json")) {
             const responseBody = await response.json();
-            const result = operations.PostDocsPeopleIdConfidentialResponse$.inboundSchema.parse({
-                ...responseFields$,
-                Error: responseBody,
-            });
+            const result = schemas$.parse(
+                responseBody,
+                (val$) => {
+                    return operations.PostDocsPeopleIdConfidentialResponse$.inboundSchema.parse({
+                        ...responseFields$,
+                        Error: val$,
+                    });
+                },
+                "Response validation failed"
+            );
             return result;
         } else {
             const responseBody = await response.text();
             throw new errors.SDKError("Unexpected API response", response, responseBody);
         }
 
-        return operations.PostDocsPeopleIdConfidentialResponse$.inboundSchema.parse(
-            responseFields$
+        return schemas$.parse(
+            undefined,
+            () =>
+                operations.PostDocsPeopleIdConfidentialResponse$.inboundSchema.parse(
+                    responseFields$
+                ),
+            "Response validation failed"
         );
     }
 
@@ -344,8 +403,12 @@ export class Documents extends ClientSDK {
         headers$.set("user-agent", SDK_METADATA.userAgent);
         headers$.set("Accept", "application/json");
 
-        const payload$ =
-            operations.PostDocsPeopleIdConfidentialUploadRequest$.outboundSchema.parse(input);
+        const payload$ = schemas$.parse(
+            input,
+            (value$) =>
+                operations.PostDocsPeopleIdConfidentialUploadRequest$.outboundSchema.parse(value$),
+            "Input validation failed"
+        );
         const body$ = new FormData();
 
         if (isBlobLike(payload$.RequestBody.file)) {
@@ -375,9 +438,8 @@ export class Documents extends ClientSDK {
 
         const context = { operationID: "post_/docs/people/{id}/confidential/upload" };
         const doOptions = { context, errorCodes: [] };
-        const request = await this.createRequest$(
+        const request = this.createRequest$(
             {
-                context,
                 security: securitySettings$,
                 method: "POST",
                 path: path$,
@@ -400,19 +462,31 @@ export class Documents extends ClientSDK {
             // fallthrough
         } else if (this.matchResponse(response, "default", "application/json")) {
             const responseBody = await response.json();
-            const result =
-                operations.PostDocsPeopleIdConfidentialUploadResponse$.inboundSchema.parse({
-                    ...responseFields$,
-                    Error: responseBody,
-                });
+            const result = schemas$.parse(
+                responseBody,
+                (val$) => {
+                    return operations.PostDocsPeopleIdConfidentialUploadResponse$.inboundSchema.parse(
+                        {
+                            ...responseFields$,
+                            Error: val$,
+                        }
+                    );
+                },
+                "Response validation failed"
+            );
             return result;
         } else {
             const responseBody = await response.text();
             throw new errors.SDKError("Unexpected API response", response, responseBody);
         }
 
-        return operations.PostDocsPeopleIdConfidentialUploadResponse$.inboundSchema.parse(
-            responseFields$
+        return schemas$.parse(
+            undefined,
+            () =>
+                operations.PostDocsPeopleIdConfidentialUploadResponse$.inboundSchema.parse(
+                    responseFields$
+                ),
+            "Response validation failed"
         );
     }
 
@@ -428,7 +502,11 @@ export class Documents extends ClientSDK {
         headers$.set("Content-Type", "application/json");
         headers$.set("Accept", "application/json");
 
-        const payload$ = operations.PostDocsPeopleIdSharedRequest$.outboundSchema.parse(input);
+        const payload$ = schemas$.parse(
+            input,
+            (value$) => operations.PostDocsPeopleIdSharedRequest$.outboundSchema.parse(value$),
+            "Input validation failed"
+        );
         const body$ = enc$.encodeJSON("body", payload$.AddDocument, { explode: true });
 
         const pathParams$ = {
@@ -446,9 +524,8 @@ export class Documents extends ClientSDK {
 
         const context = { operationID: "post_/docs/people/{id}/shared" };
         const doOptions = { context, errorCodes: [] };
-        const request = await this.createRequest$(
+        const request = this.createRequest$(
             {
-                context,
                 security: securitySettings$,
                 method: "POST",
                 path: path$,
@@ -471,17 +548,27 @@ export class Documents extends ClientSDK {
             // fallthrough
         } else if (this.matchResponse(response, "default", "application/json")) {
             const responseBody = await response.json();
-            const result = operations.PostDocsPeopleIdSharedResponse$.inboundSchema.parse({
-                ...responseFields$,
-                Error: responseBody,
-            });
+            const result = schemas$.parse(
+                responseBody,
+                (val$) => {
+                    return operations.PostDocsPeopleIdSharedResponse$.inboundSchema.parse({
+                        ...responseFields$,
+                        Error: val$,
+                    });
+                },
+                "Response validation failed"
+            );
             return result;
         } else {
             const responseBody = await response.text();
             throw new errors.SDKError("Unexpected API response", response, responseBody);
         }
 
-        return operations.PostDocsPeopleIdSharedResponse$.inboundSchema.parse(responseFields$);
+        return schemas$.parse(
+            undefined,
+            () => operations.PostDocsPeopleIdSharedResponse$.inboundSchema.parse(responseFields$),
+            "Response validation failed"
+        );
     }
 
     /**
@@ -495,8 +582,12 @@ export class Documents extends ClientSDK {
         headers$.set("user-agent", SDK_METADATA.userAgent);
         headers$.set("Accept", "application/json");
 
-        const payload$ =
-            operations.PostDocsPeopleIdSharedUploadRequest$.outboundSchema.parse(input);
+        const payload$ = schemas$.parse(
+            input,
+            (value$) =>
+                operations.PostDocsPeopleIdSharedUploadRequest$.outboundSchema.parse(value$),
+            "Input validation failed"
+        );
         const body$ = new FormData();
 
         if (isBlobLike(payload$.RequestBody.file)) {
@@ -524,9 +615,8 @@ export class Documents extends ClientSDK {
 
         const context = { operationID: "post_/docs/people/{id}/shared/upload" };
         const doOptions = { context, errorCodes: [] };
-        const request = await this.createRequest$(
+        const request = this.createRequest$(
             {
-                context,
                 security: securitySettings$,
                 method: "POST",
                 path: path$,
@@ -549,18 +639,29 @@ export class Documents extends ClientSDK {
             // fallthrough
         } else if (this.matchResponse(response, "default", "application/json")) {
             const responseBody = await response.json();
-            const result = operations.PostDocsPeopleIdSharedUploadResponse$.inboundSchema.parse({
-                ...responseFields$,
-                Error: responseBody,
-            });
+            const result = schemas$.parse(
+                responseBody,
+                (val$) => {
+                    return operations.PostDocsPeopleIdSharedUploadResponse$.inboundSchema.parse({
+                        ...responseFields$,
+                        Error: val$,
+                    });
+                },
+                "Response validation failed"
+            );
             return result;
         } else {
             const responseBody = await response.text();
             throw new errors.SDKError("Unexpected API response", response, responseBody);
         }
 
-        return operations.PostDocsPeopleIdSharedUploadResponse$.inboundSchema.parse(
-            responseFields$
+        return schemas$.parse(
+            undefined,
+            () =>
+                operations.PostDocsPeopleIdSharedUploadResponse$.inboundSchema.parse(
+                    responseFields$
+                ),
+            "Response validation failed"
         );
     }
 }
