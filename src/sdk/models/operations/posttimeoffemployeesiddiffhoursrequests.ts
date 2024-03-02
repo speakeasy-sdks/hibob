@@ -34,6 +34,51 @@ export type PostTimeoffEmployeesIdDiffHoursRequestsResponse = {
 };
 
 /** @internal */
+export namespace PostTimeoffEmployeesIdDiffHoursRequestsSecurity$ {
+    export type Inbound = {
+        Basic?: shared.SchemeBasic$.Inbound | undefined;
+        Bearer?: string | undefined;
+    };
+
+    export const inboundSchema: z.ZodType<
+        PostTimeoffEmployeesIdDiffHoursRequestsSecurity,
+        z.ZodTypeDef,
+        Inbound
+    > = z
+        .object({
+            Basic: shared.SchemeBasic$.inboundSchema.optional(),
+            Bearer: z.string().optional(),
+        })
+        .transform((v) => {
+            return {
+                ...(v.Basic === undefined ? null : { basic: v.Basic }),
+                ...(v.Bearer === undefined ? null : { bearer: v.Bearer }),
+            };
+        });
+
+    export type Outbound = {
+        Basic?: shared.SchemeBasic$.Outbound | undefined;
+        Bearer?: string | undefined;
+    };
+
+    export const outboundSchema: z.ZodType<
+        Outbound,
+        z.ZodTypeDef,
+        PostTimeoffEmployeesIdDiffHoursRequestsSecurity
+    > = z
+        .object({
+            basic: shared.SchemeBasic$.outboundSchema.optional(),
+            bearer: z.string().optional(),
+        })
+        .transform((v) => {
+            return {
+                ...(v.basic === undefined ? null : { Basic: v.basic }),
+                ...(v.bearer === undefined ? null : { Bearer: v.bearer }),
+            };
+        });
+}
+
+/** @internal */
 export namespace PostTimeoffEmployeesIdDiffHoursRequestsRequest$ {
     export type Inbound = {
         SubmitTimeoffRequestDiffHours: shared.SubmitTimeoffRequestDiffHours$.Inbound;

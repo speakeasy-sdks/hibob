@@ -24,6 +24,37 @@ export type GetMyAvatarResponse = {
 };
 
 /** @internal */
+export namespace GetMyAvatarSecurity$ {
+    export type Inbound = {
+        Bearer: string;
+    };
+
+    export const inboundSchema: z.ZodType<GetMyAvatarSecurity, z.ZodTypeDef, Inbound> = z
+        .object({
+            Bearer: z.string(),
+        })
+        .transform((v) => {
+            return {
+                bearer: v.Bearer,
+            };
+        });
+
+    export type Outbound = {
+        Bearer: string;
+    };
+
+    export const outboundSchema: z.ZodType<Outbound, z.ZodTypeDef, GetMyAvatarSecurity> = z
+        .object({
+            bearer: z.string(),
+        })
+        .transform((v) => {
+            return {
+                Bearer: v.bearer,
+            };
+        });
+}
+
+/** @internal */
 export namespace GetMyAvatarResponse$ {
     export type Inbound = {
         ContentType: string;

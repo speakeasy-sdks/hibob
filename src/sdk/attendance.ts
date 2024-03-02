@@ -72,9 +72,14 @@ export class Attendance extends ClientSDK {
             typeof this.options$.security === "function"
                 ? await this.options$.security()
                 : this.options$.security;
+
+        const context = {
+            operationID: "post_/attendance/import/{importMethod}",
+            oAuth2Scopes: [],
+            securitySource: this.options$.security,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "post_/attendance/import/{importMethod}" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {

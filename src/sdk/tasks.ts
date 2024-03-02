@@ -8,6 +8,7 @@ import * as enc$ from "../lib/encodings";
 import { HTTPClient } from "../lib/http";
 import * as schemas$ from "../lib/schemas";
 import { ClientSDK, RequestOptions } from "../lib/sdks";
+import { SecurityInput } from "../lib/security";
 import * as errors from "../sdk/models/errors";
 import * as operations from "../sdk/models/operations";
 
@@ -56,11 +57,16 @@ export class Tasks extends ClientSDK {
 
         const query$ = "";
 
-        const securitySettings$ = this.resolveSecurity([
-            { value: security?.bearer, fieldName: "Authorization", type: "apiKey:header" },
-        ]);
+        const security$: SecurityInput[][] = [
+            [{ value: security?.bearer, fieldName: "Authorization", type: "apiKey:header" }],
+        ];
+        const securitySettings$ = this.resolveSecurity(...security$);
+        const context = {
+            operationID: "get_/my/tasks",
+            oAuth2Scopes: [],
+            securitySource: security$,
+        };
 
-        const context = { operationID: "get_/my/tasks" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -116,9 +122,14 @@ export class Tasks extends ClientSDK {
             typeof this.options$.security === "function"
                 ? await this.options$.security()
                 : this.options$.security;
+
+        const context = {
+            operationID: "get_/tasks",
+            oAuth2Scopes: [],
+            securitySource: this.options$.security,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "get_/tasks" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -194,9 +205,14 @@ export class Tasks extends ClientSDK {
             typeof this.options$.security === "function"
                 ? await this.options$.security()
                 : this.options$.security;
+
+        const context = {
+            operationID: "get_/tasks/people/{id}",
+            oAuth2Scopes: [],
+            securitySource: this.options$.security,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "get_/tasks/people/{id}" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -282,9 +298,14 @@ export class Tasks extends ClientSDK {
             typeof this.options$.security === "function"
                 ? await this.options$.security()
                 : this.options$.security;
+
+        const context = {
+            operationID: "post_/tasks/{taskId}/complete",
+            oAuth2Scopes: [],
+            securitySource: this.options$.security,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "post_/tasks/{taskId}/complete" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {

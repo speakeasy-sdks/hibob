@@ -75,9 +75,14 @@ export class Documents extends ClientSDK {
             typeof this.options$.security === "function"
                 ? await this.options$.security()
                 : this.options$.security;
+
+        const context = {
+            operationID: "delete_/docs/people/{id}/confidential/{docId}",
+            oAuth2Scopes: [],
+            securitySource: this.options$.security,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "delete_/docs/people/{id}/confidential/{docId}" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -165,9 +170,14 @@ export class Documents extends ClientSDK {
             typeof this.options$.security === "function"
                 ? await this.options$.security()
                 : this.options$.security;
+
+        const context = {
+            operationID: "delete_/docs/people/{id}/shared/{docId}",
+            oAuth2Scopes: [],
+            securitySource: this.options$.security,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "delete_/docs/people/{id}/shared/{docId}" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -251,9 +261,14 @@ export class Documents extends ClientSDK {
             typeof this.options$.security === "function"
                 ? await this.options$.security()
                 : this.options$.security;
+
+        const context = {
+            operationID: "get_/docs/people/{id}",
+            oAuth2Scopes: [],
+            securitySource: this.options$.security,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "get_/docs/people/{id}" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -338,9 +353,14 @@ export class Documents extends ClientSDK {
             typeof this.options$.security === "function"
                 ? await this.options$.security()
                 : this.options$.security;
+
+        const context = {
+            operationID: "post_/docs/people/{id}/confidential",
+            oAuth2Scopes: [],
+            securitySource: this.options$.security,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "post_/docs/people/{id}/confidential" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -434,9 +454,14 @@ export class Documents extends ClientSDK {
             typeof this.options$.security === "function"
                 ? await this.options$.security()
                 : this.options$.security;
+
+        const context = {
+            operationID: "post_/docs/people/{id}/confidential/upload",
+            oAuth2Scopes: [],
+            securitySource: this.options$.security,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "post_/docs/people/{id}/confidential/upload" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -520,9 +545,14 @@ export class Documents extends ClientSDK {
             typeof this.options$.security === "function"
                 ? await this.options$.security()
                 : this.options$.security;
+
+        const context = {
+            operationID: "post_/docs/people/{id}/shared",
+            oAuth2Scopes: [],
+            securitySource: this.options$.security,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "post_/docs/people/{id}/shared" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -611,9 +641,14 @@ export class Documents extends ClientSDK {
             typeof this.options$.security === "function"
                 ? await this.options$.security()
                 : this.options$.security;
+
+        const context = {
+            operationID: "post_/docs/people/{id}/shared/upload",
+            oAuth2Scopes: [],
+            securitySource: this.options$.security,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "post_/docs/people/{id}/shared/upload" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {

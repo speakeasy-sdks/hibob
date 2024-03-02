@@ -8,6 +8,7 @@ import * as enc$ from "../lib/encodings";
 import { HTTPClient } from "../lib/http";
 import * as schemas$ from "../lib/schemas";
 import { ClientSDK, RequestOptions } from "../lib/sdks";
+import { SecurityInput } from "../lib/security";
 import * as errors from "../sdk/models/errors";
 import * as operations from "../sdk/models/operations";
 
@@ -79,9 +80,14 @@ export class TimeOff extends ClientSDK {
             typeof this.options$.security === "function"
                 ? await this.options$.security()
                 : this.options$.security;
+
+        const context = {
+            operationID: "delete_/timeoff/employees/{id}/requests/{requestId}",
+            oAuth2Scopes: [],
+            securitySource: this.options$.security,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "delete_/timeoff/employees/{id}/requests/{requestId}" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -161,9 +167,14 @@ export class TimeOff extends ClientSDK {
             typeof this.options$.security === "function"
                 ? await this.options$.security()
                 : this.options$.security;
+
+        const context = {
+            operationID: "get_/timeoff/employees/{id}/balance",
+            oAuth2Scopes: [],
+            securitySource: this.options$.security,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "get_/timeoff/employees/{id}/balance" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -258,9 +269,14 @@ export class TimeOff extends ClientSDK {
             typeof this.options$.security === "function"
                 ? await this.options$.security()
                 : this.options$.security;
+
+        const context = {
+            operationID: "get_/timeoff/employees/{id}/requests/{requestId}",
+            oAuth2Scopes: [],
+            securitySource: this.options$.security,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "get_/timeoff/employees/{id}/requests/{requestId}" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -356,9 +372,14 @@ export class TimeOff extends ClientSDK {
             typeof this.options$.security === "function"
                 ? await this.options$.security()
                 : this.options$.security;
+
+        const context = {
+            operationID: "get_/timeoff/outtoday",
+            oAuth2Scopes: [],
+            securitySource: this.options$.security,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "get_/timeoff/outtoday" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -448,9 +469,14 @@ export class TimeOff extends ClientSDK {
             typeof this.options$.security === "function"
                 ? await this.options$.security()
                 : this.options$.security;
+
+        const context = {
+            operationID: "get_/timeoff/policies",
+            oAuth2Scopes: [],
+            securitySource: this.options$.security,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "get_/timeoff/policies" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -535,9 +561,14 @@ export class TimeOff extends ClientSDK {
             typeof this.options$.security === "function"
                 ? await this.options$.security()
                 : this.options$.security;
+
+        const context = {
+            operationID: "get_/timeoff/policies/names",
+            oAuth2Scopes: [],
+            securitySource: this.options$.security,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "get_/timeoff/policies/names" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -599,9 +630,14 @@ export class TimeOff extends ClientSDK {
             typeof this.options$.security === "function"
                 ? await this.options$.security()
                 : this.options$.security;
+
+        const context = {
+            operationID: "get_/timeoff/policy-types",
+            oAuth2Scopes: [],
+            securitySource: this.options$.security,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "get_/timeoff/policy-types" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -690,9 +726,14 @@ export class TimeOff extends ClientSDK {
             typeof this.options$.security === "function"
                 ? await this.options$.security()
                 : this.options$.security;
+
+        const context = {
+            operationID: "get_/timeoff/policy-types/{policyType}",
+            oAuth2Scopes: [],
+            securitySource: this.options$.security,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "get_/timeoff/policy-types/{policyType}" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -784,9 +825,14 @@ export class TimeOff extends ClientSDK {
             typeof this.options$.security === "function"
                 ? await this.options$.security()
                 : this.options$.security;
+
+        const context = {
+            operationID: "get_/timeoff/policy-types/{policyType}/reason-codes",
+            oAuth2Scopes: [],
+            securitySource: this.options$.security,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "get_/timeoff/policy-types/{policyType}/reason-codes" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -877,9 +923,14 @@ export class TimeOff extends ClientSDK {
             typeof this.options$.security === "function"
                 ? await this.options$.security()
                 : this.options$.security;
+
+        const context = {
+            operationID: "get_/timeoff/requests/changes",
+            oAuth2Scopes: [],
+            securitySource: this.options$.security,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "get_/timeoff/requests/changes" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -966,9 +1017,14 @@ export class TimeOff extends ClientSDK {
             typeof this.options$.security === "function"
                 ? await this.options$.security()
                 : this.options$.security;
+
+        const context = {
+            operationID: "get_/timeoff/whosout",
+            oAuth2Scopes: [],
+            securitySource: this.options$.security,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "get_/timeoff/whosout" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -1056,9 +1112,14 @@ export class TimeOff extends ClientSDK {
             typeof this.options$.security === "function"
                 ? await this.options$.security()
                 : this.options$.security;
+
+        const context = {
+            operationID: "post_/timeoff/employees/{id}/adjustments",
+            oAuth2Scopes: [],
+            securitySource: this.options$.security,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "post_/timeoff/employees/{id}/adjustments" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -1149,12 +1210,17 @@ export class TimeOff extends ClientSDK {
 
         const query$ = "";
 
-        const securitySettings$ = this.resolveSecurity(
+        const security$: SecurityInput[][] = [
             [{ value: security?.basic, type: "http:basic" }],
-            [{ value: security?.bearer, fieldName: "Authorization", type: "apiKey:header" }]
-        );
+            [{ value: security?.bearer, fieldName: "Authorization", type: "apiKey:header" }],
+        ];
+        const securitySettings$ = this.resolveSecurity(...security$);
+        const context = {
+            operationID: "post_/timeoff/employees/{id}/diffHours/requests",
+            oAuth2Scopes: [],
+            securitySource: security$,
+        };
 
-        const context = { operationID: "post_/timeoff/employees/{id}/diffHours/requests" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -1227,9 +1293,14 @@ export class TimeOff extends ClientSDK {
             typeof this.options$.security === "function"
                 ? await this.options$.security()
                 : this.options$.security;
+
+        const context = {
+            operationID: "post_/timeoff/employees/{id}/requests",
+            oAuth2Scopes: [],
+            securitySource: this.options$.security,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "post_/timeoff/employees/{id}/requests" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -1309,9 +1380,14 @@ export class TimeOff extends ClientSDK {
             typeof this.options$.security === "function"
                 ? await this.options$.security()
                 : this.options$.security;
+
+        const context = {
+            operationID: "post_/timeoff/policy-types/{policyType}/reason-codes",
+            oAuth2Scopes: [],
+            securitySource: this.options$.security,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "post_/timeoff/policy-types/{policyType}/reason-codes" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {

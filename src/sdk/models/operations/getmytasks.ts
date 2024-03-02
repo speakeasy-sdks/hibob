@@ -29,6 +29,37 @@ export type GetMyTasksResponse = {
 };
 
 /** @internal */
+export namespace GetMyTasksSecurity$ {
+    export type Inbound = {
+        Bearer: string;
+    };
+
+    export const inboundSchema: z.ZodType<GetMyTasksSecurity, z.ZodTypeDef, Inbound> = z
+        .object({
+            Bearer: z.string(),
+        })
+        .transform((v) => {
+            return {
+                bearer: v.Bearer,
+            };
+        });
+
+    export type Outbound = {
+        Bearer: string;
+    };
+
+    export const outboundSchema: z.ZodType<Outbound, z.ZodTypeDef, GetMyTasksSecurity> = z
+        .object({
+            bearer: z.string(),
+        })
+        .transform((v) => {
+            return {
+                Bearer: v.bearer,
+            };
+        });
+}
+
+/** @internal */
 export namespace GetMyTasksResponse$ {
     export type Inbound = {
         ContentType: string;

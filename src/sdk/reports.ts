@@ -59,9 +59,14 @@ export class Reports extends ClientSDK {
             typeof this.options$.security === "function"
                 ? await this.options$.security()
                 : this.options$.security;
+
+        const context = {
+            operationID: "get_/company/reports",
+            oAuth2Scopes: [],
+            securitySource: this.options$.security,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "get_/company/reports" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -152,9 +157,14 @@ export class Reports extends ClientSDK {
             typeof this.options$.security === "function"
                 ? await this.options$.security()
                 : this.options$.security;
+
+        const context = {
+            operationID: "get_/company/reports/download/{reportName}",
+            oAuth2Scopes: [],
+            securitySource: this.options$.security,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "get_/company/reports/download/{reportName}" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -270,9 +280,14 @@ export class Reports extends ClientSDK {
             typeof this.options$.security === "function"
                 ? await this.options$.security()
                 : this.options$.security;
+
+        const context = {
+            operationID: "get_/company/reports/{reportId}/download",
+            oAuth2Scopes: [],
+            securitySource: this.options$.security,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "get_/company/reports/{reportId}/download" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -379,9 +394,14 @@ export class Reports extends ClientSDK {
             typeof this.options$.security === "function"
                 ? await this.options$.security()
                 : this.options$.security;
+
+        const context = {
+            operationID: "get_/company/reports/{reportId}/download-async",
+            oAuth2Scopes: [],
+            securitySource: this.options$.security,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "get_/company/reports/{reportId}/download-async" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {

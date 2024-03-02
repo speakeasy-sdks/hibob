@@ -3,12 +3,11 @@
  */
 
 import { HTTPClient } from "../lib/http";
-import * as shared from "../sdk/models/shared";
 
 export type HookContext = {
     operationID: string;
     oAuth2Scopes?: string[];
-    security?: shared.Security | (() => Promise<shared.Security>);
+    securitySource?: any | (() => Promise<any>);
 };
 
 export type Awaitable<T> = T | Promise<T>;

@@ -69,9 +69,14 @@ export class Objects extends ClientSDK {
             typeof this.options$.security === "function"
                 ? await this.options$.security()
                 : this.options$.security;
+
+        const context = {
+            operationID: "post_/objects/position/search",
+            oAuth2Scopes: [],
+            securitySource: this.options$.security,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "post_/objects/position/search" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {

@@ -83,11 +83,14 @@ export class CustomTables extends ClientSDK {
             typeof this.options$.security === "function"
                 ? await this.options$.security()
                 : this.options$.security;
-        const securitySettings$ = this.resolveGlobalSecurity(security$);
 
         const context = {
             operationID: "delete_/people/custom-tables/{employee_id}/{custom_table_id}/{entry_id}",
+            oAuth2Scopes: [],
+            securitySource: this.options$.security,
         };
+        const securitySettings$ = this.resolveGlobalSecurity(security$);
+
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -174,11 +177,14 @@ export class CustomTables extends ClientSDK {
             typeof this.options$.security === "function"
                 ? await this.options$.security()
                 : this.options$.security;
-        const securitySettings$ = this.resolveGlobalSecurity(security$);
 
         const context = {
             operationID: "get_/people/custom-tables/{employee_id}/{custom_table_id}",
+            oAuth2Scopes: [],
+            securitySource: this.options$.security,
         };
+        const securitySettings$ = this.resolveGlobalSecurity(security$);
+
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -263,11 +269,14 @@ export class CustomTables extends ClientSDK {
             typeof this.options$.security === "function"
                 ? await this.options$.security()
                 : this.options$.security;
-        const securitySettings$ = this.resolveGlobalSecurity(security$);
 
         const context = {
             operationID: "post_/people/custom-tables/{employee_id}/{custom_table_id}",
+            oAuth2Scopes: [],
+            securitySource: this.options$.security,
         };
+        const securitySettings$ = this.resolveGlobalSecurity(security$);
+
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -352,11 +361,14 @@ export class CustomTables extends ClientSDK {
             typeof this.options$.security === "function"
                 ? await this.options$.security()
                 : this.options$.security;
-        const securitySettings$ = this.resolveGlobalSecurity(security$);
 
         const context = {
             operationID: "put_/people/custom-tables/{employee_id}/{custom_table_id}/{entry_id}",
+            oAuth2Scopes: [],
+            securitySource: this.options$.security,
         };
+        const securitySettings$ = this.resolveGlobalSecurity(security$);
+
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {

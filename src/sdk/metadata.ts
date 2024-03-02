@@ -80,9 +80,14 @@ export class Metadata extends ClientSDK {
             typeof this.options$.security === "function"
                 ? await this.options$.security()
                 : this.options$.security;
+
+        const context = {
+            operationID: "delete_/company/named-lists/{listName}/{itemId}",
+            oAuth2Scopes: [],
+            securitySource: this.options$.security,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "delete_/company/named-lists/{listName}/{itemId}" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -154,9 +159,14 @@ export class Metadata extends ClientSDK {
             typeof this.options$.security === "function"
                 ? await this.options$.security()
                 : this.options$.security;
+
+        const context = {
+            operationID: "delete_/company/people/fields/{fieldId}",
+            oAuth2Scopes: [],
+            securitySource: this.options$.security,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "delete_/company/people/fields/{fieldId}" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -228,9 +238,14 @@ export class Metadata extends ClientSDK {
             typeof this.options$.security === "function"
                 ? await this.options$.security()
                 : this.options$.security;
+
+        const context = {
+            operationID: "get_/company/named-lists",
+            oAuth2Scopes: [],
+            securitySource: this.options$.security,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "get_/company/named-lists" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -311,9 +326,14 @@ export class Metadata extends ClientSDK {
             typeof this.options$.security === "function"
                 ? await this.options$.security()
                 : this.options$.security;
+
+        const context = {
+            operationID: "get_/company/named-lists/{listName}",
+            oAuth2Scopes: [],
+            securitySource: this.options$.security,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "get_/company/named-lists/{listName}" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -383,9 +403,14 @@ export class Metadata extends ClientSDK {
             typeof this.options$.security === "function"
                 ? await this.options$.security()
                 : this.options$.security;
+
+        const context = {
+            operationID: "get_/company/people/fields",
+            oAuth2Scopes: [],
+            securitySource: this.options$.security,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "get_/company/people/fields" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -446,9 +471,14 @@ export class Metadata extends ClientSDK {
             typeof this.options$.security === "function"
                 ? await this.options$.security()
                 : this.options$.security;
+
+        const context = {
+            operationID: "get_/metadata/objects/position",
+            oAuth2Scopes: [],
+            securitySource: this.options$.security,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "get_/metadata/objects/position" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -519,9 +549,14 @@ export class Metadata extends ClientSDK {
             typeof this.options$.security === "function"
                 ? await this.options$.security()
                 : this.options$.security;
+
+        const context = {
+            operationID: "get_/people/custom-tables/metadata",
+            oAuth2Scopes: [],
+            securitySource: this.options$.security,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "get_/people/custom-tables/metadata" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -598,9 +633,14 @@ export class Metadata extends ClientSDK {
             typeof this.options$.security === "function"
                 ? await this.options$.security()
                 : this.options$.security;
+
+        const context = {
+            operationID: "get_/people/custom-tables/metadata/{custom_table_id}",
+            oAuth2Scopes: [],
+            securitySource: this.options$.security,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "get_/people/custom-tables/metadata/{custom_table_id}" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -677,9 +717,14 @@ export class Metadata extends ClientSDK {
             typeof this.options$.security === "function"
                 ? await this.options$.security()
                 : this.options$.security;
+
+        const context = {
+            operationID: "post_/company/named-lists/{listName}",
+            oAuth2Scopes: [],
+            securitySource: this.options$.security,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "post_/company/named-lists/{listName}" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -758,9 +803,14 @@ export class Metadata extends ClientSDK {
             typeof this.options$.security === "function"
                 ? await this.options$.security()
                 : this.options$.security;
+
+        const context = {
+            operationID: "post_/company/people/fields",
+            oAuth2Scopes: [],
+            securitySource: this.options$.security,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "post_/company/people/fields" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -849,9 +899,14 @@ export class Metadata extends ClientSDK {
             typeof this.options$.security === "function"
                 ? await this.options$.security()
                 : this.options$.security;
+
+        const context = {
+            operationID: "put_/company/named-lists/{listName}/{itemId}",
+            oAuth2Scopes: [],
+            securitySource: this.options$.security,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "put_/company/named-lists/{listName}/{itemId}" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -924,9 +979,14 @@ export class Metadata extends ClientSDK {
             typeof this.options$.security === "function"
                 ? await this.options$.security()
                 : this.options$.security;
+
+        const context = {
+            operationID: "put_/company/people/fields/{fieldId}",
+            oAuth2Scopes: [],
+            securitySource: this.options$.security,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "put_/company/people/fields/{fieldId}" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {

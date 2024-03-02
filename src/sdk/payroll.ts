@@ -72,9 +72,14 @@ export class Payroll extends ClientSDK {
             typeof this.options$.security === "function"
                 ? await this.options$.security()
                 : this.options$.security;
+
+        const context = {
+            operationID: "delete_/people/{id}/equities/{entry_id}",
+            oAuth2Scopes: [],
+            securitySource: this.options$.security,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "delete_/people/{id}/equities/{entry_id}" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -147,9 +152,14 @@ export class Payroll extends ClientSDK {
             typeof this.options$.security === "function"
                 ? await this.options$.security()
                 : this.options$.security;
+
+        const context = {
+            operationID: "delete_/people/{id}/salaries/{entry_id}",
+            oAuth2Scopes: [],
+            securitySource: this.options$.security,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "delete_/people/{id}/salaries/{entry_id}" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -222,9 +232,14 @@ export class Payroll extends ClientSDK {
             typeof this.options$.security === "function"
                 ? await this.options$.security()
                 : this.options$.security;
+
+        const context = {
+            operationID: "delete_/people/{id}/training/{entry_id}",
+            oAuth2Scopes: [],
+            securitySource: this.options$.security,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "delete_/people/{id}/training/{entry_id}" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -297,9 +312,14 @@ export class Payroll extends ClientSDK {
             typeof this.options$.security === "function"
                 ? await this.options$.security()
                 : this.options$.security;
+
+        const context = {
+            operationID: "delete_/people/{id}/variable/{entry_id}",
+            oAuth2Scopes: [],
+            securitySource: this.options$.security,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "delete_/people/{id}/variable/{entry_id}" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -375,9 +395,14 @@ export class Payroll extends ClientSDK {
             typeof this.options$.security === "function"
                 ? await this.options$.security()
                 : this.options$.security;
+
+        const context = {
+            operationID: "get_/payroll/history",
+            oAuth2Scopes: [],
+            securitySource: this.options$.security,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "get_/payroll/history" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -463,9 +488,14 @@ export class Payroll extends ClientSDK {
             typeof this.options$.security === "function"
                 ? await this.options$.security()
                 : this.options$.security;
+
+        const context = {
+            operationID: "get_/people/{id}/equities",
+            oAuth2Scopes: [],
+            securitySource: this.options$.security,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "get_/people/{id}/equities" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -538,9 +568,14 @@ export class Payroll extends ClientSDK {
             typeof this.options$.security === "function"
                 ? await this.options$.security()
                 : this.options$.security;
+
+        const context = {
+            operationID: "get_/people/{id}/salaries",
+            oAuth2Scopes: [],
+            securitySource: this.options$.security,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "get_/people/{id}/salaries" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -613,9 +648,14 @@ export class Payroll extends ClientSDK {
             typeof this.options$.security === "function"
                 ? await this.options$.security()
                 : this.options$.security;
+
+        const context = {
+            operationID: "get_/people/{id}/training",
+            oAuth2Scopes: [],
+            securitySource: this.options$.security,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "get_/people/{id}/training" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -688,9 +728,14 @@ export class Payroll extends ClientSDK {
             typeof this.options$.security === "function"
                 ? await this.options$.security()
                 : this.options$.security;
+
+        const context = {
+            operationID: "get_/people/{id}/variable",
+            oAuth2Scopes: [],
+            securitySource: this.options$.security,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "get_/people/{id}/variable" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -764,9 +809,14 @@ export class Payroll extends ClientSDK {
             typeof this.options$.security === "function"
                 ? await this.options$.security()
                 : this.options$.security;
+
+        const context = {
+            operationID: "post_/people/{id}/equities",
+            oAuth2Scopes: [],
+            securitySource: this.options$.security,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "post_/people/{id}/equities" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -835,9 +885,14 @@ export class Payroll extends ClientSDK {
             typeof this.options$.security === "function"
                 ? await this.options$.security()
                 : this.options$.security;
+
+        const context = {
+            operationID: "post_/people/{id}/salaries",
+            oAuth2Scopes: [],
+            securitySource: this.options$.security,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "post_/people/{id}/salaries" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -906,9 +961,14 @@ export class Payroll extends ClientSDK {
             typeof this.options$.security === "function"
                 ? await this.options$.security()
                 : this.options$.security;
+
+        const context = {
+            operationID: "post_/people/{id}/training",
+            oAuth2Scopes: [],
+            securitySource: this.options$.security,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "post_/people/{id}/training" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -977,9 +1037,14 @@ export class Payroll extends ClientSDK {
             typeof this.options$.security === "function"
                 ? await this.options$.security()
                 : this.options$.security;
+
+        const context = {
+            operationID: "post_/people/{id}/variable",
+            oAuth2Scopes: [],
+            securitySource: this.options$.security,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "post_/people/{id}/variable" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -1052,9 +1117,14 @@ export class Payroll extends ClientSDK {
             typeof this.options$.security === "function"
                 ? await this.options$.security()
                 : this.options$.security;
+
+        const context = {
+            operationID: "put_/people/{id}/equities/{entry_id}",
+            oAuth2Scopes: [],
+            securitySource: this.options$.security,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "put_/people/{id}/equities/{entry_id}" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {

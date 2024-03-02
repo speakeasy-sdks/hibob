@@ -8,6 +8,7 @@ import * as enc$ from "../lib/encodings";
 import { HTTPClient } from "../lib/http";
 import * as schemas$ from "../lib/schemas";
 import { ClientSDK, RequestOptions } from "../lib/sdks";
+import { SecurityInput } from "../lib/security";
 import * as errors from "../sdk/models/errors";
 import * as operations from "../sdk/models/operations";
 import * as shared from "../sdk/models/shared";
@@ -73,9 +74,14 @@ export class People extends ClientSDK {
             typeof this.options$.security === "function"
                 ? await this.options$.security()
                 : this.options$.security;
+
+        const context = {
+            operationID: "delete_/people/{id}/employment/{entry_id}",
+            oAuth2Scopes: [],
+            securitySource: this.options$.security,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "delete_/people/{id}/employment/{entry_id}" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -148,9 +154,14 @@ export class People extends ClientSDK {
             typeof this.options$.security === "function"
                 ? await this.options$.security()
                 : this.options$.security;
+
+        const context = {
+            operationID: "delete_/people/{id}/equities/{entry_id}",
+            oAuth2Scopes: [],
+            securitySource: this.options$.security,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "delete_/people/{id}/equities/{entry_id}" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -223,9 +234,14 @@ export class People extends ClientSDK {
             typeof this.options$.security === "function"
                 ? await this.options$.security()
                 : this.options$.security;
+
+        const context = {
+            operationID: "delete_/people/{id}/salaries/{entry_id}",
+            oAuth2Scopes: [],
+            securitySource: this.options$.security,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "delete_/people/{id}/salaries/{entry_id}" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -298,9 +314,14 @@ export class People extends ClientSDK {
             typeof this.options$.security === "function"
                 ? await this.options$.security()
                 : this.options$.security;
+
+        const context = {
+            operationID: "delete_/people/{id}/training/{entry_id}",
+            oAuth2Scopes: [],
+            securitySource: this.options$.security,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "delete_/people/{id}/training/{entry_id}" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -373,9 +394,14 @@ export class People extends ClientSDK {
             typeof this.options$.security === "function"
                 ? await this.options$.security()
                 : this.options$.security;
+
+        const context = {
+            operationID: "delete_/people/{id}/variable/{entry_id}",
+            oAuth2Scopes: [],
+            securitySource: this.options$.security,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "delete_/people/{id}/variable/{entry_id}" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -447,9 +473,14 @@ export class People extends ClientSDK {
             typeof this.options$.security === "function"
                 ? await this.options$.security()
                 : this.options$.security;
+
+        const context = {
+            operationID: "delete_/people/{id}/work/{entry_id}",
+            oAuth2Scopes: [],
+            securitySource: this.options$.security,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "delete_/people/{id}/work/{entry_id}" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -519,9 +550,14 @@ export class People extends ClientSDK {
             typeof this.options$.security === "function"
                 ? await this.options$.security()
                 : this.options$.security;
+
+        const context = {
+            operationID: "get_/avatars",
+            oAuth2Scopes: [],
+            securitySource: this.options$.security,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "get_/avatars" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -592,9 +628,14 @@ export class People extends ClientSDK {
             typeof this.options$.security === "function"
                 ? await this.options$.security()
                 : this.options$.security;
+
+        const context = {
+            operationID: "get_/avatars/{employeeId}",
+            oAuth2Scopes: [],
+            securitySource: this.options$.security,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "get_/avatars/{employeeId}" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -648,11 +689,16 @@ export class People extends ClientSDK {
 
         const query$ = "";
 
-        const securitySettings$ = this.resolveSecurity([
-            { value: security?.bearer, fieldName: "Authorization", type: "apiKey:header" },
-        ]);
+        const security$: SecurityInput[][] = [
+            [{ value: security?.bearer, fieldName: "Authorization", type: "apiKey:header" }],
+        ];
+        const securitySettings$ = this.resolveSecurity(...security$);
+        const context = {
+            operationID: "get_/my/avatar",
+            oAuth2Scopes: [],
+            securitySource: security$,
+        };
 
-        const context = { operationID: "get_/my/avatar" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -733,9 +779,14 @@ export class People extends ClientSDK {
             typeof this.options$.security === "function"
                 ? await this.options$.security()
                 : this.options$.security;
+
+        const context = {
+            operationID: "get_/people",
+            oAuth2Scopes: [],
+            securitySource: this.options$.security,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "get_/people" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -838,9 +889,14 @@ export class People extends ClientSDK {
             typeof this.options$.security === "function"
                 ? await this.options$.security()
                 : this.options$.security;
+
+        const context = {
+            operationID: "get_/people/{identifier}",
+            oAuth2Scopes: [],
+            securitySource: this.options$.security,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "get_/people/{identifier}" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -926,9 +982,14 @@ export class People extends ClientSDK {
             typeof this.options$.security === "function"
                 ? await this.options$.security()
                 : this.options$.security;
+
+        const context = {
+            operationID: "get_/people/{id}/employment",
+            oAuth2Scopes: [],
+            securitySource: this.options$.security,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "get_/people/{id}/employment" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -1001,9 +1062,14 @@ export class People extends ClientSDK {
             typeof this.options$.security === "function"
                 ? await this.options$.security()
                 : this.options$.security;
+
+        const context = {
+            operationID: "get_/people/{id}/equities",
+            oAuth2Scopes: [],
+            securitySource: this.options$.security,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "get_/people/{id}/equities" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -1076,9 +1142,14 @@ export class People extends ClientSDK {
             typeof this.options$.security === "function"
                 ? await this.options$.security()
                 : this.options$.security;
+
+        const context = {
+            operationID: "get_/people/{id}/lifecycle",
+            oAuth2Scopes: [],
+            securitySource: this.options$.security,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "get_/people/{id}/lifecycle" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -1151,9 +1222,14 @@ export class People extends ClientSDK {
             typeof this.options$.security === "function"
                 ? await this.options$.security()
                 : this.options$.security;
+
+        const context = {
+            operationID: "get_/people/{id}/salaries",
+            oAuth2Scopes: [],
+            securitySource: this.options$.security,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "get_/people/{id}/salaries" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -1226,9 +1302,14 @@ export class People extends ClientSDK {
             typeof this.options$.security === "function"
                 ? await this.options$.security()
                 : this.options$.security;
+
+        const context = {
+            operationID: "get_/people/{id}/training",
+            oAuth2Scopes: [],
+            securitySource: this.options$.security,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "get_/people/{id}/training" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -1301,9 +1382,14 @@ export class People extends ClientSDK {
             typeof this.options$.security === "function"
                 ? await this.options$.security()
                 : this.options$.security;
+
+        const context = {
+            operationID: "get_/people/{id}/variable",
+            oAuth2Scopes: [],
+            securitySource: this.options$.security,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "get_/people/{id}/variable" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -1376,9 +1462,14 @@ export class People extends ClientSDK {
             typeof this.options$.security === "function"
                 ? await this.options$.security()
                 : this.options$.security;
+
+        const context = {
+            operationID: "get_/people/{id}/work",
+            oAuth2Scopes: [],
+            securitySource: this.options$.security,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "get_/people/{id}/work" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -1452,9 +1543,14 @@ export class People extends ClientSDK {
             typeof this.options$.security === "function"
                 ? await this.options$.security()
                 : this.options$.security;
+
+        const context = {
+            operationID: "get_/profiles",
+            oAuth2Scopes: [],
+            securitySource: this.options$.security,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "get_/profiles" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -1542,9 +1638,14 @@ export class People extends ClientSDK {
             typeof this.options$.security === "function"
                 ? await this.options$.security()
                 : this.options$.security;
+
+        const context = {
+            operationID: "post_/employees/{employeeId}/invitations",
+            oAuth2Scopes: [],
+            securitySource: this.options$.security,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "post_/employees/{employeeId}/invitations" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -1632,9 +1733,14 @@ export class People extends ClientSDK {
             typeof this.options$.security === "function"
                 ? await this.options$.security()
                 : this.options$.security;
+
+        const context = {
+            operationID: "post_/employees/{employeeId}/start-date",
+            oAuth2Scopes: [],
+            securitySource: this.options$.security,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "post_/employees/{employeeId}/start-date" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -1725,9 +1831,14 @@ export class People extends ClientSDK {
             typeof this.options$.security === "function"
                 ? await this.options$.security()
                 : this.options$.security;
+
+        const context = {
+            operationID: "post_/employees/{identifier}/terminate",
+            oAuth2Scopes: [],
+            securitySource: this.options$.security,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "post_/employees/{identifier}/terminate" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -1799,9 +1910,14 @@ export class People extends ClientSDK {
             typeof this.options$.security === "function"
                 ? await this.options$.security()
                 : this.options$.security;
+
+        const context = {
+            operationID: "post_/employees/{identifier}/uninvite",
+            oAuth2Scopes: [],
+            securitySource: this.options$.security,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "post_/employees/{identifier}/uninvite" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -1883,9 +1999,14 @@ export class People extends ClientSDK {
             typeof this.options$.security === "function"
                 ? await this.options$.security()
                 : this.options$.security;
+
+        const context = {
+            operationID: "post_/people",
+            oAuth2Scopes: [],
+            securitySource: this.options$.security,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "post_/people" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -1956,9 +2077,14 @@ export class People extends ClientSDK {
             typeof this.options$.security === "function"
                 ? await this.options$.security()
                 : this.options$.security;
+
+        const context = {
+            operationID: "post_/people/search",
+            oAuth2Scopes: [],
+            securitySource: this.options$.security,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "post_/people/search" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -2050,9 +2176,14 @@ export class People extends ClientSDK {
             typeof this.options$.security === "function"
                 ? await this.options$.security()
                 : this.options$.security;
+
+        const context = {
+            operationID: "post_/people/{identifier}",
+            oAuth2Scopes: [],
+            securitySource: this.options$.security,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "post_/people/{identifier}" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -2139,9 +2270,14 @@ export class People extends ClientSDK {
             typeof this.options$.security === "function"
                 ? await this.options$.security()
                 : this.options$.security;
+
+        const context = {
+            operationID: "post_/people/{id}/employment",
+            oAuth2Scopes: [],
+            securitySource: this.options$.security,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "post_/people/{id}/employment" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -2210,9 +2346,14 @@ export class People extends ClientSDK {
             typeof this.options$.security === "function"
                 ? await this.options$.security()
                 : this.options$.security;
+
+        const context = {
+            operationID: "post_/people/{id}/equities",
+            oAuth2Scopes: [],
+            securitySource: this.options$.security,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "post_/people/{id}/equities" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -2281,9 +2422,14 @@ export class People extends ClientSDK {
             typeof this.options$.security === "function"
                 ? await this.options$.security()
                 : this.options$.security;
+
+        const context = {
+            operationID: "post_/people/{id}/salaries",
+            oAuth2Scopes: [],
+            securitySource: this.options$.security,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "post_/people/{id}/salaries" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -2352,9 +2498,14 @@ export class People extends ClientSDK {
             typeof this.options$.security === "function"
                 ? await this.options$.security()
                 : this.options$.security;
+
+        const context = {
+            operationID: "post_/people/{id}/training",
+            oAuth2Scopes: [],
+            securitySource: this.options$.security,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "post_/people/{id}/training" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -2423,9 +2574,14 @@ export class People extends ClientSDK {
             typeof this.options$.security === "function"
                 ? await this.options$.security()
                 : this.options$.security;
+
+        const context = {
+            operationID: "post_/people/{id}/variable",
+            oAuth2Scopes: [],
+            securitySource: this.options$.security,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "post_/people/{id}/variable" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -2494,9 +2650,14 @@ export class People extends ClientSDK {
             typeof this.options$.security === "function"
                 ? await this.options$.security()
                 : this.options$.security;
+
+        const context = {
+            operationID: "post_/people/{id}/work",
+            oAuth2Scopes: [],
+            securitySource: this.options$.security,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "post_/people/{id}/work" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -2568,9 +2729,14 @@ export class People extends ClientSDK {
             typeof this.options$.security === "function"
                 ? await this.options$.security()
                 : this.options$.security;
+
+        const context = {
+            operationID: "put_/avatars/{employeeId}",
+            oAuth2Scopes: [],
+            securitySource: this.options$.security,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "put_/avatars/{employeeId}" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -2642,9 +2808,14 @@ export class People extends ClientSDK {
             typeof this.options$.security === "function"
                 ? await this.options$.security()
                 : this.options$.security;
+
+        const context = {
+            operationID: "put_/people/{identifier}",
+            oAuth2Scopes: [],
+            securitySource: this.options$.security,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "put_/people/{identifier}" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -2713,9 +2884,14 @@ export class People extends ClientSDK {
             typeof this.options$.security === "function"
                 ? await this.options$.security()
                 : this.options$.security;
+
+        const context = {
+            operationID: "put_/people/{id}/email",
+            oAuth2Scopes: [],
+            securitySource: this.options$.security,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "put_/people/{id}/email" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -2789,9 +2965,14 @@ export class People extends ClientSDK {
             typeof this.options$.security === "function"
                 ? await this.options$.security()
                 : this.options$.security;
+
+        const context = {
+            operationID: "put_/people/{id}/employment/{entry_id}",
+            oAuth2Scopes: [],
+            securitySource: this.options$.security,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "put_/people/{id}/employment/{entry_id}" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -2867,9 +3048,14 @@ export class People extends ClientSDK {
             typeof this.options$.security === "function"
                 ? await this.options$.security()
                 : this.options$.security;
+
+        const context = {
+            operationID: "put_/people/{id}/equities/{entry_id}",
+            oAuth2Scopes: [],
+            securitySource: this.options$.security,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "put_/people/{id}/equities/{entry_id}" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
@@ -2943,9 +3129,14 @@ export class People extends ClientSDK {
             typeof this.options$.security === "function"
                 ? await this.options$.security()
                 : this.options$.security;
+
+        const context = {
+            operationID: "put_/people/{id}/work/{entry_id}",
+            oAuth2Scopes: [],
+            securitySource: this.options$.security,
+        };
         const securitySettings$ = this.resolveGlobalSecurity(security$);
 
-        const context = { operationID: "put_/people/{id}/work/{entry_id}" };
         const doOptions = { context, errorCodes: [] };
         const request = this.createRequest$(
             {
