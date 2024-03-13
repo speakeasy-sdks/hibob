@@ -4,7 +4,7 @@
 
 import { RFCDate } from "../../../sdk/types";
 import { CurrencyValue, CurrencyValue$ } from "./currencyvalue";
-import { z } from "zod";
+import * as z from "zod";
 
 export type VariableEntry = {
     amount: CurrencyValue;

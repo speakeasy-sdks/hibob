@@ -3,7 +3,7 @@
  */
 
 import { VariableEntry, VariableEntry$ } from "./variableentry";
-import { z } from "zod";
+import * as z from "zod";
 
 export type VariableEntries = {
     values?: Array<VariableEntry> | undefined;

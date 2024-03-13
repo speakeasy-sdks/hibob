@@ -3,7 +3,7 @@
  */
 
 import { OnboardingWizard, OnboardingWizard$ } from "./onboardingwizard";
-import { z } from "zod";
+import * as z from "zod";
 
 export type OnboardingWizards = {
     wizards?: Array<OnboardingWizard> | undefined;

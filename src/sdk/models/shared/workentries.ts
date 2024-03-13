@@ -3,7 +3,7 @@
  */
 
 import { WorkEntry, WorkEntry$ } from "./workentry";
-import { z } from "zod";
+import * as z from "zod";
 
 export type WorkEntries = {
     values?: Array<WorkEntry> | undefined;

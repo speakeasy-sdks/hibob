@@ -3,7 +3,7 @@
  */
 
 import { ListItem, ListItem$ } from "./listitem";
-import { z } from "zod";
+import * as z from "zod";
 
 export type List = {
     /**

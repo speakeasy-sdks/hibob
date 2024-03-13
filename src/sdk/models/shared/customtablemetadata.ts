@@ -3,7 +3,7 @@
  */
 
 import { CustomTableColumn, CustomTableColumn$ } from "./customtablecolumn";
-import { z } from "zod";
+import * as z from "zod";
 
 export type CustomTableMetadata = {
     /**

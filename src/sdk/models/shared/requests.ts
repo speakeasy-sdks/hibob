@@ -3,7 +3,7 @@
  */
 
 import { Request, Request$ } from "./request";
-import { z } from "zod";
+import * as z from "zod";
 
 export type Requests = {
     outs?: Array<Request> | undefined;

@@ -3,7 +3,7 @@
  */
 
 import { Employee, Employee$ } from "./employee";
-import { z } from "zod";
+import * as z from "zod";
 
 export type Employees = {
     employees?: Array<Employee> | undefined;

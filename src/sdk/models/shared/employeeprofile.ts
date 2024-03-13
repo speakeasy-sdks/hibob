@@ -5,7 +5,7 @@
 import { AboutPart, AboutPart$ } from "./aboutpart";
 import { PersonalPart, PersonalPart$ } from "./personalpart";
 import { WorkPart, WorkPart$ } from "./workpart";
-import { z } from "zod";
+import * as z from "zod";
 
 export type EmployeeProfile = {
     about?: AboutPart | undefined;

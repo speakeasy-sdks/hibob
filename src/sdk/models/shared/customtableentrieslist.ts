@@ -3,7 +3,7 @@
  */
 
 import { CustomTableEntry, CustomTableEntry$ } from "./customtableentry";
-import { z } from "zod";
+import * as z from "zod";
 
 export type CustomTableEntriesList = {
     values?: Array<CustomTableEntry> | undefined;

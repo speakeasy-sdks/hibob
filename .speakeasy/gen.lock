@@ -3,10 +3,10 @@ id: cfede491-df0f-4c5d-b64e-31715f9d4209
 management:
   docChecksum: 828c9433a782ba5a1f6952f4db0033d5
   docVersion: 1.0.0
-  speakeasyVersion: internal
-  generationVersion: 2.277.0
-  releaseVersion: 4.3.1
-  configChecksum: cc05d9ca9ca12a619cde306435348a48
+  speakeasyVersion: 1.207.1
+  generationVersion: 2.280.6
+  releaseVersion: 4.4.0
+  configChecksum: 2fd2db8c9c16d470e6f7be8c0d995daa
   repoURL: https://github.com/speakeasy-sdks/hibob.git
   repoSubDirectory: .
   installationURL: https://github.com/speakeasy-sdks/hibob
@@ -18,10 +18,10 @@ features:
     deprecations: 2.81.1
     downloadStreams: 0.1.1
     globalSecurity: 2.82.4
-    globalServerURLs: 2.82.3
+    globalServerURLs: 2.82.4
     inputOutputModels: 2.82.0
     methodSecurity: 2.82.1
-    responseFormat: 0.1.0
+    responseFormat: 0.2.1
 generatedFiles:
   - src/sdk/attendance.ts
   - src/sdk/people.ts
@@ -44,7 +44,6 @@ generatedFiles:
   - src/lib/base64.ts
   - src/lib/config.ts
   - src/lib/encodings.ts
-  - src/lib/event-streams.ts
   - src/lib/http.ts
   - src/lib/retries.ts
   - src/lib/schemas.ts
@@ -55,7 +54,6 @@ generatedFiles:
   - src/sdk/models/errors/sdkerror.ts
   - src/sdk/models/errors/sdkvalidationerror.ts
   - src/sdk/types/blobs.ts
-  - src/sdk/types/decimal.ts
   - src/sdk/types/index.ts
   - src/sdk/types/operations.ts
   - src/sdk/types/rfcdate.ts

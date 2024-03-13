@@ -3,7 +3,7 @@
  */
 
 import { RFCDate } from "../../../sdk/types";
-import { z } from "zod";
+import * as z from "zod";
 
 export type Durations = {
     /**

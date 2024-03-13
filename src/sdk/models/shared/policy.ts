@@ -3,7 +3,7 @@
  */
 
 import { YearsOfServiceIncrements, YearsOfServiceIncrements$ } from "./yearsofserviceincrements";
-import { z } from "zod";
+import * as z from "zod";
 
 /**
  * The shortest amount of time employees can request.

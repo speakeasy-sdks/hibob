@@ -3,7 +3,7 @@
  */
 
 import { EmployeeFilter, EmployeeFilter$ } from "./employeefilter";
-import { z } from "zod";
+import * as z from "zod";
 
 export type ReadEmployeesRequestReference = {
     /**

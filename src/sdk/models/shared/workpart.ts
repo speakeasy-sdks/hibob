@@ -4,7 +4,7 @@
 
 import { RFCDate } from "../../../sdk/types";
 import { EmployeeReference, EmployeeReference$ } from "./employeereference";
-import { z } from "zod";
+import * as z from "zod";
 
 export type WorkPart = {
     /**

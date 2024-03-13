@@ -3,7 +3,7 @@
  */
 
 import { LifeCycleEntry, LifeCycleEntry$ } from "./lifecycleentry";
-import { z } from "zod";
+import * as z from "zod";
 
 export type LifeCycleEntries = {
     values?: Array<LifeCycleEntry> | undefined;

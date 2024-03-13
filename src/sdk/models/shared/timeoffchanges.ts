@@ -3,7 +3,7 @@
  */
 
 import { TimeoffChange, TimeoffChange$ } from "./timeoffchange";
-import { z } from "zod";
+import * as z from "zod";
 
 export type TimeoffChanges = {
     changes?: Array<TimeoffChange> | undefined;

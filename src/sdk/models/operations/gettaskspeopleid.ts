@@ -3,7 +3,7 @@
  */
 
 import * as shared from "../../../sdk/models/shared";
-import { z } from "zod";
+import * as z from "zod";
 
 /**
  * filter tasks by open / closed status. Not sending task_status will return all tasks.

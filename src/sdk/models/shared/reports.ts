@@ -3,7 +3,7 @@
  */
 
 import { Report, Report$ } from "./report";
-import { z } from "zod";
+import * as z from "zod";
 
 export type Reports = {
     views?: Array<Report> | undefined;

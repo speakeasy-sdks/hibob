@@ -3,7 +3,7 @@
  */
 
 import { Task, Task$ } from "./task";
-import { z } from "zod";
+import * as z from "zod";
 
 export type Tasks = {
     tasks?: Array<Task> | undefined;

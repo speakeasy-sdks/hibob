@@ -3,7 +3,7 @@
  */
 
 import { FilterInstruction, FilterInstruction$ } from "./filterinstruction";
-import { z } from "zod";
+import * as z from "zod";
 
 export type GetPositionsRequest = {
     /**

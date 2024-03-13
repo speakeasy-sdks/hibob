@@ -3,7 +3,7 @@
  */
 
 import { TrainingEntry, TrainingEntry$ } from "./trainingentry";
-import { z } from "zod";
+import * as z from "zod";
 
 export type TrainingEntries = {
     values?: Array<TrainingEntry> | undefined;

@@ -3,7 +3,7 @@
  */
 
 import { ImportAttendanceEvent, ImportAttendanceEvent$ } from "./importattendanceevent";
-import { z } from "zod";
+import * as z from "zod";
 
 export type ImportAttendanceData = {
     /**

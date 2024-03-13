@@ -3,7 +3,7 @@
  */
 
 import { OutToday, OutToday$ } from "./outtoday";
-import { z } from "zod";
+import * as z from "zod";
 
 export type OutTodays = {
     outs?: Array<OutToday> | undefined;

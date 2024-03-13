@@ -6,7 +6,7 @@ import {
     EmployeeDocumentWithDownloadLink,
     EmployeeDocumentWithDownloadLink$,
 } from "./employeedocumentwithdownloadlink";
-import { z } from "zod";
+import * as z from "zod";
 
 export type EmployeeDocumentResponse = {
     documents?: Array<EmployeeDocumentWithDownloadLink> | undefined;

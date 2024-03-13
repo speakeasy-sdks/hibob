@@ -3,7 +3,7 @@
  */
 
 import { CustomTableMetadata, CustomTableMetadata$ } from "./customtablemetadata";
-import { z } from "zod";
+import * as z from "zod";
 
 export type CustomTableMetadataList = {
     tables?: Array<CustomTableMetadata> | undefined;
