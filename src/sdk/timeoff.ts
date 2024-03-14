@@ -1211,8 +1211,8 @@ export class TimeOff extends ClientSDK {
         const query$ = "";
 
         const security$: SecurityInput[][] = [
-            [{ value: security?.basic, type: "http:basic" }],
             [{ value: security?.bearer, fieldName: "Authorization", type: "apiKey:header" }],
+            [{ value: security?.basic, type: "http:basic" }],
         ];
         const securitySettings$ = this.resolveSecurity(...security$);
         const context = {
