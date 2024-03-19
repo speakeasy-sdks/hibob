@@ -19,6 +19,10 @@ export type GetCompanyReportsReportIdDownloadAsyncRequest = {
      */
     format: Format;
     /**
+     * Optional field. Only enforced when <i><b>format</b></i> is <i>json</i>. <br> <b>If not sent:</b> supply machine-readable values only. <br> <br> Possible values: <br>  <br> <b>APPEND</b> - include the additional "humanReadable" JSON node in the response. <br>  <br> <b>REPLACE</b> - supply humanReadable values in JSON instead of machine-readable format. <br>
+     */
+    humanReadable?: string | undefined;
+    /**
      * Should include info
      */
     includeInfo?: boolean | undefined;
@@ -58,6 +62,7 @@ export const Format$ = z.nativeEnum(Format);
 export namespace GetCompanyReportsReportIdDownloadAsyncRequest$ {
     export type Inbound = {
         format: Format;
+        humanReadable?: string | undefined;
         includeInfo?: boolean | undefined;
         locale?: string | undefined;
         reportId: number;
@@ -70,6 +75,7 @@ export namespace GetCompanyReportsReportIdDownloadAsyncRequest$ {
     > = z
         .object({
             format: Format$,
+            humanReadable: z.string().optional(),
             includeInfo: z.boolean().optional(),
             locale: z.string().optional(),
             reportId: z.number(),
@@ -77,6 +83,7 @@ export namespace GetCompanyReportsReportIdDownloadAsyncRequest$ {
         .transform((v) => {
             return {
                 format: v.format,
+                ...(v.humanReadable === undefined ? null : { humanReadable: v.humanReadable }),
                 ...(v.includeInfo === undefined ? null : { includeInfo: v.includeInfo }),
                 ...(v.locale === undefined ? null : { locale: v.locale }),
                 reportId: v.reportId,
@@ -85,6 +92,7 @@ export namespace GetCompanyReportsReportIdDownloadAsyncRequest$ {
 
     export type Outbound = {
         format: Format;
+        humanReadable?: string | undefined;
         includeInfo?: boolean | undefined;
         locale?: string | undefined;
         reportId: number;
@@ -97,6 +105,7 @@ export namespace GetCompanyReportsReportIdDownloadAsyncRequest$ {
     > = z
         .object({
             format: Format$,
+            humanReadable: z.string().optional(),
             includeInfo: z.boolean().optional(),
             locale: z.string().optional(),
             reportId: z.number(),
@@ -104,6 +113,7 @@ export namespace GetCompanyReportsReportIdDownloadAsyncRequest$ {
         .transform((v) => {
             return {
                 format: v.format,
+                ...(v.humanReadable === undefined ? null : { humanReadable: v.humanReadable }),
                 ...(v.includeInfo === undefined ? null : { includeInfo: v.includeInfo }),
                 ...(v.locale === undefined ? null : { locale: v.locale }),
                 reportId: v.reportId,

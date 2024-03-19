@@ -267,6 +267,10 @@ export class Reports extends ClientSDK {
 
         const query$ = [
             enc$.encodeForm("format", payload$.format, { explode: true, charEncoding: "percent" }),
+            enc$.encodeForm("humanReadable", payload$.humanReadable, {
+                explode: true,
+                charEncoding: "percent",
+            }),
             enc$.encodeForm("includeInfo", payload$.includeInfo, {
                 explode: true,
                 charEncoding: "percent",
@@ -381,6 +385,10 @@ export class Reports extends ClientSDK {
 
         const query$ = [
             enc$.encodeForm("format", payload$.format, { explode: true, charEncoding: "percent" }),
+            enc$.encodeForm("humanReadable", payload$.humanReadable, {
+                explode: true,
+                charEncoding: "percent",
+            }),
             enc$.encodeForm("includeInfo", payload$.includeInfo, {
                 explode: true,
                 charEncoding: "percent",
