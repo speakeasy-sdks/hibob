@@ -8,9 +8,9 @@ import * as enc$ from "../lib/encodings";
 import { HTTPClient } from "../lib/http";
 import * as schemas$ from "../lib/schemas";
 import { ClientSDK, RequestOptions } from "../lib/sdks";
-import * as errors from "../sdk/models/errors";
-import * as operations from "../sdk/models/operations";
-import { isBlobLike } from "../sdk/types";
+import * as errors from "./models/errors";
+import * as operations from "./models/operations";
+import { isBlobLike } from "./types";
 
 export class Documents extends ClientSDK {
     private readonly options$: SDKOptions & { hooks?: SDKHooks };

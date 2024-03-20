@@ -3,10 +3,10 @@ id: cfede491-df0f-4c5d-b64e-31715f9d4209
 management:
   docChecksum: 703ba52b6fa5547f9413c2f250056d0c
   docVersion: 1.0.0
-  speakeasyVersion: 1.210.0
-  generationVersion: 2.281.2
-  releaseVersion: 4.4.2
-  configChecksum: 05740033f91d8d19cece7b0f623d3680
+  speakeasyVersion: 1.213.0
+  generationVersion: 2.283.1
+  releaseVersion: 4.4.3
+  configChecksum: d9d9164cd1a8a7092d4079f1edd1762f
   repoURL: https://github.com/speakeasy-sdks/hibob.git
   repoSubDirectory: .
   installationURL: https://github.com/speakeasy-sdks/hibob
@@ -14,13 +14,13 @@ management:
 features:
   typescript:
     constsAndDefaults: 0.1.5
-    core: 3.6.1
+    core: 3.6.3
     deprecations: 2.81.1
     downloadStreams: 0.1.1
-    globalSecurity: 2.82.6
+    globalSecurity: 2.82.8
     globalServerURLs: 2.82.4
     inputOutputModels: 2.82.0
-    methodSecurity: 2.82.3
+    methodSecurity: 2.82.4
     responseFormat: 0.2.2
 generatedFiles:
   - src/sdk/attendance.ts

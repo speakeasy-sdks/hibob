@@ -9,9 +9,9 @@ import { HTTPClient } from "../lib/http";
 import * as schemas$ from "../lib/schemas";
 import { ClientSDK, RequestOptions } from "../lib/sdks";
 import { SecurityInput } from "../lib/security";
-import * as errors from "../sdk/models/errors";
-import * as operations from "../sdk/models/operations";
-import * as shared from "../sdk/models/shared";
+import * as errors from "./models/errors";
+import * as operations from "./models/operations";
+import * as shared from "./models/shared";
 
 export class People extends ClientSDK {
     private readonly options$: SDKOptions & { hooks?: SDKHooks };
@@ -690,7 +690,13 @@ export class People extends ClientSDK {
         const query$ = "";
 
         const security$: SecurityInput[][] = [
-            [{ value: security?.bearer, fieldName: "Authorization", type: "apiKey:header" }],
+            [
+                {
+                    fieldName: "Authorization",
+                    type: "apiKey:header",
+                    value: security?.bearer,
+                },
+            ],
         ];
         const securitySettings$ = this.resolveSecurity(...security$);
         const context = {
